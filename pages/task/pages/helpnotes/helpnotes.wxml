@@ -1,0 +1,41 @@
+<import src="../../../../template/tab/tab.wxml" />
+
+<compontNavbar title="帮助说明" isShowBack="{{true}}" url="/pages/main/pages/task/task" component-class="component-class"></compontNavbar>
+
+<view class="tabs">
+    <block wx:for="{{tabs}}" wx:key="this">
+        <template is="{{curIndex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+    </block>
+</view>
+
+<view class="tab-content" wx:if="{{curIndex == 1}}">
+    <view class="tit">
+        <view class="tit-icon"></view>
+        <view class="tit-text">任务分类</view>
+    </view>
+    <view class="cont">任务模块共计14个任务，分别是：预习任务、冥想任务、作业任务、作息任务、游戏任务、互助任务、易货任务、分享任务、理财任务、运动任务、综合素质、定位任务、名师任务和外教任务。不同任务的完成条件不同。</view>
+    <view class="tit">
+        <view class="tit-icon"></view>
+        <view class="tit-text">任务领取与进行</view>
+    </view>
+    <view class="cont">每个任务领取后，需按照任务要求进行相关活动。如果任务需要设置时间，应在设定的时间内完成对应任务，否则不记入任务次数。</view>
+
+    <view class="tit">
+        <view class="tit-icon"></view>
+        <view class="tit-text">组队任务</view>
+    </view>
+    <view class="cont">预习任务、冥想任务、作业任务、作息任务和游戏任务可进行组队领取。由一名发起人邀请其他人进入组队。当接受组队人数达到5人时，可以开启组队进行任务。组队任务开始后，不可再邀请其他人进入组队。</view>
+</view>
+<view class="tab-content" wx:if="{{curIndex == 2}}">
+    <view class="tit">
+        <view class="tit-icon"></view>
+        <view class="tit-text">任务奖励</view>
+    </view>
+    <view class="cont">领取任务并完成后会获得积分奖励，积分可用于积分商城兑换商品、作业问答悬赏提问。其中组队任务完成时，可获得双倍积分奖励。</view>
+
+    <view class="tit">
+        <view class="tit-icon"></view>
+        <view class="tit-text">任务惩罚</view>
+    </view>
+    <view class="cont">领取任务后，如果在规定时间内未完成任务会受到信用分惩罚。</view>
+</view>

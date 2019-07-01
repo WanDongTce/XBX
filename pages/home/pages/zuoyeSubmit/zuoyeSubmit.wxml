@@ -1,0 +1,68 @@
+<!--pages/ls2/ls2.wxml-->
+<compontNavbar title="提交作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<!-- <form bindsubmit="bindFormSubmit">
+    
+    
+
+    <view class='itemboxbottom '>
+        <view class='itembox '>
+            <view>科目</view>
+            <picker bindchange="bindPickerCs"  
+        class="picker display-flex align-items-center" value='{{csIndex}}' range="{{csArr}}"  range-key="title">
+                <text class="{{csIndex==0?'c_999':'c_999'}}">{{  csArr[csIndex].title}}</text>               
+            </picker>       
+        </view>
+        <view class='textareabox'>
+            <textarea placeholder='请输入作业内容' class='textarea' placeholder-class='textareaplaceholder' auto-height='true' maxlength='-1' bindinput="savetextarea" value='{{savetextarea}}'></textarea>
+        </view>
+        <view class="imgs">
+            <scroll-view class="scroll-box" scroll-x="true">
+                <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                    <image src="{{item}}" class="hmwk-img"></image>
+                    <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image>
+                </view>
+                <view class="scroll-item" wx:if="{{imgList.length == 0}}">
+                    <image src="{{base}}images/add_big.png" class="hmwk-img" catchtap="addImg"></image>
+                </view>
+            </scroll-view>
+        </view>   
+    </view>
+    
+    <view class='btn_box'>
+        <button class='btn f_32 c_fff' formType="submit">发布作业</button>
+    </view>
+</form> -->
+<form bindsubmit="bindFormSubmit">
+
+<view class='newtextbox'>
+    <textarea placeholder='请输入作业内容' class='newtextarea' placeholder-class='textareaplaceholder' auto-height='true' maxlength='-1' bindinput="savetextarea" value='{{savetextarea}}'></textarea>
+      
+</view>
+
+<view class="imgs">
+            <scroll-view class="scroll-box" scroll-x="true">
+                <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                    <image src="{{item}}" class="hmwk-img"></image>
+                    <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image>
+                </view>
+                
+            </scroll-view>
+    </view>
+    
+    <view class='newitembox '>
+            <view>科目</view>
+            <picker bindchange="bindPickerCs"  
+        class="picker display-flex align-items-center" value='{{csIndex}}' range="{{csArr}}"  range-key="title">
+                <text class="{{csIndex==0?'c_999':'c_999'}}">{{  csArr[csIndex].title}}</text>               
+            </picker>       
+    </view>
+    
+
+    
+<view class='newbottombox display-flex align-items-center justify-content-between'>
+   
+    <image src="{{base}}images/publish_img.png" class="newbottom" catchtap="addImg"></image>
+    <button class='newbtn' formType="submit"><text>发布作业</text></button>
+</view>
+</form>

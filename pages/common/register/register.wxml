@@ -1,0 +1,23 @@
+<compontNavbar title="新用户注册" isShowBack="{{true}}"></compontNavbar>
+<image src='{{base}}images/login_logo.png' class='logo'></image>
+<form bindsubmit="bindFormSubmit">
+  <view class='box'>
+    <view class='itembox display-flex'>
+      <input type="number"  name="modify_phone" placeholder='请输入手机号' placeholder-class='placeholder' class='register_input' bindinput="phoneInputEvent"></input>
+    </view>
+    <view class='itembox overf'>
+      <input type="text" placeholder='请输入验证码' placeholder-class='placeholder' class='register_input fl' cursor-spacing="90" name="modify_verifycode" confirm-type="next"></input>
+      <view class="modifyp_btn1 fr {{verify_color? 'verify_color' : ''}}" bindtap="identify">{{verifyCodeTime}}</view>
+    </view>
+    <view  class='itembox overf'>
+      <input type="{{showPassword? 'text': 'password'}}" placeholder='请输入密码' placeholder-class='placeholder' class='register_input fl' cursor-spacing="90"  name="modify_passw"></input>
+      <view catchtap='passwordtab' class='bottom_box'>
+                <image hidden="{{!showPassword}}" src='{{base}}images/register_see.png' class='register_passwimg fr'></image>
+                <image hidden="{{showPassword}}" src='{{base}}images/register_nosee.png' class='register_passwimg fr'></image>
+            </view>
+    </view>
+    <button class='register_btn' formType="submit">立即注册</button>
+  </view>
+</form>
+<view class='bottom'>注册既代表阅读并同意<text bindtap="toAgrmt">使用协议及使用条款</text></view>
+

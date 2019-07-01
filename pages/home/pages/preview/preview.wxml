@@ -1,0 +1,17 @@
+<compontNavbar title="预习乐" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="container">
+    <studyFilter bind:filterCallBack="filterCallBack" bind:showOptions="showOptions"></studyFilter>
+    <view class="cont-box">
+        <block wx:if="{{showEmpty}}"><empty></empty></block> 
+        <view class="cont-item" wx:key="this" wx:for="{{list}}" bindtap="toDetail" data-href="{{item.dizhi}}" data-id="{{item.id}}">
+            <view class="itm-lt">
+                <view class="lt-img subject-bg-{{item.kemuid}}">{{item.kemuName[0]}}</view>
+                <view class="lt-text">
+                    <view class="tit">{{item.title}}</view>
+                    <view class="sub">{{item.banbenName}}</view>
+                </view>
+            </view>
+            <image class="rt-img" src="{{base}}images/next.png"></image>
+        </view>
+    </view>
+</view>

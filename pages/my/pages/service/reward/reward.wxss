@@ -1,0 +1,8 @@
+/* pages/edutlList/reward/reward.wxss */
+@import "/component/studyFilter/studyFilter.wxss";
+@import "/pages/my/pages/service/preview/preview.wxss";
+@import "/pages/my/pages/service/achievement/achievement.wxss";
+.subject_bigbox{
+  padding-bottom:0rpx;
+   margin-top:8vh; 
+}

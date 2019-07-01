@@ -1,0 +1,11 @@
+<view class="box" id="levelList">
+    <view class="content">
+        <view class="item {{checkedAll? 'active' : ''}}" catchtap="itemClick" data-title="">全部</view>
+        <view class="item {{item.checked? 'active' : ''}}" wx:for="{{list}}" wx:key="this" wx-for:index="index" catchtap="itemClick" data-title="{{item.title}}" data-index="{{index}}">{{item.title}}</view>
+      
+    </view>
+    <view class="btns">
+        <view class="btn" catchtap="btnReset">重置</view>
+        <view class="btn" catchtap="btnConfirm">确定</view>
+    </view>
+</view>

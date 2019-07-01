@@ -1,0 +1,91 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="container">
+    <view class="fixed-box">
+         <view class="search-box search_box_new">
+            <view class="search-cont">
+                <image src="../../../../../images/search.png" mode="widthFix" class="search-icon"></image>
+                <input class="search-input" placeholder="搜索关键字" bindconfirm="inputFn"></input>
+            </view>
+            <image src='../../../../../images/tabBtom/home4.png' class='preview_home_img' catchtap='tz_my'></image>
+        </view> 
+        <view class="select-box">
+            
+            <view class="select" catch:tap="seltClkFn" data-idx="2">
+                
+                <text  class="selt-itm-text" data-idx="2">{{species}}</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 2?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="2"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="3">
+                <text class="selt-itm-text" data-idx="3">时间</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 3?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="3"></image>
+            </view>
+            
+        </view>
+    </view>
+    <view class="select-opt-box" wx:if="{{isShowOption}}">
+        <view class="opt-mask" catch:tap="hideOption"></view>
+        <view animation="{{animationData}}" class="opt-cont">
+            <scroll-view class="opt-scroll-view mt_8vh" scroll-y="true" enable-back-to-top="true">
+                <!-- <view class="option" data-id="0"  catchtap="selOptFn">
+                        <view class="opt-lt" data-id="0"  catchtap="selOptFn">全部</view>
+                        <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==0)||(sctdOptIdx==3&&version==0)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="0"  catchtap="selOptFn"></image>
+                </view> -->
+                
+                <!-- <view class="option" wx:key="this" wx:for="{{options}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../images/act.png':'../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view>     -->
+                
+                <view class="option" wx:if="{{sctdOptIdx == 2}}"  wx:key="this" wx:for="{{options}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view>
+                
+                
+                 <view class="option" wx:if="{{sctdOptIdx == 3}}" wx:key="this" wx:for="{{time}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view> 
+            </scroll-view>
+            <view class="btn-box"><view class="btn" catch:tap="optCofmFn">确定</view></view>
+        </view>
+    </view>
+    <view class="cont-box">
+        <block wx:if="{{list.length == 0}}"><empty></empty></block> 
+        <view  class="cont-item" wx:key="this" wx:for="{{list}}">
+            <view class="itm-lt">
+                <view></view>
+                
+                <image src="{{IMGURL}}service/records/records-Math.png" wx:if="{{item.species == 1&&learntype!=3}}" class='new_lt_img'></image>
+                <image src="{{IMGURL}}service/records/records-chinese.png"  wx:if="{{item.species == 2&&learntype!=3}}" class='new_lt_img'></image>
+                <image src="{{IMGURL}}service/records/records-English.png" class='new_lt_img' wx:if="{{item.species == 3&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-Physics.png" class='new_lt_img' wx:if="{{item.species == 4&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-Chemistry.png" class='new_lt_img' wx:if="{{item.species == 5&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-Geography.png" class='new_lt_img' wx:if="{{item.species == 6&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-History.png" class='new_lt_img' wx:if="{{item.species == 7&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-Biology.png" class='new_lt_img' wx:if="{{item.species == 8&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-Politics.png" class='new_lt_img' wx:if="{{item.species == 9&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-science.png" class='new_lt_img' wx:if="{{item.species == 10&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-comprehensive.png" class='new_lt_img' wx:if="{{item.species == 11&&learntype!=3}}" ></image>
+                <image src="{{IMGURL}}service/records/records-comprehensive.png" class='new_lt_img' wx:if="{{item.species == 12&&learntype!=3}}" ></image>
+
+                <image src="{{IMGURL}}service/records/records-Math.png" class="lt-img " wx:if="{{learntype==3}}" src="{{IMGURL}}game/playgame.png"></image>
+                <!-- <image class="lt-img" wx:if="{{item.species == 2&&learn==4}}" src="{{IMGURL}}game/playgame.png"></image>
+                <image class="lt-img" wx:if="{{item.species == 3&&learn==4}}" src="{{IMGURL}}game/playgame.png"></image>
+                <image class="lt-img" wx:if="{{item.species == 4&&learn==4}}" src="{{IMGURL}}game/playgame.png"></image>
+                <image class="lt-img" wx:if="{{item.species == 5&&learn==4}}" src="../../../images/preview/p5.png"></image> -->
+                <view class="lt-text display-flex lt_text_new">
+                  <view  class='w80_new'>
+                    <view class="tit">{{item.content}}</view>
+                    <view class="sub">{{item.create_time}}</view>
+                  </view>
+                  <view  class='lt_text_jf'>
+                    积分{{item.score}}
+                  </view>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+</view>

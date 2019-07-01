@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "passwordDialog": "/component/passwordDialog/passwordDialog",
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

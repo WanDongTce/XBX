@@ -1,0 +1,43 @@
+page{
+    background: #f7f7f7;
+}
+.box{
+    width: 100%;
+}
+.list{
+    width: 100%;
+    background: #fff;
+}
+.item{
+    width: 100%;
+    padding: 4% 24rpx;
+    border-bottom: 1rpx solid #dfdfdf;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item:last-child{
+    border-bottom: none;
+}
+.lt{
+    width: 60%;
+}
+.tit{
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+}
+.time{
+    width: 100%;
+    font-size: 26rpx;
+    color: #999;
+}
+.rt{
+    width: 40%;
+    text-align: right;
+    color: #333;
+    font-size: 35rpx;
+}

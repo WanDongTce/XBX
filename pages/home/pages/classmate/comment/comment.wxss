@@ -1,0 +1,4 @@
+@import "/pages/home/pages/classmate/classmateWrite/classmateWrite.wxss";
+.border_top{
+  border-top:1rpx solid #ddd;
+}

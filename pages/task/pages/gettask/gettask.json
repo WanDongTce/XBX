@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "selectFriend": "../../../../component/choicefriend/choicefriend",
+        "compontNavbar": "../../../../component/navigation/navigation"
+    }
+}

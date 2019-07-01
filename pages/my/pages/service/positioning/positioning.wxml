@@ -1,0 +1,30 @@
+<!--pages/edutlList/positioning/positioning.wxml-->
+<compontNavbar title="卫星定位" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="positioning">
+  <view class="positioning-left one"  id = "1" catchtap='getLocation'>
+    <text class="positioning-one">放学到家</text>
+    <!-- <text class="positioning-two">点击定位</text> -->
+  </view>
+  <navigator class="positioning-button one" url="{{'/pages/my/pages/service/school/school?positiontype=' + 1}}">
+    <text class="positioning-right">查看</text> 
+  </navigator>
+</view>
+<view class="positioning">
+  <view class="positioning-left two"  id = "2" catchtap='getLocation'>
+    <text class="positioning-one">外出活动</text>
+    <!-- <text class="positioning-two">点击定位</text> -->
+  </view>
+  <navigator class="positioning-button two" url="{{'/pages/my/pages/service/school/school?positiontype=' + 2}}">
+    <text class="positioning-right">查看</text> 
+  </navigator>
+</view>
+<view class="positioning">
+  <view class="positioning-left three"  id = "3" catchtap='getLocation'>
+    <text class="positioning-one">外出到家</text>
+    <!-- <text class="positioning-two">点击定位</text> -->
+  </view>
+  <navigator class="positioning-button three" url="{{'/pages/my/pages/service/school/school?positiontype=' + 3}}">
+    <text class="positioning-right">查看</text> 
+  </navigator>
+</view>

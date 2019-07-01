@@ -1,0 +1,8 @@
+<compontNavbar title="发布学校简介" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <view class="textarea-box">
+        <textarea placeholder="快来完善学校信息吧..." placeholder-style="plac" maxlength="500" focus="{{focus}}" bindinput="inputFn"></textarea>
+    </view>
+    <view class="tip">{{contLength}}/500</view>
+    <view class="add-btn" bindtap="submitFn">发布</view>
+</view>

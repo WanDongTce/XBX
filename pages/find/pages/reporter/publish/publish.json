@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布校园动态",
+    "usingComponents": {
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

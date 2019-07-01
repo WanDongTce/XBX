@@ -1,0 +1,56 @@
+<compontNavbar title="我的提问" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="content-box">
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <view wx:else>
+        <view class='answer' wx:key="this" wx:for="{{list}}" bindtap="toDetail" data-id="{{item.id}}">
+            <view class="content">
+                <view class='qus-sub'>
+                    <text>{{item.grade.name}}</text>
+                    <text>{{item.subject.Name}}</text>
+                </view>
+                <view class='qus-header'>
+                    <view class='qus-status qus-status-2' wx:if="{{item.questionstatus == 2}}">
+                        [已解决]
+                    </view>
+                     <view class='qus-status qus-status-1' wx:if="{{item.questionstatus == 1}}">
+                        [未解决]
+                    </view> 
+                    <view class='qus-title'>{{item.name}}</view> 
+                </view>
+
+                <image src='{{item.images[0].url}}' class='qus-img-2' wx:if="{{item.images.length == 1}}" catchtap="previewImg" data-img="{{item.images[0].url}}" data-imgs="{{item.images}}" mode="aspectFill"></image>
+
+                <scroll-view class='img-box-3 img-box' scroll-x="true" wx:if="{{item.images.length == 2}}">
+                    <image src='{{im.url}}' class='qus-img-3' wx:for="{{item.images}}" wx:key="this" wx:for-item="im" mode="aspectFill" catchtap="previewImg" data-img="{{im.url}}" data-imgs="{{item.images}}"></image>
+                </scroll-view>
+
+                <scroll-view class='img-box' scroll-x="true" wx:if="{{item.images.length >= 3}}">
+                    <image src='{{im.url}}' class='qus-img' wx:for="{{item.images}}" wx:key="this" wx:for-item="im" mode="aspectFill" catchtap="previewImg" data-img="{{im.url}}" data-imgs="{{item.images}}"></image>
+                </scroll-view>
+
+                <view class="link" catchtap="link" data-item="{{item}}" wx:if="{{item.resourceinfo.title}}">
+                    <image src="../../../../images/link.png" class="link-icon"></image>
+                    <text>{{item.resourceinfo.title}}</text>
+                </view>
+
+                <view class='qus-tips'>
+                    <view class='tips-name'>
+                        <image wx:if="{{item.userInfo.avatar}}" src='{{item.userInfo.avatar}}' mode="aspectFill"></image>
+                        <image wx:else src="../../../../images/default-user-2.png" mode="aspectFill"></image>
+                        <text>{{item.userInfo.nickname}}</text>
+                        <text>{{item.difftime}}</text>
+                    </view>
+                    <view class='qus-reply'>
+                        <block wx:if="{{item.point != 0}}">
+                            <text>积分 {{item.point}}</text>
+                            <text class="border">|</text>
+                        </block>
+                        <text>回答 {{item.answernum}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/edutlList/operation/operation.wxml-->
+<compontNavbar title="写作业" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<view class="Subject">
+  <text class="Subject-text">{{subjectname}}</text>
+</view>
+<view class="writing">
+  <text class="writing-text">开始写作、结束提交</text>
+</view>
+<view class="img" bindtap='start_btn' wx:if="{{isstart==1}}">
+  <image class="imges" src="{{IMGURL}}service/operation/operation-start.png" ></image>
+</view>
+<view class="img" bindtap='start_end' wx:else>
+  <image class="imges" src="{{IMGURL}}service/operation/operation-End.png" ></image>
+</view>
+<view class='time'>{{time}}</view>
+<!-- <view class="see">
+  <text class="seeera">查看</text>
+</view> -->
+<view class='btn' bindtap='tz_see'>查看</view>

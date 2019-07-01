@@ -1,0 +1,13 @@
+<compontNavbar title="邀请同学" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='nodata_box' id="noorder">
+  <image src='{{base}}images/nothave.png' class='mongoose_nothave_img ' ></image>
+  <view class='invite_title'>快来邀请同学吧</view>
+  <view class='text1'>邀请同学后将自动与您的同学成为好友关系</view> 
+</view> 
+<view class="box display-flex">
+  <button  open-type="share" plain="true">
+    <image src='{{base}}images/fri-share.png' class='img'></image>
+    <view class='text'>朋友圈</view>
+  </button> 
+  
+</view>

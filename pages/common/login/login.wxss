@@ -1,0 +1,148 @@
+/* pages/login/login.wxss */
+page{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.login_bg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo_box {
+    top: 20vh;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.login_logo {
+    margin: 0 auto;
+    width: 118rpx;
+    height: 165rpx;
+}
+
+.logo_center {
+    top: 480rpx;
+    left: 0;
+    padding: 0 75rpx;
+    z-index: 2;
+}
+
+.login_itembox {
+    flex-wrap: nowrap;
+    border-bottom: 1rpx solid #fff;
+    width: 100%;
+    height: 80rpx;
+    margin-top: 25rpx;
+}
+
+.logo_centerimg {
+    width: 28rpx;
+    height: 41rpx;
+    margin-left: 2rpx;
+    margin-top: 20rpx;
+}
+
+.logo_centerimg2 {
+    width: 28rpx;
+    height: 38rpx;
+    margin-left: 2rpx;
+    margin-top: 21rpx;
+}
+
+
+.item_bigbox {
+    width: 80%;
+    left: 10%;
+    top: 38vh;
+}
+
+.overf {
+    overflow: hidden;
+}
+
+.placeholder {
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.login_input {
+    font-size: 30rpx;
+    width: 500rpx;
+    margin-left: 28rpx;
+    height: 100%;
+    color: #fff;
+}
+
+.login_btn {
+    background-color: #48b947;
+    color: #fff;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top: 68rpx;
+    font-size: 30rpx;
+    border-radius: 8rpx;
+}
+
+.bottom_box {
+    flex-wrap: nowrap;
+    margin-top: 30rpx;
+    justify-content: space-between;
+}
+
+.forget, .register {
+    font-size: 28rpx;
+    flex-grow: 1;
+}
+
+.forget {
+    color: #fff;
+}
+
+.register {
+    color: #fff;
+    text-align: right;
+}
+
+.login_linebox {
+    width: 100%;
+    margin-top: 10vh;
+    position: relative;
+    height: 30rpx;
+}
+
+.login_or {
+    text-align: center;
+    font-size: 24rpx;
+    color: #fff;
+    line-height: 30rpx;
+}
+
+.login_lineimg_l {
+    width: 152rpx;
+    height: 2rpx;
+    position: absolute;
+    left: 0rpx;
+    top: 14rpx;
+}
+
+.login_lineimg_r {
+    width: 152rpx;
+    height: 2rpx;
+    position: absolute;
+    right: 0rpx;
+    top: 14rpx;
+    transform: rotate(180deg);
+}
+
+.share_wechat {
+    width: 87rpx;
+    height: 86rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 46rpx;
+    margin-bottom: 50rpx;
+}

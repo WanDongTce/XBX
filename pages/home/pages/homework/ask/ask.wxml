@@ -1,0 +1,46 @@
+<compontNavbar title="我要提问" isShowBack="{{true}}"></compontNavbar>
+<view class="container">
+    <view class="box">
+        <picker bindchange="bindPickerGrade" value="{{gradeIndex}}" range="{{gradeList}}" range-key="title">
+            <view class="item">
+                <view class="lt">选择年级:</view>
+                <view class="rt">
+                    <view class="text-rt">{{gradeList[gradeIndex].title}}</view>
+                    <image class="arrow-rt-icon" src='{{base}}images/arowDown.png'></image>   
+                </view>
+            </view>
+        </picker>
+        <picker mode="selector" bindchange="bindPickerSubject" value="{{subjectIndex}}" range="{{subjectList}}" range-key="title">
+            <view class="item">
+                <view class="lt">选择科目:</view>
+                <view class="rt">
+                    <view class="text-rt">{{subjectList[subjectIndex].title}}</view>
+                    <image class="arrow-rt-icon" src='{{base}}images/arowDown.png'></image>   
+                </view>
+            </view>
+        </picker>
+        <view class="homework-cont">
+            <textarea placeholder="输入想要提问的内容..." placeholder-class="placeh" bindinput="saveContent"></textarea>
+        </view>
+    </view>
+   
+    <view class="imgs">
+        <scroll-view class="scroll-box" scroll-x="true">
+            <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                 <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+            </view>
+            <view class="scroll-item" wx:if="{{imgList.length == 0}}">
+                <image src="{{base}}images/add.png" class="hmwk-img" catchtap="addImg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="reward-box">
+        <image src="{{base}}images/green-money.png" class="xs-icon"></image>
+		<text>悬赏</text>
+        <input type="tel" bindinput="savePoint"></input>
+        <text>积分,您可用的积分:<text class="color-49b947">{{myPoint}}</text>分</text>
+    </view>
+    <view class="btn-box" catchtap="submit">提交</view>
+</view>
+

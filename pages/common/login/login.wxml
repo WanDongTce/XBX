@@ -1,0 +1,28 @@
+<image src='{{IMGURL}}login/login-bg.jpg' class='login_bg' mode='aspectFill'></image>
+<view class='logo_box position-absolute'>
+    <image src='{{base}}images/login_logo.png' class='login_logo'></image>
+</view>
+
+<view class='item_bigbox position-absolute'>
+    <view class='display-flex login_itembox'>
+        <image src='{{base}}images/phone_number.png' class='logo_centerimg '></image>
+        <input placeholder='请输入手机号' placeholder-class='placeholder' type='number' class='login_input ' bindinput="userNameInput"></input>
+    </view>
+    <view class='display-flex login_itembox'>
+        <image src='{{base}}images/lock_password.png' class='logo_centerimg2 '></image>
+        <input placeholder='请输入密码' placeholder-class='placeholder' type='text' class='login_input ' bindinput="passWordInput" password='true'></input>
+    </view>
+
+
+    <view class='login_btn' bindtap="loginBtnClick">登录</view>
+    <view class='bottom_box display-flex'>
+        <view class='forget' bindtap='tz_forget'>忘记密码？</view>
+        <view class='register' bindtap='tz_register'>注册</view>
+    </view>
+      <!-- <view class='login_linebox'>
+        <view class='login_or'>或者使用以下方式登陆</view>
+        <image src='{{base}}images/login_line-left.png' class='login_lineimg_l'></image>
+        <image src='{{base}}images/login_line-left.png' class='login_lineimg_r'></image>
+    </view>
+    <image src='{{base}}images/wx-share.png' class='share_wechat'></image>   -->
+</view>

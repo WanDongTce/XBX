@@ -1,0 +1,15 @@
+<import src="./template.wxml" />
+<view id="selectFriend" class="box">
+    <view class='input-container'>
+        <view class='input-box'>
+            <image src='../../images/search.png' class="search-icon"></image>
+            <input class='input' placeholder='搜索关键字' placeholder-class='placeholder' bindconfirm="saveSearch"></input>
+        </view>
+    </view>
+    <view class='list'>
+        <block wx:for="{{list}}" wx:key="this">
+            <template is="task" data="{{item, index}}"></template>
+        </block>
+    </view>
+    <view class='btn' bindtap='submit'>确定</view>
+</view>

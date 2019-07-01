@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "小记者",
+  "usingComponents": {
+    "empty": "/component/empty/empty",
+    "compontNavbar": "/component/navigation/navigation"
+  }
+}

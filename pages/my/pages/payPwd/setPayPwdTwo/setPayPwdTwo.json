@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "pwdKeyboard": "/component/pwdKeyboard/pwdKeyboard",
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

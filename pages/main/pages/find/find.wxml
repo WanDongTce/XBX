@@ -1,0 +1,68 @@
+<compontNavbar title="发现" isShowBack="{{false}}" url=""></compontNavbar>
+<view class='newbox'>
+ <navigator class="head one" url="/pages/home/pages/classmate/classmate">
+  <image src="{{IMGURL}}find/classmate-circle.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">同学圈</text>
+    </view>
+    <text class="head-text-b">带你看看同学的生活</text>
+  </view>
+</navigator> 
+
+<!-- <navigator class="head one" url="/pages/home/pages/integralMall/integralMall">
+  <image src="{{IMGURL}}find/classmate-circle.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">积分商城</text>
+    </view>
+    <text class="head-text-b">积分兑换</text>
+  </view>
+</navigator> -->
+<navigator class="head two" url="/pages/find/pages/encyclopedias/encyclopedias">
+  <image src="{{IMGURL}}find/encyclopedia.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">学校百科</text>
+    </view>
+    <text class="head-text-b">早点看到这些,学校生活原来如此简单</text>
+  </view>
+</navigator>
+<!-- <navigator class="head two" url="/pages/find/pages/sport/sport">
+  <image src="{{IMGURL}}find/motion.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">A计划运动</text>
+    </view>
+    <text class="head-text-b">准确获取每日的运动指数</text>
+  </view>
+</navigator> -->
+<navigator class="head three" url="/pages/find/pages/ranking/ranking">
+  <image src="{{IMGURL}}find/ranking.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">班级指数排行榜</text>
+    </view>
+    <text class="head-text-b">你的班级在学校今天排第几？</text>
+  </view>
+</navigator>
+
+<navigator class="head three" url="/pages/find/pages/reporter/apply/apply">
+  <image src="{{IMGURL}}find/reporter.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">校园小记者</text>
+    </view>
+    <text class="head-text-b">校园动态你来发</text>
+  </view>
+</navigator>
+<navigator class="head three" url="/pages/find/pages/news/news">
+  <image src="../../images/find/campus.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-a">
+      <text class="head-text-a">校园动态</text>
+    </view>
+    <text class="head-text-b">随时掌握校园最新资讯</text>
+  </view>
+</navigator>
+</view>

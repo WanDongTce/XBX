@@ -1,0 +1,8 @@
+<compontNavbar title="分类" isShowBack="{{true}}"></compontNavbar>
+<block wx:if="{{showEmpty}}"><empty></empty></block>
+<view class="box" wx:else>
+    <navigator url="{{'/pages/find/pages/encyClassContList/encyClassContList?id=' + item.id + '&name=' + item.name}}" class="item" wx:key="this" wx:for="{{list}}">
+        <view class="tit">{{item.name}}</view>
+        <image class="icon" src="{{base}}images/next.png"></image>
+    </navigator>
+</view>

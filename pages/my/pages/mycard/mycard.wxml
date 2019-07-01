@@ -1,0 +1,29 @@
+<compontNavbar title="我的卡包" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<block wx:else>
+    <view class="list">
+        <view class="item" wx:for="{{list}}" wx:key="this">
+            <image src="{{IMGURL}}my/my-card-bg.png" class="bg"></image>
+            <view class="cont">
+                <view class="head">
+                    <view class="lt">
+                        <view class="h1">A计划学习体验卡 (月卡)</view>
+                    </view>
+                    <view class="price">{{item.type}}</view>
+                </view>
+                <view class="tip">
+                    <view class="tip-cont">
+                        <view>使用说明:</view>
+                        <view>·此卡仅限A计划教学平台中使用</view>
+                        <view>·此卡一经出售概不退换</view>
+                        <view>·此卡不能当现金使用</view>
+                    </view>
+                    <view class="btn" wx:if="{{item.status == 2}}" catchtap="useCard" data-card="{{item.card}}" data-sequence="{{item.sequence}}">立即使用</view>
+                    <view class="btn" wx:if="{{item.status == 3}}">已使用</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

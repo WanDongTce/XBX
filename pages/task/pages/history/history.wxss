@@ -1,0 +1,120 @@
+
+page {
+    background-color: #f7f7f7;
+    padding-top: 18vh;
+}
+.date-box {
+    position: fixed;
+    top: 10vh;
+    z-index: 5;
+    width: 100%;
+    height: 100rpx;
+    margin-bottom: 0rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.date-icon {
+    width: 20rpx;
+    height: 24rpx;
+}
+.date-str {
+    width: 33%;
+    text-align: center;
+    font-size: 30rpx;
+    color: #333;
+    padding: 0 2%;
+}
+.item {
+    width: 100%;
+    padding: 24rpx;
+    margin-top: 16rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.cont{
+    width: 100%;
+    margin-bottom: 20rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+}
+.item-img{
+    width: 106rpx;
+    height: 106rpx;
+    margin-right: 35rpx;
+}
+.item-cont{
+    width: 80%;
+}
+.head{
+    width: 100%;
+    margin-bottom: 20rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.tit{
+    font-size: 30rpx;
+    color: #333;
+}
+.itm-type{
+    font-size: 26rpx;
+    color: #ff692a;
+}
+.progress-box{
+    width: 95%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.progress{
+    width: 80%;
+    margin-right: 20rpx;
+    border: 1rpx solid #facb35;
+    border-radius: 20rpx;
+}
+.progress-text{
+    font-size: 24rpx;
+    color: #fb9e19;
+}
+.tip{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tip-lt{
+    width: 50%;
+}
+.tip-icon{
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tip-text{
+    font-size: 26rpx;
+    color: #999;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn{
+    width: 20%;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+    border-radius: 10rpx;
+}
+.bg-gray{
+    background: #ccc;
+}
+.bg-f33{
+    background: #f33;
+}

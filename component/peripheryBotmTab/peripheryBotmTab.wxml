@@ -1,0 +1,25 @@
+   <view class="botm-tabs" id="peripheryBotmTab">
+        <view class="tab" bindtap="tabClick" data-index="1">
+            <image class="tab-icon" src="{{index == 1? '../../images/tabBtom/home3.png': '../../images/tabBtom/home4.png'}}"></image>
+            <view class="tab-text {{index == 1? 'active': ''}}">首页</view>
+        </view>
+        <view class="tab" bindtap="tabClick" data-index="4">
+            <image class="tab-icon" src="{{index == 4? '../../images/tabBtom/label_22.png': '../../images/tabBtom/label_2.png'}}"></image>
+            <view class="tab-text {{index == 4? 'active': ''}}">分类</view>
+        </view>
+
+        <view class="tab" bindtap="tabClick" data-index="5">
+            <image class="tab-icon" src="{{index == 5? '../../images/tabBtom/label_33.png': '../../images/tabBtom/label_3.png'}}"></image>
+            <view class="tab-text {{index == 5? 'active': ''}}">周边</view>
+        </view>
+
+        <view class="tab" bindtap="tabClick" data-index="2">
+            <view class="gift-count" wx:if="{{cartCount > 0}}">{{cartCount > 99? '...' : cartCount}}</view>
+            <image class="tab-icon" src="{{index == 2? '../../images/tabBtom/gift.png': '../../images/tabBtom/gift2.png'}}"></image>
+            <view class="tab-text {{index == 2? 'active': ''}}">购物车</view>
+        </view>
+        <!-- <view class="tab" bindtap="tabClick" data-index="3">
+            <image class="tab-icon" src="{{index == 3? '../../images/tabBtom/order.png': '../../images/tabBtom/order2.png'}}"></image>
+            <view class="tab-text {{index == 3? 'active': ''}}">订单</view>
+        </view> -->
+    </view>

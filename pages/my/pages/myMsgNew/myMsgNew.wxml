@@ -1,0 +1,24 @@
+<compontNavbar title="我的消息" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<block wx:else>
+    <view class='bigbox' wx:for='{{list}}' wx:key='this' bindtap='toDetail' data-msgtype='{{item.type}}'>
+        <view class='itembox display-flex justify-content-between'>
+            <view class='display-flex'>
+                <image wx:if="{{item.type==1}}"  src='../../../../images/message_type1.png' class='item_img'></image>
+                <image wx:if="{{item.type==2}}"  src='../../../../images/message_type2.png' class='item_img'></image>
+                <image wx:if="{{item.type==3}}"  src='../../../../images/message_type3.png' class='item_img'></image>
+                <view class='item_centerbox'>
+                    <view class=' display-flex'>
+                        <view class='item_text1 f_32 c_333 one_line'>{{item.title}}</view>
+                        <view wx:if='{{item.isred==1}}' class=' item_dian'></view>
+                    </view>
+                    <view class='item_text2 f_28 c_999 one_line'>{{item.content}}</view>
+                </view>
+            </view>
+            <view class='item_time f_24 c_999'>{{item.time}}</view>
+        </view>
+    </view>
+
+</block>

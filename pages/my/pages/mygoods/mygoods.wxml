@@ -1,0 +1,37 @@
+<compontNavbar title="我的物品" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>   
+</block>
+<block wx:else>
+<view class='newitem_bigbox2' wx:for="{{list}}" wx:key="this">
+ 
+  <view class='newitem_titlebox display-flex'>
+    <view class='mygoods_scsj'>上传时间：{{item.createdate}}</view>
+    <!--  1.发布中  -->
+     <view  class='newitem_tittle_dd' wx:if="{{item.releasestatus == 1}}">发布中</view>          
+    <!--  2.未发布  -->
+     <view  class='newitem_tittle_sc' wx:else>未发布</view>          
+  </view>
+ 
+  <view class='item_centerbox overf mygoods_newbox'>
+    <image src='{{item.picurl}}' class='item_img fl'></image>
+    <view class='fl'>
+      <view class='item_title item_title2 item_mygoodstitle'>{{item.name}}</view>
+    </view>
+    <view class='item_numbox mygoods_numbox'>
+      <text>点赞{{item.likenum}}</text>
+      <text>留言{{item.commendnum}}</text>
+    </view>
+  </view>  
+  <view class='item_bottom2 overf'>        
+    <view class='fr applylist_btn applylist_btn1' catchtap="toEdit" data-id="{{item.id}}">编辑</view> 
+    <view class='fr applylist_btn applylist_btn2' wx:if="{{item.releasestatus == 1}}" bindtap="publish_btn" data-myid="{{item.id}}" data-state="2">取消发布</view> 
+     <view class='fr applylist_btn applylist_btn2' wx:else data-myid="{{item.id}}" bindtap="publish_btn" data-state="1">公开发布</view>         
+  </view>
+</view>
+</block>  
+
+
+
+
+<view class='mygoods_publish' catchtap="toRelease">发布</view>

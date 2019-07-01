@@ -1,0 +1,10 @@
+<view class="box" id="addAgre">
+    <block wx:if="{{thumbs_is == 1}}">
+        <image src="{{base}}images/agr4.png" class="add-agree-icon"></image>
+        <text class="add-agree-text active">{{agreenum}}</text>
+    </block>
+    <view wx:else bindtap="onTap">
+        <image src="{{count == 1? base + 'images/agr4.png': base + 'images/agr.png'}}" class="add-agree-icon"></image>
+        <text class="add-agree-text {{count == 1?'active': ''}}">{{agreenum}}</text>
+    </view>
+</view>

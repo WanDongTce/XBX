@@ -1,0 +1,98 @@
+<compontNavbar title="教师详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<image src='{{IMGURL}}teacher/teacher_bg.png' class='teacher_bgimg'></image>
+<view class='topbox'>
+    <view class='tea-box'>
+        <image wx:if="{{detail.FacePath}}" src='{{detail.FacePath}}' class='header' mode="aspectFill"></image>
+        <image wx:else src='../../../../../images/default-user-2.png' class='header' mode="aspectFill"></image>
+        <view class="tea-info">
+            <view class='name-box'>
+                <view class="name">{{detail.Name}}</view>
+                <view class="level">{{detail.JobTitle}}</view>
+            </view>
+            <view class='addr'>
+                <image src='{{base}}images/fff-addr.png'></image>
+                <text>{{detail.SchoolName}}</text>
+            </view>
+            <view class='sub-box'>
+                <view class="sub-lt">
+                    <image src='{{base}}images/fff-degree.png' class="degree-icon"></image>
+                    <text>{{detail.SubjectName}}</text>
+                    <block wx:for="{{detail.Xing}}" wx:key="this">
+                        <image src="{{base}}images/star.png" class="star-icon"></image>
+                    </block>
+                </view>
+                <view class="sub-rt">
+                    <image src='{{base}}images/fff-eye.png' class="eye-icon"></image>
+                    <text>{{item.Hit}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='top_bottom overf'>
+        <view class='fl w_p33'>
+            <view class='top_bottom1'>关注</view>
+            <view class='top_bottom2'>0</view>
+        </view>
+        <view class='fl w_p33'>
+            <view class='top_bottom1'>粉丝</view>
+            <view class='top_bottom2'>0</view>
+        </view>
+        <view class='fl w_p33'>
+            <view class='top_bottom1'>课程</view>
+            <view class='top_bottom2'>0</view>
+        </view>
+    </view>
+</view>
+
+<view class="tab">
+    <view class="tab-view {{curTabIndex == 0? 'active' : ''}}" data-id="0" bindtap="tabFun">
+        <view class="tit">介绍</view>
+        <view wx:if="{{curTabIndex == 0}}" class="tabline"></view>
+    </view>
+    <view class="tab-view {{curTabIndex == 1? 'active' : ''}}" data-id="1" bindtap="tabFun">
+        <view class="tit">课程</view>
+        <view wx:if="{{curTabIndex == 1}}" class="tabline"></view>
+    </view>
+    <view class="tab-view {{curTabIndex == 2? 'active' : ''}}" data-id="2" bindtap="tabFun">
+        <view class="tit">VCR</view>
+        <view wx:if="{{curTabIndex == 2}}" class="tabline"></view>
+    </view>
+</view>
+
+<view class="tab-content">
+    <view class="right-item {{curTabIndex == 0? 'active' : ''}}" wx:if="{{curTabIndex == 0}}">
+        <view class='class_content'>{{detail.Intro}}</view>
+    </view>
+    <view class="right-item {{curTabIndex == 1? 'active' : ''}}" wx:if="{{curTabIndex == 1}}">
+          <block wx:if="{{showEmpty}}">
+            <empty></empty>
+        </block>
+        <block wx:else>
+            <view class='kecheng_box' bindtap="toCourseDetail" data-id="{{item.Id}}" wx:for="{{list}}" wx:key="this">
+                <image wx:if='{{item.PicUrl}}' src='{{item.PicUrl}}' class='kecheng_leftimg' mode='center'></image>
+                <image wx:else src='../../../../../images/normal_pic12.png' class='kecheng_leftimg' mode='aspectFill'></image>
+                <view class='kecheng_contentbox'>
+                    <view class='kecheng_title'>{{item.Name}}</view>
+                    <view class="tip">
+                        <view class='timebox '>
+                            <image src='{{base}}images/time.png'></image>
+                            <text>{{item.Minute}}</text>
+                        </view>
+                        <view class='msgbox'>
+                            <image src='{{base}}images/msg.png'></image>
+                            <text>{{item.CommentNum}}</text>
+                        </view>
+                        <view class='agrbox'>
+                            <image src='{{base}}images/agr.png'></image>
+                            <text>{{item.AgreeNum}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="right-item {{curTabIndex == 2? 'active' : ''}}" wx:if="{{curTabIndex == 2}}">
+        <video src='{{detail.VCRUrl}}' poster="{{detail.VCRPic}}" custom-cache="{{false}}"></video>
+    </view>
+
+</view>

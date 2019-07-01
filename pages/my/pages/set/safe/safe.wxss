@@ -1,0 +1,31 @@
+page{
+  background-color:#f7f7f7;
+}
+.box{
+  background-color:#fff;
+  /* border-top:1rpx solid #e0e0e0; */
+  margin-top:15rpx;
+}
+
+.itembox{
+  height:100rpx;
+  line-height:100rpx;
+  padding:0 30rpx;
+  font-size:30rpx;
+  box-sizing: border-box;
+}
+.text_left{
+  color:#3f2e25;
+}
+.img{
+  width:14rpx;
+  height:24rpx;
+  margin-top:38.5rpx;
+  margin-left:17rpx;
+}
+.text_right{
+  color:#adadad;
+}
+.border_top{
+  border-top:1rpx solid #ececec;
+}

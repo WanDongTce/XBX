@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "名师频道",
+    "usingComponents": {
+        "empty": "/component/empty/empty",
+        "addressList": "/component/addressList/addressList",
+        "subjectList": "/component/subjectList/subjectList",
+        "levelList": "/component/levelList/levelList",
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

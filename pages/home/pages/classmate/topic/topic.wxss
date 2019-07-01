@@ -1,0 +1,48 @@
+/* pages/classmate/topic/topic.wxss */
+page{
+  background-color:#fff;
+}
+.leftbox{
+   width:24%;
+   height:100%;
+}
+.lefttext{
+  line-height: 97rpx;
+  font-size:28rpx;
+  text-align: center;
+  background-color:#f4f4f4;
+  color:#757590;
+  box-sizing: border-box;
+  border-left:none;
+}
+.current{
+  border-left:5rpx solid #50b63b !important;
+  color:#50b63b !important;
+  background-color:#fff !important;
+}
+.rightbox{
+  margin-left:4%;
+  width:72%;
+  /* text-align: center; */
+}
+.topic_img{
+  width:136rpx;
+  height:100rpx;
+  margin-left:24rpx;
+}
+.righttext_box{
+  padding:18rpx 0;
+  border-bottom:1rpx solid #e7e7e7;
+  align-items: center;
+}
+.righttext{
+  color:#352b1f;
+  font-size:30rpx;
+  margin-left:24rpx;
+}
+ .active{ 
+ display: block !important; 
+} 
+.display_none{
+  display: none;
+}

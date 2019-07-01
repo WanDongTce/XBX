@@ -1,0 +1,82 @@
+<compontNavbar title="我的消息" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+
+
+
+<!-- 系统 -->
+<view class='bigbox' wx:if="{{msgtype==1}}">
+    <view class='smbox' wx:for='{{list}}' wx:key='this' wx:if="{{item.resourcetypeid==0}}">
+        <view class='itembox'>
+            <view class='item_title c_333 f_32'>{{item.title}}</view>
+            <image wx:if="{{item.images}}" src='{{item.images}}' class='item_centerimg' mode='aspectFill'></image>
+            <image wx:else src='../../../../../images/normal_pic1.png' class='item_centerimg' mode='aspectFill'></image>
+            <view class='item_h1 width_item f_28 c_666 two_line'>{{item.content}}</view>
+        </view>
+        <view class='item_bottombox display-flex justify-content-between align-items-center' bindtap='tz_view' data-datahref='{{item.href}}'>
+            <view class='item_bottomtext f_28 c_333'>阅读全文</view>
+            <image src='../../../../../images/arrow_right_333.png' class='item_bottomimg'></image>
+        </view>
+    </view>
+</view>
+
+<!-- 任务 -->
+<view class='bigbox' wx:if="{{msgtype==2}}">
+    <view class='smbox' wx:for='{{list}}' wx:key='this'>
+        <view class='itembox'>
+            <view class='item_title c_333 f_32'>{{item.title}}</view>
+            <view class='item_content f_28 c_666 display-flex'>
+                <view>领取时间：</view>
+                <view class='item_text2'>{{item.send_time}}</view>
+            </view>
+            <view class='item_content f_28 c_666 display-flex'>
+                <view>任务状态：</view>    
+                <view class='item_text2 color_blue'>{{item.serializedata.z_status}}</view>
+            </view>
+            <view class='item_content f_28 c_666 display-flex'>
+                <view>任务奖励：</view>
+                <view class='item_text2 color_blue'>{{item.serializedata.z_reward}}</view>
+            </view>
+            <view class='item_content f_28 c_666 display-flex'>
+                <view>任务描述：</view>
+                <view class='item_text2 color_blue'>{{item.serializedata.z_content}}</view>
+            </view>
+        </view>
+        <view class='item_bottombox display-flex justify-content-between align-items-center' bindtap='gocomplate' data-resourcetypeid="{{item.resourcetypeid}}" data-gocomplateid='{{item.taskid}}'>
+            <view class='item_bottomtext f_28 c_333' wx:if='{{item.resourcetypeid==6}}'>做任务</view>
+            <view class='item_bottomtext f_28 c_333' wx:if='{{item.resourcetypeid==7}}'>查看积分</view>
+            <image src='../../../../../images/arrow_right_333.png' class='item_bottomimg'></image>
+        </view>
+    </view>   
+</view>
+
+<!-- 易货 -->
+<!-- <view class='bigbox' wx:if="{{msgtype==3}}">
+    <view class='smbox' wx:for='{{list}}' wx:key='this' wx:if="{{item.resourcetypeid==3||item.resourcetypeid==4}}">
+        <view class='itembox'>
+            <view class=' newitemtop'>
+                <view class='newitem_left c_333 f_30'>
+                    <text class='newitem_left_text'>【易货申请】</text>
+                    {{item.title}}
+                </view>                
+            </view>
+            <view class='newitem_left_time f_28 c_666'>{{item.send_time}}</view>
+            <view class='display-flex'>
+                <image wx:if="{{item.images}}" src='{{item.images}}' class='newitem_img'></image>
+                <image wx:else src='../../../../../images/normalPicture.png' class='newitem_img'></image>
+                <view >
+                    <view class='two_line f_26 c_666 newitem_view1'>{{item.content}}</view>
+                    <view class='display-flex align-items-center newitem_view2'>
+                        <image src='../../../../../images/normalPicture.png' class='item_typeimg'></image>
+                        <view class='item_typetext f_24 c_999'></view>
+                    </view>
+                </view>
+            </view>            
+        </view>
+        <view class='item_bottombox display-flex justify-content-between align-items-center'>
+            <view class='item_bottomtext f_28 c_333'>查看</view>
+            <image src='../../../../../images/arrow_right_333.png' class='item_bottomimg'></image>
+        </view>
+    </view> 
+</view> -->

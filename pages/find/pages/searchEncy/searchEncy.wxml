@@ -1,0 +1,25 @@
+<compontNavbar title="搜索百科" isShowBack="{{true}}"></compontNavbar>
+<view class='searchbigbox display-flex'>
+    <view class='searchbox display-flex' bindtap="toSearch">
+        <image src='{{base}}images/search.png' class='search_img'></image>
+        <input placeholder='搜索分类或内容' placeholder-class='placeholder' value="{{search}}" disabled="true"></input>
+    </view>
+    <view class='search_btn' catchtap="cancel">取消</view>
+</view>
+<view wx:if="{{showContent}}" class="box">
+    <view class="cont1 cont" wx:if="{{sort.length > 0}}">
+        <view class="tit">分类</view>
+        <view class="list">
+            <navigator url="{{'/pages/find/pages/encyClassList/encyClassList?id=' + item.id + '&title=' + item.name}}" class="item" wx:for="{{sort}}" wx:key="this">{{item.name}}</navigator>
+        </view>
+    </view>
+    <view class='cont2 cont' wx:if="{{about.length > 0}}">
+        <view class="tit">内容</view>
+        <view class="list">
+            <navigator url="{{'/pages/find/pages/encyClassContList/encyClassContList?id=' + item.id + '&name=' + item.name}}" class="item item2" wx:for="{{about}}" wx:key="this">
+                <image src="{{item.imgurl}}" class="img"></image>
+                <view class="text">{{item.name}}</view>
+            </navigator>
+        </view>
+    </view>
+</view>

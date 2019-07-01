@@ -1,0 +1,50 @@
+<compontNavbar title="逗逗玩" isShowBack="{{true}}"></compontNavbar>
+<view class="container">
+    <view class="fixed-box">
+        <!-- <view class="search-box">
+            <view class="search-cont">
+                <image src="{{base}}images/search.png" mode="widthFix" class="search-icon"></image>
+                <input class="search-input" placeholder="搜索关键字" bindinput="inputFn"></input>
+            </view>
+        </view> -->
+        <view class="select-box">
+            <view class="select" catch:tap="seltClkFn" data-idx="1">
+                <text class="selt-itm-text" data-idx="1">年级</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 1?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="1"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="2">
+                <text class="selt-itm-text" data-idx="2">游戏</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 2?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="2"></image>
+            </view>
+        </view>
+    </view>
+    <view class="select-opt-box" wx:if="{{isShowOption}}">
+        <view class="opt-mask" catch:tap="hideOption"></view>
+        <view animation="{{animationData}}" class="opt-cont">
+            <scroll-view class="opt-scroll-view" scroll-y="true" enable-back-to-top="true">
+                <view class="option" data-id="0" catchtap="selOptFn">
+                        <view class="opt-lt" data-id="0" catchtap="selOptFn">全部</view>
+                        <image class="opt-rt" src="{{(sctdOptIdx==1&&nianji==0)||(sctdOptIdx==2&&gametype==0)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="0" catchtap="selOptFn"></image>
+                </view>
+                <view class="option" wx:key="this" wx:for="{{options}}" data-id="{{item.id}}" catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}" catchtap="selOptFn">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==1&&nianji==item.id)||(sctdOptIdx==2&&gametype==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}" catchtap="selOptFn"></image>
+                </view>    
+            </scroll-view>
+            <view class="btn-box"><view class="btn" catch:tap="optCofmFn">确定</view></view>
+        </view>
+    </view>
+    <view class="cont-box">
+        <block wx:if="{{showEmpty}}"><empty></empty></block> 
+        <view class="cont-item" wx:key="this" wx:for="{{list}}" bindtap="toDetail" data-item="{{item}}">
+            <view class="itm-lt">
+                <image src="{{IMGURL}}game/playgame.png" class="lt-img"></image>
+                <view class="lt-text">
+                    <view class="tit">{{item.title}}</view>
+                    <view class="sub">{{item.nianjistr}}</view>
+                </view>
+            </view>
+            <image class="rt-img" src="{{base}}images/next.png"></image>
+        </view>
+    </view>
+</view>

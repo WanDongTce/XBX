@@ -1,0 +1,9 @@
+<view class="container">
+    <image src='../../../../../../images/arowLt.png' class='bogack_img' catchtap='goback'></image>
+
+    <image src="{{coverImg2}}"></image>
+    <view class='textareabox'>
+        <textarea placeholder="请输入..." placeholder-class="place-style"  bindinput="saveContent" maxlength='-1'></textarea>
+    </view>
+    <button bind:tap="send" class="btn">提交</button>
+</view>

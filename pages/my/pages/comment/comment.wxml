@@ -1,0 +1,39 @@
+<!--pages/my/comment/comment.wxml-->
+<import src="../../../../template/tab/tab.wxml" />
+<compontNavbar title="我的评论" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="this">
+            <template is="{{tabindex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+        </block>
+    </view>
+    <view class="content">
+        <block wx:if="{{showEmpty}}">
+            <empty></empty>
+        </block> 
+        <block wx:else>
+          <view class='item_box overf' wx:key="this" wx:for="{{list}}" bindtap='tz_detail' data-myid="{{item.id}}" data-resourcetypeid='{{item.resourcetypeid}}' data-resourceid='{{item.resourceid}}'>
+            <view class='fl item_header_box'>
+              <image wx:if="{{item.avatar==''}}" src='../../../../images/default-user-2.png' class='item_header'></image>
+              <image wx:else class='item_header' src='{{item.avatar}}'></image>
+            </view>
+            <view class='fl item_right_box'>
+              <view class='display-flex justify-content-between align-items-center'>
+                <view class='one_line item_name f_30 c_333'>{{item.username}}</view>
+                <view class='display-flex  align-items-center'>
+                  <image src='../../../../images/msg2.png' class='item_msg_img'></image>
+                  <view class='item_msgnum'>{{item.replynum}}</view>
+                </view>
+              </view>
+              <view class='item_time'>{{item.createdate}}</view>
+              <view class='item_content f_30 c_333'>{{item.content}}</view>
+              <!-- <view wx:if="{{item.href==''}}"></view> -->
+              <view  class='item_link display-flex align-items-center align-items-start'  catchtap='tz_link' data-src='{{item.href}}' data-resourceid="{{item.resourceid}}">
+                <image src='../../../../images/link.png' class='item_link_img'></image>
+                <text class='one_line item_link_text'>{{item.title}}</text>
+              </view>
+            </view>
+          </view>
+        </block>       
+    </view>
+</view>

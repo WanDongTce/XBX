@@ -1,0 +1,59 @@
+.box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.mask{
+    width: 100%;
+    height: 68vh;
+}
+
+.keyboard-box{
+    width: 100%;
+    height: 32vh;
+    overflow: hidden;
+    border-top: 1rpx solid #dfdfdf;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.keyboard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.key{
+    width: 33.33%;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+    color: #333;
+    font-size: 30rpx;
+    border-right: 1rpx solid #dfdfdf;
+    border-bottom: 1rpx solid #dfdfdf;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.key:nth-child(3),
+.key:nth-child(6),
+.key:nth-child(9),
+.key:nth-child(12){
+    border-right: none;
+}
+.key:nth-child(10),
+.key:nth-child(11),
+.key:nth-child(12){
+    border-bottom: none;
+}
+.key:nth-child(10){
+    background: #f4f4f4;
+}
+
+.key:nth-child(12) image{
+    width: 40rpx;
+    height: 30rpx;
+}

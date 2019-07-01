@@ -1,0 +1,12 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}"></compontNavbar>
+<block wx:for="{{list}}" wx:key="this">
+  <view class='box display-flex' bindtap='tz_topicdetaildetail' data-topicnamedetail="{{item.name}}" data-forumid="{{item.id}}" data-readvolume="{{item.read_volume}}" data-count="{{item.count}}" data-topicimg="{{item.image}}" data-topicdes="{{item.description}}">
+    <image src='{{item.image}}' class='img' mode='aspectFill'></image>
+    <view>
+      <view class='topic'>#{{item.name}}#</view>
+      <view class='content'>
+        {{item.read_volume}}阅读<text>总帖数{{item.count}}</text>
+      </view>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,22 @@
+<compontNavbar title="支付设置" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<!--1.无支付密码  -->
+<view class='box' wx:if="{{status == 2}}">
+    <navigator class='overf itembox' url='/pages/my/pages/payPwd/setPayPwd/setPayPwd?flag=1' open-type="redirect">
+        <view class='fl text_left'>设置支付密码</view>
+        <image src='../../../../images/next.png' class='img fr'></image>
+    </navigator>
+</view>
+
+<!--2.有支付密码  -->
+<view class='box' wx:if="{{status == 1}}">
+    <navigator class='overf itembox' url='/pages/my/pages/payPwd/modifyPayPwd/modifyPayPwd' open-type="redirect">
+        <view class='fl text_left'>修改支付密码</view>
+        <image src='../../../../images/next.png' class='img fr'></image>
+        <view class='fr text_right'></view>
+    </navigator>
+    <navigator class='overf itembox border_top' url='/pages/my/pages/payPwd/setPayPwd/setPayPwd?flag=2' open-type="redirect">
+        <view class='fl text_left'>找回支付密码</view>
+        <image src='../../../../images/next.png' class='img fr'></image>
+    </navigator>
+</view>

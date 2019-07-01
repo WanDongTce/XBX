@@ -1,0 +1,38 @@
+/* pages/home/my_study/answer/answer_quiz/answer_quiz.wxss */
+page{background-color:#f2f2f2;}
+.bgfff{background-color:#fff;}
+.publish_fasong{color:red; position: fixed; top:0;}
+
+.publish_title_view{border-bottom: 1px solid #d2d2d2;padding-left:26rpx;}
+.publish_title{  height: 80rpx; line-height: 80rpx;  width:100%;font-size:31rpx}
+
+.publish_content{  padding:26rpx; min-height: 200rpx; width:698rpx;font-size:31rpx}
+.add_img{width:218rpx; height: 218rpx; margin-left:26rpx;}
+
+
+
+
+.publish_tipbox{background-color:#e8e8e8; padding:30rpx 34rpx 240rpx 46rpx; color: #4a4a4a; line-height: 44rpx; font-size: 26rpx; }
+
+.publish_pubpic{width:218rpx; height:218rpx; margin-right: 20rpx;margin-bottom:10rpx;}
+.publish_fbbtn{width:578rpx; height:80rpx; font-size: 36rpx; background-color: #308fe3; border-radius: 40rpx; color: #fff; text-align: center; margin:0 auto;margin-top:50rpx;line-height:80rpx;margin-bottom:50rpx;}
+
+.new_mlkm{margin-left:62rpx;}
+
+.on{
+  color: #fff; background-color: #3783c8;
+  
+}
+
+
+
+.zcfx_box3{border-bottom: 1px solid #ededed;height:91rpx;padding:0 30rpx;background-color:#fff;}
+.zcfx_text3{font-size:31rpx;color:#0d0d0d;margin-top:22rpx; margin-bottom:30rpx;}
+.newpicker{font-size:31rpx;color:#545454;margin-top:22rpx;
+margin-bottom:30rpx;
+}
+.lastpicker_box{border-bottom: 1px solid #ededed;background-color:#fff;}
+.zcfx_box4{height:91rpx;padding:0 30rpx;}
+
+.tip_jifen{width:44rpx;height:44rpx;display: inline-block;left:400rpx;top:23.5rpx;} 
+.pickertext_width{width:162rpx;}

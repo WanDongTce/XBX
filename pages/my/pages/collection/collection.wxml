@@ -1,0 +1,44 @@
+<import src="../../../../template/tab/tab.wxml" />
+<compontNavbar title="我的收藏" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="this">
+            <template is="{{tabindex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+        </block>
+    </view> 
+    <view class="content">
+        <block wx:if="{{showEmpty}}">
+            <empty></empty>
+        </block>
+        <block wx:else>
+            <view class="item" wx:key="this" wx:for="{{list}}" bindlongpress="del" data-id="{{item.id}}">
+                <image src="{{item.imgurl}}" class="img" mode="aspectFill"></image>
+                <view class="cont">
+                    <view class="tit">{{item.title}}</view>
+                    <view class="tip" wx:if="{{(tabindex == 11 || tabindex == 4)&&(item.fenlei!='')}}">
+                        <image src="../../../../images/tag.png"></image>
+                        <text>{{item.fenlei}}</text>
+                    </view>
+
+                    <view class="bottm" wx:if="{{tabindex == 11}}">
+                        <view class="botm-lt" wx:if="{{item.isxia == 2}}">已下架</view>
+                        <view class="botm-rt">
+                            <text>点赞{{item.likenum}}</text>
+                            <text>留言{{item.commendnum}}</text>
+                        </view>
+                    </view>
+                    <view class="point-box" wx:if="{{tabindex == 6}}">
+                        <text class="point">{{item.point}}</text>
+                        <text>积分</text>
+                    </view>
+                    <view class="bottm" wx:if="{{tabindex == 4}}">
+                        <image src="../../../../images/agr.png" class="botm-img"></image>
+                        <text>{{item.likenum}}</text>
+                        <image src="../../../../images/msg.png" class="botm-img"></image>
+                        <text>{{item.commendnum}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

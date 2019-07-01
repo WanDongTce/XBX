@@ -1,0 +1,24 @@
+<compontNavbar title="我的标签" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='box'>
+    <view class='title'>
+        你的家庭成员？
+    </view>
+    <view class="tags">
+        <tag item="{{item}}" wx:for="{{labelList[0].label}}" wx:key="this" catch:selectTag="selectTag"></tag>
+    </view>
+    <view class='title'>
+        你擅长的科目？
+    </view>
+ 
+        <view class="tags">
+        <tag item="{{item}}" wx:for="{{labelList[1].label}}" wx:key="this" catch:selectTag="selectTag"></tag>
+    </view>
+    <view class='title'>
+        你最喜欢的运动是什么？
+    </view>
+
+        <view class="tags">
+        <tag item="{{item}}" wx:for="{{labelList[2].label}}" wx:key="this" catch:selectTag="selectTag"></tag>
+    </view>
+</view>
+<view class="btn" catchtap="saveTag">保存</view>

@@ -1,0 +1,15 @@
+<compontNavbar title="学校相册" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <block wx:else>
+    <view class="list">
+        <view class="item" wx:for="{{list}}" wx:key="this">
+            <view class="date">{{item.create_time}}</view>
+                <image src="{{item.imgurl}}" class="img" mode="widthFix"></image>
+        </view>
+    </view>
+    </block>
+    <view class="add-btn" bindtap="addImg">上传</view>
+</view>

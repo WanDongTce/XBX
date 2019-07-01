@@ -1,0 +1,39 @@
+<compontNavbar title="我要回答" isShowBack="{{true}}"></compontNavbar>
+
+
+<view class="contn">
+<view class="container1">
+  <view class="item1 color1 {{color== '#ff939d'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#ff939d">√</view>
+  <view class="item1 color2 {{color== '#ed8749'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#ed8749">√</view>
+  <view class="item1 color3 {{color== '#0088fe'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#0088fe">√</view>
+  <view class="item1 color4 {{color== '#e84002'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#e84002">√</view>
+  <view class="item1 color5 {{color== '#5db75d'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#5db75d">√</view>
+  <view class="item1 color6 {{color== '#333333'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#333333">√</view>
+  <view class="item1 color7 {{color== '#ffffff'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#ffffff">√</view>
+  <view class="item1 color8 {{color== '#5e415f'? 'selected-color' : ''}}" bindtap="colorSelect" data-param="#5e415f">√</view>
+  <text class='item1font' bindtap='penSelect'>{{penText}}</text>
+  <view wx:if="{{hidewentiBtn}}"></view>
+  <view wx:else>
+    <view wx:if="{{wentiBtn}}" class='item2font' bindtap='wenImg'>问题图片</view>
+    <view wx:else class='item2font item2font_new'>问题图片</view>
+  </view>
+  
+</view>
+
+
+<view class="container2" style="{{showBgImg?'background-image: url(' + bgImg +')':''}}">
+        <canvas canvas-id="myCanvas" class="myCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd"></canvas>
+</view>
+
+<view class="container3">
+   <view class='item2' bindtap='chexiao'>撤销</view> 
+  <view class='item3' bindtap='startluzhi'><view class="{{btnHtml != 1?'view1' : ''}}">{{startText}}</view><view wx:if="{{btnHtml == 1}}" class="endluzhi">结束录制</view></view>
+  <view class='item2' bindtap='nextPage'>下一页</view>
+</view>
+
+</view>
+

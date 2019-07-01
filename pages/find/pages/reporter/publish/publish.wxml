@@ -1,0 +1,37 @@
+<compontNavbar title="发布校园动态" isShowBack="{{true}}"></compontNavbar>
+<view class='view_box'>
+  <input placeholder='请输入标题' bindinput='saveTitle' placeholder-class='placeholder' maxlength="30"></input>
+</view>
+<view class='textarea_box'>
+   <textarea placeholder='请输入内容~~~'  placeholder-class='placeholder' maxlength="500" bindinput="saveContent"></textarea> 
+</view>
+
+
+<!-- <view class="imgs">
+ 
+        <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+            <image src="{{item.file_url}}" class="hmwk-img"></image>
+                <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+        </view>
+  
+</view>
+<view class='btn_box'>
+  
+  <image src='{{base}}images/pic.png' class='add_pic' bindtap="addImg" wx:if="{{imgList.length == 0}}"></image>
+</view> -->
+<view class="imgs">
+        
+             <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                 <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+            </view> 
+            <!-- <view class="scroll-item" >
+                <image src="{{base}}images/pic.png" class="hmwk-img" catchtap="addImg"></image>
+            </view> -->
+            
+</view>
+
+<image src="{{base}}images/pic.png" class="add_pic" catchtap="addImg"></image>
+<view class='clr'></view>
+
+<view class="btn-box" catchtap="submit">提交</view>

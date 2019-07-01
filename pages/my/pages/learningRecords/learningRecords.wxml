@@ -1,0 +1,171 @@
+ <compontNavbar title="学习记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar> 
+<import src="../../../../template/tab/tab.wxml" />
+
+<view class="box">   
+  <view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="this">
+            <template is="{{tabindex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+        </block>
+  </view>
+  <view class="tab-content">   
+    <view  wx:if="{{tabindex == 1 || tabindex == 2}}">
+      <block wx:if="{{showEmpty}}">
+          <empty></empty>
+      </block>  
+      <view wx:else>
+        <view wx:if="{{list_today.length!=0}}">
+          <view class='time_title'>
+            今天
+          </view>    
+          <view class="cont-box" >
+              <navigator class="cont-item" wx:for="{{list_today}}" wx:key="this"  url="{{'/pages/common/webView/webView?src=' + item.href}}">
+                  <view class="itm-lt">                  
+                      <view class="lt-img subject-bg-1" wx:if="{{item.species == 1}}" >数</view>
+                      <view class="lt-img subject-bg-2" wx:if="{{item.species == 2}}" >语</view>
+                      <view class="lt-img subject-bg-3" wx:if="{{item.species == 3}}" >英</view>
+                      <view class="lt-img subject-bg-4" wx:if="{{item.species == 4}}" >物</view>
+                      <view class="lt-img subject-bg-5" wx:if="{{item.species == 5}}" >化</view>
+                      <view class="lt-img subject-bg-6" wx:if="{{item.species == 6}}" >地</view>
+                      <view class="lt-img subject-bg-7" wx:if="{{item.species == 7}}" >历</view>
+                      <view class="lt-img subject-bg-8" wx:if="{{item.species == 8}}" >生</view>
+                      <view class="lt-img subject-bg-9" wx:if="{{item.species == 9}}" >政</view>
+                      <view class="lt-img subject-bg-10" wx:if="{{item.species == 10}}" >科</view>
+                      <view class="lt-img subject-bg-11" wx:if="{{item.species == 11}}" >综</view>
+                      <view class="lt-img subject-bg-11" wx:if="{{item.species == 12}}" >综</view>
+                      <view class="lt-text">
+                          <view class="tit">{{item.content}}</view>
+                          <view class="sub">{{item.create_time}}</view>
+                      </view>
+                  </view>
+                  <image class="rt-img" src="../../../../images/next.png"></image>
+              </navigator>
+          </view>
+        </view>
+        <view wx:if="{{list_yesterday.length!=0}}">
+          <view class='time_title'>
+            昨天
+          </view>    
+          <view class="cont-box" >
+              <navigator class="cont-item" wx:for="{{list_yesterday}}" wx:key="this"  url="{{'/pages/common/webView/webView?src=' + item.href}}">
+                  <view class="itm-lt">                  
+                      <view class="lt-img subject-bg-1" wx:if="{{item.species == 1}}" >数</view>
+                      <view class="lt-img subject-bg-2" wx:if="{{item.species == 2}}" >语</view>
+                      <view class="lt-img subject-bg-3" wx:if="{{item.species == 3}}" >英</view>
+                      <view class="lt-img subject-bg-4" wx:if="{{item.species == 4}}" >物</view>
+                      <view class="lt-img subject-bg-5" wx:if="{{item.species == 5}}" >化</view>
+                      <view class="lt-img subject-bg-6" wx:if="{{item.species == 6}}" >地</view>
+                      <view class="lt-img subject-bg-7" wx:if="{{item.species == 7}}" >历</view>
+                      <view class="lt-img subject-bg-8" wx:if="{{item.species == 8}}" >生</view>
+                      <view class="lt-img subject-bg-9" wx:if="{{item.species == 9}}" >政</view>
+                      <view class="lt-img subject-bg-10" wx:if="{{item.species == 10}}" >科</view>
+                      <view class="lt-img subject-bg-11" wx:if="{{item.species == 11}}" >综</view>
+                      <view class="lt-img subject-bg-11" wx:if="{{item.species == 12}}" >综</view>
+                      <view class="lt-text">
+                          <view class="tit">{{item.content}}</view>
+                          <view class="sub">{{item.create_time}}</view>
+                      </view>
+                  </view>
+                  <image class="rt-img" src="../../../../images/next.png"></image>
+              </navigator>
+          </view>
+        </view>
+        <view wx:if="{{list_earlier.length!=0}}">
+          <view class='time_title'>
+            更早
+          </view>    
+          <view class="cont-box" >
+              <navigator class="cont-item" wx:for="{{list_earlier}}" wx:key="this"  url="{{'/pages/common/webView/webView?src=' + item.href}}">
+                  <view class="itm-lt">                  
+                      <view class="lt-img subject-bg-1" wx:if="{{item.species == 1}}" >数</view>
+                      <view class="lt-img subject-bg-2" wx:if="{{item.species == 2}}" >语</view>
+                      <view class="lt-img subject-bg-3" wx:if="{{item.species == 3}}" >英</view>
+                      <view class="lt-img subject-bg-4" wx:if="{{item.species == 4}}" >物</view>
+                      <view class="lt-img subject-bg-5" wx:if="{{item.species == 5}}" >化</view>
+                      <view class="lt-img subject-bg-6" wx:if="{{item.species == 6}}" >地</view>
+                      <view class="lt-img subject-bg-7" wx:if="{{item.species == 7}}" >历</view>
+                      <view class="lt-img subject-bg-8" wx:if="{{item.species == 8}}" >生</view>
+                      <view class="lt-img subject-bg-9" wx:if="{{item.species == 9}}" >政</view>
+                      <view class="lt-img subject-bg-10" wx:if="{{item.species == 10}}" >科</view>
+                      <view class="lt-img subject-bg-11" wx:if="{{item.species == 11}}" >综</view>
+                      <view class="lt-img subject-bg-11" wx:if="{{item.species == 12}}" >综</view>
+                      <view class="lt-text">
+                          <view class="tit">{{item.content}}</view>
+                          <view class="sub">{{item.create_time}}</view>
+                      </view>
+                  </view>
+                  <image class="rt-img" src="../../../../images/next.png"></image>
+              </navigator>
+          </view>
+        </view>
+      </view>
+                    
+    </view>
+    
+    <view  wx:if="{{tabindex == 5}}"> 
+      <block wx:if="{{showEmpty}}">
+          <empty></empty>
+      </block> 
+      <view wx:else>
+        <view wx:if="{{list_today.length!==0}}">
+          <view class='time_title'>
+            今天
+          </view>      
+          <view class="news" wx:for="{{list_today}}" wx:key="this">
+            <view class="news-lt">
+                <image class="news-img" src="../../../../images/time.png"></image>
+            </view>
+            <view class="news-rt">
+                <view class="news-tit">{{item.content}}</view>
+                <view class="news-tips">
+                    <view class="tips-lt">
+                        <image class="news-tip-img" src="../../../../images/time.png"></image>
+                        <text class="news-tip-text">{{item.create_time}}</text>
+                    </view>              
+                </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{list_yesterday.length!==0}}">
+          <view class='time_title'>
+            昨天
+          </view>      
+          <view class="news" wx:for="{{list_today}}" wx:key="this">
+            <view class="news-lt">
+                <image class="news-img" src="../../../images/time.png"></image>
+            </view>
+            <view class="news-rt">
+                <view class="news-tit">{{item.content}}</view>
+                <view class="news-tips">
+                    <view class="tips-lt">
+                        <image class="news-tip-img" src="../../../../images/time.png"></image>
+                        <text class="news-tip-text">{{item.create_time}}</text>
+                    </view>              
+                </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{list_earlier.length!==0}}">
+          <view class='time_title'>
+            更早
+          </view>      
+          <view class="news" wx:for="{{list_today}}" wx:key="this">
+            <view class="news-lt">
+                <image class="news-img" src="../../../../images/time.png"></image>
+            </view>
+            <view class="news-rt">
+                <view class="news-tit">{{item.content}}</view>
+                <view class="news-tips">
+                    <view class="tips-lt">
+                        <image class="news-tip-img" src="../../../../images/time.png"></image>
+                        <text class="news-tip-text">{{item.create_time}}</text>
+                    </view>              
+                </view>
+            </view>
+          </view>
+        </view>
+      </view>     
+      
+      
+    </view>
+  </view>
+</view>

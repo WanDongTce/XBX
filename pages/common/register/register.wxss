@@ -1,0 +1,95 @@
+/* pages/login/register/register.wxss */
+
+/* .logo_box{width:100%;} */
+page{
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.overf {
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.logo {
+    width: 118rpx;
+    height: 165rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 84rpx;
+}
+
+.box {
+    padding: 30rpx 75rpx 0;
+}
+
+.itembox {
+    position: relative;
+    border-bottom: 1rpx solid #ccc;
+    margin-top: 25rpx;
+    height: 80rpx;
+}
+
+.placeholder {
+    color: #b2b1b1;
+}
+
+.register_input {
+    font-size: 30rpx;
+    height: 100%;
+    width: 420rpx;
+}
+
+.register_btn {
+    background-color: #48b947;
+    color: #fff;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top: 72rpx;
+    font-size: 30rpx;
+    border-radius: 8rpx;
+    border: none;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 74rpx;
+    text-align: center;
+    width: 100%;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.bottom text {
+    color: #04ade4;
+}
+
+.modifyp_btn1 {
+    position: absolute;
+    right: 0;
+    top: 5rpx;
+    width: 30%;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 28rpx;
+    color: #48b947;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.verify_color {
+    color: #b2b1b1;
+}
+
+.register_passwimg {
+    width: 36rpx;
+    height: 26rpx;
+    margin-top: 27rpx;
+}

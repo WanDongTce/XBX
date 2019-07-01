@@ -1,0 +1,21 @@
+ <view class="box" id="keyboard" >
+    <view class="mask" catchtap="hideKeyboard"></view>
+    <view class="keyboard-box">
+            <view class="keyboard">
+                <view class="key" data-i="1" catchtap="clickKey">1</view>
+                <view class="key" data-i="2" catchtap="clickKey">2</view>
+                <view class="key" data-i="3" catchtap="clickKey">3</view>
+                <view class="key" data-i="4" catchtap="clickKey">4</view>
+                <view class="key" data-i="5" catchtap="clickKey">5</view>
+                <view class="key" data-i="6" catchtap="clickKey">6</view>
+                <view class="key" data-i="7" catchtap="clickKey">7</view>
+                <view class="key" data-i="8" catchtap="clickKey">8</view>
+                <view class="key" data-i="9" catchtap="clickKey">9</view>
+                <view class="key"></view>
+                <view class="key" data-i="0" catchtap="clickKey">0</view>
+                <view class="key" catchtap="del">
+                    <image src="../../images/tg.png"></image>
+                </view>
+            </view>
+        </view>
+</view>

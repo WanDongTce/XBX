@@ -1,0 +1,20 @@
+<compontNavbar title="我要预购" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="container">
+    <view class="homework-cont">
+        <textarea placeholder="请详细描述您需要的商品，以便我们可以更准确的满足您的需求~~~" placeholder-class="placeh" bindblur="saveMsg"></textarea>
+        <view class="text-tip">150字</view>
+    </view>
+    <view class="imgs">
+        <scroll-view class="scroll-box" scroll-x="true">
+            <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                 <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+            </view>
+            <view class="scroll-item" wx:if="{{imgList.length == 0}}">
+                <image src="{{base}}images/add.png" class="hmwk-img" catchtap="addImg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="btn-box" catchtap="submit">提交</view>
+</view>
+

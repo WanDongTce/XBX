@@ -1,0 +1,36 @@
+/* pages/edutlList/integrated/integrated.wxss */
+page{
+  border-top: solid 1rpx #ddd;
+}
+.case{
+  width:  100%;
+  height: 1105rpx;
+}
+.integrated{
+  width: 92%;
+  height: 144rpx;
+  margin-top: 16rpx;
+  margin-left: 30rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.integrated-Learning{
+  width: 690rpx;
+  height: 144rpx; 
+  display: flex;
+  display: -webkit-flex;
+}
+
+.integrated-text-one{
+  position: absolute;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+  color: #fffefe;
+}
+.integrated-text-two{
+  position: absolute;
+  margin-left: 182rpx;
+  font-size: 24rpx;
+  color: #fffefe;
+}

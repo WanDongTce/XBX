@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "逗逗超市",
+  "usingComponents": {
+    "empty": "/component/empty/empty",
+    "peripheryBotmTab": "/component/peripheryBotmTab/peripheryBotmTab",
+    "search": "/component/search/search"
+  }
+}

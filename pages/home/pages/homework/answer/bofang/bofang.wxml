@@ -1,0 +1,14 @@
+<image src='../../../../../../images/arowLt.png' class='bogack_img' catchtap='goback'></image>
+<view class='cont'>
+    
+    
+    <view class="container2" style="{{'background-image: url(' + bgImg +')'}}">
+            <canvas canvas-id="myCanvas" class="myCanvas"
+                disable-scroll="false">
+            </canvas>
+    </view>
+    <view class="container3">
+        <view class='item2 {{isClick? "" : "diab"}}' bindtap='bofang'>播放</view>
+        <view class='item2' bindtap='next' wx:if="{{btnFlag == 1}}">发布</view> 
+    </view>
+</view>

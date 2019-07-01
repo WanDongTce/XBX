@@ -1,0 +1,21 @@
+<!--pages/edutlList/rest/rest.wxml-->
+<compontNavbar title="作息记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="positioning">
+  <view class="positioning-left one" catchtap='record' data-mytype='1'>
+    <text class="positioning-one">起床(05:00-06:30)</text>
+    <text class="positioning-two">点击记录</text>
+  </view>
+  <navigator class="positioning-button one" url="{{'/pages/my/pages/service/restList/restList?mytype=' + 1}}">
+    <text class="positioning-right">查看</text> 
+  </navigator>
+</view>
+<view class="positioning">
+  <view class="positioning-left two" catchtap='record' data-mytype='2'>
+    <text class="positioning-one">睡觉(20:00-22:00)</text>
+    <text class="positioning-two">点击记录</text>
+  </view>
+  <navigator class="positioning-button two" url="{{'/pages/my/pages/service/restList/restList?mytype=' + 2}}">
+    <text class="positioning-right">查看</text> 
+  </navigator>
+</view>

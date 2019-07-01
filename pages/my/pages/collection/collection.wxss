@@ -1,0 +1,137 @@
+@import "../../../../template/tab/tab.wxss";
+page{
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f4f4;
+    /* padding-top: 18vh; */
+}
+.tabs{
+    border-top: 1rpx solid #dfdfdf;
+    position:fixed;
+    top: 10vh;
+    left:0;
+    width:100%;
+}
+.content{
+    /* padding-top: 16rpx; */
+    margin-top:9vh;
+}
+.item{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 16rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.img{
+    width: 33vw;
+    height: 33vw;
+}
+.cont{
+    width: 60%;
+    height: 33vw;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tit{
+    width: 100%;
+    line-height: 45rpx;
+    color: #333;
+    font-size: 30rpx;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.tip{
+    width: 100%;
+    height: 100rpx;
+}
+.tip image{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tip text{
+    margin-right: 16rpx;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24rpx;
+    color: #999;
+}
+.bottm{
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #888;
+    font-size: 24rpx;
+    align-self: flex-end;
+}
+.bottm text{
+    margin-right: 20rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bottm text:last-child{
+    margin-right: 0;
+}
+.point-box{
+    width: 100%;
+    height: 80rpx;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+    align-self: flex-end;
+    color: #e53a45;
+}
+.point-box text{
+    display: inline-block;
+    vertical-align: baseline;  
+}
+.point{
+    font-size: 48rpx;
+    margin-right: 8rpx;
+}
+.botm-img{
+    width: 24rpx;
+    height: 22rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8rpx;
+}
+.botm-lt{
+    width: 20%;
+    line-height: 1.5em;
+    background: #ddd;
+    color: #fff;
+    font-size: 24rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    float: left;
+}
+.botm-rt{
+    width: 80%;
+    text-align: right;
+    float: right;
+}
+.botm-rt:only-child{
+    width: 100%;
+}

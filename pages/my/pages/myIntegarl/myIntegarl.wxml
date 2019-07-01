@@ -1,0 +1,50 @@
+<compontNavbar title="我的积分" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<!-- <view class='topbox position-relative'>
+  <image src='../../../../images/ques.png' class='integral_introduce' bindtap='tz_jfsm'></image> 
+  <view class='iconbox'>
+    <image src='../../../../images/money-fff.png' class='integral_coinimg'></image> 
+    {{score}}
+  </view>
+  <view class='kyjf'>可用积分</view>
+  <navigator class='top_btn' url='/pages/home/pages/integralMall/record/record'>兑换记录</navigator>
+</view> -->
+
+<view class='topbox position-relative'>
+  <view class='position_a display-flex integral_introducebox  align-items-center' bindtap='tz_jfsm'>
+    <image src='../../../../images/ques.png' class='integral_introduce' ></image>
+    <view class='integral_introducetext f_28'>积分规则</view>
+  </view>
+  <view class='iconbox'>
+    <image src='../../../../images/money-fff.png' class='integral_coinimg'></image> 
+    {{score}}
+  </view>
+  <view class='kyjf'>可用积分</view>
+  <view class='display-flex align-items-center new_bottom'>
+    <navigator class='new_btnbox display-flex' url='/pages/home/pages/integralMall/integralMall'>
+        <image src='../../../my/images/my_integral_icon1.png'></image>
+        <view>积分商城</view>
+    </navigator>
+    <navigator class='new_btnbox display-flex' url='/pages/home/pages/integralMall/record/record'>
+        <image src='../../../my/images/my_integral_icon2.png'></image>
+        <view>积分兑换</view>
+    </navigator>
+  </view>
+</view>
+
+<view class='titlebox'>
+  <view class='title_line'></view>
+  <view class='title'>最近30天积分记录</view>
+</view>
+<block wx:if="{{showEmpty}}"><empty></empty></block> 
+<view class='item_box' wx:for="{{scoreList}}" wx:key="this">
+  <view class='item_title'>
+    {{item.rule_name}}
+  </view>
+  <view class='overf item_center'>
+    <view class='fl time'>{{item.date}}</view>
+    <view class='fr hdjf'>
+        <!-- {{item.type_name}} -->
+        <text>{{item.score}}</text>
+    </view>
+  </view>
+</view>

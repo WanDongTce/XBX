@@ -1,0 +1,47 @@
+/* pages/my/invite/invite.wxss */
+page{
+  background-color:#f4f4f4;
+}
+.nodata_box{
+    width: 100%;
+    min-width: 600rpx;
+    min-height: 30vh;
+    text-align: center;
+}
+
+.text1{
+  font-size:24rpx;
+  color:#808388;
+  text-align: center;
+  margin-bottom:36rpx;
+}
+.box{
+  justify-content: space-around;
+  background-color:#fff;
+  border-radius:20rpx;
+  margin:100rpx 20rpx 0;
+  border:1rpx solid #e1e1e1;
+}
+.img{
+  height:90rpx;
+  width:90rpx;
+  margin-top:50rpx;
+}
+.text{
+  font-size:24rpx;
+  color:#979797;
+  margin-top:25rpx;
+  margin-bottom:45rpx;
+  text-align: center;
+}
+.new_mongoose_img{
+  margin:240rpx auto 35rpx;
+}
+.invite_title{
+  font-size:34rpx;
+  color:#382d20;
+  margin-bottom:40rpx;
+}
+button{
+  border:1rpx solid #fff !important;
+}

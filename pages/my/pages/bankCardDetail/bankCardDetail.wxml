@@ -1,0 +1,11 @@
+<compontNavbar title="银行卡" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class="box">
+    <image class="bank-img" src="{{item.bank_belong_code? IMGURL + 'bankimg/' + item.bank_belong_code + '.png' : IMGURL + 'bankimg/default.png'}}" mode="widthFix"></image>
+    <view class="bank-name">{{item.bank_belong}}</view>
+    <view class="bank-num">{{item.bank_number}}</view>
+    <view class="btns">
+        <view class="btn {{'color-' + item.bank_color}}" catchtap="setDefault">设为默认</view>
+        <view class="btn {{'color-' + item.bank_color}}" catchtap="bankcardDel">解除绑定</view>
+    </view>
+</view>
+ <passwordDialog catch:getPwd="getPwd" wx:if="{{showPwd}}" catch:hidePwdDialog="hidePwdDialog"></passwordDialog> 

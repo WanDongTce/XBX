@@ -1,0 +1,153 @@
+<import src="../../../../../wxParse/wxParse.wxml" />
+<view class='newtopbox display-flex align-items-center'  id='newtopbox' style="opacity: {{opicity}}">
+    <image src='{{base}}images/arowLt.png' class='arowLt' bindtap='goBack'></image>
+    
+    <view bindtap="clickMenu" data-anchor='imgs-box' class='new_topactive' wx:if="{{ (nodeOneT<height6)&&(nodeTwoT>height6)}}">商品
+        <view class='new_topline'></view>
+    </view>
+    <view bindtap="clickMenu" data-anchor='imgs-box' class='new_toptext ' wx:else>商品</view>   
+
+    <view bindtap="clickMenu" data-anchor='comment-box' class='new_topactive' wx:if="{{ (nodeTwoT<height6)&&(nodeThreeT>height6)}}">评论
+        <view class='new_topline'></view>
+    </view>
+    <view bindtap="clickMenu" data-anchor='comment-box' class='new_toptext' wx:else>评论</view>
+
+    <view bindtap="clickMenu" data-anchor='recommend-box' class='new_topactive' wx:if="{{ (nodeThreeT<height6)&&(nodeFourT>height6)}}">推荐
+        <view class='new_topline'></view>
+    </view>
+    <view bindtap="clickMenu" data-anchor='recommend-box' class='new_toptext' wx:else>推荐</view>
+    
+    <view bindtap="clickMenu" data-anchor='detail-box' class='new_topactive' wx:if="{{ (nodeFourT<height6)&&(nodeFourB>height6)}}">详情
+        <view class='new_topline'></view>
+    </view>
+    <view bindtap="clickMenu" data-anchor='detail-box'  class='new_toptext' wx:else>详情</view> 
+    
+</view>
+<scroll-view bindscroll="scroll" class='newscroll_view' scroll-with-animation="{{true}}" scroll-y scroll-into-view="{{anchor}}" style="height:{{scrollHeight}}px">
+<view class="container">
+    <view class="imgs-box" id='imgs-box'>        
+        <view class="img-count-box" wx:if="{{detail.images.length > 0}}">{{imgIndex + 1}}/{{detail.images.length}}</view>
+        <image src='{{base}}images/arowLt_fff.png' class='arowLt_fff' bindtap='goBack'></image>
+        <swiper>
+            <block wx:for="{{detail.images}}" wx:key="this" wx:for-index="{{imgIndex}}">
+                <swiper-item>
+                    <image src="{{item.url}}" mode="aspectFill" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="info-box" id='info-box'>
+        <view class="info-bg-fff">
+            <view class="point-box">
+                <view class="point">积分 {{detail.point}}</view>
+                <view class="hit">浏览次数: {{detail.hit}}</view>
+            </view>
+            <view class="title">{{detail.name}}</view>
+        </view>
+        <view class="info-tip">
+            <view class="tip">
+                <image src="{{base}}images/tip-icon.png" class="tip-icon"></image>
+                <text class="tip-text">包邮</text>
+            </view>
+            <view class="tip">
+                <image src="{{base}}images/tip-icon.png" class="tip-icon"></image>
+                <text class="tip-text">正品行货</text>
+            </view>
+            <view class="tip">
+                <image src="{{base}}images/tip-icon.png" class="tip-icon"></image>
+                <text class="tip-text">24小时发货</text>
+            </view>
+        </view>
+    </view>
+    <view class="comment-box" id='comment-box'>
+        <view class="h2">
+            <view class="h2-lt">
+                <view class="rect-icon"></view>
+                <text class="h2-text">商品评论({{commentList.length}})</text>
+            </view>
+            <navigator url="{{'/pages/common/commentsList/commentsList?typeid=6&id=' + detail.id}}" class="h2-rt">
+                <text class="h2-rt-text">查看全部</text>
+                <image src="{{base}}images/next.png" class="h2-rt-img"></image>
+            </navigator>
+        </view>
+        <view class="comment-list" wx:if="{{commentList.length > 0}}">
+            <view class="comment-item" wx:for="{{commentList}}" wx:key="this" wx:for-index="index" wx:if="{{index < 2}}">
+                <view class="comment-info">
+                    <view class="comment-lt">
+                        <image class="comment-user" mode="aspectFill" src="{{item.userInfo.avatar?item.userInfo.avatar: base + 'images/default-user-2.png'}}"></image>
+                        <text class="comment-name">{{item.userInfo.nickname}}</text>
+                    </view>
+                    <view class="comment-time">{{item.difftime}}</view>
+                </view>
+                <view class="comment-cont">{{item.content}}</view>
+            </view>
+        </view>
+        <view class="no-comment" wx:else>暂时还没有评论哦~</view>
+    </view>
+    <view class="recommend-box" id='recommend-box'>
+        <view class="h2">
+            <view class="h2-lt">
+                <view class="rect-icon"></view>
+                <text class="h2-text">推荐商品</text>
+            </view>
+        </view>
+        <scroll-view class="scroll-box" scroll-x="true">
+            <view class="scroll-item" catchtap="getGift" wx:if="{{showGiftCount == 0}}">
+                <view class="slide-image" mode="aspectFill">
+                    <image src="../../../images/mall/box.png" mode="aspectFill" class="gf-img"></image>
+                </view>
+                <view class="slide-tit">校园寻宝</view>
+                <view class="slide-point"></view>
+            </view>
+            <navigator class="scroll-item" wx:for="{{recommendList}}" wx:key="this" url="{{'/pages/home/pages/integralMall/integralMallDetail/integralMallDetail?id=' + item.id}}">
+                <image src="{{item.pic_url}}" class="slide-image" mode="aspectFill"></image>
+                <view class="slide-tit">{{item.name}}</view>
+                <view class="slide-point">积分 {{item.point}}</view>
+            </navigator>
+        </scroll-view>
+    </view>
+    <view class="detail-box" id='detail-box'>
+        <view class="h2">
+            <view class="h2-lt">
+                <view class="rect-icon"></view>
+                <text class="h2-text">商品详情</text>
+            </view>
+        </view>
+        <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData: content.nodes}}"></template>
+        </view>
+    </view>
+    <view class="bottom-box">
+        <view class="botm-cont">
+            <view class="concat" catchtap="makePhone" data-phone="{{tel}}">
+                <image src="{{base}}images/concat.png" class="botm-icon"></image>
+                <text class="botm-text">客服</text>
+            </view>
+            <view class="collect" catchtap="addCollect" wx:if="{{detail.iscollect == 2}}">
+                <image src="{{isCollect? base + 'images/collect2.png': base + 'images/collect.png'}}" class="botm-icon"></image>
+                <text class="botm-text">收藏</text>
+            </view>
+            <view class="collect" wx:else>
+                <image src="{{base}}images/collect2.png" class="botm-icon"></image>
+                <text class="botm-text">收藏</text>
+            </view>
+            <view class="botm-btn" catchtap="toSettlement" data-item="{{detail}}">立即兑换</view>
+        </view>
+    </view>
+</view>
+</scroll-view>
+<view class="gift-box" wx:if="{{showGift}}">
+    <view class="gift-mask" catchtap="hideGift" mode="widthFix"></view>
+    <view class="gift-cont" animation="{{animationData}}">
+        <image src="../../../images/mall/bg.png" class="bg-img"></image>
+        <image src="../../../images/mall/close.png" catchtap="hideGift" class="close-icon"></image>
+ <!-- animation="{{animationData2}}" -->
+        <view class="gift-info-box">
+            <image src="../../../images/mall/money.png" class="gift-img" mode="widthFix"></image>
+            <view class="gift-name">{{giftInfo.Name || '谢谢参与，继续努力！'}}</view>
+            <image src="../../../images/mall/btn1.png" catchtap="recGift" class="gift-btn" mode="widthFix" wx:if="{{giftInfo}}"></image>
+            <image src="../../../images/mall/btn2.png" catchtap="hideGift" class="gift-btn" mode="widthFix" wx:else></image>
+        </view>
+    </view>
+
+</view>

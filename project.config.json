@@ -1,0 +1,62 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx81f27518f0220bed",
+	"projectname": "A%E8%AE%A1%E5%88%92%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%80%81%EF%BC%88%E6%AD%A3%E5%BC%8F%EF%BC%89",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "从家长端跳转来",
+					"pathName": "pages/main/pages/home/home",
+					"query": "mobile=18800000000&&token=3681c49b07452fe4446af3fc68808ac8",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wxee68233581f4965a",
+						"extraData": "{}"
+					}
+				},
+				{
+					"id": 1,
+					"name": "(正式)从家长端跳转来",
+					"pathName": "pages/main/pages/home/home",
+					"query": "mobile=18809849717&&token=7e0ceeb8297a6b97a9b0388df1a5a48e",
+					"scene": "1037",
+					"referrerInfo": {
+						"appId": "wxee68233581f4965a",
+						"extraData": "{}"
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,5 @@
+<view class="container">
+<image src="{{coverImg2}}"></image>
+<textarea placeholder="请输入..." placeholder-class="place-style" bindblur="getTxaVal" bindconfirm="getTxaVal"></textarea>
+<button bind:tap="send" class="btn">提交</button>
+</view>

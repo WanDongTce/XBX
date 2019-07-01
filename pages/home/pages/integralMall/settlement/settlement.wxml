@@ -1,0 +1,52 @@
+<compontNavbar title="结算" isShowBack="{{true}}"></compontNavbar>
+ <view class='top_bigbox' bindtap='tz_address' wx:if="{{hasAddress}}">
+  <view class='top_box display-flex' >
+    <view class='top_name'>收货人：{{address.name}}</view>
+    <view class='top_phone'>{{address.tel}}</view>
+  </view> 
+  <view class='top_address display-flex'>
+  <view class="lt">
+    <image src='{{base}}images/addr2.png' class='address_img'></image>
+    </view>
+    <view class='address_text'>
+        {{address.priovince_name + address.city_name + address.district_name + address.address}} 
+    </view>
+    <view class="rt">
+        <image src='{{base}}images/next.png' class='address_jt'></image>
+    </view>
+  </view>
+</view>
+<view class='noaddress_box' wx:else>
+  <view class='noaddress'>暂无地址，请添加收货地址</view>
+  <view class='noaddress_btnbox'>
+    <view class='add_noaddress' bindtap='tz_address' >
+      <image src='{{base}}images/plus-green.png' class='add_noaddressimg'></image>
+      添加收货地址
+    </view>
+  </view>
+</view> 
+<image src='{{base}}images/score_bottomline.png' class='score_bottomline' mode='scaleToFill'></image>
+<view class='item_bigbox'>
+  <view class='item_box display-flex'>
+    <view class='item_imgbox'>
+      <image src='{{list.pic_url}}' class='item_img' mode='aspectFit'></image>
+    </view>
+    <view class='item_contentbox'>
+      <view class='item_title'>
+        {{list.name}}
+      </view>
+      <view class='display-flex item_bottombox'>
+        <view class='jifen'>{{list.point}}<text>积分</text></view>
+        <view class='num_box display-flex'>
+          <image src='{{base}}images/minus.png' class='num_img' bindtap="minusCount" data-score="{{list.jifen}}"></image>
+          <view class='num'>{{num}}</view>
+          <image src='{{base}}images/plus.png' class='num_img' bindtap="addCount" data-score="{{list.jifen}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottom_box display-flex'>
+  <view class='bottom_left'>应付积分：<text>{{totalPrice}}</text></view>
+  <view class='bottom_btn' catch:tap='submit'>下单支付</view>
+</view>

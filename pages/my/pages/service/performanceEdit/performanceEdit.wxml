@@ -1,0 +1,88 @@
+<!--pages/service/performanceEdit/performanceEdit.wxml-->
+<compontNavbar title="成绩管理" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<form bindsubmit="bindFormSubmit">
+
+<view class='zcfx_box4 overf'>
+  <view class='zcfx_text4 fl'>考试名称：</view>
+   <textarea hidden='{{textarea}}' class="zcfx_textarea fl {{model==1 ? 'position_15':''}}" placeholder='' auto-height="true"  id="xfmc"  name="xfmc"  value='{{xfmc}}' maxlength="25"></textarea> 
+  <!-- <input  id="xfmc"  name="xfmc" placeholder="" placeholder-class="placeHolder" confirm-type="next" cursor-spacing="90" class='zcfx_input4'/> -->
+</view>
+
+<view class='zcfx_box2 overf'>
+  <picker mode="date" value="{{date1}}" start="2010-01-01" end="{{currentdate}}" bindchange="bindDateChange">
+    <view class="form_group">
+        <text class='zcfx_text2 fl'>考试时间：</text>
+        <text class="zcfx_pickertime">{{date1}}</text>
+    </view>
+  </picker>
+</view>
+<view class='zcfx_box5 overf'>
+  <view class='zcfx_text5 fl'>备注摘要：</view>
+  <textarea hidden='{{textarea}}' class="zcfx_textarea5 fl {{model==1 ? 'position_d15':''}}" placeholder='' auto-height="true" id="bzzy"  name="bzzy" value='{{bzzy}}'></textarea>
+</view>
+<view class="center">
+  <text class="center-text">各科成绩</text>
+</view>
+<view class="achievement">
+  <view class="box">
+    <view class="achievement-subject">
+      <text class="achievemen-text">数学</text>
+      <input  class="achievement-box" type='digit' name="shuxue" cursor-spacing="90" value='{{shuxue}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">语文</text>
+      <input  class="achievement-box" type='digit' name="yuwen" cursor-spacing="90" value='{{yuwen}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">英语</text>
+      <input  class="achievement-box" type='digit' name="yingyu" cursor-spacing="90" value='{{yingyu}}'/>
+    </view>
+  </view>
+  <view class="box">
+    <view class="achievement-subject">
+      <text class="achievemen-text">物理</text>
+      <input  class="achievement-box" type='digit' name="wuli" cursor-spacing="90" value='{{wuli}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">化学</text>
+      <input  class="achievement-box" type='digit' name="huaxue" cursor-spacing="90" value='{{huaxue}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">地理</text>
+      <input  class="achievement-box" type='digit' name="dili" cursor-spacing="90" value='{{dili}}'/>
+    </view>
+  </view>
+  <view class="box">
+    <view class="achievement-subject">
+      <text class="achievemen-text">历史</text>
+      <input  class="achievement-box" type='digit' name="lishi" cursor-spacing="90" value='{{lishi}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">生物</text>
+      <input  class="achievement-box" type='digit' name="shengwu" cursor-spacing="90" value='{{shengwu}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">政治</text>
+      <input  class="achievement-box" type='digit' name="zhengzhi" cursor-spacing="90" value='{{zhengzhi}}'/>
+    </view>
+  </view>
+  <view class="box">
+    <view class="achievement-subject">
+      <text class="achievemen-text">科学</text>
+      <input  class="achievement-box" type='digit' name="kexue" cursor-spacing="90" value='{{kexue}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">理综</text>
+      <input  class="achievement-box" type='digit' name="lizong" cursor-spacing="90" value='{{lizong}}'/>
+    </view>
+    <view class="achievement-subject">
+      <text class="achievemen-text">文综</text>
+      <input  class="achievement-box" type='digit' name="wenzong" cursor-spacing="90" value='{{wenzong}}'/>
+    </view>
+  </view>
+</view>
+
+<button formType="submit" class="add_btn">保存</button>
+
+</form>

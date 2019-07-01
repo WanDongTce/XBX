@@ -1,0 +1,29 @@
+<compontNavbar title="我的钱包" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class="head">
+    <view class="head-top">
+        <image class="trading-icon" src="../../../../images/wodehuodong_icon.png" catchtap="toTrading"></image>
+        <view class="head-box">
+            <text class="head-top-text">账户余额（元）</text>
+        </view>
+        <text class="head-top-number">{{account.account}}</text>
+    </view>
+    <view class="head-bottom">
+        <view class="head-bottom-box" catchtap="toRecharge">
+            <text class="head-bottom-text">充值</text>
+        </view>
+        <view class="head-bottom-center"></view>
+        <navigator url="/pages/my/pages/withCash/withCash" class="head-bottom-box">
+            <text class="head-bottom-text">提现</text>
+        </navigator>
+    </view>
+</view>
+<view class="case">
+    <navigator url="/pages/my/pages/bankCard/bankCard" class="case-top">
+        <image src="../../../../images/card.png" class="case-img"></image>
+        <text class="case-text">我的银行卡</text>
+    </navigator>
+    <navigator url="/pages/my/pages/payPwd/payPwd" class="case-top">
+        <image src="../../../../images/setting.png" class="case-img"></image>
+        <text class="case-text">支付设置</text>
+    </navigator>
+</view>

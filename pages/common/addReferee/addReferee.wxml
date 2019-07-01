@@ -1,0 +1,14 @@
+<compontNavbar title="添加推荐人信息" isShowBack="{{true}}"></compontNavbar>
+<form bindsubmit="bindFormSubmit">
+    <picker bindchange="bindPickerChange" value="{{agtIndex}}" range="{{agtList}}" range-key="name">
+        <view class="picker">
+            推荐人类型：{{agtList[agtIndex].name}}
+        </view>
+        <image src='{{base}}images/arowDown.png' class='arrowimg'></image>
+    </picker>
+    <view class='inputbox'>
+        <input type="number" placeholder='请输入手机号' placeholder-class='placeholder' name="phone"></input>
+    </view>
+    <button class='btn' formType="submit">完成</button>
+    <view class="btn2" bindtap="next">跳过</view>
+</form>

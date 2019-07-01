@@ -1,0 +1,36 @@
+<!--pages/edutlList/school/school.wxml-->
+<compontNavbar title="{{positiontitle}}" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<block wx:if="{{list.length == 0}}"><empty></empty></block> 
+<block wx:for="{{list}}" wx:key="this">
+<view class="home">
+  <view class="seize"></view>
+  <view class="home-top">
+    <text class="top-text">{{positiontitle}}</text>
+  </view>
+  <view class="home-bottom">
+    <view class="longitude">
+      <view class="longitude-top">
+        <text class="longitude-text">地址：</text>
+        <text class="longitude-number">{{item.address}}</text>
+        <!-- <text class="longitude-text">经度：</text>
+        <text class="longitude-number">{{item.lng}}</text>
+        <text class="longitude-text">纬度：</text>
+        <text class="longitude-number">{{item.lat}}</text> -->
+      </view>
+      <view class="longitude-bottom">
+        <text class="longitude-text">时间：</text>
+        <text class="longitude-time c_gf">{{item.create_time}}</text>
+        
+      </view>
+    </view>
+    <navigator class="map">
+      <view class="map-button c_gf_bg" bindtap="userLocationDetail" data-lat='{{item.lat}}' data-lng='{{item.lng}}'>
+        <text class="map-text">查看地图</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+</block>
+
+

@@ -1,0 +1,49 @@
+/* pages/find/find.wxss */
+.newbox{
+  padding:0 30rpx;
+  background-color:#fff;
+}
+.head{
+  /* width: 92%; */
+  height: 140rpx;
+  /* margin-left: 30rpx; */
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-bottom: solid 1rpx #f2f1f1;
+  background-color: #fff;
+}
+.one{
+  margin-top: 10rpx;
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+}
+.two{
+  border-radius: 0rpx;
+}
+.three{
+  border-radius: 0rpx 0rpx 10rpx 10rpx;
+}
+.head-img{
+  width: 88rpx;
+  height: 88rpx;
+  /* margin-left: 30rpx; */
+}
+.head-box{
+  width: 500rpx;
+  height: 88rpx;
+  margin-left: 30rpx;
+  font-size: 0;
+}
+.head-box-a{
+  width: 500rpx;
+  height: 51rpx;
+  margin-top:9rpx;
+}
+.head-text-a{
+  font-size: 30rpx;
+  color: #000;
+}
+.head-text-b{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}

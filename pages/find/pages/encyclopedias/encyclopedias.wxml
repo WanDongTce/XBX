@@ -1,0 +1,43 @@
+<compontNavbar title="学校百科" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <view class="head">
+        <navigator url="/pages/find/pages/schoolInfo/schoolInfo" class="school-box">
+            <view class="shool-info">
+                <view class="school-name">{{info.school_name}}</view>
+                <view class="school-addr">{{info.address || ' '}}aaaa</view>
+            </view>
+            <view class="head-box">
+                <text class="head-box-text">学校信息全知道</text>
+                <image src="{{base}}images/next.png" class="head-box-img"></image>
+            </view>
+        </navigator>
+        <view class="hot-box">
+            <scroll-view scroll-y scroll-top="{{scrollTop}}" enable-back-to-top="true" data-id="{{item.id}}">
+                <block wx:for="{{hotNews}}" wx:key="this">
+                    <view class="hot-itm" catchtap="toDetail" data-id="{{item.id}}">
+                            <image src="{{item.cover_image}}" class="hot-img"></image>
+                            <view class="hot-tit">{{item.title}}</view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="content">
+    <navigator url="/pages/find/pages/search/search" class="search">
+        <view class="search-bar">
+            <image src="{{base}}images/search.png" class="search-img"></image>
+            <input class="search-text" placeholder="搜索分类或内容" disabled="true"></input>
+        </view>
+    </navigator>
+    <view class="subject-box">
+        <block wx:for="{{typeList}}" wx:key="this">
+            <view class="sub-itm" bindtap="toTypeList" data-id="{{item.id}}" data-title="{{item.name}}">
+                <view class="cont-box">
+                    <image class="sub-img" src="{{item.pic}}"></image>
+                    <view class="sub-name">{{item.name}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+    </view>
+</view>

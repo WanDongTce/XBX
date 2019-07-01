@@ -1,0 +1,17 @@
+<compontNavbar title="选择话题" isShowBack="{{true}}"></compontNavbar>
+<view class='overf'>
+  <view class="leftbox fl"   >
+    <view wx:for="{{list}}" wx:key="this" bindtap='left_choice' data-leftid='{{item.id}}' class="lefttext {{item.id==currentid?'current':''}}">
+      <view  class="" >{{item.name}}</view>
+    </view>  
+  </view>
+
+  <view class='tabright rightbox fr' wx:for="{{rightlist}}" wx:key="this">
+    
+      <view class="righttext_box display-flex " bindtap='choicetopic' data-topicid="{{item.id}}" data-ifchoicetopic="{{item.name}}">
+        <image src='{{item.image}}' class='topic_img'></image>
+        <view class='righttext'>#{{item.name}}#</view>
+      </view>
+               
+  </view>
+</view>

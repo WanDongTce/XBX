@@ -1,0 +1,71 @@
+<!--pages/edutlList/reward/reward.wxml-->
+<compontNavbar title="自由奖励" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+    <view class="fixed-box">         
+        <view class="select-box">
+            
+            <view class="select" catch:tap="seltClkFn" data-idx="2">
+                
+                <text  class="selt-itm-text" data-idx="2">类别</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 2?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="2"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="3">
+                <text class="selt-itm-text" data-idx="3">时间</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 3?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="3"></image>
+            </view>
+            
+        </view>
+    </view>
+    <view class="select-opt-box" wx:if="{{isShowOption}}">
+        <view class="opt-mask" catch:tap="hideOption"></view>
+        <view animation="{{animationData}}" class="opt-cont">
+            <scroll-view class="opt-scroll-view" scroll-y="true" enable-back-to-top="true">
+                <view class="option" data-id="0"  catchtap="selOptFn">
+                        <view class="opt-lt" data-id="0"  catchtap="selOptFn">全部</view>
+                        <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==0)||(sctdOptIdx==3&&version==0)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="0"  catchtap="selOptFn"></image>
+                </view>
+                
+                
+                <view class="option" wx:if="{{sctdOptIdx == 2}}"  wx:key="this" wx:for="{{kemulist}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view>
+                
+                
+                 <view class="option" wx:if="{{sctdOptIdx == 3}}" wx:key="this" wx:for="{{time}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view> 
+            </scroll-view>
+            <view class="btn-box"><view class="btn" catch:tap="optCofmFn">确定</view></view>
+        </view>
+    </view>
+
+<view class='subject_bigbox'>
+  <block wx:if="{{list.length == 0}}"><empty></empty></block> 
+
+  <view class="subject" wx:key="this" wx:for="{{list}}">
+    
+     <view class="sbm">
+      <view class="subject-box">
+        <text class="subject-text">{{item.re_type_name}}</text>
+      </view>
+      <view class="subject-one">
+        <text class="text">奖励名称：<text class='reward_name_new'>{{item.re_name}}</text></text>
+      </view>
+      <view class="subject-two">
+        <text class="text">奖励时间：{{item.re_time}}</text>
+      </view>
+    </view>
+    <navigator class="edit" url="{{'/pages/my/pages/service/rewardEdit/rewardEdit?myid=' + item.id}}">
+      <text class="edit-a">编辑查看</text>
+    </navigator> 
+  </view>
+</view>
+
+
+
+
+<navigator class="bottom" url="/pages/my/pages/service/rewardAdd/rewardAdd">
+  <text class="bottom-text">添加奖励</text>
+</navigator>

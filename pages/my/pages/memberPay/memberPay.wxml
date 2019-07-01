@@ -1,0 +1,32 @@
+<compontNavbar title="收银台" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class="info-box">
+        <view class="total"><text>{{payinfo.price_all}}</text>元</view>
+        <view class="account">续费账号-{{payinfo.mobile}}</view>
+    </view>
+    <view class="list">
+        <view class="tit">请选择支付方式</view>
+        <!-- <view class="pay-item" data-type="2" bindtap="checkPayMethod">
+            <view class="pay-lt">
+                <image class="pay-icon" src="../../../images/wx2.png"></image>
+                <view class="pay-text">
+                    <view class="pay-method">微信支付</view>
+                </view>
+            </view>
+            <image class="swi-icon" src="{{payType == 2? '../../../images/yuan3.png': '../../../images/yuan1.png'}}"></image>
+        </view> -->
+        <view class="pay-item" data-type="0" bindtap="checkPayMethod">
+            <view class="pay-lt">
+                <image class="pay-icon" src="../../../../images/yue.png"></image>
+                <view class="pay-text">
+                    <view class="pay-method">余额支付(剩余￥{{payinfo.account}})</view>
+                    <view class="pay-tip" wx:if="{{Number(payinfo.account) < Number(payinfo.price_all)}}">余额不足</view>
+                </view>
+            </view>
+            <image class="swi-icon" src="{{payType == 0? '../../../../images/yuan3.png': '../../../../images/yuan1.png'}}"></image>
+        </view>
+    </view>
+    <view class="btn" catchtap="pay">确认支付{{payinfo.price_all}}元</view>
+</view>
+
+ <passwordDialog catch:getPwd="getPwd" wx:if="{{showPwd}}" catch:hidePwdDialog="hidePwdDialog"></passwordDialog> 

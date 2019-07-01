@@ -1,0 +1,30 @@
+<template name="task">
+    <block wx:if="{{item.isjoin == 2}}">
+        <view class='item' bindtap='choice' data-index='{{index}}'>
+            <view class="lt">
+                <image wx:if="{{!item.avatar}}" src='../../images/default-user-2.png' class='item-img' mode="aspectFill"></image>
+                <image wx:else src='{{item.avatar}}' class='item-img' mode="aspectFill"></image>
+                <view class='item-name'>{{item.name || item.nickname}}</view>
+            </view>
+            <view class='rt'>
+                <image src='../../images/act.png' class='sel-icon' wx:if="{{item.checked}}"></image>
+                <image src='../../images/ret.png' class='sel-icon' wx:else></image>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class='item'>
+            <view class="lt">
+                <image wx:if="{{!item.avatar}}" src='../../images/default-user-2.png' class='item-img' mode="aspectFill"></image>
+                <image wx:else src='{{item.avatar}}' class='item-img' mode="aspectFill"></image>
+                <view class='item-name'>{{item.name}}</view>
+            </view>
+            <view class='rt'>
+                <image src='../../images/act2.png' class='sel-icon'></image>
+            </view>
+        </view>
+    </block>
+</template>
+<!-- <template name="msg">
+
+</template> -->

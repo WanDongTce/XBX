@@ -1,0 +1,12 @@
+<compontNavbar title="设置" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view>
+  <navigator class='box' url='/pages/my/pages/set/safe/safe'>
+    <view class='box_left'>账号与安全</view>
+  </navigator> 
+  <navigator class='box' url='/pages/my/pages/set/help/help'>
+    <view class='box_left'>帮助</view>  
+  </navigator>
+  <view class='btn_box'>
+    <view class='btn' bindtap='exitLogin'>退出登录</view>
+  </view>
+</view>

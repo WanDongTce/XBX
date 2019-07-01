@@ -1,0 +1,21 @@
+<compontNavbar title="兑换记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view>
+<block wx:if="{{showEmpty}}"><empty></empty></block> 
+<block wx:for="{{itemList}}" wx:key="this" >   
+  <view class='item_box'>
+    <view class='time'>{{item.createdate}}</view>
+    <view class='address'>收货地址：{{item.address}}</view>
+    <view class='item_center display-flex'>
+      <image src='{{item.shopPoint.pic_url}}' class='img' mode='aspectFit'></image>
+      <view class='ml'>
+        <view class='title'>{{item.shopPoint.name}}</view>
+        <view class='display-flex item_bottom'>
+          <view class='number'>数量：{{item.buynum}}</view>
+          <view class='integral'><text>{{(item.point)*(item.buynum)}}</text>积分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block> 
+</view>
+

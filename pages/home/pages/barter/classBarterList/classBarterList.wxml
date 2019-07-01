@@ -1,0 +1,14 @@
+<compontNavbar title="选择分类" isShowBack="{{true}}"></compontNavbar>
+<view class="contianer">
+    <view class="list">
+        <view class="item" wx:key="this" wx:for-index="index" data-id="{{item.id}}" wx:for="{{list}}" bindtap="selectItm" data-name="{{item.name}}">
+            <view class="lt-text">{{item.name}}</view>
+            <image class="rt-img" src="{{base}}images/yuan2.png" wx:if="{{item.id == selectedId}}"></image> 
+            <image class="rt-img" src="{{base}}images/yuan1.png" wx:else></image>       
+        </view>
+    </view>
+    <view class="btn-box">
+        <view class="btn btn1" catchtap="confirmFn">确定</view>
+        <view class="btn btn2" catchtap="cancleFn">取消</view>
+    </view>
+</view>

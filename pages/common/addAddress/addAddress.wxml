@@ -1,0 +1,47 @@
+<compontNavbar title="添加新地址" isShowBack="{{true}}"></compontNavbar>
+<view class="content">
+    <view class='itembox'>
+    <view class='item_view'>收货人</view>
+    <input class='input' placeholder='请输入收货人姓名' placeholder-class='input-place' bindinput="saveName"></input>
+    </view>
+    <view class='itembox'>
+    <view class='item_view'>联系电话</view>
+    <input class='input' placeholder='请输入联系电话' placeholder-class='input-place' bindinput="saveMobile"></input>
+    </view>
+<!--  
+    <picker mode="multiSelector" bindchange="addrsPickerChange" bindcolumnchange="addrsPickerColumnChange" value="{{addrIndex}}" range="{{addrArray}}" range-key="name">
+        <view class="itembox">
+            <view class='item_view'>所在地区</view>
+            <view class='picker_right'>
+                <view class="picker-text text-rt" wx:if="{{districtId}}">{{addrArray[0][addrIndex[0]].name + addrArray[1][addrIndex[1]].name + addrArray[2][addrIndex[2]].name}}</view>
+                <view wx:else class="picker-text">请选择</view>
+                <image class='arrow_right' src='{{base}}images/arowDown.png'></image>   
+            </view>
+        </view>
+    </picker>
+
+    -->
+
+    <view class="itembox">
+        <view class='item_view'>所在地区</view>
+        <view class='picker_right' catchtap="showPicerFn">
+            <view class="picker-text text-rt" wx:if="{{address.length > 0}}">{{address[0].name + address[1].name + address[2].name}}</view>
+             <view class="picker-text" wx:else>请选择</view> 
+            <image class='arrow_right' src='{{base}}images/arowDown.png'></image>   
+        </view>
+    </view>
+
+    <textarea class='textarea' placeholder="详细地址" placeholder-class='placeholder_textarea' auto-height="true" bindinput="saveAddr"></textarea>
+</view>
+<view class="content">
+    <view class='itembox no-border-btm' bindtap="setDefauAddr">
+        <view class='item_view'>设为默认地址</view>
+        <image class='rt-img' src="{{isDefat? base + 'images/yuan2.png': base + 'images/yuan1.png'}}"></image>
+    </view>
+</view>
+<view class='bc_btnbox'>
+  <view class='bc_btn' bindtap="useNewAddr">保存并使用</view>
+</view>
+
+
+<addressPicker wx:if="{{showPicker}}" catch:pikerConfirm="getAddressInfo" catch:pikerCancel="hidePicker"></addressPicker>

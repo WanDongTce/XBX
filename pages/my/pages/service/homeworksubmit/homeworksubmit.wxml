@@ -1,0 +1,20 @@
+ <compontNavbar title="写作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar> 
+
+<view class="imgs">
+        <!-- <scroll-view class="scroll-box" scroll-x="true"> -->
+             <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                 <image src="../../../../../images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+            </view> 
+            <view class="scroll-item" >
+                <image src="../../../../../images/add.png" class="hmwk-img" catchtap="addImg"></image>
+            </view>
+        <!-- </scroll-view> -->
+</view>
+
+
+
+<view class='add_btnbox'>
+  <view  class="add_btn" bindtap='submit'>完成</view>
+</view>
+

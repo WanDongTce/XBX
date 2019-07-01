@@ -1,0 +1,30 @@
+<compontNavbar title="提现" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="bank-box">
+    <view catchtap="addCard" class="lt" wx:if="{{!hascard}}">添加银行卡</view>
+    <navigator url="/pages/my/pages/bankCardList/bankCardList" class="lt-2" wx:else>
+        <view class="bank-tit">{{cardInfo.bank_belong}}</view>
+        <view class="bank-info">尾号{{cardInfo.bankNum}}{{cardInfo.bank_type}}</view>
+    </navigator>
+    <image src="../../../../images/next.png"></image>
+</view>
+<view class="content">
+    <view class="tit">提现金额</view>
+    <view class="input-box">
+        <label>￥</label>
+        <input bindinput="saveMoney"></input>
+    </view>
+    <view class="tip">
+        零钱余额￥{{account.account}}
+    </view>
+</view>
+<view class="note">
+    <view class="note-tit">注</view>
+    <view class="note-itm">1.提现金额最低100元，最高5000元，每日限提一次</view>
+    <view class="note-itm">2.用户享有20000元无手续费提现的额度，超过20000元时，每笔提现金额收取0.5%的手续费</view>
+    <view class="note-itm">3.提现到账时间为1-7个工作日</view>
+    <view class="note-itm">4.如有疑问请拨打客服电话：{{tel}}</view>
+</view>
+
+<view class="btn" catchtap="submit">提现</view>
+
+ <passwordDialog catch:getPwd="getPwd" wx:if="{{showPwd}}" catch:hidePwdDialog="hidePwdDialog"></passwordDialog> 

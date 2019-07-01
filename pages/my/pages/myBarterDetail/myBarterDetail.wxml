@@ -1,0 +1,107 @@
+<compontNavbar title="我的易货详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+
+<!--左侧易货详情  -->
+<view wx:if="{{direction==1}}">
+    <view class='newitem_bigbox mt16 position-relative pb16'>
+        <image src='../../../../images/barter/state_success.png' class='mybarterdetail_img'></image>
+        <view class='item_name2'>
+            <image src='{{leftlist.ta_item.userInfo.avatar?leftlist.ta_item.userInfo.avatar:"../../../../images/default-user-2.png"}}' mode="aspectFill"></image>
+            {{leftlist.ta_item.userInfo.nickname}}
+        </view>
+        <view class='note'>TA的物品</view>
+        <view class='item_centerbox overf' wx:for="{{leftlist.ta_item.goodslist}}" wx:key='this'>
+            <image src='{{item.picurl}}' class='item_img fl' mode="aspectFill"></image>
+            <view class='fl'>
+                <view class='item_title item_title2'>{{item.name}}</view>
+                <view class='item_tag'>
+                    <image src='../../../../images/tag.png'></image>
+                    <text>{{item.type_name}}</text>
+                </view>
+            </view>
+            <view class='item_numbox'>
+                <text>点赞{{item.likenum}}</text>
+                <!-- <text>留言{{item.commendnum}}</text> -->
+            </view>
+        </view>
+    </view>
+
+
+    <view class='newitem_bigbox newitem_bigbox2 pb16'>
+        <view class='note'>您的物品</view>
+        <view class='item_centerbox overf'>
+            <image src='{{leftlist.my_item.picurl}}' class='item_img fl' mode="aspectFill"></image>
+            <view class='fl'>
+                <view class='item_title item_title2'>{{leftlist.my_item.name}}</view>
+                <view class='item_tag'>
+                    <image src='../../../images/tag.png'></image>
+                    <text>{{leftlist.my_item.type_name}}</text>
+                </view>
+            </view>
+            <view class='item_numbox'>
+                <text>点赞{{leftlist.my_item.likenum}}</text>
+                <!-- <text>留言{{leftlist.my_item.commendnum}}</text> -->
+            </view>
+        </view>
+
+    </view>
+    <view class='detail_bottombox'>
+        <view class='detail_bottomtext'>申请日期：{{leftlist.ta_item.createdate}}</view>
+        <view class='detail_bottomtext'>成交日期：{{leftlist.ta_item.agreedate}}</view>
+    </view>
+</view>
+
+<!--右侧易货详情  -->
+<view wx:else>
+    <view class='newitem_bigbox mt16 position-relative pb16'>
+        <image wx:if="{{rightlist.my_item.agreestatus==2}}" src='../../../../images/barter/state_success.png' class='mybarterdetail_img'></image>
+        <image wx:if="{{rightlist.my_item.agreestatus==3}}" src='../../../../images/barter/state_dfjj.png' class='mybarterdetail_img'></image>
+        <image wx:if="{{rightlist.my_item.agreestatus==4}}" src='../../../../images/barter/state_fail.png' class='mybarterdetail_img'></image>
+        <image wx:if="{{rightlist.my_item.agreestatus==5}}" src='../../../../images/barter/state_qx.png' class='mybarterdetail_img'></image>
+        <view wx:else></view>
+        <view class='item_name2'>
+            <image src='{{rightlist.my_item.userInfoFrom.avatar}}'></image>
+            {{rightlist.my_item.userInfoFrom.nickname}}
+        </view>
+        <view class='note'>TA的物品</view>
+        <view class='item_centerbox overf'>
+            <image src='{{rightlist.ta_item.picurl}}' class='item_img fl' mode="aspectFill"></image>
+            <view class='fl'>
+                <view class='item_title item_title2'>{{rightlist.ta_item.name}}</view>
+                <view class='item_tag'>
+                    <image src='../../../../images/tag.png'></image>
+                    <text>{{rightlist.ta_item.type_name}}</text>
+                </view>
+            </view>
+            <view class='item_numbox'>
+                <text>点赞{{rightlist.ta_item.likenum}}</text>
+                <!-- <text>留言{{rightlist.ta_item.commendnum}}</text> -->
+            </view>
+        </view>
+    </view>
+
+
+    <view class='newitem_bigbox newitem_bigbox2 pb16'>
+        <view class='note'>您的物品</view>
+        <view class='item_centerbox overf' wx:for="{{rightlist.my_item.goodslist}}" wx:key='this'>
+            <image src='{{item.picurl}}' class='item_img fl' mode="aspectFill"></image>
+            <view class='fl'>
+                <view class='item_title item_title2'>{{item.name}}</view>
+                <view class='item_tag'>
+                    <image src='../../../../images/tag.png'></image>
+                    <text>{{item.type_name}}</text>
+                </view>
+            </view>
+            <view class='item_numbox'>
+                <text>点赞{{item.likenum}}</text>
+                <!-- <text>留言{{item.commendnum}}</text> -->
+            </view>
+        </view>
+
+    </view>
+    <view class='detail_bottombox'>
+        <view class='detail_bottomtext'>申请日期：{{rightlist.my_item.createdate}}</view>
+        <view class='detail_bottomtext' wx:if="{{rightlist.my_item.agreedate==''}}"></view>
+        <view class='detail_bottomtext' wx:else>成交日期：{{rightlist.my_item.agreedate}}</view>
+    </view>
+</view>

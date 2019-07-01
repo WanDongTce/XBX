@@ -1,0 +1,16 @@
+/* pages/classmate/classmateDetailNew/classmateDetailNew.wxss */
+
+@import "/pages/home/pages/classmate/classmate.wxss";
+
+page{
+  background-color:#fff;
+  padding-bottom:10vh;
+}
+.newbox{
+  background-color:#fff;
+  padding:0rpx 30rpx 0;
+}
+.newcontentbox{
+  background-color:#f5f5f5;
+  
+}

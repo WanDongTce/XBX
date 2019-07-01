@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "百科详情",
+    "usingComponents": {
+        "empty": "/component/empty/empty",
+        "addAgre": "./addAgree/addAgree",
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

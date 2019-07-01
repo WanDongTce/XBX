@@ -1,0 +1,91 @@
+/* pages/edutlList/school/school.wxss */
+page{
+  border-top: solid 1rpx #ddd;
+  background-color:#fff;
+}
+.home{
+  width: 100%;
+  height: 192rpx;
+  background: #fff;
+  border-bottom:10rpx solid #f4f4f4;
+}
+.home-a{
+  width: 100%;
+  height: 192rpx;
+  margin-top: 15rpx;
+  background: #fff;
+}
+.seize{
+  width:100rpx;
+  height:16rpx;
+}
+.home-top{
+  width: 100%;
+  height: 50rpx;
+}
+.top-text{
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 30rpx;
+}
+.home-bottom{
+  width: 100%;
+  /* height: 110rpx; */
+  display: flex;
+  display: -webkit-flex;
+  align-items:center;
+  margin-top:10rpx;
+  /* background-color: red; */
+}
+.longitude{
+  width: 70%;
+  /* height: 110rpx; */
+  /* background: pink; */
+}
+.longitude-top{
+  width: 100%;
+  /* height: 45rpx; */
+  margin-left:30rpx;
+  /* background-color: aliceblue; */
+}
+.longitude-bottom{
+  width: 100%;
+  height: 50rpx;
+  margin-left:30rpx;
+  /* background-color: aqua; */
+}
+.longitude-text{
+  font-size: 26rpx;
+  color: #333;
+  /* margin-left: 30rpx; */
+}
+.longitude-number{
+  font-size: 26rpx;
+  color: #666;
+}
+.longitude-time{
+  font-size: 26rpx;
+ 
+}
+.map{
+  width: 30%;
+  /* height: 110rpx; */
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  /* background-color: gainsboro; */
+}
+.map-button{
+  position: absolute;
+  right: 30rpx;
+  width: 158rpx;
+  height: 69rpx;
+  text-align: center;
+  line-height: 62rpx;
+  border-radius: 10rpx;
+  
+}
+.map-text{
+  font-size: 30rpx;
+  color: #fff;
+}

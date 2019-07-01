@@ -1,0 +1,32 @@
+<compontNavbar title="{{sortName}}" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <block wx:else>
+        <view class="list">
+            <view class="item" wx:key="this" wx:for="{{list}}">
+                <navigator url="{{'/pages/find/pages/encyDetail/encyDetail?id=' + item.id}}" class="item-tit">
+                    <image src="{{item.imgurl}}" class="item-tit-img"></image>
+                    <view class="item-tit-text">{{item.name}}</view>
+                </navigator>
+                <view class="itm-tips">
+                    <view class="itm-lt">
+                        <image src="{{item.avatar?item.avatar: base + 'images/default-user-2.png'}}" class="user-ava" mode="aspectFill"></image>
+                        <view class="user-info">
+                            <view class="user-name">{{item.nickname}}</view>
+                            <view class="date">{{item.create_time}}</view>
+                        </view>
+                    </view>
+                    <view class="itm-rt">
+                        <view class="border">
+                            <image src="{{item.thumbs_is == 1? base + 'images/agr4.png': base + 'images/agr.png'}}" class="add-agree-icon"></image>
+                            <text class="add-agree-text {{item.thumbs_is == 1? 'active': ''}}">{{item.thumbs_num}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <navigator url="{{'/pages/find/pages/createEncy/createEncy?id=' + sortId + '&name=' + sortName}}" class="btn">创建</navigator>
+</view>

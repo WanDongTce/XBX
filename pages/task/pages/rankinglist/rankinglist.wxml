@@ -1,0 +1,40 @@
+<compontNavbar title="学霸榜单" isShowBack="{{true}}" url="/pages/main/pages/task/task" component-class="component-class"></compontNavbar>
+<view class="top-box">
+    <view class="top-cont">
+        <view class="top-item">
+            <image src="{{list[1].avatar}}" class="top-item-img top-item-img-2" mode="aspectFill"></image>
+            <view class="top-item-info">
+                <image src="../../images/second.png"></image>
+                <text>{{list[1].nickname}}</text>
+            </view>
+        </view>
+        <view class="top-item">
+            <view class="frist-box">
+                <image src="../../images/icon_task_crown.png" class="first-icon"></image>
+                <image src="{{list[0].avatar}}" class="top-item-img top-item-img-1" mode="aspectFill"></image>
+            </view>
+            <view class="top-item-info">
+                <image src="../../images/first.png"></image>
+                <text>{{list[0].nickname}}</text>
+            </view>
+        </view>
+        <view class="top-item">
+            <image src="{{list[2].avatar}}" class="top-item-img top-item-img-2" mode="aspectFill"></image>
+            <view class="top-item-info">
+                <image src="../../images/third.png"></image>
+                <text>{{list[2].nickname}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="list" wx:if="{{list.length > 3}}">
+    <block wx:if="{{index > 2}}" wx:key="this" wx:for-index="index" wx:for="{{list}}">
+        <view class="item">
+            <view class="td item-name">{{item.nickname}}</view>
+            <view class="td">{{item.school}}</view>
+            <view class="td item-num">{{item.point}}
+                <text>经验</text>
+            </view>
+    </view>
+    </block>
+</view>

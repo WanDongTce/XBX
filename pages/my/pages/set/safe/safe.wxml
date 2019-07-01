@@ -1,0 +1,12 @@
+<compontNavbar title="账号与安全" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='box'>
+    <navigator class='overf itembox' wx:if="{{status == 1}}" url='/pages/my/pages/set/safe/identity/identity'>
+        <view class='fl text_left'>身份认证</view>
+        <image src='../../../../../images/next.png' class='img fr'></image>
+        <view class='fr text_right'>未认证</view>
+    </navigator>
+    <view class='overf itembox' wx:if="{{status == 2}}">
+        <view class='fl text_left'>身份认证</view>
+        <view class='fr text_right'>已认证</view>
+    </view>
+</view>

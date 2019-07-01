@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "选择分类",
+        "usingComponents": {
+            "compontNavbar": "/component/navigation/navigation"
+        }
+}

@@ -1,0 +1,8 @@
+<compontNavbar title="我的笔记" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class="item" bindtap="toDetail" data-item="{{item}}" wx:key="this" wx:for="{{list}}">
+        <view class="tit">{{item.content}}</view>
+        <view class="link" catchtap="link" wx:if="{{item.title}}" data-id="{{item.resourceid}}">{{item.title}}</view>
+        <view class="time">{{item.createdate}}</view>
+    </view>
+</view>

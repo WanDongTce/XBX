@@ -1,0 +1,38 @@
+<compontNavbar title="小记者" isShowBack="{{true}}"></compontNavbar>
+<view wx:if="{{(state.agreestatus==0)||(state.agreestatus==3)}}">
+  <image src="{{IMGURL}}find/reporter/apply.png" mode='widthFix' class='image_bg' bindtap='tz_apply'></image>
+
+</view>
+<view wx:if="{{state.agreestatus==1}}">
+  <image src='{{IMGURL}}find/reporter/applying.png' class='image_icon'></image>
+  <view  class='view'>您申请的小记者正在审核中...</view>
+</view>
+
+
+
+
+<view wx:if="{{state.agreestatus==2}}">
+  <block wx:if="{{list.count==0}}"><empty></empty></block> 
+  
+  <view class='mb100'>
+    <block  wx:for="{{list}}" wx:key="this">
+      <view class='itembox'>
+        <view class='display-flex item_top'>
+          <view class='item_title one_line'>{{item.name}}</view>
+          <view class='item_topbtn item_topbtn1' wx:if="{{item.apply_status==1}}">审核中</view>
+           <view class='item_topbtn item_topbtn2' wx:if="{{item.apply_status==2}}">未通过</view> 
+           <view class='item_topbtn item_topbtn3' wx:if="{{item.apply_status==3}}">已通过</view> 
+        </view>
+        <view class='display-flex item_top item_center' wx:if="{{item.apply_status!=3}}">
+          <view class='item_time'>{{item.createdate}}</view>
+          <view class='display-flex item_right_box' catchtap='listdel' data-myid="{{item.id}}">
+            <image src='{{base}}images/delete.png' class='item_img'></image>
+            <view>删除</view>            
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <navigator class='btn' url='/pages/find/pages/reporter/publish/publish'>发布</navigator>
+</view>

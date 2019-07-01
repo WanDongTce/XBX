@@ -1,0 +1,35 @@
+page{
+  background-color:#f4f4f4;
+}
+.bigbox{
+    padding:0 22rpx;
+}
+.itembox{
+    padding:24rpx 0 10rpx;
+    border-bottom:1px solid #e2e2e2;
+}
+.item_img{
+    width:100rpx;
+    height: 100rpx;
+    margin-right: 22rpx;
+}
+
+.item_time{
+    margin-top:8rpx;
+}
+.item_text1{
+    line-height: 48rpx;
+    /* width:338rpx; */
+    margin-right:10rpx;
+}
+.item_text2{
+    line-height: 52rpx;
+    width:350rpx;
+}
+.item_dian{
+    width:11rpx;
+    height: 11rpx;
+    background-color: #f00707;
+    border-radius: 50%;
+    margin-top:3rpx;
+}

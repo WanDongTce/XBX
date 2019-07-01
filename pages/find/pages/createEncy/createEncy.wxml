@@ -1,0 +1,42 @@
+<compontNavbar title="创建百科" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <view class="top">
+        <image src="{{img[0]}}" class="add-img"></image>
+        <view class="img-box" bindtap="addImg">
+            <image src="{{base}}images/add-img.png"></image>
+            <view>上传图片</view>
+        </view>
+    </view>
+    <view class="form">
+        <navigator url="/pages/find/pages/selectEncyClass/selectEncyClass" class="item">
+            <view class="lt">分类:</view>
+            <view class="input">
+                <text>{{encyClass.name}}</text>
+                <image src="{{base}}images/next.png" class="next-icon"></image>
+            </view>
+        </navigator>
+        <view class="item">
+            <view class="lt">名称:</view>
+            <input class="input" placeholder="请填写学校百科名称" placeholder-class="input-pla" bindinput="saveName"></input>
+        </view>
+        <block wx:if="{{isShowMore}}">
+            <view class="item">
+                <view class="lt">电话:</view>
+                <input class="input" placeholder="请填写联系方式（选填）" placeholder-class="input-pla" bindinput="saveTel"></input>
+            </view>
+            <view class="item">
+                <view class="lt">地址:</view>
+                <input class="input" placeholder="请填写服务者的位置（选填）" placeholder-class="input-pla" bindinput="saveAddress"></input>
+            </view>
+        </block>
+        <view class="last-item" catchtap="showMore">
+            <text>填写更多信息</text>
+            <image src="{{base}}images/arowDown.png"></image>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="detail-tit">详情描述</view>
+        <textarea bindinput="saveContent"></textarea>
+    </view>
+    <view class="btn" catchtap="submitFn">发布</view>
+</view>

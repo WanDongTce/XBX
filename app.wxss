@@ -1,0 +1,291 @@
+.navigator-hover{
+    background: rgba(255,255,255,.66);
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+page{
+    background: #f7f7f7;
+    padding-top: 10vh;
+    font-family: "Times New Roman", "Courier New", Courier, monospace, Serif;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* margin-top:10rpx; */
+}
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.border-box {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.margin-0-auto {
+    margin: 0 auto;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.text-align-center {
+    text-align: center;
+}
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.vertical-align-middle {
+    vertical-align: middle;
+}
+.border-none {
+    border: none !important;
+}
+
+.text-overflow-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.white-space-wrap {
+    white-space: wrap;
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+.break-word {
+    word-break: break-word;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.white-space-nowrap{
+	white-space: nowrap;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-flex {
+    -webkit-display: flex;
+    -moz-display: flex;
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/* 科目背景  */
+.subject-bg-1{
+    background: #a9dbbd;
+}
+.subject-bg-2{
+    background: #f57470;
+}
+.subject-bg-3{
+    background: #fbd561;
+}
+.subject-bg-4{
+    background: #7a95d7;
+}
+.subject-bg-5{
+    background: #acdde4;
+}
+.subject-bg-6{
+    background: #f49f03;
+}
+.subject-bg-7{
+    background: #f8879a;
+}
+.subject-bg-8{
+    background: #a0d98c;
+}
+.subject-bg-9{
+    background: #a874f9;
+}
+.subject-bg-10{
+    background: #6897e6;
+}
+.subject-bg-11{
+    background: #71a4f9;
+}
+.subject-bg-12{
+    background: #b47a7b;
+}
+
+.fl{float:left;}
+.fr{float:right;}
+.clr{clear:both;}
+.overf{overflow: hidden;}
+.position_r{
+  position:relative;
+}
+.position_a{
+  position:absolute;
+}
+/*猫鼬 */
+.mongoose_nothave_img{    
+  width:137rpx;
+  height:158rpx;
+  margin:200rpx auto 70rpx;
+}
+.mongoose_nothave_img2{
+  width:196rpx;
+  height:145rpx;
+  margin:300rpx auto 70rpx;
+}
+.mongoose_btn{
+  /* width:184rpx; */
+  /* height:56rpx; */
+  display: inline-block;
+  padding:0 30rpx;
+  border-radius: 28rpx;
+  text-align: center;
+  line-height: 56rpx;
+  background-color:#48b947;
+  color:#fff;
+  font-size:26rpx;
+  margin:0 auto;
+  box-shadow: 2rpx 5rpx 5rpx #cfe7ce;  
+}
+
+.f_24{font-size:24rpx;}
+.f_26{font-size:26rpx;}
+.f_28{font-size:28rpx;}
+.f_30{font-size:30rpx;}
+.f_32{font-size:32rpx;}
+.c_333{color:#333;}
+.c_666{color:#666;}
+.c_888{color:#888;}
+.c_999{color:#999;}
+.c_lightgreen{
+  color:#48B947;
+}
+.c_fff{
+  color:#fff;
+}
+.c_gf{
+    color:#48B947;
+}
+.c_gf_bg{
+    background-color:#48B947;
+}
+.c_gf_border{
+    border:1px solid #48B947;
+}
+.c_gf2_border_b{
+    border-bottom:1px solid #d1f7d4;
+}
+.c_gf2_border_br{
+    border-right:1px solid #d1f7d4;
+}
+.bg_fff {
+background-color:#fff;
+
+}
+.display_n{
+    display: none;
+}
+.cb_lightgreen{background-color:#48B947; }
+.two_line{
+  display: -webkit-box; 
+-webkit-line-clamp: 2; 
+-webkit-box-orient: vertical; 
+overflow: hidden;
+}
+.one_line{white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+
+/*积分商城底部固定  */
+/* .integral_fix_bottom{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background-color:#fff;
+  border-top:36rpx solid #f4f4f4;
+}
+.integral_bottom_item{
+  text-align: center;
+}
+.integral_bottom_item image{
+  width:52rpx;
+  height:52rpx;
+  margin:11rpx 0 10rpx;
+}
+.integral_bottom_item view{
+  color:#808080;
+}
+.integral_bottom_currenttext{
+  color:#48b947  !important;
+} */

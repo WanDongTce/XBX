@@ -1,0 +1,42 @@
+page {
+    background-color: #f7f7f7;
+}
+
+.toptext {
+    color: #333;
+    font-size: 30rpx;
+    text-align: center;
+    margin: 127rpx 0 70rpx;
+}
+
+.input-password-wrap {
+    width: 80%;
+    height: 150rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-password-wrap .password_dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-size: 40rpx;
+    box-sizing: border-box;
+    width: 90rpx;
+    height: 90rpx;
+    border: 2rpx solid #dfdfdf;
+    border-left: none 0;
+    background-color: #fff;
+    font-weight: bolder;
+}
+
+.input-password-wrap .password_dot:nth-child(1) {
+    border-left: 2rpx solid #dfdfdf;
+}
+
+
+

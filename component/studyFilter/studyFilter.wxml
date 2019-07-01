@@ -1,0 +1,44 @@
+<view id="studyFilter" class="filter-box">
+    <view class="fixed-box">
+        <!-- <view class="search-box">
+            <view class="search-cont">
+                <image src="../../images/search.png" mode="widthFix" class="search-icon"></image>
+                <input class="search-input" placeholder="搜索关键字" bindinput="inputFn"></input>
+            </view>
+        </view> --> 
+        <view class="select-box">
+            <view class="select" catch:tap="seltClkFn" data-idx="1">
+                <text class="selt-itm-text" data-idx="1">年级</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 1?'../../images/selctIcon2.png' : '../../images/selctIcon1.png'}}" data-idx="1"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="2">
+                <text class="selt-itm-text" data-idx="2">科目</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 2?'../../images/selctIcon2.png' : '../../images/selctIcon1.png'}}" data-idx="2"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="3">
+                <text class="selt-itm-text" data-idx="3">版本</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 3?'../../images/selctIcon2.png' : '../../images/selctIcon1.png'}}" data-idx="3"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="4">
+                <text class="selt-itm-text" data-idx="4">册数</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 4?'../../images/selctIcon2.png' : '../../images/selctIcon1.png'}}" data-idx="4"></image>
+            </view>
+        </view>
+    </view>
+    <view class="select-opt-box" wx:if="{{isShowOption}}">
+        <view class="opt-mask" catch:tap="hideOption"></view>
+        <view animation="{{animationData}}" class="opt-cont">
+            <scroll-view class="opt-scroll-view" scroll-y="true" enable-back-to-top="true">
+                <view wx:if="{{sctdOptIdx!=2}}" class="option" data-id="0" data-ceshu="4" catchtap="selOptFn">
+                        <view class="opt-lt" data-id="0" data-ceshu="4" catchtap="selOptFn">全部</view>
+                        <image class="opt-rt" src="{{(sctdOptIdx==1&&nianji==0)||(sctdOptIdx==2&&kemu==0)||(sctdOptIdx==3&&version==0)||(sctdOptIdx==4&&ceshu==4)?'../../images/act.png':'../../images/ret.png'}}" mode="widthFix" data-id="0" data-ceshu="4" catchtap="selOptFn"></image>
+                </view>
+                <view class="option" wx:key="this" wx:for="{{options}}" data-id="{{item.id}}" data-ceshu="{{item.id}}" catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}" data-ceshu="{{item.id}}" catchtap="selOptFn">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==1&&nianji==item.id)||(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)||(sctdOptIdx==4&&ceshu==item.id)?'../../images/act.png':'../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}" data-ceshu="{{item.id}}" catchtap="selOptFn"></image>
+                </view> 
+            </scroll-view>
+            <view class="btn-box"><view class="btn" catch:tap="optCofmFn">确定</view></view>
+        </view>
+    </view>
+</view>

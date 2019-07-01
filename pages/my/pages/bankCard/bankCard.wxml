@@ -1,0 +1,22 @@
+<compontNavbar title="银行卡" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<block wx:if="{{showAdd}}">
+    <view class='img_box'>
+        <image src='../../../../images/nothave.png' class='mongoose_nothave_img'></image>
+    </view>
+    <view class="text1">添加银行卡后，就可以愉快的进行交易了！</view>
+    <view class='btn' bindtap='addCard'>添加银行卡</view>
+</block>
+<view class="list" wx:else>
+    <view bindtap="toDetail" data-item="{{item}}" class="item {{'bg-' + item.bank_color}}" wx:for="{{list}}" wx:key="this">
+        <view class="card-box">
+            <image class="card-img" src="{{item.bank_belong_code? IMGURL + 'bankimg/' + item.bank_belong_code + '.png' : IMGURL + 'bankimg/default.png'}}"></image>
+            <view class="card-info">
+                <view class="card-tit">{{item.bank_belong}}</view>
+                <view class="card-type">{{item.bank_type}}</view>
+            </view>
+        </view>
+        <view class="card-num">{{item.bank_number}}</view>
+    </view>
+    <view class='btn2' bindtap='addCard'>添加银行卡</view>
+</view>
+

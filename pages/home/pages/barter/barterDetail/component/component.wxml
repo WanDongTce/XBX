@@ -1,0 +1,44 @@
+<view hidden="{{more}}" class="newbox">
+    <view class='message_subbox' wx:if="{{item.reply_list[0]}}" bindtap="addMsg" data-uid="{{item.reply_list[0].userid}}" data-pid="{{item.reply_list[0].id}}" data-uname="{{item.reply_list[0].userInfo.nickname}}">
+        <view class='overf'>
+            <image src='{{item.reply_list[0].userInfo.avatar}}' class='fl message_sub_img'></image>
+            <view class='message_sub_name fl'>{{item.reply_list[0].userInfo.nickname}}</view>
+            <view class='message_sub_frame fl' wx:if="{{item.reply_list[0].userid == uid}}">主人</view>
+            <view class='message_sub_time fr'>{{item.reply_list[0].difftime}}</view>
+        </view>
+        <view class='message_sub_content'>{{item.reply_list[0].content}}</view>
+    </view>
+    <view class='message_subbox' wx:if="{{item.reply_list[1]}}" bindtap="addMsg" data-uid="{{item.reply_list[1].userid}}" data-pid="{{item.reply_list[1].id}}" data-uname="{{item.reply_list[1].userInfo.nickname}}">
+        <view class='overf'>
+            <image src='{{item.reply_list[1].userInfo.avatar}}' class='fl message_sub_img'></image>
+            <view class='message_sub_name fl'>{{item.reply_list[1].userInfo.nickname}}</view>
+            <view class='message_sub_frame fl' wx:if="{{item.reply_list[1].userid == uid}}">主人</view>
+            <view class='message_sub_time fr'>{{item.reply_list[1].difftime}}</view>
+        </view>
+        <view class='message_sub_content'>{{item.reply_list[1].content}}</view>
+    </view>
+</view>
+
+
+
+<view hidden="{{!more}}" class="newbox">
+    <view class='message_subbox' wx:for="{{item.reply_list}}" wx:key="this" bindtap="addMsg" data-uid="{{item.userid}}" data-pid="{{item.id}}" data-uname="{{item.userInfo.nickname}}">
+        <view class='overf'>
+            <image src='{{item.userInfo.avatar}}' class='fl message_sub_img'></image>
+            <view class='message_sub_name fl'>{{item.userInfo.nickname}}</view>
+            <view class='message_sub_frame fl' wx:if="{{item.userid == uid}}">主人</view>
+            <view class='message_sub_time fr'>{{item.difftime}}</view>
+        </view>
+        <view class='message_sub_content'>{{item.content}}</view>
+    </view>
+</view>
+
+
+<block wx:if="{{item.reply_list.length > 2}}">
+    <view class="message_bottom message_sub_more {{more?'hide':'show'}}" catchtap='swiMore'>
+        更多n条回复</view>
+    <view class="message_bottom message_sub_put {{more?'show':'hide'}}" catchtap='swiMore'>
+        收起回复
+        <image src='../../../../../../images/put.png'></image>
+    </view>
+</block>
