@@ -2,7 +2,7 @@ App({
     requestUrl: 'https://social.54xuebaxue.com/',
     imgUrl: 'https://m.54xuebaxue.com/wx_img/',
     ansHref: 'https://m.54xuebaxue.com/question/my-answer-list',
-    quesHref: 'https://m.54xuebaxue.com/question/detail',
+    quesHref: 'https://m.54xuebaxue.com/question/detail', 
 
 
 
