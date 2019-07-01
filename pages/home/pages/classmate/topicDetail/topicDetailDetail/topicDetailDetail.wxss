@@ -76,7 +76,7 @@
 }
 .item_topic{
   
-  color:#48b947;
+  color:#4bace2;
 }
 .item_zanbox{
   justify-content: flex-end;
@@ -151,4 +151,25 @@ video{
   font-size:50rpx;
   color:#fff;
   position:absolute;right:30rpx;top:34rpx;
+}
+
+
+.mywrite {
+    position: fixed;
+    bottom: 80rpx;
+    right: 24rpx;
+    width: 102rpx;
+    height: 102rpx;
+    background-color: #4bace2;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 102rpx;
+    z-index: 10;
+}
+.circle_camera {
+    width: 39rpx;
+    height: 31rpx;
+    display: inline-block;
+    z-index: 11;
+    line-height: 31rpx;
 }

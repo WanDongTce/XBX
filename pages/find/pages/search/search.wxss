@@ -40,7 +40,7 @@ page{
 
 .search_btn {
     font-size: 32rpx;
-    color: #48b947;
+    color: #4bace2;
     margin-right: 24rpx;
 }
 

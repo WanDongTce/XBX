@@ -73,7 +73,7 @@ swiper image{
 }
 .point{
     font-size: 36rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 .hit{
     font-size: 24rpx;
@@ -139,7 +139,7 @@ swiper image{
 .rect-icon{
     width: 8rpx;
     height: 30rpx;
-    background: #48b947;
+    background: #4bace2;
     margin-right: 16rpx;
 }
 .h2-text{
@@ -293,7 +293,7 @@ swiper image{
     white-space: nowrap;
     overflow: hidden;
     font-size: 26rpx;
-    color: #48b947;
+    color: #4bace2;
     text-align: center;
 }
 .detail-box{
@@ -339,7 +339,7 @@ swiper image{
     text-align: center;
     font-size: 28rpx;
     color: #fff;
-    background: #48b947;
+    background: #4bace2;
     border-radius: 5rpx;
 }
 
@@ -458,7 +458,7 @@ swiper image{
     margin-left:30rpx;
 }
 .new_topactive{
-    color:#48b947;
+    color:#4bace2;
     margin-left:30rpx;
     position:relative;
 }
@@ -472,7 +472,7 @@ swiper image{
     left:0;
     width:100%;
     height:4rpx;
-    background-color:#48b947;
+    background-color:#4bace2;
 }
 .arowLt{
     width:18rpx;

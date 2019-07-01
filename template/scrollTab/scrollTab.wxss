@@ -37,8 +37,8 @@
     background: transparent;
 }
 .active .scroll-item-text{
-    color: #48b947;
+    color: #4bace2;
 }
 .active .scroll-item-line{
-    background: #48b947;
+    background: #4bace2;
 }

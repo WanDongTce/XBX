@@ -294,12 +294,12 @@ Page({
   },  
     uploadImgs: function (list, newtype, newprice, financetypeid, remark, financedate) {
         var that = this; 
-    
+        var params = { "app_source_type": app.app_source_type, "app_source_school_id": app.app_source_school_id };
         wx.uploadFile({
             url: app.requestUrl + 'v14/public/upload',
             filePath: list[0],
             name: 'file',
-            formData: app.app_source_type,
+            formData: params,
             success: (res) => {
                 var a = JSON.parse(res.data);
                 wx.hideLoading();

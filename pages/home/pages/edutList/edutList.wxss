@@ -62,7 +62,7 @@ swiper, swiper-item, .slide-image {
 .rect-icon {
     width: 7rpx;
     height: 24rpx;
-    background: #48b947;
+    background: #4bace2;
     margin-right: 28rpx;
 }
 

@@ -7,24 +7,24 @@ var flag = false;
 
 Page({
 
-  data: {
-      showEmpty: false,
-      tabs: [{ index: 0, title: '全部', width: '20%' }, { index: 1, title: '待支付', width: '20%' }, { index: 2, title: '待发货', width: '20%' }, { index: 3, title: '待收货', width: '20%' }, { index: 4, title: '已完成', width: '20%' }],
-      tabindex: 1,
-      list: [], 
-  },
+    data: {
+        showEmpty: false,
+        tabs: [{ index: 0, title: '全部', width: '20%' }, { index: 1, title: '待支付', width: '20%' }, { index: 2, title: '待发货', width: '20%' }, { index: 3, title: '待收货', width: '20%' }, { index: 4, title: '已完成', width: '20%' }],
+        tabindex: 1,
+        list: [],
+    },
 
-  onLoad: function (options) {
-      var that = this;
-      this.compontNavbar = this.selectComponent("#compontNavbar");
-      that.setData({
-          tabindex: 0
-      })
-      that.getList(0, page, flag);
-  },   
-  onShow: function () {
-  
-  },
+    onLoad: function (options) {
+        var that = this;
+        this.compontNavbar = this.selectComponent("#compontNavbar");
+        that.setData({
+            tabindex: 0
+        })
+        that.getList(0, page, flag);
+    },
+    onShow: function () {
+
+    },
     swiTab: function (e) {
         var that = this;
         var a = e.currentTarget.dataset.index;
@@ -33,7 +33,7 @@ Page({
         flag = false;
         that.setData({
             tabindex: a,
-            list: [],           
+            list: [],
         });
         wx.pageScrollTo({
             scrollTop: 0,
@@ -63,7 +63,7 @@ Page({
                         list: a,
                         showEmpty: a.length == 0 ? true : false
                     })
-                    hasmore = res.data.data[0].hasmore;                                                       
+                    hasmore = res.data.data[0].hasmore;
                 } else {
                     wx.showToast({
                         title: res.data.message,
@@ -96,7 +96,7 @@ Page({
                 });
             }
         }
-    }, 
+    },
     cancelOrder(e) {
         var that = this;
         wx.showModal({
@@ -150,13 +150,13 @@ Page({
             }
         });
     },
-    
+
     judgeLogin: function (e) {
         var that = this;
         app.showLoading();
         var that = this;
         that.setData({
-            ordersn_pay:e.currentTarget.dataset.ordersn
+            ordersn_pay: e.currentTarget.dataset.ordersn
         })
         var a = e.detail;
         if (a.errMsg == 'getUserInfo:fail auth deny') {
@@ -245,7 +245,7 @@ Page({
             }
         });
     },
-    tz_detail:function(e){
+    tz_detail: function (e) {
         // console.log(e.currentTarget.dataset.ordersn)
         wx.navigateTo({
             url: '/pages/my/pages/myOrder/myOrderDetail/myOrderDetail?ordersn=' + e.currentTarget.dataset.ordersn,

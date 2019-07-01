@@ -43,6 +43,11 @@ Page({
                       json = newjson;
                       that.bofang();
                       // console.log(that.data.listPg)
+                      that.setData({
+                          bgImg:json.bgImg,
+                          width:json.showWidth,
+                          height:json.showHeight
+                      })
 
                   } else {
                       wx.showToast({

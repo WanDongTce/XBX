@@ -52,7 +52,7 @@
 }
 
 .write_btn {
-    background-color: #48b947;
+    background-color: #4bace2;
     color: #fff;
     height: 96rpx;
     line-height: 96rpx;
@@ -83,7 +83,7 @@
 .bigtitle view {
     width: 6rpx;
     height: 34rpx;
-    background-color: #47ba45;
+    background-color: #4bace2;
     margin-right: 20rpx;
 }
 

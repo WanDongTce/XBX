@@ -23,7 +23,7 @@
     padding-right: 40rpx;
     margin-top: 30rpx;
     font-size: 22rpx;
-    color: #48b947;
+    color: #4bace2;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     margin-left: 75%;

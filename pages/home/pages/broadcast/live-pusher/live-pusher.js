@@ -343,6 +343,7 @@ Page({
         console.log('error:', e.detail);
     },
     goBack: function () {
+        console.log('11111')
         wx.navigateBack({
             delta: 1,
         })

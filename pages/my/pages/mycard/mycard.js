@@ -13,6 +13,9 @@ Page({
     onLoad: function(options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
         this.empty = this.selectComponent("#empty");
+        this.setData({
+            idname:app.idname
+        })
     },
     onShow(){
         var that = this;

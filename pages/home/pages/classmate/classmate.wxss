@@ -120,7 +120,7 @@ video {
 .btm-lt {
     width: 60%;
     font-size: 26rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 
 .btm-rt {
@@ -141,7 +141,7 @@ video {
 }
 
 .btm-rt .active {
-    color: #48b947;
+    color: #4bace2;
 }
 
 .btm-rt text:last-child {
@@ -154,10 +154,10 @@ video {
     right: 24rpx;
     width: 102rpx;
     height: 102rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
     border-radius: 50%;
     text-align: center;
-    line-height: 100rpx;
+    line-height: 102rpx;
     z-index: 10;
 }
 .circle_camera {

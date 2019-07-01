@@ -208,5 +208,5 @@ page{
   line-height: 8vh;
 }
 .currenttab{
-  color:#48b947;
+  color:#4bace2;
 }

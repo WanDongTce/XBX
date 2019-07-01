@@ -182,7 +182,7 @@ page {
     font-size: 24rpx;
     width: 440rpx;
     word-wrap: break-word;
-    color: #48b947;
+    color: #4bace2;
     min-width: 440rpx;
 }
 
@@ -215,7 +215,7 @@ page {
     line-height: 102rpx;
     font-size: 28rpx;
     color: #fff;
-    background: #48b947;
+    background: #4bace2;
 }
 
 .classify_img {

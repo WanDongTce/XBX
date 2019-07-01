@@ -1,15 +1,11 @@
 {
   "pages": [
-    "pages/main/pages/shopping/shopping",
-    "pages/main/pages/Shopdetails/Shopdetails",
     "pages/main/pages/home/home",
-    
     "pages/main/pages/msg/msg",
     "pages/main/pages/find/find",
     "pages/main/pages/task/task",
     "pages/main/pages/my/my",
     "pages/common/login/login",
-    "pages/common/register/register",
     "pages/common/presonalInfo/presonalInfo",
     "pages/common/addReferee/addReferee",
     "pages/common/forget_password/forget_password",
@@ -29,14 +25,20 @@
         "pages/edutList/edutList",
         "pages/courseList/write/write",
         "pages/game/game",
+        "pages/game/gameWebview/gameWebview",
         "pages/game/gameList/gameList",
         "pages/game/gameDetail/gameDetail",
-        "pages/game/gameWebview/gameWebview",
         "pages/preview/preview",
         "pages/think/think",
         "pages/courseList/courseList",
         "pages/courseList/courseDetail/courseDetail",
         "pages/courseList/liveCourseDetail/liveCourseDetail",
+        "pages/course/courseType/courseType",
+        "pages/course/course",
+        "pages/course/courseSearchBefore/courseSearchBefore",
+        "pages/course/courseDetail/courseDetail",
+        "pages/course/write/write",
+        "pages/course/periphery/periphery",
         "pages/classmate/classmate",
         "pages/classmate/classmateDetailNew/classmateDetailNew",
         "pages/classmate/comment/comment",
@@ -84,9 +86,12 @@
         "pages/teacher/teacherDetail/teacherDetail",
         "pages/signin/signin",
         "pages/zuoyeNew/zuoyeNew",
-        "pages/zuoyePay/zuoyePay",
+        "pages/zuoyeEnter/zuoyeEnter",
+        "pages/zuoye/zuoye",
         "pages/zuoyeSubmit/zuoyeSubmit",
-        "pages/zuoyeDetail/zuoyeDetail"
+        "pages/zuoyeDetail/zuoyeDetail",
+        "pages/zuoyeJudge/zuoyeJudge",
+        "pages/zuoyePay/zuoyePay"
       ]
     },
     {
@@ -152,6 +157,9 @@
         "pages/payPwd/setPayPwd/setPayPwd",
         "pages/recharge/recharge",
         "pages/memberRenewal/memberRenewal",
+        "pages/memberRenewalNew/memberRenewalNew",
+        "pages/memberRenewalNewDel/memberRenewalNewDel",
+        "pages/memberRenewalNewPay/memberRenewalNewPay",
         "pages/memberPay/memberPay",
         "pages/memberRenewalList/memberRenewalList",
         "pages/withCash/withCash",
@@ -231,26 +239,28 @@
         "pages/teacherDraw/answer/answer_reply/answer_reply",
         "pages/teacherDraw/answer/answer_video/answer_video",
         "pages/teacherDraw/answer/bofang/bofang",
-        "pages/teacherDraw/answer/sendAnswer/sendAnswer"
+        "pages/teacherDraw/answer/sendAnswer/sendAnswer",
+        "pages/tuiguangNew/tuiguangNew",
+        "pages/aboutMoney/member/member"
       ]
     }
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "中国教育A计划",
+    "navigationBarTitleText": "学霸学",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
   "tabBar": {
-    "color": "#aaa",
-    "selectedColor": "#48b947",
+    "color": "#333",
+    "selectedColor": "#333",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/main/pages/home/home",
-        "text": "广场",
+        "text": "首页",
         "iconPath": "images/tabBtom/home2.png",
         "selectedIconPath": "images/tabBtom/home.png"
       },
@@ -286,7 +296,7 @@
     }
   },
   "navigateToMiniProgramAppIdList": [
-    "wxee68233581f4965a"
+    "wxd2c2aa1e2850534b"
   ],
   "sitemapLocation": "sitemap.json"
 }

@@ -54,7 +54,7 @@ page{
     width: 90%;
     margin: 0 auto;
     font-size: 34rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
     border-radius: 10rpx;
     line-height: 86rpx;
     color: #fff;
@@ -140,7 +140,7 @@ textarea{
     text-align: center;
 }
 .reward-box .color-49b947{
-    color: #48b947;
+    color: #4bace2;
 }
 .btn-box{
     width: 90%;
@@ -148,7 +148,7 @@ textarea{
     border-radius: 10rpx;
     color: #fff;
     font-size: 34rpx;
-    background: #48b947;
+    background: #4bace2;
     text-align: center;
     padding: 3% 0;
 }

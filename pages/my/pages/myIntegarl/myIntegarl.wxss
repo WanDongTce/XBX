@@ -21,7 +21,7 @@
 .top_btn {
     margin: 43rpx auto 0rpx;
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
     width: 300rpx;
     height: 56rpx;
     border-radius: 10rpx;
@@ -63,7 +63,7 @@
     margin-left: 24rpx;
     width: 6rpx;
     height: 28rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
 }
 
 .title {
@@ -104,7 +104,7 @@
 .hdjf text {
     display: inline-block;
     font-size: 48rpx;
-    color: #48b947;
+    color: #4bace2;
     margin-left: 17rpx;
 }
 .integral_introducebox{

@@ -18,7 +18,7 @@ page{
    
 }
 .textarea_box{
-  background-color:#f4f4f4;
+  background-color:#fff;
   padding:16rpx;
 }
 .title{
@@ -144,7 +144,7 @@ textarea{
     border-radius: 10rpx;
     color: #fff;
     font-size: 34rpx;
-    background: #48b947;
+    background: #4bace2;
     text-align: center;
     padding: 3% 0;
 }
@@ -152,12 +152,12 @@ textarea{
   
   margin-left:30rpx;
   font-size:26rpx;
-  color:#61c361;
-  border:1rpx solid #61c361;
+  color:#4bace2;
+  border:1rpx solid #4bace2;
   height:56rpx;
   line-height:56rpx;
   padding:0 20rpx;
-  border-radius:28rpx;
+  border-radius:10rpx;
   display:inline-block;
 }
 .submitpic_box{
@@ -189,19 +189,18 @@ textarea{
 .fabu{
   font-size:26rpx;
   color:#fff !important;
-  background-color:#61c361;
+  background-color:#4bace2;
   height:56rpx;
   line-height:56rpx;
   padding:0 40rpx;
-  border-radius:28rpx;
+  border-radius:10rpx;
   margin-right:30rpx;
-  margin-top:20rpx;
 }
 
 
 .bottom_fixbox{
-  position:fixed;
-  bottom:106rpx;
+  position:absolute;
+  bottom:10rpx;
   justify-content: space-between;
   align-items: center;
   width:100%;

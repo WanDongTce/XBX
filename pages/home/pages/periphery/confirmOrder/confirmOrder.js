@@ -14,18 +14,18 @@ Page({
         hasAddress: false,
         numAll: 0
     },
-    onLoad(options){
+    onLoad(options) {
         flag = options.flag;
         ids = options.ids;
     },
     onShow: function () {
         wx.removeStorageSync('enterAddressListFlag');
-        
+
         var that = this;
         var b = wx.getStorageSync('goods');
         var a = wx.getStorageSync('receivingAddress');
         var c = a ? true : false;
-        
+
         // var mynum=0;
         // var myprice=0;
         // var list=b.list
@@ -55,20 +55,20 @@ Page({
                 content: '确认支付吗？',
                 success: function (res) {
                     if (res.confirm) {
-                        if(flag == 1){
+                        if (flag == 1) {
                             that.buyFromDetail();
-                        }else if(flag == 2){
+                        } else if (flag == 2) {
                             // that.buyFromGift();
                             wx.hideLoading();
                             if (app.openId) {
-                                var a=e;
+                                var a = e;
                                 that.judgeLogin(a);
                             }
                             else {
                                 that.wxLogin();
                             }
                         }
-                    } else if (res.cancel) {}
+                    } else if (res.cancel) { }
                 }
             });
         } else {
@@ -80,7 +80,7 @@ Page({
         }
 
     },
-    buyFromDetail(){
+    buyFromDetail() {
         var that = this;
         network.POST({
             url: 'v13/shop-order/buy-confirm',
@@ -131,7 +131,7 @@ Page({
                 wx.hideLoading();
                 if (res.data.code == 200) {
                     that.setData({
-                        payinfo: res.data.data[0]                     
+                        payinfo: res.data.data[0]
                     })
                     that.pay();
                     // wx.navigateTo({
@@ -179,10 +179,10 @@ Page({
                             icon: 'success',
                             duration: 3000
                         });
-                        wx.navigateTo({                          
+                        wx.navigateTo({
                             url: '/pages/my/pages/myOrder/myOrder?index=0'
                         })
-                    },function(){
+                    }, function () {
                         wx.showToast({
                             title: '未支付成功',
                             icon: 'success',
@@ -246,9 +246,9 @@ Page({
         });
 
     },
-    tz_address:function(){
-      wx.navigateTo({
-          url: '/pages/common/address/address?flag=2'
-      })
+    tz_address: function () {
+        wx.navigateTo({
+            url: '/pages/common/address/address?flag=2'
+        })
     }
 })

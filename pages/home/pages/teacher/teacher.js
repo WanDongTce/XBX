@@ -27,7 +27,7 @@ Page({
     },
     onShow: function () {
         var that = this;
-        that.getList(false);
+        that.getList(false); 
     },
     getList: function (flag) {
         var that = this;
@@ -55,8 +55,8 @@ Page({
                 if (res.data.code == 200) {
                     var a = res.data.data[0].list;
                     if (flag) {
-                        a = that.data.list.concat(a);
-                    }
+                        a = that.data.list.concat(a);  
+                    } 
 
                     that.setData({
                         list: a,
@@ -98,8 +98,8 @@ Page({
             }
         }
     },
-
-    inputFn: function (e) {
+    
+    inputFn: function(e){
         search = e.detail.value.replace(/^\s*|\s*$/, '');
         // console.log(search);
         wx.pageScrollTo({
@@ -109,7 +109,7 @@ Page({
         page = 1;
         this.getList(false);
     },
-
+    
     onUnload: function () {
         page = 1;
         hasmore = null;
@@ -129,15 +129,15 @@ Page({
             that.showOption(a);
         }
     },
-    selectedAddress(e) {
-        console.log(e.detail);
+    selectedAddress(e){
+        console.log(e.detail);   
         var that = this;
         address = e.detail;
         that.hideOption();
         page = 1;
         that.getList(false);
     },
-    subjectConfirmFn(e) {
+    subjectConfirmFn(e){
         // console.log(e.detail);
         var that = this;
         subject = e.detail;
@@ -145,7 +145,7 @@ Page({
         page = 1;
         that.getList(false);
     },
-    levelConfirmFn(e) {
+    levelConfirmFn(e){
         // console.log(e.detail);
         var that = this;
         level = e.detail;

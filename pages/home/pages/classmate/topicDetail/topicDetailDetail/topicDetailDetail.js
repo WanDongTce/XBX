@@ -189,5 +189,10 @@ Page({
     //   keyword: ''
     // });
   },
+    toWrite: function () {
+        wx.navigateTo({
+            url: '/pages/home/pages/classmate/classmateWrite/classmateWrite'
+        })
+    },
 })
 

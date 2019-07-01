@@ -20,26 +20,26 @@ Page({
         editIndex: 0,
         delBtnWidth: 60
     },
-    onLoad: function (options) {
+    onLoad: function(options) {
         this.empty = this.selectComponent("#empty");
         this.peripheryBotmTab = this.selectComponent("#peripheryBotmTab");
         this.compontNavbar = this.selectComponent("#compontNavbar");
         // console.log(options)
-
+        
     },
-    onShow: function () {
+    onShow: function() {
         var that = this;
         that.getList();
         that.getCartCount();
     },
-    selectGoods: function (e) {
+    selectGoods: function(e) {
         var that = this;
         var isAll = null;
         var priceAll = null;
         var idx = e.currentTarget.dataset.index;
         var clist = that.data.checkedList;
         var list = that.data.list;
-
+ 
         // console.log(list[idx]);
         list[idx].checked = !list[idx].checked;
         for (var i = 0; i < list[idx].goods_list.length; i++) {
@@ -65,7 +65,7 @@ Page({
             isAll: isAll
         });
     },
-    selectGoods_new: function (e) {
+    selectGoods_new: function(e) {
         var that = this;
         var a = e.currentTarget.dataset;
         var clist = that.data.checkedList;
@@ -76,17 +76,17 @@ Page({
         var id = list[a.idx].goods_list[a.index].id;
 
         list[a.idx].goods_list[a.index].checked = !list[a.idx].goods_list[a.index].checked;
-        if (list[a.idx].goods_list[a.index].checked) {
+        if (list[a.idx].goods_list[a.index].checked){
             clist.push(id);
-            for (var i = 0; i < list[a.idx].goods_list.length; i++) {
-                if (list[a.idx].goods_list[i].checked) {
+            for (var i = 0; i < list[a.idx].goods_list.length; i++){
+                if (list[a.idx].goods_list[i].checked){
                     count++;
                 }
             }
-            if (count == list[a.idx].goods_list.length) {
+            if (count == list[a.idx].goods_list.length){
                 list[a.idx].checked = true;
             }
-        } else {
+        }else{
             list[a.idx].checked = false;
             clist = clist.filter((item) => {
                 if (item != id) return item;
@@ -95,17 +95,17 @@ Page({
 
         isAll = clist.length == len ? true : false;
         priceAll = that.getTotalPrice(list);
-
+      
         that.setData({
             list: list,
             checkedList: clist,
-            priceAll: Math.formatFloat(priceAll, 2),
+            priceAll: Math.formatFloat(priceAll,2),
             isAll: isAll
         });
     },
-    getAllLength() {
+    getAllLength(){
         var list = this.data.list;
-
+ 
         //获取所有商品个数
         for (var j = 0; j < list.length; j++) {
             // console.log(list[j]);
@@ -146,11 +146,11 @@ Page({
         that.setData({
             list: list,
             checkedList: b,
-            priceAll: Math.formatFloat(a, 2),
+            priceAll: Math.formatFloat(a,2),
             isAll: !isAll
         });
     },
-    getList: function () {
+    getList: function() {
         var that = this;
         network.POST({
             url: 'v13/shop-cart/list',
@@ -158,7 +158,7 @@ Page({
                 "mobile": app.userInfo.mobile,
                 "token": app.userInfo.token
             },
-            success: function (res) {
+            success: function(res) {
                 // console.log(res);
                 wx.hideLoading();
                 if (res.data.code == 200) {
@@ -178,7 +178,7 @@ Page({
                         checkedList: b,
                         showEmpty: a.length == 0 ? true : false,
                         isAll: a.length == 0 ? false : true,
-                        priceAll: Math.formatFloat(that.getTotalPrice(a), 2)
+                        priceAll: Math.formatFloat(that.getTotalPrice(a),2)
                     });
                     that.getAllLength();
                     // console.log(that.data.list)
@@ -188,7 +188,7 @@ Page({
                     });
                 }
             },
-            fail: function () {
+            fail: function() {
                 wx.hideLoading();
                 wx.showToast({
                     title: '服务器异常',
@@ -208,7 +208,7 @@ Page({
                 "id": id,
                 "num": num
             },
-            success: function (res) {
+            success: function(res) {
                 // console.log(res);
                 wx.hideLoading();
                 if (res.data.code == 200) {
@@ -234,7 +234,7 @@ Page({
                     // console.log(b);
                     that.setData({
                         list: a,
-                        priceAll: Math.formatFloat(b, 2)
+                        priceAll: Math.formatFloat(b,2)
                     });
 
                     that.getCartCount();
@@ -244,7 +244,7 @@ Page({
                     });
                 }
             },
-            fail: function () {
+            fail: function() {
                 wx.hideLoading();
                 wx.showToast({
                     title: '服务器异常',
@@ -287,7 +287,7 @@ Page({
                     "token": app.userInfo.token,
                     "ids": ids
                 },
-                success: function (res) {
+                success: function(res) {
                     // console.log(res);
                     wx.hideLoading();
                     if (res.data.code == 200) {
@@ -302,7 +302,7 @@ Page({
                         });
                     }
                 },
-                fail: function () {
+                fail: function() {
                     wx.hideLoading();
                     wx.showToast({
                         title: '服务器异常',
@@ -321,7 +321,7 @@ Page({
                 "mobile": app.userInfo.mobile,
                 "token": app.userInfo.token
             },
-            success: function (res) {
+            success: function(res) {
                 // console.log(res);
                 wx.hideLoading();
                 if (res.data.code == 200) {
@@ -335,7 +335,7 @@ Page({
                     });
                 }
             },
-            fail: function () {
+            fail: function() {
                 wx.hideLoading();
                 wx.showToast({
                     title: '服务器异常',
@@ -354,7 +354,7 @@ Page({
         wx.showModal({
             title: '提示',
             content: '确定要删除吗？',
-            success: function (res) {
+            success: function(res) {
                 if (res.confirm) {
                     network.POST({
                         url: 'v13/shop-cart/del',
@@ -363,7 +363,7 @@ Page({
                             "token": app.userInfo.token,
                             "ids": JSON.stringify(id)
                         },
-                        success: function (res) {
+                        success: function(res) {
                             // console.log(res);
                             wx.hideLoading();
                             if (res.data.code == 200) {
@@ -378,7 +378,7 @@ Page({
                                 });
                             }
                         },
-                        fail: function () {
+                        fail: function() {
                             wx.hideLoading();
                             wx.showToast({
                                 title: '服务器异常',
@@ -391,18 +391,18 @@ Page({
             }
         })
     },
-    onUnload: function () {
+    onUnload: function() {
         this.setData({
             showEmpty: false
         });
     },
-    tz_shangjia: function (e) {
+    tz_shangjia: function(e) {
         wx.navigateTo({
             url: '/pages/home/pages/ecology/businessDetail/businessDetail?businessid=' + e.currentTarget.dataset.businessid
         })
     },
     //手指刚放到屏幕触发
-    touchS: function (e) {
+    touchS: function (e) {       
         if (e.touches.length == 1) {
             this.setData({
                 startX: e.touches[0].clientX
@@ -410,11 +410,11 @@ Page({
         }
     },
     //触摸时触发，手指在屏幕上每移动一次，触发一次
-    touchM: function (e) {
+    touchM: function (e) {       
         var that = this
-        if (e.touches.length == 1) {
+        if (e.touches.length == 1) {          
             var moveX = e.touches[0].clientX;
-            var disX = that.data.startX - moveX;
+            var disX = that.data.startX - moveX;          
             var delBtnWidth = that.data.delBtnWidth;
             var txtStyle = "";
             if (disX == 0 || disX < 0) {//如果移动距离小于等于0，文本层位置不变
@@ -427,7 +427,7 @@ Page({
                 }
             }
             var a = e.currentTarget.dataset;
-            var list = that.data.list;
+            var list = that.data.list;           
             list[a.idx].goods_list[a.index].txtStyle = txtStyle;
             that.setData({
                 list: list
@@ -452,5 +452,5 @@ Page({
                 list: list
             });
         }
-    },
+    },   
 })

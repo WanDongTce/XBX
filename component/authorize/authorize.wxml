@@ -1,0 +1,5 @@
+<view class='authorizebox' id='authorize' wx:if="{{!hideMask}}">
+    <view class='authorize_smbox'>
+        <button class='authorize_btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judge">微信授权登录</button>
+    </view>
+</view>

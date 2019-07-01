@@ -40,7 +40,7 @@ input{
   color:#333;
 }
 .btn{
-  background-color:#48b947;
+  background-color:#4bace2;
   border-radius:10rpx;
   margin:280rpx auto 40rpx;
   color:#fff;

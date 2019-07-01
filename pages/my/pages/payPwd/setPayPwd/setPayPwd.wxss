@@ -9,7 +9,7 @@ page {
 }
 
 .btn {
-    background-color: #48b947;
+    background-color: #4bace2;
     border-radius: 10rpx;
     margin: 40rpx auto 0;
     color: #fff;
@@ -45,7 +45,7 @@ input {
 .modifyp_btn1 {
     font-size: 28rpx;
     line-height: 48rpx;
-    color: #48b947;
+    color: #4bace2;
     position: static;
     margin: 0;
     padding: 0;
@@ -56,5 +56,5 @@ input {
 }
 
 .verify_color {
-    color: #48b947;
+    color: #4bace2;
 }

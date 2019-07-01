@@ -9,7 +9,7 @@ Page({
     data: {
         showEmpty: false,
         list: [],
-        title: '我的同学圈'
+        title: '综合素质'
     },
     onLoad(options){
         this.compontNavbar = this.selectComponent("#compontNavbar");
@@ -17,7 +17,7 @@ Page({
         if(options.mobile){
             mobile = options.mobile;
             this.setData({
-                title: 'TA的同学圈'
+                title: 'TA的综合素质'
             });
         }
     },

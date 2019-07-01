@@ -24,7 +24,7 @@ page {
 .title-line {
     width: 8rpx;
     height: 30rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
     margin-right: 19rpx;
 }
 
@@ -148,7 +148,7 @@ page {
     width: 100%;
 }
 .bg-green{
-    background: #48b947;
+    background: #4bace2;
 }
 .bg-gray{
     background: #ccc;

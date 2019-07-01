@@ -32,7 +32,7 @@ page {
 }
 
 .center_jf {
-    color: #55be54;
+    color: #4bace2;
     font-size: 24rpx;
     margin-top: 11rpx;
     margin-left: 30rpx;

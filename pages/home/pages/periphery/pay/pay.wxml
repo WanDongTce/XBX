@@ -4,7 +4,7 @@
         <view class="lt">本次需支付</view>
         <view class="rt">{{payinfo.price_all}}</view>
     </view>
-    <view class="tip">您支付的费用担保在A计划平台，如果本次交易失败，费用将全额退回您的A计划钱包。</view>
+    <view class="tip">您支付的费用担保在{{idname}}平台，如果本次交易失败，费用将全额退回您的{{idname}}钱包。</view>
     <view class="pay-list">
         <!-- <view class="pay-item" data-type="2" bindtap="checkPayMethod">
             <view class="pay-lt">

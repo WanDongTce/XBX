@@ -1,4 +1,4 @@
-<compontNavbar title="逗逗学" isShowBack="{{true}}" ></compontNavbar>
+<compontNavbar title="{{idname}}" isShowBack="{{true}}" ></compontNavbar>
 <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' />
 <view class="tabs">
     <navigator class="tab" url="/pages/home/pages/preview/preview">
@@ -72,7 +72,7 @@
         {{course.item1.intro}}
       </view>
   </view> 
-  <swiper class='list_swiper' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#48b947">
+  <swiper class='list_swiper' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
     <block wx:for="{{course_sy}}" wx:key="this">
       <swiper-item>
           <view class='itembox' wx:for="{{item[0]}}" wx:key="this" data-myid="{{item.Id}}"  bindtap='tz_detail' data-videopic="{{item.PicUrl}}">
@@ -103,7 +103,7 @@
         {{course.item2.intro}}
       </view>
   </view> 
-  <swiper class='list_swiper' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#48b947">
+  <swiper class='list_swiper' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
     <block wx:for="{{course_gg}}" wx:key="this" >
       <swiper-item>
           <view class='itembox overf' wx:for="{{item[0]}}" wx:key="this" data-videopic="{{item.PicUrl}}" data-myid="{{item.Id}}" bindtap='tz_detail'>
@@ -134,7 +134,7 @@
         {{course.item3.intro}}
       </view>
   </view> 
-  <swiper class='list_swiper mb0' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#48b947">
+  <swiper class='list_swiper mb0' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
     <block wx:for="{{course_wk}}" wx:key="this" >
       <swiper-item>
           <view class='itembox overf' wx:for="{{item[0]}}" wx:key="this"  data-myid="{{item.Id}}"  data-videopic="{{item.PicUrl}}" bindtap='tz_detail'>

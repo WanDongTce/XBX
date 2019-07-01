@@ -61,7 +61,7 @@ swiper image{
     color: #999;
 }
 .active{
-    color: #48b947;
+    color: #4bace2;
 }
 .add-agree-icon{
     width: 22rpx;
@@ -78,7 +78,7 @@ swiper image{
     -webkit-box-sizing: border-box;
     margin: 16rpx 0;
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 .content{
     width: 100%;

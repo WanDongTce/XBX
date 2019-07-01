@@ -18,7 +18,7 @@
                 <view class='bill_num'>收入￥{{listData.m_shouru}}</view>
                 <progress percent="{{bill_shouru_p}}" color="#f65452" stroke-width='4' active></progress>
                 <view class='bill_num'>支出￥{{listData.m_zhichu}}</view>
-                <progress percent="{{bill_zhichu_p}}" color="#48b947" stroke-width='4' active></progress>
+                <progress percent="{{bill_zhichu_p}}" color="#4bace2" stroke-width='4' active></progress>
             </view>
         </view>
         <view class="list-box">

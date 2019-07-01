@@ -10,7 +10,7 @@ page{
 }
 .add_btn{
   
-  color:#fff;background-color:#48b947;line-height:90rpx;font-size:34rpx;border-radius: 10rpx;text-align: center;width:690rpx;margin:0 auto;
+  color:#fff;background-color:#4bace2;line-height:90rpx;font-size:34rpx;border-radius: 10rpx;text-align: center;width:690rpx;margin:0 auto;
   
 }
 .imgs{

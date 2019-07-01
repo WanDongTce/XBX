@@ -109,7 +109,7 @@ page {
 }
 
 .bg-green {
-    background: #48b947;
+    background: #4bace2;
 }
 .bg-fff {
     background: #fff;

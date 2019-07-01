@@ -116,9 +116,7 @@ Page({
         };
         // return {
         //     title: info.title,
-        //     // path: "/pages/common/webView/webView?src=" + info.dizhi,
-        //     // path: info.dizhi,
-        //     path: 'https://www.baidu.com',
+        //     path: "/pages/common/webView/webView?src=" + info.dizhi,
         //     imageUrl: that.data.IMGURL + 'game/playgame.png',
         //     success: function (res) {
         //         // 转发成功

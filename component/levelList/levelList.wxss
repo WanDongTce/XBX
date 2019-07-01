@@ -40,9 +40,9 @@
     margin-bottom: 0;
 } */
 .active.item{
-    color: #48b947;
-    background: #b2e1b1;
-    border: 1rpx solid #48b947;
+    color: #4bace2;
+    background: #afd9f1;
+    border: 1rpx solid #4bace2;
 }
 .btns{
     width: 100%;
@@ -67,5 +67,5 @@
     border-radius: 10rpx;
 }
 .btn:last-child{
-    background: #48b947;
+    background: #4bace2;
 }

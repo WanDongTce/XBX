@@ -1,7 +1,7 @@
 <!-- <view class='textarea_box'>
   <textarea class="textarea" placeholder="发布帖子" maxlength="280"></textarea>
 </view> -->
-<compontNavbar title="发布同学圈" isShowBack="{{true}}"></compontNavbar>
+<compontNavbar title="发布" isShowBack="{{true}}"></compontNavbar>
 <view>
     <view class="homework-cont">
       <view class='textarea_box'>        
@@ -22,26 +22,24 @@
           </cover-view>
       </view>
     </view> 
-    <view class='display-flex bottom_fixbox'>
-      <view  class='choice_topic' catchtap='choicetopic' >{{ifchoicetopic}}</view> 
-      <!-- <view class='submit_minbox' catchtap="addImg">
+    <view class='display-flex bottom_fixbox justify-content-between align-items-center'>
+        <view class='display-flex align-items-center'>
+            <view  class='choice_topic' catchtap='choicetopic' >{{ifchoicetopic}}</view> 
+      
+
+            <view class='submit_minbox'>
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <image src='{{base}}images/publish_img.png' class='submitpic_pic'></image>
+                
+                </picker>         
+            </view>
+      </view> 
+      <view class='fabu fr' bindtap='submit'>发布</view>
+    </view>
+</view>
+
+<!-- <view class='submit_minbox' catchtap="addImg">
         <image src='{{base}}images/publish_img.png' class='submitpic_pic'></image>
         
          <view>照片/视频</view>  
       </view>  -->
-
-      <view class='submit_minbox'>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <image src='{{base}}images/publish_img.png' class='submitpic_pic'></image>
-          <view class="picker">
-            照片/视频
-          </view>
-        </picker>         
-      </view> 
-
-    </view>
-    <view class='submitpic_box overf' >      
-      <view class='fabu fr' bindtap='submit'>发布</view>
-    </view>
-    
-</view>

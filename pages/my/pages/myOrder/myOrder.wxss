@@ -49,24 +49,21 @@ page{
     justify-content: flex-end;
 }
 .new_buttonbox view{
-    border:1rpx solid #48b947;
+    border:1rpx solid #4bace2;
     padding:0rpx 22rpx;
     border-radius: 5rpx;
-    color:#48b947;
+    color:#4bace2;
     font-size:30rpx;
     margin-left:20rpx;
     line-height: 60rpx;
 }
-button{
-    border:none;
-}
 .new_buttonbox button{
-    border:1rpx solid #48b947;
+    border:1rpx solid #4bace2;
     padding:0 22rpx;
     margin:0;
     background-color:#fff;
     border-radius: 5rpx;
-    color:#48b947;
+    color:#4bace2;
     font-size:30rpx;
     margin-left:20rpx;
     line-height: 60rpx;

@@ -24,7 +24,7 @@ page {
 .title-line {
     width: 8rpx;
     height: 30rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
     margin-right: 19rpx;
 }
 
@@ -45,7 +45,7 @@ page {
     margin-bottom: 0;
 }
 .cont text{
-    color: #48b947;
+    color: #4bace2;
     margin-left: 10rpx;
 }
 .picker-box{
@@ -111,7 +111,7 @@ page {
     color: #333;
 }
 .item-num text{
-    color: #48b947;
+    color: #4bace2;
     margin-left: 10rpx;
 }
 .btn-box {
@@ -141,7 +141,7 @@ page {
 }
 
 .bg-green {
-    background: #48b947;
+    background: #4bace2;
 }
 
 .bg-gray {

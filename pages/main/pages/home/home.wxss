@@ -1,13 +1,12 @@
 @import "./actyTemplate.wxss";
 @import "/component/navigation/navigation.wxss";
 page {
-    background: #f7f7f7;
-    /* padding-top: 10vh; */
+    background: #fff;
     padding-top: 10vh;
 }
 
 
-.back-box{
+.back-box{ 
     width:150rpx;
 }
 .component-class{
@@ -37,18 +36,18 @@ page {
 
 
 
-swiper {
-    width: 100%;
+.swiper_img {
+    width: 95%;
     height: 318rpx;
 }
 
-swiper image {
+.swiper_img image {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-swiper navigator {
+.swiper_img navigator {
     width: 100%;
     height: 100%;
 }
@@ -138,54 +137,7 @@ swiper navigator {
     margin-right: 30rpx;
 }
 
-/*
-.course-cont{
-    position: relative;
-    width: 100%;
-    height: 234rpx; 
-    overflow: hidden;
-}
-.course-image {
-    width: 100%;
-    height: 154rpx;
-    border-radius: 10rpx;
-}
-.course-info{
-    width: 100%;
-    height: 80rpx; 
-}
 
-.course-tit{
-    width: 98%;
-    height: 100%;
-    line-height: 40rpx;
-    font-size: 25rpx;
-    color: #333;
-    word-break: break-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    margin: 0 auto;
-    text-align: center;
-}
-.course-sub{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #49b947;
-    padding: 5rpx 10rpx;
-    font-size: 22rpx;
-    color: #fff;
-    border-radius: 0 10rpx 0 10rpx;
-}
-
-.bg-1{
-   background: #58d4b2; 
-}
-.bg-2{
-    background: #fdc17c;
-}
-*/
 
 .school-box {
     width: 100%;
@@ -195,14 +147,8 @@ swiper navigator {
 }
 
 .h2 {
-    width: 100%;
-    padding: 30rpx 24rpx;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    /* width: 100%; */
+    padding: 37rpx 26rpx;   
 }
 
 .h2-lt {
@@ -214,7 +160,7 @@ swiper navigator {
 .rect-icon {
     width: 8rpx;
     height: 28rpx;
-    background: #48b947;
+    background: #4bace2;
     margin-right: 20rpx;
 }
 
@@ -232,7 +178,7 @@ swiper navigator {
 }
 
 .h2-rt-text {
-    color: #48b947;
+    color: #4bace2;
     font-size: 24rpx;
     margin-right: 10rpx;
 }
@@ -332,13 +278,13 @@ swiper navigator {
 }
 
 .new_tab_img {
-    width: 104rpx;
-    height: 104rpx;
+    width: 84rpx;
+    height: 84rpx;
 }
 
 .new_tab_text {
     font-size: 24rpx;
-    color: #505050;
+    color: #333;
     margin-top: 16rpx;
 }
 
@@ -383,216 +329,176 @@ swiper navigator {
 .new_navgs_c5 {
     color: #5e5e5e;
 }
-/* 作业即答 */
-.newhomework_box{
-  margin:0 30rpx;
-  border-bottom:1rpx solid #dfdfdf;
-}
-.newhomework_box:last-child{
-    border: none;
-}
-.newhomework_title{
-  line-height:42rpx;
-  word-break: break-all;
-  margin-top:20rpx;
-}
-.newhomework_tagbox{
-  margin:22rpx 0 32rpx;
-}
-.newhomework_left image{
-  width:20rpx;
-  height: 20rpx;
-  margin-right:15rpx;
-}
-.newhomework_right{
-  color:#48b947;
-}
-.newhomework_right image{
-  width:24rpx;
-  height: 24rpx;
-  margin-right:12rpx;
-}
-.newhomework_right_huida{
-  margin-right:7rpx;
-}
-/* 在线名师 */
-.newonlineter_scroll{
-  width:100%;
-  height:325rpx;
-  white-space:nowrap;
-  margin-left:30rpx;
-  align-items: flex-start;
-}
-.newonlineter_item{
-  width:170rpx;
-  height:100%;
-  display:inline-block;
-  margin-right:55rpx;
-  /* margin-top:16rpx; */
-}
-.c_fff{
-    color:#fff;
-}
-.newonlineter_item image{
-  width:170rpx;
-  height:170rpx;
-  border-radius:5rpx;
-  margin-bottom:25rpx;
-}
-.newonlineter_name{
-  width:120rpx;
-  /* margin-right:16rpx; */
-}
-.newonlineter_subject{
-  display: inline-block;
-  font-size:24rpx;
-  color:#eb9532;
-  border-radius: 4rpx;
-  border:1rpx solid #eb9532;
-  padding:3rpx 10rpx;
-}
-.newonlineter_tagtext{
-  margin-top:20rpx;
-  width:170rpx;
-  min-height:26rpx;
-}
+
 /* 精品课程 */
+.home_videoimg{
+  width:33rpx;
+  height:21rpx;  
+}
+.newcourse_bigitembox{
+    width:100%;
+}
+.coursebigtitle{
+    font-size:36rpx;
+    margin-bottom:40rpx;
+}
 .newcourse_itembox{
   
-  padding-left:30rpx;
-  padding-right:30rpx;
+  margin-bottom:40rpx;
   box-sizing: border-box;
   -webkit-box-sizing:border-box;
 }
+.newcourse_bigtitle{
+    margin:37rpx 0 37rpx 0;
+}
 .newcourse_topimg{
   width:100%;
-  /* display: block; */
-  margin-bottom:16rpx;
-  /* box-sizing: border-box; */
+  margin-bottom:20rpx; 
+  border-radius: 6rpx;
 }
 .newcourse_title{
   line-height:42rpx;
 }
+.live_position{
+    background-color:#fff;
+    left:18rpx;
+    bottom:60rpx;
+    height:44rpx;
+    border-radius: 22rpx;
+    padding-right:15rpx;
+}
 .newcourse_title .text_new1{
   display: inline-block;
-  border:1rpx solid #eb9532;
-  color:#eb9532;
-  font-size:26rpx;
-  padding:5rpx 12rpx;
+  background-color:#66D1CC;
+  color:#fff;
+  font-size:24rpx;
+  padding:4rpx 12rpx;
   border-radius: 4rpx;
   margin-right:14rpx;
   text-align: center;
+  
+
 }
 .newcourse_title .text_new2{
     width:85%;
 }
 .newcourse_headerimg{
   margin-left:4rpx;
-  width:60rpx;
-  height:60rpx;
-  margin-right:26rpx;
+  width:40rpx;
+  height:40rpx;
+  margin-right:12rpx;
   border-radius: 50%;
 }
-.newcourse_name{
-  width:280rpx;
-}
-.newcourse_time text{
-  display: inline-block;
-  color:#eb9532;
-  margin:0 20rpx;
+
+.newcourse_time {
+  
+  
+  line-height: 70rpx;
 }
 .newcourse_bottombox{
   margin:16rpx 0 39rpx;
 }
-.scrollview_subject{
+
+
+/* 在线名师new */
+.h2-lt{
+    font-size:36rpx;
+    font-weight: bold;
+}
+.ateacher_scroll{
   width:100%;
-  height:56rpx;
-  white-space: nowrap;
-  background-color:#fff;
-  margin-left:30rpx;
-  margin-bottom:28rpx;
-  overflow: hidden;
+  /* height:325rpx; */
+  white-space:nowrap;
+  margin-left:26rpx;
+  align-items: flex-start;
+  /* padding-bottom:40rpx; */
 }
-.kemu{
-  display: inline-block;
-  border-radius: 5rpx;
-  margin-right:17rpx;
-  width:106rpx;
-  height:56rpx;
-  line-height:56rpx;
-  
-  text-align: center;
-  font-size:28rpx;
+.ateacher_bigbox{
+    height:310rpx;
+    display: inline-block;
 }
-.nochoicekemu{
-  color:#333;
-  background-color:#f4f4f4;
+.ateacher_box{
+    background-color:#f4f4f4;
+    width:214rpx;
+    height:275rpx;
+    text-align: center;
+    /* height:100%; */
+    display: inline-block;
+    margin-right:18rpx;
 }
-.choicekemu{
-  background-color:#48b947;
-  color:#fff;
+.ateacher_header{
+    width:102rpx;
+    height:102rpx;
+    margin-top:26rpx;
+    border-radius: 50%;
+}
+.c_f4{
+    color:#f4f4f4;
+}
+.ateacher_h1{
+    line-height: 26rpx;
+    margin-top:20rpx;width:214rpx;
+}
+.ateacher_h2{
+    line-height: 24rpx;
+    margin-top:16rpx;width:214rpx;
+    min-height: 24rpx;
+}
+.ateacher_bottombox{
+    bottom:-33rpx;
+    width:100%;
+}
+.ateacher_bottom{
+    background-color:#4BACE2;
+    color:#fff;
+    text-align: center;
+    width:66rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    font-size:28rpx;
+    border-radius: 50%;
+    margin:0 auto;
+}
+/* 新闻公告 */
+.anews_box{
+    width:100%;
+    height:28rpx;
+    line-height: 28rpx;
+    margin:30rpx 0;
+}
+.home_newsimg{
+    width:77rpx;
+    height: 28rpx;
+    display: block;
+    margin-left:26rpx;
+    margin-right:22rpx;
+}
+.swiper_container {
+  height: 55rpx;
+  width: 590rpx;
 }
 
-/* 续费弹窗 */
-.renewbox{
-    position:fixed;
-    left:0;
-    top:0;
-    z-index:200;
-    width:100%;
-    height:100vh;
-    background:rgba(0,0,0,.8);
+.swiper_item {
+  font-size: 26rpx;
+  color:#333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  line-height: 28rpx;
 }
-.renew_smbox{
-     position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    -webkit-transform:translate(-50%, -50%);
-    width:73%;    
-    background-color:#fff;
-    border-radius: 10rpx;
+.new_home_imgbox{
+    /* padding:0 26rpx; */
 }
-.renew_title{
-    font-size:36rpx;
-    color:#333;
-    font-weight:bold;
-    text-align: center;
-    background-color:#fff;
-    border-bottom:2rpx solid #E5E5E5;
-    line-height:112rpx;
-    height:112rpx;
-    box-sizing: border-box;
-    border-top-left-radius: 10rpx;
-    border-top-right-radius: 10rpx;
+.new_home_imgbox{
+    justify-content: space-around;
+    
 }
-.renew_content{
-    font-size:30rpx;
-    color:#333;
-    text-align: center;
-    margin:92rpx 30rpx 104rpx;
-    line-height:54rpx;
+.new_home_img{
+    display: inline-block;
+    width:221rpx;
+    height: 123rpx;
+    margin-right:10rpx;
 }
-.renew_bottom{
-    color:#48b947;
-    height:98rpx;
-    line-height:98rpx;
-    font-size:32rpx;
-    text-align: center;
-    border-top:1rpx solid #e4e4e4;
-}
-.activity_imgbox{
-    width:100%;   
-}
-.activity_imgbox image{
-    width:100%;
-}
-.activity_imgbox_change{
-    width:100%; 
-    position:fixed;
-    top:0;  
-    z-index: 1000;
-}
-.activity_imgbox_change image{
-    width:100%;
-}
+
+

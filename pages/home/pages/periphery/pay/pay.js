@@ -13,6 +13,9 @@ Page({
     onLoad: function (options) {
         // console.log(JSON.parse(options.payinfo));
         this.passwordDialog = this.selectComponent("#passwordDialog");
+        this.setData({
+            idname:app.idname
+        })
         if (options.payinfo) {
             this.setData({
                 payinfo: JSON.parse(options.payinfo)

@@ -117,9 +117,37 @@ Page({
     },
     toDetail: function (e) {
         var a = e.currentTarget.dataset.item;
-        wx.navigateTo({
-            url: '/pages/home/pages/game/gameDetail/gameDetail?info=' + JSON.stringify(a)
-        })
+        
+        // console.log(a)
+        // console.log(b)
+        var start_time = Date.parse(new Date()) / 1000;
+        var end_time = start_time + 5;
+        network.getAddStudyRecord(3, a.id, start_time, end_time, function (res) {
+            wx.hideLoading();
+            if (res.data.code == 200) {
+                wx.navigateTo({
+                    url: '/pages/home/pages/game/gameDetail/gameDetail?info=' + JSON.stringify(a)
+                })
+                // wx.navigateTo({
+                //     url: '/pages/home/pages/game/gameWebview/gameWebview?src=' + JSON.stringify(a)
+                // })
+            }
+            else {
+                wx.showToast({
+                    title: res.data.message,
+                    icon: 'none',
+                    duration: 1000
+                })
+            }
+        }, function () {
+            wx.hideLoading();
+            wx.showToast({
+                title: '服务器异常',
+                icon: 'none',
+                duration: 1000
+            });
+        });
+        
     },
     seltClkFn: function (e) {
         var that = this;

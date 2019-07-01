@@ -14,6 +14,9 @@ Page({
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
         this.pwdKeyboard = this.selectComponent("#keyboard");
+        this.setData({
+            idname:app.idname
+        })
     },
     watchPwd(e){
         // console.log(e);

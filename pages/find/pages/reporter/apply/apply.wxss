@@ -47,7 +47,7 @@ page{
   background-color:#FB6563;
 }
 .item_topbtn3{
-  background-color:#6CCD3B;
+  background-color:#4bace2;
 }
 .item_center{
   margin-top:50rpx;
@@ -76,7 +76,7 @@ page{
   position:fixed;
   bottom: 0;
   z-index: 2;
-  background-color:#48B947;
+  background-color:#4bace2;
   font-size:34rpx;
   width:100%;
   color:#fff;

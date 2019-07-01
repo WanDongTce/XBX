@@ -67,7 +67,8 @@
             <view class='display-flex align-items-center everyday_box everyday_boxc'>
                 <view class='everyday_h1  {{list1[0].status==1?"backgroundc_1":"backgroundc_2"}}' ></view>
                 <view wx:for="{{list1}}" wx:key='this' class='display-flex align-items-center position_r'>    
-                    <view class='everyday_h2 {{item.status==1?"backgroundc_1":"backgroundc_2"}} {{item.key==1?"display_n":""}}' style='width:{{everyday_h2_w/6}}px'></view> 
+                    
+                    <view class='everyday_h2 {{item.status==1?"backgroundc_1":"backgroundc_2"}} {{item.key==1?"display_n":""}}' style='width:{{everyday_h2_w/6}}px'></view>
 
                     <view wx:if="{{item.theday==1&&item.status==1}}" class='everyday_text everyday_text1  everyday_dayon'>
                         <image src='../../images/task/task_currentday.png' class='task_currentdayimg'></image>
@@ -83,7 +84,6 @@
             <view class='display-flex align-items-center everyday_box'>
                 <view class='everyday_itembox everyday_itembox2' wx:for="{{list1}}" wx:key='this'>{{item.day}}</view>
             </view>
-            <!-- <view class='qiandao_btnbox backgroundc_1' catchtap='click_sign'>签到</view> -->
             <view wx:if="{{newTextSignStatus==0}}" class='qiandao_btnbox backgroundc_1' catchtap='click_sign2'>签到</view>
             <view wx:else class='qiandao_btnbox backgroundc_1' catchtap='click_sign2'>已签到</view>
         </view>    
@@ -148,9 +148,8 @@
                             <view class='newrw_pro position_r'>
                                 <view class='position_a newrw_pro_cur' style="width:{{item.num/item.all*prowidth}}px;max-width:250rpx;"></view>
                             </view>
-                            <view class='newrw_protext f_24 c_999' wx:if='{{item.status==3}}'>已完成</view>
-                            <view wx:else class='newrw_protext f_24 c_999'>{{item.num}}/{{item.all}}次</view>
-                            
+                            <!-- <view class='newrw_protext f_24 c_999' wx:if='{{item.num>=item.all}}'>已完成</view> -->
+                            <view class='newrw_protext f_24 c_999' >{{item.num}}/{{item.all}}次</view>
                         </view>
                         
                     </view>
@@ -187,8 +186,10 @@
                             <view class='newrw_pro position_r'>
                                 <view class='position_a newrw_pro_cur' style="width:{{item.num/item.all*prowidth}}px;max-width:250rpx;"></view>
                             </view>
-                            <view class='newrw_protext f_24 c_999' wx:if='{{item.num>=item.all}}'>已完成</view>
-                            <view wx:else class='newrw_protext f_24 c_999'>{{item.num}}/{{item.all}}次</view>                           
+                            <view class='newrw_protext f_24 c_999' wx:if='{{item.status==3}}'>已完成</view>
+                            <view wx:else class='newrw_protext f_24 c_999'>{{item.num}}/{{item.all}}次</view>
+                        
+                                                       
 
                         </view>
                     </view>

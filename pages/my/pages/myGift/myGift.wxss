@@ -51,8 +51,8 @@ page{
 }
 .item_btn2{
     color:#fff;
-    border:1rpx solid #48B947; 
-    background-color:#48B947;  
+    border:1rpx solid #4bace2; 
+    background-color:#4bace2;  
 }
 .item_address{
     padding:28rpx 0rpx 38rpx;

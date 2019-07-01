@@ -129,7 +129,7 @@ swiper navigator {
 .notebox{line-height: 30rpx;}
 .note_img{width:24rpx;height:24rpx;margin-right:6rpx;vertical-align:middle;}
 .notebox text{font-size:24rpx;color:#9d9d9d;}
-.my_integral{font-size: 30rpx;color:#55be54;}
+.my_integral{font-size: 30rpx;color:#4bace2;}
 .wyyy_img{width:341rpx;height:93rpx;}
 .wyyy_text,.dhjl_text{font-size: 30rpx;color:#fff;position:absolute;}
 .wyyy_text{left:43rpx;top:31.5rpx;}

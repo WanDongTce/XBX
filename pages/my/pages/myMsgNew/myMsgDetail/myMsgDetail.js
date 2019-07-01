@@ -99,13 +99,31 @@ Page({
     
   },
   tz_view:function(e){
-    var a = e.currentTarget.dataset.datahref;
-    // console.log(a)
-    var u = a.slice(0, a.indexOf('?'));
-    var p = a.slice(a.indexOf('?') + 1);
-    wx.navigateTo({
-      url: '/pages/common/webView/webView?src=' + u + '&' + p
-    });
+    // var a = e.currentTarget.dataset.datahref;
+    // // console.log(a)
+    // var u = a.slice(0, a.indexOf('?'));
+    // var p = a.slice(a.indexOf('?') + 1);
+    // wx.navigateTo({
+    //   url: '/pages/common/webView/webView?src=' + u + '&' + p
+    // });
+
+    
+      var a = e.currentTarget.dataset;
+      // console.log(a);
+      var href = a.datahref.slice(0, a.datahref.indexOf('?'));
+      var p = a.datahref.slice(a.datahref.indexOf('?') + 1);
+      wx.navigateTo({
+          url: "/pages/common/webView/webView?src=" + href + '&' + p + '&miniPro=1'
+      });
+
+
+    //   var a = e.currentTarget.dataset;
+    //   // console.log(a);
+    //   var href = a.href.slice(0, a.href.indexOf('?'));
+    //   var p = a.href.slice(a.href.indexOf('?') + 1);
+    //   wx.navigateTo({
+    //       url: "/pages/common/webView/webView?src=" + href + '&' + p + '&miniPro=1'
+    //   });
 
   }
 })

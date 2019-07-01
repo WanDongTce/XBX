@@ -1,5 +1,5 @@
 <!--pages/classmate/classmateDetailNew/classmateDetailNew.wxml-->
-<compontNavbar title="同学圈详情" isShowBack="{{true}}"></compontNavbar>
+<compontNavbar title="综合素质详情" isShowBack="{{true}}"></compontNavbar>
 <view class="list" >
     <view class="item"   >
        

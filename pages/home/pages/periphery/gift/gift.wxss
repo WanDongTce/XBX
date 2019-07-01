@@ -106,7 +106,7 @@ page {
     width: 40%;
     height: 100%;
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 .item-count-box{
     width: 50%;
@@ -187,10 +187,10 @@ page {
     font-size: 30rpx;
     text-align: center;
     line-height: 9vh;
-    background: #48b947; */
+    background: #4bace2; */
     height: 75%;
     font-size: 30rpx;
-    background: #48b947;
+    background: #4bace2;
     width:210rpx;
     border-radius: 5rpx;
     text-align: center;

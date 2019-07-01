@@ -34,12 +34,10 @@
         <text class="new_ddw_text f_28 c_333">热门游戏</text>
     </view>
     <view class='display-flex new_ddw_imgbox'>
-       <image src='/pages/home/images/game/game_1.png' class='new_ddwimg' bindtap='tz_webview' data-game="https://m.ajihua888.com/efy/index.html"></image>
+       
+        <image src='/pages/home/images/game/game_1.png' class='new_ddwimg' bindtap='tz_webview' data-game="https://m.ajihua888.com/exam/index.html"></image>
         
-        <image src='/pages/home/images/game/game_2.png' class='new_ddwimg' bindtap='tz_webview'  data-game='https://m.ajihua888.com/exam/index.html'></image>
-        <!-- <image src='/pages/home/images/game/game_1.png' class='new_ddwimg' bindtap='tz_webview' data-game="https://m.ajihua888.com/exam/index.html"></image>
-        
-        <image src='/pages/home/images/game/game_2.png' class='new_ddwimg' bindtap='tz_webview'  data-game='https://m.ajihua888.com/efy/index.html'></image> -->
+        <image src='/pages/home/images/game/game_2.png' class='new_ddwimg' bindtap='tz_webview'  data-game='https://m.ajihua888.com/efy/index.html'></image>
         <!-- <image src='/pages/home/images/game/game_3.png' class='new_ddwimg' data-game='3'></image> -->
         <image src='/pages/home/images/game/game_more.png' class='new_ddwimg'></image>
     </view>

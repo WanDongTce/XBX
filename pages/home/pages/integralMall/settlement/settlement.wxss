@@ -97,7 +97,7 @@ page{
   margin-top: 40rpx;
 }
 .jifen{
-  color:#48b947;
+  color:#4bace2;
   font-size:30rpx;
   font-weight:bold;
 }
@@ -138,11 +138,11 @@ page{
   line-height:110rpx;
 }
 .bottom_left text{
-  color:#49b947;
+  color:#4bace2;
   font-weight:bold;
 }
 .bottom_btn{
-  background-color:#48b947;
+  background-color:#4bace2;
   color:#fff;
   font-size:32rpx;
   width:234rpx;
@@ -171,8 +171,8 @@ page{
   height:50rpx;
   line-height:50rpx;
   font-size:24rpx;
-  color:#48b947;
-  border:2rpx solid #48b947;
+  color:#4bace2;
+  border:2rpx solid #4bace2;
   border-radius: 10rpx;
   margin:38rpx auto 0;
 

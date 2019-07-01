@@ -64,6 +64,6 @@
         合计：
         <text>￥{{totalPrice}}</text>
     </view>
+    <!-- <button class='fix_btn c_gf_bg f_32 c_fff' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">确认支付</button> -->
     <button class='bottom-btn'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">提交订单</button>
-    <!-- <button class='bottom-btn' catch:tap='submit' disabled='true'>提交订单</button> -->
 </view>

@@ -1,7 +1,7 @@
 <view class="box">
     <live-pusher id="pusher" mode="SD" url="{{pushUrl}}" waiting-image="" debug="{{false}}" bindstatechange="statechange" binderror="error" style="height: {{showInput? '87' : '97'}}vh;" catchtap="hideInputFn" whiteness="10" beauty="10">
         <cover-view class="top">
-            <cover-image  src="{{base}}images/arowLt_fff.png" class='arrow_new' catchtap='goBack'></cover-image>
+            <cover-image src="{{base}}images/arowLt_fff.png" class='arrow_new' catchtap='goBack'></cover-image>
             <cover-view class="top-lt">
                 <cover-image class="user-img" src="{{data.userInfo.avataar? data.userInfo.avataar : base + 'images/default-user-2.png'}}" mode="aspectFill"></cover-image>
                 <cover-view class="user-info">

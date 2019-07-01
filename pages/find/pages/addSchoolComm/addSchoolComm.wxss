@@ -13,7 +13,7 @@ page{
 .textarea-box{
     width: 100%;
     height: 40vh;
-    border-bottom: 1rpx solid #48b947;
+    border-bottom: 1rpx solid #4bace2;
 }
 textarea{
     width: 100%;
@@ -40,7 +40,7 @@ textarea{
     width: 90%;
     height: 80rpx;
     line-height: 80rpx;
-    background: #48b947;
+    background: #4bace2;
     text-align: center;
     font-size: 28rpx;
     color: #fff;

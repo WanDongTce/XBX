@@ -112,7 +112,7 @@ page{
   line-height:30rpx; 
 }
 .current{
-  border-left:5rpx solid #50b63b !important;
+  border-left:5rpx solid #4bace2 !important;
   color:#333 !important;
   background-color:#f4f4f4 !important;
   font-weight: bold !important;

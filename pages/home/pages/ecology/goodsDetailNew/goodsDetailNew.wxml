@@ -40,7 +40,7 @@
             <view class="h2-lt">
                 <view class="rect-icon"></view>
                 <text class="h2-text">商品评论({{commentList.length}})</text>
-            </view>           
+            </view>
             <navigator url="{{'/pages/common/commentsList/commentsList?typeid=15&id=' + detail.item.id}}" class="h2-rt">
                 <text class="h2-rt-text">查看全部</text>
                 <image src="../../../../../images/next.png" class="h2-rt-img"></image>

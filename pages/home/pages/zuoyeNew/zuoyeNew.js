@@ -12,55 +12,55 @@ var info = null;
 
 Page({
 
-    data: {
-        base: '../../../../',
-        zylist: [],
-        showEmpty: false,
-        tabs: [{ index: 0, title: '作业即答', width: '33%' }, { index: 1, title: '作业批改', width: '33%' }, { index: 2, title: '作业服务', width: '33%' }],
-        tabindex: 0,
+  data: {
+    base: '../../../../',
+    zylist: [],
+    showEmpty:false,
+      tabs: [{ index: 0, title: '作业即答', width: '33%' }, { index: 1, title: '作业批改', width: '33%' }, { index: 2, title: '作业服务', width: '33%' }],
+      tabindex: 0,
 
-        questionList: [],
-        showTalk: false,
-        list: []
-    },
+      questionList: [],
+      showTalk: false,
+      list: []
+  },
 
-    onLoad: function (options) {
-        this.compontNavbar = this.selectComponent("#compontNavbar");
-        this.empty = this.selectComponent("#empty");
-        this.setData({
-            tabindex: 0
-        })
-        this.getQuestionList(false);
-        //   this.getZyList(false);   
-        this.getCheck();
+  onLoad: function (options) {
+      this.compontNavbar = this.selectComponent("#compontNavbar");
+      this.empty = this.selectComponent("#empty");
+      this.setData({
+          tabindex: 0
+      })
+      this.getQuestionList(false);
+    //   this.getZyList(false);   
+      this.getCheck();
 
-        info = {};
-        //   console.log(info);
+      info = {};
+    //   console.log(info);
 
-        if (info.ishot == 1) {
-            this.getHotList(info.hid);
-        } else if (info.ishot == 0) {
-            this.getTypeList();
-        } else {
-            this.setData({
-                list: [{
-                    isSelf: false,
-                    results: [{
-                        values: {
-                            text: '哈喽，我是小A客服，请问有什么可以帮您的?',
-                            isLink: false,
-                            id: '',
-                            index: 0
-                        }
-                    }],
-                    time: new Date(),
-                    timeStr: moment().format('HH:MM')
-                }]
-            });
-        }
-    },
-    getCheck: function () {
-        var that = this;
+      if (info.ishot == 1) {
+          this.getHotList(info.hid);
+      } else if (info.ishot == 0) {
+          this.getTypeList();
+      } else {
+          this.setData({
+              list: [{
+                  isSelf: false,
+                  results: [{
+                      values: {
+                          text: '哈喽，我是小A客服，请问有什么可以帮您的?',
+                          isLink: false,
+                          id: '',
+                          index: 0
+                      }
+                  }],
+                  time: new Date(),
+                  timeStr: moment().format('HH:MM')
+              }]
+          });
+      }
+  },
+  getCheck:function(){
+        var that=this;
         network.POST({
             url: 'v14/renewal/check',
             params: {
@@ -73,11 +73,11 @@ Page({
                 wx.hideLoading();
                 if (res.data.code == 200) {
                     var a = res.data.data[0].item;
-                    // console.log(a.is_end)
+
                     if (a.is_end == 1) {
                         that.setData({
-                            showTalk: false,
-                            payMoney: a.unit_price
+                            showTalk:false,
+                            payMoney:a.unit_price
                         })
                     }
                     else {
@@ -103,9 +103,9 @@ Page({
                 })
             }
         });
-        //   console.log(that.data.showTalk)
+    //   console.log(that.data.showTalk)
     },
-    goBack: function () {
+    goBack:function(){
         wx.navigateBack({
             delta: 1,
         })
@@ -125,19 +125,19 @@ Page({
             scrollTop: 0,
             duration: 0
         });
-        if (a == 0) {
+        if (a==0){         
             that.getQuestionList(false);
         }
-        else if (a == 1) {
-
+        else if(a==1){
+            
             that.getZyList(false);
         }
         // that.getList(a, page, false);
     },
-
-    onShow: function () {
-
-    },
+    
+  onShow: function () {
+      
+  },
     getQuestionList: function (flag) {
         var that = this;
         network.POST({
@@ -187,7 +187,7 @@ Page({
             key: 'homeworkurl',
             data: a,
         })
-
+        
         // console.log(a);
         var href = a.href.slice(0, a.href.indexOf('?'));
         var p = a.href.slice(a.href.indexOf('?') + 1);
@@ -198,7 +198,7 @@ Page({
     onReachBottom: function () {
         var that = this;
         var a = that.data.tabindex;
-        if (a == 0 && that.data.questionList.length > 0) {
+        if (a==0&&that.data.questionList.length > 0) {
             if (hasmore) {
                 page++;
                 that.getQuestionList(true);
@@ -210,7 +210,7 @@ Page({
                 });
             }
         }
-        else if (a == 1 && that.data.zylist.length > 0) {
+        else if (a == 1 && that.data.zylist.length > 0){
             if (hasmore) {
                 page++;
                 that.getZyList(true);
@@ -221,7 +221,7 @@ Page({
                     duration: 1000
                 });
             }
-        }
+        }       
     },
     getZyList: function (flag) {
         var that = this;
@@ -266,7 +266,7 @@ Page({
             }
         });
     },
-    tz_detail: function (e) {
+    tz_detail:function(e){
         wx.navigateTo({
             url: '/pages/home/pages/zuoyeDetail/zuoyeDetail?id=' + e.currentTarget.dataset.zuoyeid
         });

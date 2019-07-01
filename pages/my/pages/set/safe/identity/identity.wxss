@@ -43,7 +43,7 @@ input {
 }
 
 .btn {
-    background-color: #49b949;
+    background-color: #4bace2;
     border-radius: 10rpx;
     margin: 70rpx auto 0;
     color: #fff;

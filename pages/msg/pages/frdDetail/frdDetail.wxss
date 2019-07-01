@@ -103,7 +103,7 @@
 .btn{
     width: 90%;
     margin: 50rpx auto 0;
-    background: #48b947;
+    background: #4bace2;
     color: #fff;
     padding: 4% 0;
     border-radius: 10rpx;

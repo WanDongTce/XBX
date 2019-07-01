@@ -48,7 +48,7 @@ page {
 .dotted{
     width: 1rpx;
     height: 150rpx;
-    border-left: 1rpx dotted #48b947;
+    border-left: 1rpx dotted #4bace2;
 }
 .midd-dotted{
     height: 240rpx;
@@ -91,7 +91,7 @@ page {
 .cont-rt{
     width: 50%;
     font-size: 26rpx;
-    color: #48b947;
+    color: #4bace2;
     text-align: right;
 }
 
@@ -159,5 +159,5 @@ page {
     background: #f33;
 }
 .bg-green{
-    background: #48b947;
+    background: #4bace2;
 }

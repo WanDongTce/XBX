@@ -56,7 +56,7 @@ page{
   width: 111rpx;
   height: 55rpx;
   font-size: 28rpx;
-  color: #48b947;
+  color: #4bace2;
   text-align: center;
   line-height: 55rpx;
   border-radius: 10rpx;
@@ -153,7 +153,7 @@ page{
 .new_ddw_line{
     width:8rpx;
     height:26rpx;
-    background-color:#48B947;
+    background-color:#4bace2;
 }
 .new_ddw_text{
     margin-left:11rpx;

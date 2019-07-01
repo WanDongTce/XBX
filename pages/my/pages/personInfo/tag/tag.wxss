@@ -7,7 +7,7 @@ page {
 }
 
 .btn {
-    background-color: #48b947;
+    background-color: #4bace2;
     line-height: 90rpx;
     height: 90rpx;
     width: 650rpx;

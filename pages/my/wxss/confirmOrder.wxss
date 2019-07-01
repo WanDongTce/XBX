@@ -148,7 +148,7 @@ page {
     margin-right: 24rpx;
 }
 .allprice{
-    color: #48b947;
+    color: #4bace2;
 }
 .bottom-box {
     position: fixed;
@@ -176,7 +176,7 @@ page {
 }
 
 .bottom-btn {
-    background-color: #48b947;
+    background-color: #4bace2;
     color: #fff;
     font-size: 32rpx;
     width: 200rpx;
@@ -209,8 +209,8 @@ page {
     height: 50rpx;
     line-height: 50rpx;
     font-size: 24rpx;
-    color: #48b947;
-    border: 2rpx solid #48b947;
+    color: #4bace2;
+    border: 2rpx solid #4bace2;
     border-radius: 10rpx;
     margin: 38rpx auto 0;
 }

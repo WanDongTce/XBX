@@ -54,7 +54,7 @@ page {
 .msg {
     /* padding: 20rpx 30rpx 20rpx 20rpx; */
     padding: 20rpx;
-    background: #48b947;
+    background: #4bace2;
     font-size: 30rpx;
     color: #fff;
     white-space: normal;
@@ -75,7 +75,7 @@ page {
     margin-top: 10rpx;
 }
 .triangle1{
-    border-left-color: #48b947;
+    border-left-color: #4bace2;
 }
 .triangle2{
     border-right-color: #fff;
@@ -146,7 +146,7 @@ page {
     font-size: 28rpx;
     text-align: center;
     line-height: 6vh;
-    background: #48b947;
+    background: #4bace2;
 }
 
 .bottom-box .input-box input {

@@ -34,7 +34,7 @@
     color: #333;
 }
 .active{
-    color: #48b947;
+    color: #4bace2;
 }
 .gift-count{
     position: absolute;

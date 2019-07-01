@@ -2,9 +2,9 @@
 <!-- <compontNavbar title="日常作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar> -->
 <navigat-bar class="navigation-box component-class" id="compontNavbar">
     <view class="back-box" bindtap="goBack" >
-        <image class="navigation-back-icon" src="../../../../images/arowLt.png"></image>
+        <image class="navigation-back-icon" src="../../../../images/arowLt_fff.png"></image>
     </view>
-    <view class="navigation-tit">作业管理</view>
+    <view class="navigation-tit">日常作业</view>
 </navigat-bar>
 
 
@@ -100,6 +100,7 @@
                 本模块费用：<text>{{payMoney}}元/月</text>
             </view>
             <button class='tab3_btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">立即缴费</button>
+            <!-- <button class='fix_btn c_gf_bg f_32 c_fff' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">立即缴费</button> -->
             <!-- <navigator url='/pages/home/pages/zuoyePay/zuoyePay' class='tab3_btn'>立即缴费</navigator> -->
         </view>        
     </view>

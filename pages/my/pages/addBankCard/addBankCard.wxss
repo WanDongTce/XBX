@@ -51,7 +51,7 @@ page{
 .input-box view{
     width: 39%;
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
     text-align: center;
     border-left: 1rpx solid #dfdfdf;
     padding: 0 24rpx;
@@ -69,6 +69,6 @@ page{
     color: #fff;
     text-align: center;
     margin: 10% auto;
-    background: #48b947;
+    background: #4bace2;
     border-radius: 10rpx;
 }

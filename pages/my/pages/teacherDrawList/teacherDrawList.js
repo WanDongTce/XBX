@@ -73,9 +73,10 @@ Page({
         });
     },
     tz_pigai:function(e){
-        
+        // quespic
+        // console.log(e.currentTarget.dataset.quespic[0])
         wx.navigateTo({
-            url: '/pages/my/pages/teacherDraw/answer/answer?id=' + e.currentTarget.dataset.zuoyeid
+            url: '/pages/my/pages/teacherDraw/answer/answer?id=' + e.currentTarget.dataset.zuoyeid + '&quespic=' + e.currentTarget.dataset.quespic[0],
         });
     },
     onReachBottom: function () {

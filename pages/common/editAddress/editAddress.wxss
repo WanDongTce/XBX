@@ -98,7 +98,7 @@ page {
     width: 90%;
     margin: 0 auto;
     font-size: 34rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
     border-radius: 10rpx;
     line-height: 86rpx;
     color: #fff;

@@ -137,7 +137,7 @@
 .btn{
     width: 100%;
     padding: 3% 0;
-    background: #2ea22c;
+    background: #4bace2;
     font-size: 30rpx;
     color: #fff;
     text-align: center;

@@ -10,7 +10,7 @@ Page({
         list: [],
         info: '',
 
-
+       
         arr: [],
         sysW: null,
         lastDay: null,
@@ -19,20 +19,20 @@ Page({
         year: null,
 
         taskList: [],
-        showCalendar: true,
-        showcalendarText: '收起日历',
-        margintopHeight: '',
-        showEmptyNew: false,
+        showCalendar:true,
+        showcalendarText:'收起日历',
+        margintopHeight:'',
+        showEmptyNew: false, 
 
         taskid: '',
         prowidth: '',
-        tasktype: 1,
+        tasktype:1,
 
         taskParentList: [],
         taskparentid: '',
-        showEmpty: false,
+        showEmpty: false, 
 
-        newTextSignStatus: 0,
+        newTextSignStatus:0,
     },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
@@ -40,59 +40,59 @@ Page({
         this.dataTime();
         // this.initDate();
         // this.initDateScroPos();
-
+        
         this.setData({
-            everyday_h2_w: app.systemInfo.windowWidth - app.systemInfo.windowWidth / 750 * (24 + 24 + 35 + 35 + 40 * 7),
+            everyday_h2_w: app.systemInfo.windowWidth - app.systemInfo.windowWidth / 750 * (24+24+35+35+40*7),
             prowidth: app.systemInfo.windowWidth / 750 * 250
-
+            
         })
         // console.log(this.data.everyday_h2_w)
-        var that = this;
+        var that=this;
         // calendar1
-
+        
         var query = wx.createSelectorQuery();
         //选择id
         query.select('#calendar1').boundingClientRect()
-        query.exec(function (res) {
-            that.setData({
+        query.exec(function (res) {                             
+            that.setData({                   
                 calendar1Height: res[0].bottom + app.systemInfo.windowWidth / 750 * (82 - 160),
                 margintopHeight: res[0].bottom + app.systemInfo.windowWidth / 750 * (82 - 160),
             })
             // console.log('取高度', that.data.calendar1Height);
-        })
-
-
+        })            
+        
+        
     },
-    onShow: function () {
-        this.getList();
-        this.getTaskList();//任务中心
-        this.getParentList();//家长任务 
+    onShow:function(){
+      this.getList();
+      this.getTaskList();//任务中心
+      this.getParentList();//家长任务 
     },
     //日历切换
     show_calendar: function () {
-        var that = this;
-        if (that.data.showCalendar) {
+        var that=this;
+        if (that.data.showCalendar){
             that.setData({
                 showcalendarText: '展开日历',
                 showCalendar: false,
                 margintopHeight: app.systemInfo.windowWidth / 750 * 170
             })
         }
-        else {
+        else{
             that.setData({
                 showcalendarText: '收起日历',
                 showCalendar: true,
                 margintopHeight: that.data.calendar1Height
             })
         }
-
+        
     },
     //文字展开折叠
     click_zhankai: function (e) {
-
+        
         var that = this;
-        var taskid = '';
-        var taskid = that.data.taskid === e.currentTarget.dataset.taskid ? '' : e.currentTarget.dataset.taskid;
+        var taskid='';
+        var taskid = that.data.taskid === e.currentTarget.dataset.taskid ? '' : e.currentTarget.dataset.taskid;      
         that.setData({
             taskid: taskid
         })
@@ -102,11 +102,11 @@ Page({
         var that = this;
         var taskparentid = '';
         var taskparentid = that.data.taskparentid === e.currentTarget.dataset.taskparentid ? '' : e.currentTarget.dataset.taskparentid;
-
+        
         that.setData({
             taskparentid: taskparentid
         })
-
+        
     },
     //任务类型切换
     tasktype: function (e) {
@@ -146,19 +146,19 @@ Page({
         }
         this.setData({
             sysW: app.systemInfo.windowHeight / 13,
-
-            marLet: this.data.firstDay - 1,
+           
+            marLet: this.data.firstDay-1,
             arr: this.data.arr,
             year: this.data.year,
             getDate: this.data.getDate,
             month: this.data.month
         });
-
-
+        
+        
 
     },
-
-
+    
+    
     getList() {
         var that = this;
         network.POST({
@@ -173,41 +173,41 @@ Page({
                 if (res.data.code == 200) {
                     var a = res.data.data[0];
                     that.setData({
-                        item1: a.item,
+                        item1:a.item,
                         list1: a.list1,
                         list2: a.list2,
                     });
-                    var today = '';
-                    for (var i = 0; i < that.data.list2.length; i++) {
-                        that.data.list2[i].big = 0;
-                        if (that.data.list2[i].theday == 1) {
+                    var today='';
+                    for(var i=0;i<that.data.list2.length;i++){
+                        that.data.list2[i].big=0;
+                        if (that.data.list2[i].theday==1){
                             // console.log(that.data.list2[i]) 
                             that.setData({
                                 today: that.data.list2[i].day
-                            })
-                            var today = that.data.list2[i].day;
+                            })                           
+                            var today=that.data.list2[i].day;                            
+                            if (Number(that.data.list2[i].day) > today){
+                                that.data.list2[i].big = 1;
+                            }                           
+                        } 
+
+                                              
+                    }
+                    for (var i = 0; i < that.data.list2.length; i++) {                                                                   
                             if (Number(that.data.list2[i].day) > today) {
                                 that.data.list2[i].big = 1;
-                            }
-                        }
-
-
-                    }
-                    for (var i = 0; i < that.data.list2.length; i++) {
-                        if (Number(that.data.list2[i].day) > today) {
-                            that.data.list2[i].big = 1;
-                        }
+                            }                     
                     }
                     for (var i = 0; i < that.data.list1.length; i++) {
-                        if (that.data.list1[i].theday == 1 && that.data.list1[i].status == 1) {
-
+                        if (that.data.list1[i].theday == 1&&that.data.list1[i].status == 1) {
+                            
                             that.setData({
-                                newTextSignStatus: 1
+                                newTextSignStatus:1
                             })
                         }
                     }
                     that.setData({
-                        list2: that.data.list2
+                        list2:that.data.list2
                     })
                     // console.log(that.data.list2)
                 } else {
@@ -229,12 +229,12 @@ Page({
         });
     },
     //点击签到
-    click_sign: function (e) {
+    click_sign:function(e){
         var that = this;
 
         var theday = e.currentTarget.dataset.theday;
         var status = e.currentTarget.dataset.status;
-        if (theday == 1 && status == 0) {
+        if (theday == 1 && status==0){
             network.POST({
                 url: 'v14/singin/today',
                 params: {
@@ -272,11 +272,11 @@ Page({
                 duration: 1000
             })
         }
-
+        
     },
     click_sign2: function (e) {
         var that = this;
-
+        
         if (that.data.newTextSignStatus == 0) {
             network.POST({
                 url: 'v14/singin/today',
@@ -318,7 +318,7 @@ Page({
 
     },
     //点击连续签到
-    click_getpoints: function (e) {
+    click_getpoints:function(e){
         var that = this;
         // console.log(e.currentTarget.dataset.getpoints)
         network.POST({
@@ -352,14 +352,14 @@ Page({
             }
         });
     },
-    getTaskList: function (e) {
+    getTaskList:function(e){
         var that = this;
         // console.log(e.currentTarget.dataset.getpoints)
         network.POST({
             url: 'v14/task/list',
             params: {
                 "mobile": app.userInfo.mobile,
-                "token": app.userInfo.token
+                "token": app.userInfo.token               
             },
             success: function (res) {
                 // console.log(res);
@@ -367,8 +367,8 @@ Page({
                 if (res.data.code == 200) {
                     var a = res.data.data[0].list;
                     that.setData({
-                        taskList: a,
-                        showEmptyNew: a.length == 0 ? true : false
+                        taskList: a, 
+                        showEmptyNew: a.length == 0 ? true : false                      
                     });
                 } else {
                     wx.showToast({
@@ -406,7 +406,7 @@ Page({
                         taskParentList: a,
                         showEmpty: a.length == 0 ? true : false
                     });
-
+                   
                 } else {
                     wx.showToast({
                         title: res.data.message,
@@ -425,95 +425,95 @@ Page({
             }
         });
     },
-    tz_taskcalendar: function () {
+    tz_taskcalendar:function(){
         wx.navigateTo({
             url: '/pages/task/pages/calendar/calendar'
         })
     },
     gocomplate: function (e) {
-        var a = e.currentTarget.dataset.gocomplateid;
-        network.gocomplate(a);
-
+      var a = e.currentTarget.dataset.gocomplateid;
+      network.gocomplate(a);
+      
     },
-    golingqu: function (e) {
-        var that = this;
-        network.POST({
-            url: 'v14/task/get-task',
-            params: {
-                "mobile": app.userInfo.mobile,
-                "token": app.userInfo.token,
-                "type": 1,
-                "taskid": e.currentTarget.dataset.gocomplateid,
-
-            },
-            success: function (res) {
-                // console.log(res);
-                wx.hideLoading();
-                if (res.data.code == 200) {
-                    wx.showToast({
-                        title: '领取成功',
-                        duration: 1000,
-                        success: function () {
-                            that.getTaskList();
-                            that.getParentList();
-                        }
-                    })
-                } else {
-                    wx.showToast({
-                        title: res.data.message,
-                        icon: 'none',
-                        duration: 1000
-                    });
-                }
-            },
-            fail: function () {
-                wx.hideLoading();
-                wx.showToast({
-                    title: '服务器异常',
-                    icon: 'none',
-                    duration: 1000
-                })
+  golingqu:function(e){
+    var that = this;
+    network.POST({
+      url: 'v14/task/get-task',
+      params: {
+        "mobile": app.userInfo.mobile,
+        "token": app.userInfo.token,
+        "type": 1,
+        "taskid": e.currentTarget.dataset.gocomplateid,
+        
+      },
+      success: function (res) {
+        // console.log(res);
+        wx.hideLoading();
+        if (res.data.code == 200) {
+          wx.showToast({
+            title: '领取成功',
+            duration: 1000,
+            success: function () {
+              that.getTaskList();
+              that.getParentList();
             }
-        });
-    },
-    receiveReward(e) {
-        var that = this;
-        network.POST({
-            url: 'v14/task/receive-reward',
-            params: {
-                "mobile": app.userInfo.mobile,
-                "token": app.userInfo.token,
-                "taskreceiveid": e.currentTarget.dataset.gocomplateid,
+          })
+        } else {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+            duration: 1000
+          });
+        }
+      },
+      fail: function () {
+        wx.hideLoading();
+        wx.showToast({
+          title: '服务器异常',
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    });
+  },
+  receiveReward(e) {
+    var that = this;
+    network.POST({
+      url: 'v14/task/receive-reward',
+      params: {
+        "mobile": app.userInfo.mobile,
+        "token": app.userInfo.token,
+        "taskreceiveid": e.currentTarget.dataset.gocomplateid,
+      },
+      success: function (res) {
+        // console.log(res);
+        wx.hideLoading();
+        if (res.data.code == 200) {
+          wx.showToast({
+            title: '领取成功',
+            success: function () {
+              
             },
-            success: function (res) {
-                // console.log(res);
-                wx.hideLoading();
-                if (res.data.code == 200) {
-                    wx.showToast({
-                        title: '领取成功',
-                        success: function () {
-
-                        },
-                        icon: 'none'
-                    })
-                    that.getTaskList();
-                    that.getParentList();
-                } else {
-                    wx.showToast({
-                        title: res.data.message,
-                        icon: 'none',
-                        duration: 1000
-                    });
-                }
-            },
-            fail: function () {
-                wx.hideLoading();
-                wx.showToast({
-                    title: '服务器异常',
-                    icon: 'none',
-                    duration: 1000
-                })
-            }
-        });
-    },
+            icon: 'none'
+          })
+            that.getTaskList();
+            that.getParentList();
+        } else {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+            duration: 1000
+          });
+        }
+      },
+      fail: function () {
+        wx.hideLoading();
+        wx.showToast({
+          title: '服务器异常',
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    });
+  },
 })

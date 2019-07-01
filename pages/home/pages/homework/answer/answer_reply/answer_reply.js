@@ -25,6 +25,7 @@ var interval, count = 0;
 var state = 0;
 var t = 5 * 60 * 1000; 
 
+var id = '';
 Page({
     curStrokerTemp: {
         state: null,
@@ -49,6 +50,8 @@ Page({
     },
     onLoad: function (options) {
         // console.log(options);
+        id = options.id;
+        console.log(id)
         var self = this;
         wx.getStorage({
             key: 'ques',
@@ -333,13 +336,13 @@ Page({
                         // console.log('img2:', self.data.coverImg);
                         mp3 = res.tempFilePath;
                         wx.navigateTo({
-                            url: '/pages/home/my_study/answer/bofang/bofang?allStroker=' + model + "&temptime=" + temptime + "&mp3=" + res.tempFilePath + '&coverImg=' + self.data.coverImg + '&flag=1&bgImg=' + self.data.bgImg
+                            url: '/pages/home/my_study/answer/bofang/bofang?allStroker=' + model + "&temptime=" + temptime + "&mp3=" + res.tempFilePath + '&coverImg=' + self.data.coverImg + '&flag=1&bgImg=' + self.data.bgImg +"&id=" + id
                         });
                     })
                 } else {
 
                     wx.navigateTo({
-                        url: '/pages/home/my_study/answer/bofang/bofang?allStroker=' + model + "&temptime=" + temptime + '&coverImg=' + self.data.coverImg + '&flag=1&bgImg=' + self.data.bgImg
+                        url: '/pages/home/my_study/answer/bofang/bofang?allStroker=' + model + "&temptime=" + temptime + '&coverImg=' + self.data.coverImg + '&flag=1&bgImg=' + self.data.bgImg + "&id=" + id
                     });
                 };
             });

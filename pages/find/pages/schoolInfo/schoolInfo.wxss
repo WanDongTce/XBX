@@ -115,7 +115,7 @@ page{
     color: #999;
 }
 .active{
-    color: #48b947;
+    color: #4bace2;
 }
 .add-agree-icon{
     width: 22rpx;
@@ -142,7 +142,7 @@ page{
 .rect-icon{
     width: 8rpx;
     height: 28rpx;
-    background: #48b947;
+    background: #4bace2;
     margin-right: 20rpx;
 }
 .h2-text{
@@ -157,7 +157,7 @@ page{
     justify-content: flex-end;
 }
 .h2-rt-text{
-    color: #48b947;
+    color: #4bace2;
     font-size: 24rpx;
     margin-right: 10rpx;
 }

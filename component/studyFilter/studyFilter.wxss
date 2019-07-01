@@ -140,7 +140,7 @@
 .btn{
     width: 100%;
     padding: 3% 0;
-    background: #48b947;
+    background: #4bace2;
     font-size: 30rpx;
     color: #fff;
     text-align: center;

@@ -5,16 +5,26 @@ var regMobile = /^1(3|4|5|7|8)\d{9}$/;
 var regPassw = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,18}$/;
 var c = 60;
 
+
+
 Page({
+
+
     data: {
-        base: '../../../',
+        passwordimg: '../../../images/see_off.png',
+        passwordtype: 'password',
+
         verifyCodeTime: "获取验证码",
         verify_color: false,
-        showPassword: false,
-        focus: false
+
     },
-    onLoad(){
+
+    onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
+    },
+
+    onShow: function () {
+
     },
     //手机号
     phoneInputEvent: function (e) {
@@ -28,77 +38,68 @@ Page({
         if (!that.data.verify_color) {
             var mobile = that.data.mobile;
             var intervalId = null;
-
             if (!regMobile.test(mobile)) {
                 wx.showToast({
                     title: '手机号不合法',
-                    icon: 'none',
+                    image: '../../../images/error.png',
                     duration: 1000
                 })
-            }else {
-                that.setData({
-                    verify_color: true
-                });
-                intervalId = setInterval(function () {
-                    c--;
-                    that.setData({
-                        verifyCodeTime: c + 's后重发',
+            }
+            else {
 
-                    })
-                    if (c <= 0) {
-                        clearInterval(intervalId);
-                        c = 60;
-                        that.setData({
-                            verifyCodeTime: '获取验证码',
-                            verify_color: false
+                network.POST({
+                    url: 'v4/login/sendcode',
+                    params: {
+                        "mobile": mobile,
+                        "type": 2
+                    },
+                    success: function (res) {
+                        // console.log(res);
+                        wx.hideLoading();
+                        if (res.data.code == 200) {
+                            wx.showToast({
+                                title: '发送成功',
+                                duration: 1000
+                            })
+                            that.setData({
+                                verify_color: true
+                            });
+                            intervalId = setInterval(function () {
+                                c--;
+                                that.setData({
+                                    verifyCodeTime: c + 's后重发'
+                                })
+                                if (c == 0) {
+                                    clearInterval(intervalId);
+                                    c = 60;
+                                    that.setData({
+                                        verifyCodeTime: '获取验证码',
+                                        verify_color: false
+                                    })
+                                }
+                            }, 1000);
+                        } else {
+                            wx.showToast({
+                                title: res.data.message,
+                                image: '../../../images/error.png',
+                                duration: 1000
+                            })
+                        }
+                    },
+                    fail: function () {
+                        wx.hideLoading();
+                        wx.showToast({
+                            title: '服务器异常',
+                            image: '../../../images/error.png',
+                            duration: 1000
                         })
                     }
-                }, 1000);
-
-                that.sendCode(mobile);
+                })
 
             }
         }
     },
-    sendCode: function (mobile) {
-        network.POST({
-            url: 'v4/login/sendcode',
-            params: {
-                "mobile": mobile,
-                "type": 2
-            },
-            success: function (res) {
-                // console.log(res);
-                wx.hideLoading();
-                if (res.data.code == 200) {
-                    wx.showToast({
-                        title: '发送成功',
-                        icon: 'none',
-                        duration: 1000
-                    });
-                    // c = 60;
-                    // that.setData({
-                    //     verifyCodeTime: '获取验证码',
-                    //     verify_color: false
-                    // });
-                } else {
-                    wx.showToast({
-                        title: res.data.message,
-                        icon: 'none',
-                        duration: 1000
-                    })
-                }
-            },
-            fail: function () {
-                wx.hideLoading();
-                wx.showToast({
-                    title: '服务器异常',
-                    icon: 'none',
-                    duration: 1000
-                })
-            }
-        })
-    },
+
     //密码
     modify_passw: function (e) {
         this.setData({
@@ -118,27 +119,28 @@ Page({
         if (!regMobile.test(phone)) {
             wx.showToast({
                 title: '手机号不合法',
-                icon: 'none',
+                image: '../../../images/error.png',
                 duration: 1000
             })
         }
         else if (password.length == 0) {
             wx.showToast({
                 title: '新密码不能为空',
-                icon: 'none',
+                image: '../../../images/error.png',
                 duration: 1000
             })
         }
         else if (!regPassw.test(password)) {
-            wx.showToast({
-                title: '密码6-18位，包含至少一个字母和一个数字',
-                icon: 'none'
+            wx.showModal({
+                title: '提示',
+                content: '密码6-18位，包含至少一个字母和一个数字',
+                showCancel: false
             })
         }
         else if (vcode.length == 0) {
             wx.showToast({
                 title: '请输入验证码',
-                icon: 'none',
+                image: '../../../images/error.png',
                 duration: 1000
             })
         }
@@ -167,7 +169,7 @@ Page({
                     } else {
                         wx.showToast({
                             title: res.data.message,
-                            icon: 'none',
+                            image: '../../../images/error.png',
                             duration: 1000
                         })
                     }
@@ -176,7 +178,7 @@ Page({
                     wx.hideLoading();
                     wx.showToast({
                         title: '服务器异常',
-                        icon: 'none',
+                        image: '../../../images/error.png',
                         duration: 1000
                     })
                 }
@@ -186,15 +188,6 @@ Page({
 
     },
 
-    //点击密码图片
-    passwordtab: function (e) {
-        var that = this;
-        var a = that.data.showPassword;
-        that.setData({
-            showPassword: !a,
-            focus: true
-        })
-    },
     onUnload() {
         c = 60;
         this.setData({
@@ -204,5 +197,21 @@ Page({
     },
     onHide() {
         this.onUnload();
+    },
+    //点击密码图片
+    passwordimg: function () {
+        var that = this;
+        if (that.data.passwordtype == 'password') {
+            that.setData({
+                passwordimg: '../../../images/see_on.png',
+                passwordtype: 'text',
+            })
+        }
+        else {
+            that.setData({
+                passwordimg: '../../../images/see_off.png',
+                passwordtype: 'password',
+            })
+        }
     }
 })

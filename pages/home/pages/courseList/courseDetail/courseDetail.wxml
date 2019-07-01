@@ -71,7 +71,8 @@
       </view>
       <view class='itembox overf' wx:for="{{jj_course}}" wx:key="this" data-videopic="{{item.PicUrl}}" data-myid="{{item.Id}}" bindtap='tz_detail'>
         <view class='item_imgbox fl '>
-          <image src='{{item.PicUrl}}' class='item_img' mode="aspectFill"></image>          
+          <image wx:if="{{item.PicUrl}}" src='{{item.PicUrl}}' class='item_img' mode="aspectFill"></image>
+          <image wx:else src='{{base}}images/normal_pic1.png' class='item_img' mode="aspectFill"></image>            
         </view>
         <view class='fl item_textbox'>
           <view class='item_title'>{{item.Name}}</view>
@@ -147,7 +148,7 @@
         <view class="detail-container" >
             <view class='detail-content display-flex'>
                 <view class="input-container ">
-                    <input placeholder="说点什么吧" type="text" bindinput="inputFn" value="{{msg}}" bindconfirm="submitCommt"  ></input>                    
+                    <input placeholder="说点什么吧" type="text" bindinput="inputFn" value="{{msg}}" bindconfirm="submitCommt"  cursor-spacing='140'></input>                    
                 </view>
                 <image src='{{base}}images/send.png' class='send_img' catchtap='submitCommt'></image>
             </view>

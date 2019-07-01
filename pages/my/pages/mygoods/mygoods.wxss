@@ -19,7 +19,7 @@ page{
   margin-top:20rpx;
 }
 .applylist_btn1{
-  background-color: #48b947;
+  background-color: #4bace2;
 }
 .applylist_btn2{
   background-color: #fcd324;
@@ -53,7 +53,7 @@ page{
   line-height: 102rpx;
   font-size: 28rpx;
   color: #fff;
-  background: #48b947;
+  background: #4bace2;
 }
 .mygoods_newbox{
   margin-top:16rpx;

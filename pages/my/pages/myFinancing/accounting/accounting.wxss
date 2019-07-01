@@ -50,7 +50,7 @@ page{
 
 .accounting_jebox_right {
     font-size: 40rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 
 .scroll_box {
@@ -176,7 +176,7 @@ page{
 }
 
 .bottom_btn2 {
-    background-color: #48b947;
+    background-color: #4bace2;
     margin-right: 30rpx;
 }
 
@@ -268,7 +268,7 @@ page{
     border-radius:10rpx;
     align-content: center;
     color:#fff;
-    background:#48b947;
+    background:#4bace2;
     height:90rpx;
     line-height:90rpx;
     margin:0 30rpx;

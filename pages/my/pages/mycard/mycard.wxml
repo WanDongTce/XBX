@@ -9,14 +9,14 @@
             <view class="cont">
                 <view class="head">
                     <view class="lt">
-                        <view class="h1">A计划学习体验卡 (月卡)</view>
+                        <view class="h1">{{idname}}学习体验卡 (月卡)</view>
                     </view>
                     <view class="price">{{item.type}}</view>
                 </view>
                 <view class="tip">
                     <view class="tip-cont">
                         <view>使用说明:</view>
-                        <view>·此卡仅限A计划教学平台中使用</view>
+                        <view>·此卡仅限{{idname}}教学平台中使用</view>
                         <view>·此卡一经出售概不退换</view>
                         <view>·此卡不能当现金使用</view>
                     </view>

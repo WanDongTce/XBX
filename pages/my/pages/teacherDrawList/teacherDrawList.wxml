@@ -28,7 +28,7 @@
 
       </view>
       
-      <view wx:if="{{item.status==1}}" class='item_btn f_28 item_btn3' catchtap='tz_pigai' data-zuoyeid='{{item.id}}'>未批改</view>
+      <view wx:if="{{item.status==1}}" class='item_btn f_28 item_btn3' catchtap='tz_pigai' data-zuoyeid='{{item.id}}' data-quespic='{{item.images}}'>未批改</view>
       <view wx:if="{{item.status==2}}" class='item_btn f_28 item_btn4'>已批改</view>
       
     </view>

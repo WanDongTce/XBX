@@ -90,14 +90,14 @@
             <image src='{{base}}images/template_img17.png' class='template_img'></image>
             <view class='template_text2'>我的课程</view>
         </navigator>
-        <navigator wx:if="{{info.isteacher==1}}" class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
-            <image src='{{base}}images/template_img19.png' class='template_img'></image>
-            <view class='template_text2'>作业批改</view>
-        </navigator>
         <!-- <navigator  class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
             <image src='{{base}}images/template_img19.png' class='template_img'></image>
             <view class='template_text2'>作业批改</view>
         </navigator> -->
+        <navigator wx:if="{{info.isteacher==1}}" class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
+            <image src='{{base}}images/template_img19.png' class='template_img'></image>
+            <view class='template_text2'>作业批改</view>
+        </navigator>
     </view>
 </view>
 <view class='template_box bgfff'>
@@ -108,27 +108,31 @@
             <image src='{{base}}images/template_img5.png' class='template_img'></image>
             <view class='template_text2'>我的卡包</view>
         </navigator>
-        <!-- <view class='text-align-center' bindtap="toMemberRenewal">
+         <view class='text-align-center w25' bindtap="toMemberRenewal">
             <image src='{{base}}images/template_img6.png' class='template_img'></image>
             <view class='template_text2'>会员续费</view>
-        </view> -->
-        <view class='text-align-center w25' bindtap="toRecharge">
+        </view>
+        <!--<view class='text-align-center w25' bindtap="toRecharge">
             <image src='{{base}}images/template_img7.png' class='template_img'></image>
             <view class='template_text2'>充值</view>
+        </view> -->
+        <view class='text-align-center w25' bindtap="toTuiguang">
+            <image src='{{base}}images/template_img13.png' class='template_img'></image>
+            <view class='template_text2'>推广</view>
         </view>
-        <!-- <navigator class='text-align-center w25' url='/pages/my/pages/myreferee/myreferee'>
+        <navigator class='text-align-center w25' url='/pages/my/pages/myreferee/myreferee'>
             <image src='{{base}}images/template_img8.png' class='template_img'></image>
             <view class='template_text2'>我的推荐人</view>
-        </navigator> -->
+        </navigator>
     </view>
 </view>
 <view class='template_box bgfff'>
     <view class='template_text1'>理财</view>
     <view class='display-flex '>
-        <navigator class='text-align-center w25' url="/pages/my/pages/wallet/wallet">
+        <!-- <navigator class='text-align-center w25' url="/pages/my/pages/wallet/wallet">
             <image src='{{base}}images/template_img9.png' class='template_img'></image>
             <view class='template_text2'>我的钱包</view>
-        </navigator>
+        </navigator> -->
         <navigator class='text-align-center w25' url='/pages/my/pages/myFinancing/myFinancing'>
             <image src='{{base}}images/template_img10.png' class='template_img'></image>
             <view class='template_text2'>理财记录</view>
@@ -142,10 +146,10 @@
             <image src='{{base}}images/template_img11.png' class='template_img'></image>
             <view class='template_text2'>自我监督</view>
         </navigator>
-        <!-- <navigator class='text-align-center w25' url="/pages/my/pages/myClassmate/myClassmate">
+        <navigator class='text-align-center w25' url="/pages/my/pages/myClassmate/myClassmate">
             <image src='{{base}}images/template_img12.png' class='template_img'></image>
-            <view class='template_text2'>同学圈</view>
-        </navigator> -->
+            <view class='template_text2'>综合素质</view>
+        </navigator>
         <navigator class='text-align-center w25' url="/pages/my/pages/myBarter/myBarter">
             <image src='{{base}}images/template_img13.png' class='template_img'></image>
             <view class='template_text2'>物品交易</view>

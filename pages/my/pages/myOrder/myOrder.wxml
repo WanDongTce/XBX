@@ -18,7 +18,7 @@
             <view class='new_sjname display-flex align-items-center'>                  
                 <image wx:if='{{item.business.name}}' src='../../../my/images/ecology/business_type2.png' class='business_type_img'></image>
                 <view class='f_28 c_333 new_business_name1'>{{item.business.name}}</view>
-                <image wx:if='{{item.business.name}}'  src='../../../../images/arowRtGray.png' class='arowRtGray'></image>
+                <image wx:if='{{item.business.name}}' src='../../../../images/arowRtGray.png' class='arowRtGray'></image>
             </view>
             <view wx:if="{{item.status==1}}" class='f_30 new_sjname_right'>待支付</view>
             <view wx:if="{{item.status==2}}" class='f_30 new_sjname_right'>待发货</view>
@@ -42,6 +42,7 @@
             <view class='new_my_total1 f_30 c_333'>共{{item.total_number}}件商品</view>
             <view class='new_my_total2 f_30 c_333'>实付款：<text class='f_24'>￥</text><text class='f_32'>{{item.price_all}}</text></view>
         </view>
+        
         <view wx:if="{{item.status==1}}" class='new_buttonbox display-flex' >
             <button class='' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin" data-ordersn="{{item.order_sn}}" >去支付</button>
             <!-- <view data-ordersn="{{item.order_sn}}" catchtap="payOrder">待支付</view> -->

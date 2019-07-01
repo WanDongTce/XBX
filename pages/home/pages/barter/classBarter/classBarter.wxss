@@ -3,7 +3,7 @@
 
 
 .fixed-scroll-view-box{
-    background: #48b947;
+    background: #4bace2;
     border-bottom: none;
 }
 .scroll-item-text,

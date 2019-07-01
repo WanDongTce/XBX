@@ -41,7 +41,7 @@ page {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border-radius: 10rpx;
-    background: #48b947;
+    background: #4bace2;
 }
 .bg-1{
     background: #008c77;

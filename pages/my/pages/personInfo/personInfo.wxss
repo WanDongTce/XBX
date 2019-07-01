@@ -17,7 +17,7 @@ page {
 .title_color {
     width: 8rpx;
     height: 26rpx;
-    background-color: #40c03c;
+    background-color: #4bace2;
     margin-right: 10rpx;
 }
 
@@ -111,7 +111,7 @@ page {
 }
 
 .btn {
-    background-color: #48b947;
+    background-color: #4bace2;
     line-height: 90rpx;
     height: 90rpx;
     width: 690rpx;

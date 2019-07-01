@@ -36,7 +36,7 @@ page {
     width: 50%;
     padding: 5% 0;
     text-align: center;
-    background: #48b947;
+    background: #4bace2;
     font-size: 28rpx;
     color: #fff;
     border-radius: 30rpx;
@@ -149,7 +149,7 @@ page {
 .btn{
     width: 15%;
     padding: 2% 0;
-    background: #48b947;
+    background: #4bace2;
     text-align: center;
     color: #fff;
     font-size: 28rpx;

@@ -262,7 +262,7 @@ Page({
     },
     //提交表单
     bindFormSubmit: function (e) {
-          console.log(e);
+          // console.log(e);
         var that = this;
         var name = e.detail.value.name.replace(/^\s*|\s*$/, '');
         var regName = /^[\u4E00-\u9FA5A-Za-z]+$/;

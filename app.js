@@ -1,28 +1,51 @@
 App({
-    requestUrl: 'https://social.ajihua888.com/',
-    imgUrl: 'https://m.ajihua888.com/wx_img/',
-    ansHref: 'https://m.ajihua888.com/question/my-answer-list',
-    quesHref: 'https://m.ajihua888.com/question/detail',
-    
-    
-    // requestUrl: 'http://social.test.ajihua888.com/',
-    // imgUrl: 'http://m.test.ajihua888.com/wx_img/',
-    // ansHref: 'http://m.test.ajihua888.com/question/my-answer-list',
-    // quesHref: 'http://m.test.ajihua888.com/question/detail',
-    
-    uinfo: {
-        encryptedData: '',
-        iv: ''
-    },
-    code: '',
-    openId: '',
+    requestUrl: 'https://social.54xuebaxue.com/',
+    imgUrl: 'https://m.54xuebaxue.com/wx_img/',
+    ansHref: 'https://m.54xuebaxue.com/question/my-answer-list',
+    quesHref: 'https://m.54xuebaxue.com/question/detail',
 
-    parAppId: 'wxee68233581f4965a',//A计划家长端
+
+
+    // requestUrl: 'http://social.test.54xuebaxue.com/',
+    // imgUrl: 'http://m.test.54xuebaxue.com/wx_img/',
+    // ansHref: 'http://m.test.54xuebaxue.com/question/my-answer-list',
+    // quesHref: 'http://m.test.54xuebaxue.com/question/detail',
+
+    idname:'学霸学',
+    // idname: '弹个课',
+    // idname: '素质教育',
+    // idname: '铁巢智能',
+    logoimg:'../../../images/login_logo_xbx.png',
+    // logoimg: '../../../images/logo_logo_tgk.png',//弹个课
+    // logoimg: '../../../images/logo_logo_szjy.png',//素质教育
+    // logoimg: '../../../images/logo_logo_tczn.png',//铁巢智能
+    // parAppId: 'wxd2c2aa1e2850534b',//学霸学家长端  
+    
+    parAppId: 'wxd2c2aa1e2850534b',//学霸学家长端
+    // parAppId: 'wxc467ee19f464c9ca',//弹个课家长端
+    // parAppId: 'wx51b29cad1cd8edca',//素质教育家长端
+    // parAppId: 'wxcbb1a6485b4c8f61',//铁巢智能家长端
+
+    app_source_school_id: 0,//学霸学
+    // app_source_school_id: 20619,//铁巢
+
 
     gaodekey: 'a8a3fc2292b2b66c0d676675d6bf9cc2',
     appId: 'wx789c5e9626eee513',  // A计划教育平台
-    app_source_type: 1,
-    swiperImgType: 'aplan',
+    
+    
+
+    uinfo: {
+        encryptedData: '',
+        iv: ''
+    },    
+    code:'',
+    openId: '',
+
+    appverson:'V-1.1.5',
+    app_source_type: 5,
+    
+    swiperImgType: 'xbx',
     contactTel: '024-66909606',
     sdkappid: 1400027766,
     accountType: 11731,
@@ -40,6 +63,7 @@ App({
     allAddress: null,//地址
     barterSearchHis: [],//易货搜索历史
     peripherySearchHis: [],//周边生活搜索历史
+    peripheryCourse: [],//精品课程搜索历史
     mallSearchHis: [],//积分商城搜索历史
     encyClass: [],//百科分类
     userLabel: [],//用户标签

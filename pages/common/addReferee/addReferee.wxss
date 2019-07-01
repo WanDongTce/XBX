@@ -1,7 +1,7 @@
 /* pages/login/addReferee/addReferee.wxss */
 
 page {
-    background: #f7f7f7;    
+    background: #fff;    
 }
 form{
     width: 100%;
@@ -51,7 +51,7 @@ input {
 
 .btn {
     width: 90%;
-    background-color: #48b947;
+    background-color: #4bace2;
     color: #fff;
     height: 90rpx;
     text-align: center;
@@ -62,7 +62,7 @@ input {
 }
 
 .btn2 {
-    color: #48b947;
+    color: #4bace2;
     height: 90rpx;
     text-align: right;
     font-size: 34rpx;

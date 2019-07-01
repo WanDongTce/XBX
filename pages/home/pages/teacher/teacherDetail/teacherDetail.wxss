@@ -175,7 +175,7 @@ page{
     left: 25%;
     width: 50%;
     height: 2rpx;
-    background: #48B947;
+    background: #4bace2;
 }
 
 /*介绍  */

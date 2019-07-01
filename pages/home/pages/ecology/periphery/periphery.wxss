@@ -88,12 +88,12 @@ input{
 .border{
     width: 30%;
     height: 1px;
-    background: #48b947;
+    background: #4bace2;
     display: inline-block;
     vertical-align: middle;
 }
 .tit{
-    color: #48b947;
+    color: #4bace2;
     font-size: 30rpx;
     margin: 0 20rpx;
     display: inline-block;
@@ -124,7 +124,7 @@ input{
     padding: 0 5rpx;
     margin: 16rpx 0;
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     text-overflow: ellipsis;
@@ -206,7 +206,7 @@ input{
 }
 .goods-price{
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 .buy-count{
     font-size: 24rpx;

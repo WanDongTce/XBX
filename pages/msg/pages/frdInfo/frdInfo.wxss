@@ -66,5 +66,5 @@
 }
 .switch{
     width: 50%;
-    color: #48b947;
+    color: #4bace2;
 }

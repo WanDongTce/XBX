@@ -73,7 +73,7 @@
     color: #333;
 }
 .active{
-    color: #48b947;
+    color: #4bace2;
 }
 .down-icon{
     width: 18rpx;
@@ -132,6 +132,7 @@
     width: 240rpx;
     height: 180rpx;
     margin-right: 22rpx;
+    background-color:#f4f4f4;
 }
 .itm-rt{
     width: 60%;

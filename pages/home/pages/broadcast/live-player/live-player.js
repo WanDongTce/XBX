@@ -232,6 +232,7 @@ Page({
         // console.log('error:', e.detail);
     },
     goBack: function () {
+        console.log('111')
         wx.navigateBack({
             delta: 1,
         })

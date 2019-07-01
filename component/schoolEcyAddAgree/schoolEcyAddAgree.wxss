@@ -7,7 +7,7 @@
     color: #999;
 }
 .active{
-    color: #48b947;
+    color: #4bace2;
 }
 .add-agree-icon{
     width: 22rpx;

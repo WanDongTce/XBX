@@ -68,7 +68,7 @@ page {
     color:#fff;
     line-height: 50rpx;
     width:50rpx;
-    background-color:#48b947;
+    background-color:#4BACE2;
     border-radius: 50%;
     text-align: center;
 }
@@ -105,7 +105,7 @@ page {
     margin-left:14rpx;
 }
 .newrw_pro{
-    background-color: #d1f7d4;
+    background-color: #CDEDFF;
     width:250rpx;
     height: 14rpx;
     margin-right:14rpx; 
@@ -115,7 +115,7 @@ page {
     left:0;top:0;
     
     height: 14rpx;
-    background-color:#49ba48;
+    background-color:#4BACE2;
     border-radius: 7rpx;
 }
 .newrw_protext{
@@ -137,7 +137,7 @@ page {
     border-radius: 25rpx;
 }
 .newbtn2{
-    color:#48b947;
+    color:#4bacdf;
     
 }
 .new_rightbox{
@@ -184,7 +184,7 @@ page {
     background-color: #F76E56;
 }
 .dayitem_circle1{
-    background-color: #48b947;
+    background-color: #47C3FB;
 }
 .dayitem_circle2{
     background-color: #FEB419;

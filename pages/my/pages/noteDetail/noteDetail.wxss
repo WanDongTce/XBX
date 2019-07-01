@@ -14,11 +14,11 @@ page{
     height: 70rpx;
     line-height: 70rpx;
     margin: 50rpx 0;
-    color: #48b947;
+    color: #4bace2;
     font-size: 30rpx;
     text-align: center;
     border-radius: 10rpx;
-    border: 1rpx solid #48b947;
+    border: 1rpx solid #4bace2;
 }
 .cont{
     width: 100%;

@@ -25,7 +25,7 @@ page {
 .moren {
     height: 38rpx;
     font-size: 24rpx;
-    background-color: #48b947;
+    background-color: #4bace2;
     color: #fff;
     border-radius: 10rpx;
     text-align: center;
@@ -77,7 +77,7 @@ page {
 }
 
 .conform_btn {
-    background-color: #48b947;
+    background-color: #4bace2;
     color: #fff;
     height: 98rpx;
     line-height: 98rpx;
@@ -97,7 +97,7 @@ page {
 
 .add_box {
     font-size: 30rpx;
-    color: #48b947;
+    color: #4bace2;
     line-height: 40rpx;
     margin: 0 auto;
     width: 183rpx;

@@ -145,7 +145,7 @@ page{
     line-height: 80rpx;
 }
 .active {
-    color: #48b947; 
+    color: #4bace2; 
 }
 .tit{
     font-size: 28rpx;
@@ -162,7 +162,7 @@ page{
     left: 35%;
     width: 30%;
     height: 2rpx;
-    background: #48b947;
+    background: #4bace2;
 }
 
 
@@ -522,6 +522,7 @@ page{
 .item_imgbox .item_img {
     width: 100%;
     height: 128rpx;
+    /* background-color:#999; */
 }
 
 .item_textbox {

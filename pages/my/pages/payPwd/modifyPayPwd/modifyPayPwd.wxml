@@ -1,6 +1,6 @@
 <compontNavbar title="修改支付密码" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 <view class="container">
-    <view class="toptext" wx:if="{{flag == 1}}">请输入A计划支付密码</view>
+    <view class="toptext" wx:if="{{flag == 1}}">请输入{{idname}}支付密码</view>
     <view class="toptext" wx:if="{{flag == 2}}">请设置密码,用于支付验证</view>
     <view class="toptext" wx:if="{{flag == 3}}">请再次输入,以确认密码</view>
     <view class="input-password-wrap" bindtap="showKeyboardFn">

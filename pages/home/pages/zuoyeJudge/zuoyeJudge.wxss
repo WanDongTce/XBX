@@ -1,0 +1,57 @@
+/* pages/ls2/ls2.wxss */
+page{
+    background-color:#f7f7f7;
+}
+.img1{
+    width:100%; 
+    margin:0;
+    padding:0;
+    display: block;
+}
+.view1{
+    background-color:#fff;
+    color:#454E75;
+    font-size:32rpx;
+    line-height: 104rpx;
+    text-align: center;
+}
+.bigbox{
+    background-color:#fff;
+    padding:90rpx 0 32rpx;
+}
+.img2{
+    width:99rpx;
+    height: 99rpx;
+    margin-left:66rpx;
+    margin-right:42rpx;
+}
+.h1{
+    color:#454E75;
+    font-weight: bold;
+    line-height: 32rpx;
+    margin-bottom:14rpx;
+}
+.h2{
+    color:#666;
+    
+    line-height: 36rpx;
+}
+.h_box{
+    width:480rpx;
+    word-break: break-all;
+}
+.item{
+    margin-bottom:50rpx;
+}
+
+.btn{
+    background-color:#4bace2;
+    color:#fff;
+    font-size:32rpx;
+    width:696rpx;
+    height: 92rpx;
+    border-radius: 6rpx;
+    margin:70rpx auto 84rpx;
+    text-align: center;
+    line-height: 92rpx;
+}

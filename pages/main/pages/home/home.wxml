@@ -1,8 +1,6 @@
 <import src="./actyTemplate.wxml" />
-<!-- <compontNavbar title="{{title}}" isShowBack="{{false}}" url=""></compontNavbar> -->
-<block wx:if="{{isShowDialog}}">
-    <template is="actyTmp" data="{{animationData, actyInfo}}"/>
-</block>
+<!-- <compontNavbar title="{{idname}}" isShowBack="{{false}}" url=""></compontNavbar> -->
+
 
 
 <view class="navigation-box component-class" >
@@ -10,99 +8,64 @@
         <image src='../../../../images/arrow_switch.png' class='arrow_switch'></image>
         <view class='switch_text c_gf'>家长端</view>
     </view>
-    <view class="navigation-tit">A计划</view>
+    <view class="navigation-tit">{{idname}}</view>
 </view>
 
 
+<block wx:if="{{isShowDialog}}">
+    <template is="actyTmp" data="{{animationData, actyInfo}}"/>
+</block>
 <view class="container">
-    <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="rgba(72,185,71,.3)" indicator-active-color="#48b947" id='queryone'>
-        <block wx:for="{{imgUrls}}" wx:key="this">
-            <swiper-item>
-                <image src="{{item.image}}" class="slide-image" catchtap="toH5" data-type="{{item.to_type}}" data-url="{{item.url}}" data-toid="{{item.to_id}}"/>
-            </swiper-item>
-        </block>
-    </swiper>
+    <!-- <view class='banner_box'> -->
+        <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2" id='queryone' class='swiper_img'>
+            <block wx:for="{{imgUrls}}" wx:key="this">
+                <swiper-item>
+                    <image src="{{item.image}}" class="slide-image" catchtap="toH5" data-type="{{item.to_type}}" data-url="{{item.url}}" data-toid="{{item.to_id}}"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    <!-- </view> -->
     <view class="tabs" id='querytwo'>
         <navigator class="new_tab" url="/pages/home/pages/edutList/edutList">
             <image class="new_tab_img" src="../../images/home/tab1.png"></image>
-            <view class='new_tab_text'>逗逗学</view>
+            <view class='new_tab_text'>{{idname}}</view>
         </navigator>
-        <navigator class="new_tab" url="/pages/home/pages/game/game">
+        <!-- <navigator class="new_tab" url="/pages/home/pages/game/game">
             <image class="new_tab_img" src="../../images/home/tab2.png"></image>
-            <view class='new_tab_text'>逗逗玩</view>
+            <view class='new_tab_text'>学霸玩</view>
+        </navigator> -->
+        <navigator class="new_tab" url="/pages/home/pages/course/course?mytopid=' + 0">
+            <image class="new_tab_img" src="../../images/home/tab6.png"></image>
+            <view class='new_tab_text'>新华课典</view>
+        </navigator>
+        <!-- <navigator class="new_tab" url="/pages/home/pages/broadcast/broadcast">
+            <image class="new_tab_img" src="../../images/home/tab4.png"></image>
+            <view class='new_tab_text'>互动课堂</view>
+        </navigator> -->
+        <!-- <navigator class="new_tab" url="/pages/home/pages/homework/homework?index=0">
+            <image class="new_tab_img" src="../../images/home/tab5.png"></image>
+            <view class='new_tab_text'>作业即答</view>
+        </navigator> -->
+        <view class="new_tab"  bindtap='judge'>
+            <image class="new_tab_img" src="../../images/home/tab5.png"></image>
+            <view class='new_tab_text'>作业管理</view>
+        </view>
+        <navigator class="new_tab" url="/pages/home/pages/broadcast/broadcast">
+            <image class="new_tab_img" src="../../images/home/tab4.png"></image>
+            <view class='new_tab_text'>直播空间</view>
         </navigator>
         <navigator class="new_tab" url="/pages/home/pages/classmate/classmate">
             <image class="new_tab_img" src="../../images/home/tab3.png"></image>
-            <view class='new_tab_text'>同学圈</view>
-        </navigator>
-        <!-- <navigator class="new_tab" url="/pages/home/pages/ecology/ecology">
-            <image class="new_tab_img" src="../../images/home/tab4.png"></image>
-            <view class='new_tab_text'>逗逗超市</view>
-        </navigator> -->
-        <navigator class="new_tab" url="/pages/main/pages/shopping/shopping">
-            <image class="new_tab_img" src="../../images/home/tab4.png"></image>
-            <view class='new_tab_text'>逗逗超市</view>
+            <view class='new_tab_text'>综合素质</view>
         </navigator>
         
-        <!-- 逗逗直播  -->
-        <!-- <navigator class="tab" url="/pages/home/pages/broadcast/broadcast">
-            <image class="tab-img" src="{{IMGURL}}home/tab3.png"></image>
-        </navigator> -->
-        <!-- 逗逗易货  -->
-        <!-- <navigator class="tab" url="">
-            <image class="tab-img" src="{{IMGURL}}home/tab5.png"></image>
-        </navigator> -->
     </view>
-    <view wx:if="{{!changeTabsCss}}" wx:for="{{activityimgUrls}}" class='activity_imgbox_change' bindtap='tz_signin' wx:key="this">
-        <image wx:if="{{item.image}}" src='{{item.image}}' mode='widthFix'></image>
-    </view>
-    <view wx:if="{{changeTabsCss}}" wx:for="{{activityimgUrls}}" class='activity_imgbox' bindtap='tz_signin' wx:key="this">
-        <image wx:if="{{item.image}}" src='{{item.image}}' mode='widthFix'></image>
-    </view>
-    <view class="navgs">
-        <!-- <navigator url="{{'/pages/home/pages/courseList/courseList?mytopid=' + 0}}" class="navgs-item">
-            <view class='new_navgs_textbox new_navgs_c1'>
-              <view class='new_navgs_text1'>精品课程</view>
-              <view class='new_navgs_text2'>优质的线上教学内容</view>
-            </view>
-            <image src="{{IMGURL}}home/newnav1.png" class='new_navgs_img'></image>
-        </navigator>  -->
-        <navigator url="/pages/home/pages/broadcast/broadcast" class="navgs-item">
-            <view class='new_navgs_textbox new_navgs_c1'>
-              <view class='new_navgs_text1'>互动课堂</view>
-              <view class='new_navgs_text2'>专业口语互动课堂</view>
-            </view>
-            <image src="../../images/home/newnav5.png" class='new_navgs_img'></image>
-        </navigator> 
-        <navigator url="/pages/home/pages/zuoyeNew/zuoyeNew" class="navgs-item">
-            <view class='new_navgs_textbox new_navgs_c2'>
-              <view class='new_navgs_text1'>作业管理</view>
-              <view class='new_navgs_text2'>在线解决作业问题</view>
-            </view>
-            <image src="../../images/home/newnav2.png" class='new_navgs_img'></image>
-        </navigator>
-        <navigator url="/pages/home/pages/barter/barter" class="navgs-item">
-            <view class='new_navgs_textbox '>
-              <view class='new_navgs_text1 new_navgs_c3'>逗逗易货</view>
-              <view class='new_navgs_text2 new_navgs_c5'>提供海量的易货信息</view>
-            </view>
-            <image src="../../images/home/newnav3.png" class='new_navgs_img'></image>
-        </navigator>
-        <navigator url="/pages/home/pages/integralMall/integralMall" class="navgs-item">
-            <view class='new_navgs_textbox '>
-              <view class='new_navgs_text1 new_navgs_c4'>积分商城</view>
-              <view class='new_navgs_text2 new_navgs_c5'>积分兑换好礼不停</view>
-            </view>
-            <image src="../../images/home/newnav4.png" class='new_navgs_img'></image>
-        </navigator>
-        <!-- 直播课堂  -->
-        <!-- <navigator url="/pages/home/pages/broadcast/broadcast" class="navgs-item">
-            <image src="{{IMGURL}}home/nav00.png"></image>
-        </navigator> -->
-        <!-- 逗逗理财  -->
-        <!-- <navigator url="/pages/my/pages/myFinancing/myFinancing" class="navgs-item">
-            <image src="{{IMGURL}}home/nav1.png"></image>
-        </navigator> -->       
+    <view class='p_lr_26'>
+        <view class='display-flex align-items-center new_home_imgbox'>
+            <navigator url='/pages/home/pages/barter/barter'><image src='../../../../images/new_home_img1.png' class='new_home_img'></image></navigator>
+            <navigator url='/pages/home/pages/ecology/ecology'><image src='../../../../images/new_home_img2.png' class='new_home_img'></image></navigator>
+            <navigator url="/pages/home/pages/integralMall/integralMall"><image src='../../../../images/new_home_img3.png' class='new_home_img'></image></navigator>
+        </view>
     </view>
     <!--  
     <view class="school-box">
@@ -129,136 +92,83 @@
         </scroll-view>
     </view>
     -->
-    <!-- 校园动态暂时隐藏  -->
-    <!-- <view class="school-box">
-        <view class="h2">
-            <view class="h2-lt">
-                <view class="rect-icon"></view>
-                <text class="h2-text">校园动态</text>
-            </view>
-            <navigator url="/pages/find/pages/news/news" class="h2-rt">
-                <text class="h2-text">更多</text>
+    
+    <!-- 新闻公告 -->
+    <view class='display-flex anews_box '>
+        <image src='../../../../images/home_news.png' class='home_newsimg'></image>
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+            <block wx:for="{{newsList}}" wx:key='this'>
+            <navigator url="{{'/pages/find/pages/news/newsDetail/newsDetail?id='+item.id + '&img=' + item.image}}">
+            
+                <swiper-item>
+                <view class="swiper_item">{{item.name}}</view>
+                </swiper-item>
             </navigator>
-        </view>
-        <block wx:if="{{showEmpty}}">
-            <empty></empty>
-        </block>
-        <block wx:else>
-            <navigator url="{{'/pages/find/pages/news/newsDetail/newsDetail?id='+item.id + '&img=' + item.image}}" wx:for="{{newsList}}" wx:key="this" class="news">
-                <view class="news-lt">
-                    <image class="news-img" src="{{item.image}}"></image>
-                </view>
-                <view class="news-rt">
-                    <view class="news-tit">{{item.name}}</view>
-                    <view class="news-tips">
-                        <view class="tips-lt">
-                            <image class="news-tip-img" src="{{base}}images/time.png"></image>
-                            <text class="news-tip-text">{{item.createdate}}</text>
-                        </view>
-                        <view class="tips-rt">
-                            <image class="news-tip-img" src="{{base}}images/msg.png"></image>
-                            <text class="news-tip-text">{{item.commentnum}}</text> 
-                            <image class="news-tip-img" src="{{base}}images/agr.png"></image>
-                            <text class="news-tip-text">{{item.agreenum}}</text>
-                        </view>
+            </block>
+        </swiper>
+    </view>
+    
+
+    <!-- 在线名师new -->
+    <view class="school-box" wx:if="{{teacList.length!=0}}">
+      <view class="h2 display-flex justify-content-between align-items-center">
+          <view class="h2-lt c_333">              
+              在线·名师
+          </view> 
+          <navigator class=" c_gf f_26" url='/pages/home/pages/teacher/teacher'>更多</navigator>        
+      </view>    
+        <scroll-view class='ateacher_scroll display-flex' scroll-x="true">
+            <navigator class='ateacher_bigbox' wx:for="{{teacList}}" wx:key="this" url="{{'/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + item.Id}}">
+                <view class='ateacher_box position_r' >
+                    <!-- <image src='../../images/home/tab3.png' class='ateacher_header'></image> -->
+                    <image src="{{item.FacePath?item.FacePath:'../../../../images/default-user-2.png'}}" mode='aspectFill' class='ateacher_header'></image>
+                    <view class='ateacher_h1 f_26 c_333 one_line'>{{item.Name}}</view>
+                    
+                    <view wx:if="{{item.JobTitle}}"  class='ateacher_h2 f_24 c_666 one_line'>{{item.JobTitle}}</view>               
+                    <view wx:else class='ateacher_h2 f_24 c_666 one_line'>未评级</view>
+                    
+                    <view class='position_a ateacher_bottombox'>
+                        <navigator url="/pages/home/pages/teacher/teacher" class='ateacher_bottom'>+</navigator>
                     </view>
                 </view>
             </navigator>
-        </block>
-    </view> -->
-    <!-- 作业即答new -->
-    <!-- <view class="school-box" wx:if="{{questionList.length!=0}}">
-      <view class="h2">
-          <view class="h2-lt">
-              <view class="rect-icon"></view>
-              <text class="h2-text">作业即答</text>
-          </view>
-          <navigator url="/pages/home/pages/homework/homework" class="h2-rt">
-              <text class="h2-text">更多</text>
-          </navigator>
-      </view>
-      <view class='newhomework_box' wx:for="{{questionList}}" wx:key="this" bindtap="toQuestionDetail" data-id="{{item.id}}" data-href="{{item.href}}">
-        <view class='newhomework_title f_32 c_333'>{{item.name}}</view>
-        <view class='display-flex justify-content-between align-items-center newhomework_tagbox'>
-          <view class='newhomework_left display-flex align-items-center'>
-            <image src='{{base}}images/tag2.png'></image>
-            <view class='c_999 f_24'>{{item.grade.name}}</view>
-            <view class='c_999 f_24'>{{item.subject.Name}}</view>
-          </view>
-          <view class='newhomework_right display-flex f_24 align-items-center'>
-            <image src='{{base}}images/write.png'></image>
-            <view class='newhomework_right_huida'>回答</view>
-            <view >{{item.answernum}}</view>
-          </view>
-        </view>
-      </view>
-    </view> -->
-    <!-- 在线名师new -->
-    <view class="school-box" wx:if="{{teacList.length!=0}}">
-      <view class="h2">
-          <view class="h2-lt">
-              <view class="rect-icon"></view>
-              <text class="h2-text">在线名师</text>
-          </view>
-          <navigator url="/pages/home/pages/teacher/teacher" class="h2-rt">
-              <text class="h2-text">更多</text>
-          </navigator>
-      </view>    
-      <scroll-view class='newonlineter_scroll display-flex' scroll-x="true">
-        <navigator class='newonlineter_item' wx:for="{{teacList}}" wx:key="this" url="{{'/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + item.Id}}">
-          <image src="{{item.FacePath?item.FacePath:'../../../../images/default-user-2.png'}}" mode='aspectFill'></image>
-          <view class='display-flex align-items-center'>
-            <view class='newonlineter_name one_line f_28 c_333'>{{item.Name}}</view>
-            <view wx:if="{{item.SubjectName==''}}" ></view>
-            <view wx:else class='newonlineter_subject'>{{item.SubjectName}}</view>
-          </view>
-          <view wx:if="{{item.JobTitle==''}}" class='newonlineter_tagtext f_26 c_999 one_line  c_fff'>a</view>
-          <view wx:else class='newonlineter_tagtext f_26 c_999 one_line'>{{item.JobTitle}}</view>
-        </navigator>
-        
-      </scroll-view>
+        </scroll-view>
     </view>  
-    <!-- 精品课程new -->
-    <view class="school-box">
-      <view class="h2">
-          <view class="h2-lt">
-              <view class="rect-icon"></view>
-              <text class="h2-text">精品课程</text>
-          </view>          
-      </view>
-      <scroll-view class='scrollview_subject display-flex' scroll-x='true'>
-        <view wx:for="{{kemu}}" wx:key class="kemu {{choicekemu==item.id?'choicekemu':'nochoicekemu'}}" bindtap='choicekemu' data-id='{{item.id}}'>{{item.title}}</view>       
-      </scroll-view>
-      <block wx:if="{{showEmpty}}">
-        <empty></empty>
-      </block>  
-      
-      <view class='newcourse_itembox' wx:for="{{liveCourseList}}" wx:key="this" bindtap='toLiveCourseDetail' data-id="{{item.id}}">
-        <image class='newcourse_topimg' src='{{item.img}}' mode='aspectFill' style=''></image>
-        <view class='newcourse_title f_32 c_333 display-flex'>
-          <text class='text_new1'>{{item.subject}}</text>
-          <text class='text_new2 one_line'>{{item.title}}</text>
-        </view>        
-        <view class='display-flex justify-content-between align-items-center newcourse_bottombox'>
-          <view class='display-flex +align-items-center'>
-            <image wx:if="{{item.t_portrait==''}}" src='{{base}}images/default-user-2.png' class='newcourse_headerimg'></image>
-            <image wx:else src='{{item.t_portrait}}' class='newcourse_headerimg'></image>
-            <view class='newcourse_name one_line f_26 c_333'>{{item.t_name}}</view>
-          </view>
-          <view class='newcourse_time f_26 c_333'>{{item.course_date}}<text>{{item.course_stime}}~{{item.course_etime}}</text></view>          
-        </view> 
-      </view>   
-    </view>
-</view>
+    <view class='newcourse_bigitembox'>
+        <view class='' style='padding:0 26rpx;'>
+            
+            <view class='h2-lt c_333 newcourse_bigtitle'>精品·课程</view>
 
-
-<!-- 续费弹窗 -->
-<view class='renewbox'  wx:if="{{!renewMask}}">
-    <view class='renew_smbox'>        
-        <view class='renew_title'>{{renew_title}}</view>
-        <view class=' renew_content'>{{renew_content}}</view>
-        <view class='renew_bottom' bindtap='renewBtn'>
-            确定
+            <block wx:if="{{showCourseEmpty}}">
+                <empty></empty>
+            </block>  
+            <view class=''>
+                <view class='newcourse_itembox' wx:for="{{courselist}}" wx:key="this" bindtap='tz_detail'  data-id="{{item.Id}}" data-myid="{{item.Id}}" data-videopic="{{item.PicUrl}}">
+                <view class='position_r'>
+                    <image wx:if='{{item.PicUrl}}' class='newcourse_topimg' src='{{item.PicUrl}}' mode='aspectFill' ></image>
+                    <image wx:else class='newcourse_topimg' src='../../../../images/normal_pic1.png' mode='aspectFill' ></image>
+                    <view wx:if="{{item.nTeacher}}" class='position_a display-flex live_position align-items-center'>
+                        <image wx:if="{{item.nTeacher.FacePath==''}}" src='../../../../images/default-user-2.png' class='newcourse_headerimg'></image>
+                        <image wx:else src='{{item.nTeacher.FacePath}}' class='newcourse_headerimg'></image>
+                        <view class='newcourse_name one_line f_26 c_333'>{{item.nTeacher.Name}}</view>
+                    </view>
+                </view>
+                
+                <view class='newcourse_title f_32 c_333 display-flex'>
+                <!-- <text class='text_new1'>{{item.nBaseSubject.Name}}</text> -->
+                    <text class='text_new2 one_line'>{{item.Name}}</text>
+                </view>        
+                        
+                <view class='newcourse_time f_26 c_666'>
+                    <image src='../../../../images/home_video.png' class='home_videoimg'></image>
+                    {{item.nBaseSubject.Name}}· 课程时长<text wx:if="{{item.Minute==0}}">10</text><text wx:else>{{item.Minute}}</text>分钟 
+                    <!-- · {{item.Hit}}人已观看             -->
+                    
+                </view>          
+            </view>
+        </view>   
         </view>
     </view>
 </view>
+
+

@@ -101,7 +101,7 @@ page{
     height: 100%;
     font-size: 40rpx;
     font-weight: bold;
-    color: #48b947;
+    color: #4bace2;
 }
 .dis-btn{
     color: #999;
@@ -126,7 +126,7 @@ page{
 .btn{
     width: 100%;
     padding: 3% 0;
-    background: #48b947;
+    background: #4bace2;
     color: #fff;
     font-size: 32rpx;
     border-radius: 10rpx;

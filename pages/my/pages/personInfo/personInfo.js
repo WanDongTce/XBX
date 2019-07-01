@@ -99,7 +99,8 @@ Page({
             formData: {
                 'mobile': app.userInfo.mobile,
                 'token': app.userInfo.token,
-                'app_source_type': app.app_source_type
+                'app_source_type': app.app_source_type,
+                'app_source_school_id': app.app_source_school_id,
             },
             success: function (res) {
                 wx.hideLoading();

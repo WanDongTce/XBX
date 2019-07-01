@@ -30,7 +30,7 @@ page{
   width:600rpx;
   height:80rpx;
   line-height:80rpx;
-  background-color:#48B947;
+  background-color:#4bace2;
   color:#fff;
   text-align: center;
   margin:0 auto;
@@ -76,7 +76,7 @@ page{
 
 
 
-show-btn {
+.show-btn {
   margin-top: 100rpx;
   color: #22cc22;
 }
@@ -138,7 +138,7 @@ input-holder {
   justify-content:flex-end;
   padding:0 32rpx 66rpx;
   font-size: 28rpx;
-  color: #48B947;
+  color: #4bace2;
 }
 .btn-cancel {
   margin-left:70rpx; 

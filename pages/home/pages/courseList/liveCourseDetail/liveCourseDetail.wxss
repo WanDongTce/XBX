@@ -84,14 +84,14 @@ page{
 }
 .bottom_left{
   font-size:42rpx;
-  color:#48b947;
+  color:#4bace2;
   margin-left:39rpx;
 }
 .bottom_right{
   width:210rpx;
   height:73rpx;
   line-height: 73rpx;
-  background-color:#48b947;
+  background-color:#4bace2;
   color:#fff;
   text-align: center;
   margin-right:30rpx;

@@ -1,6 +1,6 @@
 <compontNavbar title="百科详情" isShowBack="{{true}}"></compontNavbar>
 <view class="box">
-    <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="rgba(72,185,71,.3)" indicator-active-color="#48b947">
+    <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
         <block wx:for="{{detail.images}}" wx:key="this">
             <swiper-item>
                 <image src="{{item.imgurl}}" class="slide-image" mode="aspectFill"/>

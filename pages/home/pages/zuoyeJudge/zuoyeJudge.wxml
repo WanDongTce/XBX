@@ -1,0 +1,34 @@
+<!--pages/ls2/ls2.wxml-->
+<compontNavbar title="功能介绍" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+
+<image src='../../../../images/icon_homework_topview.png' class='img1'></image>
+<view class='view1'>一分钟了解{{idname}}</view>
+<image src='../../../../images/icon_homework_spbj.png' class='img1'></image>
+<view class='bigbox'>
+    <view class='item display-flex'>
+        <image src='../../../../images/icon_homework_zyjd.png' class='img2'></image>
+        <view class='h_box'>
+            <view class='h1 f_32'>作业即答</view>
+            <view class='h2 f_26'>学生有问题不懂不会，拍照上传，平台教师即时视频讲解</view>
+        </view>
+    </view>
+    <view class='item display-flex'>
+        <image src='../../../../images/icon_homework_zyjg.png' class='img2'></image>
+        <view class='h_box'>
+            <view class='h1 f_32'>作业监督</view>
+            <view class='h2 f_26'>通过网络技术，专职教师通过平台，全程对学生的整个作业完成过程，进行时间管理，激励管理，作业指导等</view>
+        </view>
+    </view>
+    <view class='item display-flex'>
+        <image src='../../../../images/icon_homework_zypg.png' class='img2'></image>
+        <view class='h_box'>
+            <view class='h1 f_32'>作业批改</view>
+            <view class='h2 f_26'>通过平台独立开发的作业批改软件，对学生的作业进行视频，音频批改点评，同时生成错题本，全面提高学生作业效率</view>
+        </view>
+    </view> 
+
+   
+</view>
+
+<view class='btn' catchtap='click_btn'>缴费</view>

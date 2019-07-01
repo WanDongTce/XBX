@@ -21,7 +21,7 @@ page{
     justify-content: space-between;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    /* margin-top:10rpx; */
+    margin-top:10rpx;
 }
 .position-relative {
     position: relative;
@@ -195,6 +195,12 @@ page{
 .position_a{
   position:absolute;
 }
+.display_b{
+    display: block;
+}
+.display_n{
+    display: none;
+}
 /*猫鼬 */
 .mongoose_nothave_img{    
   width:137rpx;
@@ -214,7 +220,7 @@ page{
   border-radius: 28rpx;
   text-align: center;
   line-height: 56rpx;
-  background-color:#48b947;
+  background-color:#4bace2;
   color:#fff;
   font-size:26rpx;
   margin:0 auto;
@@ -231,34 +237,38 @@ page{
 .c_888{color:#888;}
 .c_999{color:#999;}
 .c_lightgreen{
-  color:#48B947;
+  color:#4bace2;
+}
+.font_weight_b{
+    font-weight: bold;
 }
 .c_fff{
   color:#fff;
 }
+.cb_lightgreen{background-color:#4bace2; }
 .c_gf{
-    color:#48B947;
+    color:#4bace2;
 }
 .c_gf_bg{
-    background-color:#48B947;
+    background-color:#4bace2;
 }
 .c_gf_border{
-    border:1px solid #48B947;
+    border:1px solid #4bace2;
 }
 .c_gf2_border_b{
-    border-bottom:1px solid #d1f7d4;
+    border-bottom:1px solid #70beed;
 }
 .c_gf2_border_br{
-    border-right:1px solid #d1f7d4;
+    border-right:1px solid #70beed;
 }
-.bg_fff {
-background-color:#fff;
+.bg_fff{
+  background-color:#fff;
+}
 
-}
-.display_n{
-    display: none;
-}
-.cb_lightgreen{background-color:#48B947; }
+.padding_p13{padding:0 13.3%;}
+.p_lr_26{padding:0 26rpx;}
+.bgfff{background-color:#fff;}
+
 .two_line{
   display: -webkit-box; 
 -webkit-line-clamp: 2; 
@@ -287,5 +297,5 @@ overflow: hidden;
   color:#808080;
 }
 .integral_bottom_currenttext{
-  color:#48b947  !important;
+  color:#4bace2  !important;
 } */

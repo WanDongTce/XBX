@@ -74,7 +74,7 @@ page{
 } 
 .btn{
   
-  background-color:#48b947;
+  background-color:#4bace2;
   border-radius:10rpx;
   margin:0rpx auto;
   color:#fff;

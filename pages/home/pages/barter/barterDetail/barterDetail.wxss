@@ -158,7 +158,7 @@ page{
   margin-left:76rpx;
 }
 .message_sub_frame{
-  background-color:#48b947;
+  background-color:#4bace2;
   color:#fff;
   font-size:23rpx;
   margin-left:18rpx;

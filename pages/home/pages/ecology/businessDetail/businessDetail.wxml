@@ -24,7 +24,10 @@
     </view>
     <view class='top_address f_24'>地址：{{detail.address}}</view>
   </view> 
-  <view class='top_imgbox position_a'><image class=' top_img' src='{{detail.pic}}'></image></view>
+  <view class='top_imgbox position_a'>
+    <image wx:if='{{detail.pic}}' class=' top_img' src='{{detail.pic}}'></image>
+    <image wx:else class=' top_img' src='{{base}}images/normal_pic12.png'></image>
+  </view>
 </view>
 <!-- <view>使用组件</view> -->
 <!-- <view class="tabs {{changeTabsCss?'changeTabsCss':'tabs'}}" id='tabs'>

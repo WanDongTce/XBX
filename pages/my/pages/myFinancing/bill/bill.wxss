@@ -219,7 +219,7 @@ page {
     font-size: 32rpx;
 }
 .color-green {
-    color: #48b947;
+    color: #4bace2;
 }
 
 .color-red {

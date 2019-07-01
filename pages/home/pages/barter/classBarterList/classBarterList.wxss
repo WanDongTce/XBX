@@ -65,5 +65,5 @@ checkbox-group{
     margin-right: 18rpx;
 }
 .btn2{
-    background: #48b947;
+    background: #4bace2;
 }

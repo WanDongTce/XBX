@@ -157,7 +157,7 @@ live-pusher{
     background: #6ddfdf;
 }
 .item-name{
-    color: #48b947;
+    color: #4bace2;
     padding: 0 10rpx;
     display: inline-block;
     vertical-align: middle;
@@ -329,7 +329,7 @@ input{
     line-height: 7vh;
     margin-right: 2%;
     font-size: 28rpx;
-    color: #48b947;
+    color: #4bace2;
     text-align: center;
     display: inline-block;
     vertical-align: middle;

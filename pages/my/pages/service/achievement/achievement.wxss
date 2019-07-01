@@ -105,7 +105,7 @@ page{
 }
 .subject-text{
   font-size: 31rpx;
-  color: #2ea22c;
+  color: #4bace2;
 }
 .subject-one{
   position: relative;
@@ -131,7 +131,7 @@ page{
 }
 .edit-a{
   font-size: 28rpx;
-  color: #2ea22c;
+  color: #4bace2;
 }
 .bottom{
   position: fixed;
@@ -140,7 +140,7 @@ page{
   height: 90rpx;
   text-align: center;
   line-height: 90rpx;
-  background-color: #49b947;
+  background-color: #4bace2;
 }
 .bottom-text{
   font-size: 34rpx;

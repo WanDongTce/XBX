@@ -60,7 +60,7 @@ page{
 .rect-icon {
     width: 8rpx;
     height: 28rpx;
-    background: #48b947;
+    background: #4bace2;
     margin-right: 20rpx;
 }
 .h2-text {
@@ -146,7 +146,7 @@ page{
   line-height:48rpx;
   text-align: center;
   padding:0 21rpx;
-  background-color:#48b947;
+  background-color:#4bace2;
   border-radius:24rpx;
   margin-top:27.5rpx;
 }
@@ -168,7 +168,7 @@ page{
 .recommend_num{
   width:223rpx;
   text-align: center;
-  color:#48b947;
+  color:#4bace2;
 }
 .scroll-recommend{
   width:100%;
@@ -191,7 +191,7 @@ page{
   background-color:#fff;
 }
 .bottom_right{
-  background-color:#48b947;
+  background-color:#4bace2;
   border-radius:5rpx;
   height:74rpx;
   line-height: 74rpx;
@@ -262,7 +262,7 @@ page{
     background: #ead270;
 }
 .mod-num-btn{
-     background: #48b947;
+     background: #4bace2;
 }
 .mod-num-cont-1{
     width: 100%;
@@ -291,7 +291,7 @@ page{
 }
 .goods-price{
   font-size:36rpx;
-  color:#48b947;
+  color:#4bace2;
   font-weight: bold;
   margin-bottom:20rpx;
 }
@@ -371,7 +371,7 @@ page{
   background-color:#cccccc;
 }
 .newmod_box_btn2{
-  background-color:#48b947;
+  background-color:#4bace2;
   border-top-right-radius:4rpx; 
   border-bottom-right-radius:4rpx; 
 }

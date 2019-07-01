@@ -37,7 +37,7 @@ page {
     font-size: 30rpx;
     text-align: center;
     border-radius: 10rpx;
-    color: #48b947;
+    color: #4bace2;
 }
 .color-1{
     color: #008c77;

@@ -15,7 +15,7 @@
 input{
     width: 100%;
     height: 6vh;
-    border-bottom: 1rpx solid #48b947;
+    border-bottom: 1rpx solid #4bace2;
     font-size: 30rpx;
     color: #333;
 }
@@ -24,7 +24,7 @@ input{
     margin: 50rpx auto;
     padding: 4% 0;
     text-align: center;
-    background: #48b947;
+    background: #4bace2;
     color: #fff;
     font-size: 30rpx;
     border-radius: 15rpx;

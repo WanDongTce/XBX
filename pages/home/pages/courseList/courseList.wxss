@@ -18,7 +18,7 @@ page {
 }
 .mytop_box{
   align-items: center;
-  border-bottom:2rpx solid #48b947;
+  border-bottom:2rpx solid #4bace2;
 }
 .mytop_item{
   width:25%;

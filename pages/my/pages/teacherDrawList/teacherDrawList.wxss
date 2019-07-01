@@ -20,7 +20,7 @@ page{
   height: 40rpx;
   line-height: 40rpx;
   width:80rpx;
-  background-color:#48B947;
+  background-color:#4bace2;
   text-align: center;
   border-radius: 20rpx;
 }
@@ -93,7 +93,7 @@ page{
     background: linear-gradient(to right, #F6A054 ,#FFBA7E);
 }
 .item_btn4{
-  background: #48B947; /*已批改*/
+  background: #4bace2; /*已批改*/
     
 }
 
@@ -109,7 +109,7 @@ page{
     bottom: 76rpx;
     right: 25rpx;
     z-index: 2;
-    background-color: #48B947;
+    background-color: #4bace2;
     width: 102rpx;
     height: 102rpx;
     border-radius: 50%;

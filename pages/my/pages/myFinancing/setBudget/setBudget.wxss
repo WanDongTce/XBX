@@ -36,7 +36,7 @@ input {
     margin: 16vh auto 0;
     margin-top: 60rpx;
     color: #fff;
-    background: #48b947;
+    background: #4bace2;
     font-size: 30rpx;
     text-align: center;
     border-radius: 10rpx;

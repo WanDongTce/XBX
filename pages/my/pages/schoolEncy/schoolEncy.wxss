@@ -165,7 +165,7 @@ page {
     color: #999;
 }
 .active{
-    color: #48b947;
+    color: #4bace2;
 }
 .add-agree-icon{
     width: 22rpx;
@@ -181,7 +181,7 @@ page {
     text-align: center;
     border-radius: 10rpx;
     color: #fff;
-    background: #48b947;
+    background: #4bace2;
     font-size: 30rpx;
     margin: 0 auto;
 }

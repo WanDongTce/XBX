@@ -94,10 +94,6 @@ Page({
     },
     toDetail: function (e) {
         var a = e.currentTarget.dataset;
-        wx.setStorage({
-            key: 'homeworkurl',
-            data: a,
-        })
         // console.log(a);
         var href = a.href.slice(0, a.href.indexOf('?'));
         var p = a.href.slice(a.href.indexOf('?') + 1);

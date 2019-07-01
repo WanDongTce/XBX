@@ -13,9 +13,18 @@
                     <view class="pay-method">微信充值</view>
                 </view>
             </view>
-            <image class="swi-icon" src="{{rechargeType == 2? '../../../../images/yuan2.png': '../../../../images/yuan1.png'}}"></image>
-        </view>       
-        <!-- <view class="pay-item" data-type="0" bindtap="checkPayMethod">
+            <image class="swi-icon" src="{{rechargeType == 2? '../../../../images/yuan2.png': '../../../images/yuan1.png'}}"></image>
+        </view>
+        <view class="pay-item" data-type="1" bindtap="checkPayMethod">
+            <view class="pay-lt">
+                <image class="pay-icon" src="../../../../images/zfb.png"></image>
+                <view class="pay-text">
+                    <view class="pay-method">支付宝充值</view>
+                </view>
+            </view>
+            <image class="swi-icon" src="{{rechargeType == 1? '../../../../images/yuan2.png': '../../../images/yuan1.png'}}"></image>
+        </view>
+        <view class="pay-item" data-type="0" bindtap="checkPayMethod">
             <view class="pay-lt">
                 <image class="pay-icon" src="../../../../images/card.png"></image>
                 <view class="pay-text">
@@ -23,9 +32,8 @@
                 </view>
             </view>
             <image class="swi-icon" src="{{rechargeType == 0? '../../../../images/yuan2.png': '../../../images/yuan1.png'}}"></image>
-        </view> -->
+        </view>
     </view>
-    <button class='btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">确认支付</button>
-    <!-- <view class="btn" catchtap="next">下一步</view> -->
+    <view class="btn" catchtap="next">下一步</view>
 </view>
-
+ <passwordDialog catch:getPwd="getPwd" wx:if="{{showPwd}}" catch:hidePwdDialog="hidePwdDialog"></passwordDialog> 

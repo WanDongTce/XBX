@@ -33,7 +33,7 @@
   position: relative;
   top: 40rpx;
   font-size: 50rpx;
-  color: #48b947;
+  color: #4bace2;
 }
 .head-bottom{
   width: 750rpx;

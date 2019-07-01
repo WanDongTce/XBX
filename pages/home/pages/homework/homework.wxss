@@ -149,7 +149,7 @@ page {
 
 .qus-reply text {
     font-size: 26rpx;
-    color: #48b947;
+    color: #4bace2;
     margin-right: 10rpx;
 }
 
@@ -165,7 +165,7 @@ page {
     bottom: 76rpx;
     right: 25rpx;
     z-index: 2;
-    background-color: #48b947;
+    background-color: #4bace2;
     width: 102rpx;
     height: 102rpx;
     border-radius: 50%;

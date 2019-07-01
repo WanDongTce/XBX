@@ -1,5 +1,5 @@
 <import src="../../../../template/tab/tab.wxml" />
-<compontNavbar title="闲物易货" isShowBack="{{true}}"></compontNavbar>
+<compontNavbar title="书易货" isShowBack="{{true}}"></compontNavbar>
 <view class="box" wx:if="{{!showSearch}}">
     <view class='searchbigbox display-flex'>
         <view class='searchbox display-flex' bindtap="showSearch">

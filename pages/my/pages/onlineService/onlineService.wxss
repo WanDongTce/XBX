@@ -8,7 +8,7 @@ page{
     border-bottom:16rpx solid #f4f4f4;
 }
 .h1{
-    background-color:#48b947;
+    background-color:#4bace2;
     width:6rpx;
     height:18rpx;
     margin-right:15rpx;

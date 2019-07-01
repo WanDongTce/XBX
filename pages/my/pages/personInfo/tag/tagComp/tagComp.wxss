@@ -2,9 +2,9 @@
 .tag {
     width: 23.5%;
     height: 64rpx;
-    border: 1rpx solid #48b947;
+    border: 1rpx solid #4bace2;
     display: inline-block;
-    color: #48b947;
+    color: #4bace2;
     text-align: center;
     line-height: 64rpx;
     box-sizing: border-box;
@@ -17,6 +17,6 @@
     margin-right: 0;
 }
 .active{
-    background: rgba(72,185,71,.66);
+    background: #4bace2;
     color: #fff;
 }

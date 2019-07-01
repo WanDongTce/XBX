@@ -16,7 +16,7 @@ function requesttools(method, requestHandler, flag) {
     var params = requestHandler.params;
     var url = requestHandler.url;
     params.app_source_type = app.app_source_type;
-
+    params.app_source_school_id = app.app_source_school_id;
     // console.log('========');
     // console.log(url);
     // console.log(params);
@@ -199,9 +199,50 @@ function getMyPoint(callback) {
         }
     });
 }
+//上传多张图片
+// function uploadimg(data, callback) {
+//     var params = { "app_source_type": app.app_source_type };
+//     var that = this,
+//         i = data.i ? data.i : 0,//当前上传的哪张图片
+//         success = data.success ? data.success : 0,//上传成功的个数
+//         fail = data.fail ? data.fail : 0;//上传失败的个数
+//     wx.uploadFile({
+//         url: app.requestUrl + 'v14/public/upload',
+//         filePath: data.path[i],
+//         name: 'file',
+//         formData: params,
+//         success: (resp) => {
+//             success++;//图片上传成功，图片上传成功的变量+1
+//             console.log(resp)
+//             console.log(i);
+//             var a = JSON.parse(resp.data).data[0].list;
+//             console.log(a)
+//             //这里可能有BUG，失败也会执行这里,所以这里应该是后台返回过来的状态码为成功时，这里的success才+1
+//         },
+//         fail: (res) => {
+//             fail++;//图片上传失败，图片上传失败的变量+1
+//             console.log('fail:' + i + "fail:" + fail);
+//         },
+//         complete: () => {
+//             console.log(i);
+//             i++;//这个图片执行完上传后，开始上传下一张
+//             if (i == data.path.length) {   //当图片传完时，停止调用          
+//                 console.log('执行完毕');
+//                 console.log('成功：' + success + " 失败：" + fail);
+//             } else {//若图片还没有传完，则继续调用函数
+//                 console.log(i);
+//                 data.i = i;
+//                 data.success = success;
+//                 data.fail = fail;
+//                 that.uploadimg(data);
+//             }
+
+//         }
+//     });
+// }
 //公共上传图片
 function publicUpload(arr, callback) {
-    var params = { "app_source_type": app.app_source_type };
+    var params = { "app_source_type": app.app_source_type, "app_source_school_id": app.app_source_school_id};
     wx.uploadFile({
         url: app.requestUrl + 'v14/public/upload',
         filePath: arr[0],
@@ -241,6 +282,7 @@ function publicUpload(arr, callback) {
 //上传图片
 function upload(url, arr, params, callback) {
     params.app_source_type = app.app_source_type;
+    params.app_source_school_id = app.app_source_school_id;
     wx.uploadFile({
         url: app.requestUrl + url,
         filePath: arr[0],
@@ -742,7 +784,7 @@ function setRemark(remark, id, callback) {
     });
 }
 //微信支付
-function wxPay(info, callback,callbackfail) {
+function wxPay(info, callback, callbackfail) {
     wx.requestPayment({
         'timeStamp': info.info.timeStamp + '',
         'nonceStr': info.info.nonceStr + '',
@@ -883,11 +925,11 @@ function wxLogin(cb) {
 //获取openid
 function getOpenid(cb) {
     var params = {};
-
+    
     params.code = app.code;
     params.encryptedData = app.uinfo.encryptedData;
     params.iv = app.uinfo.iv;
-
+    
     // console.log(params);
     POST({
         url: 'v14/public/get-opend',
@@ -898,7 +940,7 @@ function getOpenid(cb) {
 
             if (res.data.code == 200) {
                 app.openId = res.data.data.openid;
-
+                
                 cb && cb();
             }
         },
@@ -949,4 +991,5 @@ module.exports = {
     memberExpires: memberExpires,
     wxLogin: wxLogin,
     getOpenid: getOpenid
+    // uploadimg: uploadimg
 };

@@ -6,10 +6,10 @@ page{
 
 /* nav */
 .newnavbox{
-    background: -webkit-linear-gradient(#49ba48 ,#49ba48, #5dd55c); 
-    background: -o-linear-gradient(#49ba48 ,#49ba48, #5dd55c); 
-    background: -moz-linear-gradient(#49ba48 ,#49ba48, #5dd55c);
-    background: linear-gradient(to right, #49ba48 ,#49ba48, #5dd55c);
+    background: -webkit-linear-gradient(#1f6eb0 ,#2590c8, #32bde6); 
+    background: -o-linear-gradient(#1f6eb0 ,#2590c8, #32bde6); 
+    background: -moz-linear-gradient(#1f6eb0 ,#2590c8, #32bde6);
+    background: linear-gradient(to right, #1f6eb0 ,#2590c8, #32bde6);
     width:100%;
     height: 10vh;
     
@@ -45,10 +45,10 @@ page{
 .newtopbg{
     
      /* background-color:rgba(0,0,0,0.5); */
-    background: -webkit-linear-gradient(#49ba48 ,#49ba48, #5dd55c); 
-    background: -o-linear-gradient(#49ba48 ,#49ba48, #5dd55c); 
-    background: -moz-linear-gradient(#49ba48 ,#49ba48, #5dd55c);
-    background: linear-gradient(to right, #49ba48 ,#49ba48, #5dd55c);
+    background: -webkit-linear-gradient(#1f6eb0 ,#2590c8, #32bde6); 
+    background: -o-linear-gradient(#1f6eb0 ,#2590c8, #32bde6); 
+    background: -moz-linear-gradient(#1f6eb0 ,#2590c8, #32bde6);
+    background: linear-gradient(to right, #1f6eb0 ,#2590c8, #32bde6);
     height:490rpx;
     border-bottom-left-radius: 35rpx;
     border-bottom-right-radius: 35rpx;
@@ -113,7 +113,7 @@ page{
 }
 .datesignOn{
   border-radius: 50%;
-  background-color: #49ba48;
+  background-color: #33A6FF;
   color: #fff;
 }
 .datesignOff{
@@ -141,7 +141,7 @@ page{
     
 }
 .calendar_signtext_text1{  
-    background-color:#49ba48;  
+    background-color:#33A6FF;  
 }
 .calendar_signtext_text2{  
     background-color:#bbb;  
@@ -206,7 +206,7 @@ page{
     font-size:24rpx;
     line-height: 24rpx;
     margin-bottom:60rpx;
-    color:#49ba48;
+    color:#379DD6;
 }
 .qiandao_btnbox{
     margin:0 auto 0;
@@ -218,11 +218,14 @@ page{
     color:#fff;
     text-align: center;
 }
+.backgroundc_new{
+    background-color: #ddd;
+}
 .backgroundc_1{
-    background-color: #49ba48;
+    background-color: #4cabe3;
 }
 .backgroundc_2{
-    background-color: #d1f7d4;
+    background-color: #cdecfe;
 }
 .everyday_h1{
     width:35rpx;
@@ -232,12 +235,12 @@ page{
     height: 12rpx;   
 }
 .everyday_text1{
-    background-color:#49ba48;
+    background-color:#4cabe3;
     color:#fff;
 }
 .everyday_text2{
-    background-color:#d1f7d4;
-    color:#49ba48;
+    background-color:#cdecfe;
+    color:#4cabe3;
 }
 .everyday_dayon{
     width:48rpx !important;
@@ -324,12 +327,12 @@ page{
     margin-right:40rpx;
 }
 .new_rwtap_cur{
-    background-color: #49ba48;
+    background-color: #4BACE2;
     color:#fff;
 }
 .new_rwtap_other{
-    background-color: #d1f7d4;
-    color:#49ba48;
+    background-color: #CDEDFF;
+    color:#4BACE2;
 }
 .new_rwtap_right{
 
@@ -353,7 +356,7 @@ page{
     margin-left:14rpx;
 }
 .newrw_pro{
-    background-color: #d1f7d4;
+    background-color: #CDEDFF;
     width:250rpx;
     height: 14rpx;
     margin-right:14rpx;    
@@ -362,7 +365,7 @@ page{
 .newrw_pro_cur{
     left:0;top:0;   
     height: 14rpx;
-    background-color:#49ba48;
+    background-color:#4BACE2;
     border-radius: 7rpx;
 }
 .newrw_protext{
@@ -375,10 +378,10 @@ page{
     width:152rpx;
     height: 52rpx;
     line-height: 52rpx;
-    border:1px solid #49ba48;
+    border:1px solid #4BACE2;
     text-align: center;
     font-size:26rpx;
-    color:#49ba48;
+    color:#4BACE2;
     box-sizing: border-box;
     border-radius: 26rpx;
 }

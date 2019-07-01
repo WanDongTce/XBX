@@ -71,5 +71,5 @@ page{
   border-radius: 10rpx;
   text-align: center;
   line-height: 71rpx;
-  background-color: #48b947;
+  background-color: #4bace2;
 }

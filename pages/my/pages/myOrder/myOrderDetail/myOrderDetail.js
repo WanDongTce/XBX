@@ -1,18 +1,18 @@
 // pages/my/pages/myOrder/myOrderDetail/myOrderDetail.js
 const network = require("../../../../../utils/main.js");
 const app = getApp();
-var order_sn='';
+var order_sn = '';
 Page({
-  data: {
-      list:[],
-      order_sn:'',
-      nodata:1
-  },
-  onLoad: function (options) {
-    //   console.log(options.ordersn)
-      order_sn = options.ordersn;
-      this.getList();
-  },
+    data: {
+        list: [],
+        order_sn: '',
+        nodata: 1
+    },
+    onLoad: function (options) {
+        //   console.log(options.ordersn)
+        order_sn = options.ordersn;
+        this.getList();
+    },
     getList: function () {
         var that = this;
         network.POST({
@@ -31,7 +31,7 @@ Page({
                     });
                 } else {
                     that.setData({
-                        nodata:1,
+                        nodata: 1,
                     })
                     console.log(that.data.nodata)
                     wx.showToast({
@@ -76,7 +76,7 @@ Page({
                                 wx.showToast({
                                     title: '已取消',
                                     icon: 'none',
-                                });                               
+                                });
                                 that.getList();
                             } else {
                                 wx.showToast({
@@ -102,7 +102,7 @@ Page({
         var that = this;
         app.showLoading();
         var that = this;
-        
+
         var a = e.detail;
         if (a.errMsg == 'getUserInfo:fail auth deny') {
             wx.hideLoading();

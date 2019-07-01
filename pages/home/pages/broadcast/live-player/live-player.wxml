@@ -1,4 +1,6 @@
 <view class="box">
+
+
     <live-player id="player" src="{{data.live_url_flv}}" autoplay bindstatechange="statechange" mode="live" binderror="error" style="height: {{showInput? '87' : '97'}}vh;" object-fit="fillCrop" catchtap="hideInputFn">
         <cover-view class="top">
             <cover-image  src="{{base}}images/arowLt_fff.png" class='arrow_new' catchtap='goBack'></cover-image>

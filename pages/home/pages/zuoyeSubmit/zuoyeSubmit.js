@@ -114,17 +114,17 @@ Page({
             })
         }
         else {
-            // console.log(that.data.imgList)
+            console.log(that.data.imgList)
             
                 app.showLoading();
                 network.publicUpload(that.data.imgList, function (res) {
-                    // console.log(res);
+                    console.log(res);
                     var img = res.data[0].list[0].file_url;
                     // console.log(img);
                     // console.log(typeof(img));
                     var arrimg=[];
                     arrimg.push(img);
-                    // console.log(arrimg)
+                    console.log(arrimg)
                     // console.log(typeof (arrimg))
                     
                         
@@ -163,6 +163,17 @@ Page({
                         });
                     
                 });
+
+
+            // network.uploadimg({
+                
+            //     path: that.data.imgList//这里是选取的图片的地址数组
+            // });
+            // network.uploadimg(that.data.imgList, function (res) {
+            //     console.log(res);
+                
+
+            // });
             }
             
         }

@@ -76,7 +76,7 @@ page{
 }
 .achievemen-text{
   font-size: 30rpx;
-  color: #2ea22c;
+  color: #4bace2;
   margin-left: 30rpx;
 }
 .achievement-box{
@@ -143,5 +143,5 @@ margin-bottom:30rpx;
 .zhdn_inputnum{border:1px solid #868686;height:54rpx; line-height: 54rpx;width:120rpx;display: inline-block;text-align: center; font-size:35rpx;color:#8a8a8a;}
 
 .add_btn{
-  color:#fff;background-color:#48b947;line-height:90rpx;font-size:34rpx;border-radius: 10rpx;text-align: center;width:690rpx;margin:80rpx auto 120rpx;
+  color:#fff;background-color:#4bace2;line-height:90rpx;font-size:34rpx;border-radius: 10rpx;text-align: center;width:690rpx;margin:80rpx auto 120rpx;
 }

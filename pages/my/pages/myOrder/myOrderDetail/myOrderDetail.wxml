@@ -94,7 +94,6 @@
         
         <button wx:if="{{list.status==1}}" class='bottom-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">去支付</button> 
         <button wx:if="{{list.status==1}}" class='bottom-btn'  catchtap="cancelOrder">取消订单</button>  
-    </view>
-                
+    </view>            
 </view>
 </view>

@@ -59,7 +59,7 @@ page{
     margin: 0 auto;
     text-align: center;
     line-height: 80rpx;
-    background: #48b947;
+    background: #4bace2;
     color: #fff;
     border-radius: 10rpx;
     font-size: 30rpx;

@@ -52,7 +52,7 @@ page {
     color: #f65452;
 }
 .qus-status-2{
-    color: #48b947;
+    color: #4bace2;
 }
 .qus-title {
     font-size: 30rpx;
