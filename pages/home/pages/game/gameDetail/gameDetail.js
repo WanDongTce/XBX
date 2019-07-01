@@ -19,7 +19,6 @@ Page({
         this.compontNavbar = this.selectComponent("#compontNavbar");
         var a = JSON.parse(options.info);
         info = a;
-        console.log(a);
         var title = info.nianjistr||info.title;
         var that = this;
         var size = that.setCanvasSize();
@@ -51,7 +50,8 @@ Page({
     setCanvasSize: function () {
         //   console.log(app);
         var size = {};
-        var res = app.systemInfo;
+        let res = wx.getSystemInfoSync();
+        // var res = app.systemInfo;
         console.log(res);
         var width = res.windowWidth * .6;
         var height = width;

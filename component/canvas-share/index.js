@@ -26,6 +26,25 @@ function getImageInfo(url) {
   })
 }
 
+function getImageInfo2(url) {
+  return new Promise((resolve, reject) => {
+    // wx.getImageInfo({
+    //   src: url,
+    //   success: resolve,
+    //   fail: reject
+    // })
+    wx.request({
+      url: url,
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: 'GET',
+      success: resolve,
+      fail: reject
+    })
+  })
+}
+
 function canvasToTempFilePath(option, context) {
   return new Promise((resolve, reject) => {
     wx.canvasToTempFilePath({
@@ -53,7 +72,6 @@ Component({
       value: false,
       observer(visible) {
         if (visible && !this.beginDraw) {
-          console.log(this.properties);
           this.draw()
           this.beginDraw = true
         }
@@ -162,43 +180,49 @@ Component({
     loadNetworkImage(loadtype, gametype) {
       //loadtype 0为本地图片，1为网络图片
       let ercodeUrl = `https://social.ajihua888.com/v14/public/qrcode?gameurl=${this.properties.gameurl}`;
+      let imageUrl = `https://social.ajihua888.com/v14/public/games?gameid=${this.properties.gametype}`;
       if (gametype == 1) {
-        localQR = '../../images/games/mrzx.jpg';
-        localImageBg = '../../images/games/mrzx@2x.jpg';
         QRImageX = canvasW * 0.6;
         QRImageY = canvasH * 0.63;
         titleH = rpx2px(540 * 2);
         titleColor = '#ffc107';
+        imageUrl = 'https://social.ajihua888.com/images/games/image1.jpg'
       } else if (gametype == 2) {
-        localQR = '../../images/games/wztz.jpg';
-        localImageBg = '../../images/games/wztz@2x.jpg';
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(400 * 2);
         titleColor = '#ff5722';
+        imageUrl = 'https://social.ajihua888.com/images/games/image2.jpg'
       } else if (gametype == 3) {
-        localQR = '../../images/games/tzs.jpg';
-        localImageBg = '../../images/games/tzs@2x.jpg';
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(400 * 2);
         titleColor = '#009688';
+        imageUrl = 'https://social.ajihua888.com/images/games/image3.jpg'
       } else if (gametype == 4) {
-        localQR = '../../images/games/ggzj.jpg';
-        localImageBg = '../../images/games/ggzj@2x.jpg';
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(480 * 2);
         titleColor = '#f2f2f2';
+        imageUrl = 'https://social.ajihua888.com/images/games/image4.jpg'
       } else if (gametype == 5) {
-        localQR = '../../images/games/jsyx.jpg';
-        localImageBg = '../../images/games/jsyx@2x.jpg';
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(520 * 2);
         titleColor = '#4caf50';
+        imageUrl = 'https://social.ajihua888.com/images/games/image5.jpg'
       }
       if (loadtype) {
+        //背景
+        wx.downloadFile({
+          url: imageUrl,
+          success(res) {
+            if (res.statusCode === 200) {
+              imageUrl = res.tempFilePath;
+            }
+          }
+        });
+        //二维码
         wx.downloadFile({
           url: ercodeUrl,
           success(res) {
@@ -207,8 +231,8 @@ Component({
             }
           }
         });
+        const backgroundPromise = getImageInfo(imageUrl);
         const avatarPromise = getImageInfo(ercodeUrl);
-        const backgroundPromise = localImageBg
         return { avatarPromise, backgroundPromise }
       }
 
@@ -222,17 +246,23 @@ Component({
       const { avatarPromise, backgroundPromise } = this.loadNetworkImage(1, this.properties.gametype);
       //绘制方法
 
-      Promise.all([avatarPromise, backgroundPromise])
-        .then(([avatar, background]) => {
+      Promise.all([backgroundPromise, avatarPromise])
+        .then(([background, avatar]) => {
           const ctx = wx.createCanvasContext('share', this)
+          // let imageSrc = background.data.data[0].url;
+          // var reg = /http/gm;
+          // imageSrc = imageSrc.replace(reg, 'https');
+          // console.log(imageSrc)
           // 绘制背景
+          console.log('开始绘制背景')
           ctx.drawImage(
-            backgroundPromise, //本地模式
+            background.path, //本地模式
             0,
             0,
             canvasW,
             canvasH
           );
+          console.log('开始绘制头像')
           // 绘制头像
           ctx.drawImage(
             avatar.path,
