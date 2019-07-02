@@ -15,30 +15,44 @@ let QRImageY = canvasH / 2 + radius / 2;
 
 let localQR = '', localImageBg = '', titleH = rpx2px(420 * 2), titleColor = '#f2f2f2', base64 = '';
 
-
-function getImageInfo(url) {
+function getImageSrc(url, gametype) {
   return new Promise((resolve, reject) => {
-    wx.getImageInfo({
-      src: url,
-      success: resolve,
+    wx.request({
+      url: url,
+      data: {
+        gamepath: 'game',
+        dirname: gametype
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      success: function (res1) {
+        let imageSrc = res1.data.data[0].url;
+        wx.downloadFile({
+          url: imageSrc,
+          success(res) {
+            if (res.statusCode === 200) {
+              imageSrc = res.tempFilePath;
+              wx.getImageInfo({
+                src: imageSrc,
+                success: resolve,
+                fail: reject
+              })
+            }
+          },
+          fail: reject
+        });
+      },
       fail: reject
     })
   })
 }
 
-function getImageInfo2(url) {
+function getImageInfo(url) {
   return new Promise((resolve, reject) => {
-    // wx.getImageInfo({
-    //   src: url,
-    //   success: resolve,
-    //   fail: reject
-    // })
-    wx.request({
-      url: url,
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      method: 'GET',
+    wx.getImageInfo({
+      src: url,
       success: resolve,
       fail: reject
     })
@@ -180,48 +194,34 @@ Component({
     loadNetworkImage(loadtype, gametype) {
       //loadtype 0为本地图片，1为网络图片
       let ercodeUrl = `https://social.ajihua888.com/v14/public/qrcode?gameurl=${this.properties.gameurl}`;
-      let imageUrl = `https://social.ajihua888.com/v14/public/games?gameid=${this.properties.gametype}`;
+      let imageUrl = 'http://social.ajihua888.com/v14/public/games';
       if (gametype == 1) {
         QRImageX = canvasW * 0.6;
         QRImageY = canvasH * 0.63;
         titleH = rpx2px(540 * 2);
         titleColor = '#ffc107';
-        imageUrl = 'https://social.ajihua888.com/images/games/image1.jpg'
       } else if (gametype == 2) {
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(400 * 2);
         titleColor = '#ff5722';
-        imageUrl = 'https://social.ajihua888.com/images/games/image2.jpg'
       } else if (gametype == 3) {
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(400 * 2);
         titleColor = '#009688';
-        imageUrl = 'https://social.ajihua888.com/images/games/image3.jpg'
       } else if (gametype == 4) {
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(480 * 2);
         titleColor = '#f2f2f2';
-        imageUrl = 'https://social.ajihua888.com/images/games/image4.jpg'
       } else if (gametype == 5) {
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(520 * 2);
         titleColor = '#4caf50';
-        imageUrl = 'https://social.ajihua888.com/images/games/image5.jpg'
       }
       if (loadtype) {
-        //背景
-        wx.downloadFile({
-          url: imageUrl,
-          success(res) {
-            if (res.statusCode === 200) {
-              imageUrl = res.tempFilePath;
-            }
-          }
-        });
         //二维码
         wx.downloadFile({
           url: ercodeUrl,
@@ -231,7 +231,8 @@ Component({
             }
           }
         });
-        const backgroundPromise = getImageInfo(imageUrl);
+        let dirpath = 'image'+this.properties.gametype+'.jpg';
+        const backgroundPromise = getImageSrc(imageUrl, dirpath);
         const avatarPromise = getImageInfo(ercodeUrl);
         return { avatarPromise, backgroundPromise }
       }
@@ -249,25 +250,18 @@ Component({
       Promise.all([backgroundPromise, avatarPromise])
         .then(([background, avatar]) => {
           const ctx = wx.createCanvasContext('share', this)
-          // let imageSrc = background.data.data[0].url;
-          // var reg = /http/gm;
-          // imageSrc = imageSrc.replace(reg, 'https');
-          // console.log(imageSrc)
-          // 绘制背景
-          console.log('开始绘制背景')
           ctx.drawImage(
-            background.path, //本地模式
+            background.path, 
             0,
             0,
             canvasW,
             canvasH
           );
-          console.log('开始绘制头像')
+
           // 绘制头像
           ctx.drawImage(
             avatar.path,
             QRImageX,
-            // y - radius,
             QRImageY,
             radius * 2,
             radius * 2,
