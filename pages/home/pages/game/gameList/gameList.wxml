@@ -1,4 +1,4 @@
-<compontNavbar title="逗逗玩" isShowBack="{{true}}"></compontNavbar>
+<compontNavbar title="{{tabTitle}}" isShowBack="{{true}}"></compontNavbar>
 <view class="container">
     <view class="fixed-box">
         <!-- <view class="search-box">

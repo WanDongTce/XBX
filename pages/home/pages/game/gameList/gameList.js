@@ -18,14 +18,16 @@ Page({
         options: [],
         nianji: nianji,
         gametype: gametype,
-        showEmpty: false
+        showEmpty: false,
+        tabTitle: ''
     },
     onLoad: function (options) {
         this.empty = this.selectComponent("#empty");
         this.compontNavbar = this.selectComponent("#compontNavbar");
         gametype = options.gametype;
         this.setData({
-            gametype: options.gametype
+            gametype: options.gametype,
+            tabTitle: options.title
         });
     },
     onShow: function () {
