@@ -214,7 +214,7 @@ Component({
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
         titleH = rpx2px(480 * 2);
-        titleColor = '#f2f2f2';
+        titleColor = '#ffffff';
       } else if (gametype == 5) {
         QRImageX = canvasW / 2 - radius;
         QRImageY = canvasH / 2 + radius / 2;
