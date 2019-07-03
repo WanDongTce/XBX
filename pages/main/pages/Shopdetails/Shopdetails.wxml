@@ -56,8 +56,8 @@
     </view>
   </view>
   <view class='list_sun'>
-    <view class='list' wx:for="{{list_sun}}">
-        <view class='photo'>
+  <navigator class='list' wx:for="{{list_sun}}"  url="{{'/pages/home/pages/ecology/goodsDetailNew/goodsDetailNew?id=' + item.id}}">
+     <view class='photo'>
           <image src='{{item.image}}'></image>
         </view>
         <view class='right'>
@@ -79,7 +79,11 @@
       </view>
         </view>
          <view class='clearfix'></view>
-    </view>
+  </navigator>
+
+    <!-- <view class='list' wx:for="{{list_sun}}">
+       
+    </view> -->
   </view>
   <view class='clearfix'></view>
 </view>
