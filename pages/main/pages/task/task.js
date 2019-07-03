@@ -34,6 +34,12 @@ Page({
 
         newTextSignStatus:0,
     },
+  topshoop: function () {
+    wx.navigateBack({
+      delta: 1
+    })
+
+  },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
 

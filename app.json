@@ -1,6 +1,12 @@
 {
   "pages": [
-    "pages/main/pages/home/home",
+   "pages/main/pages/home/home",
+    "pages/main/pages/shopping/shopping",
+  
+  
+    "pages/main/pages/car/car",
+    "pages/main/pages/Shopdetails/Shopdetails",
+    
     "pages/main/pages/msg/msg",
     "pages/main/pages/find/find",
     "pages/main/pages/task/task",
@@ -271,8 +277,8 @@
         "selectedIconPath": "images/tabBtom/msg.png"
       },
       {
-        "pagePath": "pages/main/pages/task/task",
-        "text": "任务",
+        "pagePath": "pages/main/pages/shopping/shopping",
+        "text": "商铺",
         "iconPath": "images/tabBtom/task2.png",
         "selectedIconPath": "images/tabBtom/task.png"
       },

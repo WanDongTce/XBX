@@ -1,0 +1,73 @@
+<view class="header"><text>商铺</text><view class='reton_sun' bindtap='topshoop'><image src='/pages/main/images/shopping/car.png' class='reton'></image>
+  <view class='inf {{number_sun>0?"bl":""}}'></view>
+</view></view>
+<view class='list_box' style='height:{{hh}}'hidden="{{show}}">
+  <view class='list'wx:for="{{list}}"  wx:key="index" bindtap="onTapdetail" data-postad="{{item.id}}">
+    <view class='top'>
+      <view class='pic'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='name_box'>
+        <view class='name'>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='bottom'>
+              <view class='Star'>
+                <view class='Star_sun'>
+                  <image src='/pages/main/images/shopping/green.png' class="{{item.score>=1?'active':''}}"></image>
+                </view>
+                <view class='Star_sun'>
+                   <image src='/pages/main/images/shopping/green.png' class="{{item.score>=2?'active':''}}"></image>
+                </view>
+                <view class='Star_sun'>
+                   <image src='/pages/main/images/shopping/green.png' class="{{item.score>=3?'active':''}}"></image>
+                </view>
+                <view class='Star_sun'>
+                   <image src='/pages/main/images/shopping/green.png' class="{{item.score>=4?'active':''}}"></image>
+                </view>
+                <view class='Star_sun'>
+                   <image src='/pages/main/images/shopping/green.png'class="{{item.score>=5?'active':''}}"></image>
+                </view>
+                <view class='Fraction'>{{item.score}}分</view>
+                <view class='address'>{{item.distance}}</view>
+                <view class='clearfix'></view>
+              </view>
+            </view>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+    <view class='bottom_box'>
+       <view class='photo01'wx:if="{{index<3}}" wx:for="{{item.goods_list}}" wx:index='index'  wx:key="iindex" wx:for-item="iitem">
+          <image  src='{{iitem.image}}'></image>
+        </view>
+        <view class='clearfix'></view>
+    </view>
+  </view>
+</view>
+<view class='none_box'hidden="{{show_sun}}">
+<image src='/pages/main/images/shopping/none.png'></image>
+<text>您还没有关注的商铺哦~</text>
+</view>
+<!-- <view class='footer'>
+  <view class='list' bindtap='to_index'>
+    <image src='/pages/main/images/shopping/index.png'></image>
+    <text>学霸学</text>
+  </view>
+  <view class='list' bindtap='to_find'>
+     <image src='/pages/main/images/shopping/index02.png'></image>
+      <text>消息</text>
+  </view>
+  <view class='list'>
+    <image src='/pages/main/images/shopping/index03.png'></image>
+    <text>商铺</text>
+  </view>
+  <view class='list'  bindtap='to_find'>
+     <image src='/pages/main/images/shopping/index04.png'></image>
+     <text>发现</text>
+  </view>
+  <view class='list'bindtap='to_my'>
+     <image src='/pages/main/images/shopping/index05.png'></image>
+     <text>我的</text>
+  </view>
+  <view class='clearfix'></view>
+</view> -->
