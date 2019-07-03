@@ -1,4 +1,4 @@
-<view class="header"><text>逗逗超市</text><view class='reton_sun' bindtap='topshoop'><image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<view class="header"><text>店铺详情</text><view class='reton_sun' bindtap='topshoop'><image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
 <view class='banner'>
   <swiper indicator-dots="true">
     <swiper-item; wx:for="{{imgurl}}">
