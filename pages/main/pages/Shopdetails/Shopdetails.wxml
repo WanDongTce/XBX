@@ -69,10 +69,10 @@
           <text>￥{{item.price}}</text>
         </view>
         <view class='number'>
-          <image src='/pages/main/images/Shopping/down.png'bindtap='reduce' data-id='{{item.id}}'
+          <image src='/pages/main/images/Shopping/down.png'catchtap='reduce' data-id='{{item.id}}'
           class='{{item.cart_num < 1 ? "disabled" : "normal"}}'></image>
           <text  class='{{item.cart_num < 1 ? "disabled" : "normal"}}'>{{item.cart_num}}</text>
-          <image src='/pages/main/images/Shopping/up.png' bindtap='addCount' data-id='{{item.id}}'></image>
+          <image src='/pages/main/images/Shopping/up.png' catchtap='addCount' data-id='{{item.id}}'></image>
           <view class='clearfix'></view>
         </view>
         <view class='clearfix'></view>
