@@ -129,7 +129,7 @@
             </view> -->
 
 
-      <navigator class='bottom_leftitem' url='/pages/home/pages/periphery/gift/gift'>
+      <navigator class='bottom_leftitem' url='/pages/main/pages/car/car'>
         <image src='../../../../../images/tabBtom/gift2.png' class='bottom_img'></image>
         <view class='f_24 c_666'>购物车</view>
       </navigator>
