@@ -18,14 +18,16 @@ Page({
         options: [],
         nianji: nianji,
         gametype: gametype,
-        showEmpty: false
+        showEmpty: false,
+        tabTitle: ''
     },
     onLoad: function (options) {
         this.empty = this.selectComponent("#empty");
         this.compontNavbar = this.selectComponent("#compontNavbar");
         gametype = options.gametype;
         this.setData({
-            gametype: options.gametype
+            gametype: options.gametype,
+            tabTitle: options.title
         });
     },
     onShow: function () {
@@ -126,7 +128,7 @@ Page({
             wx.hideLoading();
             if (res.data.code == 200) {
                 wx.navigateTo({
-                    url: '/pages/home/pages/game/gameDetail/gameDetail?info=' + JSON.stringify(a)
+                    url: `/pages/home/pages/game/gameDetail/gameDetail?info=${JSON.stringify(a)}&gametype=${gametype}`
                 })
                 // wx.navigateTo({
                 //     url: '/pages/home/pages/game/gameWebview/gameWebview?src=' + JSON.stringify(a)

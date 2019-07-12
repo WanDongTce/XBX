@@ -19,23 +19,23 @@
         <image class="tab-img" src="../../images/edutList/edu_tab4.png"></image>
         <view class='tab-text f_26 c_333'>精品课程</view>
     </navigator> -->
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=1">
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=1&title=明日之星">
         <image class="tab-img" src="../../images/edutList/edu_tab5.png"></image>
         <view class='tab-text f_26 c_333'>明日之星</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=2">
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=2&title=王者之战">
         <image class="tab-img" src="../../images/edutList/edu_tab6.png"></image>
         <view class='tab-text f_26 c_333'>王者之战</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=3">
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=3&title=明日之星挑战赛">
         <image class="tab-img" src="../../images/edutList/edu_tab7.png"></image>
         <view class='tab-text f_26 c_333'>挑战赛</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=4">
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=4&title=过关斩将">
         <image class="tab-img" src="../../images/edutList/edu_tab8.png"></image>
         <view class='tab-text f_26 c_333'>过关斩将</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=5">
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=5&title=即时游戏">
         <image class="tab-img" src="../../images/edutList/edu_tab9.png"></image>
         <view class='tab-text f_26 c_333'>即时游戏</view>
     </navigator>

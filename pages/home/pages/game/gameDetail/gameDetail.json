@@ -1,5 +1,6 @@
 {
         "usingComponents": {
-            "compontNavbar": "/component/navigation/navigation"
+            "compontNavbar": "/component/navigation/navigation",
+            "canvas-share": "/component/canvas-share/index"
         }
 }

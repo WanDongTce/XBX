@@ -69,7 +69,7 @@
             <view class='item_title f_28'>{{item.name}}</view>
             <scroll-view class='newonlineter_scroll display-flex' scroll-x="true" wx:if="{{item.images}}">
                 <view class='newonlineter_item' wx:for='{{item.images}}' wx:key='this'>
-                    <image wx:if="{{item}}" src="{{item}}" mode='aspectFill' catchtap="previewImg" data-index="{{idx}}" data-img="{{item}}" data-imgs="{{item}}"></image>
+                    <image wx:if="{{item}}" src="{{item}}" mode='aspectFit' catchtap="previewImg" data-index="{{idx}}" data-img="{{item}}" data-imgs="{{item}}"></image>
                     
                 </view>                   
             </scroll-view>

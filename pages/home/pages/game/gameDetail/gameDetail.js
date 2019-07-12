@@ -9,29 +9,49 @@ Page({
         IMGURL: app.imgUrl,
         base: '../../../../../',
         showCanvas: false,
-        size: {}
+        size: {},
+        //分享
+        visible: false,
+        title: '',
+        gametype: 0
     },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
-        var a = JSON.parse(options.info);
+        var a = JSON.parse(options.info); 
         info = a;
-        console.log(a);
+        var title = info.nianjistr||info.title;
         var that = this;
         var size = that.setCanvasSize();
         // console.log(size);
         that.createQrCode(a.dizhi, "mycanvas", size.w, size.h);
         that.setData({
             showCanvas: true,
-            size: size
+            size: size,
+            //share
+            title: title,
+            gametype: parseInt(options.gametype),
+            gameurl: a.dizhi
         });
+        
     },
     onShow: function () {
 
     },
+    //分享图片事件
+    //事件处理函数
+    showShareImg: function () {
+        // console.log(typeof info);
+        var title = info.nianjistr||info.title;
+        this.setData({ visible: true,title: title, gameurl: info.dizhi })
+    },
+    closeShareImg: function () {
+        this.setData({ visible: false })
+    },
+    //share end
     setCanvasSize: function () {
         //   console.log(app);
         var size = {};
-        var res = app.systemInfo;
+        let res = wx.getSystemInfoSync();
         var width = res.windowWidth * .6;
         var height = width;
         size.w = width;
@@ -116,7 +136,9 @@ Page({
         };
         // return {
         //     title: info.title,
-        //     path: "/pages/common/webView/webView?src=" + info.dizhi,
+        //     // path: "/pages/common/webView/webView?src=" + info.dizhi,
+        //     // path: info.dizhi,
+        //     path: 'https://www.baidu.com',
         //     imageUrl: that.data.IMGURL + 'game/playgame.png',
         //     success: function (res) {
         //         // 转发成功

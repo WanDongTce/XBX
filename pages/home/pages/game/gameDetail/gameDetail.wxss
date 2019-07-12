@@ -48,3 +48,19 @@ button[plain]{
     width: 50%;
     margin: 0 auto;
 }
+
+/* share */
+.share-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+.click-share {
+    border-radius: 15rpx;
+    /* width: 300rpx; */
+    margin: 0 50rpx;
+    height: 100rpx;
+    background-color: rgb(28, 208, 5);
+    color: white;
+}
