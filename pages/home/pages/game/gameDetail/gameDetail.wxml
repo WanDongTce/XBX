@@ -1,9 +1,9 @@
 <compontNavbar title="{{navTitle}}" isShowBack="{{true}}"></compontNavbar>
 <view class="box">
 <canvas-share bindclose="closeShareImg" visible="{{visible}}" title="{{title}}" gametype="{{gametype}}" gameurl="{{gameurl}}" />
-<view class="share-wrap">
+<!--<view class="share-wrap">
         <button bindtap="showShareImg" class="click-share">点击保存到相册分享</button>
-</view>
+</view>-->
     <!--<view class="tit">长按保存二维码，发送给好友进行游戏</view>
     <canvas wx:if="{{showCanvas}}" catch:longtap="saveImg" canvas-id="mycanvas" style="width:{{size.w}}px;height: {{size.h}}px;"/>
     <view class="btns">
