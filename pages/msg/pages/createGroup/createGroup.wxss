@@ -1,0 +1,92 @@
+.component-class{
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.box {
+    width: 100%;
+    padding: 8vh 0 8vh;
+}
+.input-container {
+    position: fixed;
+    top: 10vh;
+    z-index: 10;
+    width: 100%;
+    height: 6vh;
+    background-color: #fff;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.input-box {
+    width: 93%;
+    height: 100%;
+
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    font-size: 26rpx;
+    color: #333;
+}
+.search-icon{
+    width: 22rpx;
+    height: 22rpx;
+}
+.place_holder {
+    color: #999;
+}
+
+.list{
+    width: 100%;
+}
+.item {
+    width: 100%;
+    border-bottom: 1rpx solid #dfdfdf;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    padding: 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.lt{
+    width: 80%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.rt{
+    width: 20%;
+    text-align: right;
+}
+.sel-icon {
+    width: 30rpx;
+    height: 30rpx;
+}
+.item-img {
+    width: 78rpx;
+    height: 78rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.item-name {
+    font-size: 30rpx;
+    color: #333;
+}
+
+.btn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    font-size: 34rpx;
+    color: #fff;
+    background-color: #4bace2;
+    text-align: center;
+}

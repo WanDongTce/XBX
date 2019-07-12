@@ -1,0 +1,62 @@
+<compontNavbar title="完善个人信息" isShowBack="{{true}}"></compontNavbar>
+<form bindsubmit="bindFormSubmit">
+    <view class='itembox display-flex'>
+        <view class='item_mustimg'>*</view>
+        <text class='item_left'>姓名：</text>
+        <input type="text" name="name" placeholder='请输入真实姓名' class='input' placeholder-class='placeholder'></input>
+    </view>
+    <view class='itembox display-flex'>
+        <text class='item_left gender'>性别：</text>
+        <view class='gender_boy' bindtap='genderBindTap' data-gander='1'>
+            男
+            <image src="{{genderId == 1?'../../../images/male_check.png': '../../../images/male_uncheck.png'}}" class='gender_boyimg'></image>
+        </view>
+        <view class='gender_girl' bindtap='genderBindTap' data-gander='2'>
+            女
+            <image src="{{genderId == 2?'../../../images/female_check.png': '../../../images/female_uncheck.png'}}" class='gender_girlimg'></image>
+        </view>
+    </view>
+
+    <view class="picker-box" bindtap="showPicerFn">
+        <view class='item_mustimg2'>*</view>
+        <view class="picker">
+            学校地址：
+            <text wx:if="{{address.length > 0}}">{{address[0].name + address[1].name + address[2].name}}</text>
+        </view>
+        <image src='{{base}}images/arowDown.png' class='arrowimg'></image>
+    </view>
+
+    <picker mode="selector" bindchange="bindPickerSchool" value="{{schoolIndex}}" range="{{schoolList}}" range-key="name">
+        <view class='item_mustimg2'>*</view>
+        <view class="picker">
+            学校名称：
+            <text>{{schoolList[schoolIndex].name}}</text>
+        </view>
+        <image src='{{base}}images/arowDown.png' class='arrowimg'></image>
+    </picker>
+
+
+    <picker mode="selector" bindchange="bindPickerGrade" value="{{gradeIndex}}" range="{{gradeList}}" range-key="name">
+        <view class='item_mustimg2'>*</view>
+        <view class="picker">
+            所在年级：
+            <text>{{gradeList[gradeIndex].name}}</text>
+        </view>
+        <image src='{{base}}images/arowDown.png' class='arrowimg'></image>
+    </picker>
+
+
+    <picker mode="selector" bindchange="bindPickerClass" value="{{classIndex}}" range="{{classList}}" range-key="name">
+        <view class='item_mustimg2'>*</view>
+        <view class="picker">
+            所在班级：
+            <text>{{classList[classIndex].name}}</text>
+        </view>
+        <image src='{{base}}images/arowDown.png' class='arrowimg'></image>
+    </picker>
+
+    <button formType="submit" class="btn">下一步</button>
+    <view class="btn2" bindtap="next">跳过</view>
+</form>
+
+<addressPicker wx:if="{{showPicker}}" catch:pikerConfirm="getAddressInfo" catch:pikerCancel="hidePicker"></addressPicker>

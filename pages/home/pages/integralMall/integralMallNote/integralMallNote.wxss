@@ -1,0 +1,59 @@
+@import "../../../../../template/tab/tab.wxss";
+
+.tabs {
+    border-bottom: 1rpx solid #dfdfdf;
+}
+
+.display_inline {
+    display: inline;
+}
+ 
+page {
+    padding-top: 18vh;
+} 
+
+
+/*积分使用  */
+
+.left_box {
+    margin: 0 24rpx;
+}
+
+.left_titlebox {
+    display: flex;
+    margin: 63rpx 0 20rpx;
+}
+
+.left_line {
+    width: 6rpx;
+    height: 32rpx;
+    background-color: #4bace2;
+}
+
+.left_title {
+    font-size: 32rpx;
+    color: #333;
+    margin-left: 20rpx;
+    line-height: 32rpx;
+    font-weight: bold;
+}
+
+.left_content {
+    margin-left: 26rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    word-wrap: break-word;
+}
+
+.left_titlebox2 {
+    display: flex;
+    margin: 48rpx 0 20rpx;
+}
+
+.newcontent {
+    margin: 0 24rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    word-wrap: break-word;
+    margin-top: 24rpx;
+}

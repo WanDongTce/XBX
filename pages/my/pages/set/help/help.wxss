@@ -1,0 +1,28 @@
+page{
+  background-color:#f4f4f4;
+}
+.bigbox{
+  background-color:#fff;
+  margin:20rpx;
+  padding:0 20rpx;
+}
+.box{
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1rpx solid #f7f7f7;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:28rpx;
+}
+.text_left{
+  color:#6d6d7d;
+}
+.cl2{
+  color:#8f8f8f;
+}
+.cl3{
+  color:#4bace2;
+}
+.border-none{
+  border: none;
+}

@@ -1,0 +1,36 @@
+<!--pages/service/rewardEdit/rewardEdit.wxml-->
+<compontNavbar title="自由奖励" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<form bindsubmit="bindFormSubmit">
+
+<picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="zcfx_box3 overf" > 
+      <view class='zcfx_text3 fl '>奖励类别：</view>
+      <text class='newpicker fl '>{{array[index]}}</text>
+         
+</picker>
+
+<view class='zcfx_box4 overf'>
+  <view class='zcfx_text4 fl'>奖励名称：</view>
+  
+  <textarea hidden='{{}}' class="zcfx_textarea fl {{model==1 ? 'position_15':''}}" placeholder='' auto-height="true"  id="xfmc"  name="xfmc" value='{{xfmc}}' maxlength="25"></textarea>
+</view>
+
+<view class='zcfx_box2 overf'>
+  <picker mode="date" value="{{date1}}" start="2010-01-01" end="{{currentdate}}" bindchange="bindDateChange">
+    <view class="form_group">
+        <text class='zcfx_text2 fl'>奖励时间：</text>
+        <text class="zcfx_pickertime">{{date1}}</text>           
+    </view>
+  </picker>
+</view>
+<view class='zcfx_box overf'>
+  <view class='zcfx_text fl'>备注摘要：</view>
+
+  <textarea hidden='{{}}' class="zcfx_textarea2 fl {{model==1 ? 'position_d15':''}}" placeholder='' auto-height="true" id="bzzy"  name="bzzy" value='{{bzzy}}' cursor-spacing="90"></textarea>
+</view>
+
+
+<button formType="submit" class="add_btn">保存</button>
+
+</form>
+

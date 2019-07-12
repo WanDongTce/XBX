@@ -1,0 +1,15 @@
+/* pages/edutlList/Learning/Learning.wxss */
+page{
+  border-top: solid 1rpx #ddd;
+  background-color:#fff;
+}
+.Learming{
+  width: 92%; 
+  height: 134rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.Learming-images{
+  width: 690rpx;
+  height: 134rpx;
+}

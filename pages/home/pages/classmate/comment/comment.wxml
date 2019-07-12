@@ -1,0 +1,27 @@
+<!--pages/classmate/comment/comment.wxml-->
+<compontNavbar title="评论" isShowBack="{{true}}"></compontNavbar>
+<view class='border_top'>
+    <view class="homework-cont">
+      <view class='textarea_box'>        
+        <textarea placeholder="写评论..." placeholder-class="placeh" bindinput="saveMsg" maxlength="280" value="{{msg}}"></textarea>       </view>
+    </view>
+    
+    <!-- <view class='display-flex myimg_box'>
+      <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+          <image src="{{item}}" class="hmwk-img"></image>
+          <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+      </view>
+    </view>
+    
+    <view class='overf bottom_fixbox'>
+      
+      <view class='submit_minbox fr' catchtap="addImg">
+        <image src='{{base}}images/publish_img.png' class='submitpic_pic'></image>
+        
+      </view>
+    </view> -->
+    <view class='submitpic_box overf' >      
+      <view class='fabu fr' bindtap='submit'>发布</view>
+    </view>
+    
+</view>

@@ -1,0 +1,7 @@
+<import src="../../../../../wxParse/wxParse.wxml" />
+<compontNavbar title="新闻详情" isShowBack="{{true}}"></compontNavbar>
+<view class="comt-box">
+    <view class="rich-text-box">
+        <template is="wxParse" data="{{wxParseData: content.nodes}}"></template>
+    </view>
+</view>

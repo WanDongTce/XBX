@@ -1,0 +1,25 @@
+<compontNavbar title="我的消息" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<block wx:else>
+    <view class='mt16'>
+    <view class="box position-relative" wx:for="{{list}}" wx:key="this" bindtap="toDetail" data-item="{{item}}">
+        <view class='unread' wx:if="{{item.read == 2}}"></view>
+        
+        <view class='display-flex item-box'>
+            <!-- 4:申请易货被同意 3:易货有新申请  -->
+            <image wx:if="{{item.resourcetypeid == 3 || item.resourcetypeid == 4}}" src='{{IMGURL}}my/news_2.png' class='news_img'></image>
+            <!-- 1:作业即答  -->
+             <image wx:if="{{item.resourcetypeid == 1}}" src='{{IMGURL}}my/news_3.png' class='news_img'></image>
+            <view class='display-flex justify-content-between new_msgline'>
+                <view>
+                    <view class='title one_line'>{{item.title}}</view>
+                    <view class='item_content one_line'>{{item.content}}</view>
+                </view>
+                <view class='item_time'>{{item.send_time}}</view>
+            </view>
+        </view>
+    </view>
+    </view>
+</block>

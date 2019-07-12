@@ -1,0 +1,2 @@
+<compontNavbar title="关于我们" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<empty></empty>

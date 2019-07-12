@@ -1,0 +1,55 @@
+page {
+    background-color: #f7f7f7;
+}
+
+.phone {
+    margin: 60rpx 0 60rpx 30rpx;
+    font-size: 29rpx;
+    color: #483f31;
+}
+
+.itembox {
+    background-color: #fff;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 30rpx;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20rpx;
+}
+
+.left {
+    font-size: 29rpx;
+    color: #483f31;
+}
+
+input {
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #483f31;
+    font-size: 29rpx;
+    text-align: right;
+}
+
+.placeholder2 {
+    color: #c4c3c8;
+}
+
+.note {
+    line-height: 44rpx;
+    color: #919191;
+    font-size: 24rpx;
+    margin: 0 30rpx;
+}
+
+.btn {
+    background-color: #4bace2;
+    border-radius: 10rpx;
+    margin: 70rpx auto 0;
+    color: #fff;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 690rpx;
+    text-align: center;
+    font-size: 32rpx;
+}

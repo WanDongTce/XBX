@@ -1,0 +1,86 @@
+/* pages/my/set/set.wxss */
+page{
+  background-color:#f4f4f4;  
+}
+/* .box{
+  padding:0 24rpx;
+  height:100rpx;
+  box-sizing: border-box; 
+  justify-content: space-between;
+  background-color:#fff;
+  align-items:center;  
+}
+.border_bottom{
+  border-bottom:1rpx solid #dfdfdf;
+}
+.box_left{
+  font-size:32rpx;
+  color:#333;
+}
+.set_arrow{
+  width: 13rpx;
+  height:23rpx;
+}
+.btn_box{
+  width:100%;
+  position:fixed;
+  bottom:50rpx;
+  
+} */
+.box{
+  background-color:#fff;
+  border-radius:10rpx;
+  line-height:90rpx;
+  color:#61606e;
+  font-size:29rpx;
+  margin:20rpx 30rpx 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.box_left{
+  margin-left:40rpx;
+}
+/* switch{
+  height:20rpx;
+} */
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+  width:82rpx !important;
+  height:40rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:80rpx !important;
+  height: 36rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 40rpx !important;
+  height: 36rpx !important;
+}
+/*swtich样式end*/
+.body-view{
+    margin-right:40rpx;
+}
+
+
+
+.btn_box{
+  width:100%;
+  position:fixed;
+  bottom:50rpx;
+  
+} 
+.btn{
+  
+  background-color:#4bace2;
+  border-radius:10rpx;
+  margin:0rpx auto;
+  color:#fff;
+  height:100rpx;
+  line-height:100rpx; 
+  width:690rpx;
+  text-align: center;
+  font-size:32rpx;
+}

@@ -1,0 +1,53 @@
+<!--pages/my/pages/myOrder/myOrder.wxml-->
+<compontNavbar title="我的订单" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<import src="../../../../template/tab/tab.wxml" />
+
+<view class="box">   
+  <view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="this">
+            <template is="{{tabindex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+        </block>
+  </view>
+</view>
+<view class='tab-content'>
+    <block wx:if="{{showEmpty}}">
+          <empty></empty>
+    </block>
+    <view  class='list' wx:for="{{list}}" wx:key="this" >   
+        <view class='display-flex justify-content-between align-items-center' catchtap='tz_detail' data-ordersn='{{item.order_sn}}'>
+            <view class='new_sjname display-flex align-items-center'>                  
+                <image wx:if='{{item.business.name}}' src='../../../my/images/ecology/business_type2.png' class='business_type_img'></image>
+                <view class='f_28 c_333 new_business_name1'>{{item.business.name}}</view>
+                <image wx:if='{{item.business.name}}' src='../../../../images/arowRtGray.png' class='arowRtGray'></image>
+            </view>
+            <view wx:if="{{item.status==1}}" class='f_30 new_sjname_right'>待支付</view>
+            <view wx:if="{{item.status==2}}" class='f_30 new_sjname_right'>待发货</view>
+            <view wx:if="{{item.status==3}}" class='f_30 new_sjname_right'>待收货</view>
+            <view wx:if="{{item.status==4}}" class='f_30 new_sjname_right'>已完成</view>
+            <view wx:if="{{item.status==5}}" class='f_30 new_sjname_right'>用户取消</view>
+            <view wx:if="{{item.status==6}}" class='f_30 new_sjname_right'>商家取消</view>
+            <view wx:if="{{item.status==7}}" class='f_30 new_sjname_right'>未支付订单自动关闭</view>
+        </view>
+        <view class='item display-flex new_item_box' wx:for="{{item.details}}" wx:key="this" catchtap='tz_detail' data-ordersn='{{item.order_sn}}'>
+            <view class='item-img'>
+                <image src='{{item.image}}' class='img'></image>
+            </view>
+            <view class='item-content-box'>
+                <view class='item-title'>
+                    {{item.title}}
+                </view>                
+            </view>
+        </view>
+        <view class='display-flex align-items-center new_my_totalbox' catchtap='tz_detail' data-ordersn='{{item.order_sn}}'>
+            <view class='new_my_total1 f_30 c_333'>共{{item.total_number}}件商品</view>
+            <view class='new_my_total2 f_30 c_333'>实付款：<text class='f_24'>￥</text><text class='f_32'>{{item.price_all}}</text></view>
+        </view>
+        
+        <view wx:if="{{item.status==1}}" class='new_buttonbox display-flex' >
+            <button class='' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin" data-ordersn="{{item.order_sn}}" >去支付</button>
+            <!-- <view data-ordersn="{{item.order_sn}}" catchtap="payOrder">待支付</view> -->
+            <view data-ordersn="{{item.order_sn}}" catchtap="cancelOrder">取消订单</view>
+        </view>
+    </view>
+    
+</view>

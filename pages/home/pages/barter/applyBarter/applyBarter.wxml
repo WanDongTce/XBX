@@ -1,0 +1,25 @@
+<compontNavbar title="申请易货" isShowBack="{{true}}"></compontNavbar>
+<block wx:if="{{showEmpty}}"><empty></empty></block>
+<block wx:else>
+  <view class="Header" bindtap='choice' data-id='{{index}}' wx:for="{{model}}" wx:key>
+    <view wx:if="{{item.checked}}">
+       <image src="{{base}}images/yuan2.png" class="Header-left"></image>
+    </view>
+    <view wx:else>
+       <image src="{{base}}images/yuan1.png" class="Header-left"></image>
+    </view>
+    <image class="Header-center" src='{{item.picurl}}'></image>
+    <view class="Header-right">
+      <text class="Header-text">{{item.name}}</text>
+    </view>
+  </view>
+<view class="tail">
+  <view class="tail-left" bindtap='btn_qx'>
+    <text class="tail-text">取消</text>
+  </view>
+  <view  bindtap='btn_sure' class="tail-right">
+    <text class="tail-text">确认</text>
+  </view>
+</view>
+
+</block>

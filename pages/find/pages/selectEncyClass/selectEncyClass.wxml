@@ -1,0 +1,9 @@
+<compontNavbar title="选择分类" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <view class="left">
+        <view class="lt-item {{seletedPid == item.id? 'active' : ''}}" wx:for="{{sort}}" wx:key="this" catchtap="getContent" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+    <view class="right">
+        <view class="rt-item" wx:for="{{items}}" wx:key="this" catchtap="back" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</view>
+    </view>
+</view>

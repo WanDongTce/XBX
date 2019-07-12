@@ -1,0 +1,45 @@
+page{
+    background: #f7f7f7;
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+    background: #fff;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.lt-item{
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+    padding: 30rpx 0;
+    text-align: center;
+}
+.active{
+    color: #fd9941;
+}
+.rt-item{
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.rt-item:last-child{
+    border-bottom: none;
+}

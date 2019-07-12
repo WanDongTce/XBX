@@ -1,0 +1,157 @@
+/* pages/edutlList/achievement/achievement.wxss */
+page{
+  background-color:#f4f4f4;
+  padding-bottom:10vh;
+}
+.search-box{
+    position:fixed;
+    z-index: 1;
+    left:0;top:0;
+    width: 100%;
+    height: 8vh;
+    background: #faf9f9;
+    border-bottom: 1rpx solid #ddd;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+}
+.search-cont{
+    width: 80%;
+    height: 5vh;
+    background: #e8e8e8;
+    border-radius: 10rpx;
+    display: felx;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-left:5%;
+}
+.search-icon{
+    width: 6%;
+    margin-right: 3%;
+}
+.search-input{
+    width: 88%;
+    font-size: 26rpx;
+    color: #a1a1a1;
+}
+.search_box_new{
+  justify-content: space-between;
+  align-items: center;
+}
+.preview_home_img{
+  width:3.33vh;
+  height:3vh;
+  margin-right:5%;
+}
+.records{
+  position: fixed;
+  width: 100%;
+  height: 87rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-top: solid 1rpx #ddd;
+  border-bottom: solid 1rpx #ddd;
+  background-color: #fff;
+  z-index: 55;
+}
+.records-text{
+  font-size: 28rpx;
+  color: #454545;
+  margin-left: 146rpx;
+}
+.records-img{
+  position: absolute;
+  top: 44rpx;
+  width: 14rpx;
+  height: 11rpx;
+  margin-left: 15rpx;
+}
+.records-time{
+  font-size: 28rpx;
+  color: #454545;
+  margin-left: 296rpx;
+}
+.head{
+  width: 100%;
+  height:90rpx;
+}
+.subject{
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom:1rpx solid #dfdfdf;
+}
+.sbm{
+  width: 50%;
+  height: 160rpx;
+}
+.subject-box{
+  position: relative;
+  top: 19rpx;
+  left: 30rpx;
+  width: 50%;
+}
+.subject-text{
+  font-size: 31rpx;
+  color: #4bace2;
+}
+.subject-one{
+  position: relative;
+  top: 13rpx;
+  left: 30rpx;
+  width: 100%;
+}
+.subject-two{
+  position: relative;
+  top: 0rpx;
+  left: 30rpx;
+  width: 100%;
+}
+.text{
+  font-size: 27rpx;
+  color: #999;
+}
+.edit{
+  position: absolute;
+  right: 30rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+}
+.edit-a{
+  font-size: 28rpx;
+  color: #4bace2;
+}
+.bottom{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: #4bace2;
+}
+.bottom-text{
+  font-size: 34rpx;
+  color: #fff;
+}
+
+.subject_bigbox{
+  padding-bottom:90rpx;
+  /* margin-top:8vh; */
+}
+
+.reward_name_new{
+  width:520rpx;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;
+}

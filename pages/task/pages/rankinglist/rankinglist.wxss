@@ -1,0 +1,123 @@
+page {
+    background-color: #f7f7f7;
+}
+.top-box{
+    width: 100%;
+    height: 330rpx;
+    background: -webkit-linear-gradient(45deg, #1cb7b1, #1dcca3, #1edb99);
+    background: linear-gradient(45deg, #1cb7b1, #1dcca3, #1edb99);
+    margin-bottom: 16rpx;
+}
+
+.top-cont {
+    width: 90%;
+    height: 270rpx;
+    margin: 30rpx auto;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.top-item {
+    width: 33.33%;
+    text-align: center;
+}
+.top-item-img-1{
+    width: 143rpx;
+    height: 143rpx;
+}
+.top-item-img-2{
+    width: 124rpx;
+    height: 124rpx;
+}
+.top-item-img{
+    border: 2rpx solid #fff;
+    border-radius: 50%;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.frist-box{
+    position: relative;
+    width: 143rpx;
+    height: 171rpx;
+    margin: 0 auto 20rpx;
+    overflow: hidden;
+}
+.first-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65rpx;
+    height: 54rpx;
+}
+.frist-box .top-item-img{
+    margin-bottom: 0;
+    margin-top: 28rpx;
+}
+.top-item-info{
+    width: 100%;
+    text-align: center;
+}
+.top-item-info image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 8rpx;
+    vertical-align: middle;
+    display: inline-block;
+}
+.top-item-info text{
+    font-size: 30rpx;
+    color: #fff;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list{
+    width: 100%;
+    background: #fff;
+}
+
+.item {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1rpx solid #dfdfdf;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item:last-child{
+    border-bottom: none;
+}
+.td{
+    width: 30%;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.td:nth-child(2){
+    width: 40%;
+}
+.item-name {
+    color: #333;
+
+}
+
+.item-num {
+    font-size: 32rpx;
+    color: #fbc64c;
+}
+
+.item-num text {
+    font-size: 24rpx;
+    color: #999;
+    margin-left: 7rpx;
+}

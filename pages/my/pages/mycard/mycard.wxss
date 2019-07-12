@@ -1,0 +1,97 @@
+page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+.component-class{
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.list{
+    width: 96%;
+    margin: 20rpx auto;
+    
+}
+.item{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.cont{
+    width: 100%;
+    padding: 10rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.head{
+    width: 85%;
+    margin: 0 auto;
+    padding: 16rpx 0 26rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lt{
+    width: 74%;
+}
+.h1{
+    width: 100%;
+    font-size: 30rpx;
+    color: #fff;
+    /* margin-bottom: 16rpx; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* .time{
+    width: 100%;
+    font-size: 26rpx;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */
+.price{
+    width: 25%;
+    text-align: right;
+    font-size: 40rpx;
+    color: #fff;
+    font-style: italic;
+}
+.tip{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10rpx;
+}
+.tip-cont{
+    width: 70%;
+    font-size: 26rpx;
+    color: #999;
+    line-height: 2em;
+}
+.btn{
+    width: 25%;
+    font-size: 26rpx;
+    color: #8ad646;
+    border: 1rpx solid #8ad646;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 2em;
+}

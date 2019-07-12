@@ -1,0 +1,35 @@
+<compontNavbar title="评论详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='link_box'>
+  <view class="link" bindtap='tz_into'>进入页面</view>
+</view>
+<view class='item_box overf'>
+  <view class='fl item_header_box'>
+    <image wx:if="{{list.userInfo.avatar==''}}" class='item_header' src='../../../../images/default-user-2.png'></image>
+    <image wx:else class='item_header' src='{{list.userInfo.avatar}}'></image>
+  </view>
+  <view class='fl item_right_box'>
+    <view class='display-flex justify-content-between align-items-center'>
+      <view class='one_line item_name f_30 c_333'>{{list.userInfo.nickname}}</view>
+    </view>
+    <view class='item_time'>{{list.difftime}}</view>
+    <view class='item_content f_30 c_333'>{{list.content}}</view>            
+  </view>
+</view>
+<view class='box'>
+  <view class='reply_text f_26 c_999'>相关回复共{{list.reply_list_count}}条</view>
+  <!-- <view wx:if="{{list.replynum==0}}"></view> -->
+  <view class='item_box_new overf' wx:for="{{list.reply_list}}" wx:key>
+    <view class='fl item_header_box'>
+       <image wx:if="{{item.userInfo.avatar==''}}" class='item_header' src='../../../../images/default-user-2.png'></image>
+      <image class='item_header' src='{{item.userInfo.avatar}}'></image> 
+    </view>
+    <view class='fl item_right_box'>
+      <view class='display-flex justify-content-between align-items-center'>
+        <view class='one_line item_name f_30 c_333'>{{item.userInfo.nickname}}</view>
+      </view>
+      <view class='item_time'>{{item.createdate}}</view>
+      <view class='item_content f_30 c_333'>{{item.content}}</view>            
+    </view>
+  </view>
+  
+</view>

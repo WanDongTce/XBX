@@ -1,0 +1,27 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<view class="container">
+    <view class="toptext" wx:if="{{flag == 2}}">请设置密码,用于支付验证</view>
+    <view class="toptext" wx:if="{{flag == 3}}">请再次输入,以确认密码</view>
+    <view class="input-password-wrap" bindtap="showKeyboardFn">
+        <view class="password_dot">
+            {{password[0]? '·':''}}
+        </view>
+        <view class="password_dot">
+            {{password[1]? '·':''}}
+        </view>
+        <view class="password_dot">
+            {{password[2]? '·':''}}
+        </view>
+        <view class="password_dot">
+            {{password[3]? '·':''}}
+        </view>
+        <view class="password_dot">
+            {{password[4]? '·':''}}
+        </view>
+        <view class="password_dot">
+            {{password[5]? '·':''}}
+        </view>
+    </view>
+    <pwdKeyboard wx:if="{{showKeyboard}}" catch:watchPwd="watchPwd" catch:hideKeyboard="hideKeyboard" flag="{{flag}}"></pwdKeyboard>
+</view>

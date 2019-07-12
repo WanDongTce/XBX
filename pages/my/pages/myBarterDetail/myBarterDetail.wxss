@@ -1,0 +1,32 @@
+@import "/pages/my/pages/myBarter/myBarter.wxss";
+page{
+   padding-top: 10vh;
+} 
+.mt16{
+  margin-top:16rpx;
+}
+.detail_bottombox{
+  background-color:#fff;
+  margin-top:16rpx;
+  width:100%;
+  padding:12rpx 0;
+}
+.detail_bottomtext{
+  color:#333;
+  font-size:26rpx;
+  line-height: 40rpx;
+  text-align: right;
+  margin-right:24rpx;
+  
+}
+.mybarterdetail_img{
+  position:absolute;
+  top:40rpx;
+  right:24rpx;
+  width:137rpx;
+  height:140rpx;
+  z-index:2;
+}
+.pb16{
+  padding-bottom:16rpx;
+}

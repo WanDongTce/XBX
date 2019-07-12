@@ -1,0 +1,73 @@
+<compontNavbar title="个人信息" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="title display-flex">
+    <view class='title_color'></view>
+    <view class='title_text'>基本资料</view>
+</view>
+<view class='content_box'>
+    <view class='item_header overf' bindtap="modHead"> 
+        <view class='item_title fl'>头像</view>
+        <image src='../../../../images/next.png' class='info_arrow fr'></image>
+        <image wx:if="{{headImg==''}}" src='../../../../images/default-user-2.png' class='header_img fr' mode="aspectFill"></image>
+        <image wx:else src='{{headImg}}' class='header_img fr' mode="aspectFill"></image>
+    </view>
+    <view class='item_others overf'>
+        <view class='item_title fl'>真实姓名</view>
+        <view class='item_title fr'>{{info.realname}}</view>
+    </view>
+    <view class="item_others overf">
+        <view class="fl item_title">性别</view>
+        <picker bindchange="bindPickerChange" value="{{sexIndex}}" range="{{sexArr}}" class="fr item_title picker_w" range-key="name">
+            {{sexArr[sexIndex].name}}
+            <image class="info_arrow ml22" src="../../../../images/next.png"></image>
+        </picker>
+    </view>
+    <view class="item_others overf">
+        <view class="fl item_title">生日</view>
+        <picker bindchange="bindDateChange" value="{{date}}" mode="date" class="fr item_title picker_w">
+            {{date}}
+            <image class="info_arrow ml22" src="../../../../images/next.png"></image>
+        </picker>
+    </view>
+    <!--  
+    <view class='item_others overf'>
+        <view class='item_title fl'>民族</view>
+        <picker bindchange="nationChange" value="{{nationIndex}}" range="{{nationArr}}" class="fr item_title picker_w">
+            {{nationArr[nationIndex]}}
+            <image class="info_arrow ml22" src="../../../images/next.png"></image>
+        </picker>
+    </view>
+    -->
+    <navigator class='item_others overf border_none' url='/pages/my/pages/personInfo/signature/signature'>
+        <view class='item_title fl'>个性签名</view>
+        <image class="info_arrow fr" src="../../../../images/next.png"></image>
+        <view class="item_title fr personal-sign-text">{{info.personal_sign}}</view>
+    </navigator>
+</view>
+<view class="title display-flex">
+    <view class='title_color'></view>
+    <view class='title_text'>学校信息</view>
+</view>
+<view class='content_box'>
+    <view class='item_others overf'>
+        <view class='item_title fl'>学校</view>
+        <view class='item_title fr'>{{info.school_name}}</view>
+    </view>
+    <view class='item_others overf border_none'>
+        <view class='item_title fl'>班级</view>
+        <view class='item_title fr'>{{info.grade_name}} {{info.class_name}}</view>
+    </view>
+</view>
+<navigator class="title display-flex position-relative" url='/pages/my/pages/personInfo/tag/tag'>
+    <view class='title_color'></view>
+    <view class='title_text'>标签</view>
+    <image src="../../../../images/next.png" class="info_arrow2"></image>
+</navigator>
+<view class='tags'>
+    <block wx:for="{{labelList}}" wx:key="this">
+        <block wx:for="{{item.label}}" wx:key="this">
+            <view class="tag-item" wx:if="{{item.is_checked == 1}}">{{item.label}}</view>
+        </block>
+    </block>
+</view>
+
+<!-- <view class='btn'>保存</view> -->

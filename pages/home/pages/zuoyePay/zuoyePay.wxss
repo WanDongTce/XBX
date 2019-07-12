@@ -1,0 +1,90 @@
+page{
+    width: 100%;
+    background: #f4f4f4;
+    padding-bottom: 9vh;
+}
+.box{
+    width: 100%;
+}
+.info-box{
+    width: 100%;
+    padding: 50rpx 30rpx;
+    background: #fff;
+    margin-bottom: 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.total{
+    width: 100%;
+    text-align: center;
+    font-size: 26rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+}
+.total text{
+    font-size: 50rpx;
+}
+.account{
+    font-size: 28rpx;
+    color: #999;
+    text-align: center;
+}
+.list{
+    width: 100%;
+    background: #fff;
+}
+.tit{
+    width: 100%;
+    padding: 3% 30rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 30rpx;
+    color: #999;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.pay-item{
+    width: 100%;
+    padding: 4% 30rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.pay-item:last-child{
+    border-bottom: none;
+}
+.pay-lt{
+    width: 85%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.pay-icon{
+    width: 42rpx;
+    height: 34rpx;
+    margin-right: 24rpx;
+}
+.pay-method{
+    font-size: 30rpx;
+    color: #333;
+}
+.swi-icon{
+    width: 40rpx;
+    height: 40rpx;
+}
+.btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3% 0;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    /* background: #f6575d; */
+    background: #999;
+
+}

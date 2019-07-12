@@ -1,0 +1,33 @@
+<compontNavbar title="会员续费" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class="info-box">
+        <navigator url="/pages/my/pages/memberRenewalList/memberRenewalList" class="his">续费记录</navigator>
+        <image src="{{IMGURL}}my/mem-bg.png" class="bg-img"></image>
+        <view class="info">
+            <image src="{{info.avatar? info.avatar: '../../../../images/default-user-2.png'}}" mode="aspectFill" class="ava"></image>
+            <view class="info-cont">
+                <view class="name-box">
+                    <text class="uname">{{info.nickname}}</text>
+                    <image src="../../../../images/user-level.png" class="vip-icon" wx:if="{{info.userlevel == 1}}"></image>
+                    <image src="../../../../images/vip.png" class="vip-icon" wx:if="{{info.userlevel == 2}}"></image>
+                </view>
+                <view class="time">会员于{{renInfo.end_time}}到期</view>
+            </view>
+        </view>
+    </view>
+    <view class="form">
+        <view class="tit">续费时长</view>
+        <view class="count-box">
+            <view class="minus count-btn {{count == 1? 'dis-btn': ''}}" catchtap="modfyCountFn" data-flag="1">-</view>
+            <view class="count">{{count}}个月</view>
+            <view class="plus count-btn" catchtap="modfyCountFn" data-flag="2">+</view>
+        </view>
+        <view class="price">￥{{renInfo.unit_price}}</view>
+        <view class="btn" catchtap="createOrder">立即续费</view>
+    </view>
+    <view class="tips">
+        <view class="tit">会员特权</view>
+        <view class="tip">{{renInfo.privilege}}</view>
+        <view class="tip"></view>
+    </view>
+</view>

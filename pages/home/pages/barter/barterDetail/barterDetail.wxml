@@ -1,0 +1,84 @@
+<compontNavbar title="物品详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='position-relative'>
+    <image wx:if="{{leftstate==3}}" src='../../../images/barter/state_success.png' class='new_state'></image>
+
+
+    <image wx:if="{{rightstate==2}}" src='../../../images/barter/state_success.png' class='new_state'></image>
+    <image wx:if="{{rightstate==3}}" src='../../../images/barter/state_dfjj.png' class='new_state'></image>
+    <image wx:if="{{rightstate==4}}" src='../../../images/barter/state_fail.png' class='new_state'></image>
+    <image wx:if="{{rightstate==5}}" src='../../../images/barter/state_qx.png' class='new_state'></image>
+
+
+    <view class='top_box display-flex'>
+        <view class='display-flex'>
+            <image src='{{detail.userInfo.avatar? detail.userInfo.avatar : base + "images/default-user-2.png"}}' class='top_img' mode="aspectFill"></image>
+            <view>
+                <view class='top_name'>{{detail.userInfo.nickname}}</view>
+                <view class='top_time1'>{{detail.type_name}}</view>
+            </view>
+        </view>
+        <view>
+            <view class='top_adderss top_time2'>{{detail.createdate}}</view>
+            <view class='top_adderss '>{{detail.address}}</view>
+        </view>
+    </view>
+    <view class='bigbox'>
+        <view class='item_content'>{{detail.name}}</view>
+        <image src='{{item.url}}' class='item_img' mode='widthFix' wx:for="{{detail.images}}" wx:key="this"></image>
+    </view>
+
+    <view class='message_box'>
+        <view class='message_top'>留言 • {{messages.length}}</view>
+        <block wx:for="{{messages}}" wx:key="this">
+            <view class='message_mainbox' bindtap="addReplyMsg" data-parent="{{item.id}}" data-uid="{{item.userid}}">
+                <view class='overf'>
+                    <image wx:if="{{item.userInfo.avatar==''}}" src='{{base}}images/default-user-2.png' class='fl message_main_img' mode="aspectFill"></image>
+                    <image wx:else src='{{item.userInfo.avatar}}' class='fl message_main_img' mode="aspectFill"></image>
+                    <view class='message_main_name fl'>{{item.userInfo.nickname}}</view>
+                    <view class='message_main_time fr'>{{item.difftime}}</view>
+                </view>
+                <view class='message_main_content'>{{item.content}}</view>
+            </view>
+
+            <component item="{{item}}" uid="{{detail.userInfo.uid}}" wx:if="{{item.reply_list.length > 0}}" bind:comTap="addReplyMsg"></component>
+        </block>
+
+    </view> 
+</view>
+
+
+
+
+<view class='bottom_box overf'>
+    <view class='bottom_left bottom_like fl' bindtap="addAgree" wx:if="{{detail.isagree == 1}}">
+        <image src='{{base}}images/collection2.png'></image>
+        <text class="active">喜欢</text>
+    </view>
+    <view class='bottom_left bottom_like fl' bindtap="addAgree" wx:else>
+        <image src='{{base}}images/collection1.png' wx:if="{{count == 0}}"></image>
+        <image src='{{base}}images/collection2.png' wx:else></image>
+        <text class="{{count > 0? 'active' : ''}}">喜欢</text>
+    </view>
+    <view class='bottom_left bottom_like fl' bindtap="collection">
+        <image src='{{base}}images/collect2.png' wx:if="{{isCollect == 1}}"></image>
+        <image src='{{base}}images/collect.png' wx:else></image>
+        <text class="{{isCollect == 1? 'active2' : ''}}">收藏</text>
+    </view>
+    <view class='bottom_left bottom_message fl' bindtap="addReplyMsg" data-parent="" data-uid="">
+        <image src='{{base}}images/message.png'></image>
+        留言
+    </view>
+     <!-- <view class='bottom_btn bottom_talk fr'>与他沟通</view>  -->
+    <view class='bottom_btn bottom_change fr' bindtap="toApplyBarter">立即交换</view>
+</view>
+
+
+<view class="detail-dialog-mask" bindtap="hideDialog" wx:if="{{isShowDialog}}"></view>
+<view animation="{{animationData}}" class="detail-container" wx:if="{{isShowDialog}}">
+    <view class='detail-content'>
+        <view class="input-container">
+            <input type="text" bindinput="inputFn" value="{{msg}}" bindconfirm="submitCommt" auto-focus="true" placeholder="{{placeholder}}"></input>
+            <!-- <image src="{{base}}images/smil.png" class="smi-icon"></image> -->
+        </view>
+    </view>
+</view>

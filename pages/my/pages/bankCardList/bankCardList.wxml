@@ -1,0 +1,7 @@
+<compontNavbar title="选择银行卡" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="list">
+    <view class="item" bindtap="checkCard" data-item="{{item}}" wx:key="this" wx:for="{{list}}">
+        <view class="lt">{{item.bank_belong}}尾号为{{item.bankNum}}{{item.bank_type}}</view>
+        <image src="{{selected == item.id? '../../../../images/yuan2.png' : '../../../../images/yuan1.png'}}" class="icon"></image>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="box" id="addAgre">
+    <block wx:if="{{thumbs_is == 1}}">
+        <image src="../../images/agr4.png" class="add-agree-icon"></image>
+        <text class="add-agree-text active">{{agreenum}}</text>
+    </block>
+    <view wx:else bindtap="onTap">
+        <block wx:if="{{count == 1}}">
+            <image src="../../images/agr4.png" class="add-agree-icon"></image>
+            <text class="add-agree-text active">{{agreenum}}</text>
+        </block>
+        <block wx:else>
+            <image src="../../images/agr.png" class="add-agree-icon"></image>
+            <text class="add-agree-text">{{agreenum}}</text>
+        </block>
+    </view>
+</view>

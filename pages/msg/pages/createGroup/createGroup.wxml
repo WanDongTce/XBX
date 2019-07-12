@@ -1,0 +1,25 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}" url="/pages/main/msg/msg" component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class='input-container'>
+        <image src='{{base}}images/search.png' class="search-icon"></image>
+        <view class='input-box'>
+            <input class='input' placeholder='搜索关键字' placeholder-class='placeholder' bindconfirm="saveSearch"></input>
+        </view>
+    </view>
+    <view class='list'>
+        <block wx:for="{{list}}" wx:key="this">
+            <view class='item' bindtap='choice' data-index='{{index}}'>
+                <view class="lt">
+                    <image wx:if="{{!item.avatar}}" src='{{base}}images/default-user-2.png' class='item-img' mode="aspectFill"></image>
+                    <image wx:else src='{{item.avatar}}' class='item-img' mode="aspectFill"></image>
+                    <view class='item-name'>{{item.name || item.nickname}}</view>
+                </view>
+                <view class='rt'>
+                    <image src='{{base}}images/act.png' class='sel-icon' wx:if="{{item.checked}}"></image>
+                    <image src='{{base}}images/ret.png' class='sel-icon' wx:else></image>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='btn' bindtap='submit'>确定</view>
+</view>

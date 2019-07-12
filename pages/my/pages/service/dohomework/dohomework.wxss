@@ -1,0 +1,50 @@
+/* pages/edutlList/operation/operation.wxss */
+page{
+  border-top: solid 1rpx #ddd;
+  background-color: #fff;
+}
+.Subject{
+  text-align: center;
+  margin-top: 142rpx;
+}
+.Subject-text{
+  font-size: 60rpx;
+  color: #4bace2;
+}
+.writing{
+  text-align: center;
+  margin-top: 74rpx;
+}
+.writing-text{
+  font-size: 36rpx;
+  color: #4bace2;
+}
+.img{
+  width: 296rpx;
+  height: 298rpx;
+  margin:95rpx auto 80rpx;
+  
+}
+.imges{
+  width: 296rpx;
+  height: 298rpx;
+}
+
+.time{
+  font-size:74rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom:82rpx;
+  color:#4bace2;
+}
+.btn{
+  font-size: 38rpx;
+  color: #fff;
+  width: 467rpx;
+  height: 86rpx;
+  text-align: center;
+  line-height: 86rpx;
+  border-radius: 50rpx;
+  background-color: #4bace2;
+  margin:66rpx auto;
+}

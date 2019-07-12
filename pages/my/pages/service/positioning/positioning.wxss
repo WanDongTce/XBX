@@ -1,0 +1,52 @@
+/* pages/edutlList/positioning/positioning.wxss */
+page{
+  border-top: solid 1rpx #ddd;
+}
+.positioning{
+  width: 92%;
+  height: 134rpx;
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.positioning-left{
+  width: 533rpx;
+  height: 134rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.positioning-one{
+  font-size: 34rpx;
+  color: #fff;
+  margin-left: 56rpx;
+}
+.positioning-two{
+  font-size: 26rpx;
+  color: #fff;
+  margin-left: 190rpx;
+}
+.positioning-button{
+  position: absolute;
+  right: 30rpx;
+  width: 138rpx;
+  height: 134rpx;
+  text-align: center;
+  line-height: 134rpx;
+  border-radius: 10rpx;
+}
+.positioning-right{
+  font-size: 34rpx;
+  color: #fff;
+}
+.one{
+  background: linear-gradient(to right, #8393fc , #95a3fd);
+}
+.two{
+  background: linear-gradient(to right, #fcc737 , #ffd564);
+}
+.three{
+  background: linear-gradient(to right, #fe8237 , #ff956b);
+}

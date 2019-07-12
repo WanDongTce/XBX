@@ -1,0 +1,150 @@
+<!-- <compontNavbar title="记账" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<view class='tab-left'>
+  <view class='top_box display-flex' bindtap="tabFun">
+    <view class="top_box_text  {{tabArr.curHdIndex=='0'? 'top_box_current' : ''}}" id="tab-hd01" data-id="0">支出</view>
+    <view class="top_box_text  {{tabArr.curHdIndex=='1'? 'top_box_current' : ''}}" id="tab-hd02" data-id="1">收入</view>
+  </view>
+</view> -->
+
+
+
+<view class="navigation-box component-class" >
+    <view class="back-box" bindtap="goBack" >
+        <image class="navigation-back-icon" src="{{base}}images/arowLt.png"></image>
+    </view>
+    <view class="navigation-tit" bindtap='bindtap_nav'>
+        <view class='newnav_text'>{{navigationtext}}</view>
+        <image class="newnav_img" src="../../../images/account/licai_xiala.png"></image>
+    </view>
+</view>
+<view  wx:if="{{isShowOption}}">
+    <view class="opt-mask" catch:tap="hideOption"></view>
+    <view animation="{{animationData}}" class='z_index9'>
+        <view class='newchoice_item display-flex justify-content-between align-items-center' catchtap="selOptFn" data-sctdidx='1'>
+            <view class='newchoice_itemleft display-flex align-items-center'>
+                <image src="../../../images/account/licai_zhichu.png"></image>
+                <view>支出</view>
+            </view>
+            <image class="opt-rt" src="{{(sctdidx==1)?'../../../images/account/licai_select.png':''}}"  catchtap="selOptFn"></image>
+        </view>
+        <view class='newchoice_item display-flex justify-content-between align-items-center'catchtap="selOptFn" data-sctdidx='2'>
+            <view class='newchoice_itemleft display-flex align-items-center'>
+                <image src="../../../images/account/licai_shouru.png"></image>
+                <view>收入</view>
+            </view>
+            <image class="opt-rt" src="{{(sctdidx==2)?'../../../images/account/licai_select.png':''}}"  catchtap="selOptFn"></image>
+        </view>
+        <!-- <view class="newchoice_btnbox" >
+            <view catch:tap="optCofmFn">确定</view>
+        </view> -->
+    </view>
+</view>
+
+
+
+
+
+
+<view class="tab-right">
+  <!--支出  -->
+  <view class="right-item {{sctdidx==1? 'active' : ''}}">
+    <view class='display-flex accounting_jebox'>
+      <view class='accounting_jebox_left'>账单金额</view>
+      <view class='accounting_jebox_right'>
+        <input class='accounting_jebox_right_input' placeholder='￥100' placeholder-class='placeholder1' type='digit' value='{{pay_money}}' bindinput='payInputEvent'></input>
+      </view>
+    </view>    
+    <view class="myscroll display-flex" >
+      <view class="scroll_box_item" bindtap='selectPayList' data-paylistid="{{item.id}}" wx:for="{{typeList_zhichu}}" wx:key="this">
+        <image wx:if="{{selectPayListId==item.id}}" src='{{item.picurl_on}}'></image>
+        <image wx:else src='{{item.picurl}}'></image>
+        <view>{{item.name}}</view>          
+      </view>
+    </view>
+    <view class='overf riqibox'>
+      <view class='fl riqi'>
+        <view class='display-flex align-items-center'>
+          <image src='../../../../../images/date.png' class='riqi_img'></image>
+          <view class='riqitext'>日期</view>
+        </view>
+      </view>
+      <picker class='fr picker_time' mode="time" value="{{time1}}" bindchange="bindTimeChange1">        
+        <view>{{time1}}</view>
+      </picker>
+      <picker class='fr picker_date' mode="date" value="{{date1}}"  bindchange="bindDateChange1">        
+        <view>{{date1}}</view>
+      </picker>
+    </view>
+    <view class='textarea_box overf'>
+      <image src='../../../../../images/write-gr.png' class='new_img'></image>
+      <textarea placeholder='请输入备注信息' placeholderClass='textarea' maxlength="280" auto-height adjust-position value='{{textarea1}}' bindinput="textareaInput1" class="new_textarea {{model==1?'tiaozheng':''}}"> </textarea>
+    </view>
+    <view class="imgs">
+        <scroll-view class="scroll-box" scroll-x="true">
+            <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                 <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+            </view>
+            <view class="scroll-item" wx:if="{{imgList.length == 0}}">
+                <image src="../../../images/account/add.png" class="hmwk-img" catchtap="addImg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- <image src='../../../images/account/licai_photo.png' class='licai_photo' catchtap="addImg"></image> -->
+    <view class='bottom_box display-flex'>
+      <view class='bottom_btn bottom_btn1' bindtap='pay_qx_btn'>取消</view>
+      <view class='bottom_btn bottom_btn2' bindtap='pay_sure_btn'>保存</view>
+    </view>
+  </view>
+  <!--收入  -->
+  <view class="right-item {{sctdidx==2? 'active' : ''}}">
+    <view class='display-flex accounting_jebox'>
+      <view class='accounting_jebox_left'>账单金额</view>
+      <view class='accounting_jebox_right'>
+        <input class='accounting_jebox_right_input' placeholder='￥100' placeholder-class='placeholder1' type='digit' value='{{shouru_money}}' bindinput='shouruInputEvent'></input>
+      </view>
+    </view>     
+    <view class="myscroll display-flex" >
+      <view class="scroll_box_item" bindtap='selectShouruList' data-shourulistid="{{item.id}}" wx:for="{{typeList_shouru}}" wx:key="this">
+        <image wx:if="{{selectShouruListId==item.id}}" src='{{item.picurl_on}}'></image>
+        <image wx:else src='{{item.picurl}}'></image>
+        <view>{{item.name}}</view>          
+      </view>
+    </view>
+    <view class='overf riqibox'>
+      <view class='fl riqi'>
+        <view class='display-flex align-items-center'>
+          <image src='../../../../../images/date.png' class='riqi_img'></image>
+          <view class='riqitext'>日期</view>
+        </view>
+      </view>
+      <picker class='fr picker_time' mode="time" value="{{time2}}" bindchange="bindTimeChange2">   
+        <view>{{time2}}</view>
+      </picker>
+      <picker class='fr picker_date' mode="date" value="{{date2}}" bindchange="bindDateChange2">        
+        <view>{{date2}}</view>
+      </picker>
+    </view>
+    <view class='textarea_box overf'>
+      <image src='../../../../../images/write-gr.png' class='new_img'></image>
+      <textarea class="new_textarea {{model==1 ? 'tiaozheng':''}}" placeholder='请输入备注信息' placeholderClass='textarea' maxlength="280" auto-height adjust-position value='{{textarea2}}' bindinput="textareaInput2" ></textarea>
+    </view>
+    <view class="imgs">
+        <scroll-view class="scroll-box" scroll-x="true">
+            <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                 <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+            </view>
+            <view class="scroll-item" wx:if="{{imgList.length == 0}}">
+                <image src="../../../images/account/add.png" class="hmwk-img" catchtap="addImg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- <image src='../../../images/account/licai_photo.png' class='licai_photo' catchtap="addImg"></image> -->
+    <view class='bottom_box display-flex'>
+      <view class='bottom_btn bottom_btn1' bindtap='shouru_qx_btn'>取消</view>
+      <view class='bottom_btn bottom_btn2' bindtap='shouru_sure_btn'>保存</view>
+    </view>
+  </view>
+</view>

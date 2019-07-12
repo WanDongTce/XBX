@@ -1,0 +1,342 @@
+page{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    height: 97vh;
+    overflow: hidden;
+    background: #f7f7f7;
+    padding: 3vh 0 0;
+}
+live-player{
+    width: 100vw;
+} 
+live-pusher{
+    width: 100vw;
+} 
+.top{
+    position: absolute;
+    top: 16rpx;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 0 24rpx;
+    background: transparent;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.top-lt{
+    position: relative;
+    width: 40%;
+    height: 8vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #3d4130; 
+    border-radius: 52rpx 35rpx 35rpx 52rpx; 
+}
+.user-img{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.user-info{
+    width: calc(100% - 8.5vh); 
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    text-align: right;
+    padding: 0 24rpx 0 0;
+}
+.user-name{
+    width: 100%;
+    height: 4vh;
+    line-height: 5vh;
+    font-size: 30rpx;
+    color: #fff;
+}
+.user-count{
+    width: 100%;
+    height: 4vh;
+    line-height: 3vh;
+}
+.count-text{
+    display: inline;
+    font-size: 24rpx;
+    color: #fff;
+}
+.user-count .num{
+    color: #b6991f;
+    font-size: 22rpx;
+    display: inline;
+}
+.top-rt{
+    width: 58%;
+    text-align: right;
+}
+.rt-img{
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    margin-left: -2vh;
+    border: 1px solid #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+.rt-more-img{
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background: #999;
+    font-size: 40rpx;
+    line-height: 6vh;
+    opacity: .6;
+}
+.cont{
+    position: absolute;
+    bottom: 10rpx;
+    left: 0;
+    width: 100%;
+    max-height: 50vh;
+}
+.list{
+    width: 100%;
+    max-height: 42vh;
+    overflow-y: scroll; 
+}
+.item{
+    width: 90%;
+    font-size: 30rpx;
+    line-height: 1.2em;
+    margin: 0 auto 10rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    white-space: normal;
+    word-break: break-all;
+}
+.item .bg{
+    padding: 8rpx 0;
+    display: inline-block;
+    white-space: normal;
+    word-break: break-all;
+    background: rgba(0,0,0,.5);
+    border-radius: 15rpx;
+}
+.item-grade{
+    padding: 0 5rpx;
+    font-size: 24rpx;
+    margin-right: 10rpx;
+    color: #fff;
+    border-radius: 5rpx;
+    display: inline-block;
+    vertical-align: middle;  
+}
+.bg-1{
+    background: #fb9c88;
+}
+.bg-2{
+    background: #fdc17c;
+}
+.bg-3{
+    background: #6ddfdf;
+}
+.item-name{
+    color: #4bace2;
+    padding: 0 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 5rpx;  
+}
+.item-msg{
+    color: #fff;
+    word-break: break-all;
+    white-space: normal;
+    padding: 0 5rpx;  
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;  
+    letter-spacing: 5rpx;
+}
+.love-msg{
+    width: 76rpx;
+    height: 66rpx;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5rpx; 
+}
+.bottom{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    display: -wekit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.botm-item{
+    width: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.botm-item:last-child{
+    justify-content: flex-end;
+}
+.botm-bg{
+    width: 80rpx;
+    height: 80rpx;
+    background: #291a13;
+    border-radius: 50%;
+    /* text-align: center; */
+    margin-right: 10rpx;
+}
+.botm-bg:last-child{
+    margin-right: 0;
+}
+.botm-img{
+    width: 38rpx;
+    height: 35rpx;
+    display: block;
+    margin: 22.5rpx auto;
+}
+.botm-text{
+    color: #fff;
+    font-size: 40rpx;
+    line-height: 80rpx;
+}
+.dialog-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    background: rgba(0,0,0,.5);
+}
+.dialog{
+    position: relative;
+    width: 90%;
+    height: 80vh;
+    margin: 10vh auto;
+    background: #f4f4f4;
+    border-radius: 20rpx;
+}
+.close-dialog-icon{
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+    width: 30rpx;
+    height: 28rpx;
+}
+.tit{
+    width: 100%;
+    height: 7vh;
+    text-align: center;
+    line-height: 7vh;
+    font-size: 30rpx;
+    color: #333;
+    border-bottom: 1rpx solid #dfdfdf;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dialog-list{
+    width: 100%;
+    height: 73vh;
+    overflow-y: scroll;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dia-item{
+    width: 100%;
+    padding: 3% 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    border-bottom: 1rpx solid #dfdfdf;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dia-img{
+    width: 75rpx;
+    height: 75rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+}
+.dia-name{
+    font-size: 30rpx;
+    color: #333;
+    margin: 0 10rpx 16rpx 0;
+}
+.dia-tip{
+    display: inline;
+    font-size: 24rpx;
+    color: #fff;
+    padding: 0 5rpx;
+    border-radius: 5rpx;
+}
+.dia-pos{
+    font-size: 28rpx;
+    color: #999;
+}
+.input-box{
+    width: 100%;
+    height: 10vh;
+    background: #f7f7f7;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+input{
+    width: 79%;
+    height: 7vh;
+    line-height: 7vh;
+    margin: 1.5vh 2%;
+    border: 1rpx solid #dfdfdf;
+    border-radius: 15rpx;
+    color: #333;
+    font-size: 28rpx;
+    padding: 0 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+.place{
+    color: #999;
+}
+.send-msg{
+    width: 15%;
+    height: 7vh;
+    line-height: 7vh;
+    margin-right: 2%;
+    font-size: 28rpx;
+    color: #4bace2;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.arrow_new{
+    width:18rpx;
+    height: 32rpx;
+    margin-right:20rpx;
+}

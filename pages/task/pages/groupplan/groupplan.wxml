@@ -1,0 +1,35 @@
+<compontNavbar title="组队任务" isShowBack="{{true}}" url="/pages/main/pages/task/task" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<view class="list" wx:else>
+    <view class="item" wx:for="{{list}}" wx:key="this" bindtap="toDetail" data-id="{{item.taskreceiveid}}" data-status="{{item.status}}">
+        <view class="cont">
+            <image src="{{'../../images/t' + item.taskid + '.png'}}" class="item-img"></image>
+            <view class="item-cont">
+                <view class="head">
+                    <view class="tit">{{item.taskname}}</view>
+                    <view class="itm-type" wx:if="{{item.status == 3}}">我发起的</view>
+                    <view class="itm-type" wx:else>等我确认</view>
+                </view>
+                <view class="rules">已接受邀请：{{item.joinsum}}人</view>
+            </view>
+        </view>
+        <view class="tip">
+            <view class="tip-lt">
+                <image src="{{base}}images/lw.png" class="tip-icon"></image>
+                <text class="tip-text">积分奖励</text>
+            </view>
+            <view class="btn-box">
+                <block wx:if="{{item.status == 0}}">
+                    <view class="border-f33 btn color-f33" catchtap="joinProcess" data-type="2" data-taskreceiveid="{{item.taskreceiveid}}">拒绝</view>
+                    <view class="bg-f33 btn border-f33" catchtap="joinProcess" data-type="1" data-taskreceiveid="{{item.taskreceiveid}}">接受</view>
+                </block>
+                <block wx:if="{{item.status == 3 && item.friends.length > 0}}">
+                    <image src="{{item.avatar}}" class="fri-img" wx:for="{{item.friends}}" wx:key="this" mode=""></image>
+                </block>
+            </view>
+
+        </view>
+    </view>
+</view>

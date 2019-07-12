@@ -1,0 +1,15 @@
+<!--pages/edutlList/archives/archives.wxml-->
+<compontNavbar title="综合档案" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="box">
+  <navigator class="archives one" url="/pages/my/pages/service/achievement/achievement">
+    <text class="text">成绩管理</text>
+    <image src="../../../../../images/arowDwnWrit1.png" class="img"></image>
+  </navigator>
+</view>
+<view class="box">
+  <navigator class="archives two" url="/pages/my/pages/service/reward/reward">
+    <text class="text">自由奖励</text>
+    <image src="../../../../../images/arowDwnWrit1.png" class="img"></image>
+  </navigator>
+</view>

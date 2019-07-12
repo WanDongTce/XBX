@@ -1,0 +1,108 @@
+<!--pages/ls2/ls2.wxml-->
+<compontNavbar title="签到赢积分" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='position_r top_bigbox'>
+    <image src='../../images/activity/activity_bg.png' class='topimg position_a'></image>
+    <view class='position_a top_box'>
+        <view class='top_smbox'>
+            <view class='display-flex top_smbox_box'>
+                <view class='top_smbox_money'>{{info.score || 0}}</view>
+                <image src='../../images/activity/activity_jf.png' class='top_smbox_moneyimg'></image>
+            </view>
+            <view class='top_text f_24'>我的积分</view>
+            <view class='top_btn f_28' bindtap='getJifen'>领取积分</view>
+        </view>
+    </view>
+    <view class='position_a signin_bigbox' >
+        <view class='signin_box display-flex align-items-center' >        
+            <view class='signin_itembox display-flex align-items-center' wx:for="{{listData}}" wx:key="this">
+                <view class="signin_item {{item.status==1?'signin_item_over':'signin_item_no'}}">
+                    <view class='f_24'>{{item.day}}</view>
+                    <image wx:if="{{item.status==1}}" src='../../images/activity/activity_yes.png'></image>
+                    <image wx:else src='../../images/activity/activity_coin.png'></image>
+                </view>
+                <view class='sign_dataline'></view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='content_box'>
+    <view class='title_box display-flex align-items-center'>
+        <view class='title_bg'></view> 
+        <view class='title_text'>活动规范</view>   
+    </view>
+    <view class='rule_box'>
+        <view>1.用户完成活动可领取积分奖励；</view>
+        <view>2.每日完成五次预习乐学习即完成当日签到；</view>
+        <view>3.用户连续七日完成签到即可领取奖励；</view>
+        <view>4.连续签到日期不可中断，否则从1天开始重新累积；</view>
+        <view>5.参与本活动的用户仅可领取一次奖励；</view>
+    </view>
+</view>
+<view class='content_box'>
+    <view class='title_box display-flex align-items-center mb_way'>
+        <view class='title_bg'></view> 
+        <view class='title_text'>更多获取积分方法</view>   
+    </view>
+    <view class='way_item display-flex justify-content-between align-items-center'>
+        <view class='way_left display-flex align-items-center'>
+            <image src='../../images/activity/activity_img1.png'></image>
+            <view>
+                <view class='way_text1 f_32 c_333'>冥想任务</view>
+                <view class='way_text2 f_26 c_999'>三个科目，每科完成五次冥想思</view>
+            </view>
+        </view>
+        <view class='way_btn' bindtap="tz_task">进入</view>
+    </view>
+    <view class='way_item display-flex justify-content-between align-items-center'>
+        <view class='way_left display-flex align-items-center'>
+            <image src='../../images/activity/activity_img2.png'></image>
+            <view>
+                <view class='way_text1 f_32 c_333'>综合素质任务</view>
+                <view class='way_text2 f_26 c_999'>完成上传五次</view>
+            </view>
+        </view>
+        <view class='way_btn' bindtap="tz_task">进入</view>
+    </view>
+    <view class='way_item display-flex justify-content-between align-items-center'>
+        <view class='way_left display-flex align-items-center'>
+            <image src='../../images/activity/activity_img3.png'></image>
+            <view>
+                <view class='way_text1 f_32 c_333'>分享任务</view>
+                <view class='way_text2 f_26 c_999'>完成十次分享</view>
+            </view>
+        </view>
+        <view class='way_btn' bindtap="tz_task">进入</view>
+    </view>
+    <view class='way_bottombox display-flex justify-content-between align-items-center' bindtap="tz_task">
+        <view class='f_26 c_333'>查看更多获取积分方法</view>
+        <image src='../../../../images/arowRtGray.png'></image>
+    </view>
+</view>
+<view class='content_box'>
+    <view class='title_box display-flex align-items-center'>
+        <view class='title_bg'></view> 
+        <view class='title_text'>积分兑换</view>   
+    </view>
+    <view class='change_box display-flex ' >
+        <view class='change_item' wx:for="{{listone}}" wx:key="this" catchtap="tz_detail" data-id="{{item.id}}" id='{{index}}'>
+            <image src='{{item.pic_url}}'></image>
+            <view class='change_title one_line'>{{item.name}}</view>
+            <view class='change_jf f_28 c_999 one_line'>
+                积分<text>{{item.point}}</text>
+            </view>
+        </view>
+    </view>
+    <view class='change_box display-flex ' >
+        <view class='change_item' wx:for="{{listtwo}}" wx:key="this" catchtap="tz_detail" data-id="{{item.id}}" id='{{index}}'>
+            <image src='{{item.pic_url}}'></image>
+            <view class='change_title one_line'>{{item.name}}</view>
+            <view class='change_jf f_28 c_999 one_line'>
+                积分<text>{{item.point}}</text>
+            </view>
+        </view>
+    </view>
+    <view class='change_bottombox display-flex justify-content-between align-items-center' bindtap="tz_task">
+        <view class='f_26 c_333'>查看更多获取积分方法</view>
+        <image src='../../../../images/arowRtGray.png'></image>
+    </view>
+</view>

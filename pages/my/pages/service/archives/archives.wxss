@@ -1,0 +1,35 @@
+/* pages/edutlList/archives/archives.wxss */
+page{
+  background-color:#fff;
+}
+.box{
+  width: 92%;
+  height: 134rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.archives{
+  width: 690rpx;
+  height: 134rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.one{
+  background: linear-gradient(to right, #8393fc , #95a3fd);
+}
+.two{
+  background: linear-gradient(to right, #fcc737 , #ffd564);
+}
+.text{
+  font-size: 34rpx;
+  color: #fff;
+  margin-left: 60rpx;
+}
+.img{
+  position: absolute;
+  right: 74rpx;
+  width: 12rpx;
+  height: 20rpx;
+}

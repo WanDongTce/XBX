@@ -1,0 +1,11 @@
+<!--pages/service/restList/restList.wxml-->
+<compontNavbar title="作息记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<block wx:if="{{list.length == 0}}"><empty></empty></block> 
+<block wx:for="{{list}}" wx:key="this">
+  <view class='box'>
+    <view wx:if="{{item.type==1}}" class='text1'>起床</view>
+    <view wx:else class='text1'>睡觉</view>
+    <view class='text2'>{{item.createdate}}</view>
+  </view>
+</block>

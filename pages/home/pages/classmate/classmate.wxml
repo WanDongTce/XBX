@@ -1,0 +1,175 @@
+<compontNavbar title="综合素质" isShowBack="{{true}}"></compontNavbar>
+<view class='topbox'>
+    <view class='top_content' wx:for="{{topic}}" wx:key="this" bindtap='tz_topicdetail' data-topicid="{{item.id}}" data-topicname="{{item.name}}" data-topicitem="{{item}}">
+        <image src="{{item.image}}" class="head-img"></image>
+        <view class="head-text">{{item.name}}</view>
+    </view>
+
+</view>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<view class="list" wx:else>
+    <view class='bigbigbox'  bindtap="toDetail" data-item="{{item}}"  wx:for="{{list}}" wx:key="this">
+        <view class="item">
+            <image wx:if="{{item.user.avatar}}" class="user-img" src="{{item.user.avatar}}" mode="aspectFill"></image>
+            <image wx:else class="user-img" src="{{base}}images/default-user-2.png" mode="aspectFill"></image>
+            <view class="content">
+                <view>
+                    <view class="cont-head">
+                        <view class="conth-lt">
+                            <view class="user-name">{{item.user.nickname}}</view>
+                        </view>
+                        <view class="conth-rt">{{item.difftime}}</view>
+                    </view>
+
+                    <view class="cont-text">{{item.content}}</view>
+
+                    <image src="{{item.photo[0].photo}}" class="cont-img" mode="widthFix" wx:if="{{item.photo.length > 0}}" data-imgs="{{item.photo}}" catchtap="previewImg" data-img="{{item.photo[0].photo}}"></image>
+
+                    <video src="{{item.video_url}}" wx:if="{{item.video_url}}" custom-cache="{{false}}"></video>
+
+                    <view class="botm position_r">
+                        <view class="btm-lt">{{item.category.name? "#" + item.category.name + "#" : ' '}}</view>  
+                        <view class="btm-rt">
+                        <image catchtap='btn_rt_catchtap' src='{{base}}images/classmate_comment.png' class='classmate_commentimg' data-popupimgid="{{item.id}}" data-id="{{item.id}}"></image>                 
+                        </view> 
+                        <block wx:if="{{item.isShowPop==true}}">
+                            <view class="position_a classmate_comment_popup display-flex"  >
+                            <view class='popup_smbox display-flex popup_left' catchtap='addAgree' data-dianzan='{{item.is_thumbs}}' data-postid="{{item.id}}" data-ftrphone="{{item.user.mobile}}">
+                                <image wx:if="{{item.is_thumbs == 0}}" src='{{base}}images/agr_fff.png'></image>
+                                <image wx:else src="{{base}}images/agr4.png"></image>
+                                <view >赞</view>
+                            </view>
+                            <view class='popup_smbox display-flex popup_right' catchtap='publish' data-ftrphone="{{item.user.mobile}}" data-postid="{{item.id}}">
+                                <image src='{{base}}images/msg_fff.png'></image>
+                                <view >评论</view>
+                            </view>
+                            </view>
+                        </block>
+                        
+                    </view>
+                </view>
+                
+
+                <view wx:if="{{(item.thumbsList=='')&&(item.comments_list=='')}}"></view> 
+                <view wx:else  class='newbox position_r'>
+                    <view class="triangle_border_up">
+                        <text></text>
+                    </view>
+                    <view class='newcontentbox'>
+                        <view class='againnewzanbox display-flex' wx:if="{{item.thumbsList.length!=0}}">
+                            <view class='newbox_wleft'><image src='{{base}}images/agr2.png' class='againnewzanbox_leftimg'></image></view>
+                            <view class='display-flex newzanbox_right newbox_wright'>
+                                <block wx:for="{{item.thumbsList}}" wx:key>                                                                      
+                                        <view class='againnewzan_text'>{{item.nickname}}</view>
+                                        <view class='againnewzan_text againnewzan_text2'>，</view>                                    
+                                </block>      
+                            </view>
+                        </view>
+
+                        <view class='againnew_bordertop' wx:if="{{item.comments_list.length!=0}}">
+                            <view wx:for="{{item.comments_list}}" wx:key="this" >  
+                                <view class='newcommentbox display-flex' catchtap='catchtap_huifu'  data-forplaceholder="{{item.user_nickname}}" data-authorphone="{{item.author_mobile}}" data-pid='{{item.id}}'>
+                                                                
+                                    <view class='againnew_comment'>
+                                        <text class='newcomment_name f_26'>{{item.user_nickname}}</text>  
+                                                                                                                                                    <text class='newcomment_text_2 f_28 c_333'>：</text>
+                                                                                                                                                    <text class='newcomment_text_2 f_28 c_333' wx:if="{{item.type==2}}">回复</text>   
+                                                                                                                                                    <text wx:else></text>
+                                        <text class='newcomment_text_2 f_28 c_333'>{{item.content}}</text>
+                                    </view>
+                                </view> 
+                                <block wx:if="{{item.reply_list_count!=0}}" wx:for="{{item.reply_list}}" wx:key="this">
+                                    <view class='newcommentbox display-flex' >      
+                                    <view class='display-flex newcommentbox_right newbox_wright newbox_wright2'>
+                                        <image wx:if="{{item.user_avatar==''}}" src="{{base}}images/default-user-2.png" class='newcomment_header'></image>
+                                        <image wx:else src='{{item.user_avatar}}' class='newcomment_header'></image>
+                                        <view class='w_p100'>
+                                        <view class='display-flex newcomment_top'>
+                                            <view class='newcomment_name f_26 oneline'>{{item.userInfo.nickname}}</view>
+                                            <view class='newcomment_time f_24  c_999 '>{{item.difftime}}</view>
+                                        </view>
+                                        <view class='newcomment_text f_28 c_333'><text>回复</text><text style='color:#576A95'>{{item.parent_user}}</text><text>:</text>{{item.content}}</view>
+                                        </view>
+                                    </view>
+                                    </view> 
+                                </block> 
+                            </view>
+                        </view>
+                    </view> 
+                </view> 
+
+
+
+
+
+            </view>
+        </view> 
+
+
+        <!-- <view wx:if="{{(showzanList=='')&&(commentList=='')}}"></view> 
+        <view wx:else  class='newbox position_r'>
+        <view class="triangle_border_up">
+            <text></text>
+        </view>
+        <view class='newcontentbox'>
+            <view class='newzanbox display-flex' wx:if="{{showzanList!=''}}">
+                <view class='newbox_wleft'><image src='{{base}}images/agr2.png' class='newzanbox_leftimg'></image></view>
+                <view class='display-flex newzanbox_right newbox_wright'>
+                    <block wx:for="{{showzanList}}" wx:key>
+                    <image wx:if="{{item.avatar==''}}"  src='{{base}}images/default-user-2.png' class='newzanbox_right_img'></image> 
+                    <image wx:else  src='{{item.avatar}}' class='newzanbox_right_img'></image> 
+                    </block>      
+                </view>
+            </view>
+            
+            <view wx:for="{{item.comments_list}}" wx:key="this">  
+            <view class='newcommentbox display-flex' catchtap='catchtap_huifu'  data-forplaceholder="{{item.user_nickname}}" data-authorphone="{{item.author_mobile}}" data-pid='{{item.id}}'>
+                <view class='newbox_wleft' ><image src='{{base}}images/msg2.png' class='newccommentbox_leftimg'></image></view>
+                <view class='display-flex newcommentbox_right newbox_wright'>
+                    <image wx:if="{{item.user_avatar==''}}" src="{{base}}images/default-user-2.png" class='newcomment_header'></image>
+                    <image wx:else src='{{item.user_avatar}}' class='newcomment_header'></image>
+                    <view class='w_p100'>
+                        <view class='display-flex newcomment_top'>
+                            <view class='newcomment_name f_26 oneline'>{{item.user_nickname}}</view>
+                            <view class='newcomment_time f_24  c_999 '>{{item.create_time}}</view>
+                        </view>
+                        <view class='newcomment_text f_28 c_333'>{{item.content}}</view>
+                    </view>
+                </view>
+            </view> 
+            <block wx:if="{{item.reply_list_count!=0}}" wx:for="{{item.reply_list}}" wx:key="this">
+                <view class='newcommentbox display-flex' >      
+                <view class='display-flex newcommentbox_right newbox_wright newbox_wright2'>
+                    <image wx:if="{{item.user_avatar==''}}" src="{{base}}images/default-user-2.png" class='newcomment_header'></image>
+                    <image wx:else src='{{item.user_avatar}}' class='newcomment_header'></image>
+                    <view class='w_p100'>
+                    <view class='display-flex newcomment_top'>
+                        <view class='newcomment_name f_26 oneline'>{{item.userInfo.nickname}}</view>
+                        <view class='newcomment_time f_24  c_999 '>{{item.difftime}}</view>
+                    </view>
+                    <view class='newcomment_text f_28 c_333'><text>回复</text><text style='color:#576A95'>{{item.parent_user}}</text><text>:</text>{{item.content}}</view>
+                    </view>
+                </view>
+                </view> 
+            </block> 
+            </view>
+        </view> 
+        </view> -->
+
+
+
+
+
+
+
+
+    </view>
+</view>
+<cover-view class='mywrite' bindtap='toWrite'>
+    <cover-image src='{{base}}images/circle_camera.png' class='circle_camera'></cover-image>
+</cover-view>
+
+
+

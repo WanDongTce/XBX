@@ -1,0 +1,42 @@
+<compontNavbar title="地址列表" isShowBack="{{true}}"></compontNavbar>
+<view class='item_bigbox' wx:for="{{list}}" wx:key="this">
+  <view class='item_box'>
+    <view class='item_topbox overf' bindtap="useAddr" data-item="{{item}}">
+      <view class='fl'>
+        <view class='name'>{{item.name}}</view>
+        <view class='moren' wx:if="{{item.is_default == 2}}">默认</view>
+      </view>
+      <view class='fr phone'>{{item.tel}}</view>
+    </view>
+    <view class='address' bindtap="useAddr" data-item="{{item}}">{{item.priovince_name + item.city_name + item.district_name}}</view>
+    <view class='item_bottom overf'>
+      <view class='fl' bindtap="selectClick" data-id="{{item.id}}">
+        <view wx:if="{{item.is_default == 2}}">
+          <image src='{{base}}images/yuan2.png' class='moren_img'></image>
+          <text>默认地址</text>
+        </view>
+        <view wx:else>
+          <image src='{{base}}images/yuan1.png' class='moren_img'></image>
+          <text>设为默认</text>
+        </view>
+      </view>
+      <view class='fr'>
+        <view class='fr_dis' bindtap='catchTapEdit' data-item="{{item}}">
+          <image src='{{base}}images/edit.png' class='edit_img'></image>    
+          <text>编辑</text>
+        </view>
+        <view class='fr_dis' bindtap='catchTapDel' data-id="{{item.id}}">
+          <image src='{{base}}images/delete.png' class='del_img'></image>      
+          <text>删除</text>  
+        </view>    
+      </view>
+    </view>
+  </view>
+</view>
+
+<navigator class='add_bigbox' url='/pages/common/addAddress/addAddress' open-type="redirect">
+  <view class='add_box' >
+    <image src='{{base}}images/plus-green.png' class='add_img'></image>
+    新增地址
+  </view>
+</navigator>

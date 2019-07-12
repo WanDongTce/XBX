@@ -1,0 +1,69 @@
+<compontNavbar title="名师频道" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="container">
+    <view class="fixed-box">
+        <view class="search-box">
+            <view class="search-cont">
+                <image src="{{base}}images/search.png" mode="widthFix" class="search-icon"></image>
+                <input class="search-input" placeholder="搜索关键字" bindinput="inputFn"></input>
+            </view>
+        </view>
+        <view class="select-box">
+            <view class="select" bind:tap="seltClkFn" data-idx="1">
+                <text class="selt-itm-text {{sctdOptIdx == 1? 'active' : ''}}" data-idx="1">区域</text>
+                <image class="down-icon" src="{{sctdOptIdx == 1? base + 'images/greenarrowup.png' : base + 'images/selctIcon1.png'}}" data-idx="1"></image>
+            </view>
+            <view class="select" bind:tap="seltClkFn" data-idx="2">
+                <text class="selt-itm-text {{sctdOptIdx == 2? 'active' : ''}}" data-idx="2">科目</text>
+                <image class="down-icon" src="{{sctdOptIdx == 2? base + 'images/greenarrowup.png' : base + 'images/selctIcon1.png'}}" data-idx="2"></image>
+            </view>
+            <view class="select" bind:tap="seltClkFn" data-idx="3">
+                <text class="selt-itm-text {{sctdOptIdx == 3? 'active' : ''}}" data-idx="3">级别</text>
+                <image class="down-icon" src="{{sctdOptIdx == 3? base + 'images/greenarrowup.png' : base + 'images/selctIcon1.png'}}" data-idx="3"></image>
+            </view>
+        </view>
+        <view class="select-opt-box" wx:if="{{isShowOption}}">
+            <block wx:if="{{sctdOptIdx == 1}}">
+                <view class="opt-mask" catchtap="hideOption"></view>
+                <addressList catch:seleted="selectedAddress" catch:hide="hideOption"></addressList>
+            </block>
+            <block wx:if="{{sctdOptIdx == 2}}">
+                <view class="opt-mask" catchtap="hideOption"></view>
+                <subjectList catch:confirm="subjectConfirmFn"></subjectList>
+            </block>
+            <block wx:if="{{sctdOptIdx == 3}}">
+                <view class="opt-mask" catchtap="hideOption"></view>
+                <levelList catch:confirm="levelConfirmFn"></levelList> 
+            </block>
+        </view>
+    </view>
+
+    <view class="cont-box">
+        <block wx:if="{{showEmpty}}">
+            <empty></empty>
+        </block>
+        <navigator url="{{'/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + item.Id}}" class="cont-item" wx:key="this" wx:for="{{list}}">
+            <view class="itm-lt">
+                <image class="lt-img" src="{{item.FacePath}}" mode="aspectFill"></image>
+            </view>
+            <view class="itm-rt">
+                <view class="tel-box">
+                    <view class="tel">{{item.Name}}</view>
+                    <view class="level">{{item.JobTitle}}</view>
+                </view>
+                <view class="school">{{item.SchoolName}}</view>
+                <view class="sub-box">
+                    <view class="sub">
+                        <text>{{item.SubjectName}}</text>
+                        <block wx:for="{{item.Xing}}" wx:key="this">
+                            <image src="{{base}}images/star.png" class="star-icon"></image>
+                        </block>
+                    </view>
+                    <view class="count">
+                        <image src="{{base}}images/eye.png" class="eye-icon"></image>
+                        <text>{{item.Hit}}</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

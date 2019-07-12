@@ -1,0 +1,90 @@
+<view class='search_box display-flex' wx:if="{{!changeTabsCss}}">
+  <image class="navigation-back-icon" src="../../../../images/arowLt.png" bindtap='backReturn'></image>
+  <view class='search display-flex align-items-center'>
+    <image src='../../../../images/search.png'></image>
+    <input placeholder='搜索关键字' placeholder-class='placeholder'  disabled  catchtap="tz_periphery"></input>
+  </view>
+</view> 
+<view class='search_box_old display-flex ' wx:if="{{changeTabsCss}}">
+    <image class="navigation-back-icon" src="../../../../images/arowLt_fff.png" bindtap='backReturn'></image>
+    <view class='search display-flex align-items-center'>
+        <image src='../../../../images/search.png'></image>
+        <input placeholder='搜索关键字' placeholder-class='placeholder'  disabled  catchtap="tz_periphery"></input>
+    </view>
+</view>
+
+
+
+<swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
+        
+        <block wx:for="{{imgUrls}}" wx:key="this">
+            <swiper-item>
+                <image src="{{item.image}}" class="slide-image" catchtap="toH5" data-type="{{item.to_type}}" data-url="{{item.url}}" data-toid="{{item.to_id}}"/>
+            </swiper-item>
+        </block>
+</swiper>
+<!-- <view class='mall_top1 display-flex justify-content-between align-items-center'>
+    <view class='display-flex align-items-center justify-content-between mall_newtopbox'>
+        <view class='display-flex align-items-center'>
+            <image src='../../images/mall/mall_jf.png' class='mall_top_img1'></image>
+            <view class='f_26 c_333'>当前积分：{{info.score || 0}}</view>
+        </view>
+        <navigator class='display-flex align-items-center' url='/pages/integralMall/record/record'>
+            <image src='../../images/mall/mall_record.png' class='mall_top_img2'></image>
+            <view class='f_26 c_333'>兑换记录</view>
+        </navigator>
+        <navigator class='display-flex align-items-center' url='/pages/myGift/myGift'>
+            <image src='../../images/mall/mall_box.png' class='mall_top_img3'></image>
+            <view class='f_26 c_333'>我的礼品</view>
+        </navigator>
+    </view>
+</view> -->
+
+<view class='bigbox'>
+  <view class='overf margin_jifen'>
+    <navigator class='fl my_integral' url="{{'/pages/my/pages/myIntegarl/myIntegarl?score=' + info.score}}">我的积分：{{info.score || 0}}</navigator>
+    <navigator class='fr notebox' url='/pages/home/pages/integralMall/integralMallNote/integralMallNote'>
+      <image src='../../../../images/note.png' class='note_img'></image>
+      <text >积分说明</text>
+    </navigator>
+  </view>
+  <view class='overf wyyy_box'>
+    <navigator class='fl position-relative' url='/pages/home/pages/integralMall/PurchaseInAdvance/PurchaseInAdvance'>
+      <image src='../../images/mall/wyyy.png' class='wyyy_img'></image>
+      <text class='wyyy_text'>我要预购</text>
+    </navigator>
+    <navigator class='fr position-relative' url='/pages/home/pages/integralMall/record/record'>
+      <image src='../../images/mall/dhjl.png' class='wyyy_img'></image>
+      <text class='dhjl_text'>兑换记录</text>
+    </navigator>
+  </view>
+</view>
+
+<view class='newmall_typebigbox display-flex align-items-center'>
+    <view class='newmall_typebox' wx:for="{{itemStyle}}" wx:key="this" bindtap='swiScrollTab' data-index="{{item.id}}">
+        <image src='{{item.image}}' class='newmall_type_img'></image>
+        <view class='f_24 c_999'>{{item.name}}</view>
+    </view>
+</view>
+
+
+<view class='classify_box overf'>
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <view wx:if="{{!showEmpty}}" class='tj_top position-relative'>
+        <image src='../../images/mall/tj_bg.png'></image>
+        <view class='tj_toptextbox'>商品推荐</view>
+    </view>
+    <view wx:if="{{!showEmpty}}" class="w_p_49 {{index%2==0?'fl':'fr'}}" wx:for="{{list}}" wx:key="this" catchtap="tz_detail" data-id="{{item.id}}" id='{{index}}'>
+        <view class="center_imgbox {{index%2==0? 'text_l' : 'text_r'}}" catchtap="tz_detail" data-id="{{item.id}}">
+            <image src='{{item.pic_url}}' mode='aspectFill' class='w_p_50_leftimg'></image>
+        </view>
+        <view class='center_title' catchtap="tz_detail" data-id="{{item.id}}">{{item.name}}</view>
+        <view class='fl center_jf'>
+            <text>{{item.point}}</text>积分</view>
+        <view catchtap="toSetm" class='fr center_btn' data-id="{{item.id}}" data-item="{{item}}">立即兑换</view>
+        <view class='clr'></view>
+    </view>
+</view>
+

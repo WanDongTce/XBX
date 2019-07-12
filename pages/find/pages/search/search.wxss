@@ -1,0 +1,100 @@
+page{
+    background-color: #f7f7f7;
+}
+
+.searchbigbox{
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.searchbox {
+    height: 70rpx;
+    margin: 0 25rpx;
+    border-radius: 10rpx;
+    background-color: #f1f1f1;
+}
+
+.search_img {
+    width: 26rpx;
+    height: 26rpx;
+    margin-top: 22rpx;
+    margin-left: 22rpx;
+}
+
+
+.searchbox input {
+    font-size: 28rpx;
+    color: #333;
+    margin-left: 22rpx;
+    width: 510rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-right: 22rpx;
+}
+
+.search_btn {
+    font-size: 32rpx;
+    color: #4bace2;
+    margin-right: 24rpx;
+}
+
+.recently_box {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 110rpx;
+    padding: 0 24rpx 10rpx;
+}
+
+.recently_box view {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.recently_box image {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.title_box {
+    width: 100%;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.itm {
+    width: 100%;
+    padding: 24rpx 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.time-img{
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 16rpx;
+}
+.his-item{
+    width: 80%;
+    font-size: 30rpx;
+    color: #333;
+}
+.next-img{
+    width: 16rpx;
+    height: 24rpx;
+}
+
+.clear-his {
+    width: 100%;
+    margin-top: 40rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #333;
+}

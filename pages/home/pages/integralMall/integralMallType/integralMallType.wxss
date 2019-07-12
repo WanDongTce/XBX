@@ -1,0 +1,75 @@
+@import "../../../../../template/scrollTab/scrollTab.wxss";
+page {
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    padding-top:0;
+}
+
+
+.classify_box {
+    padding-top: 92rpx;
+}
+
+.w_p_49 {
+    width: 49.5%;
+    display: inline-block;
+    background-color: #fff;
+    margin-bottom: 1%;
+}
+
+.center_title {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 32rpx;
+    margin: 20rpx 30rpx 0;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 64rpx;
+}
+
+.center_jf {
+    color: #4bace2;
+    font-size: 24rpx;
+    margin-top: 11rpx;
+    margin-left: 30rpx;
+}
+
+.center_jf text {
+    font-size: 30rpx;
+}
+
+.center_btn {
+    font-size: 24rpx;
+    color: #fff;
+    background-color: #ff8b68;
+    width: 112rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    margin: 12rpx 30rpx 28rpx 0;
+}
+
+.center_imgbox image {
+    width: 100%;
+    height: 364rpx;
+}
+
+.w_p_50_rightimg {
+    right: 0;
+    top: 0;
+}
+
+
+
+.text_l {
+    text-align: left;
+}
+
+.text_r {
+    text-align: right;
+}

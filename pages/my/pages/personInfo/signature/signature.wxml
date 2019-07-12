@@ -1,0 +1,5 @@
+<compontNavbar title="编辑个性签名" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+  <textarea placeholder='请设置个性签名' placeholder-class='placeholder' bindinput='inputFn' maxlength='140'></textarea>
+</view>
+<view class='btn' catchtap="save">保存</view>

@@ -1,0 +1,108 @@
+@import "/pages/home/pages/edutList/edutList.wxss";
+@import "/template/scrollTab/scrollTab.wxss"; 
+page {
+    min-height: 100vh;
+    background-color: #fff;
+}
+.mytop{
+  position:fixed;
+  top:10vh;
+  z-index: 2;
+  width:100%;
+  background-color:#fff; 
+  border-bottom:16rpx solid #f7f7f7; 
+}
+.top_padding{
+  padding:0 30rpx;
+  
+}
+.mytop_box{
+  align-items: center;
+  border-bottom:2rpx solid #4bace2;
+}
+.mytop_item{
+  width:25%;
+  text-align: center;
+  padding:20rpx 0;
+}
+.mytop_img{
+  width:48rpx;
+  height:56rpx;
+}
+.mytop_text{
+  margin-top:14rpx;
+  font-size:24rpx;
+  color:#333;
+}
+.mytop_arrowbox{
+  position:absolute;
+  bottom:-9rpx;
+  left:0;
+  width:100%;
+  text-align: center;
+}
+.mytop_arrow{
+  width:16rpx;
+  height:10rpx;
+}
+
+.bgfff {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+/*scroll-view  */
+.scroll-item{
+  padding:0 0;
+  width:120rpx;
+  text-align: center;
+}
+
+.top_fix {
+    position: fixed;
+    
+    background-color: #fff;
+    z-index: 2;
+    height: 76rpx;
+    width: 100%;
+    border-bottom:16rpx solid #f7f7f7;
+}
+
+.item_box {
+    width: 100%;
+    padding: 20rpx 16rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16rpx;
+}
+.dis_show{
+  display: block;
+}
+.dis_none{
+  display:none;
+}
+
+.scrollview_center{
+    width: 100%;
+    margin-top: 252rpx;
+    /* padding: 20rpx; */
+    box-sizing: border-box;
+    padding: 30rpx;
+    -webkit-box-sizing: border-box;
+     background-color:#fff; 
+}
+
+.itembox {
+    background-color:#fff;
+    padding: 40rpx 00rpx 40rpx;
+    border-bottom:1rpx solid #ddd;
+}

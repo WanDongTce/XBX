@@ -1,0 +1,210 @@
+<compontNavbar title="我的" isShowBack="{{false}}"  component-class="component-class"></compontNavbar>
+
+<image src='{{IMGURL}}my/my-background.png' class='mybg' mode='aspectFill'></image>
+<view class='topbox'>
+    <view class='topbox_top'>
+        <image src="{{base}}images/set_black.png" class='topbox_top_img1 fr' bindtap="toInfo"></image>
+        <view class='topbox_top_img2 fr' bindtap="toNote">
+            <image src='{{base}}images/note2.png'></image>
+            <block wx:if="{{msgCount > 0}}">
+                <view class="cir" wx:if="{{msgCount < 100}}">{{msgCount}}</view>
+                <view class="cir elip" wx:else>...</view>
+            </block>
+        </view>
+        <view class='clr'></view>
+    </view>
+    <view class='topbox_center overf'>
+        <image src="{{info.avatar? info.avatar: base + 'images/default-user-2.png'}}" mode="aspectFill" class='top_header fl'></image>
+        <view class='fl'>
+            <view class='display-flex align-items-center'>
+                <view class='top_name c_333 one_line'>{{info.nickname}}</view>
+                <image class='top_sex_img' src="{{info.sex==2? base + 'images/female.png': base + 'images/male.png'}}"></image>
+                <view wx:if="{{info.sex==2}}" class=' f_24 c_666'>女</view>
+                <view wx:elif="{{info.sex==1}}" class=' f_24 c_666'>男</view>
+                <view wx:if="{{info.userlevel==1}}" class='top_atribute'>普通会员</view>
+                <view wx:else class='top_atribute'>vip会员</view>
+            </view>
+            <view class='new_grade_img_box position_r'>
+                <image class='new_grade_img' src='{{base}}images/new_grade.png'></image>
+                <view class='position_a new_grade_text'>{{info.userlevel == 1? '普通会员' : 'VIP会员'}}</view>
+            </view>
+            <view class='display-flex align-items-center'>
+                <image src='{{base}}images/address.png' class='my_address_img'></image>
+                <view class='c_666 f_24'>{{info.school_name}}</view>
+                <view class='c_666 f_24 ml15'>{{info.grade_name}}{{info.class_name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='display-flex justify-content-around'>
+        <view class='text-align-center'>
+            <view class='top_bottom_text1'>0</view>
+            <view class='top_bottom_text2'>关注</view>
+        </view>
+        <view class='text-align-center'>
+            <view class='top_bottom_text1'>0</view>
+            <view class='top_bottom_text2'>粉丝</view>
+        </view>
+        <view class='text-align-center' bindtap="toIntegarl">
+            <view class='top_bottom_text1'>{{info.score || 0}}</view>
+            <view class='top_bottom_text2'>积分</view>
+        </view>
+    </view>
+</view>
+
+<view class='display-flex justify-content-around bgfff top_bottom_box border_bottom'>
+    <navigator class='text-align-center' url="/pages/my/pages/learningRecords/learningRecords">
+        <image src='{{base}}images/top_img1.png' class='top_img_item'></image>
+        <view class='top_bottom_text2'>学习记录</view>
+    </navigator>
+    <navigator class='text-align-center' url="/pages/my/pages/collection/collection">
+        <image src='{{base}}images/top_img2.png' class='top_img_item'></image>
+        <view class='top_bottom_text2'>我的收藏</view>
+    </navigator>
+    <navigator class='text-align-center' url="/pages/my/pages/comment/comment">
+        <image src='{{base}}images/top_img3.png' class='top_img_item'></image>
+        <view class='top_bottom_text2'>我的评论</view>
+    </navigator>
+</view>
+<view class='template_box bgfff'>
+    <view class='template_text1'>学习</view>
+    <view class='display-flex new_study_box flex-wrap-wrap'>
+        <navigator class='text-align-center w25' url='/pages/my/pages/service/homeworklist/homeworklist'>
+            <image src='{{base}}images/template_img1.png' class='template_img'></image>
+            <view class='template_text2'>我的作业</view>
+        </navigator>
+
+        <navigator class='text-align-center w25' url="/pages/my/pages/myQuestion/myQuestion">
+            <image src='{{base}}images/template_img2.png' class='template_img'></image>
+            <view class='template_text2'>我的提问</view>
+        </navigator>
+        <view class='text-align-center w25' bindtap="toMyAns">
+            <image src='{{base}}images/template_img3.png' class='template_img'></image>
+            <view class='template_text2'>我的回答</view>
+        </view>
+
+        <navigator class='text-align-center w25' url="/pages/my/pages/note/note">
+            <image src='{{base}}images/template_img4.png' class='template_img'></image>
+            <view class='template_text2'>我的笔记</view>
+        </navigator>
+        <navigator class='text-align-center w25 mt_two' url="/pages/my/pages/purchasedCourse/purchasedCourse">
+            <image src='{{base}}images/template_img17.png' class='template_img'></image>
+            <view class='template_text2'>我的课程</view>
+        </navigator>
+        <!-- <navigator  class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
+            <image src='{{base}}images/template_img19.png' class='template_img'></image>
+            <view class='template_text2'>作业批改</view>
+        </navigator> -->
+        <navigator wx:if="{{info.isteacher==1}}" class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
+            <image src='{{base}}images/template_img19.png' class='template_img'></image>
+            <view class='template_text2'>作业批改</view>
+        </navigator>
+    </view>
+</view>
+<view class='template_box bgfff'>
+    <view class='template_text1'>会员</view>
+    <view class='display-flex '>
+        <navigator class='text-align-center w25' url="/pages/my/pages/mycard/mycard">
+
+            <image src='{{base}}images/template_img5.png' class='template_img'></image>
+            <view class='template_text2'>我的卡包</view>
+        </navigator>
+         <view class='text-align-center w25' bindtap="toMemberRenewal">
+            <image src='{{base}}images/template_img6.png' class='template_img'></image>
+            <view class='template_text2'>会员续费</view>
+        </view>
+        <!--<view class='text-align-center w25' bindtap="toRecharge">
+            <image src='{{base}}images/template_img7.png' class='template_img'></image>
+            <view class='template_text2'>充值</view>
+        </view> -->
+        <view class='text-align-center w25' bindtap="toTuiguang">
+            <image src='{{base}}images/template_img13.png' class='template_img'></image>
+            <view class='template_text2'>推广</view>
+        </view>
+        <navigator class='text-align-center w25' url='/pages/my/pages/myreferee/myreferee'>
+            <image src='{{base}}images/template_img8.png' class='template_img'></image>
+            <view class='template_text2'>我的推荐人</view>
+        </navigator>
+    </view>
+</view>
+<view class='template_box bgfff'>
+    <view class='template_text1'>理财</view>
+    <view class='display-flex '>
+        <!-- <navigator class='text-align-center w25' url="/pages/my/pages/wallet/wallet">
+            <image src='{{base}}images/template_img9.png' class='template_img'></image>
+            <view class='template_text2'>我的钱包</view>
+        </navigator> -->
+        <navigator class='text-align-center w25' url='/pages/my/pages/myFinancing/myFinancing'>
+            <image src='{{base}}images/template_img10.png' class='template_img'></image>
+            <view class='template_text2'>理财记录</view>
+        </navigator>
+    </view>
+</view>
+<view class='template_box bgfff'>
+    <view class='template_text1'>日常</view>
+    <view class='display-flex '>
+        <navigator class='text-align-center w25' url="/pages/my/pages/service/service">
+            <image src='{{base}}images/template_img11.png' class='template_img'></image>
+            <view class='template_text2'>自我监督</view>
+        </navigator>
+        <navigator class='text-align-center w25' url="/pages/my/pages/myClassmate/myClassmate">
+            <image src='{{base}}images/template_img12.png' class='template_img'></image>
+            <view class='template_text2'>综合素质</view>
+        </navigator>
+        <navigator class='text-align-center w25' url="/pages/my/pages/myBarter/myBarter">
+            <image src='{{base}}images/template_img13.png' class='template_img'></image>
+            <view class='template_text2'>物品交易</view>
+        </navigator>
+        <navigator class='text-align-center w25' url='/pages/find/pages/schoolInfo/schoolInfo'>
+            <image src='{{base}}images/template_img14.png' class='template_img'></image>
+            <view class='template_text2'>我的学校</view>
+        </navigator>
+    </view>
+</view>
+<view class='template_box bgfff border_bottom'>
+    <view class='template_text1'>订单</view>
+    <view class='display-flex '>
+        <navigator class='text-align-center w25' url='/pages/my/pages/myOrder/myOrder'>
+            <image src='{{base}}images/template_img15.png' class='template_img'></image>
+            <view class='template_text2'>我的订单</view>
+        </navigator>
+        <navigator class='text-align-center w25' url='/pages/home/pages/integralMall/integralMall'>
+            <image src='{{base}}images/template_img18.png' class='template_img'></image>
+            <view class='template_text2'>积分商城</view>
+        </navigator>
+        <navigator class='text-align-center w25' url='/pages/my/pages/myGift/myGift'>
+            <image src='{{base}}images/template_img16.png' class='template_img'></image>
+            <view class='template_text2'>我的礼品</view>
+        </navigator>
+    </view>
+</view>
+
+
+<navigator class='display-flex align-items-center justify-content-between bottom_box bgfff' url="/pages/my/pages/invite/invite">
+    <view class='display-flex align-items-center'>
+        <image src='{{base}}images/my_invite.png' class='bottom_box_img'></image>
+        <view class='f_28 c_333'>邀请好友</view>
+    </view>
+
+    <image src='{{base}}images/next.png' class='next_img'></image>
+</navigator>
+<!-- <navigator class='display-flex align-items-center justify-content-between bottom_box bgfff ' url="/pages/my/pages/set/set">
+    <view class='display-flex align-items-center'>
+        <image src='{{base}}images/setting.png' class='bottom_box_img'></image>
+        <view class='f_28 c_333'>账户设置</view>
+    </view>
+    <image src='{{base}}images/next.png' class='next_img'></image>
+</navigator> -->
+<navigator class='display-flex align-items-center justify-content-between bottom_box bgfff ' url="/pages/my/pages/onlineService/onlineService">
+    <view class='display-flex align-items-center'>
+        <image src='{{base}}images/my_online_service.png' class='bottom_box_img'></image>
+        <view class='f_28 c_333'>智能客服</view>
+    </view>
+    <image src='{{base}}images/next.png' class='next_img'></image>
+</navigator>
+<navigator class='display-flex align-items-center justify-content-between bottom_box bgfff ' url="/pages/my/pages/about/about">
+    <view class='display-flex align-items-center'>
+        <image src='{{base}}images/my_aboutus.png' class='bottom_box_img'></image>
+        <view class='f_28 c_333'>关于我们</view>
+    </view>
+    <image src='{{base}}images/next.png' class='next_img'></image>
+</navigator>

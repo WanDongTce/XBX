@@ -1,0 +1,59 @@
+<!--pages/my/purchasedCourse/purchasedCourse.wxml-->
+ <compontNavbar title="我的课程" isShowBack="{{true}}" component-class="component-class"></compontNavbar> 
+<import src="../../../../template/tab/tab.wxml" />
+
+<view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="this">
+            <template is="{{tabindex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+        </block>
+  </view>
+<view class='mt10vh' if="{{tabindex==1}}">
+    <block wx:if="{{showEmpty}}">
+          <empty></empty>
+    </block>
+    <view class='newbg_fff' wx:for="{{list}}" wx:key="this"  data-id="{{item.id}}">   
+        <view class='newcourse_itembox' >
+            <image class='newcourse_topimg' src='{{item.img}}' mode='widthFix'></image>
+            <view class='newcourse_title f_32 c_333'>
+            <text>{{item.subject}}</text>
+            {{item.title}}
+            </view>        
+            <view class='display-flex justify-content-between align-items-center newcourse_bottombox'>
+            <view class='display-flex +align-items-center'>
+                <image wx:if="{{item.img==''}}" src='../../../../images/default-user-2.png' class='newcourse_headerimg'></image>
+                <image wx:else src='{{item.img}}' class='newcourse_headerimg'></image>
+                <view class='newcourse_name one_line f_26 c_333'>{{item.title}}</view>
+            </view>
+            <view class='newcourse_time f_26 c_333'>{{item.course_date}}<text>{{item.course_stime}}~{{item.course_etime}}</text></view>          
+            </view> 
+        </view>  
+         
+    </view>
+
+
+
+</view>
+
+
+<view class='mt10vh' wx:if="{{tabindex==2}}">
+    <block wx:if="{{showEmptyHf}}">
+          <empty></empty>
+    </block>
+    <view class='newbg_fff'  wx:for="{{listhf}}" wx:key="this"  data-id="{{item.id}}">
+        <view class='newcourse_itembox'>       
+            <video src='{{item.videourl}}'></video>
+            <view class='newcourse_title f_32 c_333'>
+            <text>{{item.subject}}</text>
+            {{item.title}}
+            </view>        
+            <view class='display-flex justify-content-between align-items-center newcourse_bottombox'>
+            <view class='display-flex +align-items-center'>
+                <image wx:if="{{item.t_portrait==''}}" src='../../../../images/default-user-2.png' class='newcourse_headerimg'></image>
+                <image wx:else src='{{item.t_portrait}}' class='newcourse_headerimg'></image>
+                <view class='newcourse_name one_line f_26 c_333'>{{item.t_name}}</view>
+            </view>
+            <view class='newcourse_time f_26 c_333'>{{item.course_date}}<text>{{item.course_stime}}~{{item.course_etime}}</text></view>          
+            </view> 
+        </view>  
+    </view>
+</view>    

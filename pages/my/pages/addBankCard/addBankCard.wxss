@@ -1,0 +1,74 @@
+page{
+    background: #f7f7f7;
+}
+.box{
+    width: 100%;
+}
+.tit,
+.tip{
+    width: 100%;
+    padding: 10% 24rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 30rpx;
+    color: #999;
+}
+.tip{
+    font-size: 26rpx;
+}
+.content{
+    width: 100%;
+    background: #fff;
+}
+.input-box{
+    width: 100%;
+    padding: 4% 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.input-box:last-child{
+    border-bottom: none;
+}
+.input-box label{
+    width: 18%;
+    font-size: 30rpx;
+    color: #333;
+}
+.input-box input,
+.input{
+    width: 80%;
+    color: #333;
+    font-size: 30rpx;
+}
+.input{
+    width: 60%;
+}
+.input-box view{
+    width: 39%;
+    font-size: 30rpx;
+    color: #4bace2;
+    text-align: center;
+    border-left: 1rpx solid #dfdfdf;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.place{
+    color: #999;
+}
+.btn{
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    margin: 10% auto;
+    background: #4bace2;
+    border-radius: 10rpx;
+}

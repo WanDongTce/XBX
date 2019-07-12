@@ -1,0 +1,52 @@
+<!--pages/edutlList/achievement/achievement.wxml-->
+<compontNavbar title="成绩管理" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="search-box search_box_new">
+    <view class="search-cont">
+        <image src="../../../../../images/search.png" mode="widthFix" class="search-icon"></image>
+        <input class="search-input" placeholder="搜索关键字" bindconfirm="inputFn"></input>
+    </view>
+    <image src='../../../../../images/tabBtom/home4.png' class='preview_home_img' catchtap='tz_my'></image>
+</view>
+<view class='subject_bigbox'> 
+<block wx:if="{{list.length == 0}}"><empty></empty></block> 
+
+<view class="subject" wx:key="this" wx:for="{{list}}">
+  <view class="sbm">
+    <view class="subject-box">
+      <text class="subject-text">{{item.title}}</text>
+    </view>
+    <view class="subject-one">
+      <text class="text">考试时间：{{item.exam_time}}</text>
+    </view>
+    <view class="subject-two">
+      <text class="text">录入时间：{{item.create_time}}</text>
+    </view>
+  </view>
+  <!-- {{'/pages/service/preview/preview?learntype=' + 1}} -->
+  <navigator class="edit" url="{{'/pages/my/pages/service/performanceEdit/performanceEdit?myid=' + item.id}}">
+    <text class="edit-a">编辑查看</text>
+  </navigator>
+</view>
+</view>
+<!-- <view class="subject">
+  <view class="sbm">
+    <view class="subject-box">
+      <text class="subject-text">英语</text>
+    </view>
+    <view class="subject-one">
+      <text class="text">考试时间：2018-3-27</text>
+    </view>
+    <view class="subject-two">
+      <text class="text">录入时间：2018-3-27</text>
+    </view>
+  </view>
+  <navigator class="edit">
+    <text class="edit-a">编辑查看</text>
+  </navigator>
+</view> -->
+
+
+<navigator class="bottom" url="/pages/my/pages/service/performance/performance">
+  <text class="bottom-text">添加档案</text>
+</navigator>

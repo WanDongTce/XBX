@@ -1,0 +1,18 @@
+<import src="../../../../../template/tab/tab.wxml" />
+
+<compontNavbar title="积分说明" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="tabs">
+    <block wx:for="{{tabs}}" wx:key="this">
+        <template is="{{curIndex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+    </block>
+</view>
+ 
+<view class="tab-content"> 
+  <view class="right-item" wx:if="{{curIndex == 0}}">
+    <view class='newcontent'>{{use_note}}</view>
+  </view> 
+  <view class="right-item" wx:if="{{curIndex == 1}}">
+    <view class='newcontent'>{{get_note}}</view>
+  </view> 
+</view> 

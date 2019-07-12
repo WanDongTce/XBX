@@ -1,0 +1,15 @@
+<compontNavbar title="续费记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <view class="list" wx:else>
+        <view class="item" wx:for="{{list}}" wx:key="this">
+            <view class="lt">
+                <view class="tit">{{item.typename}}</view>
+                <view class="date">{{item.create_time}}</view>
+            </view>
+            <view class="count">时长：{{item.month}}</view>
+        </view>
+    </view>
+</view>

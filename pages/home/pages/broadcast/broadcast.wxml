@@ -1,0 +1,18 @@
+<compontNavbar title="互动课堂" isShowBack="{{true}}"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<block wx:else>
+    <view class="broadcast" wx:for="{{list}}" wx:key="this" bindtap="enterLive" data-params="{{item}}">
+        <image src="{{item.pic}}" class="broadcast-img" mode="aspectFill"></image>
+        <view class="broadcast-box">
+            <view class="lt">
+                <view class="broadcast-tit">{{item.name}}</view>
+                <view class="broadcast-time">{{item.intro}}</view>
+            </view>
+            <view class="btn bg-red" wx:if="{{item.isopen == 2}}">未开启</view>
+            <view class="btn bg-green" wx:if="{{item.isopen == 1}}">已开启</view>
+            <view class="btn bg-green" wx:if="{{item.is_anchor == 1 && item.isopen == 2}}">开直播</view>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,29 @@
+page {
+    background-color: #f4f4f4;
+}
+
+.box {
+    padding: 0 50rpx;
+}
+
+.btn {
+    background-color: #4bace2;
+    line-height: 90rpx;
+    height: 90rpx;
+    width: 650rpx;
+    margin: 50rpx auto 50rpx;
+    color: #fff;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.title {
+    line-height: 100rpx;
+    font-size: 29rpx;
+    color: #333;
+}
+
+.tags {
+    width: 100%;
+}
+

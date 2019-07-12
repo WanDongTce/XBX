@@ -1,0 +1,4 @@
+<!--pages/home/my_study/answer/answer_video/answer_video.wxml-->
+<view class='video_box'>
+<video  src="{{videlurl}}" poster="{{mycover}}"  controls class='video'></video>
+</view>

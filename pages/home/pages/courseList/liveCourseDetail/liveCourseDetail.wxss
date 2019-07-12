@@ -1,0 +1,99 @@
+/* pages/courseList/courseDetailNew/courseDetailNew.wxss */
+page{
+  background-color:#fff;
+  padding-bottom:98rpx;
+}
+/* .component-class{
+  background-color:red
+} */
+.topbox{
+  padding:40rpx 30rpx 34rpx;
+  border-bottom:16rpx solid #f4f4f4;
+}
+.topbox_title{
+  line-height: 42rpx;
+  word-break: break-all;
+}
+.topbox_h2{
+  margin-top:30rpx; 
+}
+.topbox_h3{
+  margin-top:20rpx;
+  justify-content: space-between;
+  font-weight:bold;
+}
+.topbox_h3 text{
+  margin:0 12rpx;
+}
+.centerbox{
+  padding:0 30rpx;
+  border-bottom:16rpx solid #f4f4f4;
+}
+.templettitle{
+  height:95rpx;
+  line-height:95rpx;
+  align-items: center;
+  font-weight:bold;
+  border-bottom:1rpx solid #dfdfdf;
+}
+.templettitle image{
+  width:23rpx;
+  height:28rpx;
+  margin-right:14rpx;
+}
+.teacher_box{
+  margin:30rpx 0 36rpx;
+}
+.teacher_header{
+  width:85rpx;
+  height:85rpx;
+  border-radius: 50%;
+  margin-right:22rpx;
+}
+.teacher_name{
+  margin:10rpx 0 10rpx;
+}
+.start_img{
+  width:38rpx;
+  height:36rpx;
+  margin-left:8rpx;
+}
+.teacher_fen{
+  align-items: center;
+}
+.teacher_fen view{
+  margin-left:19rpx;
+  height:36rpx;
+  line-height:36rpx;
+}
+.course_box{
+  line-height:50rpx;
+  margin-bottom:42rpx;
+  margin-top:20rpx;
+  word-break: break-all;
+}
+.bottom_fixed{
+  position: fixed;
+  z-index: 2;
+  bottom:0;
+  width:100%;
+  border-top: 1rpx solid #dfdfdf;
+  background-color:#fff;
+  align-items: center;
+  padding:12rpx 0;
+}
+.bottom_left{
+  font-size:42rpx;
+  color:#4bace2;
+  margin-left:39rpx;
+}
+.bottom_right{
+  width:210rpx;
+  height:73rpx;
+  line-height: 73rpx;
+  background-color:#4bace2;
+  color:#fff;
+  text-align: center;
+  margin-right:30rpx;
+  border-radius: 5rpx;
+}

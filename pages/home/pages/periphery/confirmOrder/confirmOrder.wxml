@@ -1,0 +1,69 @@
+<compontNavbar title="确认订单" isShowBack="{{true}}" ></compontNavbar>
+<view class='top_bigbox' bindtap='tz_address' wx:if="{{hasAddress}}">
+    <view class='top_box display-flex'>
+        <view class='top_name'>收货人：{{address.name}}</view>
+        <view class='top_phone'>{{address.tel}}</view>
+    </view>
+    <view class='top_address display-flex'>
+        <view class="lt">
+            <image src='../../../../../images/addr2.png' class='address_img'></image>
+        </view>
+        <view class='address_text'>
+            {{address.priovince_name + address.city_name + address.district_name + address.address}}
+        </view>
+        <view class="rt">
+            <image src='../../../../../images/next.png' class='address_jt'></image>
+        </view>
+    </view>
+</view>
+<view class='noaddress_box' wx:else>
+    <view class='noaddress'>暂无地址，请添加收货地址</view>
+    <view class='noaddress_btnbox'>
+        <navigator class='add_noaddress' url='/pages/common/address/address'>
+            <image src='../../../../../images/plus-green.png' class='add_noaddressimg'></image>
+            添加收货地址
+        </navigator>
+    </view>
+</view>
+<image src='../../../../../images/score_bottomline.png' class='score_bottomline' mode='scaleToFill'></image>
+
+<view class='list'>
+    <view wx:for="{{list}}" wx:key="this" wx:for-item="im" wx:for-index="idx">
+        <view class='display-flex align-items-center new_sjname'>
+            <image src='../../../images/ecology/business_type2.png' class='business_type_img'></image>
+            <view class='f_28 c_333 new_business_name'>{{im.name}}</view>
+        </view>
+        
+        <view class='item display-flex new_item_box'  wx:for="{{im.goods_list}}" wx:key="this">
+            <view class='item-img'>
+                <image src='{{item.image}}' class='img'></image>
+            </view>
+            <view class='item-content-box'>
+                <view class='item-title'>
+                    {{item.title}}
+                </view>
+                <view class='display-flex item-tips'>
+                    <view class='price'>￥{{item.price}}</view>
+                                    
+                    <view class='num'>x{{item.num}}</view>
+                    
+                </view>
+            </view>
+        </view>
+        <view class='display-flex align-items-center new_my_totalbox'>
+            <view class='new_my_total1 f_30 c_333'>共{{im.num_all}}件商品</view>
+            <view class='new_my_total2 f_30 c_333'>小计：<text>￥{{im.price_all}}</text></view>
+        </view>
+    </view>
+    <!-- <view class="order-tot-box">
+        <text class="allnum">共{{numAll}}件</text>合计：<text class="allprice">￥{{totalPrice}}</text>
+    </view> -->
+</view>
+<view class='bottom-box display-flex'>
+    <view class='bottom-left'>
+        合计：
+        <text>￥{{totalPrice}}</text>
+    </view>
+    <!-- <button class='fix_btn c_gf_bg f_32 c_fff' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">确认支付</button> -->
+    <button class='bottom-btn'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">提交订单</button>
+</view>

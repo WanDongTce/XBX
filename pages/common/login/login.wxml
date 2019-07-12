@@ -1,0 +1,71 @@
+<image src='../../../images/train_login_bg.png' class='login_bg'></image>
+<view class='logo_box position_a'>
+<image src='{{logoimg}}' class='login_logo'></image>
+</view>
+<view class="bigbox">
+    	
+        <view class="tab_box">
+        	<view class="tab_topbox  display-flex" >
+                <view class="tab_title {{menu_content_left?'tab_title_active':''}} " bindtap='tab_topbox_left'>
+                    登录
+                </view>
+                <view class="tab_title {{menu_content_right?'tab_title_active':''}}" bindtap='tab_topbox_right'>
+                    注册
+                </view>
+            </view>
+            <!-- 切换的左侧 -->
+            <view class="menu_content {{menu_content_left?'display_b':'display_n'}}"  >
+                <view class="phone_box display-flex  align-items-center">
+                    <view class="phone_left c_333 f_28">+86</view>
+                    <input class="phone_inputtel f_26" type="number" placeholder="请输入手机号"  placeholder-class='placeholder' bindinput="user_left_phone"></input>
+                </view>
+                <view class="display-flex justify-content-between changep_box">
+                    <!-- <input placeholder="请输入密码" placeholder-class='placeholder' type="{{passwordtype_left}}" class='f_26' bindinput="user_left_password"></input> -->
+                    <input placeholder="请输入密码" wx:if='{{passwordtype_left=="password"}}' placeholder-class='placeholder' type="password" class='f_26' bindinput="user_left_password" value='{{user_left_password}}' cursor-spacing='140'></input>
+                    <input wx:else placeholder="请输入密码" placeholder-class='placeholder' type="text" class='f_26' bindinput="user_left_password" value='{{user_left_password}}' cursor-spacing='140'></input>
+                    <image src="{{passwordimg_left}}" bindtap="passwordimg_left"></image>
+                </view>
+                <view class="login_btn f_34 c_fff" bindtap="click_left_login">登录</view>
+                <view class="login_btn_bottom f_26 display-flex  align-items-center">
+                    <navigator url='/pages/common/forget_password/forget_password' class="c_666">忘记密码？</navigator>
+                </view>
+            </view>
+            
+
+
+
+            <!-- 切换的右侧 -->
+            <form bindsubmit="bindFormSubmit" >
+            
+                <view class="menu_content {{menu_content_right?'display_b':'display_n'}}">
+                    <view class="phone_box display-flex align-items-center">
+                        <view class="phone_left c_333 f_28 ">
+                            +86
+                        </view>
+                        <input class="phone_inputtel f_26 " type="number" placeholder="请输入手机号" placeholder-class='placeholder' bindinput="user_right_phone" name="modify_phone"></input>
+                    </view>
+                    <view class="display-flex justify-content-between changep_box">
+                        <input placeholder="验证码" placeholder-class='placeholder' type="text" class='f_26'  confirm-type="next" name="modify_verifycode"></input>
+                        <view class=" f_26 {{verify_color? 'c_999' : 'c_gf'}}" bindtap="identify">{{verifyCodeTime}}</view>
+                        
+                    </view>
+                    <view class="display-flex justify-content-between changep_box">
+                        <!-- <input placeholder="请输入密码" placeholder-class='placeholder' type="{{passwordtype}}" class='f_26' bindinput="user_right_password" name="modify_passw"></input> -->
+                        <input placeholder="请输入密码" wx:if='{{passwordtype==password}}' placeholder-class='placeholder' type="password" class='f_26' bindinput="user_right_password" name="modify_passw" value='{{user_right_password}}' cursor-spacing='140'></input>
+                        <input wx:else placeholder="请输入密码" placeholder-class='placeholder' type="text" class='f_26' bindinput="user_right_password" name="modify_passw" value='{{user_right_password}}' cursor-spacing='140'></input>
+                        <image src="{{passwordimg}}" bindtap="passwordimg"></image>
+                    </view>
+                    <button class='login_btn f_34 c_fff' formType="submit">注册</button>
+                    <view class='bottom_agree'>注册既代表阅读并同意<text bindtap="toAgrmt">使用协议及使用条款</text></view>
+                    
+                </view>
+            </form>
+
+        </view>
+
+        
+        
+    </view>
+
+
+<view class='newbottom'>{{appverson}}</view>

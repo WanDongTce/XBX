@@ -1,0 +1,161 @@
+<compontNavbar title="{{idname}}" isShowBack="{{true}}" ></compontNavbar>
+<view wx:if="{{imgUrls.length > 0}}"><image src="{{imgUrls[0].image}}" class="banner"  mode='aspectFill' /></view>
+<view wx:else> <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' /> </view>
+
+<view class="tabs">
+    <navigator class="tab" url="/pages/home/pages/preview/preview">
+        <image class="tab-img" src="../../images/edutList/edu_tab1.png"></image>
+        <view class='tab-text f_26 c_333'>预习乐</view>
+    </navigator>
+    <navigator class="tab" url="/pages/home/pages/think/think">
+        <image class="tab-img" src="../../images/edutList/edu_tab2.png"></image>
+        <view class='tab-text f_26 c_333'>冥想思</view>
+    </navigator>
+    <!-- <navigator class="tab" url="/pages/home/pages/teacher/teacher">
+        <image class="tab-img" src="../../images/edutList/edu_tab3.png"></image>
+        <view class='tab-text f_26 c_333'>名师频道</view>
+    </navigator>
+    <navigator class="tab" url="{{'/pages/home/pages/courseList/courseList?mytopid=' + 1}}">
+        <image class="tab-img" src="../../images/edutList/edu_tab4.png"></image>
+        <view class='tab-text f_26 c_333'>精品课程</view>
+    </navigator> -->
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=1">
+        <image class="tab-img" src="../../images/edutList/edu_tab5.png"></image>
+        <view class='tab-text f_26 c_333'>明日之星</view>
+    </navigator>
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=2">
+        <image class="tab-img" src="../../images/edutList/edu_tab6.png"></image>
+        <view class='tab-text f_26 c_333'>王者之战</view>
+    </navigator>
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=3">
+        <image class="tab-img" src="../../images/edutList/edu_tab7.png"></image>
+        <view class='tab-text f_26 c_333'>挑战赛</view>
+    </navigator>
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=4">
+        <image class="tab-img" src="../../images/edutList/edu_tab8.png"></image>
+        <view class='tab-text f_26 c_333'>过关斩将</view>
+    </navigator>
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=5">
+        <image class="tab-img" src="../../images/edutList/edu_tab9.png"></image>
+        <view class='tab-text f_26 c_333'>即时游戏</view>
+    </navigator>
+    <!-- <view class="tab">
+        <image class="tab-img" src="../../images/edutList/edu_tab10.png"></image>
+         <view class='tab-text f_26 c_333'>其它</view> 
+    </view> -->
+    
+</view>
+
+<view class="h2" wx:if="{{teacList.length!=0}}">
+    <view class="h2-lt">
+        <view class="rect-icon"></view><text class="h2-text">校园名师</text>
+    </view>
+</view> 
+
+<scroll-view class="scroll-box" scroll-x="true" wx:if="{{teacList.length!=0}}">
+  <view class="scroll-item" wx:for="{{teacList}}" wx:key="this">
+  <view class="teac-cont">
+        <image src="{{item.FacePath?item.FacePath:'../../../../images/default-user-2.png'}}" class="teac-image" mode="aspectFill"></image>
+        <view class="teac-info">
+            <view class="teac-name">{{item.Name}}</view>
+            <view class="teac-sub">{{item.JobTitle}}</view>
+        </view>
+  </view>
+  </view>
+</scroll-view>
+
+
+<view wx:if="{{course_sy.length > 0}}">
+  <view class="h2" bindtap='tz_courselist' data-mytopid='1'>
+      <view class="h2-lt">
+          <view class="rect-icon"></view><text class="h2-text">{{course.item1.name}}</text>
+      </view>
+      <view class='h2-text2'>
+        {{course.item1.intro}}
+      </view>
+  </view> 
+  <swiper class='list_swiper' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
+    <block wx:for="{{course_sy}}" wx:key="this">
+      <swiper-item>
+          <view class='itembox' wx:for="{{item[0]}}" wx:key="this" data-myid="{{item.Id}}"  bindtap='tz_detail' data-videopic="{{item.PicUrl}}">
+            <view class='item_imgbox fl position-relative'>
+                <image src='{{item.PicUrl}}' class='item_img' mode="aspectFill"></image>
+                <view class="new_subject_img subject-bg-{{item.nBaseSubject.Id}}">{{item.nBaseSubject.Name}}</view>
+            </view>
+            <view class='fl item_textbox'>
+              <view class='item_title'>{{item.Name}}</view>
+              <view class='item_numbox display-flex'>
+                <image src='{{base}}images/agr.png' class='item_agrimg'></image>
+                <text class='item_num'>{{item.AgreeNum}}</text>
+                <image src='{{base}}images/msg.png' class='item_msgimg'></image>
+                <text class='item_num'>{{item.CommentNum}}</text>        
+              </view>
+            </view>
+          </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+ <view wx:if="{{course_gg.length > 0}}">
+  <view class="h2" bindtap='tz_courselist' data-mytopid='2'>
+      <view class="h2-lt">
+          <view class="rect-icon"></view><text class="h2-text">{{course.item2.name}}</text>
+      </view>
+      <view class='h2-text2'>
+        {{course.item2.intro}}
+      </view>
+  </view> 
+  <swiper class='list_swiper' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
+    <block wx:for="{{course_gg}}" wx:key="this" >
+      <swiper-item>
+          <view class='itembox overf' wx:for="{{item[0]}}" wx:key="this" data-videopic="{{item.PicUrl}}" data-myid="{{item.Id}}" bindtap='tz_detail'>
+            <view class='item_imgbox fl position-relative'>
+              <image src='{{item.PicUrl}}' class='item_img' mode="aspectFill"></image>
+              <view class="new_subject_img subject-bg-{{item.nBaseSubject.Id}}">{{item.nBaseSubject.Name}}</view>
+            </view>
+            <view class='fl item_textbox'>
+              <view class='item_title'>{{item.Name}}</view>
+              <view class='item_numbox display-flex'>
+                <image src='{{base}}images/agr.png' class='item_agrimg '></image>
+                <view class=' item_num'>{{item.AgreeNum}}</view>
+                 <image src='{{base}}images/msg.png' class='item_msgimg '></image>
+                <view class=' item_num'>{{item.CommentNum}}</view>        
+              </view>
+            </view>
+          </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view wx:if="{{course_wk.length > 0}}">
+  <view class="h2" bindtap='tz_courselist' data-mytopid='3'>
+      <view class="h2-lt">
+          <view class="rect-icon"></view><text class="h2-text">{{course.item3.name}}</text>
+      </view>
+      <view class='h2-text2'>
+        {{course.item3.intro}}
+      </view>
+  </view> 
+  <swiper class='list_swiper mb0' indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
+    <block wx:for="{{course_wk}}" wx:key="this" >
+      <swiper-item>
+          <view class='itembox overf' wx:for="{{item[0]}}" wx:key="this"  data-myid="{{item.Id}}"  data-videopic="{{item.PicUrl}}" bindtap='tz_detail'>
+            <view class='item_imgbox fl position-relative'>
+              <image src='{{item.PicUrl}}' class='item_img' mode="aspectFill"></image>
+              <view class="new_subject_img subject-bg-{{item.nBaseSubject.Id}}">{{item.nBaseSubject.Name}}</view>
+            </view>
+            <view class='fl item_textbox'>
+              <view class='item_title'>{{item.Name}}</view>
+              <view class='item_numbox display-flex'>
+                <image src='{{base}}images/agr.png' class='item_agrimg '></image>
+                <view class=' item_num'>{{item.AgreeNum}}</view>
+                 <image src='{{base}}images/msg.png' class='item_msgimg '></image>
+                <view class=' item_num'>{{item.CommentNum}}</view>        
+              </view>
+            </view>
+          </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view> 
+

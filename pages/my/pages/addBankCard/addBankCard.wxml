@@ -1,0 +1,41 @@
+<compontNavbar title="添加银行卡" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box" wx:if="{{status == 1}}">
+    <view class="tit">请绑定持卡人本人银行卡</view>
+    <view class="content">
+        <view class="input-box">
+            <label>持卡人</label>
+            <input placeholder-class="place" value="{{uname}}" disabled="true"></input>
+        </view>
+        <view class="input-box">
+            <label>卡号</label>
+            <input placeholder-class="place" placeholder="请输入银行卡号" type="tel" bindinput="saveCardNo"></input>
+        </view>
+    </view>
+    <view class="btn" catchtap="next">下一步</view>
+</view>
+
+<view class="box" wx:if="{{status == 2}}">
+    <view class="tit">银行卡类型</view>
+    <view class="content">
+        <view class="input-box">
+            <label>卡类型</label>
+            <input placeholder-class="place" value="{{cardInfo.bank_belong}}"></input>
+        </view>
+        <view class="input-box">
+            <label>手机号</label>
+            <input placeholder-class="place" placeholder="请输入银行预留手机号" type="tel" bindinput="saveMobile"></input>
+        </view>
+    </view>
+    <view class="btn" catchtap="next">下一步</view>
+</view>
+
+<view class="box" wx:if="{{status == 3}}">
+    <view class="tip">绑定银行卡需要短信确认，验证码已发送至手机:{{mobileStr}},请按提示操作</view>
+    <view class="content">
+        <view class="input-box">
+            <input placeholder-class="place" class="input" bindinput="saveCode"></input>
+            <view catchtap="getCode">{{idfCode}}</view>
+        </view>
+    </view>
+    <view class="btn" catchtap="next">下一步</view>
+</view>

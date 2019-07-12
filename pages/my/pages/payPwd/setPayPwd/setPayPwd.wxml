@@ -1,0 +1,12 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<form bindsubmit="bindFormSubmit">
+    <view class="top1">请输入{{mobile}}收到的短信验证码</view>
+    <view class='itembox overf'>
+        <input type="text" placeholder='请输入验证码' placeholder-class='placeholder' class='fl' name="verifycode"></input>
+        <view class='fr buttonbox'>
+            <view class="modifyp_btn1 {{verify_color? 'verify_color' : ''}}" bindtap="identify">{{verifyCodeTime}}</view>
+        </view>
+    </view>
+    <button class='btn' formType="submit">验证信息</button>
+</form>

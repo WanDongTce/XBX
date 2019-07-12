@@ -1,0 +1,123 @@
+.topbox {
+    background-color: #353852;
+    color: #fff;
+    padding: 52rpx 0rpx 47rpx;
+}
+
+.financing_img {
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx;
+    width: 34rpx;
+    height: 32rpx;
+}
+
+.topview1 {
+    font-size: 28rpx;
+    margin-left: 30rpx;
+}
+
+.topview2 {
+    font-size: 50rpx;
+    margin: 35rpx 30rpx 70rpx;
+}
+
+.top_flex {
+    align-items: center;
+}
+
+.top_flex view {
+    width: 50%;
+    text-align: left;
+    font-size: 26rpx;
+}
+
+.top_flex view text {
+    margin-left: 16rpx;
+}
+
+.top_flex view image {
+    display: inline-block;
+    margin-left: 16rpx;
+    width: 23rpx;
+    height: 23rpx;
+}
+
+.ml30 {
+    margin-left: 30rpx;
+}
+
+.write_btn_box {
+    border-bottom: 16rpx solid #f4f4f4;
+}
+
+.write_btn {
+    background-color: #4bace2;
+    color: #fff;
+    height: 96rpx;
+    line-height: 96rpx;
+    font-size: 38rpx;
+    text-align: center;
+    margin: 25rpx 30rpx;
+    box-shadow: 2rpx 5rpx 5rpx #c9c7c8;
+}
+
+.write_btn image {
+    vertical-align: middle;
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 15rpx;
+}
+
+.item_bigbox {
+    padding: 0 30rpx;
+}
+
+.bigtitle {
+    font-size: 34rpx;
+    color: #333;
+    align-items: center;
+    margin-top: 40rpx;
+}
+
+.bigtitle view {
+    width: 6rpx;
+    height: 34rpx;
+    background-color: #4bace2;
+    margin-right: 20rpx;
+}
+
+.item_box {
+    justify-content: space-between;
+    align-items: center;
+    padding: 34rpx 0;
+    border-bottom: 1rpx solid #e1e1e1;
+}
+
+.item_box image {
+    width: 62rpx;
+    height: 62rpx;
+    margin-right: 26rpx;
+}
+
+.item_money {
+    font-size: 32rpx;
+}
+
+.item_money_orange {
+    color: #ffa800;
+}
+
+.item_money_red {
+    color: #f65452;
+}
+
+.item_content {
+    font-size: 30rpx;
+    color: #333;
+}
+
+.item_time {
+    font-size: 24rpx;
+    color: #999;
+}

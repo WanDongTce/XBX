@@ -1,0 +1,210 @@
+
+.fixed-box{
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    /* height: 17vh; */
+    height: 8vh;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1rpx solid #ddd;
+}
+/*
+.search-box{
+    width: 100%;
+    height: 9vh;
+    background: #faf9f9;
+    border-bottom: 1rpx solid #ddd;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.search-cont{
+    width: 80%;
+    height: 7vh;
+    background: #e8e8e8;
+    border-radius: 10rpx;
+    display: felx;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.search-icon{
+    width: 6%;
+    margin-right: 3%;
+}
+.search-input{
+    width: 88%;
+    font-size: 26rpx;
+    color: #a1a1a1;
+}
+*/
+.select-box{
+    width: 100%;
+    height: 8vh;
+    background: #fff;
+    border-bottom: 1rpx solid #ddd;
+    display: felx;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.select{
+    width: 15%;
+    height: 100%;
+    display: felx;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.selt-itm-text{
+    font-size: 28rpx;
+    color: #333;
+}
+.down-icon{
+    width: 18rpx;
+    height: 16rpx;
+    margin-top: 6rpx; 
+}
+.select-opt-box{
+    position: fixed;
+    /* top: 17vh; */
+    top: 18vh;
+    left: 0;
+    width: 100%;
+    /* height: 83vh; */
+    height: 92vh;
+}
+.opt-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+}
+.opt-cont {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.opt-scroll-view{
+    width: 100%;
+    height: 80%;
+}
+.option{
+    width: 100%;
+    border-bottom: 1rpx solid #dfdfdf;
+    display: felx;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4% 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.opt-lt{
+    font-size: 30rpx;
+    color: #454545;
+}
+.opt-rt{
+    width: 5%;
+}
+.btn-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 2% 40rpx;
+}
+.btn{
+    width: 100%;
+    padding: 3% 0;
+    background: #4bace2;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 10rpx;
+}
+.cont-box{
+    width: 100%;
+    /* margin-top: 17vh; */
+    margin-top: 8vh;
+    overflow: hidden;
+}
+.cont-item{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.cont-item:last-child{
+    border-bottom: none;
+}
+.itm-lt{
+    width: 95%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.lt-img{
+    /* width: 8%; */
+    width: 54rpx;
+    height: 54rpx;
+    margin-right: 22rpx;
+}
+.lt-text{
+    width: 90%;
+    overflow: hidden;
+}
+.lt-text .tit{
+    width: 100%;
+    font-size: 28rpx;
+    color: #454545;
+    line-height: 1.5em;
+    margin-bottom: 15rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.lt-text .sub{
+    width: 100%;
+    font-size: 22rpx;
+    color: #999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.2em;
+}
+.rt-img{
+    /* width: 2%; */
+    width: 14rpx;
+    height: 22rpx;
+}

@@ -1,0 +1,66 @@
+/* pages/barter/shareBarter/shareBarter.wxss */
+page{
+  border-top: 1rpx solid #dfdfdf;
+}
+.Header{
+  width: 100%;
+  height: 222rpx;
+  margin-top: 16rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background-color: #fff;
+}
+.Header-left{
+  width: 37rpx;
+  height: 37rpx;
+  margin-left: 24rpx;
+}
+.Header-center{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  background-color: red;
+}
+.Header-right{
+  width: 58%;
+  height: 160rpx;
+  margin-left: 30rpx;
+}
+.Header-text{
+  font-size: 26rpx;
+  color: #333;
+}
+.tail{
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background-color: #fff;
+}
+.tail-left{
+  width: 45.6%;
+  height: 78rpx;
+  margin-left: 3.2%;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 71rpx;
+  background-color: #fcd324;
+}
+.tail-text{
+  font-size: 32rpx;
+  color: #fff;
+}
+.tail-right{
+   width: 45.6%;
+  height: 78rpx;
+  margin-left: 2.4%;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 71rpx;
+  background-color: #4bace2;
+}

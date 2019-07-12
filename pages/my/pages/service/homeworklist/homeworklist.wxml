@@ -1,0 +1,80 @@
+<!--pages/service/homeworklist/homeworklist.wxml-->
+<compontNavbar title="我的作业" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<view class="container">
+    <view class="fixed-box">
+         <!-- <view class="search-box search_box_new">
+            <view class="search-cont">
+                <image src="../../../images/search.png" mode="widthFix" class="search-icon"></image>
+                <input class="search-input" placeholder="搜索关键字" bindconfirm="inputFn"></input>
+            </view>
+            <image src='../../../images/tabBtom/home4.png' class='preview_home_img' catchtap='tz_my'></image>
+        </view>  -->
+        <view class="select-box">
+            
+            <view class="select" catch:tap="seltClkFn" data-idx="2">
+                
+                <text  class="selt-itm-text" data-idx="2">科目</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 2?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="2"></image>
+            </view>
+            <view class="select" catch:tap="seltClkFn" data-idx="3">
+                <text class="selt-itm-text" data-idx="3">时间</text>
+                <image class="down-icon" src="{{isShowOption && sctdOptIdx == 3?'../../../../../images/selctIcon2.png' : '../../../../../images/selctIcon1.png'}}" data-idx="3"></image>
+            </view>
+            
+        </view>
+    </view>
+    <view class="select-opt-box" wx:if="{{isShowOption}}">
+        <view class="opt-mask" catch:tap="hideOption"></view>
+        <view animation="{{animationData}}" class="opt-cont">
+            <scroll-view class="opt-scroll-view" scroll-y="true" enable-back-to-top="true">
+                <!-- <view class="option" data-id="0"  catchtap="selOptFn">
+                        <view class="opt-lt" data-id="0"  catchtap="selOptFn">全部</view>
+                        <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==0)||(sctdOptIdx==3&&version==0)?'../../../images/act.png':'../../../images/ret.png'}}" mode="widthFix" data-id="0"  catchtap="selOptFn"></image>
+                </view> -->
+                
+                
+                <view class="option" wx:if="{{sctdOptIdx == 2}}"  wx:key="this" wx:for="{{options}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view>
+                
+                
+                 <view class="option" wx:if="{{sctdOptIdx == 3}}" wx:key="this" wx:for="{{time}}" data-id="{{item.id}}"  catchtap="selOptFn">
+                    <view class="opt-lt" data-id="{{item.id}}">{{item.title}}</view>
+                    <image class="opt-rt" src="{{(sctdOptIdx==2&&kemu==item.id)||(sctdOptIdx==3&&version==item.id)?'../../../../../images/act.png':'../../../../../images/ret.png'}}" mode="widthFix" data-id="{{item.id}}"  catchtap="selOptFn"></image>
+                </view> 
+            </scroll-view>
+            <view class="btn-box"><view class="btn" catch:tap="optCofmFn">确定</view></view>
+        </view>
+    </view>
+    <view class="cont-box">
+        <block wx:if="{{list.length == 0}}"><empty></empty></block> 
+        <view  class="cont-item" wx:key="this" wx:for="{{list}}">
+            <view class="display-flex new_homeworklist"> 
+            <view class="lt-img subject-bg-2" wx:if="{{item.species == 2&&learntype!=3}}" >语</view>              
+                <view class="lt-img subject-bg-1" wx:if="{{item.subject == 1}}" >数</view>
+                <view class="lt-img subject-bg-2" wx:if="{{item.subject == 2}}" >语</view>
+                <view class="lt-img subject-bg-3" wx:if="{{item.subject == 3}}" >英</view>
+                <view class="lt-img subject-bg-4" wx:if="{{item.subject == 4}}" >物</view>
+                <view class="lt-img subject-bg-5" wx:if="{{item.subject == 5}}" >化</view>
+                <view class="lt-img subject-bg-6" wx:if="{{item.subject == 6}}" >地</view>
+                <view class="lt-img subject-bg-7" wx:if="{{item.subject == 7}}" >历</view>
+                <view class="lt-img subject-bg-8" wx:if="{{item.subject == 8}}" >生</view>
+                <view class="lt-img subject-bg-9" wx:if="{{item.subject == 9}}" >政</view>
+                <view class="lt-img subject-bg-10" wx:if="{{item.subject == 10}}" >科</view>
+                <view class="lt-img subject-bg-11" wx:if="{{item.subject == 11}}" >综</view>
+                <view class="lt-img subject-bg-11" wx:if="{{item.subject == 12}}" >综</view>
+                
+                <view class="lt-text  ">
+                  
+                    <view class="tit">开始时间：{{item.start_time}}</view>
+                    <view class="tit">结束时间：{{item.end_time}}</view>
+                                    
+                </view>
+            </view>
+            
+        </view>
+    </view>
+</view>
+

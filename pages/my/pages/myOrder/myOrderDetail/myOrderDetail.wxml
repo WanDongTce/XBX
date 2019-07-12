@@ -1,0 +1,99 @@
+<!--pages/my/pages/myOrder/myOrderDetail/myOrderDetail.wxml-->
+<compontNavbar title="订单详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{nodata==1}}">
+    
+</block>
+<view  wx:else>
+<view class='top_bigbox' >
+    <view class='top_box display-flex'>
+        <view class="lt">
+            <image src='../../../../../images/addr2.png' class='address_img'></image>
+        </view>
+        <view class='top_name'>收货人：{{list.address_name}}</view>
+        <view class='top_phone'>{{list.address_tel}}</view>
+    </view>
+    <view class='top_address display-flex'>
+        <view class='address_text'>
+            {{list.address}}
+        </view>       
+    </view>
+</view>
+<view class='list'>
+    <view >
+        <view class='display-flex align-items-center new_sjname'>
+            <image src='../../../../my/images/ecology/business_type2.png' class='business_type_img'></image>
+            <view class='f_28 c_333 new_business_name'>{{list.business.name}}</view>
+        </view>
+        
+        <view class='item display-flex new_item_box' wx:for="{{list.goods}}" wx:key="this">
+            <view class='item-img'>
+                <image src='{{item.image}}' class='img'></image>
+            </view>
+            <view class='item-content-box'>
+                <view class='item-title'>
+                    {{item.title}}
+                </view>
+                <view class='display-flex item-tips'>
+                    <view class='price'>￥{{item.price}}</view>                                   
+                    <view class='num'>x{{item.num}}</view>                    
+                </view>
+            </view>
+        </view>
+        
+        <view class='display-flex align-items-center new_my_totalbox'>
+            <view class='new_my_total1 f_30 c_333'>共{{list.total_number}}件商品</view>
+            <view class='new_my_total2 f_30 c_333'>实付款：<text>￥{{list.price_all}}</text></view>
+        </view>
+    </view>
+</view>
+<view class='orderdetail_box'>
+    <view class='display-flex justify-content-between orderdetail_item f_24 c_999'>
+        <view>订单编号：</view>
+        <view>{{list.order_sn}}</view>
+    </view>
+    <view class='display-flex justify-content-between orderdetail_item f_24 c_999'>
+        <view>创建时间：</view>
+        <view>{{list.create_time}}</view>
+    </view>
+    <view class='display-flex justify-content-between orderdetail_item f_24 c_999'>
+        <view>支付时间：</view>
+        <view>{{list.pay_time}}</view>
+    </view>
+    <view class='display-flex justify-content-between orderdetail_item f_24 c_999'>
+        <view>发货时间：</view>
+        <view>{{list.delivery_time}}</view>
+    </view>
+    <view class='display-flex justify-content-between orderdetail_item f_24 c_999'>
+        <view>成交时间：</view>
+        <view>{{list.receive_time}}</view>
+    </view>
+</view>
+<view class='bottom-box display-flex'>
+    <view class='bottom-left' wx:if="{{list.status==1}}">
+        待支付
+    </view>
+    <view class='bottom-left' wx:if="{{list.status==2}}">
+        待发货
+    </view>
+    <view class='bottom-left' wx:if="{{list.status==3}}">
+        待收货
+    </view>
+    <view class='bottom-left' wx:if="{{list.status==4}}">
+        已完成
+    </view>
+    <view class='bottom-left' wx:if="{{list.status==5}}">
+        用户取消
+    </view>
+    <view class='bottom-left' wx:if="{{list.status==6}}">
+        商家取消
+    </view>
+    <view class='bottom-left' wx:if="{{list.status==7}}">
+        未支付订单自动关闭
+    </view>
+    <view class='display-flex align-items-center '>
+        
+        <button wx:if="{{list.status==1}}" class='bottom-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">去支付</button> 
+        <button wx:if="{{list.status==1}}" class='bottom-btn'  catchtap="cancelOrder">取消订单</button>  
+    </view>            
+</view>
+</view>

@@ -1,0 +1,30 @@
+<compontNavbar title="百科详情" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
+        <block wx:for="{{detail.images}}" wx:key="this">
+            <swiper-item>
+                <image src="{{item.imgurl}}" class="slide-image" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="itm-tips">
+        <view class="itm-lt">
+            <image src="{{detail.avatar}}" class="user-ava" mode="aspectFill" wx:if="{{detail.avatar}}"></image>
+            <image src="{{base}}images/default-user-2.png" class="user-ava" mode="aspectFill" wx:else></image>
+            <view class="user-info">
+                <view class="user-name">{{detail.nickname}}</view>
+                <view class="date">{{detail.create_time}}</view>
+            </view>
+        </view>
+        <view class="itm-rt">
+            <view class="border">  
+                <addAgre itemid="{{detail.id}}" thumbs_is="{{detail.thumbs_is}}" agreenum="{{detail.thumbs_num}}"></addAgre>
+            </view>
+        </view>
+    </view>
+    <view class="tit">{{detail.name}}</view>
+    <view class="content">
+        <view class="content-tit">详情描述</view>
+        <view class="content-text">{{detail.content}}</view>
+    </view>
+</view>

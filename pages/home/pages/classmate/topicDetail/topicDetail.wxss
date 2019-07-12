@@ -1,0 +1,27 @@
+/* pages/classmate/topicDetail/topicDetail.wxss */
+page{
+  background-color:#ffffff;
+}
+.box{
+  padding:20rpx 0 ;
+  border-bottom:1rpx solid #e2e2e2;
+}
+.img{
+  width:140rpx;
+  height:140rpx;
+  border-radius:5rpx;
+  margin-right:24rpx;
+  margin-left:24rpx;
+}
+.topic{
+  font-size:30rpx;
+  color:#333;
+  margin:22rpx 0 30rpx;
+}
+.content{
+  font-size:24rpx;
+  color:#7d7d7d;
+}
+.content text{
+  margin-left:14rpx;
+}

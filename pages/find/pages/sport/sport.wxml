@@ -1,0 +1,46 @@
+<compontNavbar title="{{idname}}运动" isShowBack="{{true}}"></compontNavbar>
+<view class="bg-box">
+    <image src="{{IMGURL}}find/sport/stepmainbg.png" class="bg-img" mode="scaleToFill"></image>
+    <view class="case">
+        <view class="date">
+            <image src="{{base}}images/calendar.png" class="date-icon"></image>
+            <picker class='date-text' mode="date" value="{{date1}}" bindchange="bindDateChange">
+                <view>{{date}}</view>
+            </picker>
+        </view>
+        <view class="walk">
+            <image src="{{IMGURL}}find/sport/arcbg.png" class="walk-img"></image>
+            <view class="walk-box">
+                <view class="walk-box-a">
+                    <text class="walk-text-a">今日步数</text>
+                </view>
+                <view class="walk-box-b">
+                    <text class="walk-text-b">{{step}}</text>
+                </view>
+                <text class="walk-text-c">步</text>
+            </view>
+        </view>
+        <view class="walking">
+            <text class="walking-text">最高:521步</text>
+        </view>
+        <view class="distance">
+            <view class="distance-box">
+                <view class="distance-case">
+                    <text class="distance-text-a">0</text>
+                </view>
+                <text class="distance-text-b">路程（公里）</text>
+            </view>
+            <view class="distance-center"></view>
+            <view class="distance-box">
+                <view class="distance-case">
+                    <text class="distance-text-a">0</text>
+                </view>
+                <text class="distance-text-b">路程（公里）</text>
+            </view>
+        </view>
+        <navigator url="" class="share">
+            <image src="{{base}}images/next2.png" class="share-img"></image>
+            <text class="share-text">分享战绩</text>
+        </navigator>
+    </view>
+</view>

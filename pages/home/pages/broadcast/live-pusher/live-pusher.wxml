@@ -1,0 +1,72 @@
+<view class="box">
+    <live-pusher id="pusher" mode="SD" url="{{pushUrl}}" waiting-image="" debug="{{false}}" bindstatechange="statechange" binderror="error" style="height: {{showInput? '87' : '97'}}vh;" catchtap="hideInputFn" whiteness="10" beauty="10">
+        <cover-view class="top">
+            <cover-image src="{{base}}images/arowLt_fff.png" class='arrow_new' catchtap='goBack'></cover-image>
+            <cover-view class="top-lt">
+                <cover-image class="user-img" src="{{data.userInfo.avataar? data.userInfo.avataar : base + 'images/default-user-2.png'}}" mode="aspectFill"></cover-image>
+                <cover-view class="user-info">
+                    <cover-view class="user-name">{{data.userInfo.nickname}}</cover-view>
+                    <cover-view class="user-count">
+                        <cover-view class="count-text">当前</cover-view>
+                        <cover-view class="num">{{memberCount}}</cover-view>
+                        <cover-view class="count-text">人</cover-view>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+            <!-- <cover-view class="top-rt">
+            <cover-image class="rt-img" src="" mode="aspectFill"></cover-image>
+            <cover-image class="rt-img" src="" mode="aspectFill"></cover-image>
+            <cover-view class="rt-img rt-more-img" catchtap="showDialogFn">...</cover-view>
+        </cover-view> -->
+        </cover-view>
+        <cover-view class="cont" style="bottom: {{showInput? '0': '10rpx'}};">
+            <cover-view class="list">
+                <cover-view class="item" wx:for="{{msgs}}" wx:key="this" wx:for-index="index">
+                    <cover-view class="bg">
+                        <!-- <cover-view class="item-grade bg-1">xx</cover-view> -->
+                        <cover-view class="item-name">{{item.fromAccountNick}}:</cover-view>
+                                    <cover-image wx:if="{{item.content == '[群点赞消息]love_msg'}}" class="love-msg" src="{{base}}images/collection2.png" animation="{{index == msgs.length -1? animationData : null}}"></cover-image>
+                        <cover-view class="item-msg" wx:else>{{item.content}}</cover-view>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class="bottom" wx:if="{{!showInput}}">
+                <cover-view class="botm-item">
+                    <cover-view class="botm-bg" catchtap="showInputFn">
+                        <cover-image class="botm-img" src="{{base}}images/msg-fff.png"></cover-image>
+                    </cover-view>
+                </cover-view>
+                <cover-view class="botm-item" catchtap="switchCamera">
+                    <cover-view class="botm-bg">
+                        <cover-image class="botm-img" src="{{base}}images/circle_camera.png"></cover-image>
+                    </cover-view>
+                    <cover-view class="botm-bg" catchtap="close">
+                        <cover-image class="botm-img" src="{{base}}images/close-fff.png"></cover-image>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+        </cover-view>
+        <cover-view class="dialog-mask" wx:if="{{showDialog}}">
+            <cover-view class="dialog">
+                <cover-image class="close-dialog-icon" src="{{base}}images/close3.png" catchtap="hideDialog"></cover-image>
+                <cover-view class="tit">在线观众</cover-view>
+                <cover-view class="dialog-list">
+                    <cover-view class="dia-item">
+                        <cover-image class="dia-img" src="{{base}}images/close3.png" mode="aspectFill"></cover-image>
+                        <cover-view class="dia-info">
+                            <cover-view class="dia-name">
+                                fdjslfk
+                                <cover-view class="dia-tip bg-1">dd</cover-view>
+                            </cover-view>
+                            <cover-view class="dia-pos">fdsjalf</cover-view>
+                        </cover-view>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+        </cover-view>
+    </live-pusher>
+    <view class="input-box" wx:if="{{showInput}}">
+        <input auto-focus="true" bindinput="onInput" placeholder="说点什么吧~" placeholder-class="place"></input>
+        <view class="send-msg" catchtap="sendMsg">发送</view>
+    </view>
+</view>

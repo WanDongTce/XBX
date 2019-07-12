@@ -1,0 +1,252 @@
+page {
+    border-top: 1rpx solid #dfdfdf;
+    background-color: #f7f7f7;
+    padding-bottom: 110rpx;
+}
+
+.top_bigbox {
+    width: 100%;
+    padding: 30rpx 24rpx;
+    background-color: #fff;
+    margin-top: 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.top_box {
+    width: 83%;
+    margin: 0 auto 20rpx;
+    font-size: 32rpx;
+    color: #333;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_name {
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top_phone {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top_address {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address_img {
+    width: 28rpx;
+    height: 30rpx;
+}
+
+.lt, .rt {
+    width: 4%;
+    margin-left: 1%;
+}
+
+.address_jt {
+    width: 14rpx;
+    height: 22rpx;
+}
+
+.address_text {
+    width: 83%;
+    line-height: 32rpx;
+    font-size: 24rpx;
+    color: #333;
+    max-height: 64rpx;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.score_bottomline {
+    width: 100%;
+    height: 14rpx;
+    margin: 0;
+    display: block;
+    margin-bottom: 16rpx;
+}
+
+.list {
+    /* padding: 0 24rpx; */
+    background-color: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.item {
+    align-items: center;
+    justify-content: space-between;
+    padding: 24rpx 0;
+    border-bottom: 6rpx solid #fff;
+}
+
+.item-img {
+    width: 170rpx;
+    height: 170rpx;
+    margin-right: 24rpx;
+    margin-left:24rpx;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-content-box {
+    width: 76%;
+    margin-right:24rpx;
+}
+
+.item-title {
+    width: 100%;
+    height: 80rpx;
+    font-size: 26rpx;
+    color: #333;
+    line-height: 40rpx;
+    margin-bottom: 40rpx;
+    word-break: break-all;
+}
+
+.item-tips {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    color: #ea2929;
+    font-size: 30rpx;
+}
+
+.num {
+    width: 74rpx;
+    height: 50rpx;
+    font-size: 24rpx;
+    color: #333;
+    text-align: right;
+    line-height: 50rpx;
+}
+.order-tot-box{
+    width: 100%;
+    padding: 24rpx 0;
+    text-align: right;
+    color: #333;
+    font-size: 28rpx;
+}
+.allnum{
+    margin-right: 24rpx;
+}
+.allprice{
+    color: #4bace2;
+}
+.bottom-box {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 110rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1rpx solid #dfdfdf;
+    padding: 0 24rpx;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.bottom-left {
+    font-weight: bold;
+    font-size: 30rpx;
+    color: #333;
+    line-height: 110rpx;
+}
+
+.bottom-left text {
+    color: #333;
+}
+
+.bottom-btn {
+    background-color: #4bace2;
+    color: #fff;
+    font-size: 32rpx;
+    width: 234rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top: 15rpx;
+    border-radius: 10rpx;
+    margin-right:0;
+}
+
+/*无地址  */
+
+.noaddress_box {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 48rpx;
+    margin-top: 16rpx;
+    padding-bottom: 38rpx;
+}
+
+.noaddress {
+    font-size: 32rpx;
+    color: #333;
+}
+
+.add_noaddress {
+    width: 214rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 24rpx;
+    color: #4bace2;
+    border: 2rpx solid #4bace2;
+    border-radius: 10rpx;
+    margin: 38rpx auto 0;
+}
+
+.add_noaddressimg {
+    width: 19rpx;
+    height: 19rpx;
+}
+
+.new_sjname{
+    min-height:100rpx;
+    padding:0 24rpx;
+    line-height:100rpx;
+}
+.business_type_img{  
+    width:31rpx;
+    height:28rpx;
+    margin-right:12rpx;
+}
+
+
+.new_item_box{
+   background-color:#f8f8f8; 
+}
+.new_business_name{
+    max-width:90%;
+    word-break: break-all;
+    line-height:36rpx;
+}
+.new_my_totalbox{
+    line-height: 100rpx;
+    height: 100rpx;
+    justify-content: flex-end;
+    margin-right:24rpx;
+}
+.new_my_total1{
+    margin-right:60rpx;
+}
+.new_my_total2 text{
+    color:#ea2929;
+}

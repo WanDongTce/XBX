@@ -1,0 +1,5 @@
+<compontNavbar title="笔记详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+    <navigator url="{{'/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + detail.resourceid + '&videopic= '}}" class="link">进入页面</navigator>
+    <view class="cont">{{detail.content}}</view>
+</view>

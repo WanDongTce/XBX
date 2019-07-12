@@ -1,0 +1,113 @@
+page{
+    background: #f7f7f7;
+}
+.box{
+    width: 100%;
+    padding: 16rpx 24rpx 9vh;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.btn{
+    position: fixed;
+    bottom: 1vh;
+    left: 5%;
+    width: 90%;
+    height: 7vh;
+    line-height: 7vh;
+    background: #4bace2;
+    color: #fff;
+    text-align: center;
+    border-radius: 30rpx;
+    font-size: 30rpx;
+}
+.list{
+    width: 100%;
+    margin: 0 auto;
+}
+.item{
+    width: 100%;
+    padding: 30rpx 20rpx 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 16rpx;
+}
+.item-tit{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    border-bottom: 1rpx solid #dfdfdf;
+    padding: 30rpx 0 40rpx;
+}
+.item-tit-img{
+    width: 80rpx;
+    height: 60rpx;
+    margin-right: 24rpx;
+}
+.item-tit-text{
+    max-width: 80%;
+    font-size: 30rpx;
+    color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.itm-tips{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20rpx 0 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.itm-lt{
+    width: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.user-ava{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.user-name{
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 6rpx;
+}
+.date{
+    font-size: 20rpx;
+    color: #999;
+}
+.itm-rt{
+    width: 50%;
+    text-align: right;
+}
+.border{
+    height: 40rpx;
+    line-height: 35rpx;
+    display: inline-block;
+    padding: 0 10rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #dfdfdf;
+}
+.add-agree-text{
+    font-size: 24rpx;
+    color: #999;
+}
+.active{
+    color: #4bace2;
+}
+.add-agree-icon{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+}

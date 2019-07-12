@@ -1,0 +1,221 @@
+<!-- <view class="navigation-box component-class" >
+    <view class="back-box" bindtap="goBack">
+        <image class="navigation-back-icon" src="../../images/arow_top_left.png"></image>
+    </view>
+    <view class="navigation-tit">
+        <picker mode="date"  start="{{startDate}}" end="{{endDate}}" fields="month" bindchange="pickerChange" class="h1">  
+            <view class="picker">  
+                <text>{{ year }}年{{ month}}月</text> <image src="../../images/arrow_down.png"></image> 
+            </view>  
+        </picker> 
+    </view>
+</view> -->
+
+<!-- <navigat-bar class="navigation-box " >
+        <view class="back-box" bindtap="goBack" >
+            <image class="navigation-back-icon" src="../../../../images/arowLt.png"></image>
+        </view>
+        <view class="navigation-tit">任务</view>
+</navigat-bar>  -->
+
+<view class='newnavbox position_r'>
+    <view class="back-box" bindtap="" >
+        <image src="../../images/task/icon_task_tip.png"></image>
+    </view>
+    <view>任务</view>
+</view>
+
+
+<view class='newtopbg position_r'>
+    <view class='newtoptext'>每日签到·赢取积分</view>
+    <image src='../../images/task/icon_task_mainjb.png' class='icon_task_mainjb_img position_a'></image>
+    <view class='newtopqd_box position_r'>
+        <!-- calendar1 -->    
+        <view wx:if="{{showCalendar}}" id='calendar1'>    
+            <view class='bg_fff mt50' id='showone'>
+                <view class='box1' style='width: {{ sysW * 7 }}px'>    
+                    <block wx:for='{{ weekArr }}' wx:key='this'>
+                        <view style='width:{{ sysW }}px;' class='calendar_height'>{{ item }}</view>
+                    </block> 
+                    <block wx:for='{{ list2 }}' wx:key='this'>
+                        <view style='{{ index == 0 ? "margin-left:" + sysW * marLet + "px;" : "" }}width: {{ sysW }}px;' class='calendar_textbox ' bindtap='topSectData' data-topdata='{{item.day }}'>
+                            <text class='calendar_text {{(item.theday==1)&&(item.status==0)?"dateOn":""}} {{item.status==1?"datesignOn":""}} {{(item.status==0)&&(item.big==0)&&(today!==item.day)?"datesignOff":""}}' catchtap='click_sign' data-theday='{{item.theday}}' data-status='{{item.status}}'>{{ item.day }}</text>
+                        </view>                              
+                    </block>
+                </view>
+            </view>
+            <view class='display-flex'>
+                <view class='calendar_signtext f_24 ml_calendar_sign'>
+                    <text class='calendar_signtext_text1 calendar_signtext_text'></text>
+                    已签到
+                </view>
+                <view class='calendar_signtext f_24'>
+                    <text class='calendar_signtext_text2 calendar_signtext_text'></text>
+                    未签到
+                </view>
+                <view class='calendar_signtext f_24'>
+                    <text class='calendar_signtext_text3 calendar_signtext_text'></text>
+                    今日
+                </view>
+            </view>
+        </view>
+        <!-- calendar2 -->
+        <view wx:else class='mt50 pb_40' id='calendar2'>
+            <view class='display-flex align-items-center everyday_box'>
+                <view class='everyday_itembox everyday_itembox1 {{item.key==3||item.key==7?"everyday_itembox_text1":"everyday_itembox_text2"}}' wx:for="{{list1}}" wx:key='this'>+{{item.score}}</view>
+            </view>
+            <view class='display-flex align-items-center everyday_box everyday_boxc'>
+                <view class='everyday_h1  {{list1[0].status==1?"backgroundc_1":"backgroundc_2"}}' ></view>
+                <view wx:for="{{list1}}" wx:key='this' class='display-flex align-items-center position_r'>    
+                    
+                    <view class='everyday_h2 {{item.status==1?"backgroundc_1":"backgroundc_2"}} {{item.key==1?"display_n":""}}' style='width:{{everyday_h2_w/6}}px'></view>
+
+                    <view wx:if="{{item.theday==1&&item.status==1}}" class='everyday_text everyday_text1  everyday_dayon'>
+                        <image src='../../images/task/task_currentday.png' class='task_currentdayimg'></image>
+                    </view>             
+                    <view wx:else class='everyday_text {{item.status==1?"everyday_text1":"everyday_text2"}} {{item.theday==1?"everyday_dayon":""}}'>{{item.key}}</view>
+
+                    <image wx:if='{{item.theday==1}}' src='../../images/task/task_currenttop.png' class='position_a task_currenttop'></image>
+                </view>
+                <view class='everyday_h1 {{list1[6].status==1?"backgroundc_1":"backgroundc_2"}}'></view>
+                
+
+            </view>
+            <view class='display-flex align-items-center everyday_box'>
+                <view class='everyday_itembox everyday_itembox2' wx:for="{{list1}}" wx:key='this'>{{item.day}}</view>
+            </view>
+            <view wx:if="{{newTextSignStatus==0}}" class='qiandao_btnbox backgroundc_1' catchtap='click_sign2'>签到</view>
+            <view wx:else class='qiandao_btnbox backgroundc_1' catchtap='click_sign2'>已签到</view>
+        </view>    
+        
+        <view class='calendar_bottombox position_a'>            
+            <image src='../../images/task/calendar_bg.png ' class=' calendar_bottombox_img'></image>                                       
+        </view>
+        <view class='calendar_bottombox position_a'>            
+            <view class='display-flex  align-items-center calendar_bottombox_textbox' catchtap='show_calendar'>
+                <view class='f_24'>{{showcalendarText}}</view>
+                <image src='../../images/task/icon_task_item_down.png'></image>
+            </view>                                     
+        </view>
+    </view>
+</view>
+
+
+
+
+<view class='newbigbox' style='margin-top:{{margintopHeight}}px;'>
+    <view class='newtitle c_333'>本月签到·{{item1.num_all}}天</view>
+    <view class='display-flex align-items-center justify-content-between'>
+    <!-- 1未完成 2可领取 3已领取 -->
+        <view >            
+            <image src='../../images/task/home_7.png' class='qiandao_img'></image>
+            <view wx:if="{{item1.num7==1}}" class='qiandao_btn qiandao_btn2'>未完成</view>
+            <view wx:if="{{item1.num7==2}}" class='qiandao_btn qiandao_btn1' data-getpoints='7' catchtap='click_getpoints'>领取</view>
+            <view wx:if="{{item1.num7==3}}" class='qiandao_btn qiandao_btn2'>已领取</view>        
+        </view>
+        <view>
+            <image src='../../images/task/home_14.png' class='qiandao_img' ></image>
+            <view wx:if="{{item1.num14==1}}" class='qiandao_btn qiandao_btn2'>未完成</view>
+            <view wx:if="{{item1.num14==2}}" class='qiandao_btn qiandao_btn1' data-getpoints='14' catchtap='click_getpoints'>领取</view>
+            <view wx:if="{{item1.num14==3}}" class='qiandao_btn qiandao_btn2'>已领取</view>
+        </view>
+        <view>
+            <image src='../../images/task/home_21.png' class='qiandao_img'></image>
+            <view wx:if="{{item1.num21==1}}" class='qiandao_btn qiandao_btn2'>未完成</view>
+            <view wx:if="{{item1.num21==2}}" class='qiandao_btn qiandao_btn1' data-getpoints='21' catchtap='click_getpoints'>领取</view>
+            <view wx:if="{{item1.num21==3}}" class='qiandao_btn qiandao_btn2'>已领取</view>
+        </view>
+    </view>
+    <view class='newtitle c_333'>做任务·赢积分</view>
+    <view class='new_rw_topbox display-flex justify-content-between align-items-center'>
+        <view class='display-flex'>
+            <view class='new_rwtap {{tasktype==1?"new_rwtap_cur":"new_rwtap_other"}}' catchtap='tasktype' data-tasktype='1'>周常任务</view>
+            <view class='new_rwtap {{tasktype==2?"new_rwtap_cur":"new_rwtap_other"}}' catchtap='tasktype' data-tasktype='2'>家长任务</view>
+        </view>
+        <view class='new_rwtap_right f_30 c_666' catchtap='tz_taskcalendar'>学习日历</view>
+    </view>
+    <view class='new_rwitembox'>
+        <block wx:if="{{tasktype==1&&showEmptyNew}}">
+            <empty></empty>   
+        </block>
+        <view wx:if="{{tasktype==1}}" wx:for='{{taskList}}' wx:key='this' class='newrw_bigbox'>
+            <view class='display-flex justify-content-between'>
+                <view class='display-flex '>
+                    <image src='../../images/task/t{{item.id}}.png' class='newrw_rwimg'></image>
+                    <view>
+                        <view class='newrw_toptext f_30 c_333 one_line'>{{item.taskname}}<text>{{item.score}}积分</text></view>
+                        <view class='display-flex align-items-center'>
+                            <view class='newrw_pro position_r'>
+                                <view class='position_a newrw_pro_cur' style="width:{{item.num/item.all*prowidth}}px;max-width:250rpx;"></view>
+                            </view>
+                            <!-- <view class='newrw_protext f_24 c_999' wx:if='{{item.num>=item.all}}'>已完成</view> -->
+                            <view class='newrw_protext f_24 c_999' >{{item.num}}/{{item.all}}次</view>
+                        </view>
+                        
+                    </view>
+                </view>
+                <view class='new_rw_rightbox'>
+                <!-- 任务状态 1未领取任务 2任务进行中 3组队邀请好友 4已完成未领取 5已领取奖励 -->
+                    <view class='new_rw_right_view0' wx:if="{{item.status==1}}"  data-gocomplateid='{{item.id}}' catchtap='golingqu'>领取</view>
+                    <view class='new_rw_right_view' wx:if="{{item.status==2}}" catchtap='gocomplate' data-gocomplateid='{{item.id}}'>去完成</view>  
+                    <!-- <view class='new_rw_right_view' wx:if="{{item.status==3}}"  data-gocomplateid='{{item.id}}'>邀请好友</view>          -->
+                    <view class='new_rw_right_view2' wx:if="{{item.status==4}}" catchtap='receiveReward' data-gocomplateid='{{item.taskreceiveid}}'>领取奖励</view>    
+                    <view class='new_rw_right_view3' wx:if="{{item.status==5}}">已完成</view>               
+                    <image wx:if='{{item.id==taskid}}' catchtap='click_zhankai' data-taskid='{{item.id}}' src='../../images/task/icon_task_item_up.png' class='new_rw_right_img'></image>
+                    <image wx:else catchtap='click_zhankai' data-taskid='{{item.id}}' src='../../images/task/icon_task_item_down.png' class='new_rw_right_img'></image>
+                </view>
+            </view>
+            <view class='f_28 c_999 new_rw_bottomtext' wx:if="{{item.id==taskid}}">{{item.info2}}</view>
+        </view>
+
+
+
+
+        <block wx:if="{{tasktype==2&&showEmpty}}">
+            <empty></empty>   
+        </block>
+        <view wx:if="{{tasktype==2}}" wx:for="{{taskParentList}}" wx:key='this' class='newrw_bigbox'>          
+            <view  class='display-flex justify-content-between '>
+                <view class='display-flex '>
+                    <image src='../../images/task/t{{item.taskid}}.png' class='newrw_rwimg'></image>
+                    <view>
+                        
+                        <view class='newrw_toptext newrw_toptext2 f_30 c_333 one_line'>{{item.taskname}}<text>家长任务</text></view>
+                        <view class='newrw_jz_time c_999 f_24'>{{item.enddate}}截止</view>
+                        <view class='display-flex align-items-center'>
+                            <view class='newrw_pro position_r'>
+                                <view class='position_a newrw_pro_cur' style="width:{{item.num/item.all*prowidth}}px;max-width:250rpx;"></view>
+                            </view>
+                            <view class='newrw_protext f_24 c_999' wx:if='{{item.status==3}}'>已完成</view>
+                            <view wx:else class='newrw_protext f_24 c_999'>{{item.num}}/{{item.all}}次</view>
+                        
+                                                       
+
+                        </view>
+                    </view>
+                </view>
+                <view class='new_rw_rightbox'>
+                    <!-- 1进行中 2可领取 3已领取 4未完成 -->
+                    <view class='new_rw_right_view' wx:if="{{item.status==1}}" catchtap='gocomplate' data-gocomplateid='{{item.taskid}}'>进行中</view>
+                    <view class='new_rw_right_view2' wx:if="{{item.status==2}}" catchtap='receiveReward' data-gocomplateid='{{item.taskreceiveid}}'>可领取</view>
+                    <view class='new_rw_right_view3' wx:if="{{item.status==3}}">已领取</view>
+                    <view class='new_rw_right_view3' wx:if="{{item.status==4}}">未完成</view>
+                    <image wx:if='{{item.taskreceiveid==taskparentid}}' catchtap='click_zhankai2' data-taskparentid='{{item.taskreceiveid}}' src='../../images/task/icon_task_item_up.png' class='new_rw_right_img'></image>
+                    <image wx:else catchtap='click_zhankai2' data-taskparentid='{{item.taskreceiveid}}' src='../../images/task/icon_task_item_down.png' class='new_rw_right_img'></image>
+                </view>
+            </view>
+            <view wx:if="{{item.taskreceiveid==taskparentid}}">
+                <scroll-view class='newonlineter_scroll display-flex' scroll-x="true" wx:if="{{item.receiveGoods.length!=0}}">
+                    <view class='newonlineter_item' wx:for="{{item.receiveGoods}}" wx:key="this">
+                        <image src="{{item.image?item.image:'../../../../images/normalPicture.png'}}" mode='aspectFill'></image>
+                                
+                    </view>
+                    
+                </scroll-view>
+                <view class='f_28 c_999 new_rw_bottomtext' >{{item.info2}}</view>
+            </view> 
+            
+        </view>
+        
+    </view>
+</view>

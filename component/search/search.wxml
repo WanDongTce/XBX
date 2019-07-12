@@ -1,0 +1,16 @@
+<view class="comp-box" id="search">
+    <view class="search-box">
+        <view class="search">
+            <image src="../../images/search.png" class="search-icon"></image>
+            <input placeholder="搜索产品名称" placeholder-class="placeholder" bindinput="saveSearch" auto-focus="true"></input>
+        </view>
+        <view class="search-btn" catchtap="submit">搜索</view>
+    </view>
+    <view class="recently-box">
+        <view class="tit">最近搜过</view>
+        <image src="../../images/delete.png" catchtap="clearHis" class="del-icon"></image>
+    </view>
+    <view class="list">
+        <view wx:for="{{list}}" wx:key="this" catchtap="tapHisItem" data-val="{{item}}" class="item">{{item}}</view>
+    </view>
+</view>

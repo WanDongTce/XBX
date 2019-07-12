@@ -1,0 +1,28 @@
+<compontNavbar title="我的礼品" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<view class='item_bigbox' wx:for="{{list}}" wx:key="this">
+    <view class='itembox display-flex'>
+        <view class='item_left'>
+            <image src='{{item.nGift.PicUrl}}' class='item_img'></image>
+        </view>
+        <view class='item_right '>
+            <view class='item_title f_28 c_333 two_line'>{{item.nGift.Name}}</view>
+            <view class='item_time f_24 c_999' wx:if="{{item.ReceiveTime}}">{{item.ReceiveTime}}</view>
+            <view class='display-flex align-items-center  justify-content-between'>
+                <view class='item_iconbox display-flex align-items-center'>
+                    <image src='{{base}}images/icon_mygift.png'></image>
+                    <view class='f_24 c_999'>{{item.type_name}}</view>
+                </view>
+                <view class='item_btn item_btn1' wx:if="{{item.express_status==2}}">待发货</view>
+                <view class='item_btn item_btn1' wx:if="{{item.express_status==3}}">已发货</view>
+                <view class='item_btn item_btn1' wx:if="{{item.express_status==4}}">已完成</view>
+                <view class='item_btn item_btn2' wx:if="{{item.express_status==1}}" bindtap='btn_receive' data-receiveid="{{item.Id}}">领取</view>
+            </view>
+        </view>
+    </view>
+    <view class='item_address f_24 c_333' wx:if="{{item.address_message}}">
+        {{item.address_message}}
+    </view>
+</view>

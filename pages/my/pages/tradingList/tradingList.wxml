@@ -1,0 +1,13 @@
+<compontNavbar title="明细" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<view wx:else class="list">
+    <view class="item" wx:for="{{list}}" wx:key="this">
+        <view class="lt">
+            <view class="tit">{{item.title}}</view>
+            <view class="time">{{item.create_time}}</view>
+        </view>
+        <view class="rt">{{item.price}}</view>
+    </view>
+</view>

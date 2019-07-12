@@ -1,0 +1,72 @@
+/* pages/my/pages/onlineService/onlineService.wxss */
+page{
+    background-color:#fff;
+}
+.top_box{
+    /* padding:0 30rpx; */
+    padding:25rpx 0 30rpx;
+    border-bottom:16rpx solid #f4f4f4;
+}
+.h1{
+    background-color:#4bace2;
+    width:6rpx;
+    height:18rpx;
+    margin-right:15rpx;
+    margin-left:30rpx;
+}
+.h2{
+    margin-left:0rpx;
+}
+.top_classifybox{
+    width:100%;
+    flex-wrap: wrap;
+}
+.classify_box{
+    text-align: center;
+    width: 25%;
+    margin-top:28rpx;
+}
+.classify_box image{
+    width:64rpx;
+    height:64rpx;
+    margin-bottom:16rpx;
+}
+.classify_box view{
+    color:#555;
+}
+.center_box{
+    border-bottom:16rpx solid #f4f4f4;
+    justify-content: space-around;
+    padding:56rpx 0;
+}
+.center_itembox{
+    text-align: center;
+}
+.center_itembox image{
+    width:32rpx;
+    height:32rpx;
+    margin-right:12rpx;
+}
+.mt20{
+    margin-top:20rpx;
+}
+.bottom_box{
+    padding:25rpx 30rpx 0;
+}
+.bottom_item{
+    padding:30rpx 0;
+    color:#555;
+    border-bottom:1rpx solid #dfdfdf;
+     
+}
+.bottom_item view{
+    line-height: 36rpx;
+}
+.online_phoneimg{
+    position: fixed;
+    right:32rpx;
+    bottom:84rpx;
+    z-index: 5;
+    width:98rpx;
+    height:98rpx;
+}

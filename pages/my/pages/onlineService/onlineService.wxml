@@ -1,0 +1,46 @@
+<!--pages/my/pages/onlineService/onlineService.wxml-->
+<compontNavbar title="在线客服" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='top_box'>
+    <view class='display-flex align-items-center '>
+        <view class='h1'></view>
+        <view class='top_title f_30 c_333'>分类</view>
+    </view>
+    <view class='display-flex top_classifybox'>
+        <view class='classify_box' wx:for="{{typelist}}" wx:key="this" bindtap="toDetail" data-typeid="{{item.id}}" data-ishot="0">
+            <image src='{{item.pic}}'></image>
+            <view class='f_24'>{{item.name}}</view>
+        </view>       
+    </view>
+</view>
+<view class='center_box display-flex'>
+    <view class='center_itembox' bindtap='toDetail'>
+        <view class='display-flex align-items-center'>
+            <image src='../../images/ic_online_service_center1.png'></image>
+            <view class='f_30 c_333'>在线咨询</view>
+        </view>
+        <view class='f_24 c_999 mt20'>常见问题解答</view>
+    </view>
+    <view class='center_itembox' bindtap='manualBindtap'>
+        <view class='display-flex align-items-center'>
+            <image src='../../images/ic_online_service_center2.png'></image>
+            <view class='f_30 c_333'>使用手册</view>
+        </view>
+        <view class='f_24 c_999 mt20'>快速了解{{idname}}</view>
+    </view>
+    <view class='center_itembox' bindtap="makePhone">
+        <view class='display-flex align-items-center'>
+            <image src='../../images/ic_online_service_center3.png'></image>
+            <view class='f_30 c_333'>客服热线</view>
+        </view>
+        <view class='f_24 c_999 mt20'>7*12小时人工服务</view>
+    </view>
+</view>
+<view class='bottom_box'>
+    <view class='display-flex align-items-center '>
+        <view class='h1 h2'></view>
+        <view class='top_title f_30 c_333'>热门问题</view>
+    </view>
+    <view class='bottom_item f_28' wx:for="{{list}}" wx:key="this" bindtap="toDetail" data-hid="{{item.id}}" data-ishot="1">
+        <view>{{item.title}}</view>
+    </view>   
+</view>

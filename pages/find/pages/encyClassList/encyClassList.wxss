@@ -1,0 +1,39 @@
+page{
+    background: #f7f7f7;
+    padding: 16rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.item{
+    width: 100%;
+    border-bottom: 1rpx solid #dfdfdf;
+    padding: 30rpx 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item:last-child{
+    border-bottom: none;
+}
+.tit{
+    max-width: 90%;
+    font-size: 30rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.icon{
+    width: 14rpx;
+    height: 22rpx;
+    margin-left: 16rpx;
+}

@@ -1,0 +1,48 @@
+/* pages/edutlList/operation/operation.wxss */
+page{
+  background-color:#fff;
+}
+.add_btnbox{
+  position:fixed;
+  z-index: 2;
+  bottom:10rpx;
+  width: 100%;
+}
+.add_btn{
+  
+  color:#fff;background-color:#4bace2;line-height:90rpx;font-size:34rpx;border-radius: 10rpx;text-align: center;width:690rpx;margin:0 auto;
+  
+}
+.imgs{
+    width: 100%;
+   
+    background: #fff;
+    padding: 32rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.scroll-box {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap; 
+    background: #fff;
+}
+.scroll-item{
+    position: relative; 
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 34rpx;
+    display: inline-block;
+}
+.hmwk-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+}
+.del-img{
+    position: absolute;
+    top: 5rpx;
+    right: 5rpx;
+    width: 40rpx;
+    height: 40rpx;
+}

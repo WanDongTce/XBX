@@ -1,0 +1,16 @@
+/* pages/service/homeworklist/homeworklist.wxss */
+@import "/component/studyFilter/studyFilter.wxss";
+@import "/pages/my/pages/service/preview/preview.wxss";
+.new_homeworklist{
+  align-items: center;
+}
+.lt-text .tit{
+  margin-bottom:0;
+  line-height:45rpx;
+}
+/* .lt-img{
+  width:66rpx;
+  height:66rpx;
+  border-radius: 50%;
+  margin-right:30rpx;
+} */

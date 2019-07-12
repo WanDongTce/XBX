@@ -1,0 +1,65 @@
+<!--pages/ls2/ls2.wxml-->
+<compontNavbar title="日常作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="container" wx:if='{{imgUrls.length!=0}}'>
+        <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2" id='queryone' class='swiper_img'>
+            <block wx:for="{{imgUrls}}" wx:key="this">
+                <swiper-item>
+                    <image src="{{item.image}}" class="slide-image" catchtap="toH5" data-type="{{item.to_type}}" data-url="{{item.url}}" data-toid="{{item.to_id}}"/>
+                </swiper-item>
+            </block>
+        </swiper>
+</view>
+
+<view class='display-flex align-items-center justify-content-between bg_fff bigbox'>
+  <navigator url="/pages/home/pages/homework/homework?index=0">
+    <image src='../../../../images/zuoye_2.png'></image>
+  </navigator>
+  <view bindtap='judge' >
+    <image src='../../../../images/zuoye_1.png'></image>
+  </view>
+</view>
+
+
+
+        <view class='answer' wx:key="this" wx:for="{{questionList}}" bindtap="toDetail" data-href="{{item.href}}">
+            <view class="content">
+                <view class='qus-header'>
+                    <view class='qus-money' wx:if="{{item.point != 0}}">
+                        <image src='{{base}}images/money.png'></image>
+                        <text>{{item.point}}</text>
+                    </view>
+                    <view class='qus-title'>{{item.name}}</view>
+                </view>
+
+                <image src='{{item.images[0].url}}' class='qus-img-2' wx:if="{{item.images.length == 1}}" catchtap="previewImg" data-index="{{idx}}" mode="aspectFill" data-img="{{item.images[0].url}}" data-imgs="{{item.images}}"></image>
+
+                <scroll-view class='img-box-3 img-box' scroll-x="true" wx:if="{{item.images.length == 2}}">
+                    <image src='{{im.url}}' class='qus-img-3' wx:for="{{item.images}}" wx:key="this" wx:for-item="im" mode="aspectFill" catchtap="previewImg" data-img="{{im.url}}" data-imgs="{{item.images}}"></image>
+                </scroll-view>
+
+                <scroll-view class='img-box' scroll-x="true" wx:if="{{item.images.length >= 3}}">
+                    <image src='{{im.url}}' class='qus-img' wx:for="{{item.images}}" wx:key="this" wx:for-item="im" mode="aspectFill" catchtap="previewImg" data-imgs="{{item.images}}" data-img="{{im.url}}"></image>
+                </scroll-view>
+
+                
+
+                <view class='qus-sub'>
+                    <text>{{item.grade.name}}</text>
+                    <text>{{item.subject.Name}}</text>
+                </view>
+                <view class='qus-tips'>
+                    <view class='tips-name'>
+                        <image wx:if="{{item.userInfo.avatar}}" src='{{item.userInfo.avatar}}' mode="aspectFill"></image>
+                        <image wx:else src="{{base}}images/default-user-2.png" mode="aspectFill"></image>
+                        <text>{{item.userInfo.nickname}}</text>
+                        <text>{{item.difftime}}</text>
+                    </view>
+                    <view class='qus-reply'>
+                        <image src='{{base}}images/write.png'></image>
+                        <text>回答</text>
+                        <text>{{item.answernum}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>

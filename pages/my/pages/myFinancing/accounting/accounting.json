@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "记账",
+    "usingComponents": {
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

@@ -1,0 +1,72 @@
+/* pages/login/addReferee/addReferee.wxss */
+
+page {
+    background: #fff;    
+}
+form{
+    width: 100%;
+    height: 100%;
+    border-top: 1rpx solid #dfdfdf;
+}
+picker {
+    border: 1rpx solid #e1e1e1;
+    margin: 52rpx 50rpx 32rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    border-radius: 5rpx;
+    position: relative;
+}
+
+picker view {
+    font-size: 32rpx;
+    color: #333;
+    margin-left: 48rpx;
+}
+
+.arrowimg {
+    position: absolute;
+    right: 34rpx;
+    top: 34rpx;
+    width: 26rpx;
+    height: 17rpx;
+}
+
+.inputbox {
+    border: 1rpx solid #e1e1e1;
+    margin: 0rpx 50rpx 90rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    border-radius: 5rpx;
+}
+
+input {
+    font-size: 32rpx;
+    height: 100%;
+    margin-left: 48rpx;
+}
+
+.placeholder {
+    color: #999;
+}
+
+.btn {
+    width: 90%;
+    background-color: #4bace2;
+    color: #fff;
+    height: 90rpx;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 34rpx;
+    line-height: 90rpx;
+    border-radius: 5rpx;
+}
+
+.btn2 {
+    color: #4bace2;
+    height: 90rpx;
+    text-align: right;
+    font-size: 34rpx;
+    line-height: 90rpx;
+    margin-right: 46rpx;
+    margin-top: 50rpx;
+}

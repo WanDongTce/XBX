@@ -1,0 +1,24 @@
+@import "../barter.wxss";
+@import "../../../../../template/scrollTab/scrollTab.wxss";
+
+
+.fixed-scroll-view-box{
+    background: #4bace2;
+    border-bottom: none;
+}
+.scroll-item-text,
+.active .scroll-item-text{
+    color: #fff;
+}
+.active .scroll-item-line{
+    background: yellow;
+}
+
+
+.barter_itembox{
+  background-color:#fff;
+}
+
+.item_itembox{
+    padding-top: 96rpx;
+}

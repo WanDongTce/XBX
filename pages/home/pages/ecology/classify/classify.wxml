@@ -1,0 +1,69 @@
+<!--pages/newIntegralMall/classify/classify.wxml-->
+<!-- <view class='banner_box'>
+  <view class='search_box'>
+    <view class='search display-flex align-items-center'>
+      <image src='../../../images/search.png'></image>
+      <input placeholder='搜索关键字' placeholder-class='placeholder'></input>
+    </view>
+  </view>
+</view> -->
+
+<view class='search_box display-flex'>
+  <image class="navigation-back-icon" src="../../../../../images/arowLt.png" bindtap='backReturn'></image>
+  <view class='search display-flex align-items-center'>
+    <image src='../../../../../images/search.png'></image>
+    <input placeholder='搜索关键字' placeholder-class='placeholder'   disabled catchtap="tz_periphery"></input>
+  </view>
+</view>
+
+ 
+
+<view class='contentbigbox'>
+  <scroll-view class="leftbox position_a" scroll-y="true"  style="height:{{scrollHeight}}px">
+    <view wx:for="{{classifyList}}" wx:key="this" bindtap='left_choice' data-leftid='{{item.id}}' data-classifytext='{{item.name}}'class="lefttext {{item.id==currentid?'current':''}}">
+      <view>{{item.name}}</view>
+    </view>  
+  </scroll-view>
+  <!-- <view class='tabright rightbox fr' wx:for="{{rightlist}}" wx:key="this">    
+      <view class="righttext_box display-flex"  data-topicid="{{item.id}}" data-ifchoicetopic="{{item.name}}">
+        <image src='{{item.image}}' class='topic_img'></image>
+        <view class='righttext'>#{{item.name}}#</view>
+      </view>              
+  </view> -->
+  <scroll-view class='tabright rightbox position_a' scroll-y="true" scroll-top="{{scrollTop}}" style="height:{{scrollHeight2}}px">    
+    <view class='rightbigbox'>
+      <view wx:if="{{list.recommend_list.length!=0}}">
+
+      </view>
+      <view class='display-flex right_topitembox ' >
+        <!-- <navigator class='right_topitem position_r'  url="{{'/pages/home/pages/periphery/goodsDetail/goodsDetail?id=' + item.id}}" wx:for="{{list.recommend_list}}" wx:key="this">
+          <image src='{{item.image}}' class='right_topitem_img'></image>
+          <view class='position_a right_topitem_text f_26 one_line'>{{item.title}}</view>
+        </navigator> -->
+        
+        <navigator style='width:33.33%;' wx:for="{{list.recommend_list}}" wx:key="this" url="{{'/pages/home/pages/ecology/goodsDetailNew/goodsDetailNew?id=' + item.id}}">
+          <view  class='right_topitem position_r'   >
+            <image src='{{item.image}}' class='right_topitem_img'></image>
+            <view class='position_a right_topitem_text f_26 one_line'>{{item.title}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view wx:if="{{list.length!=0}}">
+        <view class='right_othertitle f_30 c_333' >
+          {{classifytext}}
+        </view>
+        <view class='right_otheritem display-flex'>
+          <navigator class='right_otherbox' wx:for="{{list}}" wx:key="this" url="{{'/pages/home/pages/ecology/goodsDetailNew/goodsDetailNew?id=' + item.id}}">
+            <image class='right_otherimg' src='{{item.image}}'></image>
+            <view class='one_line f_26 c_666 right_othertext'>{{item.title}}</view>
+          </navigator>       
+        </view> 
+      </view>
+      
+    </view>           
+  </scroll-view>
+</view>
+
+
+<peripheryBotmTab index="4" cartCount="{{cartCount}}"></peripheryBotmTab>
+

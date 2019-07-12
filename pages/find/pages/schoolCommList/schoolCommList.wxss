@@ -1,0 +1,89 @@
+page{
+    width: 100%;
+    background: #f7f7f7;
+    padding: 11vh 24rpx 96rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.box{
+    width: 100%;
+}
+.list{
+    width: 100%;
+}
+.item{
+    width: 100%;
+    padding: 30rpx 20rpx 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 16rpx;
+}
+.item-tit{
+    width: 100%;
+    border-bottom: 1rpx solid #dfdfdf;
+    font-size: 30rpx;
+    color: #333;
+    padding-bottom: 30rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.itm-tips{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20rpx 0 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.itm-lt{
+    width: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.user-ava{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.user-name{
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 6rpx;
+}
+.date{
+    font-size: 20rpx;
+    color: #999;
+}
+.itm-rt{
+    width: 50%;
+    text-align: right;
+}
+
+.border{
+    height: 40rpx;
+    line-height: 35rpx;
+    display: inline-block;
+    padding: 0 10rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #dfdfdf;
+}
+.add-btn{
+    position: fixed;
+    bottom: 16rpx;
+    left: 5%;
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #4bace2;
+    text-align: center;
+    font-size: 28rpx;
+    color: #fff;
+    border-radius: 25rpx;
+}

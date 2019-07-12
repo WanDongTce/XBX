@@ -1,0 +1,32 @@
+<!--pages/setPage/setPage.wxml-->
+<compontNavbar title="设置" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+
+<view class='box'>
+    <navigator class='display-flex itembox justify-content-between' url='/pages/my/pages/personInfo/personInfo'>
+        <view class='text_left display-flex align-items-center'>
+            <image src='../../../../images/set_img2.png'></image>
+            <view>个人信息设置</view>           
+        </view>
+        <image src='../../../../images/next.png' class='img fr'></image>       
+    </navigator>
+    <navigator class='display-flex itembox justify-content-between' url='/pages/my/pages/set/set'>
+        <view class='text_left display-flex align-items-center'>
+            <image src='../../../../images/set_img3.png'></image>
+            <view>账户设置</view>           
+        </view>
+        <image src='../../../../images/next.png' class='img fr'></image>      
+    </navigator>
+    <!-- <view class='display-flex itembox justify-content-between' >
+        <view class=' text_left'>身份认证</view>
+        <view class=' text_right'>已认证</view>
+    </view> -->
+    
+</view>
+    <navigator class='display-flex itembox itembox2 justify-content-between' url='/pages/common/address/address'>
+        <view class='text_left display-flex align-items-center'>
+            <image src='../../../../images/set_img1.png'></image>
+            <view>常用地址管理</view>           
+        </view>
+        <image src='../../../../images/next.png' class='img fr'></image>      
+    </navigator>

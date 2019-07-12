@@ -1,0 +1,77 @@
+/* pages/my/pages/myOrder/myOrder.wxss */
+@import "../../../../template/tab/tab.wxss";
+@import "../../wxss/confirmOrder";
+page{
+    padding-bottom: 0;
+}
+.tabs{
+    border-top: 1rpx solid #dfdfdf;
+    position:fixed;
+    top: 10vh;
+    left:0;
+    width:100%;
+}
+.active .tab-text{
+    color:#333;
+}
+.tab-content{
+    margin-top:8vh;
+}
+.arowRtGray{
+    width:17rpx;
+    height:24rpx;
+    margin-left:17rpx;
+}
+
+.new_sjname {
+    width:50%;
+}
+.new_sjname_right{
+    width: 50%;
+    color:#ea2929;
+    margin-right:24rpx;
+    text-align: right;
+}
+.new_business_name1{
+    max-width:80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 36rpx;
+}
+.new_sjname{
+    padding:36rpx 0 36rpx 24rpx;
+}
+.new_buttonbox{
+    margin:0 24rpx;
+    padding:18rpx 0rpx 22rpx;
+    border-top:1rpx solid #dfdfdf;
+    justify-content: flex-end;
+}
+.new_buttonbox view{
+    border:1rpx solid #4bace2;
+    padding:0rpx 22rpx;
+    border-radius: 5rpx;
+    color:#4bace2;
+    font-size:30rpx;
+    margin-left:20rpx;
+    line-height: 60rpx;
+}
+.new_buttonbox button{
+    border:1rpx solid #4bace2;
+    padding:0 22rpx;
+    margin:0;
+    background-color:#fff;
+    border-radius: 5rpx;
+    color:#4bace2;
+    font-size:30rpx;
+    margin-left:20rpx;
+    line-height: 60rpx;
+}
+.new_my_total1{
+    margin-right:34rpx;
+}
+.new_my_total2 text{
+    color:#000033;
+    
+}

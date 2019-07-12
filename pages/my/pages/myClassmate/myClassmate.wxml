@@ -1,0 +1,55 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='box'>
+    <view class="nodt-cont" wx:if="{{showEmpty}}">
+        <image src="../../../../images/nothave.png"></image>
+        <view>我还没有动态</view>
+        <navigator url="/pages/home/pages/classmate/classmateWrite/classmateWrite">发布新动态</navigator>
+    </view>
+    <view class="list" wx:else>
+        <view class="item" bindtap="toDetail" data-item="{{item}}" wx:for="{{list}}" wx:key="this">
+            <view class="close" catchtap="del" data-id="{{item.id}}">x</view>
+            <view class="head">
+                <image wx:if="{{item.user.avatar}}" class="user-img" src="{{item.user.avatar}}" mode="aspectFill"></image>
+                <image wx:else class="user-img" src="../../../../images/default-user-2.png" mode="aspectFill"></image>
+                <view class="hrt">
+                    <view class="user-name">{{item.user.nickname}}</view>
+                    <view class="conth-rt">{{item.difftime}}</view>
+                </view>
+            </view>
+
+            <view class="cont-text">{{item.content}}</view>
+
+            <image src="{{item.photo[0].photo}}" class="cont-img" mode="widthFix" wx:if="{{item.photo.length > 0}}"></image>
+
+            <video src="{{item.video_url}}" wx:if="{{item.video_url}}" custom-cache="{{false}}"></video>
+
+            <view class="news">
+                <image src="{{item.category.image}}"></image>
+                <view class="news-rt">
+                    <view class="news-tit">{{item.category.name?'#' + item.category.name + '#':''}}</view>
+                    <view class="news-tips">
+                        <text>阅读数{{item.category.post_views}}</text>
+                        <text>总帖数{{item.category.post_num}}</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="botm">
+                <!-- <view class="bot-item">
+                    <image src='../../../images/transmit.png'></image>
+                    <text>{{item.share_num}}</text>
+                </view> -->
+                <!-- <view class="bot-item">
+                    <image src='../../../images/msg.png'></image>
+                    <text>{{item.comments}}</text>
+                </view> -->
+                <view class="bot-item">
+                    <image wx:if="{{item.is_thumbs == 0}}" src="../../../../images/agr.png"></image>
+                    <image wx:else src="../../../../images/agr4.png"></image>
+                    <text class="{{item.is_thumbs == 1? 'active' : ''}}">{{item.thumbs}}</text>
+                </view>
+            </view>
+
+        </view>
+    </view>
+</view>

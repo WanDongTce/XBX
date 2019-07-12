@@ -1,0 +1,43 @@
+.component-class{
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.circle_img{
+    position: relative;
+  width:432rpx;
+  height:432rpx;
+  margin:150rpx auto 0;
+  display:block;
+}
+.box{
+  width:100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+.title{
+  font-size:32rpx;
+  color:#666;
+  
+}
+.money{
+  font-size:48rpx;
+  font-weight:bold;
+  color:#333;
+  margin-top:42rpx;
+}
+.total{
+  font-size:26rpx;
+  color:#333;
+  text-align: center;
+  margin-top:48rpx;
+}
+.edit_img{
+  width:31rpx;
+  height:30rpx;
+  position:absolute;
+  top: 14vh;
+  right:40rpx;
+}

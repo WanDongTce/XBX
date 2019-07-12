@@ -1,0 +1,224 @@
+page{
+    width: 100%;
+    background: #f7f7f7;
+    padding: 11vh 24rpx 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.box{
+    width: 100%;
+}
+.addr-box{
+    width: 100%;
+    border-radius: 10rpx;
+    margin-bottom: 16rpx;
+    padding: 30rpx 20rpx;
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.school-name{
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+    margin-bottom: 16rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.school-addr{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.addr-icon{
+    width: 22rpx;
+    height: 24rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16rpx;
+}
+.addr-text{
+    font-size: 28rpx;
+    color: #999;
+}
+.img-box{
+    width: 100%;
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 16rpx 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.img-tit{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rpx 0;
+}
+.img-lt{
+    width: 80%;
+    font-size: 28rpx;
+    color: #333;
+}
+.img-rt{
+    width: 20%;
+    text-align: right;
+    font-size: 28rpx;
+    color: #999;
+}
+.imgs{
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.img-tips{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: rgba(255, 255, 255, .66);
+}
+.img-length{
+    width: 50%;
+    font-size: 26rpx;
+    color: #999;
+}
+.add-agree{
+    width: 50%;
+    text-align: right;
+}
+.border{
+    height: 40rpx;
+    line-height: 35rpx;
+    display: inline-block;
+    padding: 0 10rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #dfdfdf;
+}
+.add-agree-text{
+    font-size: 24rpx;
+    color: #999;
+}
+.active{
+    color: #4bace2;
+}
+.add-agree-icon{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.h2{
+    width: 100%;
+    padding: 20rpx 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.h2-lt{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.rect-icon{
+    width: 8rpx;
+    height: 28rpx;
+    background: #4bace2;
+    margin-right: 20rpx;
+}
+.h2-text{
+    color: #333;
+    font-size: 28rpx;
+}
+.h2-rt{
+    width: 20%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.h2-rt-text{
+    color: #4bace2;
+    font-size: 24rpx;
+    margin-right: 10rpx;
+}
+.h2-rt-img{
+    width: 20rpx;
+    height: 20rpx;
+}
+.list{
+    width: 100%;
+}
+.item{
+    width: 100%;
+    padding: 30rpx 20rpx 16rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 16rpx;
+}
+.item-tit{
+    width: 100%;
+    border-bottom: 1rpx solid #dfdfdf;
+    font-size: 30rpx;
+    color: #333;
+    padding-bottom: 40rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.itm-tips{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20rpx 0 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.itm-lt{
+    width: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.user-ava{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.user-name{
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 6rpx;
+}
+.date{
+    font-size: 20rpx;
+    color: #999;
+}
+.itm-rt{
+    width: 50%;
+    text-align: right;
+}

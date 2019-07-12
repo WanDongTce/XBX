@@ -1,0 +1,22 @@
+
+.tag {
+    width: 23.5%;
+    height: 64rpx;
+    border: 1rpx solid #4bace2;
+    display: inline-block;
+    color: #4bace2;
+    text-align: center;
+    line-height: 64rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    border-radius: 32rpx;
+    margin: 0 2% 9rpx 0;
+}
+
+.tag:nth-child(4n) {
+    margin-right: 0;
+}
+.active{
+    background: #4bace2;
+    color: #fff;
+}

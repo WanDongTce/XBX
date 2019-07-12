@@ -1,0 +1,79 @@
+<!-- <compontNavbar title="逗逗玩" isShowBack="{{true}}"></compontNavbar> -->
+<image src="{{IMGURL}}game/play-banner.png" class="banner"></image>
+<image src='{{base}}images/arowLt_fff.png' class='arowLt' bindtap='goBack'></image>
+
+<view class="icon display-flex align-items-center justify-content-around">
+    <!-- <navigator class="icon-box" url="{{'/pages/home/pages/game/gameList/gameList?gametype=' + item.id}}" wx:for="{{typeList}}" wx:key="this">
+        <image src="{{IMGURL + 'game/g'+item.id+'.png'}}" class="icon-img" data-idx="{{item.id}}"></image>
+        
+    </navigator> -->
+    <navigator class="icon-box" url="/pages/home/pages/game/gameList/gameList?gametype=1">
+        <image class="tab-img" src="../../images/edutList/edu_tab5.png"></image>
+        <view class='tab-text f_26 c_333'>明日之星</view>
+    </navigator>
+    <navigator class="icon-box" url="/pages/home/pages/game/gameList/gameList?gametype=2">
+        <image class="tab-img" src="../../images/edutList/edu_tab6.png"></image>
+        <view class='tab-text f_26 c_333'>王者之战</view>
+    </navigator>
+    <navigator class="icon-box" url="/pages/home/pages/game/gameList/gameList?gametype=3">
+        <image class="tab-img" src="../../images/edutList/edu_tab7.png"></image>
+        <view class='tab-text f_26 c_333'>挑战赛</view>
+    </navigator>
+    <navigator class="icon-box" url="/pages/home/pages/game/gameList/gameList?gametype=4">
+        <image class="tab-img" src="../../images/edutList/edu_tab8.png"></image>
+        <view class='tab-text f_26 c_333'>过关斩将</view>
+    </navigator>
+    <navigator class="icon-box" url="/pages/home/pages/game/gameList/gameList?gametype=5">
+        <image class="tab-img" src="../../images/edutList/edu_tab9.png"></image>
+        <view class='tab-text f_26 c_333'>即时游戏</view>
+    </navigator>
+</view>
+<view class='new_ddw_box'>
+    <view class="display-flex align-items-center new_ddw_topbox">
+        <view class="new_ddw_line"></view>
+        <text class="new_ddw_text f_28 c_333">热门游戏</text>
+    </view>
+    <view class='display-flex new_ddw_imgbox'>
+       
+        <image src='/pages/home/images/game/game_1.png' class='new_ddwimg' bindtap='tz_webview' data-game="https://m.ajihua888.com/exam/index.html"></image>
+        
+        <image src='/pages/home/images/game/game_2.png' class='new_ddwimg' bindtap='tz_webview'  data-game='https://m.ajihua888.com/efy/index.html'></image>
+        <!-- <image src='/pages/home/images/game/game_3.png' class='new_ddwimg' data-game='3'></image> -->
+        <image src='/pages/home/images/game/game_more.png' class='new_ddwimg'></image>
+    </view>
+</view>
+
+<!-- 原版本有推荐游戏的 -->
+<!-- <view class="game">
+    <image src="{{IMGURL}}game/Wolveskill.jpg" class="game-icon"></image>
+</view>
+<view class="game">
+    <image src="{{IMGURL}}game/Mongoose.jpg" class="game-icon"></image>
+</view>
+<view class="recommend">
+    <view class="recommend-game">
+        <view class="recommend-box"></view>
+        <text class="recommend-text">推荐游戏</text>
+    </view>
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <block wx:else>
+        <view class="repeat" wx:for="{{}}" wx:key="this" bindtap="toDetail" data-item="{{item}}">
+            <view class="repeat-img">
+                <image src="{{IMGURL}}game/playgame.png" class="img-age"></image>
+            </view>
+            <view class="repeat-text">
+                <view class="text-box">
+                    <text class="text-title">{{item.title}}</text>
+                </view>
+                <view class="text-case">
+                    <text class="text-grade">{{item.nianjistr}}</text>
+                </view>
+            </view>
+            <view class="repeat-icon">
+                <image src="{{base}}images/next.png" class="repeat-icon-img"></image>
+            </view>
+        </view>
+    </block>
+</view> -->

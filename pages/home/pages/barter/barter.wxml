@@ -1,0 +1,73 @@
+<import src="../../../../template/tab/tab.wxml" />
+<compontNavbar title="书易货" isShowBack="{{true}}"></compontNavbar>
+<view class="box" wx:if="{{!showSearch}}">
+    <view class='searchbigbox display-flex'>
+        <view class='searchbox display-flex' bindtap="showSearch">
+            <image src='{{base}}images/search.png' class='search_img'></image>
+            <view class="input">{{search}}</view>
+        </view>
+        <image src='{{base}}images/classify.png' class='classify_img' bindtap='tz_classify'></image>
+    </view>
+    <swiper autoplay="false" duration="500" class="swiper">
+        <block wx:for="{{imgUrls}}" wx:key="this">
+            <swiper-item>
+                <image src="{{item.image}}" class="slide-image" catchtap="toH5" data-type="{{item.to_type}}" data-url="{{item.url}}" data-toid="{{item.to_id}}"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="tabs">
+        <block wx:for="{{tabs}}" wx:key="this">
+            <template is="{{currentTabIndex == item.index? 'tabActive': 'tab'}}" data="{{item}}" />
+        </block>
+    </view>
+    <view class="tab-content">
+        <view class="right-item">
+            <block wx:if="{{showEmpty}}">
+                <empty></empty>
+            </block>
+            <view class="right-item" wx:else>
+                <view class='barter_itembox' bindtap='tz_detail' wx:for="{{barterList}}" wx:key="this" data-myid='{{item.id}}'>
+                    <view class='overf'>
+                        <image src="{{item.userInfo.avatar? item.userInfo.avatar : base + 'images/default-user-2.png'}}" class='barter_header fl' mode="aspectFill"></image>
+                        <view class='fl'>
+                            <view class='barter_name'>{{item.userInfo.nickname}}</view>
+                            <view class='overf barter_timebox'>
+                                <image class='fl' src='{{base}}images/org-time.png' class='fl barter_timeimg'></image>
+                                <view class='fl barter_timetext'>{{item.createdate}}发布</view>
+                            </view>
+                        </view>
+                    </view>
+
+                    <image src='{{item.images[0].url}}' class='barter_item_img barter_item_img-1' wx:if="{{item.images.length == 1}}" mode="aspectFill" catchtap="previewImg" data-img="{{item.images[0].url}}" data-imgs="{{item.images}}"></image>
+
+                    <scroll-view class="scroll-view_H" scroll-x="true" wx:if="{{item.images.length == 2}}">
+                        <block wx:for="{{item.images}}" wx:key="this" wx:for-item="im">
+                            <image src='{{im.url}}' class='barter_item_img barter_item_img-2' mode="aspectFill" catchtap="previewImg" data-img="{{im.url}}" data-imgs="{{item.images}}"></image>
+                        </block>
+                    </scroll-view>
+
+                    <scroll-view class="scroll-view_H" scroll-x="true" wx:if="{{item.images.length >= 3}}">
+                        <block wx:for="{{item.images}}" wx:key="this" wx:for-item="im">
+                            <image src='{{im.url}}' class='barter_item_img' mode="aspectFill" catchtap="previewImg" data-img="{{im.url}}" data-imgs="{{item.images}}"></image>
+                        </block>
+                    </scroll-view>
+
+                    <view class='barter_item_title'>{{item.name}}</view>
+                    <view class='barter_item_tag'>
+                        <image src='{{base}}images/tag.png'></image>
+                        <text>{{item.type_name}}</text>
+                    </view>
+                    <view class='barter_item_bottombox overf'>
+                        <view class=' barter_address fl'>{{item.address}}</view>
+                        <view class=' barter_ly fr'>留言{{item.commendnum}}</view>
+                        <view class=' barter_dz fr'>点赞{{item.likenum}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='publish' catchtap="toRelaeaseBarter">发布</view>
+</view>
+
+<search catch:searchCallBack="searchCallBack" wx:else flag="1"></search>

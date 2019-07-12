@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "逗逗超市",
+  "disableScroll": true,
+  "usingComponents": {
+    "empty": "/component/empty/empty",
+    "peripheryBotmTab": "/component/peripheryBotmTab/peripheryBotmTab",
+    "search": "/component/search/search"
+  }
+}

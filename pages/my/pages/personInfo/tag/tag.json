@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "tag": "/pages/my/personInfo/tag/tagComp/tagComp",
+        "compontNavbar": "/pages/component/navigation/navigation"
+    }
+}

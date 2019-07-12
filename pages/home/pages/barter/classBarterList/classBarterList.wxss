@@ -1,0 +1,69 @@
+page{
+    border-top: 1rpx solid #dfdfdf;
+}
+.contianer{
+    padding: 16rpx 0 10vh;
+}
+.list{
+    width: 100%;
+    background: #fff;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+checkbox-group{
+    width: 100%;
+}
+.item{
+    width: 100%;
+    padding: 4% 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: cener;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.item:last-child{
+    border-bottom: none;
+}
+.lt-text{
+    width: 70%;
+    font-size: 30rpx;
+    color: #333;
+}
+.rt-img{
+    width: 30rpx;
+    height: 30rpx;
+}
+.btn-box{
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 10vh;
+    border-top: 1rpx solid #dfdfdf;
+    background: #fff;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.btn{
+    width: 49%;
+    height: 8vh;
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 15rpx;
+    text-align: center;
+    line-height: 8vh;
+}
+.btn1{
+    background: #fcd324;
+    margin-right: 18rpx;
+}
+.btn2{
+    background: #4bace2;
+}

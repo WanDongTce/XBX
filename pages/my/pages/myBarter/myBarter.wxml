@@ -1,0 +1,153 @@
+<import src="../../../../template/tab/tab.wxml" />
+<compontNavbar title="物品交易" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="tabs">
+    <block wx:for="{{tabs}}" wx:key="this">
+        <template is="{{curIndex == item.index? 'tabActive': 'tab'}}" data="{{item}}"/>
+    </block>
+</view>
+<view class="tab-content">
+    <view class="right-item" wx:if="{{curIndex == 1}}">
+        <!-- <image src='../../../../images/mygoods.png' class='mygoods_img' bindtap='tz_mygoods'></image> -->
+        <scroll-view scroll-y="true" style="height: {{scrollHeight}}px;" bindscrolltolower="loadMore">
+            <block wx:if="{{showEmpty}}">
+                <empty></empty>
+            </block>
+            <block wx:for="{{yihuoList}}" wx:key='this'>
+                <view class='newitem_bigbox' bindtap='tz_beforedetail' data-myid="{{item.id}}" data-mystate="{{item.isexchange}}">
+                    <view class='newitem_titlebox display-flex'>
+                        <view class='newitem_tittleleft'>发布于{{item.createdate}}</view>
+                        <!--  1.删除 兑换成功 -->
+                        <view wx:if="{{item.isexchange==3}}" class='newitem_tittle_sc' data-myid="{{item.id}}">删除</view>
+                        <!--  2.等待易货  -->
+                        <view wx:else class='newitem_tittle_dd'>等待易货</view>
+                    </view>
+                    <view class='newitem_contentbox overf '>
+                        <image src='{{item.picurl}}' class='newitem_img fl' mode="aspectFill"></image>
+                        <view class='fl'>
+                            <view class='newitem_title'>{{item.name}}</view>
+                            <view class='newitem_tag'>
+                                <image src='../../../../images/tag.png'></image>
+                                <text>{{item.type_name}}</text>
+                            </view>
+                        </view>
+                        <view class='newitem_numbox'>
+                            <text>点赞{{item.likenum}}</text>
+                            <!-- <text>留言{{item.commendnum}}</text> -->
+                        </view>
+                        <!--1.对方拒绝  -->
+                        <!-- <image src='../../../images/barter/state_dfjj.png' class='state_img'></image> -->
+                        <!--2.成功  -->
+                        <image wx:if="{{item.isexchange==3}}" src='../../../../images/barter/state_success.png' class='state_img'></image>
+                        <view wx:else></view>
+                        <!--3.失败  -->
+                        <!-- <image src='../../../images/barter/state_fail.png' class='state_img'></image> -->
+                    </view>
+                    <view class='newitem_bottom display-flex'>
+                        <view class='newitem_sq' catchtap='tz_applylist' data-id="{{item.id}}">已有{{item.exchange_count}}人申请</view>
+                        <view class='newitem_btn' wx:if="{{item.isexchange==3}}" catchtap='tz_mybarterDetail' data-id="{{item.id}}" data-direction="1">易货详情</view>
+                        <view wx:else></view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+
+
+    </view>
+
+    <view class="right-item" wx:if="{{curIndex == 2}}">
+
+        <scroll-view scroll-y="true" style="height: {{scrollHeight}}px;" bindscrolltolower="loadMore2">
+            <block wx:if="{{showEmpty}}">
+                <empty></empty>
+            </block>
+            <block wx:for="{{applyList}}" wx:key='this'>
+
+                <!-- <view wx:if="{{item.agreestatus==5}}"></view> -->
+                <view class='newitem_bigbox' bindtap='tz_beforedetail' data-myid="{{item.goodsid}}" data-rightstate="{{item.agreestatus}}">
+                    <view class='newitem_titlebox display-flex'>
+                        <view class='newitem_tittleleft'>申请日期：{{item.createdate}}</view>
+                        <!--  1.等待对方确认  -->
+                        <view class='newitem_tittle_dd' wx:if="{{item.agreestatus==1}}">等待对方确认</view>
+                        <!--  2.删除  -->
+                        <view class='newitem_tittle_sc' wx:else catchtap='del_btn' data-myid="{{item.id}}">删除</view>
+                    </view>
+                    <view class='position-relative'>
+                        <view class='item_name'>
+                            <image src='{{item.userInfo.avatar?item.userInfo.avatar:"../../../../images/default-user-2.png"}}' mode="aspectFill"></image>
+                            {{item.userInfo.nickname}}
+                        </view>
+                        <view class='item_centerbox overf'>
+                            <image src='{{item.goodsInfo.picurl}}' class='item_img fl'></image>
+                            <view class='fl'>
+                                <view class='item_title'>{{item.goodsInfo.name}}</view>
+                                <view class='item_tag'>
+                                    <image src='../../../../images/tag.png'></image>
+                                    <text>{{item.goodsInfo.type_name}}</text>
+                                </view>
+                            </view>
+                            <view class='item_numbox'>
+                                <text>点赞{{item.goodsInfo.likenum}}</text>
+                                <!-- <text>留言{{item.goodsInfo.commendnum}}</text> -->
+                            </view>
+                        </view>
+                        <!--2.成功  -->
+                        <image src='../../../../images/barter/state_success.png' wx:if="{{item.agreestatus==2}}" class='state_img'></image>
+                        <!--3.失败  -->
+                        <image src='../../../../images/barter/state_fail.png' class='state_img' wx:if="{{item.agreestatus==4}}"></image>
+                        <!--3.对方拒绝  -->
+                        <image src='../../../../images/barter/state_dfjj.png' class='state_img' wx:if="{{item.agreestatus==3}}"></image>
+                        <!--5.已取消  -->
+                        <image src='../../../../images/barter/state_qx.png' class='state_img' wx:if="{{item.agreestatus==5}}"></image>
+                    </view>
+                    <view class='item_bottom overf'>
+                        <view class='item_btn fr' catchtap='tz_mybarterDetail' data-id="{{item.id}}" data-direction="{{2}}">易货详情</view>
+                        <view class='item_btn item_new_qx_btn fr' catchtap='qxsq_btn' data-myid="{{item.id}}" wx:if="{{item.agreestatus==1}}">取消申请</view>
+                        <view wx:else></view>
+                    </view>
+                </view>
+
+
+            </block>
+        </scroll-view>
+    </view>
+    <view class="right-item" wx:if="{{curIndex == 0}}">
+        <scroll-view scroll-y="true" style="height: {{scrollHeight}}px;" bindscrolltolower="loadMore3">
+            <block wx:if="{{showEmpty}}">
+                <empty></empty>   
+            </block>
+            <block wx:else>
+            <view class='newitem_bigbox2' wx:for="{{list}}" wx:key="this">
+            
+            <view class='newitem_titlebox display-flex'>
+                <view class='mygoods_scsj'>上传时间：{{item.createdate}}</view>
+                <!--  1.发布中  -->
+                <view  class='newitem_tittle_dd' wx:if="{{item.releasestatus == 1}}">发布中</view>          
+                <!--  2.未发布  -->
+                <view  class='newitem_tittle_sc' wx:else>未发布</view>          
+            </view>
+            
+            <view class='item_centerbox overf mygoods_newbox'>
+                <image src='{{item.picurl}}' class='item_img fl'></image>
+                <view class='fl'>
+                <view class='item_title item_title2 item_mygoodstitle'>{{item.name}}</view>
+                </view>
+                <view class='item_numbox mygoods_numbox'>
+                <text>点赞{{item.likenum}}</text>
+                <text>留言{{item.commendnum}}</text>
+                </view>
+            </view>  
+            <view class='item_bottom2 overf'>        
+                <view class='fr applylist_btn applylist_btn1' catchtap="toEdit" data-id="{{item.id}}">编辑</view> 
+                <view class='fr applylist_btn applylist_btn2' wx:if="{{item.releasestatus == 1}}" bindtap="publish_btn" data-myid="{{item.id}}" data-state="2">取消发布</view> 
+                <view class='fr applylist_btn applylist_btn2' wx:else data-myid="{{item.id}}" bindtap="publish_btn" data-state="1">公开发布</view>         
+            </view>
+            </view>
+            </block>  
+
+
+
+
+            <view class='mygoods_publish' catchtap="toRelease">发布</view>
+        </scroll-view>
+    </view>
+</view>

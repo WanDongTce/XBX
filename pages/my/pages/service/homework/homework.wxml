@@ -1,0 +1,46 @@
+<compontNavbar title="写作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<view class="Subject">
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+2+ '&subjectname=' + '语文'}}">
+    <image src="{{IMGURL}}service/task/task-Chinese.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+1+ '&subjectname=' + '数学'}}">
+   <image src="{{IMGURL}}service/task/task-Mathematics.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+3+ '&subjectname=' + '英语'}}">
+   <image src="{{IMGURL}}service/task/task-English.png" class="task"></image>
+  </navigator>
+</view>
+<view class="Subject">
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+4+ '&subjectname=' + '物理'}}">
+    <image src="{{IMGURL}}service/task/task-Physics.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+5+ '&subjectname=' + '化学'}}">
+    <image src="{{IMGURL}}service/task/task-Chemistry.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+6+ '&subjectname=' + '地理'}}">
+    <image src="{{IMGURL}}service/task/task-Geography.png" class="task"></image>
+  </navigator>
+</view>
+<view class="Subject">
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+7+ '&subjectname=' + '历史'}}">
+   <image src="{{IMGURL}}service/task/task-History.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+8+ '&subjectname=' + '生物'}}">
+   <image src="{{IMGURL}}service/task/task-Biology.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+9+ '&subjectname=' + '政治'}}">
+    <image src="{{IMGURL}}service/task/task-Politics.png" class="task"></image>
+  </navigator>
+</view>
+<view class="Subject">
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+10+ '&subjectname=' + '科学'}}">
+    <image src="{{IMGURL}}service/task/task-science.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+11+ '&subjectname=' + '理综'}}">
+   <image src="{{IMGURL}}service/task/task-Daniel.png" class="task"></image>
+  </navigator>
+  <navigator url="{{'/pages/my/pages/service/dohomework/dohomework?subjectid='+12+ '&subjectname=' + '文综'}}">
+   <image src="{{IMGURL}}service/task/task-heddle.png" class="task"></image>
+  </navigator>
+</view>

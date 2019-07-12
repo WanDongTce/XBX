@@ -1,0 +1,28 @@
+ <compontNavbar title="校园动态" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class="school-box">
+    <block wx:if="{{showEmpty}}">
+        <empty></empty>
+    </block>
+    <block wx:else>
+        <navigator url="{{'/pages/find/pages/news/newsDetail/newsDetail?id='+item.id + '&img=' + item.image}}" wx:for="{{news}}" wx:key="this" class="news">
+            <view class="news-lt">
+                <image class="news-img" src="{{item.image}}"></image>
+            </view>
+            <view class="news-rt">
+                <view class="news-tit">{{item.name}}</view>
+                <view class="news-tips">
+                    <view class="tips-lt">
+                        <image class="news-tip-img" src="{{base}}images/time.png"></image>
+                        <text class="news-tip-text">{{item.createdate}}</text>
+                    </view>
+                    <view class="tips-rt">
+                        <image class="news-tip-img" src="{{base}}images/msg.png"></image>
+                        <text class="news-tip-text">{{item.commentnum}}</text> 
+                        <image class="news-tip-img" src="{{base}}images/agr.png"></image>
+                        <text class="news-tip-text">{{item.agreenum}}</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </block>
+</view>

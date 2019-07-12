@@ -1,0 +1,230 @@
+<compontNavbar title="班级指数排行榜" isShowBack="{{true}}"></compontNavbar>
+<view class="head-bg">
+  <image src="{{IMGURL}}find/ranking/paihangbang_bg.png" class="head-img"></image>
+  <view class="head-box">
+    <view class="head-box-one">
+      <view class="images-box a">
+        <image src="{{IMGURL}}find/ranking/paihangbang_2.png" class="head-images-a"></image>
+      </view>
+      <view class="class-box a">
+        <text class="class-box-text">四年一班</text>
+        <image src="{{base}}images/dw_jt.png" class="class-img"></image>
+        <text class="class-box-number">1</text>
+      </view>
+      <view class="number a">
+        <view class="number-one">
+          <text class="number-text-gray">班级指数:</text>
+          <text class="number-text-green">116</text>
+        </view>
+      </view>
+      <view class="number a">
+        <view class="number-one">
+          <text class="number-text-gray">分享指数:</text>
+          <text class="number-text-green">1902</text>
+        </view>
+      </view>
+      <view class="number a">
+        <view class="number-one">
+          <text class="number-text-gray">爱心指数:</text>
+          <text class="number-text-green">75</text>
+        </view>
+      </view>
+    </view>
+    <view class="head-box-two">
+      <view class="images-box a">
+        <image src="{{IMGURL}}find/ranking/paihangbang_1.png" class="head-images-b"></image>
+      </view>
+      <view class="class-case a">
+        <text class="class-box-text">四年一班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">6</text>
+      </view>
+      <view class="number a">
+        <view class="number-one color">
+          <text class="number-text">班级指数:130</text>
+        </view>
+      </view>
+      <view class="number a">
+        <view class="number-one color">
+          <text class="number-text">分享指数:1969</text>
+        </view>
+      </view>
+      <view class="number a">
+        <view class="number-one color">
+          <text class="number-text">爱心指数:66</text>
+        </view>
+      </view>
+    </view>
+    <view class="head-box-three">
+      <view class="images-box a">
+        <image src="{{IMGURL}}find/ranking/paihangbang_3.png" class="head-images-c"></image>
+      </view>
+      <view class="class-box a">
+        <text class="class-box-text">四年一班</text>
+        <image src="{{base}}images/dw_jt.png" class="class-img"></image>
+        <text class="class-box-number">1</text>
+      </view>
+      <view class="number a">
+        <view class="number-one">
+          <text class="number-text-gray">班级指数:</text>
+          <text class="number-text-green">103</text>
+        </view>
+      </view>
+      <view class="number a">
+        <view class="number-one">
+          <text class="number-text-gray">分享指数:</text>
+          <text class="number-text-green">1810</text>
+        </view>
+      </view>
+      <view class="number a">
+        <view class="number-one">
+          <text class="number-text-gray">爱心指数:</text>
+          <text class="number-text-green">58</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="frame">
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">4</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">5</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">6</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">7</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">8</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">9</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+  <view class="frame-box">
+    <view class="frame-a">
+      <text class="frame-number">10</text>
+    </view>
+    <view class="frame-b">
+      <view class="frame-case">
+        <text class="frame-case-text">四年六班</text>
+        <image src="{{base}}images/up_jt.png" class="class-img"></image>
+        <text class="class-box-number-a">2</text>
+      </view>
+      <view class="frame-case-a">
+        <text class="frame-text-gray">班级指数:</text>
+        <text class="frame-text-green">103</text>
+        <text class="frame-text-gray">分享指数:</text>
+        <text class="frame-text-green">1030</text>
+        <text class="frame-text-gray">爱心指数:</text>
+        <text class="frame-text-green">95</text>
+      </view>
+    </view>
+  </view>
+</view>

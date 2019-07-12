@@ -1,0 +1,39 @@
+<!--pages/service/service.wxml-->
+<compontNavbar title="综合服务" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<navigator class="integrated" url="/pages/my/pages/service/learning/learning" style="position:relative;">
+  <image src="{{IMGURL}}service/integrated/integrated-Learning.png" class="integrated-Learning"> </image>
+      <text class="integrated-text-one" style="left:0;top:50rpx;">学习记录</text>
+      <text class="integrated-text-two" style="left:0;top:54rpx;">查看自己的学习历程</text>
+</navigator>
+<navigator class="integrated" url="/pages/my/pages/service/homework/homework" style="position:relative;">
+  <image src="{{IMGURL}}service/integrated/integrated-task.png" class="integrated-Learning"> </image>
+      <text class="integrated-text-one" style="left:0;top:50rpx;">写作业</text>
+      <text class="integrated-text-two" style="left:0;top:54rpx;">回家作业按时完成</text>
+</navigator>
+<navigator class="integrated" url="/pages/my/pages/service/rest/rest" style="position:relative;">
+  <image src="{{IMGURL}}service/integrated/integrated-Record.png" class="integrated-Learning"> </image>
+  <text class="integrated-text-one" style="left:0;top:50rpx;">作息记录</text>
+  <text class="integrated-text-two" style="left:0;top:54rpx;">养成早睡早起的好习惯</text>
+</navigator>
+<navigator class="integrated" url="/pages/my/pages/service/positioning/positioning" style="position:relative;">
+  <image src="{{IMGURL}}service/integrated/integrated-positioning.png" class="integrated-Learning"></image>
+  <text class="integrated-text-one" style="left:0;top:50rpx;">卫星定位</text>
+  <text class="integrated-text-two" style="left:0;top:54rpx;">外出游玩 按时回家</text>
+</navigator>
+<navigator class="integrated" url="{{'/pages/my/pages/service/preview/preview?learntype=' + 3}}" style="position:relative;">
+  <image src="{{IMGURL}}service/integrated/integrated-game.png" class="integrated-Learning"></image>
+  <text class="integrated-text-one" style="left:0;top:50rpx;">教学游戏</text>
+  <text class="integrated-text-two" style="left:0;top:54rpx;">边玩边学 爱上学习</text>
+</navigator>
+<!-- <navigator class="integrated" url="" style="position:relative;">
+  <image src="../../../images/edutlList/integrated/integrated-consumption.png" class="integrated-Learning"></image>
+  <text class="integrated-text-one" style="left:0;top:50rpx;">科学消费</text>
+  <text class="integrated-text-two" style="left:0;top:54rpx;">记录我成长中的消费花销</text> 
+</navigator> -->
+<navigator class="integrated" url="/pages/my/pages/service/archives/archives" style="position:relative;">
+  <image src="{{IMGURL}}service/integrated/integrated-file.png" class="integrated-Learning"></image>
+  <text class="integrated-text-one" style="left:0;top:50rpx;">综合档案</text>
+  <text class="integrated-text-two" style="left:0;top:54rpx;">创建自己的综合数据</text>
+</navigator>
+

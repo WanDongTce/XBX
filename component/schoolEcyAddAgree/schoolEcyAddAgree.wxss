@@ -1,0 +1,18 @@
+.box{
+    width: 100%;
+}
+
+.add-agree-text{
+    font-size: 24rpx;
+    color: #999;
+}
+.active{
+    color: #4bace2;
+}
+.add-agree-icon{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+}

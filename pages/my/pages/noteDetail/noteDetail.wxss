@@ -1,0 +1,29 @@
+page{
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    padding: 10vh 30rpx 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.component-class{
+    border-bottom: 1rpx solid #dfdfdf;
+}
+.link{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin: 50rpx 0;
+    color: #4bace2;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    border: 1rpx solid #4bace2;
+}
+.cont{
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+    line-height: 1.8em;
+    word-break: break-all;
+}

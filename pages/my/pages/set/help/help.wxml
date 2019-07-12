@@ -1,0 +1,15 @@
+<compontNavbar title="帮助" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='bigbox'>
+  <navigator class="box display-flex" url='/pages/my/pages/set/help/advise/advise'>
+    <view class='text_left'>投诉建议</view>
+    <view class='cl2'>我们需要您的宝贵建议</view>
+  </navigator> 
+  <view class="box display-flex">
+    <view class='text_left'>版本号</view>
+    <view class='cl3'>{{version}}</view>
+  </view> 
+  <view class="box display-flex border-none" bindtap='makePhoneCall'>
+    <view class='text_left'>客服电话</view>
+    <view class='cl3'>024-75168888</view>
+  </view> 
+</view>

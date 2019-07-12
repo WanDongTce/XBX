@@ -1,0 +1,87 @@
+/* pages/my/wallet/wallet.wxss */
+.head{
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff
+}
+.head-top{
+    position: relative;
+  width: 100%;
+  height: 200rpx;
+  font-size: 0;
+  text-align: center;
+  border-bottom: solid 1rpx #f3f3f3;
+}
+.trading-icon{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 24rpx;
+    height: 26rpx;
+}
+.head-box{
+  position: relative;
+  top: 50rpx;
+  width: 750rpx;
+  height: 80rpx;
+}
+.head-top-text{
+  font-size: 26rpx;
+  color: #666;
+}
+.head-top-number{ 
+  position: relative;
+  top: 40rpx;
+  font-size: 50rpx;
+  color: #4bace2;
+}
+.head-bottom{
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.head-bottom-box{
+  width: 375rpx;
+  height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+.head-bottom-text{
+  font-size: 28rpx;
+  color: #333;
+}
+.head-bottom-center{
+  width: 1rpx;
+  height: 80rpx;
+  background-color: #f3f3f3;
+}
+.case{
+  width: 100%;
+  height: 200rpx;
+  margin-top: 16rpx;
+  border-top: solid 1rpx #f3f3f3;
+  border-bottom: solid 1rpx #f3f3f3;
+  background-color: #fff;
+}
+.case-top{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-bottom: solid 1rpx #f3f3f3;
+}
+.case-img{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 30rpx;
+}
+.case-text{
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}

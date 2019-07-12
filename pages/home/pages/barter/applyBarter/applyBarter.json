@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "申请易货",
+    "usingComponents": {
+        "empty": "/component/empty/empty",
+        "compontNavbar": "/component/navigation/navigation"
+    }
+}

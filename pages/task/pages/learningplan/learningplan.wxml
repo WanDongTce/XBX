@@ -1,0 +1,111 @@
+<compontNavbar title="学习计划" isShowBack="{{true}}" url="/pages/main/pages/task/task" component-class="component-class"></compontNavbar>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<block wx:else>
+    <view class="box">
+        <view class="item" wx:if="{{list[0].starttime}}">
+            <view class="time-box">
+                <view class="time">{{list[0].starttime}}</view>
+                <view class="time-midd">
+                    <image src='../../images/plan-time-icon.png' class="time-icon"></image>
+                    <block wx:if="{{list.length > 1 && list.length != 2 || list[list.length-1].starttime != list[0].starttime}}">
+                        <view class="dotted"></view>
+                    </block>
+                </view>
+                <view class="arrow-lt-ic-box">
+                    <image src='../../images/arrw-lt-icon.png' class="arrow-lt-icon"></image>
+                </view>
+            </view>
+            <view class="content-box" bindtap="toDetail" data-id="{{list[0].id}}">
+                <view class="content-header">
+                    <view class="cont-lt">{{list[0].taskname}}</view>
+                    <view class="cont-rt" wx:if="{{list[0].type == 1}}">单人任务</view>
+                    <view class="cont-rt" wx:if="{{list[0].type == 2}}">组队任务</view>
+                </view>
+                <view class="progress-box">
+                    <progress class="progress" percent="{{list[0].num/list[0].all * 100}}" stroke-width="6" backgroundColor="#fff" activeColor="#fdae35" />
+                    <text class="progress-text">{{list[0].num}}/{{list[0].all}}</text>
+                </view>
+                <view class="tip">
+                    <view class="tip-lt">
+                        <image src="{{base}}images/lw.png" class="tip-icon"></image>
+                        <text class="tip-text">积分奖励</text>
+                    </view>
+                    <view class="btn-box">
+                        <view class="btn bg-f33" wx:if="{{list[0].status == 2}}">领取奖励</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <block wx:if="{{list.length > 1}}">
+            <block wx:for="{{list}}" wx:key="this" wx:for-index="index">
+                <view class="item" wx:if="{{index != 0 && index != list.length -1}}">
+                    <view class="time-box midd-time-box">
+                        <view class="time"></view>
+                        <view class="time-midd">
+                            <view class="dotted midd-dotted"></view>
+                        </view>
+                        <view class="arrow-lt-ic-box"></view>
+                    </view>
+                    <view class="content-box" bindtap="toDetail" data-id="{{item.id}}">
+                        <view class="content-header">
+                            <view class="cont-lt">{{item.taskname}}</view>
+                            <view class="cont-rt" wx:if="{{item.type == 1}}">单人任务</view>
+                            <view class="cont-rt" wx:if="{{item.type == 2}}">组队任务</view>
+                        </view>
+                        <view class="progress-box">
+                            <progress class="progress" percent="{{item.num/item.all * 100}}" stroke-width="6" backgroundColor="#fff" activeColor="#fdae35" />
+                            <text class="progress-text">{{item.num}}/{{item.all}}</text>
+                        </view>
+                        <view class="tip">
+                            <view class="tip-lt">
+                                <image src="{{base}}images/lw.png" class="tip-icon"></image>
+                                <text class="tip-text">积分奖励</text>
+                            </view>
+                            <view class="btn-box">
+                                <view class="btn bg-f33" wx:if="{{item.status == 2}}">领取奖励</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <view class="item">
+                <view class="time-box last-time-box">
+                    <block wx:if="{{list.length != 2 || list[list.length-1].starttime != list[0].starttime}}">
+                        <view class="time">{{list[list.length-1].starttime}}</view>
+                        <view class="time-midd">
+                            <view class="dotted last-dotted"></view>
+                            <image src='../../images/plan-time-icon.png' class="time-icon"></image>
+                        </view>
+                        <view class="arrow-lt-ic-box">
+
+                            <image src='../../images/arrw-lt-icon.png' class="arrow-lt-icon"></image>
+                        </view>
+                    </block>
+                </view>
+                <view class="content-box" bindtap="toDetail" data-id="{{list[list.length-1].id}}">
+                    <view class="content-header">
+                        <view class="cont-lt">{{list[list.length-1].taskname}}</view>
+                        <view class="cont-rt" wx:if="{{list[list.length-1].type == 1}}">单人任务</view>
+                        <view class="cont-rt" wx:if="{{list[list.length-1].type == 2}}">组队任务</view>
+                    </view>
+                    <view class="progress-box">
+                        <progress class="progress" percent="{{list[list.length-1].num/list[list.length-1].all * 100}}" stroke-width="6" backgroundColor="#fff" activeColor="#fdae35" />
+                        <text class="progress-text">{{list[list.length-1].num}}/{{list[list.length-1].all}}</text>
+                    </view>
+                    <view class="tip">
+                        <view class="tip-lt">
+                            <image src="{{base}}images/lw.png" class="tip-icon"></image>
+                            <text class="tip-text">积分奖励</text>
+                        </view>
+                        <view class="btn-box">
+                            <view class="btn bg-f33" wx:if="{{list[list.length-1].status == 2}}">领取奖励</view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+        </block>
+    </view>
+</block>

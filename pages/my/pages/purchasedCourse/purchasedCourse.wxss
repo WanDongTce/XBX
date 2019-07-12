@@ -1,0 +1,90 @@
+/* pages/my/purchasedCourse/purchasedCourse.wxss */
+@import "../../../../template/tab/tab.wxss";
+page{
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+.tab-line{   
+    left: 30%;
+    width: 40%;
+}
+.active .tab-text{
+  color:#333;
+}
+.newcourse_itembox{
+  padding:30rpx 30rpx 1rpx;
+}
+.newcourse_topimg{
+  width:100%;
+  display: block;
+  margin-bottom:16rpx;
+}
+.newcourse_title{
+  line-height:42rpx;
+}
+.newcourse_title text{
+  display: inline-block;
+  border:1rpx solid #eb9532;
+  color:#eb9532;
+  font-size:26rpx;
+  padding:5rpx 12rpx;
+  border-radius: 4rpx;
+  margin-right:14rpx;
+  text-align: center;
+}
+.newcourse_headerimg{
+  margin-left:4rpx;
+  width:60rpx;
+  height:60rpx;
+  margin-right:26rpx;
+  border-radius: 50%;
+}
+.newcourse_name{
+  width:280rpx;
+}
+.newcourse_time text{
+  display: inline-block;
+  color:#eb9532;
+  margin:0 20rpx;
+}
+.newcourse_bottombox{
+  margin:16rpx 0 39rpx;
+}
+.scrollview_subject{
+  width:100%;
+  height:56rpx;
+  white-space: nowrap;
+  background-color:#fff;
+  margin-left:30rpx;
+  margin-bottom:28rpx;
+}
+.kemu{
+  display: inline-block;
+  border-radius: 5rpx;
+  margin-right:17rpx;
+  width:106rpx;
+  height:56rpx;
+  line-height:56rpx;
+  
+  text-align: center;
+  font-size:28rpx;
+}
+.nochoicekemu{
+  color:#333;
+  background-color:#f4f4f4;
+}
+.choicekemu{
+  background-color:#4bace2;
+  color:#fff;
+}
+.mt10vh{
+    margin-top:10vh;
+}
+video{
+    width:100%;
+}
+.newbg_fff{
+    background-color:#fff;
+    margin-bottom:16rpx;
+}

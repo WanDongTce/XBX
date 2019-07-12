@@ -1,0 +1,43 @@
+.title {
+    text-align: center;
+    font-size: 32rpx;
+    color: #999;
+    margin-top: 55rpx;
+}
+
+.input_box {
+    width: 70%;
+    margin: 50rpx auto 0;
+    border-bottom: 1rpx solid #bbb;
+    padding-bottom: 20rpx;
+}
+
+input {
+    font-size: 46rpx;
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+.placeholder {
+    color: #333;
+}
+
+.content {
+    line-height: 66rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.btn {
+    width: 90%;
+    padding: 3% 0;
+    margin: 16vh auto 0;
+    margin-top: 60rpx;
+    color: #fff;
+    background: #4bace2;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}

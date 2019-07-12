@@ -1,0 +1,40 @@
+<compontNavbar title="支付" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <view class="payinfo">
+        <view class="lt">本次需支付</view>
+        <view class="rt">{{payinfo.price_all}}</view>
+    </view>
+    <view class="tip">您支付的费用担保在{{idname}}平台，如果本次交易失败，费用将全额退回您的{{idname}}钱包。</view>
+    <view class="pay-list">
+        <!-- <view class="pay-item" data-type="2" bindtap="checkPayMethod">
+            <view class="pay-lt">
+                <image class="pay-icon" src="../../../images/wx.png"></image>
+                <view class="pay-text">
+                    <view class="pay-method">微信支付</view>
+                </view>
+            </view>
+            <image class="swi-icon" src="{{payType == 2? '../../../images/yuan2.png': '../../../images/yuan1.png'}}"></image>
+        </view>
+        <view class="pay-item" data-type="1" bindtap="checkPayMethod">
+            <view class="pay-lt">
+                <image class="pay-icon" src="../../../images/zfb.png"></image>
+                <view class="pay-text">
+                    <view class="pay-method">支付宝支付</view>
+                </view>
+            </view>
+            <image class="swi-icon" src="{{payType == 1? '../../../images/yuan2.png': '../../../images/yuan1.png'}}"></image>
+        </view> -->
+        <view class="pay-item" data-type="0" bindtap="checkPayMethod">
+            <view class="pay-lt">
+                <image class="pay-icon" src="../../../../../images/yue.png"></image>
+                <view class="pay-text">
+                    <view class="pay-method">余额(剩余￥{{account}})</view>
+                    <view class="pay-tip" wx:if="{{account < payinfo.price_all}}">余额不足</view>
+                </view>
+            </view>
+            <image class="swi-icon" src="{{payType == 0? '../../../../../images/yuan2.png': '../../../../../images/yuan1.png'}}"></image>
+        </view>
+    </view>
+    <view class="btn" catchtap="pay">付款</view>
+</view>
+ <passwordDialog catch:getPwd="getPwd" wx:if="{{showPwd}}" catch:hidePwdDialog="hidePwdDialog"></passwordDialog> 

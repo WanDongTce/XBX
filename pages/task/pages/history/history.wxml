@@ -1,0 +1,38 @@
+<compontNavbar title="历史任务" isShowBack="{{true}}" url="/pages/main/pages/task/task" component-class="component-class"></compontNavbar>
+<view class="date-box">
+    <image src="{{base}}images/back.png" class="date-icon" catchtap="modWeek" data-flag="1"></image>
+    <view class="date-str">{{year}}年第{{week}}周</view>
+    <image src="{{base}}images/next3.png" class="date-icon" catchtap="modWeek" data-flag="2" wx:if="{{!disabledBtn}}"></image>
+    <image src="{{base}}images/next.png" class="date-icon" catchtap="modWeek" data-flag="2" wx:else></image>
+</view>
+<block wx:if="{{showEmpty}}">
+    <empty></empty>
+</block>
+<view class="box" wx:else>
+    <view class="item" wx:for="{{list}}" wx:key="this">
+        <view class="cont">
+            <image src="{{'../../images/t' + item.taskid + '.png'}}" class="item-img"></image>
+            <view class="item-cont">
+                <view class="head">
+                    <view class="tit">{{item.taskname}}</view>
+                    <view class="itm-type" wx:if="{{item.type == 1}}">单人任务</view>
+                    <view class='itm-type' wx:else>组队任务</view>
+                </view>
+
+                <view class="progress-box">
+                    <progress class="progress" percent="{{item.num/item.all}}" stroke-width='6' backgroundColor="#fff" activeColor="#fdae35" />
+                    <text class="progress-text">{{item.num}}/{{item.all}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="tip">
+            <view class="tip-lt">
+                <image src="{{base}}images/lw.png" class="tip-icon"></image>
+                <text class="tip-text">积分奖励</text>
+            </view>
+            <view class="bg-f33 btn" wx:if="{{item.status == 2}}">领队奖励</view>
+            <view class="bg-gray btn" wx:if="{{item.status == 3}}">已完成</view>
+        </view>
+    </view>
+
+</view>

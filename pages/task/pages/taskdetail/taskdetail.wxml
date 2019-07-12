@@ -1,0 +1,65 @@
+<compontNavbar title="任务详情" isShowBack="{{true}}" url="/pages/main/pages/task/task" component-class="component-class"></compontNavbar>
+<view class="cont-box" wx:if="{{info.item.tasktype == 1}}">
+    <view class="tit">
+        <view class="title-line"></view>
+        <view class="tit-text">任务时间</view>
+    </view>
+    <view class="cont">
+    <view class="picker-box">
+        <view class="picker-lt">任务开始时间:</view>
+        <view class="picker">
+            {{info.item.starttime}}
+        </view>
+    </view>
+    <view class="picker-box">
+        <view class="picker-lt">任务结束时间:</view>
+        <view class="picker">
+           {{info.item.endtime}}
+        </view>
+    </view>
+    </view>
+</view>
+<view class="cont-box">
+    <view class="tit">
+        <view class="title-line"></view>
+        <view class="tit-text">完成情况</view>
+    </view>
+    <view class="cont">
+        当前完成任务次数:<text>{{info.item.num}}</text>
+    </view>
+    <view class="cont">领取完整奖励所需次数:<text>{{info.item.all}}</text>
+    </view>
+</view>
+<view class="cont-box">
+    <view class="tit">
+        <view class="title-line"></view>
+        <view class="tit-text">任务详情</view>
+    </view>
+    <view class="cont">
+        {{info.item.info}}
+    </view>
+</view>
+<view class="cont-box" wx:if="{{info.item.type == 2}}">
+    <view class="tit">
+        <view class="title-line"></view>
+        <view class="tit-text">队友完成情况</view>
+    </view>
+    <view class="list">
+    <view class="item" wx:for="{{info.friends}}" wx:key="this">
+        <image src='{{item.avatar}}' class="item-img" mode="aspectFill"></image>
+        <view class="item-info">
+            <view class="item-name">{{item.nickname}}</view>
+            <view class="item-num">TA完成的次数:<text>{{item.num}}</text></view>
+        </view>
+    </view>
+    </view>
+</view>
+<view class='btn-box'>
+<view class='btn bg-gray' wx:if="{{info.item.status == 2}}">领取奖励</view>
+ <view class='btn bg-f33' wx:if="{{info.item.status == 4}}" catch:tap="receiveReward">领取奖励</view>
+ <view class='btn bg-gray' wx:if="{{info.item.status == 5}}">已领取奖励</view>
+    <block wx:if="{{flag == 2}}">
+        <view class='btn bg-fff btn-border color-f33' catchtap="joinProcess" data-type="2">拒绝</view>
+        <view class='btn bg-red btn-border' catchtap="joinProcess" data-type="1">接受</view>
+    </block>
+</view>

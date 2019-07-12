@@ -1,0 +1,39 @@
+<compontNavbar title="发布易货" isShowBack="{{true}}"></compontNavbar>
+
+<view class="container">
+    <view class="homework-cont">
+        <input placeholder="为您要发布的宝贝填写合适的标题" class="title" placeholder-class="placeh" bindinput="saveTitle"></input>
+        <textarea placeholder="描述一下宝贝的细节或其他详情~" placeholder-class="placeh" bindinput="saveMsg"></textarea>
+
+        <view class="tips">
+            <view class="text-tip">280字</view>
+        </view>
+    </view>
+    <view class="imgs">
+        <scroll-view class="scroll-box" scroll-x="true">
+            <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+                <image src="{{item}}" class="hmwk-img"></image>
+                <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image>
+            </view>
+            <view class="scroll-item" wx:if="{{imgList.length == 0}}">
+                <image src="{{base}}images/add.png" class="hmwk-img" catchtap="addImg"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="check-class" bindtap="toClassList">
+        <view class="check-text">分类</view>
+        <view class="check-rt">
+            <text>{{selectClssName}}</text>
+            <image class="check-img" src="{{base}}images/next.png"></image>
+        </view>
+    </view>
+    <view class="check-class cal-mar-top" bindtap="checkReleaseStatus">
+        <view class="check-text">是否上架</view>
+        <view class="check-rt">
+            <image wx:if="{{releasestatus == 1}}" class="check-sta-img" src="{{base}}images/yuan2.png"></image>
+            <image wx:else class="check-sta-img" src="{{base}}images/yuan1.png"></image>
+
+        </view>
+    </view>
+    <view class="btn-box" catchtap="submit">提交</view>
+</view>

@@ -1,0 +1,2 @@
+<view class='tag {{isOdd? "active" : ""}}' id="tag" catchtap="selectTag" data-item="{{item}}">{{item.label}}</view>
+

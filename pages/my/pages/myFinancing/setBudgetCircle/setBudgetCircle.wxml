@@ -1,0 +1,25 @@
+<compontNavbar title="设置预算" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+
+<!--1.预算余额  -->
+<view wx:if="{{mynum==1}}">
+    <image src="{{IMGURL}}my/circle2.png" class="circle_img">
+        <view class='position-absolute box'>
+            <view class='title'>预算余额</view>
+            <view class='money'>￥{{mysurplus}}</view>
+        </view>
+    </image>
+
+</view>
+<!--2.预算超支  -->
+<view wx:else>
+    <image src="{{IMGURL}}my/circle1.png" class="circle_img">
+        <view class='position-absolute box'>
+            <view class='title'>预算超支</view>
+            <view class='money'>￥{{mysurplus}}</view>
+        </view>
+    </image>
+
+</view>
+
+<image src='../../../../../images/edit-2.png' class='edit_img' bindtap='tz_setBudget'></image>
+<view class='total'>总预算￥{{mybudget}}</view>

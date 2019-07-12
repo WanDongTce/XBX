@@ -1,0 +1,51 @@
+/* pages/home/my_study/answer/sendAnswer/sendAnswer.wxss */
+.container{
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+image{
+    width: 100%;
+    display: block;
+}
+textarea{
+    width: 100%;
+    font-size: 30rpx;
+    color: #8a8a8a;
+    line-height: 42rpx;
+    border: 1px solid #ccc;
+    /* margin: 5%;
+    padding: 0 2%; */
+}
+.place-style{
+    color: #ccc;
+}
+.btn{
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #0088fe;
+    font-size: 30rpx;
+    color: #0088fe;
+}
+
+.bogack_img{
+    position:fixed;
+    width:18rpx;
+    height: 32rpx;
+    top:66rpx;
+    left:26rpx;
+    z-index: 3;
+}
+
+.textareabox{
+    padding:30rpx 30rpx;
+    width:80%;
+}
+.container{
+    width:100%;
+    padding:0;
+}

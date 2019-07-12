@@ -1,0 +1,66 @@
+<compontNavbar title="{{title}}" isShowBack="{{true}}"></compontNavbar>
+<view class='topic_top_box'><image src="{{topicimg}}" class="topimg_bg"></image></view>
+<view class='topbox'>
+  <view class='display-flex'>
+    <image wx:if="{{topicimg==''}}" src="{{base}}images/default-user-2.png" class='top_img' mode='aspectFill'></image>
+    <image wx:else src='{{topicimg}}' class='top_img' mode='aspectFill'></image>
+    <view>
+      <view class='top_topic'>{{topicdes}}</view>
+      <view class='top_num'>
+        {{readvolume}}阅读<text>总帖数{{count}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- <navigator class='realnew_add' url='/pages/home/pages/classmate/classmateWrite/classmateWrite'>+</navigator> -->
+</view>
+
+<!--没有  -->
+<view class="nodata_box {{myshow?'myshow_show':'myshow_none'}}">
+  <image src='{{base}}images/nothave.png' class='mongoose_nothave_img new_mongoose_margin' ></image>
+  <view class='text1'>该话题下还没有帖子</view>
+</view> 
+<!--没有end  -->
+
+<block wx:for="{{list}}" wx:key="this">
+<view class='overf itembox' bindtap='tz_detail' data-item="{{item}}">
+  <image class='fl header_img' src="{{item.user.avatar}}"></image>
+  <view class='fl item_rightbox position-relative'>
+    <view class='item_time'>{{item.difftime}}</view>
+    <view class='item_name'>{{item.user.nickname}}</view>
+    <view class='item_text'>{{item.content}}</view>
+    <view wx:if="{{item.video_url==''}}">
+      <!--1.一张图片  -->
+      <view wx:if="{{item.photo.length==0}}"></view>
+      <view wx:elif="{{item.photo.length>=1}}">
+        <image  src='{{item.photo[0].photo}}' class='item_onepic' mode='widthFix'></image>
+      </view>
+      
+    </view>
+    <!--3.video  -->
+    <view class='video_box' wx:else>
+      <video src='{{item.video_url}}' custom-cache="{{false}}"></video>
+    </view>
+    
+    
+    <view class='display-flex item_bottombox'>
+      <view class='item_topic' wx:if="{{item.category.name!==''}}">#{{item.category.name}}#</view>
+      <view wx:else> </view>
+      <view class='display-flex item_zanbox'>
+        <view catchtap='addAgree' data-dianzan='{{item.is_thumbs}}' data-postid="{{item.id}}" data-ftrphone="{{item.user.mobile}}" >
+          <image wx:if="{{item.is_thumbs==0}}"  src='{{base}}images/agr.png' class='item_zan_img' ></image>
+          <image wx:else src='{{base}}images/agr3.png' class='item_zan_img'></image> 
+          <text class='item_num'>{{item.thumbs}}</text>
+        </view>        
+         <view>
+          <image src='{{base}}images/msg.png' class='item_comment_img'></image>
+          <text class='item_num'>{{item.comments}}</text>
+        </view> 
+      </view>
+    </view>
+  </view>  
+</view>
+</block>
+
+<view class='mywrite' bindtap='toWrite'>
+    <image src='{{base}}images/circle_camera.png' class='circle_camera'></image>
+</view>

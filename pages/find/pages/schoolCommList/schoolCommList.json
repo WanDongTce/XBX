@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "学校简介",
+    "usingComponents": {
+        "addAgre": "/component/schoolEcyAddAgree/schoolEcyAddAgree",
+        "empty": "/component/empty/empty",
+        "compontNavbar": "/component/navigation/navigation"
+    }
+    
+}

@@ -1,0 +1,134 @@
+page{
+    background: #f7f7f7;
+}
+.box{
+    width: 100%;
+    padding-bottom: 11vh;
+}
+.top{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+.add-img{
+    width: 100%;
+    height: 100%;
+}
+.img-box{
+    position: absolute;
+    top: 12.5vh;
+    left: 32.5%;
+    z-index: 10;
+    width: 35%;
+    height: 15vh;
+}
+.img-box image{
+    width: 80rpx;
+    height: 80rpx;
+    margin: 0 auto 20rpx;
+    display: block;
+}
+.img-box view{
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-size: 28rpx;
+}
+.form{
+    width: 100%;
+    background: #fff;
+    margin-bottom: 16rpx;
+}
+.item{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1rpx solid #dfdfdf;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.last-item{
+    width: 100%;
+    padding: 25rpx 24rpx;
+    border-bottom: none;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.last-item text{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16rpx;
+    font-size: 28rpx;
+    color: #999;
+}
+.last-item image{
+    width: 24rpx;
+    height: 14rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 4rpx;
+}
+.lt{
+    width: 10%;
+    font-size: 30rpx;
+    color: #333;
+}
+.input{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    font-size: 30rpx;
+    color: #333;
+}
+.input-pla{
+    color: #999;
+}
+.next-icon{
+    position: absolute;
+    right: 0;
+    top: 15rpx;
+    width: 14rpx;
+    height: 24rpx;
+}
+.detail{
+    width: 100%;
+    background: #fff;
+    padding: 0 24rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.detail-tit{
+    width: 100%;
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    color: #333;
+}
+textarea{
+    width: 100%;
+    height: 300rpx;
+    background: #fffbe6;
+    line-height: 1.5em;
+    font-size: 28rpx;
+    padding: 16rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #999;
+}
+.btn{
+    position: fixed;
+    bottom: 1vh;
+    left: 5%;
+    z-index: 20;
+    width: 90%;
+    height: 7vh;
+    line-height: 7vh;
+    background: #4bace2;
+    color: #fff;
+    text-align: center;
+    border-radius: 30rpx;
+    font-size: 30rpx;
+}

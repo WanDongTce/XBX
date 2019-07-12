@@ -1,0 +1,225 @@
+@import "../../../../template/tab/tab.wxss";
+.navigator-hover {
+    background: transparent;
+}
+
+page {
+    background-color: #f7f7f7;
+}
+
+.box {
+    width: 100%;
+}
+
+.searchbigbox {
+    border-bottom: 16rpx solid #fff;
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    z-index: 2;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbox {
+    height: 70rpx;
+    margin: 0 25rpx;
+    border-radius: 10rpx;
+    background-color: #f1f1f1;
+    /* background-color:#bbb; */
+}
+
+.search_img {
+    width: 22rpx;
+    height: 22rpx;
+    margin-top: 26rpx;
+    margin-left: 23rpx;
+}
+
+.searchbox input, .searchbox .input {
+    font-size: 28rpx;
+    color: #999;
+    margin-left: 22rpx;
+    width: 532rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-right: 22rpx;
+}
+
+.placeholder {
+    color: #999;
+}
+
+.swiper {
+    width: 100%;
+    height: 375rpx;
+    margin-top: 86rpx;
+}
+.slide-image{
+    width: 100%;
+    height: 375rpx;
+}
+.tabs {
+    position: static;
+    height: 8vh;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+
+.tab-content {
+    margin-top: 0rpx;
+}
+
+.barter_itembox {
+    padding: 30rpx 25rpx 1rpx;
+    margin-bottom: 16rpx;
+    background-color: #fff;
+}
+
+.barter_header {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+}
+
+.barter_name {
+    font-size: 30rpx;
+    color: #333;
+    width: 540rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10rpx;
+    margin-bottom: 18rpx;
+}
+
+.barter_timebox {
+    height: 26rpx;
+}
+
+.barter_timeimg {
+    width: 24rpx;
+    height: 23rpx;
+    margin-top: 1.5rpx;
+    margin-right: 14rpx;
+}
+
+.barter_timetext {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 26rpx;
+}
+
+.scroll-view_H {
+    white-space: nowrap;
+    width: 100%;
+}
+
+.scroll-view_H image {
+    display: inline-block;
+}
+
+.barter_item_img {
+    width: 32%;
+    height: 212rpx;
+    border-radius: 8rpx;
+    margin-top: 26rpx;
+    margin-right: 2%;
+    display: inline-block;
+}
+
+.barter_item_img:last-child {
+    margin-right: 0;
+}
+
+.barter_item_img-2 {
+    width: 49%;
+    height: 312rpx;
+}
+
+.barter_item_img-1 {
+    width: 100%;
+    height: 412rpx;
+}
+
+.barter_item_title {
+    font-size: 30rpx;
+    color: #333;
+    line-height: 34rpx;
+    margin-top: 23rpx;
+    word-wrap: break-word;
+}
+
+.barter_item_tag {
+    border-bottom: 1rpx #dfdfdf solid;
+}
+
+.barter_item_tag image {
+    width: 22rpx;
+    height: 22rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 18rpx;
+}
+
+.barter_item_tag text {
+    font-size: 24rpx;
+    color: #999;
+    display: inline-block;
+    line-height: 80rpx;
+}
+
+.barter_item_bottombox {
+    font-size: 24rpx;
+    margin-top: 24rpx;
+    line-height: 28rpx;
+    margin-bottom: 20rpx;
+    min-height: 32rpx;
+}
+
+.barter_address {
+    font-size: 24rpx;
+    width: 440rpx;
+    word-wrap: break-word;
+    color: #4bace2;
+    min-width: 440rpx;
+}
+
+.barter_ly {
+    /* width:120rpx; *//* position:absolute;
+  right:0;
+  top:0; */
+    color: #999;
+    text-align: right;
+    margin-left: 15rpx;
+}
+
+.barter_dz {
+    /* position:absolute;
+  right:120rpx;
+  top:0; */
+    color: #999;
+    text-align: right;
+}
+
+.publish {
+    position: fixed;
+    bottom: 80rpx;
+    right: 24rpx;
+    z-index: 2;
+    width: 102rpx;
+    height: 102rpx;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 102rpx;
+    font-size: 28rpx;
+    color: #fff;
+    background: #4bace2;
+}
+
+.classify_img {
+    width: 36rpx;
+    height: 32rpx;
+    margin-right: 24rpx;
+}

@@ -1,0 +1,23 @@
+<compontNavbar title="搜索百科" isShowBack="{{true}}"></compontNavbar>
+<view class='searchbigbox display-flex'>
+    <view class='searchbox display-flex'>
+        <image src='{{base}}images/search.png' class='search_img'></image>
+        <input placeholder='搜索分类或内容' placeholder-class='placeholder' auto-focus="true" bindconfirm="submitCommt" value="{{search}}" bindinput="inputFn"></input>
+    </view>
+    <view class='search_btn' catchtap="cancel">取消</view>
+</view>
+<block wx:if="{{hisList.length > 0}}">
+<view class='recently_box display-flex'>
+    <view>最近搜过</view>
+</view>
+<view class='title_box'>
+    <block wx:for="{{hisList}}" wx:key="this">
+        <view bindtap="tapHisItem" data-val="{{item}}" class="itm display-flex" wx:if="{{item}}">
+            <image src='{{base}}images/time.png' class='time-img'></image>
+            <view class="his-item">{{item}}</view>
+            <image src='{{base}}images/next.png' class='next-img'></image> 
+        </view>
+    </block>
+</view>
+ <view catchtap="clearHis" class="clear-his">清空搜索历史</view>
+ </block>

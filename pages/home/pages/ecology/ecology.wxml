@@ -1,0 +1,71 @@
+<!--pages/newIntegralMall/newIntegralMall.wxml-->
+<!-- <scroll-view scroll-y="true" style='height:{{scrollHeight}}px' lower-threshold="{{threshold}}" bindscrolltoupper="bindscrolltoupper"> -->
+<!-- <view class='search_box display-flex'>
+  <image class="navigation-back-icon" src="../../images/arowLt.png" bindtap='backReturn'></image>
+  <view class='search display-flex align-items-center'>
+    <image src='../../images/search.png'></image>
+    <input placeholder='搜索关键字' placeholder-class='placeholder'  ></input>
+  </view>
+</view> -->
+
+ <view class='search_box display-flex' wx:if="{{!changeTabsCss}}">
+  <image class="navigation-back-icon" src="../../../../images/arowLt.png" bindtap='backReturn'></image>
+  <view class='search display-flex align-items-center'>
+    <image src='../../../../images/search.png'></image>
+    <input placeholder='搜索关键字' placeholder-class='placeholder'  disabled  catchtap="tz_periphery"></input>
+  </view>
+</view>  
+
+  <view class='banner_box position_r'> 
+    <view class='search_box_old display-flex position_a' wx:if="{{changeTabsCss}}">
+      <image class="navigation-back-icon" src="../../../../images/arowLt_fff.png" bindtap='backReturn'></image>
+      <view class='search display-flex align-items-center'>
+        <image src='../../../../images/search.png'></image>
+        <input placeholder='搜索关键字' placeholder-class='placeholder'  disabled  catchtap="tz_periphery"></input>
+      </view>
+    </view>  
+    <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
+      <block wx:for="{{imgUrls}}" wx:key="this">
+          <swiper-item>
+              <image src="{{item.image}}" class="slide-image" catchtap="toH5" data-type="{{item.to_type}}" data-url="{{item.url}}" data-toid="{{item.to_id}}"/>
+          </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='position_r'>
+    <view class='tab_box'>
+      <view class='tab display-flex'>
+        <block wx:for="{{classifyList}}" wx:key>
+          <view class='tab_conntent' bindtap='tz_classify' data-classifyid="{{item.id}}">
+            <image src='{{item.image}}' class='tab_img'></image>
+            <view class='f_24 c_333'>{{item.name}}</view>
+          </view> 
+        </block>     
+      </view>   
+    </view>
+  </view>
+  <view class='mycontent' wx:for="{{list}}" wx:key="this">
+    <view class='title_box display-flex'>
+      <view class='overf'>
+        <image src='{{item.imgurl}}' class='title_img fl'></image>
+        <view class='title f_28 c_333 fl '>{{item.name}}</view>
+      </view>
+      <view class='title_sub f_24 c_999 '>{{item.describe}}</view>
+    </view>
+    <scroll-view scroll-x='true' class='scroll_view' >
+      <!-- <navigator class='item_box' wx:for="{{item.goods_list}}" wx:key="this" url="{{'/pages/home/pages/periphery/goodsDetail/goodsDetail?id=' + item.id}}"> -->
+      <navigator class='item_box' wx:for="{{item.goods_list}}" wx:key="this" url="{{'/pages/home/pages/ecology/goodsDetailNew/goodsDetailNew?id=' + item.id}}">
+        <image src='{{item.image}}' class='item_img'></image>
+        <view class='item_title f_26 c_333 two_line'>{{item.title}}</view>
+        <view class='item_num'>剩余{{item.total_num}}件</view>
+        <view class='item_money'>￥{{item.price}}</view>
+      </navigator>   
+    </scroll-view>
+  </view> 
+  <peripheryBotmTab index="1" cartCount="{{cartCount}}"></peripheryBotmTab>
+
+
+
+
+<!-- <search catch:searchCallBack="searchCallBack" wx:else flag="2"></search> -->
+<!-- </scroll-view> -->

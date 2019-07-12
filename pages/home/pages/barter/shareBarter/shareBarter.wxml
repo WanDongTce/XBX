@@ -1,0 +1,30 @@
+<compontNavbar title="分享我的易货" isShowBack="{{true}}"></compontNavbar> 
+<navigator class="Header">
+  <image src="../../../images/barter/barter-Choice.png" class="Header-left"></image>
+  <view class="Header-center"></view>
+  <view class="Header-right">
+    <text class="Header-text">大家安静思考了家点开链接两件事啊阿卡丽数据按实际拉升阶段安居客老司机爱空间萨克雷家世界</text>
+  </view>
+</navigator>
+<navigator class="Header">
+  <image src="../../../images/barter/barter-Choice.png" class="Header-left"></image>
+  <view class="Header-center"></view>
+  <view class="Header-right">
+    <text class="Header-text">大家安静思考了家点开链接两件事啊阿卡丽数据按实际拉升阶段安居客老司机爱空间萨克雷家世界</text>
+  </view>
+</navigator>
+<navigator class="Header">
+  <image src="../../../images/barter/barter-Choice.png" class="Header-left"></image>
+  <view class="Header-center"></view>
+  <view class="Header-right">
+    <text class="Header-text">大家安静思考了家点开链接两件事啊阿卡丽数据按实际拉升阶段安居客老司机爱空间萨克雷家世界</text>
+  </view>
+</navigator>
+<view class="tail">
+  <navigator class="tail-left">
+    <text class="tail-text">取消</text>
+  </navigator>
+  <navigator class="tail-right">
+    <text class="tail-text">确认</text>
+  </navigator>
+</view>

@@ -1,0 +1,75 @@
+<compontNavbar title="学校信息" isShowBack="{{true}}"></compontNavbar>
+<view class="box">
+    <view class="addr-box">
+        <view class="school-name">{{info.register_community_name}}</view>
+        <view class="school-addr">
+            <image src="{{base}}images/addr.png" class="addr-icon"></image>
+            <text class="addr-text">{{info.register_province_name}}{{info.register_city_name}}{{info.register_area_name}}</text>
+        </view>
+    </view>
+    <view class="img-box">
+        <view class="img-tit">
+            <view class="img-lt">学校相册</view>
+            <view class="img-rt" wx:if="{{imgs.length > 0}}" catch:tap="toImgList">查看全部</view>
+        </view>
+        <view class="imgs">
+            <image src="{{imgs[0].imgurl}}" class="img" mode="aspectFill"></image>
+            <view class="img-tips">
+                <view class="img-length">{{imgs.length}}张图片</view>
+                <view class="add-agree">
+                    <view class="border">
+                        <image src="{{base}}images/agr.png" class="add-agree-icon"></image>
+                        <text class="add-agree-text">{{imgs[0].thumbs_num}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+      <view class="h2">
+            <view class="h2-lt">
+                <view class="rect-icon"></view>
+                <text class="h2-text">学校简介</text>
+            </view>
+            <view wx:if="{{list.length > 0}}" catch:tap="toCommList" class="h2-rt">
+                <text class="h2-text">查看全部</text>
+            </view>
+        </view>
+    <view class="list" wx:if="{{list.length > 0}}">
+        <view class="item">
+            <view class="item-tit">{{list[0].content}}</view>
+            <view class="itm-tips">
+                <view class="itm-lt">
+                    <image src="{{list[0].avatar}}" class="user-ava" mode="aspectFill" wx:if="{{list[0].avatar}}"></image>
+                    <image src="{{base}}images/default-user-2.png" class="user-ava" mode="aspectFill" wx:else></image>
+                    <view class="user-info">
+                        <view class="user-name">{{list[0].nickname}}</view>
+                        <view class="date">{{list[0].create_time}}</view>
+                    </view>
+                </view>
+                <view class="itm-rt">
+                    <view class="border">
+<addAgre itemid="{{list[0].id}}" thumbs_is="{{list[0].thumbs_is}}" agreenum="{{list[0].thumbs_num}}"></addAgre>
+                    </view>
+                </view>
+            </view>
+        </view>
+         <view class="item" wx:if="{{list[1]}}">
+            <view class="item-tit">{{list[1].content}}</view>
+            <view class="itm-tips">
+                <view class="itm-lt">
+                    <image src="{{list[1].avatar}}" class="user-ava" mode="aspectFill" wx:if="{{list[1].avatar}}"></image>
+                    <image src="{{base}}images/default-user-2.png" class="user-ava" mode="aspectFill" wx:else></image>
+                    <view class="user-info">
+                        <view class="user-name">{{list[1].nickname}}</view>
+                        <view class="date">{{list[1].create_time}}</view>
+                    </view>
+                </view>
+                <view class="itm-rt">
+                    <view class="border">
+                 <addAgre itemid="{{list[1].id}}" thumbs_is="{{list[1].thumbs_is}}" agreenum="{{list[1].thumbs_num}}"></addAgre>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,74 @@
+<compontNavbar title="理财记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class='tab-left'>
+    <view class='top_box display-flex'>
+        <view class="top_box_text top_box_current" data-index="1" catchtap='tabFn'>账单</view>
+        <view class="top_box_text" catchtap='tabFn' data-index="2">报表</view>
+    </view>
+</view>
+<view class="right-item mt100">
+    <block wx:if="{{tabIndex == 1}}">
+        <view class='display-flex bill_topbox'>
+            <picker mode="date" value="{{dateStr}}" start="{{startDate}}" end="{{endDate}}" fields="month" bindchange="pickerChange" class="picker">
+                <view class="picker_text">
+                    <text>{{dateStr}}</text>
+                    <image src='../../../../../images/arrow_up.png' class='arrow_img'></image>
+                </view>
+            </picker>
+            <view class='bill_topprogress'>
+                <view class='bill_num'>收入￥{{listData.m_shouru}}</view>
+                <progress percent="{{bill_shouru_p}}" color="#f65452" stroke-width='4' active></progress>
+                <view class='bill_num'>支出￥{{listData.m_zhichu}}</view>
+                <progress percent="{{bill_zhichu_p}}" color="#4bace2" stroke-width='4' active></progress>
+            </view>
+        </view>
+        <view class="list-box">
+        <view wx:for="{{listData.list}}" wx:key="this" class="list">
+            <view class="title">
+                <view class="tit-lt">{{item.day_item.date}} {{item.day_item.week}}</view>
+                <view class="tit-rt"> 
+                    <text class="rt-text">支￥{{item.day_item.d_zhichu}}</text>
+                    <text class="rt-text">收￥{{item.day_item.d_shouru}}</text>
+                </view>
+            </view>
+            <view class="bill-box">
+                <view class="bill-item" wx:for="{{item.day_list}}" wx:key="this">
+                    <scroll-view class="bill-cont" scroll-x="true">
+                    <view class="bill-cont-lt-box">
+                        <view class="bill-cont-lt">
+                            <view class="lt-cont">
+                                <image src='{{item.tpicurl}}' class="lt-img"></image>
+                                <view class="lt-info">
+                                    <view class="lt-tit">{{item.tname}}</view>
+                                    <view class="lt-time">{{item.dtime}}</view>
+                                </view>
+                            </view>
+                            <view wx:if="{{item.type==2}}" class="rt-cont color-red">+￥{{item.price}}</view>
+                            <view wx:else class="rt-cont color-green">-￥{{item.price}}</view>
+                        </view>
+                        </view>
+                        <view class="del" catchtap="del" data-id="{{item.id}}">删除</view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+        </view>
+    </block>
+    <block wx:if="{{tabIndex == 2}}">
+        <view class="date-box">
+            <image src="../../../../../images/back.png" class="date-icon" catchtap="modDate" data-flag="1"></image>
+            <view class="date-str">{{curtYear}}年{{curtMonth}}月</view>
+            <image src="../../../../../images/next3.png" class="date-icon" catchtap="modDate" data-flag="2"></image>
+        </view>
+        <view class="container">
+            <canvas canvas-id="canvas" class="canvas" style="{{'width:' + width + 'px;height:' + height +'px;'}}"></canvas>
+
+        </view>
+        <view class='chart_view2'>支出总计：{{chartData.price_all}}</view>
+        <view class='display-flex chart_bottombox'>
+            <view wx:for="{{chartList.list}}" wx:key="this" class="tooltip">
+                <view class='chart_color' style="background-color:rgb({{item.color.R}},{{item.color.G}},{{item.color.B}})"></view>
+                <view class='chart_text'>{{item.type_name}}</view>
+            </view>
+        </view>
+    </block>
+</view>

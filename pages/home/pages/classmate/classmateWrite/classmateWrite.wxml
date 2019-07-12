@@ -1,0 +1,45 @@
+<!-- <view class='textarea_box'>
+  <textarea class="textarea" placeholder="发布帖子" maxlength="280"></textarea>
+</view> -->
+<compontNavbar title="发布" isShowBack="{{true}}"></compontNavbar>
+<view>
+    <view class="homework-cont">
+      <view class='textarea_box'>        
+        <textarea placeholder="发布帖子" placeholder-class="placeh" bindinput="saveMsg" maxlength="280" value="{{msg}}"></textarea>       </view>
+    </view>
+    
+    <view class='display-flex myimg_box'>
+      <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+          <image src="{{item}}" class="hmwk-img"></image>
+          <image src="{{base}}images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+      </view>
+    </view>
+    <view class='display-flex myimg_box'>
+      <view class="scroll-item" wx:for="{{videoList}}" wx:key="this" wx:for-index="idx">
+          <video src="{{item}}" class="hmwk-img"></video>
+          <cover-view class="del-img">
+            <cover-image src="{{base}}images/del.png" class="del-video" catchtap="delVideo" data-idx="{{idx}}"></cover-image> 
+          </cover-view>
+      </view>
+    </view> 
+    <view class='display-flex bottom_fixbox justify-content-between align-items-center'>
+        <view class='display-flex align-items-center'>
+            <view  class='choice_topic' catchtap='choicetopic' >{{ifchoicetopic}}</view> 
+      
+
+            <view class='submit_minbox'>
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <image src='{{base}}images/publish_img.png' class='submitpic_pic'></image>
+                
+                </picker>         
+            </view>
+      </view> 
+      <view class='fabu fr' bindtap='submit'>发布</view>
+    </view>
+</view>
+
+<!-- <view class='submit_minbox' catchtap="addImg">
+        <image src='{{base}}images/publish_img.png' class='submitpic_pic'></image>
+        
+         <view>照片/视频</view>  
+      </view>  -->

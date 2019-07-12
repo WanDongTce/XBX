@@ -1,0 +1,209 @@
+/* pages/find/encyclopedias/encyclopedias.wxss */
+
+page {
+    background: #f4f4f4;
+}
+
+.box {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.head {
+    width: 100%;
+    height: 25vh;
+    margin: 16rpx 0;
+    border-radius: 10rpx;
+    background-color: #fff;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.school-box {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #dfdfdf;
+    padding: 24rpx 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.school-info {
+    width: 68%;
+    margin-right: 2%;
+}
+
+.school-name {
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+    margin-bottom: 16rpx;
+}
+
+.school-addr {
+    width: 100%;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.head-box {
+    width: 30%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.head-box-img {
+    width: 13rpx;
+    height: 23rpx;
+}
+
+.head-box-text {
+    font-size: 24rpx;
+    color: #999;
+    margin-right: 16rpx;
+}
+
+.hot-box {
+    width: 100%;
+    height: 40%;
+    padding: 30rpx 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.hot-box scroll-view{
+    width: 100%;
+    height: 100%;
+}
+.hot-itm{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.hot-img {
+    width: 58rpx;
+    height: 52rpx;
+    margin-right: 16rpx;
+}
+
+.hot-tit {
+    width: 90%;
+    height: 100%;
+    font-size: 28rpx;
+    line-height: 80rpx;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    height: 70vh;
+    background: #fff;
+    border-radius: 10rpx 10rpx 0rpx 0rpx;
+}
+.search {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    padding: 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.search-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    border-radius: 36rpx;
+    background-color: #f4f4f4;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.search-img {
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 20rpx;
+}
+
+.search-text {
+    width: 90%;
+    font-size: 24rpx;
+    color: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.subject-box {
+    width: 100%;
+    height: 60vh;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.sub-itm {
+    width: 33.33%;
+    height: 20vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+    border-right: 1rpx solid #dfdfdf;
+    border-bottom: 1rpx solid #dfdfdf;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.sub-itm:nth-child(1), .sub-itm:nth-child(2), .sub-itm:nth-child(3) {
+    border-top: 1rpx solid #dfdfdf;
+}
+
+.sub-itm:nth-child(3), .sub-itm:nth-child(6), .sub-itm:nth-child(9) {
+    border-right: none;
+}
+
+.sub-itm:nth-child(7), .sub-itm:nth-child(8), .sub-itm:nth-child(9) {
+    border-bottom: none;
+}
+
+.cont-box {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+
+.sub-img {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.sub-name {
+    width: 100%;
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
+    line-height: 2em;
+}

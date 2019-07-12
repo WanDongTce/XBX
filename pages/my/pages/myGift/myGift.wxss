@@ -1,0 +1,66 @@
+/* pages/myGift/myGift.wxss */
+page{
+    background-color:#f4f4f4;
+}
+.itembox{
+    padding:38rpx 30rpx 28rpx;
+    background-color:#fff;
+}
+.item_left{
+    width:27%;
+}
+.item_right{
+    width:73%;
+}
+.item_img{
+    width:170rpx;
+    height:170rpx;
+    border-radius:6rpx;
+}
+.item_title{
+    min-height:76rpx;
+    line-height: 38rpx;
+}
+.item_time{
+    margin-top:22rpx;
+}
+.item_iconbox image{
+    width:22rpx;
+    height:22rpx;
+    margin-right:6rpx;
+}
+.item_iconbox{
+    margin-top:20rpx;
+}
+.item_bigbox{
+    background-color:#fff;
+    margin-bottom:16rpx;
+}
+.item_btn{
+    font-size:28rpx;   
+    width:113rpx;
+    height:44rpx;   
+    text-align: center;
+    line-height: 44rpx;
+    border-radius: 6rpx;
+}
+.item_btn1{
+    color:#999;
+    border:1rpx solid #999;   
+    background-color:#fff;
+}
+.item_btn2{
+    color:#fff;
+    border:1rpx solid #4bace2; 
+    background-color:#4bace2;  
+}
+.item_address{
+    padding:28rpx 0rpx 38rpx;
+    margin:0 30rpx;
+    border-top:1rpx solid #dfdfdf;
+    line-height: 38rpx;
+}
+.component-class {
+    background-color:#fbf9fa  !important;
+    border-bottom:1rpx solid #e0dedf !important;
+}

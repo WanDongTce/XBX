@@ -1,0 +1,22 @@
+<compontNavbar title="提现详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<view class="box">
+    <view class="status-box">
+        <image src="../../../../images/success.png"></image>
+        <view>提现申请已提交</view>
+    </view>
+    <view class="list">
+        <view class="item">
+            <view class="lt">预计到账时间</view>
+            <view class="rt">{{info.expect_time}}</view>
+        </view>
+        <view class="item">
+            <view class="lt">{{info.bank_type}}</view>
+            <view class="rt">{{info.bank_belong}} {{info.bank_number}}</view>
+        </view>
+        <view class="item">
+            <view class="lt">提现金额</view>
+            <view class="rt">￥{{info.price}}</view>
+        </view>
+    </view>
+    <navigator url="/pages/my/pages/wallet/wallet" class="btn">完成</navigator>
+</view>

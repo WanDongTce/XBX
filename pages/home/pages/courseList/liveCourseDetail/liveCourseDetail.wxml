@@ -1,0 +1,62 @@
+<!--pages/courseList/courseDetailNew/courseDetailNew.wxml-->
+<compontNavbar title="课程详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+
+<view class='topbox'>
+  <view class='topbox_title c_333 f_32'>{{list.title}}</view>
+  <view class='topbox_h2 f_24 c_999'>开讲时间: {{list.course_date}} {{list.course_stime}}-{{list.course_etime}}</view>
+  <view class='topbox_h3 f_24 c_999 display-flex'>
+    <view>{{list.subject}}<text>|</text>{{list.grade}}</view>
+    <view>已报{{list.has_enroll}}人</view>
+  </view>
+</view>
+<view class='centerbox'>
+  <view class='templettitle display-flex'>
+    <image src='/pages/home/images/courseList/livecourse_icon.png'></image>
+    <view class='f_32 c_333'>授课老师</view>
+  </view>
+  <view class='display-flex justify-content-between teacher_box'>
+    <view class='display-flex'>
+      <image src="{{list.t_portrait?list.t_portrait:'../../../../../images/default-user-2.png'}}" class='teacher_header'></image>
+      <view>
+        <view class='f_28 c_333 teacher_name'>{{list.t_name}}</view>
+        <view class='f_24 c_999 teacher_fans'>0名粉丝</view>
+      </view>
+    </view>
+    <view class='display-flex teacher_fen'>
+      <image src='{{base}}images/star.png' class='start_img'></image>
+      <image src='{{base}}images/star.png' class='start_img'></image>
+      <image src='{{base}}images/star.png' class='start_img'></image>
+      <image src='{{base}}images/star.png' class='start_img'></image>
+      <image src='{{base}}images/star.png' class='start_img'></image>
+      <view class='f_24 c_666'>5分</view>
+    </view>
+  </view>
+</view>
+<view class='centerbox'>
+  <view class='templettitle display-flex'>
+    <image src='/pages/home/images/courseList/livecourse_icon.png'></image>
+    <view class='f_32 c_333'>课程详情</view>
+  </view>
+  <view class='f_28 c_333 course_box'>
+    <view >{{list.content}}</view>    
+  </view>
+  
+</view>
+<view class='centerbox'>
+  <view class='templettitle display-flex'>
+    <image src='/pages/home/images/courseList/livecourse_icon.png'></image>
+    <view class='f_32 c_333'>报名须知</view>
+  </view>
+  <view class='f_28 c_333 course_box'>
+    <view >{{list.notes}}</view>    
+  </view>
+</view>
+<view class='bottom_fixed display-flex justify-content-between'>
+  
+  <!-- <view class='bottom_left'>￥{{list.price}}</view> -->
+  <button wx:if="{{state==0}}" class='bottom_right f_28' disabled="{{enroll}}" bindtap='enroll'>{{enrolltext}}</button>
+  <button wx:if="{{state==1}}" class='bottom_right f_28' disabled="true" bindtap='enroll'>课程进行中</button>
+  <button wx:if="{{state==2}}" class='bottom_right f_28' disabled="true" bindtap='enroll'>课程结束</button>
+  <button wx:if="{{state==3}}" class='bottom_right f_28' disabled="true" bindtap='enroll'>已报名</button>
+</view>

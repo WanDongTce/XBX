@@ -1,0 +1,12 @@
+<!--pages/edutlList/Learning/Learning.wxml-->
+<compontNavbar title="学习记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+
+<navigator class="Learming"  url="{{'/pages/my/pages/service/preview/preview?learntype=' + 1}}">
+  <image class="Learming-images" src="{{IMGURL}}service/learning/learning-one.png"></image>
+</navigator>
+<navigator class="Learming" url="{{'/pages/my/pages/service/preview/preview?learntype=' + 2}}">
+  <image class="Learming-images" src="{{IMGURL}}service/learning/learning-two.png"></image>
+</navigator>
+<navigator class="Learming" url="{{'/pages/my/pages/service/preview/preview?learntype=' + 4}}">
+  <image class="Learming-images" src="{{IMGURL}}service/learning/learning-three.png"></image>
+</navigator> 

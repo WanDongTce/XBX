@@ -1,0 +1,50 @@
+.box{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.tit{
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+    color: #333;
+    font-size: 30rpx;
+}
+canvas{
+    margin: 0 auto 10%;
+    background: #fff;
+}
+.btns{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 38%;
+    padding: 3% 0;
+    text-align: center;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    margin: 0;
+    line-height: 1em;
+}
+button[plain]{
+    border: none;
+}
+.btn:last-child{
+    color: #999;
+    border: 1rpx solid #999;
+} 
+.btn:first-child,
+.btn:only-child{
+    color: #ff9800;
+    border: 1rpx solid #ff9800;
+}
+.btn:only-child{
+    width: 50%;
+    margin: 0 auto;
+}

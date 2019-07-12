@@ -1,0 +1,36 @@
+@import "/pages/my/pages/comment/comment.wxss";     
+page{
+    padding-top: 10vh;
+    background-color:#fff;
+}
+.link_box{
+  margin:32rpx 30rpx 0;
+}
+.link{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin: 50rpx 0;
+    color: #4bace2;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    border: 1rpx solid #4bace2;
+}
+.reply_text{
+  margin:34rpx 0 0 30rpx;
+}
+.box{
+  background-color:#fff;
+}
+.item_box{
+  margin-bottom:0;
+  border-bottom:16rpx solid #f4f4f4;
+}
+.item_box_new{
+  padding:26rpx 30rpx 46rpx; 
+  border-bottom:1rpx solid #dfdfdf; 
+}
+.item_content text{
+  color:#4A80CF;
+}

@@ -1,0 +1,140 @@
+/* pages/integralMall/MyIntegral/MyIntegral.wxss */
+
+.topbox {
+    width: 100%;
+    padding-bottom: 40rpx;
+    padding-top: 60rpx;
+    background: -webkit-linear-gradient(#48B947, #ADE555);
+    background: -o-linear-gradient(#48B947, #ADE555);
+    background: -moz-linear-gradient(#48B947, #ADE555);
+    background: linear-gradient(to bottom, #48B947, #ADE555);
+}
+
+.kyjf {
+    font-size: 24rpx;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 22rpx;
+}
+
+.top_btn {
+    margin: 43rpx auto 0rpx;
+    font-size: 30rpx;
+    color: #4bace2;
+    width: 300rpx;
+    height: 56rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+    text-align: center;
+    line-height: 56rpx;
+}
+
+.iconbox {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iconbox {
+    font-size: 56rpx;
+    font-weight: bold;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.integral_coinimg {
+    width: 42rpx;
+    height: 42rpx;
+}
+
+.integral_introduce {
+    width: 40rpx;
+    height: 40rpx;
+    
+}
+
+.titlebox {
+    background-color: #f7f7f7;
+    padding: 42rpx 0 22rpx;
+    display: flex;
+}
+
+.title_line {
+    margin-left: 24rpx;
+    width: 6rpx;
+    height: 28rpx;
+    background-color: #4bace2;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 28rpx;
+    margin-left: 20rpx;
+}
+
+.item_box {
+    padding: 0 24rpx;
+    border-bottom: 1rpx solid #dfdfdf;
+}
+
+.item_title {
+    font-size: 32rpx;
+    color: #333;
+    margin-top: 26rpx;
+}
+
+.item_center {
+    margin: 5rpx 0 23rpx;
+}
+
+.time {
+    font-size: 24rpx;
+    color: #999;
+    margin-top: 28rpx;
+}
+
+.hdjf {
+    font-size: 24rpx;
+    color: #333;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.hdjf text {
+    display: inline-block;
+    font-size: 48rpx;
+    color: #4bace2;
+    margin-left: 17rpx;
+}
+.integral_introducebox{
+    right: 24rpx;
+    top: 24rpx;
+    width:100%;
+    justify-content:flex-end;
+}
+.integral_introducetext{    
+    color:#fff;  
+    margin-left:7rpx;
+}
+.new_bottom{
+    justify-content: space-around;
+}
+.new_btnbox{
+    background-color:#fff;
+    align-items: center;
+    border-radius:6rpx;
+    width:231rpx;
+    height:57rpx;
+    justify-content:center;
+    margin-top:42rpx;
+}
+.new_btnbox image{
+    width:27rpx;
+    height:25rpx;
+    margin-right:10rpx;
+}
+.new_btnbox view{
+    font-size:30rpx;
+    color:#59C049;
+}

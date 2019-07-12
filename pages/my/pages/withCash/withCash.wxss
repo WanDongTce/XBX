@@ -1,0 +1,110 @@
+page{
+    width: 100%;
+    background: #f7f7f7;
+    padding-bottom: 40rpx;
+}
+.bank-box{
+    width: 100%;
+    height: 10vh;
+    background: #fff;
+    margin: 24rpx 0;
+    padding: 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bank-box image{
+    width: 14rpx;
+    height: 24rpx;
+}
+.bank-box .lt{
+    width: 95%;
+    color: #333;
+    font-size: 30rpx;
+}
+.bank-box .lt-2{
+    width: 95%;
+}
+.bank-tit{
+    width: 100%;
+    font-size: 30rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+}
+.bank-info{
+    width: 100%;
+    font-size: 26rpx;
+    color: #999;
+}
+.content{
+    width: 100%;
+    background: #fff;
+}
+.tit{
+    width: 100%;
+    font-size: 28rpx;
+    color: #999;
+    padding: 16rpx 24rpx 10rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.input-box{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    border-bottom: 1rpx solid #dfdfdf;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.input-box label{
+    width: 10%;
+    font-size: 40rpx;
+    color: #333;
+}
+.input-box input{
+    width: 90%;
+    font-size: 30rpx;
+    color: #333;
+}
+.tip{
+    width: 100%;
+    text-align: right;
+    padding: 16rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 28rpx;
+    color: #999;
+}
+.note{
+    width: 100%;
+    padding: 16rpx 24rpx;
+    margin-bottom: 30rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.note-tit{
+    color: #999;
+    font-size: 28rpx;
+    line-height: 1.5em;
+}
+.note-itm{
+    color: #999;
+    font-size: 26rpx;
+    line-height: 1.5em;
+}
+.btn{
+    width: 90%;
+    height: 80rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 80rpx;
+    background: #4bace2;
+    color: #fff;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+}

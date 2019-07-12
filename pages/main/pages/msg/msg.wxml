@@ -1,0 +1,40 @@
+<compontNavbar title="消息" isShowBack="{{false}}" url="" component-class="component-class"></compontNavbar>
+<block>
+    <view class="list">
+        <navigator class="item" url="/pages/my/pages/onlineSevDetail/onlineSevDetail?info={}">
+            <view class="lt">
+                <view class="imgs">
+                    <image src="{{base}}images/header.png" mode="widthFix" class="img"></image>
+            </view>
+            </view>
+            <view class="content">
+                <view class="title">有事儿找小A</view>
+                <view class="sub"></view>
+            </view>
+            <view class="rt"></view>
+        </navigator>
+        <view class="item" wx:for="{{recentContactList}}" wx:key="this" bindtap="enterLive" data-item="{{item}}" bindlongpress="del">
+            <view class="lt">
+                <view class="imgs">
+                    <image src="{{item.C2cImage || base + 'images/default-user-2.png'}}" mode="widthFix" class="img" wx:if="{{item.Type == 1}}"></image>
+                    <image src="{{item.GroupImage || base + 'images/default-user-2.png'}}" mode="widthFix" class="img" wx:if="{{item.Type == 2}}"></image>
+                </view>
+            </view>
+            <view class="content">
+                <view class="title" wx:if="{{item.Type == 2}}">{{item.GroupNick}}</view>
+                <view class="title" wx:if="{{item.Type == 1}}">{{item.C2cNick || '未命名'}}</view>
+                <view class="sub" wx:if="{{item.Type == 2 && item.MsgShow}}">{{item.MsgGroupFromNickName || '未命名'}}:{{item.MsgShow}}</view>
+                <view class="sub" wx:if="{{item.Type == 1 && item.MsgShow}}">{{item.MsgShow}}</view>
+            </view>
+            <view class="rt">
+            <view class="time">{{item.MsgTimeStampStr}}</view>
+            <view class="circle {{item.UnreadMsgCount > 99? 'more':''}}" wx:if="{{item.UnreadMsgCount > 0}}">{{item.UnreadMsgCount > 99?'...':item.UnreadMsgCount}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="aside">
+        <image src="{{base}}images/create.png" catchtap="toCreate"></image>
+        <image src="{{base}}images/list.png" catchtap="toFrdList"></image>
+    </view>
+</block>

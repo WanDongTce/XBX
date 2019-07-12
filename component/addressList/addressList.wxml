@@ -1,0 +1,20 @@
+<view id="addressList" class="box">
+    <view class="content">
+        <view class="tit">
+            <text class="lt">位置:</text>
+            <!--  {{address[2].name? address[2].name : ''}}  -->
+            <text class="rt">{{address[0].name}} {{address[1].name? address[1].name : ''}}</text>
+        </view>
+        <view class="select">
+            <view class="province">
+                <view class="item {{address[0].id == item.id? 'active' : ''}}" catchtap="selectProvince" data-id="{{item.id}}" data-name="{{item.province_name}}" data-index="{{index}}" wx:for="{{provinces}}" wx:for-index="index" wx:key="this">{{item.province_name}}</view>
+            </view>
+            <view class="city">
+                <view class="item {{address[1].id == item.id? 'active' : ''}}" catchtap="selectCity" data-id="{{item.id}}" data-name="{{item.city_name}}" data-index="{{index}}" wx:for="{{citys}}" wx:for-index="index" wx:key="this">{{item.city_name}}</view>
+            </view>
+            <!-- <view class="district">
+                <view class="item {{address[2].id == item.id? 'active' : ''}}" catchtap="selectDistrict" data-id="{{item.id}}" data-name="{{item.district_name}}" data-index="{{index}}" wx:for="{{districts}}" wx:for-index="index" wx:key="this">{{item.district_name}}</view>
+            </view> -->
+        </view>
+    </view>
+</view>

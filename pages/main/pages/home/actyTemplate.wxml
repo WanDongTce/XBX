@@ -1,0 +1,8 @@
+<template name="actyTmp">
+    <view class="dialog">
+        <view class="dialog-cont" animation="{{animationData}}">
+            <image src="{{actyInfo.img_url}}" class="box-img" mode="widthFix" bindtap="toActy"></image>
+            <image src="../../../../images/close6.png" class="close-img" mode="widthFix" bindtap="closeDialog"></image>
+        </view>
+    </view>
+</template>

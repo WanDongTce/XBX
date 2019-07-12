@@ -1,0 +1,45 @@
+<compontNavbar title="我的理财" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class="topbox position-relative">
+  <view class='topview1'>本月支出（元）</view>
+  <view class='topview2'>￥{{list.item.zhichu}}</view>
+  <view class='display-flex top_flex'>
+    <view class='ml30'>本月收入 <text>￥{{list.item.shouru}}</text></view>
+    
+    <!--2.设置预算  -->
+    <view bindtap='tz_setBudget' wx:if="{{budget==''}}">设置预算 <image src='../../../../images/set.png'></image></view>
+    <!--1.预算剩余  -->
+     <view wx:if="{{mysurplus>=0}}" data-mynum="1" bindtap="tz_budgetCircle">预算剩余 <text>￥{{mysurplus}}</text></view> 
+     <view wx:if="{{mysurplus<0}}" data-mynum="2" bindtap="tz_budgetCircle">预算超出 <text>￥{{mysurplus}}</text></view> 
+  </view>
+  <navigator url='/pages/my/pages/myFinancing/bill/bill'>
+    <image src='../../../../images/financing_img.png' class='financing_img'></image>
+  </navigator>
+</view>
+<view class='write_btn_box'>
+  <navigator class='write_btn' url='/pages/my/pages/myFinancing/accounting/accounting'>
+    <image src='../../../../images/write-fff.png'></image>
+    记一笔
+  </navigator>
+</view>
+<view class='item_bigbox'>
+  <view class='bigtitle display-flex'>
+    <view></view>
+    <text>最近收支</text>
+  </view>
+  <block wx:for="{{list.list}}" wx:key="this">
+    <view class='display-flex item_box'  bindtap='tz_accoountdetail' data-myid='{{item.id}}'>
+      <view class='display-flex'>
+        <image src='{{item.tpicurl}}'></image>
+        <view>
+          <view class='item_content'>{{item.tname}}</view>
+          <view class='item_time'>{{item.dtime}}</view>
+        </view>
+      </view>
+      
+      <view wx:if="{{item.type==1}}" class='item_money item_money_orange'>-￥{{item.price}}</view>
+      <view wx:else class='item_money item_money_red'>+￥{{item.price}}</view>
+    </view>
+  </block>
+
+  
+</view>

@@ -1,0 +1,7 @@
+<compontNavbar title="设置预算" isShowBack="{{true}}"  component-class="component-class"></compontNavbar>
+<view class='title'>预算金额</view>
+<view class='input_box'>
+  <input placeholder='￥0.00' placeholder-class='placeholder' value='{{budget}}' bindinput="budgetInputEvent" type='digit'></input>
+</view>
+<view class='content'>上月支出{{prev_zhichu}}</view>
+<view class='btn' bindtap='tz_myFinancing'>保存</view>

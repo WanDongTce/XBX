@@ -1,0 +1,36 @@
+<compontNavbar title="我的推荐人" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<block wx:if="{{state==0}}">
+<view class='one_top1 c_333 '>您当前还未绑定推荐人</view>
+<input class='one_top2' placeholder='请输入推荐人手机号' placeholder-class='placeholder' type='number' confirm-type='done' bindinput="phoneInput"></input>
+<view class='one_top3' bindtap='bindreferee'>绑定推荐人</view> 
+</block>
+
+
+<block wx:if="{{state==1}}">
+<image wx:if="{{list.avatar==''}}" class='three_top1' src='../../../../images/default-user-2.png'></image> 
+<image class='three_top1' src='{{list.avatar}}'></image> 
+<view class='three_top2'>{{list.realname}}</view>
+<view class='three_top2 three_top3'>{{list.mobile}}</view>
+<view class='three_top4'>
+1.成为他的推荐人，您将获得积分奖励；
+</view>
+<view class='three_top4'>
+2.其他人填写您的登录手机号，您即可成为ta的推荐人；
+</view> 
+</block>
+
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}"> 
+  <view class="modal-content">
+    <view class='two_top1 f_30 c_333 one_line'>推荐人姓名：{{validate.realname}}</view>
+    <view class='two_top1 f_30 c_333'>推荐人电话：{{validate.mobile}}</view>
+    <view class='two_top2 f_30'>推荐人绑定后不可修改，是否绑定该推荐人？</view>
+  </view>  
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view> 
+</view> 
+

@@ -1,0 +1,43 @@
+page{
+    border-top: 1rpx solid #dfdfdf;
+    background: #fff;
+}
+.comt-box{
+    width: 100%;
+    padding-bottom: 8vh;
+}
+.rich-text-box{
+    width: 100%;
+    min-height: 300rpx;
+    padding: 30rpx 24rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+    overflow-x: hidden;
+}
+.wxParse{
+    margin: 0;
+}
+.wxParse-p,
+.wxParse-div,
+.wxParse-inline{
+	width: 100%;
+	font-size: 28rpx;
+	color: #333;
+	line-height: 1.5em;
+	margin: 0 0 2%;
+}
+.wxParse-video{
+	width: 100%;
+	height: 20vh;
+    margin: 0;
+    overflow: hidden;
+}
+.wxParse-video-video{
+    width: 100%;
+    height: 100%;
+}
+.wxParse-img{
+    width: 100%;
+    display: block; 
+}

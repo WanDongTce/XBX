@@ -1,0 +1,46 @@
+/* pages/setPage/setPage.wxss */
+page{
+  background-color:#f7f7f7;
+}
+.box{
+  background-color:#fff;
+  /* border-top:1rpx solid #e0e0e0; */
+  margin-top:15rpx;
+}
+
+.itembox{
+  height:100rpx;
+  line-height:100rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  border-bottom:1rpx solid #eeeeee;
+}
+.itembox:last-child{
+    border:none;
+}
+.img{
+  width:14rpx;
+  height:24rpx;
+  margin-top:38.5rpx;
+  margin-left:17rpx;
+}
+.text_right{
+  color:#adadad;
+}
+.border_top{
+  border-top:1rpx solid #ececec;
+}
+.text_left image{
+    width:38rpx;
+    height:38rpx;
+    margin-right:23rpx;
+}
+.text_left view{
+    font-size:28rpx;
+    color:#333;
+}
+.itembox2{
+    margin-top:16rpx;
+    border-bottom:none;
+    background-color:#fff;
+}

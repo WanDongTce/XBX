@@ -1,0 +1,25 @@
+/* pages/my/pages/myOrder/myOrderDetail/myOrderDetail.wxss */
+@import "../../../wxss/confirmOrder";
+.top_box{
+    width:100%;
+}
+.address_img{
+    width:27rpx;
+    height:35rpx;
+}
+.address_text{
+    margin-left:70rpx;
+    width:100%;
+}
+.bottom-left{
+    color:#ea2929;
+}
+.orderdetail_box{
+    background-color:#fff;
+    border-top:16rpx solid #f4f4f4;
+    border-bottom:16rpx solid #f4f4f4;
+    padding:14rpx 30rpx;
+}
+.orderdetail_item{
+  line-height:44rpx;
+}
