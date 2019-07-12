@@ -1,4 +1,4 @@
-<compontNavbar title="分享" isShowBack="{{true}}"></compontNavbar>
+<compontNavbar title="{{navTitle}}" isShowBack="{{true}}"></compontNavbar>
 <view class="box">
 <canvas-share bindclose="closeShareImg" visible="{{visible}}" title="{{title}}" gametype="{{gametype}}" gameurl="{{gameurl}}" />
 <view class="share-wrap">

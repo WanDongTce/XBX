@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/main/pages/home/home",
+    "pages/test/index",
     "pages/main/pages/msg/msg",
     "pages/main/pages/find/find",
     "pages/main/pages/task/task",
@@ -251,6 +252,11 @@
     "navigationBarTitleText": "学霸学",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "van-overlay": "/component/overlay/index",
+    "van-popup": "/component/popup/index",
+    "van-transition": "/component/transition/index"
   },
   "tabBar": {
     "color": "#333",

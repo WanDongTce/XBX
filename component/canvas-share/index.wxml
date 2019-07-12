@@ -3,8 +3,19 @@
   <view class="content" style="transform:scale({{responsiveScale}});-webkit-transform:scale({{responsiveScale}});">
     <image class="canvas" src="{{imageFile}}" style="width:{{canvasWidth/3*2}}rpx;height:{{canvasHeight/3*2}}rpx" />
     <view class="footer" style="width:100%;">
-      <view class="save" bindtap="handleSave">保存到相册</view>
+      <view class="save" bindtap="toggleBottomPopup">立即分享</view>
       <!--<view class="close" bindtap="handleClose">关闭</view>-->
     </view>
   </view>
+  <!--popup-->
+  <van-popup show="{{ show.bottom }}" position="bottom" custom-class="bottom" bind:close="toggleBottomPopup" bind:transitionEnd="onTransitionEnd">
+    <canvas class="canvas-hide" canvas-id="share" style="width:{{canvasWidth*2}}rpx;height:{{canvasHeight*2}}rpx;" />
+    <view class="content" style="transform:scale({{responsiveScale}});-webkit-transform:scale({{responsiveScale}});">
+      <image class="canvas" src="{{imageFile}}" style="width:{{canvasWidth/3*2}}rpx;height:{{canvasHeight/3*2}}rpx" />
+      <view class="footer" style="width:100%;">
+        <view class="save" bindtap="handleSave">保存到相册</view>
+        <!--<view class="close" bindtap="handleClose">关闭</view>-->
+      </view>
+    </view>
+  </van-popup>
 </view>

@@ -13,13 +13,15 @@ Page({
         //分享
         visible: false,
         title: '',
-        gametype: 0
+        gametype: 0,
+        navTitle: ''
     },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
         var a = JSON.parse(options.info); 
         info = a;
         var title = info.nianjistr||info.title;
+        console.log(title);
         var that = this;
         var size = that.setCanvasSize();
         // console.log(size);
@@ -30,7 +32,8 @@ Page({
             //share
             title: title,
             gametype: parseInt(options.gametype),
-            gameurl: a.dizhi
+            gameurl: a.dizhi,
+            navTitle: options.title
         });
         // 进入直接生成图片
         that.showShareImg()

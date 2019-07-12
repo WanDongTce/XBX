@@ -27,7 +27,7 @@
         <image class="tab-img" src="../../images/edutList/edu_tab6.png"></image>
         <view class='tab-text f_26 c_333'>王者之战</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=3&title=明日之星挑战赛">
+    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=3&title=挑战赛">
         <image class="tab-img" src="../../images/edutList/edu_tab7.png"></image>
         <view class='tab-text f_26 c_333'>挑战赛</view>
     </navigator>
