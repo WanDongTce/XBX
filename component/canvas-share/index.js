@@ -147,10 +147,10 @@ Component({
         saveImageToPhotosAlbum({
           filePath: imageFile,
         }).then(() => {
-          wx.showToast({
-            icon: 'none',
-            title: '分享图片已保存至相册',
-            duration: 1000,
+          wx.showModal({
+            content: '以保持到本地相册，快乐叫小伙伴们来围观吧！',
+            showCancel: false,
+            confirmText: '我知道了'
           })
         }).catch((e) => {
           if (e.errMsg == 'saveImageToPhotosAlbum:fail auth deny' || e.errMsg == "saveImageToPhotosAlbum:fail:auth denied") {

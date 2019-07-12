@@ -32,7 +32,8 @@ Page({
             gametype: parseInt(options.gametype),
             gameurl: a.dizhi
         });
-        
+        // 进入直接生成图片
+        that.showShareImg()
     },
     onShow: function () {
 
