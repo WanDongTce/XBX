@@ -496,7 +496,7 @@ page {
 }
 .new_home_img{
     display: inline-block;
-    width:221rpx;
+    width:330rpx;
     height: 123rpx;
     margin-right:10rpx;
 }

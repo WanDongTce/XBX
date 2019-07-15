@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/main/pages/home/home",
-    "pages/main/pages/shopping/shopping",
+
   
-  
+  "pages/main/pages/shopping/shopping",
     "pages/main/pages/car/car",
     "pages/main/pages/Shopdetails/Shopdetails",
     
@@ -264,6 +264,14 @@
         "pages/recite/recite",
         "pages/logs/logs",
         "pages/confirmend/confirmend"
+      ]
+    },
+    {
+      "root": "pages/link/",
+      "pages": [
+        "pages/composition/composition",
+        "pages/emptypage/emptypage"
+        
       ]
     }
   ],

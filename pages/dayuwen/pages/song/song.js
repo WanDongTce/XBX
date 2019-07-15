@@ -17,26 +17,14 @@ Page({
 
   goTo02: function (e) {
     
-    wx.showToast({
-
-      title: '尚未开通',
-
-      icon: 'none',
-
-      duration: 1000//持续的时间
-
+    wx.navigateTo({
+      url: '/pages/link/pages/composition/composition'
     })
   },
   goTo03: function (e) {
 
-    wx.showToast({
-
-      title: '尚未开通',
-
-      icon: 'none',
-
-      duration: 1000//持续的时间
-
+    wx.navigateTo({
+      url: '/pages/link/pages/emptypage/emptypage'
     })
   },
   /**

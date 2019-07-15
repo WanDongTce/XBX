@@ -58,15 +58,16 @@
             <image class="new_tab_img" src="../../images/home/tab3.png"></image>
             <view class='new_tab_text'>综合素质</view>
         </navigator>
-        <navigator class="new_tab" url="/pages/dayuwen/pages/songdetail/songdetail">
+        <!-- <navigator class="new_tab" url="/pages/dayuwen/pages/songdetail/songdetail">
             <image class="new_tab_img" src="/images/bbx.png"></image>
             <view class='new_tab_text'>爱朗读</view>
-        </navigator>
+        </navigator> -->
     </view>
     <view class='p_lr_26'>
         <view class='display-flex align-items-center new_home_imgbox'>
             <navigator url='/pages/home/pages/barter/barter'><image src='../../../../images/new_home_img1.png' class='new_home_img'></image></navigator>
-            <navigator url='/pages/main/pages/task/task'><image src='/pages/main/images/shopping/renwu.png' class='new_home_img'></image></navigator>
+            <navigator url='/pages/dayuwen/pages/song/song'><image src='../../../../images/new_home_img4.png' class='new_home_img'></image></navigator>
+            <navigator url='/pages/main/pages/task/task'><image src='../../../../images/renwu.png' class='new_home_img'></image></navigator>
             <navigator url="/pages/home/pages/integralMall/integralMall"><image src='../../../../images/new_home_img3.png' class='new_home_img'></image></navigator>
         </view>
     </view>
