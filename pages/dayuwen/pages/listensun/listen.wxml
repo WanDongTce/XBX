@@ -1,0 +1,58 @@
+<!--pages/listen/listen.wxml-->
+<!--nav-->
+<compontNavbar title="{{tabTitle}}" isShowBack="{{true}}"></compontNavbar>
+<view class='banner'>
+	<image class="btn" src="{{thumbnail}}" />
+  <image src='/pages/dayuwen/images/Compact.png' class='Compact'></image>
+  <view class='bd'>
+    <image class="btn" src="{{thumbnail}}" />
+  </view>
+  <view class="bd02"></view>
+  <view class='btn_sun' wx:if="{{flg==true}}" bindtap='suspend'>
+  <image src='/pages/dayuwen/images/suspend02.png' class='suspend'></image>
+ 
+  </view>
+  <view class='btn_sun' wx:else bindtap='suspend'>
+     <image src='/pages/dayuwen/images/start02.png'  class='start02'></image>
+  </view>
+</view>
+
+<view class="text-wrap">
+	<scroll-view
+	 class="text-content"
+	 style="height:500rpx;"
+	 scroll-top="{{scrollTop}}"
+	 scroll-with-animation
+	 scroll-y
+	 scroll-into-view="{{toView}}"
+	>
+		<view
+		 class="text-row"
+		 wx:key="*this"
+		 id="{{'id'+index}}"
+		 wx:for="{{text}}"
+		>
+			<view class="current" wx:if="{{currentIndex==index}}">
+				{{item[1]}}
+			</view>
+			<view wx:else>
+				{{item[1]}}
+			</view>
+		</view>
+		<view style="height:300rpx;"></view>
+	</scroll-view>
+</view>
+
+<view class="listen">
+	<van-progress
+	 pivot-text="{{percentTime}}"
+	 color="#0EB90E"
+	 percentage="{{percent}}"
+	 custom-class="progress"
+	/>
+</view>
+<view class="go-recite">
+	<button data-id="{{id}}" class="go-btn" bindtap="goTo">去朗诵</button>
+</view>
+
+

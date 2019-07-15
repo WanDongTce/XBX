@@ -1,0 +1,90 @@
+<view class="header"><text>诗词朗诵</text>
+ <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
+</view>
+<view class="information">
+  <view class='content_box'>
+    <view class='photo'>
+      <image src='{{pic}}'></image>
+    </view>
+    <view class='information_sun'>
+      <view class='name'>
+        <text>{{name}}</text>
+      </view>
+      <view class='author'>
+        <text>{{author}}</text>
+      </view>
+      <view class='appreciation'>
+        <view bindtap='goTo' data-postad="{{pid}}">
+           <text>诗歌赏析></text>
+        </view>
+      </view>
+      <view class='hear'  bindtap='goting' data-name="{{rname}}" data-postad="{{pid}}">
+        <text>听一听</text>
+      </view>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+</view>
+<view class='btn'>
+  <view class='list {{selected?"active":""}}' data-current="0" bindtap="selected" >
+    <text>点赞榜</text>
+  </view>
+  <view class='list {{selected1?"active":""}}' data-current="1" bindtap="selected1">
+    <text>我的朗诵</text>
+  </view>
+  <view class='clearfix'></view>
+</view>
+<scroll-view class='{{selected?"show":"hidden"}}' bindscrolltolower="xiala" style="height:700rpx;" scroll-y="true">
+  <view class='list_box '  >
+  <view class='content_box'>
+    <view class='list ' wx:for="{{list}}" data-index='{{index}}' catchtap='tolangdu02' data-postad="{{item.id}}"data-good='{{item.praisenum}}'>
+      <view class='on'>
+        <text>{{index+1}}</text>
+        <label wx:if="{{index==0}}">
+          <image src='/pages/dayuwen/images/one.png'></image>
+        </label>
+        <label wx:elif="{{index==1}}">
+          <image src='/pages/dayuwen/images/two.png'></image>
+        </label>
+         <label wx:elif="{{index==2}}">
+          <image src='/pages/dayuwen/images/three.png'></image>
+        </label>
+      </view>
+      <view class='photo'>
+        <image src='{{item.avatar}}'></image>
+      </view>
+      <view class='name'>
+        <text>{{item.nickname}}</text>
+      </view>
+      <view class='number'>
+      <image src='/pages/dayuwen/images/Fabulous.png'></image>
+        <text>{{item.praisenum}}</text>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+  </view>
+</view>
+
+</scroll-view>
+
+<scroll-view class='{{selected1?"show":"hidden"}}' bindscrolltolower="xiala02" style="height:700rpx;" scroll-y="true">
+<view class='list_box '>
+  <view class='content_box'>
+    <view class='list'wx:for="{{list_sun}}"  catchtap='tolangdu' data-postad="{{item.id}}" data-good='{{item.praisenum}}'>
+      <view class='time'>
+        <text>{{item.addtime}}</text>
+      </view>
+      <view class='number'>
+      <image src='/pages/dayuwen/images/Fabulous.png'></image>
+        <text>{{item.praisenum}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+</scroll-view>
+<view class='Recitation'>
+  <view class='btn_sun' bindtap='gorecorder' data-postad="{{pid}}" data-name="{{name}}" data-author="{{author}}">
+    <text>去朗诵</text>
+  </view>
+</view>

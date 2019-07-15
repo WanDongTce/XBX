@@ -1,0 +1,54 @@
+<!--pages/recite/recite.wxml-->
+<view class="list">
+	<image class="image" src="" />
+	<view class="item">
+		<view class="item-title">水调歌头，明月即使有</view>
+		<view class="item-info">宋代.苏轼</view>
+		<navigator>诗词赏析>></navigator>
+	</view>
+	<button bindtap="listenOne">听一听</button>
+</view>
+<!--列表-->
+<van-tabs>
+	<van-tab title="点赞榜">
+		<view>
+			<van-row>
+				<van-col span="4">88</van-col>
+				<van-col span="15">1231238</van-col>
+				<van-col span="5">88</van-col>
+			</van-row>
+			<van-row>
+				<van-col span="4">88</van-col>
+				<van-col span="15">1231238</van-col>
+				<van-col span="5">88</van-col>
+			</van-row>
+			<van-row>
+				<van-col span="4">88</van-col>
+				<van-col span="15">1231238</van-col>
+				<van-col span="5">88</van-col>
+			</van-row>
+		</view>
+	</van-tab>
+	<van-tab title="我的朗诵">
+		<view>
+			<van-row>
+				<van-col span="4">88</van-col>
+				<van-col span="15">1231238</van-col>
+				<van-col span="5">88</van-col>
+			</van-row>
+			<van-row>
+				<van-col span="4">88</van-col>
+				<van-col span="15">1231238</van-col>
+				<van-col span="5">88</van-col>
+			</van-row>
+			<van-row>
+				<van-col span="4">88</van-col>
+				<van-col span="15">1231238</van-col>
+				<van-col span="5">88</van-col>
+			</van-row>
+		</view>
+	</van-tab>
+</van-tabs>
+<!--去朗诵-->
+<navigator>去朗诵</navigator>
+

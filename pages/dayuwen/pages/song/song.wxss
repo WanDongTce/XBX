@@ -1,0 +1,26 @@
+/* pages/song/song.wxss */
+page{background: #fff !important;}
+.reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 34rpx;margin: 0 auto}
+.reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
+.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: center;display: block;width: 100%;background-color: #fff;}
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  margin: auto;
+}
+.image {
+  flex: 0 0 1;
+  width: 340rpx;
+  height: 390rpx;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20rpx 5rpx #e4e4e4;
+  margin-bottom: 20rpx
+  
+}
+.wrap image:nth-child(1){margin-right: 15rpx}
+.wrap image:nth-child(3){margin-right: 15rpx}

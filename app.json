@@ -249,6 +249,23 @@
         "pages/tuiguangNew/tuiguangNew",
         "pages/aboutMoney/member/member"
       ]
+    },
+    {
+      "root": "pages/dayuwen/",
+      "pages": [
+        "pages/listen/listen",
+        "pages/listensun/listen",
+        "pages/song/song",
+        "pages/songdetail/songdetail",
+        "pages/search/search",
+        "pages/recorder/recorder",
+        "pages/Ranking/Ranking",
+        "pages/Appreciate/Appreciate",
+        "pages/recite/recite",
+        "pages/logs/logs",
+        "pages/confirmend/confirmend",
+        "pages/index/index"
+      ]
     }
   ],
   "window": {
@@ -261,7 +278,10 @@
   "usingComponents": {
     "van-overlay": "/component/overlay/index",
     "van-popup": "/component/popup/index",
-    "van-transition": "/component/transition/index"
+    "van-transition": "/component/transition/index",
+    "van-button": "/component/button/index",
+    "van-loading": "/component/loading/index",
+    "van-progress": "/component/progress/index"
   },
   "tabBar": {
     "color": "#333",

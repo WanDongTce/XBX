@@ -1,0 +1,60 @@
+<!--pages/songdetail/songdetail.wxml-->
+<!--navbar-->
+<view class="header"><text>朗诵</text>
+ <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
+</view>
+<view class="wrapBar">
+
+	<view class="search" catchtap='tosearch'>
+	<text>搜索关键字</text>
+	</view>
+	<text class="btn" bindtap='filter'>筛选</text>
+</view>
+<!--list-->
+<view class="main">
+<scroll-view bindscrolltolower="xiala" style='height:{{hh}}px' scroll-y="true">
+	<view class="list" bindtap='goTo' wx:for="{{list}}" data-postad="{{item.id}}">
+		<view class="photo">
+      <image class="image" src="{{item.imgUrl}}" />
+    </view>
+		<view class="item">
+			<view class="item-title">{{item.rname}}</view>
+			<view class="item-info">{{item.content}}</view>
+			<view class="item-author">{{item.cname+' · '+item.readname}}</view>
+		</view>
+    <view wx:if="{{item.status==1}}">
+       <image src="/pages/dayuwen/images/yij.png" class="yij show"></image>
+    </view>
+    <view wx:else>
+       <image src="/pages/dayuwen/images/yij.png" class="yij "></image>
+    </view>
+	</view>
+</scroll-view>
+</view>
+<!--popup-->
+  <van-popup
+    show="{{ show.right }}"
+    position="right"  
+    custom-class="right"
+    bind:close="toggleRightPopup"
+    bind:transitionEnd="onTransitionEnd"
+  >
+  <view>
+  <text class='name'>年级</text>
+<view wx:for="{{class_list}}" class="list_sun {{current01==index?'active':'' }}" data-id="{{item.classid}}" data-index="{{index}}" bindtap="classbtn">{{item.name}}</view>
+<view class='clearfix'></view>
+  </view>
+  <view>
+  <text class='name'>诗歌风格</text>
+<view wx:for="{{type_list}}" class="list_sun {{current02==index?'active':'' }}" data-id="{{item.poetryid}}" data-index="{{index}}" bindtap="typebtn">{{item.name}}</view>
+<view class='clearfix'></view>
+  </view>
+  <view>
+  <text class='name'>朝代</text>
+  
+<view wx:for="{{year_list}}" class="list_sun {{current03==index?'active':'' }}" data-id="{{item.yearid}}" data-index="{{index}}" bindtap="yearbtn">{{item.name}}</view>
+<view class='clearfix'></view>
+  </view>
+  <van-button bind:click="toggleRightPopup" class="chongzhi" bindtap='onClick_sun'>重置</van-button>
+  <van-button bind:click="toggleRightPopup" class="quding" bindtap='onClick'>确定</van-button>
+  </van-popup>

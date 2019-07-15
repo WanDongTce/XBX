@@ -1,0 +1,20 @@
+.clearfix{clear: both}
+page{background-color: #fff}
+.reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 34rpx;margin: 0 auto}
+.reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
+.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: center;display: block;width: 100%;background-color: #fff;}
+.search input{width: 510rpx;height: 60rpx;background-color: #F2F2F2;display: block;margin: 0 auto;font-size: 26rpx;
+text-align: center;border-radius: 30rpx}
+.search{position: relative;border-bottom: 2rpx solid #DDDDDD;padding-bottom: 24rpx}
+.search .btn{position: absolute;right: 0;top: 0;width: 120rpx;}
+.search .btn text{display: block;text-align: center;line-height: 60rpx;font-size: 26rpx}
+.History{margin-top: 36rpx}
+.History .content_box{width: 694rpx;margin: 0 auto}
+.History .content_box .title .left text{font-size: 26rpx;height: 26rpx;line-height: 26rpx;display: block}
+.History .content_box .title .left{float: left}
+.History .content_box .title .right{float: right}
+.History .content_box .title .right image{width: 32rpx;height: 30rpx;}
+.History .content_box .content{margin-top: 27rpx}
+.History .content_box .content .list text{font-size: 26rpx;padding-left: 28rpx;padding-right: 28rpx;
+background-color: #F4F4F4;line-height: 54rpx;display: block;border-radius: 54rpx}
+.History .content_box .content .list {margin-right: 28rpx;float: left;margin-bottom: 30rpx;}

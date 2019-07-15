@@ -1,0 +1,8 @@
+page{background-color: #fff}
+.reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 34rpx;margin: 0 auto}
+.reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
+.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: center;display: block;width: 100%;background-color: #fff;}
+.title{width: 690rpx;margin: 0 auto;font-size: 30rpx;height: 30rpx;line-height: 30rpx}
+.content_box{width: 690rpx;margin: 0 auto;margin-top: 54rpx}
+.content_box .name text{font-size: 28rpx;}
+.content_box .content text{font-size: 28rpx;text-indent:20rpx}

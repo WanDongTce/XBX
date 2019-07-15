@@ -1,0 +1,43 @@
+/* pages/recite/recite.wxss */
+/*list*/
+.list{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 24rpx;
+    border-radius: 6rpx;
+    padding: 15rpx;
+    border-bottom: 5rpx solid #eee;
+}
+.icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80rpx;
+    height: 80rpx;
+}
+.image{
+    width: 144rpx;
+    height: 144rpx;
+    border:1rpx solid red;
+    margin-right: 15rpx;
+}
+.item{
+
+}
+.item-title{
+    font-size: 36rpx;
+    color: aquamarine;
+    margin-bottom: 10rpx;
+}
+.item-info{
+    font-size: 28rpx;
+    color: rgb(159, 159, 159);
+    margin-bottom: 15rpx;
+    white-space: nowrap;
+}
+.item-author{
+    font-size: 30rpx;
+    color: rgb(82, 82, 82);
+}

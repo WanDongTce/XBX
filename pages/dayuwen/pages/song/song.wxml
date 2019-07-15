@@ -1,0 +1,9 @@
+<!--pages/song/song.wxml-->
+<view class="header"><text>朗诵</text>
+ <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
+</view>
+<view class="wrap">
+ <image class="image" src="/pages/dayuwen/images/bd01.png" bindtap='goTo' />
+ <image class="image" src="/pages/dayuwen/images/bd02.png" bindtap='goTo02' />
+ <image class="image" src="/pages/dayuwen/images/bd03.png" bindtap='goTo03' />
+</view>

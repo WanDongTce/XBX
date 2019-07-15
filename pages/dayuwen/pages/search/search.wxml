@@ -1,0 +1,29 @@
+<view class="header"><text>朗诵</text>
+ <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
+</view>
+<view class="search">
+<input type='text' placeholder='搜索关键字' bindinput="searchval" name="searchval" bindconfirm='search'></input>
+  <view class='btn' catchtap='search'>
+    <text>搜索</text>
+  </view>
+</view>
+<view class='History'>
+  <view class='content_box'>
+   <view class='title'>
+      <view class='left'>
+        <text>历史搜索</text>
+      </view>
+      <view class='right' catchtap='del'>
+        <image src='/pages/dayuwen/images/del.png'></image>
+      </view>
+      <view class='clearfix'></view>
+   </view>
+   <view class='content'>
+    <view class='list' wx:for="{{list}}" data-name='{{item.keyword}}' catchtap='tosearch'>
+      <text>{{item.keyword}}</text>
+    </view>
+     
+    <view class='clearfix'></view>
+   </view>
+  </view>
+</view>

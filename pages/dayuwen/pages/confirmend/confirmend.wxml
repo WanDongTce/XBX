@@ -1,0 +1,43 @@
+<!--pages/confirmend/confirmend.wxml-->
+<compontNavbar title="{{tabTitle}}" isShowBack="{{true}}" />
+<view class="progress-wrap">
+<view class="btn_swb"  wx:if="{{flg==true}}" bindtap='suspend'>
+  <image src="/pages/dayuwen/images/suspend.png"></image>
+</view>
+ <view class='btn_swb' wx:else bindtap='suspend'>
+     <image src='/pages/dayuwen/images/start.png'  ></image>
+  </view>
+	<progress class="progress" percent="{{percent}}" />
+	<text>{{currentTime}}</text>
+</view>
+<!--歌词-->
+<view class="text-wrap">
+	<scroll-view
+	 class="text-content"
+	 style="height:500rpx;"
+	 scroll-y
+	>
+		<view
+		 class="text-row"
+		 wx:key="*this"
+		 wx:for="{{text}}"
+		>
+			<view>
+				{{item}}
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view class="footer">
+	<view class="btn" bindtap="reset">
+		<image class="icon" src="../../images/again.png" />
+		<view>重置</view>
+	</view>
+	<view class="btn" bindtap="onUpload">
+		<image class="icon" src="../../images/End.png" />
+		<view>结束</view>
+	</view>
+	<!--<button class="btn" bindtap="reset">重置</button>
+	<button class="btn" bindtap="onUpload">结束</button>-->
+</view>
+

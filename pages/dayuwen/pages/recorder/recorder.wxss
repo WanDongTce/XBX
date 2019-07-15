@@ -1,0 +1,132 @@
+/* pages/recorder/recorder.wxss */
+page {
+  background-color: #fff;
+}
+.btn {
+  width: 100%;
+  height: 150rpx;
+  border: 2rpx solid red;
+}
+.current {
+  color: rgb(29, 220, 153);
+  font-size: 30rpx;
+}
+.text-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-content {
+  text-align: center;
+  font-size: 36rpx;
+  margin-top: 50rpx;
+  width: 90%;
+  height: 454rpx !important;
+}
+.text-row {
+  margin: 20prx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+.recite {
+  width: 50%;
+  height: 50rpx;
+  background-color: green;
+  color: white;
+}
+/***************/
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 36rpx;
+}
+.info-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1rpx solid red;
+  margin-right: 20rpx;
+  margin-left: 30rpx;
+}
+.info-right_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: rgb(23, 23, 23);
+  margin-bottom: 20rpx;
+}
+.info-right_author {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: gray;
+}
+
+.time-info {
+  text-align: right;
+  display: block;
+  font-size: 22rpx;
+  color: #666666;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: conter;
+  align-items: center;
+  flex: 1 0 auto;
+}
+.footer-btn {
+  flex: 1 1 auto;
+}
+.footer .list:nth-child(1) image {
+  width: 34rpx;
+  height: 32rpx;
+  display: block;
+}
+.footer .list:nth-child(1) text {
+  font-size: 24rpx;
+}
+.footer .list:nth-child(2) image {
+  width: 34rpx;
+  height: 32rpx;
+  display: block;
+}
+.footer .list:nth-child(2) text {
+  font-size: 24rpx;
+}
+.footer .list:nth-child(3) image {
+  width: 34rpx;
+  height: 32rpx;
+  display: block;
+}
+.footer .list:nth-child(3) text {
+  font-size: 24rpx;
+}
+.footer .list:nth-child(4) image {
+  width: 34rpx;
+  height: 32rpx;
+  display: block;
+}
+.footer .list:nth-child(4) text {
+  font-size: 24rpx;
+}
+.footer .list:nth-child(5) image {
+  width: 34rpx;
+  height: 32rpx;
+  display: block;
+}
+.footer .list:nth-child(5) text {
+  font-size: 24rpx;
+}
