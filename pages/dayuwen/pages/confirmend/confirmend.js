@@ -94,7 +94,7 @@ Page({
   },
   uploadFile: function (filePath, id) {
     wx.uploadFile({
-      url: 'https://social.ajihua888.com/v14/public/upload', //仅为示例，非真实的接口地址
+      url: app.requestUrl + 'v14/public/upload', //仅为示例，非真实的接口地址
       filePath: filePath, // 小程序临时文件路径,
       name: '$_FILES',
       success(res) {
@@ -106,7 +106,7 @@ Page({
         console.log(data);
         //记录录音
         wx.request({
-          url: 'https://social.ajihua888.com/v14/chinese/audio-add', //仅为示例，并非真实的接口地址
+          url: app.requestUrl + 'v14/chinese/audio-add', //仅为示例，并非真实的接口地址
           header: {
             'content-type': 'application/x-www-form-urlencoded' // 默认值
           },

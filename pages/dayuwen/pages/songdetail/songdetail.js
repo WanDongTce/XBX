@@ -63,7 +63,7 @@ getlist:function(name){
 
   
   wx.request({
-    url: 'https://social.ajihua888.com/v14/chinese/poetry',
+    url: app.requestUrl + 'v14/chinese/poetry',
     header: {
       'content-type': 'application/x-www-form-urlencoded'
     },
@@ -105,7 +105,7 @@ getlist:function(name){
     }else{
       page = page + 1
       wx.request({
-        url: 'https://social.ajihua888.com/v14/chinese/poetry',
+        url: app.requestUrl + 'v14/chinese/poetry',
         header: {
           'content-type': 'application/x-www-form-urlencoded'
         },
@@ -172,7 +172,7 @@ getlist:function(name){
   screenlist:function(){
     var that=this
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/screening',
+      url: app.requestUrl + 'v14/chinese/screening',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
@@ -239,7 +239,7 @@ getlist:function(name){
     var that = this
     console.log(yearId)
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/poetry',
+      url: app.requestUrl + 'v14/chinese/poetry',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
@@ -282,7 +282,7 @@ getlist:function(name){
     var that = this
 
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/poetry',
+      url: app.requestUrl + 'v14/chinese/poetry',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },

@@ -31,7 +31,7 @@ Page({
   del:function(){
    var that=this
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/keyword-del',
+      url: app.requestUrl + 'v14/chinese/keyword-del',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
@@ -69,7 +69,7 @@ Page({
   getlist:function(){
     var that =this;
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/mysearchlist',
+      url: app.requestUrl + 'v14/chinese/mysearchlist',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },

@@ -245,7 +245,7 @@ Page({
     //测试接口数据
     console.log(options)
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/poetryinfo', //仅为示例，并非真实的接口地址
+      url: app.requestUrl + 'v14/chinese/poetryinfo', //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },

@@ -1,6 +1,6 @@
 {
   "pages": [
-   "pages/main/pages/home/home",
+    "pages/main/pages/home/home",
     "pages/main/pages/shopping/shopping",
   
   
@@ -263,8 +263,7 @@
         "pages/Appreciate/Appreciate",
         "pages/recite/recite",
         "pages/logs/logs",
-        "pages/confirmend/confirmend",
-        "pages/index/index"
+        "pages/confirmend/confirmend"
       ]
     }
   ],

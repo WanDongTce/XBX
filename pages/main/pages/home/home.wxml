@@ -58,7 +58,10 @@
             <image class="new_tab_img" src="../../images/home/tab3.png"></image>
             <view class='new_tab_text'>综合素质</view>
         </navigator>
-        
+        <navigator class="new_tab" url="/pages/dayuwen/pages/songdetail/songdetail">
+            <image class="new_tab_img" src="/images/bbx.png"></image>
+            <view class='new_tab_text'>爱朗读</view>
+        </navigator>
     </view>
     <view class='p_lr_26'>
         <view class='display-flex align-items-center new_home_imgbox'>

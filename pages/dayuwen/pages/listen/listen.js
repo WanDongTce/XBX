@@ -103,7 +103,7 @@ Page({
     let that = this;
     lun_sun = id
     wx.request({
-      url: 'https://social.ajihua888.com/v14/chinese/myread-info', //仅为示例，并非真实的接口地址
+      url: app.requestUrl + 'v14/chinese/myread-info', //仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
@@ -279,7 +279,7 @@ Page({
   good:function(){
     let that = this;
       wx.request({
-        url: 'https://social.ajihua888.com/v14/news/agree-add',
+        url: app.requestUrl + 'v14/news/agree-add',
         header: {
           'content-type': 'application/x-www-form-urlencoded' // 默认值
           
