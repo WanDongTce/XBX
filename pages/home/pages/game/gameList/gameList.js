@@ -118,6 +118,7 @@ Page({
         });
     },
     toDetail: function (e) {
+      var that = this;
         var a = e.currentTarget.dataset.item;
         
         // console.log(a)
@@ -128,7 +129,7 @@ Page({
             wx.hideLoading();
             if (res.data.code == 200) {
                 wx.navigateTo({
-                    url: `/pages/home/pages/game/gameDetail/gameDetail?info=${JSON.stringify(a)}&gametype=${gametype}`
+                  url: `/pages/home/pages/game/gameDetail/gameDetail?info=${JSON.stringify(a)}&gametype=${gametype}&title=${that.data.tabTitle}`
                 })
                 // wx.navigateTo({
                 //     url: '/pages/home/pages/game/gameWebview/gameWebview?src=' + JSON.stringify(a)

@@ -1,5 +1,7 @@
 <compontNavbar title="{{idname}}" isShowBack="{{true}}" ></compontNavbar>
-<image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' />
+<view wx:if="{{imgUrls.length > 0}}"><image src="{{imgUrls[0].image}}" class="banner"  mode='aspectFill' /></view>
+<view wx:else> <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' /> </view>
+
 <view class="tabs">
     <navigator class="tab" url="/pages/home/pages/preview/preview">
         <image class="tab-img" src="../../images/edutList/edu_tab1.png"></image>

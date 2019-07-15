@@ -8,7 +8,7 @@
         <image src='../../../../images/arrow_switch.png' class='arrow_switch'></image>
         <view class='switch_text c_gf'>家长端</view>
     </view>
-    <view class="navigation-tit">{{idname}}</view>
+    <view class="navigation-tit">{{title == ''? idname : title}}</view>
 </view>
 
 

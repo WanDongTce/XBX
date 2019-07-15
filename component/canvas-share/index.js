@@ -114,7 +114,15 @@ Component({
 
     imageFile: '',
 
-    responsiveScale: 1
+    responsiveScale: 1,
+    //
+    show: {
+      middle: false,
+      top: false,
+      bottom: false,
+      right: false,
+      right2: false
+    }
   },
 
   lifetimes: {
@@ -135,6 +143,19 @@ Component({
   },
 
   methods: {
+    //
+    onTransitionEnd() {
+      console.log(`You can't see me 🌚`);
+    },
+    toggle(type) {
+      this.setData({
+        [`show.${type}`]: !this.data.show[type]
+      });
+    },
+    toggleBottomPopup() {
+      this.toggle('bottom');
+    },
+    //
     handleClose() {
       this.triggerEvent('close')
     },
@@ -145,10 +166,13 @@ Component({
         saveImageToPhotosAlbum({
           filePath: imageFile,
         }).then(() => {
-          wx.showToast({
-            icon: 'none',
-            title: '分享图片已保存至相册',
-            duration: 1000,
+          wx.showModal({
+            content: '以保持到本地相册，快乐叫小伙伴们来围观吧！',
+            showCancel: false,
+            confirmText: '我知道了',
+            success: function(res){
+              wx.navigateBack();
+            }
           })
         }).catch((e) => {
           if (e.errMsg == 'saveImageToPhotosAlbum:fail auth deny' || e.errMsg == "saveImageToPhotosAlbum:fail:auth denied") {
@@ -194,7 +218,7 @@ Component({
     loadNetworkImage(loadtype, gametype) {
       //loadtype 0为本地图片，1为网络图片
       let ercodeUrl = `https://social.ajihua888.com/v14/public/qrcode?gameurl=${this.properties.gameurl}`;
-      let imageUrl = 'http://social.ajihua888.com/v14/public/games';
+      let imageUrl = 'https://social.ajihua888.com/v14/public/games';
       if (gametype == 1) {
         QRImageX = canvasW * 0.6;
         QRImageY = canvasH * 0.63;

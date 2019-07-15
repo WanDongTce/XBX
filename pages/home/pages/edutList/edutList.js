@@ -9,7 +9,8 @@ Page({
         course_sy: '',
         course_gg: '',
         course_wk: '',
-        course: ''
+        course: '',
+        imgUrls: []
     },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
@@ -18,6 +19,7 @@ Page({
             idname:app.idname
         })
         network.teacherLevel();
+        that.getSwipImgs();
         that.getTeacList();
         that.getCourseList();
     },
@@ -113,5 +115,16 @@ Page({
       wx.navigateTo({
         url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
       })
+    },
+    getSwipImgs: function () {
+      var that = this;
+      network.getSwiperImgs(5, function (res) {
+        // console.log(res);
+        if (res.data.code == 200) {
+          that.setData({
+            imgUrls: res.data.data[0].list
+          });
+        }
+      });
     },
 })

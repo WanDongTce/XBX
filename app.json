@@ -258,6 +258,11 @@
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
+  "usingComponents": {
+    "van-overlay": "/component/overlay/index",
+    "van-popup": "/component/popup/index",
+    "van-transition": "/component/transition/index"
+  },
   "tabBar": {
     "color": "#333",
     "selectedColor": "#333",
