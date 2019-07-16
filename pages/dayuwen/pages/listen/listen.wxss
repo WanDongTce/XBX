@@ -90,3 +90,11 @@ border-radius: 50%;overflow: hidden}
 .footer .list:nth-child(2) image{width: 48rpx;height: 44rpx;display: block;float: left;margin-left: 122rpx}
 .footer .list:nth-child(2) text{display: block;float: left;font-size: 30rpx;color: #48B949;margin-left: 22rpx}
 .footer .list:nth-child(1){border-right: 1px solid #E4E4E4}
+.share{
+  display: inline;
+  line-height: 0;
+  background-color: #fff;
+  border-width: 0;
+  color: #aaa;
+}
+.share::after{ border: none; }

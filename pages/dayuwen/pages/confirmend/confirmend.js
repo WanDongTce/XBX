@@ -85,11 +85,21 @@ Page({
       icon: 'success',
       duration: 2000
     });
-    setTimeout(function(){
-      wx.navigateBack({
-        delta: 2
-      });
-    },2000);
+    //根据路径不同，返回层级不同
+    let r = getCurrentPages().length;
+    if (r == 5) {
+      setTimeout(function () {
+        wx.navigateBack({
+          delta: 2
+        });
+      }, 2000);
+    } else {
+      setTimeout(function () {
+        wx.navigateBack({
+          delta: 3
+        });
+      }, 2000);
+    }
     
   },
   uploadFile: function (filePath, id) {

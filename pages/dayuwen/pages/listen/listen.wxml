@@ -55,7 +55,7 @@
 <view class='footer'>
   <view class='list'>
     <image src='/pages/dayuwen/images/share.png'></image>
-    <text>分享</text>
+    <button class="share" open-type="share">分享</button>
   </view>
   <view class='list' catchtap='good' >
 
