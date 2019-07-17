@@ -51,7 +51,7 @@ Page({
         "Name": search,
       },
       success: function (res) {
-        //   console.log(res); 
+        
         wx.hideLoading();
         if (res.data.code == 200) {
           search = '';
@@ -59,6 +59,7 @@ Page({
           if (flag) {
             a = that.data.list.concat(a);
           }
+          console.log(a)
           that.setData({
             list: a,
             showEmpty: a.length == 0 ? true : false
@@ -124,7 +125,7 @@ Page({
   tz_detail: function (e) {
 
     wx.navigateTo({
-      url: '/pages/composition/compositionDetail/compositionDetail?id=' + e.currentTarget.dataset.myid,
+      url: '/pages/link/pages/composition/compositionDetail/compositionDetail?id=' + e.currentTarget.dataset.myid,
     })
   }
 })

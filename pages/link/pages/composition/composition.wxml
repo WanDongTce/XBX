@@ -1,7 +1,5 @@
 <!--pages/composition/composition.wxml-->
 <!-- searchnew -->
-
-
 <!-- newsearch -->
 <view class="navigation-box component-class c_bg_gf" wx:if="{{changeCss==2}}" id='showtwo'>
     <view class="back-box2" bindtap="goBack" >
@@ -26,10 +24,7 @@
         </view>
     </view>
 </view>
-
-
 <view class='compositionbox'>
-    
     <view  class='composition_padding'>
         <view class='display-flex align-items-center maintitle'>
             <image src='../../images/home/composition_hot.png'></image>

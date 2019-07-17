@@ -116,3 +116,4 @@ page{
     line-height: 38rpx;
 }
 .position_r{position: absolute;left: 0;top: 0}
+.compositionbox{margin-top:50% }

@@ -1,5 +1,5 @@
 /* pages/confirmend/confirmend.wxss */
-
+page{background-image: url(https://m.ajihua888.com/wx_img/game/readed.png);background-size: 100% 100%}
 .footer{
     position: fixed;
     bottom: 0;
@@ -45,13 +45,17 @@
     overflow: hidden;
     border-top: 1rpx solid #eee;   
     text-align: center; 
+    width: 686rpx;
+    margin: 0 auto
   }
   .progress{
     padding: 40rpx 0;
-    width: 500rpx;
+    width: 428rpx;
     float: left
   }
-  .progress-wrap text{float: left;display: block;font-size: 22rpx; line-height: 92rpx;margin-left: 40rpx}
+  .progress-wrap{margin-top: 32rpx;border-radius: 10rpx}
+  .progress-wrap text{float: left;display: block;font-size: 22rpx; line-height: 92rpx;margin-left: 40rpx;
+  border-radius: 10rpx;}
   .page{
       background-color: white;
   }
@@ -59,8 +63,8 @@
 .footer{height: 98rpx;background-color: #fff}
 .footer image{width: 30rpx;height: 30rpx;padding-top: 9rpx;padding-bottom: 10rpx}
 .footer{font-size: 24rpx;color: #48B949}
-.progress-wrap{border-bottom: 16rpx solid #F7F7F7;}
+
 .btn_swb{float: left;}
-.btn_swb image{width: 30rpx;height: 38rpx;padding-top: 25rpx;padding-left: 30rpx;padding-right: 38rpx}
+.btn_swb image{width: 40rpx;height: 40rpx;padding-top: 25rpx;padding-left: 30rpx;padding-right: 38rpx}
 page{background-color: #fff;font-size: 40rpx}
 .text-row{font-size: 30rpx;line-height: 60rpx}

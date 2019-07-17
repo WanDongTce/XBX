@@ -8,7 +8,7 @@ Page({
    */
   data: {
     id: 0,
-    percent: 0,
+    percent: "",
     text: [],
     duration: 0,
     currentTime: 0,
@@ -21,7 +21,9 @@ Page({
     onPlay: true,
     thumbnail: '',
     tabTitle: '',
-    currentTextLength: 0
+    currentTextLength: 0,
+    tiem_wei:"",
+    tiem_wei02: "00:00"
   },
   suspend: function () {
     if (flg == true) {
@@ -130,6 +132,7 @@ Page({
     //绑定音频播放地址
   
     innerAudioContext.src = audioUrl;
+    console.log(innerAudioContext.duration)
     innerAudioContext.onPlay(() => {
       console.log('开始播放')
       that.setData({
@@ -160,14 +163,18 @@ Page({
         percent = parseInt(100 * percent);
         let lastTime = parseInt(innerAudioContext.duration) - parseInt(innerAudioContext.currentTime);
         lastTime = that.timeFormat(lastTime);
-        let percentTime = that.timeFormat(parseInt(innerAudioContext.currentTime)) + '/' + that.timeFormat(parseInt(innerAudioContext.duration));
+        let percentTime = that.timeFormat(parseInt(innerAudioContext.duration));
+        let percentTime02 = that.timeFormat(parseInt(innerAudioContext.currentTime))
+       
         //
         console.log('currentId: ',currentId);
         console.log('that.data.toView: ',that.data.toView);
         //
         that.setData({
           percent: percent,
-          percentTime
+          percentTime,
+          tiem_wei: percentTime,
+          tiem_wei02: percentTime02
         });
         if (that.data.toView == currentId) {
           

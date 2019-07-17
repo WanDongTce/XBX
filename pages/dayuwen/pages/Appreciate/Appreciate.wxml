@@ -1,5 +1,5 @@
 <view class="header"><text>诗文赏析</text>
- <view class='reton_sun' bindtap='topshoop'><image src='/pages/main/images/Shopdetails/arowLt.png' class='reton'></image></view>
+ <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
 <view class="title">
   <text>译文及注释</text>

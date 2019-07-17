@@ -7,7 +7,7 @@
  <view class='btn_swb' wx:else bindtap='suspend'>
      <image src='/pages/dayuwen/images/start.png'  ></image>
   </view>
-	<progress class="progress" percent="{{percent}}" />
+	<progress activeColor="#4BACE2" class="progress" percent="{{percent}}" />
 	<text>{{currentTime}}</text>
 </view>
 <!--歌词-->

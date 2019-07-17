@@ -2,7 +2,7 @@
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
 <view class="search">
-<input type='text' placeholder='搜索关键字' bindinput="searchval" name="searchval" bindconfirm='search'></input>
+<input type='text' placeholder='请输入作者/诗词进行搜索' bindinput="searchval" name="searchval" bindconfirm='search'></input>
   <view class='btn' catchtap='search'>
     <text>搜索</text>
   </view>
@@ -14,7 +14,7 @@
         <text>历史搜索</text>
       </view>
       <view class='right' catchtap='del'>
-        <image src='/pages/dayuwen/images/del.png'></image>
+        <text>清空记录</text>
       </view>
       <view class='clearfix'></view>
    </view>

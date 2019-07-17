@@ -1,7 +1,8 @@
-<view class="header"><text>诗词朗诵</text>
+<view class="header"><text>诗歌朗诵</text>
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
-<view class="information">
+<view class="box">
+  <view class="information">
   <view class='content_box'>
     <view class='photo'>
       <image src='{{pic}}'></image>
@@ -13,7 +14,13 @@
       <view class='author'>
         <text>{{author}}</text>
       </view>
-      <view class='appreciation'>
+      
+    </view>
+    <view class='clearfix'></view>
+  </view>
+</view>
+<view class="function">
+  <view class='appreciation'>
         <view bindtap='goTo' data-postad="{{pid}}">
            <text>诗歌赏析></text>
         </view>
@@ -21,9 +28,8 @@
       <view class='hear'  bindtap='goting' data-name="{{rname}}" data-postad="{{pid}}">
         <text>听一听</text>
       </view>
-    </view>
-    <view class='clearfix'></view>
-  </view>
+       <view class='clearfix'></view>
+</view>
 </view>
 <view class='btn'>
   <view class='list {{selected?"active":""}}' data-current="0" bindtap="selected" >

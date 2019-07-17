@@ -6,9 +6,11 @@
 <view class="wrapBar">
 
 	<view class="search" catchtap='tosearch'>
-	<text>搜索关键字</text>
+	<text>寻找你想要的内容</text>
 	</view>
-	<text class="btn" bindtap='filter'>筛选</text>
+
+    <image src="https://m.ajihua888.com/wx_img/my/read1.png" class="btn" bindtap='filter'></image>
+
 </view>
 <!--list-->
 <view class="main">
@@ -19,7 +21,7 @@
     </view>
 		<view class="item">
 			<view class="item-title">{{item.rname}}</view>
-			<view class="item-info">{{item.content}}</view>
+			<!-- <view class="item-info">{{item.content}}</view> -->
 			<view class="item-author">{{item.cname+' · '+item.readname}}</view>
 		</view>
     <view wx:if="{{item.status==1}}">

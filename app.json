@@ -270,6 +270,7 @@
       "root": "pages/link/",
       "pages": [
         "pages/composition/composition",
+        "pages/composition/compositionDetail/compositionDetail",
         "pages/emptypage/emptypage"
         
       ]

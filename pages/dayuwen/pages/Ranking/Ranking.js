@@ -91,9 +91,11 @@ Page({
       success: function (res) {
         wx.setStorageSync("pic", res.data.data[0].item.imgUrl)
         wx.setStorageSync("rname", res.data.data[0].item.rname)
+        var text = res.data.data[0].item.cname + "" + res.data.data[0].item.readname
+      
         that.setData({
           name: res.data.data[0].item.rname,
-          author: res.data.data[0].item.cname + " · " + res.data.data[0].item.readname,
+          author: res.data.data[0].item.cname + " " + res.data.data[0].item.readname,
           pid: postId,
           pic: res.data.data[0].item.imgUrl
         })

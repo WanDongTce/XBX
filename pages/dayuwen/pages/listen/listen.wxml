@@ -2,8 +2,8 @@
 <!--nav-->
 <compontNavbar title="{{tabTitle}}" isShowBack="{{true}}"></compontNavbar>
 <view class='banner'>
-	<image class="btn" src="{{pic_sun}}" />
-  <image src='/pages/dayuwen/images/Compact.png' class='Compact'></image>
+
+
   <view class='bd'>
     <image class="btn" src="{{pic_sun}}" />
   </view>
