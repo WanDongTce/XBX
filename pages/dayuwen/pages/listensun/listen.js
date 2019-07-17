@@ -163,18 +163,14 @@ Page({
         percent = parseInt(100 * percent);
         let lastTime = parseInt(innerAudioContext.duration) - parseInt(innerAudioContext.currentTime);
         lastTime = that.timeFormat(lastTime);
-        let percentTime = that.timeFormat(parseInt(innerAudioContext.duration));
-        let percentTime02 = that.timeFormat(parseInt(innerAudioContext.currentTime))
-       
+        let percentTime = that.timeFormat(parseInt(innerAudioContext.currentTime)) + '/' + that.timeFormat(parseInt(innerAudioContext.duration));
         //
         console.log('currentId: ',currentId);
         console.log('that.data.toView: ',that.data.toView);
         //
         that.setData({
           percent: percent,
-          percentTime,
-          tiem_wei: percentTime,
-          tiem_wei02: percentTime02
+          percentTime
         });
         if (that.data.toView == currentId) {
           
