@@ -13,6 +13,7 @@
       </view>
       <view class='author'>
         <text>{{author}}</text>
+        <text>{{author02}}</text>
       </view>
       
     </view>

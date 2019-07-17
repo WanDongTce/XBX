@@ -11,10 +11,9 @@ border-radius: 10rpx;overflow: hidden;margin-left: -32rpx}
 .information .content_box .photo image{width: 100%;height: 100%}
 .information .content_box .information_sun{float: left;width: 526rpx;margin-left: 28rpx}
 .information .content_box .information_sun .name text{font-size: 32rpx;display: block;height: 32rpx;line-height: 32rpx}
-.information .content_box .information_sun .author text{font-size: 24rpx;display: block;height: 24rpx;line-height: 24rpx;
-color: #999999}
+.information .content_box .information_sun .author text{font-size: 24rpx;display: inline-block;height: 24rpx;line-height: 24rpx;
+color: #999999;margin-right: 20rpx}
 .information .content_box .information_sun .author{margin-top: 44rpx}
-
 .information .content_box .information_sun .appreciation text{font-size: 26rpx;display: block;height: 24rpx;line-height: 24rpx;
 color: #333333}
 .information .content_box .information_sun .appreciation{margin-top: 30rpx}
