@@ -1,10 +1,11 @@
 .clearfix{clear: both}
 page{background-color: #fff}
-.box{width: 654rpx;margin: 0 auto;border: 1px solid #E6E6E6;height: 262rpx}
+.box{width: 654rpx;margin: 0 auto;border: 1px solid #E6E6E6;height: 262rpx;border-radius: 10rpx;
+}
 .reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 34rpx;margin: 0 auto}
 .reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
 .header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: center;display: block;width: 100%;background-color: #fff;}
-.information{background-color: #fff;padding-top: 30rpx;}
+.information{background-color: #fff;padding-top: 30rpx;border-radius: 10rpx 10rpx 0 0 }
 .information .content_box{width: 690rpx;margin: 0 auto;}
 .information .content_box .photo{width: 100rpx;height: 100rpx;background-color: red;float: left;
 border-radius: 10rpx;overflow: hidden;margin-left: -32rpx}
@@ -13,7 +14,7 @@ border-radius: 10rpx;overflow: hidden;margin-left: -32rpx}
 .information .content_box .information_sun .name text{font-size: 32rpx;display: block;height: 32rpx;line-height: 32rpx}
 .information .content_box .information_sun .author text{font-size: 24rpx;display: inline-block;height: 24rpx;line-height: 24rpx;
 color: #999999;margin-right: 20rpx}
-.information .content_box .information_sun .author{margin-top: 44rpx}
+.information .content_box .information_sun .author{margin-top: 30rpx}
 .information .content_box .information_sun .appreciation text{font-size: 26rpx;display: block;height: 24rpx;line-height: 24rpx;
 color: #333333}
 .information .content_box .information_sun .appreciation{margin-top: 30rpx}
@@ -22,7 +23,7 @@ color: #333333}
 .information .content_box .information_sun .hear text{display: block;line-height: 50rpx;text-align: center;
 border: 2rpx solid #48B947;color: #48B947;border-radius: 50rpx;font-size: 26rpx}
 .function{margin: 0 auto;width: 590rpx;border-top: 1px solid #E6E6E6;padding-top: 24rpx;padding-bottom: 24rpx;
-margin-top: 30rpx}
+margin-top: 30rpx;}
 .function .appreciation{float: left}
 .function .appreciation text{font-size: 26rpx;color: #333}
 .function .hear{float: right;background-color: #F4F4F4;border-radius: 24rpx}
