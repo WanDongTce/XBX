@@ -1,6 +1,7 @@
 /* pages/recorder/recorder.wxss */
 page {
   background-color: #fff;
+  background-image: url(https://m.ajihua888.com/wx_img/game/readed.png);background-size: 100% 100%
 }
 .btn {
   width: 100%;
@@ -8,7 +9,7 @@ page {
   border: 2rpx solid red;
 }
 .current {
-  color: rgb(29, 220, 153);
+  color: #4BACE2;
   font-size: 30rpx;
 }
 .text-wrap {
@@ -89,6 +90,12 @@ page {
 }
 .footer-btn {
   flex: 1 1 auto;
+  
+}
+.footer{
+  background-color: #fff;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx
 }
 .footer .list:nth-child(1) image {
   width: 34rpx;
@@ -130,3 +137,4 @@ page {
 .footer .list:nth-child(5) text {
   font-size: 24rpx;
 }
+.footer image{margin-bottom: 12rpx;}

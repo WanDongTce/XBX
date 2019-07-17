@@ -15,7 +15,7 @@ border-radius: 50%;overflow: hidden}
 .banner .start02{width: 50rpx;height: 62rpx;position:absolute;top: 0;left: 0;z-index: 3}
 .banner .show{display: block}
 .current {
-  color: rgb(29, 220, 153);
+  color: #4BACE2;
   font-size: 48rpx;
 }
 .text-wrap {
