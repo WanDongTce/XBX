@@ -8,9 +8,7 @@
 	<view class="search" catchtap='tosearch'>
 	<text>寻找你想要的内容</text>
 	</view>
-
     <image src="https://m.ajihua888.com/wx_img/my/read1.png" class="btn" bindtap='filter'></image>
-
 </view>
 <!--list-->
 <view class="main">
@@ -22,7 +20,7 @@
 		<view class="item">
 			<view class="item-title">{{item.rname}}</view>
 			<!-- <view class="item-info">{{item.content}}</view> -->
-			<view class="item-author">{{item.cname+' · '+item.readname}}</view>
+			<view class="item-author">{{item.readname}}</view>
 		</view>
     <view wx:if="{{item.status==1}}">
        <image src="/pages/dayuwen/images/yij.png" class="yij show"></image>

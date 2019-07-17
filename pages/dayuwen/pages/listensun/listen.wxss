@@ -26,7 +26,7 @@ border-radius: 50%;overflow: hidden}
 .text-content {
   text-align: center;
   font-size: 36rpx;
-  margin-top:50rpx;
+  margin-top:280rpx;
 }
 .text-row {
 
