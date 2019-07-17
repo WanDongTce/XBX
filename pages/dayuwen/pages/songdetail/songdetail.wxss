@@ -1,7 +1,8 @@
 /* pages/songdetail/songdetail.wxss */
 .reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 34rpx;margin: 0 auto}
 .reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
-.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: center;display: block;width: 100%;background-color: #fff;}
+.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: left;display: block;width: 100%;background-color: #fff;}
+.header text{display: inline-block;margin-left: 80rpx;line-height:80rpx;margin-top: -10rpx}
 page{background-color: #fff}
 .wrapBar{
     display: flex;

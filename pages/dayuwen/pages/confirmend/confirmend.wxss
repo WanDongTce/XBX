@@ -62,7 +62,7 @@ page{background-image: url(https://m.ajihua888.com/wx_img/game/readed.png);backg
 
 .footer{height: 98rpx;background-color: #fff}
 .footer image{width: 30rpx;height: 30rpx;padding-top: 9rpx;padding-bottom: 10rpx}
-.footer{font-size: 24rpx;color: #48B949}
+.footer{font-size: 24rpx;color: #666666}
 
 .btn_swb{float: left;}
 .btn_swb image{width: 40rpx;height: 40rpx;padding-top: 25rpx;padding-left: 30rpx;padding-right: 38rpx}

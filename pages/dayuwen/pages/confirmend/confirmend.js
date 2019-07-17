@@ -72,9 +72,21 @@ Page({
     this.startMusic(filePath);
   },
   reset: function () {
-    wx.navigateBack({
-      delta: 1
-    });
+    wx.showModal({
+      title: '',
+      content: '确认放弃当前？',
+      success(res) {
+        if (res.confirm) {
+          wx.navigateBack({
+            delta: 1
+          });
+
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }  
+    }) 
+   
   },
   onUpload: function () {
     let filePath = wx.getStorageSync('filePath');

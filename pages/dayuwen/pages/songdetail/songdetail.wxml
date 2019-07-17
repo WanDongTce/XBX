@@ -1,6 +1,6 @@
 <!--pages/songdetail/songdetail.wxml-->
 <!--navbar-->
-<view class="header"><text>朗诵</text>
+<view class="header"><text>诗歌朗读</text>
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
 <view class="wrapBar">

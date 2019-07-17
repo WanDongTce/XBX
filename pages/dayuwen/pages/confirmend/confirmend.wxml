@@ -35,7 +35,7 @@
 	</view>
 	<view class="btn" bindtap="onUpload">
 		<image class="icon" src="../../images/End.png" />
-		<view>结束</view>
+		<view>保存</view>
 	</view>
 	<!--<button class="btn" bindtap="reset">重置</button>
 	<button class="btn" bindtap="onUpload">结束</button>-->

@@ -42,13 +42,13 @@
 	<button class="footer-btn" bindtap="resumeRecorder">继续</button>
 	<button class="footer-btn" bindtap="recorder">重录</button>
 	<button class="footer-btn" bindtap="stopRecorder">结束</button> -->
-  <view class='list'  bindtap="music">
+ 
+  <view class='list'data-id="{{isRecoder}}" bindtap="changeClick" wx:if="{{isRecoder==1}}"> <image src='/pages/dayuwen/images/start.png'></image><text>{{changeText}}</text></view>
+   <view class='list'data-id="{{isRecoder}}" bindtap="changeClick" wx:else> <image src='/pages/dayuwen/images/suspend.png'></image><text>{{changeText}}</text></view>
+ <view class='list'  bindtap="music">
     <image src='/pages/dayuwen/images/Original.png'></image>
     <text>原声</text>
   </view>
-  <view class='list'data-id="{{isRecoder}}" bindtap="changeClick" wx:if="{{isRecoder==1}}"> <image src='/pages/dayuwen/images/start.png'></image><text>{{changeText}}</text></view>
-   <view class='list'data-id="{{isRecoder}}" bindtap="changeClick" wx:else> <image src='/pages/dayuwen/images/suspend.png'></image><text>{{changeText}}</text></view>
-
   <view class='list'bindtap="recorder"><image src='/pages/dayuwen/images/again.png'></image><text>重录</text></view>
   <view class='list' bindtap="stopRecorder"><image src='/pages/dayuwen/images/End.png'></image><text>结束</text></view>
 

@@ -1,4 +1,4 @@
-<view class="header"><text>诗文赏析</text>
+<view class="header"><text>诗歌赏析</text>
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
 <view class="title">
