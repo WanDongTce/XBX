@@ -165,6 +165,7 @@ Page({
   //重录
   recorder: function () {
     let that = this;
+    luyin = true
     rm.pause();
     
     clearInterval(timer);
