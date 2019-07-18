@@ -3,6 +3,7 @@ const rm = wx.getRecorderManager()
 let recoderCurrentTimes = 0;
 let timer = null, asnycTextTimer = null, timerOut = null;
 const app = getApp();
+var luyin=false
 Page({
   /**
    * 页面的初始数据
@@ -42,11 +43,12 @@ Page({
   //结束录音 上传文件
   uploadFile: function () {
     //
+    luyin=false
     rm.stop();
     let that = this;
-   
+    console.log(111)
     rm.onStop(function (res) {
-      console.log(111)
+      console.log(222)
       clearInterval(timer);
       clearInterval(asnycTextTimer);
       that.setData({
@@ -112,6 +114,7 @@ Page({
   //start
   startRecorder: function () {
     let that = this;
+    luyin=true
     innerAudioContext.stop();
     //录音同步歌词时间
     that.recoderLastTime();
@@ -163,6 +166,7 @@ Page({
   recorder: function () {
     let that = this;
     rm.pause();
+    
     clearInterval(timer);
     clearInterval(asnycTextTimer);
     wx.showModal({
@@ -198,11 +202,21 @@ Page({
     wx.showModal({
       title: '提示',
       content: '确认完成录制？',
+      
       success(res) {
         if (res.confirm) {
           // rm.stop();
+          if(luyin==false){
+            wx.showModal({
+              title: '提示',
+              content: '请录制音频',
+              showCancel: false,
+            })
+          }else{
+            that.uploadFile();
+          }
         
-          that.uploadFile();
+         
         } else if (res.cancel) {
           rm.resume();
           //录音同步歌词时间
