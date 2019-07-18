@@ -113,7 +113,9 @@ Page({
     })
   },
   Recitation: function (options) {
-    postId = options.id
+    var shiciIDsun = wx.getStorageSync("shiciID")
+    postId = shiciIDsun
+    
     var that = this
     wx.request({
       url: app.requestUrl + 'v14/chinese/myreading',
@@ -210,6 +212,12 @@ Page({
       }
     })
     wx.hideLoading();
+
+  },
+  onShow: function (postId) {
+
+    var that = this
+    that.Recitation(postId)
 
   }
 })
