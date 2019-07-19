@@ -99,7 +99,8 @@ Page({
     });
     //根据路径不同，返回层级不同
     let r = getCurrentPages().length;
-    if (r == 5) {
+    console.log(r)
+    if (r == 6) {
       setTimeout(function () {
         wx.navigateBack({
           delta: 2
