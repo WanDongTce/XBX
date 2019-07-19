@@ -1,10 +1,14 @@
 <view class="header"><text>店铺详情</text><view class='reton_sun' bindtap='topshoop'><image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
-<view class='banner'>
+<view wx:if="{{imgurl.length>0}}" class='banner'>
   <swiper indicator-dots="true">
+  
     <swiper-item; wx:for="{{imgurl}}">
       <image src='{{item.url}}'></image>
     </swiper-item>
   </swiper>
+</view>
+<view wx:else class='banner'>
+  
 </view>
 <view class='information'>
   <view class='content_box'>

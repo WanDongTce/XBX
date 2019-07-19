@@ -38,7 +38,7 @@ Page({
             if (res.data.code == 200) {
 
               var a = res.data.data[0].list;
-
+              console.log(a)
               var number = a.length
 
               if (number == 0) {

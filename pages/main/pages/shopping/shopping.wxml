@@ -37,8 +37,8 @@
       <view class='clearfix'></view>
     </view>
     <view class='bottom_box'>
-       <view class='photo01'wx:if="{{index<3}}" wx:for="{{item.goods_list}}" wx:index='index'  wx:key="iindex" wx:for-item="iitem">
-          <image  src='{{iitem.image}}'></image>
+       <view class='photo01'wx:if="{{index<3}}" wx:for="{{item.images}}" wx:index='index'  wx:key="iindex" wx:for-item="iitem">
+          <image  src='{{iitem.url}}'></image>
         </view>
         <view class='clearfix'></view>
     </view>
