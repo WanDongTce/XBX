@@ -1,4 +1,4 @@
-<!-- <import src="./actyTemplate.wxml" /> -->
+<import src="./actyTemplate.wxml" />
 <!-- <compontNavbar title="{{idname}}" isShowBack="{{false}}" url=""></compontNavbar> -->
 
 
