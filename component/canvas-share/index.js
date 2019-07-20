@@ -9,9 +9,9 @@ function createRpx2px() {
 const rpx2px = createRpx2px();
 const canvasW = rpx2px(windowWidth * 2 * 2);
 const canvasH = rpx2px(windowHeight * 2 * 2);
-const radius = rpx2px(90 * 2);
+const radius = rpx2px(130 * 2);
 let QRImageX = canvasW / 2 - radius;
-let QRImageY = canvasH / 2 + radius / 2;
+let QRImageY = canvasH / 2 + radius/2 - 10;
 
 let localQR = '', localImageBg = '', titleH = rpx2px(420 * 2), titleColor = '#f2f2f2', base64 = '';
 
@@ -20,14 +20,14 @@ function getImageSrc(url, gametype) {
     wx.request({
       url: url,
       data: {
-        gamepath: 'game',
-        dirname: gametype
+        imgname: gametype
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       method: 'POST',
       success: function (res1) {
+        console.log(res1)
         let imageSrc = res1.data.data[0].url;
         wx.downloadFile({
           url: imageSrc,
@@ -217,33 +217,34 @@ Component({
     },
     loadNetworkImage(loadtype, gametype) {
       //loadtype 0为本地图片，1为网络图片
-      let ercodeUrl = `https://social.ajihua888.com/v14/public/qrcode?gameurl=${this.properties.gameurl}`;
-      let imageUrl = 'https://social.ajihua888.com/v14/public/games';
+      let ercodeUrl = `https://social.54xuebaxue.com/v14/public/qrcode?gameurl=${this.properties.gameurl}`;
+      let imageUrl = 'https://social.54xuebaxue.com/v14/public/wx-images';
       if (gametype == 1) {
-        QRImageX = canvasW * 0.6;
-        QRImageY = canvasH * 0.63;
-        titleH = rpx2px(540 * 2);
-        titleColor = '#ffc107';
+        // QRImageX = canvasW * 0.6;
+        // QRImageY = canvasH * 0.63;
+        titleH = rpx2px(200 * 2);
+        titleColor = '#fff';
       } else if (gametype == 2) {
-        QRImageX = canvasW / 2 - radius;
-        QRImageY = canvasH / 2 + radius / 2;
-        titleH = rpx2px(400 * 2);
-        titleColor = '#ff5722';
+        QRImageX = canvasW / 2 - radius + 10;
+        QRImageY = canvasH / 2 + radius/2 - 33;
+        titleH = rpx2px(250 * 2);
+        titleColor = '#fff';
       } else if (gametype == 3) {
         QRImageX = canvasW / 2 - radius;
-        QRImageY = canvasH / 2 + radius / 2;
-        titleH = rpx2px(400 * 2);
-        titleColor = '#009688';
+        QRImageY = canvasH / 2 + radius/2 + 30;
+        titleH = rpx2px(385 * 2);
+        titleColor = '#000';
       } else if (gametype == 4) {
-        QRImageX = canvasW / 2 - radius;
-        QRImageY = canvasH / 2 + radius / 2;
-        titleH = rpx2px(480 * 2);
-        titleColor = '#ffffff';
+        // radius = rpx2px(130 * 2);
+        QRImageX = canvasW / 2 - radius + 98;
+        QRImageY = canvasH / 6 - 38;
+        titleH = canvasH/1.5 - 25;
+        titleColor = '#000';
       } else if (gametype == 5) {
-        QRImageX = canvasW / 2 - radius;
-        QRImageY = canvasH / 2 + radius / 2;
-        titleH = rpx2px(520 * 2);
-        titleColor = '#4caf50';
+        QRImageX = canvasW / 2 - radius - 10;
+        QRImageY = (canvasH / 2) - 90;
+        titleH = rpx2px(240 * 2);
+        titleColor = '#000';
       }
       if (loadtype) {
         //二维码
@@ -255,7 +256,7 @@ Component({
             }
           }
         });
-        let dirpath = 'image'+this.properties.gametype+'.jpg';
+        let dirpath = 'game_share_'+this.properties.gametype;
         const backgroundPromise = getImageSrc(imageUrl, dirpath);
         const avatarPromise = getImageInfo(ercodeUrl);
         return { avatarPromise, backgroundPromise }
@@ -292,7 +293,7 @@ Component({
           );
           // 绘制标题
           const wxs = wx.getSystemInfoSync()
-          ctx.setFontSize(wxs.pixelRatio * 28)
+          ctx.setFontSize(wxs.pixelRatio * 20)
           ctx.setTextAlign('center')
           ctx.setFillStyle(titleColor)
           ctx.fillText(
