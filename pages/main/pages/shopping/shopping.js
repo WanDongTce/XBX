@@ -1,5 +1,7 @@
 const network = require("../../../../utils/main.js");
 const app = getApp();
+var page = 1
+var yucunlisr = []
 Page({
 
   /**
@@ -8,7 +10,7 @@ Page({
   data: {
     number_sun:0
   },
-  getList: function () {
+  getList: function (page) {
     var that = this;
     var img;
     var lng;
@@ -30,6 +32,7 @@ Page({
             // "id":1
             "lng": lng,
             "lat": lat,
+            "page":page
 
           },
           success: function (res) {
@@ -38,8 +41,11 @@ Page({
             if (res.data.code == 200) {
 
               var a = res.data.data[0].list;
-              console.log(a)
-              var number = a.length
+              for (var i = 0; i < a.length; i++) {
+                yucunlisr.push(a[i])
+              }
+            
+              var number = yucunlisr.length
 
               if (number == 0) {
                 that.setData({
@@ -54,7 +60,7 @@ Page({
               }
 
               that.setData({
-                list: a,
+                list: yucunlisr,
 
               })
 
@@ -102,7 +108,7 @@ Page({
     var that = this
     // console.log(that.length)
 
-    that.getList();
+    that.getList(page);
     
   },
 
@@ -145,7 +151,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    page = page + 1
+    this.getList(page)
   },
 
   /**
