@@ -167,7 +167,7 @@ Component({
           filePath: imageFile,
         }).then(() => {
           wx.showModal({
-            content: '以保持到本地相册，快乐叫小伙伴们来围观吧！',
+            content: '保存图片到手机相册后，将图片分享到您的圈子！',
             showCancel: false,
             confirmText: '我知道了',
             success: function(res){
