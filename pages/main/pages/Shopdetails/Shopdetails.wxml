@@ -59,8 +59,9 @@
        <text>{{item.name}}</text>
     </view>
   </view>
-  <view class='list_sun'>
-  <navigator class='list' wx:for="{{list_sun}}"  url="{{'/pages/home/pages/ecology/goodsDetailNew/goodsDetailNew?id=' + item.id}}">
+  <view class='list_sun' >
+  <scroll-view class="list_box" bindscrolltolower='scrollToLower' scroll-y='{{true}}' >
+   <navigator class='list' wx:for="{{list_sun}}"  url="{{'/pages/home/pages/ecology/goodsDetailNew/goodsDetailNew?id=' + item.id}}">
      <view class='photo'>
           <image src='{{item.image}}'></image>
         </view>
@@ -84,6 +85,7 @@
         </view>
          <view class='clearfix'></view>
   </navigator>
+  </scroll-view>
 
     <!-- <view class='list' wx:for="{{list_sun}}">
        

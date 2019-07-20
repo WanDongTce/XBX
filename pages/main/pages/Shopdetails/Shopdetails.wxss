@@ -29,7 +29,7 @@ background-size: 26rpx 24rpx;float: left;margin-right: 5rpx}
 .list_box .btn .btn_sun{text-align: center}
 .list_box .btn .active{background-color: #fff}
 .list_box .btn .btn_sun text{font-size: 30rpx;color: #333333;display: inline-block;line-height: 96rpx;}
-.list_box .list_sun{float: left;width: 550rpx;height: 100%;overflow-y:scroll}
+.list_box .list_sun{float: left;width: 550rpx;height: 100%;}
 .list_box .list_sun .list{margin-bottom: 48rpx}
 .list_box .list_sun .photo{width: 120rpx;height: 120rpx;float: left;margin-left: 32rpx}
 .list_box .list_sun .right{float: right;width: 316rpx;margin-right: 32rpx}
@@ -47,3 +47,4 @@ background-size: 26rpx 24rpx;float: left;margin-right: 5rpx}
 .list_box  .list .money_box .number image{float: left;display: block;width: 36rpx;height: 36rpx;}
 .list_box  .list .money_box .number text{display: block;float: left;font-size: 22rpx;height: 36rpx;line-height: 36rpx;
 padding-left: 15rpx;padding-right: 15rpx}
+scroll-view{height: 100%}

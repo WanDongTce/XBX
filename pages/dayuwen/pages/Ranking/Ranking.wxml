@@ -64,8 +64,8 @@
         <text>{{item.nickname}}</text>
       </view>
       <view class='number'>
-      <image src='/pages/dayuwen/images/Fabulous.png'></image>
-        <text>{{item.praisenum}}</text>
+     
+        <text>{{item.praisenum}}赞</text>
       </view>
       <view class='clearfix'></view>
     </view>
@@ -82,8 +82,7 @@
         <text>{{item.addtime}}</text>
       </view>
       <view class='number'>
-      <image src='/pages/dayuwen/images/Fabulous.png'></image>
-        <text>{{item.praisenum}}</text>
+        <text>{{item.praisenum}}赞</text>
       </view>
     </view>
   </view>

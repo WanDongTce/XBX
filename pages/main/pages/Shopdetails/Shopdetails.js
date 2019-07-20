@@ -1,5 +1,7 @@
 const network = require("../../../../utils/main.js");
 const app = getApp();
+var page = 1
+var yucunlisr = []
 Page({
 
   /**
@@ -139,6 +141,7 @@ Page({
         "mobile": app.userInfo.mobile,
         "token": app.userInfo.token,
         "bid": this.data.id,
+        "page":page
 
       },
       success: function (res) {
@@ -149,10 +152,12 @@ Page({
 
           var a = res.data.data[0].list;
 
-          console.log(a)
+          for (var i = 0; i < a.length; i++) {
+            yucunlisr.push(a[i])
+          }
           _this.setData({
-            list: a,
-            list_sun: a
+            list: yucunlisr,
+            list_sun: yucunlisr
           })
         } else {
           wx.showToast({
@@ -363,8 +368,14 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
+  scrollToLower:function(){
+    console.log(page)
+    page = page + 1
+   
+    this.shangpin(page)
+  },
   onReachBottom: function () {
-    
+  
   },
 
   /**
