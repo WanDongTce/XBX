@@ -1,5 +1,5 @@
 <!--pages/song/song.wxml-->
-<view class="header"><text>朗诵</text>
+<view class="header"><text>百宝箱</text>
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
 <view class="wrap">

@@ -9,7 +9,7 @@ page{background-color: #fff}
 .list_box{margin-top: 30rpx}
 .list_box .list{width: 686rpx;margin: 0 auto;box-shadow:0 0 20rpx 3rpx rgba(0, 0, 0, 0.2);margin-bottom: 40rpx;padding-top: 32rpx;
 padding-bottom: 32rpx}
-.list_box .list .top .pic{width: 88rpx;height: 88rpx;border-radius: 50%;background-color: red;float: left;overflow: hidden}
+.list_box .list .top .pic{width: 88rpx;height: 88rpx;border-radius: 50%;float: left;overflow: hidden}
 .list_box .list .top .pic image{width: 100%;height: 100%}
 .list_box .list .top .name_box{width: 501rpx;float: right}
 .list_box .list .top .name_box .name text{font-size: 32rpx;height: 32rpx;line-height: 32rpx}
