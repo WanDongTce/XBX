@@ -4,7 +4,7 @@ const app = getApp();
 var page = 1;
 var hasmore = null;
 var search = '';
-var nianji = app.userInfo.grade_id;
+var nianji = "";
 var gametype = '';
 
 Page({
@@ -60,6 +60,7 @@ Page({
                 "gametype": gametype
             },
             success: function (res) {
+              console.log(res.data)
                 wx.hideLoading();
                 if (res.data.code == 200) {
                     var a = res.data.data[0].list;
