@@ -368,9 +368,14 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  scrollToLower:function(){
+    console.log(page)
     page = page + 1
+   
     this.shangpin(page)
+  },
+  onReachBottom: function () {
+  
   },
 
   /**
