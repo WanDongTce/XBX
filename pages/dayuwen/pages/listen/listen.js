@@ -69,6 +69,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //分享调整
+    let r = getCurrentPages();
+    r = r[r.length - 1];
+    console.log(r.route, ":", r.options);
+    if (app.userInfo.token == undefined) {
+      // let r = getCurrentPages();
+      // console.log(r); r.options id=35&good=3&scid=3
+      wx.setStorageSync('share', 'true');
+      wx.navigateTo({
+        url: `/pages/common/login/login?next=${r.route}&id=${r.options.id}&good=${r.options.good}&scid=${r.options.scid}`
+      });
+    }
+    //
     var pic_sun=wx.getStorageSync("pic")
 
     console.log('options:',options);

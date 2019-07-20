@@ -11,9 +11,15 @@ Component({
     externalClasses: ['component-class'],
     methods: {
         goBack(e){
+          if (getCurrentPages().length < 2) {
+            wx.reLaunch({
+              url: '/pages/main/pages/home/home'
+            })
+          } else {
             wx.navigateBack({
-                delta: 1
+              delta: 1
             });
+          } 
         }
     }
 })
