@@ -323,9 +323,14 @@ Page({
                     // console.log(res)
                     if (res.data.code == 200) {
                         that.saveInfo(name);
+                        /*
                         wx.navigateTo({
                             url: '/pages/common/addReferee/addReferee'
                         })
+                        */
+                        wx.switchTab({
+                          url: '/pages/main/pages/home/home'
+                        });
                     } else {
                         wx.showToast({
                             title: res.data.message,
@@ -347,9 +352,14 @@ Page({
         };
     },
     next: function () {
-        wx.navigateTo({
-            url: '/pages/common/addReferee/addReferee'
-        })
+      /*
+      wx.navigateTo({
+        url: '/pages/common/addReferee/addReferee'
+      })
+      */
+      wx.switchTab({
+        url: '/pages/main/pages/home/home'
+      });
     },
     saveInfo(name){
         var that = this;
