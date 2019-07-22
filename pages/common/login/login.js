@@ -154,47 +154,9 @@ Page({
                         }
 
                       } else  {
-                        //登录后直接进入 不搜集用户信息
-                        var name = (app.userInfo.mobile).substring(7, 11);
-                        network.POST({
-                          url: 'v14/user-info/update',
-                          params: {
-                            "mobile": app.userInfo.mobile,
-                            "token": app.userInfo.token,
-                            "nickname": name,
-                            "sex": 2,
-                            "province_id": 6,
-                            "city_id": 37,
-                            "district_id": 430,
-                            "schoolid": 20941,
-                            "gradeid": 1,
-                            "classid": 1
-                          },
-                          success: function (res) {
-                            wx.hideLoading();
-                            console.log(res)
-                            if (res.data.code == 200) {
-                              // that.saveInfo(name);
-                              wx.navigateTo({
-                                url: '/pages/main/pages/home/home'
-                              })
-                            } else {
-                              wx.showToast({
-                                title: res.data.message,
-                                icon: 'none',
-                                duration: 1000
-                              })
-                            }
-                          },
-                          fail: function () {
-                            wx.hideLoading();
-                            wx.showToast({
-                              title: '服务器异常',
-                              icon: 'none',
-                              duration: 1000
-                            })
-                          }
-                        });
+                          wx.navigateTo({
+                              url: '/pages/common/presonalInfo/presonalInfo'
+                          });
                         }
                     } else {
                         wx.showToast({
