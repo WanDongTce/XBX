@@ -32,7 +32,7 @@ Page({
     },
     onShow: function () {
         var that = this;
-        that.getList(true);
+      that.getList(nianji);
     },
     /*
     inputFn: function(e){
@@ -49,6 +49,7 @@ Page({
     getList: function (tabFlag) {
         var that = this;
         that.hideOption();
+      console.log(nianji)
         network.POST({
             url: 'v14/study/game-list',
             params: {
@@ -112,7 +113,8 @@ Page({
         page = 1;
         hasmore = null;
         search = '';
-        nianji = app.userInfo.grade_id;
+        // nianji = app.userInfo.grade_id;
+      nianji = '';
         this.setData({
             nianji: nianji,
             showEmpty: false
