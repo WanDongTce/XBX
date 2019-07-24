@@ -117,7 +117,7 @@ Page({
         return timestamp
     },
     toDetail(e){
-        // this.memberExpires(e);
+        //this.memberExpires(e);
         var a = e.currentTarget.dataset;
         console.log(a);
         var start_time = Date.parse(new Date())/1000;

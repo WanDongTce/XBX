@@ -34,3 +34,44 @@ page{
     right:25rpx;
     bottom:25rpx;
 }
+.center {
+  width: 80%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+}
+.popwrap{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: 40rpx;
+}
+.popwrap-img{
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.pop-text{
+  font-size: 28rpx;
+  margin-bottom: 40rpx;
+  color: #666;
+}
+.pop-btn{
+margin-bottom: 30rpx;
+border-width: 0;
+width: 60%;
+background-color: #4BACE2;
+color: white;
+border-radius: 46rpx;
+}
+.pop-btn-outline{
+  background-color: white;
+  color: #4BACE2;
+  border: 1px solid #4BACE2;
+}
+button.pop-btn::after{
+  content: "";
+}
+.isvip{
+  overflow: hidden;
+}
