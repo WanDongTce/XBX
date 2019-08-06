@@ -274,6 +274,13 @@
         "pages/emptypage/emptypage"
         
       ]
+    },
+    {
+      "root": "pages/Preview/",
+      "pages": [
+        "pages/Preview/Preview"
+        
+      ]
     }
   ],
   "window": {
