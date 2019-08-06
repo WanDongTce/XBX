@@ -1,0 +1,12 @@
+<!--pages/Preview//pages/no-question/index.wxml-->
+<navbar title="记一笔" isShowBack="{{true}}"></navbar>
+<!-- card -->
+<form bindsubmit="bindFormSubmit">
+  <view class="card">
+    <textarea placeholder="输入您要记录的内容" name="textarea" />
+  </view>
+  <view class="btn-group">
+  <button class="btn" form-type="submit">取消</button>
+  <button class="btn1 btn-active" form-type="submit">提交</button>
+  </view>
+</form>

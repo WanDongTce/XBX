@@ -278,8 +278,10 @@
     {
       "root": "pages/Preview/",
       "pages": [
-        "pages/Preview/Preview"
-        
+        "pages/Preview/Preview",
+        "pages/no-question/index",
+        "pages/comment/index",
+        "pages/result/index"
       ]
     }
   ],
@@ -291,6 +293,7 @@
     "navigationStyle": "custom"
   },
   "usingComponents": {
+    "navbar": "/component/navigation/navigation",
     "van-overlay": "/component/overlay/index",
     "van-popup": "/component/popup/index",
     "van-transition": "/component/transition/index",

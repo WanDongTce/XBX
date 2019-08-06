@@ -33,8 +33,16 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "预习了",
+					"pathName": "pages/Preview/pages/result/index",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

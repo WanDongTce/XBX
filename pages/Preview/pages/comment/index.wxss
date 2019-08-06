@@ -1,0 +1,94 @@
+/* pages/Preview//pages/no-question/index.wxss */
+.card{
+  margin: 30rpx 20rpx;
+  box-shadow: 0 0 15rpx 10rpx #eee;
+  padding: 30rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  margin-bottom: 30rpx;
+  font-size: 40rpx;
+  color: #333;
+}
+.item{
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align: left;
+  padding: 20rpx 30rpx;
+  border: 1rpx solid #97dfff;
+  width: 85%;
+  border-radius: 36rpx;
+  margin: 20rpx;
+}
+.item-right{
+  background-color: #0DCE92;
+  border-width: 0;
+  color: white;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAmCAYAAAC29NkdAAADSUlEQVRYR82YTYiVZRTHf/8iiyLcaGBgVIRfKFGLSA1pkSkzji3UhSDiokEUCwPBwFqpFLZIQ1uIIC6UaAxCBJUkRBkTRZQURUPEihG0EBFcuPAvJ54L77y999733nnv3Dmby71zPn5znuc55zyPGENi+2VgGfAhMA34WmOBz/YM4MsE9zTwF7BE0rmuAtp+AdgMfAoEWMhFoEfS7fjSNUDbbwI/AlMyqzgI9Eq6X/utK4C2lwL7gOczcCcS3MPstht1QNtrgJ3AUxmQs3EwspnrSgYT3Pe5g/kHMEfSP0UHdtQyaHtlWtYsx7/AbEkBWSijAmg76tph4JkMxWNgvqRfG5W6jgOmGncGeDEHslHStmZ1uKOAtgMqDkB0haxENhdLcrcBB4AoKVm5A8ySFJ9NpWMZtN0P7C4g6JMUGSwlHQG0/UZqWdHKsrJf0opSZEmpckDbUYCjZb2bA7kXe7Hs0tZsOwEYjX9HQZb6Je1pJXuhWymg7VeAK0B+aX8H3pIUta8lqRrwENBXQBAF+XhLZFXvQdu9qVvkOY5I6mkHrukSp9M4JGnYCJQPZnsccBV4vQDknZiMKwO0HZPtImBt9ErgArBQ0t16QWxvAL4p+PsxSQvbhRuWQdsvAR8Dq4HY7Fm5Bnwg6e+C7E0EYhoZXwAyT9KpEQHafg+IITJuU9lpI+/3BvB+HtL2rpTtvP6gpPA9IpHtz4GvSnq5nIbLB6FvezpwKXPhybpZLumHkn7rqv1XZmx/AnxX0tlBSZHtsDsKLCiwi0FgsqRHJX02BkzB6i1VkXGUlPjn6jX9rZK+GClc/pBEqfgNeLuE45ORIeC1OrqvSrpVwk9TlWGdxPZM4DwQsO3KaUlz2zXO2/2v1dneBGwZQYB1kmK7VCJFgFFq4mRObSNCDAOTWh2pGsUpHBbSLexYG4C/SIobXGVSd5qx/TPwUYuRPpO0vUWbhuqNAONJLOa42qtTmbgxMUdbrEwazoO29wKrSka7KalomilpXqzWDDCGhuvAsyWi7JK0roReSypNJ2rb3wLr63iNi3dckA7EW5+keGupVMoATkhPss+lyDWoeHz8SdJQpUQ5Z00BQz9lcTYQLwUDkv7sJFTW9xNwlPaJXE5VwQAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
+  background-size: 30rpx 30rpx;
+  background-position: right;
+}
+.item-wrong{
+  background-color: #F9867B;
+  border-width: 0;
+  color: white;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAYAAACr8emlAAADdElEQVRYR72Ye+jeYxjGP9fYyB8zlqYUNTkUbVNsJf9QhCaTyEjkH2IJi6YplJLCZDn9IW2EpGxSxhpSDiE5zVlyPhTFHEsuXev58du79/0+z/e1/e56e3v7Xvd9X+9zuO/r/oqdYLY3AccBfwFfA+8BrwJPAi9L+rs1rVqBfXC2PwP2H+HzOXA7cI+kX2pxdzhB23sDP9QSA98AF0l6vAu7MwieWLaygSObJR0+1QRvAa5oYQfcKemSqSb4PnBII8ElktZPGUHb84E3Gsn9CcyW9GsnQdv3Ax8DHwAfAR9K2tKYZBuY7buBCxt910k6rYaV7Z+AmQPAb0O0fJZL+rkWyPaepebtUcOW50slPVzDhuAjwBkdwLWSzqsFsr0CuLGGK8+zQ3Mk/V7Dh+DRwAsV4PmS1ozC2J4FfArku8XuknRxC3BrHbT9KHB6h0MO8kJJ7w7D2L4ZWN6SsGDmS3qrBT9BcF9gM5AuMMo+KSR/nAywvQB4DdilJWF2S9IxjVj+7SS2TwE62w7wInC8pN/Kyu+W5g+EZKudWmtvkwNt0+psXwdcW8n0LLA4JG3fATSdpRLzHWCeJLf+m0GC+Z26eE4lwJvAE8DK1kQFd7akh/r4bCcWbM8ANgDH9gnUgM0ZXyApGrHZhqoZ2ym2zwCLmiPVgSdLimDtZSPlVukMT+fm9oo4HLxR0gnjxOnUg4XkU/9zJSPvs7Vv73CCpZRku9elvIyTAFgt6dIxff+rg10BysV5oNKzh4X4AjhsXHWUgE2S3/aRwIPAQT1X4iRJqQhjW+0MTgOuBG4Adu2ZpVkQdMXtusX7AWvLfNuT21b488CZkr4bx3nCZ1QdXALcWxEPLXm/AtI9QnYsG2x1ubG39pDtLUlTZm4CrpeUOaSXTVYzUSTpk4f2itAOzrR3gaSX2l3KLba9T3l3ckAf54JNb43cjx68HIi27LKUq6slfdmSa/IKZnC6BrgMmN7iXIaqDD+vB29795w5YBlwREeMzCJ5P7OqdomGqZkM3bcBeYUxyqLnogVXjJprbR8FnAucBWSHhtkfwH0595Iy+m5nXWUmCnsVcOCA1ytZ5dazZDtbH4m/uLTLeSMaxHNAxtDHJH0/kbNWqCPp857lqnJGV0eo9lHEg0tiey8gnSlH4GBgbvlkIsxsnd3JQJUOtP4fkHYRZ6IDhA0AAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  background-size: 30rpx 30rpx;
+  background-position: right;
+}
+.progress{
+  width: 75%;
+  margin-top: 40rpx;
+  margin-bottom: 100rpx;
+}
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60rpx;
+}
+.text-progress{
+  font-size: 30rpx;
+  color: #333;
+}
+.btn{
+  background-color: transparent;
+  width: 40%;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #4BACE2;
+  margin: -2rpx;
+  border: 2rpx solid #4BACE2;
+}
+.btn1{
+  background-color: transparent;
+  width: 40%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  margin: 0;
+  margin-left: -3rpx;
+  color: #4BACE2;
+  border: 2rpx solid #4BACE2;
+}
+.btn-active{
+  background-color: #4BACE2;
+  border: 2rpx solid #4BACE2;
+  color: white;
+}
+.btn-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120rpx;
+}
