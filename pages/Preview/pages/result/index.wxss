@@ -67,3 +67,9 @@
 .btn-active{
   background-color: #4BACE2;
 }
+/* .pop-content{
+  position: relative;
+}
+.pop-bg{
+  position: absolute;
+} */

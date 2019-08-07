@@ -1,18 +1,58 @@
 // pages/Preview//pages/no-question/index.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    id: 0, //课文id
+    value: ''
   },
-
+  input: function(e){
+    this.setData({
+      value: e.detail.value
+    });
+  },
+  bindFormSubmit: function(){
+    let that = this;
+    wx.request({
+      url: app.questionUrl + 'index/Textbook/writeNote',
+      method: 'POST',
+      data: {
+        "read_id": that.data.id,
+        "user_id": app.userInfo.id,
+        "content": that.data.value
+      },
+      success: function (res) {
+        wx.showToast({
+          icon: 'none',
+          title: '提交成功',
+          duration: 1000,
+          success: function(res){
+             setTimeout(function(){
+               wx.navigateBack({
+                 delta: 1
+               });
+             },1000);
+          }
+        });
+      }
+    });
+  },
+  goBack: function(){
+    wx.navigateBack({
+      delta: 1
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let id = options.id; //课文id
+    this.setData({
+      id
+    });
   },
 
   /**

@@ -22,6 +22,10 @@
     transition="none"
     bind:close="togglePopup"
     bind:transitionEnd="onTransitionEnd"
+    custom-style="background-color:transparent;"
   >
-    内容
+   <view class="pop-content">
+   <image class="pop-bg" mode="widthFix" src="../../images/pop-bg.png"></image>
+   <view class="btn-group"><text>确定</text><text>重做</text></view>
+   </view>
   </van-popup>

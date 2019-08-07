@@ -279,7 +279,7 @@
       "root": "pages/Preview/",
       "pages": [
         "pages/Preview/Preview",
-        "pages/no-question/index",
+        "pages/question/index",
         "pages/comment/index",
         "pages/result/index"
       ]

@@ -38,7 +38,7 @@
 				{
 					"id": 0,
 					"name": "预习了",
-					"pathName": "pages/Preview/pages/result/index",
+					"pathName": "pages/Preview/pages/question/index",
 					"query": "",
 					"scene": null
 				}
