@@ -278,7 +278,9 @@
     {
       "root": "pages/Preview/",
       "pages": [
-        "pages/Preview/Preview"
+        "pages/Preview/Preview",
+        "pages/booklist/booklist",
+        "pages/Article/Article"
         
       ]
     }

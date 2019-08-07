@@ -1,0 +1,63 @@
+<view class="header"><text>预习乐</text><view class='reton_sun' bindtap='topshoop'>
+<image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<view class="original">
+  <view class="content_box">
+    <view class="text_box">
+      {{text}}
+    </view>
+    <view class="label">
+      <view class="list">
+        <text>学习方法</text>
+      </view>
+      <view class="list">
+        <text>阅读</text>
+      </view>
+      <view class="list">
+        <text>抄写</text>
+      </view>
+      <view class="list">
+        <text>朗诵</text>
+      </view>
+      <view class="clearfix"></view>
+    </view>
+  </view>
+</view>
+<view class="translation">
+  <view class="content_box" wx:for="{{translation_list}}">
+    <view class="text_box">
+      {{item.content}}
+    </view>
+    <view class="label">
+      <view class="list">
+        <text>学习方法</text>
+      </view>
+      <view class="list">
+        <text>阅读</text>
+      </view>
+      <view class="list">
+        <text>抄写</text>
+      </view>
+      <view class="list">
+        <text>朗诵</text>
+      </view>
+      <view class="clearfix"></view>
+    </view>
+  </view>
+</view>
+<view class="note">
+  <view class="content_box" wx:for="{{note_list}}">
+ 
+    <view class="text_box">
+     <view class="name">
+    <text class="name_sun">笔记</text>
+    <text class="time">{{item.add_time}}</text>
+    <view class="clearfix"></view>
+  </view>
+      {{item.content}}
+    </view>
+    
+  </view>
+</view>
+<view class="btn" catchtap="endSetInter">
+  <text>预习检测</text>
+</view>

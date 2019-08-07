@@ -2,8 +2,8 @@
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
 <view class="title_box">
   <view class="content_box">
-    <text class="name">人教</text>
-    <text class="grade">小学三年级</text>
+    <text class="name">{{banben}}</text>
+    <text class="grade">{{nianji}}</text>
     <text class="switch" bindtap='filter'>切换教材</text>
     <view class="clearfix"></view>
   </view>
@@ -21,14 +21,14 @@
 <view class='clearfix'></view>
   </view>
   <view>
-  <text class='name'>诗歌风格</text>
-<view wx:for="{{version_list}}" class="list_sun {{current02==index?'active02':'' }}" data-id="{{item.poetryid}}" data-index="{{index}}" bindtap="typebtn">{{item.name}}</view>
+  <text class='name'>切换教材</text>
+<view wx:for="{{version_list}}" class="list_sun {{current02==index?'active02':'' }}" data-id="{{item.id}}" data-index="{{index}}" bindtap="typebtn">{{item.name}}</view>
 <view class='clearfix'></view>
   </view>
   <view>
-  <text class='name'>朝代</text>
+  <text class='name'>科目</text>
   
-<view wx:for="{{year_list}}" class="list_sun {{current03==index?'active02':'' }}" data-id="{{item.yearid}}" data-index="{{index}}" bindtap="yearbtn">{{item.name}}</view>
+<view wx:for="{{Subject_list}}" class="list_sun {{current03==index?'active02':'' }}" data-id="{{item.id}}" data-index="{{index}}" bindtap="yearbtn">{{item.name}}</view>
 <view class='clearfix'></view>
   </view>
   <van-button bind:click="toggleRightPopup" class="chongzhi" bindtap='onClick_sun'>重置</van-button>
@@ -39,17 +39,19 @@
 indicator-color="{{beforeColor}}" indicator-active-color="{{afterColor}}" circular='{{circular}}' 
 previous-margin="{{previousmargin}}" next-margin="{{nextmargin}}" bindchange="swiperChange" >
     <block wx:for="{{arr}}" wx:key="key"> 
-     <swiper-item class="{{index == swiperCurrent ? ' show02' : ''}}">
-      <image src="{{item.images}}" class="slide-image {{index == swiperCurrent ? ' active' : ''}}" 
+     <swiper-item class="{{index == swiperCurrent ? ' show02' : ''}}" data-id="{{item.id}}" bindtap="tobooklist">
+      <view class="photo {{index == swiperCurrent ? ' active_sun' : ''}}">
+        <image src="{{item.pic_dir}}" class="slide-image {{index == swiperCurrent ? ' active' : ''}}" 
 bindchange="chuangEvent" id="{{index}}"></image>
+      </view>
       <view class="text_box {{index == swiperCurrent ? ' show' : ''}}">
-        <text class="name">目前进度:静夜思</text>
+        <text class="name">目前进度:{{item.read.title}}</text>
         <view class="track">
-          <view class="Speed">
+          <view class="Speed" style="width:{{num}}%">
             <view class="spot"></view>
           </view>
         </view>
-        <text class="text">全书知识点:20/200</text>
+        <text class="text">全书知识点:{{item.read.num}}/{{item.read.all}}</text>
       </view>
      </swiper-item>
     </block> 
