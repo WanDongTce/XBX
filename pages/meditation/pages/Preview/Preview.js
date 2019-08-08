@@ -12,7 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperCurrent: 1,
+    swiperCurrent: 0,
     class_list:[],
     version_list:[],
     Subject_list:[],
@@ -54,6 +54,7 @@ Page({
       },
       method: 'POST',
       success:function(res){
+        
         console.log(res.data.data.course_list)
         //科目ID
         courseid = res.data.data.course_list[0].id
@@ -63,6 +64,7 @@ Page({
         gradeid = res.data.data.grade_list[0].id
         nianji=res.data.data.grade_list[0].name
         banben = res.data.data.version_list[0].name
+        that.getteaching()
         that.setData({
           class_list: res.data.data.grade_list,
           version_list: res.data.data.version_list,
@@ -206,7 +208,7 @@ Page({
    */
   onLoad: function (options) {
     this.getdata()
-    this.getteaching()
+   
   },
 
   /**

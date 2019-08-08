@@ -23,7 +23,7 @@
       </view>
       <view class="dropdown {{item.id==list_id?'show':''}}">
         <view class="list_sun" wx:for="{{list_sun}}" data-id="{{item.id}}" catchtap="toArticle">
-        <image src="{{item.isread==1?'http://m.test.54xuebaxue.com/wx_img/img/yuxile/yi.png':'http://m.test.54xuebaxue.com/wx_img/img/yuxile/wei.png'}}"></image>
+        <image src="{{item.isread==1?'http://m.54xuebaxue.com/wx_img/img/yuxile/yi.png':'http://m.54xuebaxue.com/wx_img/img/yuxile/wei.png'}}"></image>
           <text class="{{item.isread==1?'yi':''}}">{{item.name}}</text>
         </view>
         <view class="clearfix"></view>

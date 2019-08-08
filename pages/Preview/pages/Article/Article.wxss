@@ -6,7 +6,7 @@
 .header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;display: block;width: 100%;background-color: #fff;border: 1px solid #dfdfdf;z-index: 999}
 .original .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;}
 .original .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
-background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/original.png);
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/original.png);
 background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-size: 28rpx}
 .original{margin-top: 32rpx;}
 .original .label{padding-left: 80rpx;margin-top: 32rpx}
@@ -26,7 +26,7 @@ color: #999}
 
 .translation .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;margin-bottom: 32rpx}
 .translation .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
-background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/translation.png);
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/translation.png);
 background-size: 32rpx 32rpx;background-repeat: no-repeat;display: block;font-size: 24rpx;color: #999999}
 .translation{margin-top: 32rpx;}
 .translation .label{padding-left: 80rpx;margin-top: 32rpx}
@@ -40,7 +40,7 @@ background-size: 32rpx 32rpx;background-repeat: no-repeat;display: block;font-si
 .note{margin-bottom: 130rpx}
 .note .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;margin-bottom: 32rpx}
 .note .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
-background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/note.png);
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/note.png);
 background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-size: 28rpx}
 .note{margin-top: 32rpx;}
 .note .label{padding-left: 80rpx;margin-top: 32rpx}
