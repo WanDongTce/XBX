@@ -56,7 +56,6 @@ Page({
     //或者之前问题 回退浏览之前问题用
     let choicesed = app.questionOptions.results;
     return choicesed.some(function(item) {
-      console.log('走列表')
       //[1, 2]
       return item[0] == app.questionOptions.currentId;
     });

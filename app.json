@@ -280,8 +280,7 @@
       "pages": [
         "pages/Preview/Preview",
         "pages/question/index",
-        "pages/comment/index",
-        "pages/result/index"
+        "pages/comment/index"
       ]
     }
   ],
