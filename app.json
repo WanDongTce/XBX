@@ -280,7 +280,9 @@
       "pages": [
         "pages/Preview/Preview",
         "pages/question/index",
-        "pages/comment/index"
+        "pages/comment/index",
+        "pages/booklist/booklist",
+        "pages/Article/Article"    
       ]
     }
   ],

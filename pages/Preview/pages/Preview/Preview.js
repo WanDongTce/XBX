@@ -1,4 +1,11 @@
-// pages/Preview//pages/Preview/Preview.js
+// pages/Preview//pages/Preview/Preview.js;
+var courseid;
+var versionid;
+var gradeid;
+var list_sun = []
+var num
+var nianji;
+var banben
 Page({
 
   /**
@@ -8,20 +15,14 @@ Page({
     swiperCurrent: 1,
     class_list:[],
     version_list:[],
+    Subject_list:[],
+    nianji:"",
+    banben:"",
     current01:"0",
-    arr: [{
-      images: 'http://img.ajihua888.com/upload/2019/01/24/92d7be60fc2c92f8ede105f8967dff6f.png'
-    },
-    {
-      images: 'http://img.ajihua888.com/upload/2019/01/24/92d7be60fc2c92f8ede105f8967dff6f.png'
-    },
-    {
-      images: 'http://img.ajihua888.com/upload/2019/01/24/92d7be60fc2c92f8ede105f8967dff6f.png'
-    },
-    {
-      images: 'http://img.ajihua888.com/upload/2019/01/24/92d7be60fc2c92f8ede105f8967dff6f.png'
-    }
-    ],
+    current02: "0",
+    current03: "0",
+    arr: [],
+    num:"",
     show: {
       right: false
     },
@@ -43,22 +44,111 @@ Page({
     var that=this
     wx.request({
       url: 'http://yuxile.54xuebaxue.com/index/Typepublic/tList',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
       success:function(res){
-        console.log(res.data.data.grade_list)
+        console.log(res.data.data.course_list)
+        //科目ID
+        courseid = res.data.data.course_list[0].id
+        //版本ID
+        versionid = res.data.data.version_list[0].id
+        //年级id
+        gradeid = res.data.data.grade_list[0].id
+        nianji=res.data.data.grade_list[0].name
+        banben = res.data.data.version_list[0].name
         that.setData({
           class_list: res.data.data.grade_list,
-          version_list: res.data.data.version_list
+          version_list: res.data.data.version_list,
+          Subject_list: res.data.data.course_list,
+          nianji: res.data.data.grade_list[0].name,
+          banben: res.data.data.version_list[0].name
+          
         })
+        
       }
     })
   },
+  tobooklist:function(e){
+    var postad = e.currentTarget.dataset.id 
+    console.log(postad)
+    wx.navigateTo({
+      //url: 'post-detail/post-detail'  //跳转详情页  切记配置app.json文件 
+      url: '../booklist/booklist?id=' + postad + "&nianji=" + nianji + "&banben=" + banben  //传递参数
+    })
+
+  },
+  getteaching:function(){
+    var that = this
+    var user = wx.getStorageSync("userInfo")
+    console.log(user.id)
+    wx.request({
+      url: 'http://yuxile.54xuebaxue.com/index/Textbook/tList',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      data:{
+        course_id: courseid,
+        version_id: versionid,
+        grade_id: gradeid,
+        user_id: user.id
+      },
+      success:function(res){
+        console.log(res)
+        if (res.data.data.length < 1) {
+          num =  0/ 0 * 100
+
+          that.setData({
+            arr: res.data.data,
+            num: num
+          })
+        }else{
+          num = res.data.data[0].read.num / res.data.data[0].read.all * 100
+
+          that.setData({
+            arr: res.data.data,
+            num: num
+          })
+        }
+       
+        console.log(that.data.arr)
+      }
+    })
+  },
+  onClick:function(){
+    console.log(courseid)
+    console.log(versionid)
+    console.log(gradeid)
+    this.getteaching()
+  },
+
   classbtn:function(e){
     var that = this
-    
+    gradeid = e.currentTarget.dataset.id
     that.setData({
       current01: e.currentTarget.dataset.index
     })
+   
   },
+  typebtn: function (e) {
+    var that = this
+    versionid = e.currentTarget.dataset.id
+    that.setData({
+      current02: e.currentTarget.dataset.index
+    })
+
+  },
+  yearbtn: function (e) {
+    var that = this
+    courseid = e.currentTarget.dataset.id
+    that.setData({
+      current03: e.currentTarget.dataset.index
+    })
+
+  },
+
 
   toggle(type) {
     this.setData({
@@ -91,6 +181,7 @@ Page({
    */
   onLoad: function (options) {
     this.getdata()
+    this.getteaching()
   },
 
   /**
