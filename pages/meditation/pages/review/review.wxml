@@ -1,0 +1,12 @@
+<view class="header"><text>预习乐</text><view class='reton_sun' bindtap='topshoop'>
+<image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<view class="text_box">
+  <text>放松心情回顾一下</text>
+  <text>这节课老师讲的什么内容?</text>
+  <image src="http://m.54xuebaxue.com/wx_img/img/yuxile/review.png"></image>
+  <view class="btn_box">
+    <view class="btn" bindtap="Article">复习本课</view>
+    <view class="btn" catchtap="endSetInter">冥想检测</view>
+    <view class="clearfix"></view>
+  </view>
+</view>

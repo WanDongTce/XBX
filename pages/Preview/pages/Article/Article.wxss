@@ -6,7 +6,7 @@
 .header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;display: block;width: 100%;background-color: #fff;border: 1px solid #dfdfdf;z-index: 999}
 .original .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;}
 .original .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
-background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/original.png);
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/original.png);
 background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-size: 28rpx}
 .original{margin-top: 32rpx;}
 .original .label{padding-left: 80rpx;margin-top: 32rpx}
@@ -24,23 +24,23 @@ background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-si
 color: #999}
 
 
-.translation .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;margin-bottom: 32rpx}
+.translation .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top:20rpx;padding-bottom: 20rpx;border-radius: 15rpx;margin-bottom: 20rpx}
 .translation .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
-background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/translation.png);
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/translation.png);
 background-size: 32rpx 32rpx;background-repeat: no-repeat;display: block;font-size: 24rpx;color: #999999}
-.translation{margin-top: 32rpx;}
-.translation .label{padding-left: 80rpx;margin-top: 32rpx}
-.translation .label .list{float: left;margin-right: 30rpx}
-.translation .label .list text{display: block;font-size: 24rpx;padding-left: 16rpx;padding-right: 16rpx;line-height: 36rpx;}
-.translation .label .list:nth-child(1){background-color: #FFDEDE;color: #FD5E5E;border-radius: 10rpx}
-.translation .label .list:nth-child(2){background-color: #EEE3B7;color: #CA9B35;border-radius: 10rpx}
-.translation .label .list:nth-child(3){background-color: #D5EEB7;color: #72A930;border-radius: 10rpx}
-.translation .label .list:nth-child(4){background-color: #ECCEFF;color: #AD5AE2;border-radius: 10rpx}
+.translation{margin-top: 20rpx;}
+ .label{padding-left: 80rpx;margin-top: 20rpx}
+ .label .list{float: left;margin-right: 30rpx}
+ .label .list text{display: block;font-size: 24rpx;padding-left: 16rpx;padding-right: 16rpx;line-height: 36rpx;}
+ .label .list:nth-child(1){background-color: #FFDEDE;color: #FD5E5E;border-radius: 10rpx}
+ .label .list:nth-child(2){background-color: #EEE3B7;color: #CA9B35;border-radius: 10rpx}
+ .label .list:nth-child(3){background-color: #D5EEB7;color: #72A930;border-radius: 10rpx}
+ .label .list:nth-child(4){background-color: #ECCEFF;color: #AD5AE2;border-radius: 10rpx}
 
 .note{margin-bottom: 130rpx}
-.note .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;margin-bottom: 32rpx}
+.note .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 20rpx;padding-bottom: 32rpx;border-radius: 15rpx;margin-bottom: 20rpx}
 .note .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
-background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/note.png);
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/note.png);
 background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-size: 28rpx}
 .note{margin-top: 32rpx;}
 .note .label{padding-left: 80rpx;margin-top: 32rpx}

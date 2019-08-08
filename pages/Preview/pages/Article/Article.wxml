@@ -5,21 +5,7 @@
     <view class="text_box">
       {{text}}
     </view>
-    <view class="label">
-      <view class="list">
-        <text>学习方法</text>
-      </view>
-      <view class="list">
-        <text>阅读</text>
-      </view>
-      <view class="list">
-        <text>抄写</text>
-      </view>
-      <view class="list">
-        <text>朗诵</text>
-      </view>
-      <view class="clearfix"></view>
-    </view>
+    
   </view>
 </view>
 <view class="translation">
@@ -27,6 +13,9 @@
     <view class="text_box">
       {{item.content}}
     </view>
+
+  </view>
+</view>
     <view class="label">
       <view class="list">
         <text>学习方法</text>
@@ -42,8 +31,6 @@
       </view>
       <view class="clearfix"></view>
     </view>
-  </view>
-</view>
 <view class="note">
   <view class="content_box" wx:for="{{note_list}}">
  

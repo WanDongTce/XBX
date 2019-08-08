@@ -22,7 +22,7 @@ border-radius: 10rpx;overflow: hidden;float: left}
 .list_box .content_box .list .text .course{font-size: 32rpx;height: 32rpx;line-height: 32rpx;display: block;
 color: #666666;margin-top: 32rpx}
 .list_box .content_box .list .text .class{font-size:24rpx;height: 26rpx;line-height: 26rpx;display: block;
-color: #999999;margin-top: 32rpx; padding-left: 38rpx;background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/time.png);background-size: 26rpx 26rpx; background-position: left center;background-repeat: no-repeat}
+color: #999999;margin-top: 32rpx; padding-left: 38rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/time.png);background-size: 26rpx 26rpx; background-position: left center;background-repeat: no-repeat}
 .dropdown{display: none;}
 .dropdown .list_sun{float: left;width: 340rpx;background-color: #fff; margin-top: 24rpx;
 box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);border-radius: 15rpx}

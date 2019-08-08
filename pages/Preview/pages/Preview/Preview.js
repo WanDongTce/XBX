@@ -12,7 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperCurrent: 1,
+    swiperCurrent: 0,
     class_list:[],
     version_list:[],
     Subject_list:[],
@@ -54,13 +54,18 @@ Page({
       },
       method: 'POST',
       success:function(res){
-        console.log(res.data.data.course_list)
+        
+        var list_wei=[]
+        
+        console.log(res.data.data)
         //科目ID
         courseid = res.data.data.course_list[0].id
         //版本ID
         versionid = res.data.data.version_list[0].id
         //年级id
         gradeid = res.data.data.grade_list[0].id
+        that.getteaching()
+        console.log(versionid)
         nianji=res.data.data.grade_list[0].name
         banben = res.data.data.version_list[0].name
         that.setData({
@@ -87,7 +92,7 @@ Page({
   getteaching:function(){
     var that = this
     var user = wx.getStorageSync("userInfo")
-    console.log(user.id)
+    console.log(gradeid)
     wx.request({
       url: 'http://yuxile.54xuebaxue.com/index/Textbook/tList',
       header: {
@@ -101,7 +106,7 @@ Page({
         user_id: user.id
       },
       success:function(res){
-        console.log(res)
+        console.log(res.data.data)
         if (res.data.data.length < 1) {
           num =  0/ 0 * 100
 
@@ -122,7 +127,7 @@ Page({
           })
         }
        
-        console.log(that.data.arr)
+       
       }
     })
   },
@@ -205,7 +210,7 @@ Page({
    */
   onLoad: function (options) {
     this.getdata()
-    this.getteaching()
+   
   },
 
   /**
