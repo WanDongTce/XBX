@@ -102,7 +102,7 @@ Page({
     console.log(postad)
     wx.navigateTo({
       //url: 'post-detail/post-detail'  //跳转详情页  切记配置app.json文件 
-      url: '../Article/Article?id=' + postad 
+      url: '../review/review?id=' + postad 
     })
   },
   /**
