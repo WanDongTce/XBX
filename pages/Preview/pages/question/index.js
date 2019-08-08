@@ -28,13 +28,13 @@ Page({
   togglePopup() {
     this.toggle('middle');
   },
-  getQuesList: function() {
+  getQuesList: function(id) {
     let that = this;
     wx.request({
       url: app.questionUrl + 'index/Problem/Tlist',
       method: 'POST',
       data: {
-        "read_id": app.questionOptions.id
+        "read_id": app.questionOptions.id||id
       },
       success: function(res) {
         console.log(res);
@@ -135,6 +135,7 @@ Page({
     });
   },
   cancel: function() {
+    let that = this;
     //上传数据
     this.sendResults(this.data.scores);
     this.togglePopup();
@@ -222,7 +223,7 @@ Page({
       app.questionOptions.id = options.id || 0;
     }
     if (app.questionOptions.list.length == 0) { //首次
-      this.getQuesList();
+      this.getQuesList(options.id);
     } else {
       this.setData({
         progress: app.questionOptions.progress || 1,
