@@ -40,6 +40,11 @@ Page({
 
 
   },
+  topshoop: function () {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
   getdata:function(){
     var that=this
     wx.request({
@@ -106,7 +111,7 @@ Page({
           })
         }else{
           num = res.data.data[0].read.num / res.data.data[0].read.all * 100
-
+          console.log(num)
           that.setData({
             arr: res.data.data,
             num: num
