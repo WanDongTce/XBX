@@ -28,7 +28,7 @@ Page({
   togglePopup() {
     this.toggle('middle');
   },
-  getQuesList: function () {
+  getQuesList: function() {
     let that = this;
     wx.request({
       url: app.questionUrl + 'index/Problem/Tlist',
@@ -36,7 +36,7 @@ Page({
       data: {
         "read_id": app.questionOptions.id
       },
-      success: function (res) {
+      success: function(res) {
         console.log(res);
         let questions = res.data.data;
         app.questionOptions.list = questions;
@@ -52,16 +52,16 @@ Page({
       }
     });
   },
-  isChoices: function () {
+  isChoices: function() {
     //或者之前问题 回退浏览之前问题用
     let choicesed = app.questionOptions.results;
-    return choicesed.some(function (item) {
+    return choicesed.some(function(item) {
       //[1, 2]
       return item[0] == app.questionOptions.currentId;
     });
   },
   //点击选项显示对错
-  choices: function (e) {
+  choices: function(e) {
     //判断是否选过
     if (this.isChoices()) {
       wx.showToast({
@@ -75,7 +75,7 @@ Page({
     let choicesItem = e.currentTarget.dataset.answer; //答案对错 1 2
     let currentIndex = e.currentTarget.dataset.index;
     let id = e.currentTarget.dataset.id; //选项
-    let currentQusetion = app.questionOptions.list[app.questionOptions.progress - 1];  // 当前问题
+    let currentQusetion = app.questionOptions.list[app.questionOptions.progress - 1]; // 当前问题
     let addStyle = '';
     if (choicesItem == 1) {
       addStyle = 'item-right';
@@ -83,16 +83,16 @@ Page({
     } else {
       addStyle = 'item-wrong';
       //正确答案也显示
-      
-      currentQusetion.options = currentQusetion.options.map(function(item){
-        if(item.answer==1){
+
+      currentQusetion.options = currentQusetion.options.map(function(item) {
+        if (item.answer == 1) {
           item.addStyle = 'item-right';
         }
         return item;
       })
     }
-      //记录答题结果
-      console.log('当前问题id: ', app.questionOptions.currentId);
+    //记录答题结果
+    console.log('当前问题id: ', app.questionOptions.currentId);
     app.questionOptions.results.push([app.questionOptions.currentId, id]);
     console.log(app.questionOptions);
     //添加回答过样式和是否
@@ -107,7 +107,7 @@ Page({
     });
   },
   //最后一题
-  isLast: function () {
+  isLast: function() {
     if (app.questionOptions.progress == app.questionOptions.count) {
       //计算分数
       let {
@@ -124,7 +124,7 @@ Page({
       return true;
     }
   },
-  submit: function () {
+  submit: function() {
     let that = this;
     //上传数据
     this.sendResults(this.data.scores);
@@ -134,7 +134,7 @@ Page({
       delta: that.goback()
     });
   },
-  cancel: function () {
+  cancel: function() {
     //上传数据
     this.sendResults(this.data.scores);
     this.togglePopup();
@@ -152,9 +152,9 @@ Page({
       delta: that.goback()
     });
   },
-  sendResults: function (scores) {
+  sendResults: function(scores) {
     let options = {};
-    app.questionOptions.results.map(function (item) {
+    app.questionOptions.results.map(function(item) {
       options[item[0]] = item[1];
     });
     options = JSON.stringify(options);
@@ -168,19 +168,19 @@ Page({
         "score": scores,
         "options": options
       },
-      success: function (res) {
+      success: function(res) {
         console.log(res);
       }
     });
   },
   //write
-  goComment: function () {
+  goComment: function() {
     wx.navigateTo({
-      url: '/pages/Preview/pages/comment/index?id=1'  //课文id
+      url: '/pages/Preview/pages/comment/index?id=1' //课文id
     });
   },
   // 下一题
-  next: function () {
+  next: function() {
     //没有回答问题
     if (app.questionOptions.list[app.questionOptions.progress - 1].disabled == undefined) {
       wx.showToast({
@@ -200,11 +200,11 @@ Page({
     });
   },
   //返回路由位置
-  goback: function(){
+  goback: function() {
     let routers = getCurrentPages();
     let index = 0;
     let length = getCurrentPages().length;
-    routers.map(function (item, i) {
+    routers.map(function(item, i) {
       if (item.route == "pages/Preview/pages/Article/Article") {
         index = i;
       }
@@ -214,7 +214,10 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    //答题过程中返回出当前模块小程序
+    app.questionOptions.progress ? app.questionOptions.progress : app.questionOptions.progress = 1;
+    //首次
     if (app.questionOptions.id == 0) {
       app.questionOptions.id = options.id || 0;
     }
@@ -222,9 +225,9 @@ Page({
       this.getQuesList();
     } else {
       this.setData({
-        progress: app.questionOptions.progress,
+        progress: app.questionOptions.progress || 1,
         count: app.questionOptions.count,
-        currentQusetion: app.questionOptions.list[app.questionOptions.progress - 1]
+        currentQusetion: app.questionOptions.list[app.questionOptions.progress - 1] || app.questionOptions.list[0]
       });
     }
   },
@@ -232,49 +235,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
