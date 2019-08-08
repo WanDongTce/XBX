@@ -34,7 +34,7 @@ Page({
       url: app.questionUrl + 'index/Problem/Tlist',
       method: 'POST',
       data: {
-        "read_id": 1
+        "read_id": that.data.id
       },
       success: function(res) {
         console.log(res);
@@ -147,7 +147,7 @@ Page({
       url: app.questionUrl + 'index/Problem/writeAnswer',
       method: 'POST',
       data: {
-        "read_id": 1,
+        "read_id": that.data.id,
         "user_id": app.userInfo.id,
         "score": scores,
         "options": options
@@ -187,7 +187,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(app.questionOptions.list.length)
+    console.log(options);
+    this.setData({
+      id: options.id  //read_id
+    });
     if (app.questionOptions.list.length == 0) { //首次
       this.getQuesList();
     } else {

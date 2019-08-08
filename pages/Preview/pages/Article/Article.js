@@ -10,13 +10,18 @@ Page({
   data: {
     text:"",
     translation_list:[],
-    note_list:[]
+    note_list:[],
+    id: 0 //课文id
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
+    this.setData({
+      id: options.id
+    });
     var user = wx.getStorageSync("userInfo")
     console.log(user.id)
      opid = options.id
@@ -63,6 +68,7 @@ Page({
       })
   },
   endSetInter: function () {
+    let that = this;
     clearInterval(time)
     console.log(userid)
     wx.request({
@@ -77,7 +83,9 @@ Page({
       },
       method: 'POST',
       success:function(res){
-        console.log(res)
+        wx.navigateTo({
+          url: '/pages/Preview/pages/question/index?id=' + that.data.id,
+        })
       }
     })
   },
