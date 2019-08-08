@@ -53,7 +53,7 @@ transition:all .2s ease-in 0s; }
 .active_sun .active{margin-top: 0;}
 .text_box{ display: none}
 swiper .show{display: block}
-.text_box .name{display: block;text-align: center;font-size: 28rpx;color: #333333;height: 28rpx;line-height: 28rpx;margin-top: 100rpx}
+.text_box .name{display: block;text-align: center;font-size: 28rpx;color: #333333;height: 28rpx;line-height: 28rpx;margin-top: 140rpx}
 .text_box .track{ width: 96%;margin: 0 auto;background-color: rgba(105, 104, 104, 0.35);height: 14rpx;margin-top: 32rpx;border-radius: 7rpx;}
 .text_box .track .Speed{width: 0%;height: 100%;background-color: #4BACE2;position: relative;border-radius: 7rpx;}
 .text_box .track .Speed .spot{position: absolute;right: -5rpx;top: -5rpx;width: 24rpx;height: 24rpx;
