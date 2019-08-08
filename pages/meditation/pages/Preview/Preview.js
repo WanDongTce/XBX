@@ -129,6 +129,9 @@ Page({
       }
     })
   },
+  onClick_sun:function(){
+    
+  },
   onClick:function(e){
 
     console.log(courseid)

@@ -1,4 +1,4 @@
-<view class="header"><text>预习乐</text><view class='reton_sun' bindtap='topshoop'>
+<view class="header"><text>冥想思</text><view class='reton_sun' bindtap='topshoop'>
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
 <view class="text_box">
   <text>放松心情回顾一下</text>
