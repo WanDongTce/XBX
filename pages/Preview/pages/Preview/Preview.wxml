@@ -47,7 +47,7 @@ bindchange="chuangEvent" id="{{index}}"></image>
       <view class="text_box {{index == swiperCurrent ? ' show' : ''}}">
         <text class="name">目前进度:{{item.read.title}}</text>
         <view class="track">
-          <view class="Speed" style="width:{{num}}%">
+          <view class="Speed" style="width:{{item.read.num/item.read.all*100}}%">
             <view class="spot"></view>
           </view>
         </view>

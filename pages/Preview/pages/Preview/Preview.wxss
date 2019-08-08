@@ -29,7 +29,7 @@ swiper {
  width: 92%;
  display: block;
  margin: 0 auto;
- height: 612rpx;
+
  transform: scale(1);
 transition:all .2s ease-in 0s;
  
@@ -41,25 +41,21 @@ transition:all .2s ease-in 0s;
  display: block;
  margin: 0 auto;
  height: 612rpx;
-margin-top:50rpx;
+ padding-top: 55rpx
 }
 .active{
-transform: scale(1);
-transition:all .2s ease-in 0s;
-z-index: 20;
+
  border-radius: 15rpx;
- margin-top: 50rpx
 
 }
-.active_sun{transform: scale(1.1);
-transition:all .2s ease-in 0s; margin-top: 30rpx;}
-.active_sun .slide-image{ margin-top: 0}
+.active_sun{transform: scale(1.2);
+transition:all .2s ease-in 0s; }
 .active_sun .active{margin-top: 0;}
 .text_box{ display: none}
 swiper .show{display: block}
-.text_box .name{display: block;text-align: center;font-size: 28rpx;color: #333333;height: 28rpx;line-height: 28rpx;margin-top: 70rpx}
+.text_box .name{display: block;text-align: center;font-size: 28rpx;color: #333333;height: 28rpx;line-height: 28rpx;margin-top: 100rpx}
 .text_box .track{ width: 96%;margin: 0 auto;background-color: rgba(105, 104, 104, 0.35);height: 14rpx;margin-top: 32rpx;border-radius: 7rpx;}
-.text_box .track .Speed{width: 50%;height: 100%;background-color: #4BACE2;position: relative;border-radius: 7rpx;}
+.text_box .track .Speed{width: 0%;height: 100%;background-color: #4BACE2;position: relative;border-radius: 7rpx;}
 .text_box .track .Speed .spot{position: absolute;right: -5rpx;top: -5rpx;width: 24rpx;height: 24rpx;
 background-color: #4BACE2;border-radius: 50%;box-shadow: 0px 0px 3.5px 1.5px rgba(141, 211, 251, 0.66);}
 .text_box .text{display: block;text-align: center;font-size: 28rpx;color: #A9A6A6;height: 28rpx;line-height: 28rpx;margin-top: 50rpx}
@@ -70,13 +66,13 @@ background-color: #4BACE2;border-radius: 50%;box-shadow: 0px 0px 3.5px 1.5px rgb
   padding: 20px;
   z-index: 100999999 !important
 }
-swiper-item{overflow: auto !important;display: block}
+swiper-item{overflow: visible !important;display: block}
 van-popup .name{margin-bottom: 30rpx;display: block}
 .van-popup{position: relative}
 .list_sun{width: auto !important;line-height: 54rpx;padding-left: 26rpx;padding-right: 26rpx;background-color: #F4F4F4;
 border-radius: 27rpx;font-size: 26rpx;margin-right: 26rpx;margin-bottom: 52rpx;float: left}
 
-.active{background-color: #48B947}
+.active{margin-top: 50rpx}
 .clearfix{clear: both}
 
 .chongzhi{position: absolute;left: 62rpx;bottom:34rpx;width: 220rpx;height: 70rpx;display: block}
