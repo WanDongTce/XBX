@@ -1,0 +1,35 @@
+/* pages/Preview//pages/booklist/booklist.wxss */.clearfix{clear: both}
+.reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 40rpx;margin: 0 auto}
+.header text{display: block;text-align: center}
+.reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
+.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;display: block;width: 100%;background-color: #fff;border: 1px solid #dfdfdf;z-index: 999}
+.title_box{margin-top: 42rpx}
+.title_box .content_box{width: 690rpx;margin: 0 auto}
+.title_box .content_box text{display: block;float: left}
+.title_box .content_box .name{font-size: 34rpx;height: 34rpx;line-height: 34rpx; border-left: 6rpx solid #F0803C;
+padding-left: 16rpx}
+.title_box .content_box .grade{font-size: 24rpx;line-height: 34rpx;background-color: #FDD3BA;padding-left: 10rpx;padding-right: 10rpx;color: #fff;border-radius: 6rpx;margin-left: 12rpx}
+.title_box .content_box .switch{font-size: 28rpx;float: right;line-height: 34rpx;color: #999999}
+.list_box .content_box{width: 712rpx;margin: 0 auto}
+.list_box .content_box .list{margin-top: 20rpx;margin-bottom: 20rpx;}
+.list_box .content_box .list .text_box{background-color: #fff;padding-top: 16rpx;padding-bottom: 16rpx;
+box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);border-radius: 15rpx}
+.list_box .content_box .list .photo{background-color: #999999;width: 172rpx;height: 172rpx;margin-left: 30rpx;
+border-radius: 10rpx;overflow: hidden;float: left}
+.list_box .content_box .list .photo image{width: 172rpx;height:172rpx;}
+.list_box .content_box .list .text{float: left;margin-left: 32rpx}
+.list_box .content_box .list .text .title{font-size: 34rpx;height: 34rpx;line-height: 34rpx;display: block}
+.list_box .content_box .list .text .course{font-size: 32rpx;height: 32rpx;line-height: 32rpx;display: block;
+color: #666666;margin-top: 32rpx}
+.list_box .content_box .list .text .class{font-size:24rpx;height: 26rpx;line-height: 26rpx;display: block;
+color: #999999;margin-top: 32rpx; padding-left: 38rpx;background-image: url(http://m.test.54xuebaxue.com/wx_img/img/yuxile/time.png);background-size: 26rpx 26rpx; background-position: left center;background-repeat: no-repeat}
+.dropdown{display: none;}
+.dropdown .list_sun{float: left;width: 340rpx;background-color: #fff; margin-top: 24rpx;
+box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);border-radius: 15rpx}
+.dropdown .list_sun:nth-child(2n){float: right}
+.dropdown .list_sun text{line-height: 96rpx;width: 180rpx;overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;display: block;float: left}
+.show{display: block}
+.dropdown .list_sun image{width: 36rpx;height: 48rpx;padding-top: 22rpx;display: block;float: left;padding-left: 46rpx;margin-right: 38rpx}
+.dropdown .list_sun .yi{color: #999999}

@@ -7,7 +7,7 @@
         <image class="tab-img" src="../../images/edutList/edu_tab1.png"></image>
         <view class='tab-text f_26 c_333'>预习乐</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/think/think">
+    <navigator class="tab" url="/pages/meditation/pages/Preview/Preview">
         <image class="tab-img" src="../../images/edutList/edu_tab2.png"></image>
         <view class='tab-text f_26 c_333'>冥想思</view>
     </navigator>
