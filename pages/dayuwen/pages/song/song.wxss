@@ -11,6 +11,7 @@ page{background: #fff !important;}
   padding-left: 28rpx;
   padding-right: 28rpx;
   margin: auto;
+  margin-top: 80rpx;
 }
 .image {
   flex: 0 0 1;

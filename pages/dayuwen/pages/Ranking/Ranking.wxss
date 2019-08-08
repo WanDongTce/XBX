@@ -7,7 +7,7 @@ margin-top: 30rpx}
 .header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;text-align: center;display: block;width: 100%;background-color: #fff;}
 .information{background-color: #fff;padding-top: 30rpx;border-radius: 10rpx 10rpx 0 0 }
 .information .content_box{width: 690rpx;margin: 0 auto;}
-.information .content_box .photo{width: 100rpx;height: 100rpx;background-color: red;float: left;
+.information .content_box .photo{width: 100rpx;height: 100rpx;background-color: #eee;float: left;
 border-radius: 10rpx;overflow: hidden;margin-left: -32rpx}
 .information .content_box .photo image{width: 100%;height: 100%}
 .information .content_box .information_sun{float: left;width: 526rpx;margin-left: 28rpx}

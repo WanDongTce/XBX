@@ -8,7 +8,7 @@
 	<view class="search" catchtap='tosearch'>
 	<text>寻找你想要的内容</text>
 	</view>
-    <image src="https://m.ajihua888.com/wx_img/my/read1.png" class="btn" bindtap='filter'></image>
+    <image src="../images/read1.png" class="btn" bindtap='filter'></image>
 </view>
 <!--list-->
 <view class="main">
@@ -55,6 +55,12 @@
 <view wx:for="{{year_list}}" class="list_sun {{current03==index?'active':'' }}" data-id="{{item.yearid}}" data-index="{{index}}" bindtap="yearbtn">{{item.name}}</view>
 <view class='clearfix'></view>
   </view>
+  <!-- <view class="fixed">
   <van-button bind:click="toggleRightPopup" class="chongzhi" bindtap='onClick_sun'>重置</van-button>
   <van-button bind:click="toggleRightPopup" class="quding" bindtap='onClick'>确定</van-button>
+  </view> -->
   </van-popup>
+  <view class="fixed" style="display:{{show.right?'block;':'none;'}}">
+  <van-button bind:click="toggleRightPopup" class="chongzhi" bindtap='onClick_sun'>重置</van-button>
+  <van-button bind:click="toggleRightPopup" class="quding" bindtap='onClick'>确定</van-button>
+  </view>
