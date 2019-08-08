@@ -82,6 +82,7 @@ App({
     getPrePageGroupHistroyMsgInfoMap: {},//群聊历史
     getPrePageC2CHistroyMsgInfoMap: {},//私聊历史
     questionOptions: {
+      id: 0,  //课文id
       list: [],
       currentId: 0,
       results: [],
