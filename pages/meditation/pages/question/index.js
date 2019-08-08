@@ -75,7 +75,7 @@ Page({
     let choicesItem = e.currentTarget.dataset.answer; //答案对错 1 2
     let currentIndex = e.currentTarget.dataset.index;
     let id = e.currentTarget.dataset.id; //选项
-    let currentQusetion = app.questionOptions.list[app.questionOptions.progress - 1];  // 当前问题
+    let currentQusetion = app.questionOptions.list[app.questionOptions.progress - 1]; // 当前问题
     let addStyle = '';
     if (choicesItem == 1) {
       addStyle = 'item-right';
@@ -84,8 +84,8 @@ Page({
       addStyle = 'item-wrong';
       //正确答案也显示
 
-      currentQusetion.options = currentQusetion.options.map(function(item){
-        if(item.answer==1){
+      currentQusetion.options = currentQusetion.options.map(function (item) {
+        if (item.answer == 1) {
           item.addStyle = 'item-right';
         }
         return item;
@@ -176,7 +176,7 @@ Page({
   //write
   goComment: function () {
     wx.navigateTo({
-      url: '/pages/Preview/pages/comment/index?id=1'  //课文id
+      url: '/pages/Preview/pages/comment/index?id=1' //课文id
     });
   },
   // 下一题
@@ -200,7 +200,7 @@ Page({
     });
   },
   //返回路由位置
-  goback: function(){
+  goback: function () {
     let routers = getCurrentPages();
     let index = 0;
     let length = getCurrentPages().length;
@@ -215,6 +215,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //答题过程中返回出当前模块小程序
+    app.questionOptions.progress ? app.questionOptions.progress : app.questionOptions.progress = 1;
+    //首次
     if (app.questionOptions.id == 0) {
       app.questionOptions.id = options.id || 0;
     }
@@ -222,9 +225,9 @@ Page({
       this.getQuesList();
     } else {
       this.setData({
-        progress: app.questionOptions.progress,
+        progress: app.questionOptions.progress || 1,
         count: app.questionOptions.count,
-        currentQusetion: app.questionOptions.list[app.questionOptions.progress - 1]
+        currentQusetion: app.questionOptions.list[app.questionOptions.progress - 1] || app.questionOptions.list[0]
       });
     }
   },
