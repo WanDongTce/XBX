@@ -75,27 +75,35 @@ Page({
     let choicesItem = e.currentTarget.dataset.answer; //答案对错 1 2
     let currentIndex = e.currentTarget.dataset.index;
     let id = e.currentTarget.dataset.id; //选项
+    let currentQusetion = app.questionOptions.list[app.questionOptions.progress - 1];  // 当前问题
     let addStyle = '';
     if (choicesItem == 1) {
       addStyle = 'item-right';
       app.questionOptions.rightTimes = app.questionOptions.rightTimes + 1;
     } else {
       addStyle = 'item-wrong';
+      //正确答案也显示
+      
+      currentQusetion.options = currentQusetion.options.map(function(item){
+        if(item.answer==1){
+          item.addStyle = 'item-right';
+        }
+        return item;
+      })
     }
-    choicesItem == 1 ? addStyle = 'item-right' :
       //记录答题结果
       console.log('当前问题id: ', app.questionOptions.currentId);
     app.questionOptions.results.push([app.questionOptions.currentId, id]);
     console.log(app.questionOptions);
     //添加回答过样式和是否
-    app.questionOptions.list[app.questionOptions.progress - 1].options[currentIndex].addStyle = addStyle;
-    app.questionOptions.list[app.questionOptions.progress - 1].disabled = true;
+    currentQusetion.options[currentIndex].addStyle = addStyle;
+    currentQusetion.disabled = true;
     //更新当前页面数据
     this.setData({
       addStyle,
       currentIndex,
       // disabled: true,
-      currentQusetion: app.questionOptions.list[app.questionOptions.progress - 1]
+      currentQusetion: currentQusetion
     });
   },
   //最后一题
