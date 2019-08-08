@@ -284,6 +284,15 @@
         "pages/booklist/booklist",
         "pages/Article/Article"    
       ]
+    },{
+      "root": "pages/meditation/",
+      "pages": [
+        "pages/Preview/Preview",
+        "pages/question/index",
+        "pages/comment/index",
+        "pages/booklist/booklist",
+        "pages/Article/Article"
+      ]
     }
   ],
   "window": {

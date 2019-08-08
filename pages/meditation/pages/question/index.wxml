@@ -1,0 +1,38 @@
+<!--pages/Preview//pages/no-question/index.wxml-->
+<navbar title="逍遥游" isShowBack="{{true}}"></navbar>
+<!-- card -->
+<view class="card">
+  <view class="title">{{currentQusetion.title}}</view>
+  <view bindtap="choices" data-index="{{index}}" data-answer="{{item.answer}}" data-id="{{item.id}}" wx:for="{{currentQusetion.options}}" wx:key="{{item.id}}" class="item {{item.addStyle}}">{{item.title}}</view>
+</view>
+
+<view class="section">
+  <text class="text-progress">第{{progress}}/{{count}}题</text>
+  <progress class="progress" percent="{{100*(progress/count)}}" activeColor="#F0803C" border-radius="30" />
+  <!-- btn -->
+  <button bindtap="next" class="btn {{currentQusetion.disabled?'btn-active':''}}">{{progress==count?'完成检测':'下一题'}}</button>
+</view>
+<!-- 笔记 -->
+<view class="write" bindtap="goComment">
+<image class="write-icon" src="../../images/write.png"></image>
+</view>
+<!-- pop -->
+<van-popup show="{{ show.middle }}" custom-class="center" transition="none" bind:close="togglePopup" bind:transitionEnd="onTransitionEnd" custom-style="background-color:transparent;">
+  <view class="pop-content">
+    <view class="pop-bg">
+      <image mode="widthFix" src="../../images/pop-bg.png"></image>
+    </view>
+    <view class="result-content">
+      <view class="result-content-text1">此次获得<text class="scores">{{scores}}</text>分</view>
+      <view class="result-content-text2">{{scores==100?'要继续保持哦':'再接再厉哦'}}</view>
+      <view wx:if="{{scores!=100}}" class="btn-group">
+        <text bindtap="submit" class="submit">确定</text>
+        <text bindtap="cancel" class="cancel">重做</text>
+      </view>
+      <view wx:else class="btn-group">
+        <text bindtap="submit" class="submit">确定</text>
+      </view>
+    </view>
+
+  </view>
+</van-popup>

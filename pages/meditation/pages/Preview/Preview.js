@@ -104,7 +104,7 @@ Page({
         console.log(res)
         if (res.data.data.length < 1) {
           num =  0/ 0 * 100
-
+          console.log(nianji)
           that.setData({
             arr: res.data.data,
             num: num,
@@ -114,6 +114,7 @@ Page({
         }else{
           num = res.data.data[0].read.num / res.data.data[0].read.all * 100
           console.log(num)
+          console.log(nianji)
           that.setData({
             arr: res.data.data,
             num: num,
@@ -126,7 +127,8 @@ Page({
       }
     })
   },
-  onClick:function(){
+  onClick:function(e){
+
     console.log(courseid)
     console.log(versionid)
     console.log(gradeid)
@@ -137,7 +139,7 @@ Page({
     var that = this
     gradeid = e.currentTarget.dataset.id
     nianji = e.currentTarget.dataset.name
-    console.log(nianji)
+    console.log(e)
     that.setData({
       current01: e.currentTarget.dataset.index
     })
@@ -147,7 +149,6 @@ Page({
     var that = this
     versionid = e.currentTarget.dataset.id
     banben = e.currentTarget.dataset.name
-    
     that.setData({
       current02: e.currentTarget.dataset.index
     })
