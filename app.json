@@ -282,7 +282,8 @@
         "pages/question/index",
         "pages/comment/index",
         "pages/booklist/booklist",
-        "pages/Article/Article"    
+        "pages/Article/Article"
+          
       ]
     },{
       "root": "pages/meditation/",
@@ -291,7 +292,9 @@
         "pages/question/index",
         "pages/comment/index",
         "pages/booklist/booklist",
-        "pages/Article/Article"
+        "pages/Article/Article",
+        "pages/review/review"
+       
       ]
     }
   ],

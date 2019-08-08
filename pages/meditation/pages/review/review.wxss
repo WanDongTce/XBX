@@ -1,0 +1,16 @@
+/* pages/meditation//pages/review/review.wxss */
+page{background-color: #FAF9F9}
+/* pages/Preview//pages/Article/Article.wxss */
+.clearfix{clear: both}
+.reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 40rpx;margin: 0 auto}
+.header text{display: block;text-align: center}
+.reton_sun{width: 100rpx;height: 100rpx;position: absolute;left: 4rpx;top: 30rpx;}
+.header{position: fixed;left: 0;top: 0;line-height: 13vh;height: 10vh;display: block;width: 100%;background-color: #fff;border: 1px solid #dfdfdf;z-index: 999}
+.text_box text{display: block;text-align: center;font-size: 32rpx;color: #333}
+.text_box text:nth-child(1){padding-top: 120rpx}
+.text_box text:nth-child(2){padding-top: 30rpx}
+.text_box image{width: 576rpx;height: 568rpx; margin: 0 auto;display: block;margin-top: 56rpx}
+.btn_box{width: 560rpx;margin: 0 auto;margin-top: 164rpx}
+.btn_box .btn{float: left;width: 240rpx;text-align: center;border-radius: 15rpx}
+.btn_box .btn:nth-child(1){ margin-right: 80rpx;background-color: #E3AC75;line-height: 64rpx;color: #fff}
+.btn_box .btn:nth-child(2){background-color: #EE7D37;line-height: 64rpx;color: #fff}
