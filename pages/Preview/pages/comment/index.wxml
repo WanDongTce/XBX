@@ -3,7 +3,7 @@
 <!-- card -->
 <form bindsubmit="bindFormSubmit">
   <view class="card">
-    <textarea bindinput="input" value="{{value}}" placeholder="输入您要记录的内容" name="textarea" />
+    <textarea bindinput="input" value="{{value}}" placeholder="请输入你要记录的内容" name="textarea" />
   </view>
   <view class="btn-group">
   <button class="btn" bindtap="goBack">取消</button>
