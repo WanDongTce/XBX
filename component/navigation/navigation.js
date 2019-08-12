@@ -23,6 +23,16 @@ Component({
         app.questionOptions.progress--;
         if (app.questionOptions.progress > 0) { //没有跳出答题模块
           app.questionOptions.currentId = app.questionOptions.list[app.questionOptions.progress - 1].id;
+        } else {
+          //返回到课文页面 清空答题数据
+          app.questionOptions = {
+            list: [],
+            currentId: 0,
+            results: [],
+            progress: 0,
+            count: 0,
+            rightTimes: 0 //分数
+          }
         }
       }
     }
