@@ -1,5 +1,5 @@
 <!--pages/Preview//pages/no-question/index.wxml-->
-<navbar title="逍遥游" isShowBack="{{true}}"></navbar>
+<navbar title="冥想思" isShowBack="{{true}}"></navbar>
 <!-- card -->
 <view class="card">
   <view class="title">{{currentQusetion.title}}</view>

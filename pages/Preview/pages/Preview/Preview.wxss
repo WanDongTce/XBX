@@ -67,7 +67,7 @@ background-color: #4BACE2;border-radius: 50%;box-shadow: 0px 0px 3.5px 1.5px rgb
   z-index: 100999999 !important
 }
 swiper-item{overflow: visible !important;display: block}
-van-popup .name{margin-bottom: 30rpx;display: block}
+van-popup .name{margin-bottom: 30rpx;display: block;margin-top: 80rpx}
 .van-popup{position: relative}
 .list_sun{width: auto !important;line-height: 54rpx;padding-left: 26rpx;padding-right: 26rpx;background-color: #F4F4F4;
 border-radius: 27rpx;font-size: 26rpx;margin-right: 26rpx;margin-bottom: 52rpx;float: left}

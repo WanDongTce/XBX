@@ -135,6 +135,7 @@ Page({
     });
   },
   cancel: function () {
+    var that=this
     //上传数据
     this.sendResults(this.data.scores);
     this.togglePopup();
@@ -176,7 +177,7 @@ Page({
   //write
   goComment: function () {
     wx.navigateTo({
-      url: '/pages/Preview/pages/comment/index?id=1' //课文id
+      url: '/pages/meditation/pages/comment/index?id=1' //课文id
     });
   },
   // 下一题
@@ -196,7 +197,7 @@ Page({
     app.questionOptions.currentId = app.questionOptions.list[app.questionOptions.progress].id;
     if (app.questionOptions.progress < app.questionOptions.count) app.questionOptions.progress++;
     wx.navigateTo({
-      url: '/pages/Preview/pages/question/index?pageId=' + app.questionOptions.currentId
+      url: '/pages/meditation/pages/question/index?pageId=' + app.questionOptions.currentId
     });
   },
   //返回路由位置
@@ -205,7 +206,7 @@ Page({
     let index = 0;
     let length = getCurrentPages().length;
     routers.map(function (item, i) {
-      if (item.route == "pages/Preview/pages/Article/Article") {
+      if (item.route == "pages/meditation/pages/review/review") {
         index = i;
       }
     });
