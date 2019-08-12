@@ -130,6 +130,15 @@ Page({
     this.sendResults(this.data.scores);
     this.togglePopup();
     //跳转到课文
+    //清空数据
+    app.questionOptions = {
+      list: [],
+      currentId: 0,
+      results: [],
+      progress: 0,
+      count: 0,
+      rightTimes: 0 //分数
+    }
     wx.navigateBack({
       delta: that.goback()
     });
