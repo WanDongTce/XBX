@@ -1,4 +1,7 @@
 <compontNavbar title="作业即答" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="tab-content">
     <block wx:if="{{showEmpty}}">
         <empty></empty>

@@ -28,7 +28,15 @@ Page({
     onShow: function () {
         var that = this;
         that.getList(false); 
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getList: function (flag) {
         var that = this;
         // var id = address.length > 0 ? address[2].id : '';

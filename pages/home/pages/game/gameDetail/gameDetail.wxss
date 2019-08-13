@@ -64,3 +64,6 @@ button[plain]{
     background-color: rgb(28, 208, 5);
     color: white;
 }
+canvas-share{display: block;width: 100%;height: 100%}
+canvas-share .content{width: 100%;height: 100%}
+.canvas{width: 100%;height: 100%}

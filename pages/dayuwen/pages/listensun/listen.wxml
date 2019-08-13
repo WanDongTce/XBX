@@ -1,5 +1,8 @@
 <!--pages/listen/listen.wxml-->
 <!--nav-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="{{tabTitle}}" isShowBack="{{true}}"></compontNavbar>
 <view class='banner'>
 

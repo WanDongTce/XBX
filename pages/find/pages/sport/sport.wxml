@@ -1,4 +1,7 @@
 <compontNavbar title="{{idname}}运动" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="bg-box">
     <image src="{{IMGURL}}find/sport/stepmainbg.png" class="bg-img" mode="scaleToFill"></image>
     <view class="case">

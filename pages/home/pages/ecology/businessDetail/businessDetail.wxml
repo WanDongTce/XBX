@@ -1,6 +1,8 @@
 <!--pages/ecology/detail/detail.wxml-->
 <import src="../../../../../template/tab/tab.wxml" />
-
+<my-component id='component'>
+   
+  </my-component>
 <view class='search_box display-flex'>
   <image class="navigation-back-icon" src="../../../../../images/arowLt_fff.png" bindtap='backReturn'></image>
   <view class='search display-flex align-items-center'>

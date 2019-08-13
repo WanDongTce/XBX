@@ -1,4 +1,7 @@
 <compontNavbar title="创建百科" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class="top">
         <image src="{{img[0]}}" class="add-img"></image>

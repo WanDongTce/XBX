@@ -13,3 +13,6 @@
     </block>
     <view class="add-btn" bindtap="addImg">上传</view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

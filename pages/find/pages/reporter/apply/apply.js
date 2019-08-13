@@ -53,7 +53,16 @@ Page({
     },
     onShow: function() {
         this.getState();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     tz_apply: function() {
         var that = this;
         network.POST({

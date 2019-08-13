@@ -1,5 +1,8 @@
 <view class="header"><text>购物车</text><view class='reton_sun' bindtap='topshoop'>
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="购物车" isShowBack="{{true}}" ></compontNavbar>
 <view class="box">
     <block wx:if="{{showEmpty}}">

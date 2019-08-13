@@ -1,4 +1,7 @@
 <compontNavbar title="发现" isShowBack="{{false}}" url=""></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class='newbox'>
  <!-- <navigator class="head one" url="/pages/home/pages/classmate/classmate">
   <image src="../../images/find/find_img1.png" class="head-img"></image>

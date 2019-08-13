@@ -202,6 +202,9 @@ Page({
     //播放录音
     // let filePath = wx.getStorageSync('filePath');
     // this.startMusic(filePath);
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
 
   /**
@@ -209,6 +212,10 @@ Page({
    */
   onHide: function () {
     clearTimeout(timerOut);
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

@@ -1,4 +1,7 @@
 <compontNavbar title="学校百科" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class="head">
         <navigator url="/pages/find/pages/schoolInfo/schoolInfo" class="school-box">

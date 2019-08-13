@@ -1,4 +1,7 @@
 <import src="../../../../../wxParse/wxParse.wxml" />
+<my-component id='component'>
+   
+  </my-component>
 <view class='newtopbox display-flex align-items-center'  id='newtopbox' style="opacity: {{opicity}}">
     <image src='{{base}}images/arowLt.png' class='arowLt' bindtap='goBack'></image>
     

@@ -1,5 +1,8 @@
-<view class="header"><text>冥想思</text><view class='reton_sun' bindtap='topshoop'>
+<view class="header"><text>{{jcmc}}</text><view class='reton_sun' bindtap='topshoop'>
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<my-component id='component'>
+   
+  </my-component>
 <view class="title_box">
   <view class="content_box">
     <text class="name">{{banben}}</text>
@@ -17,12 +20,13 @@
         <view class="text">
           <text class="title">{{item.title}}</text>
           <text class="course">{{item.course_num}}小节课程</text>
-          <text class="class">{{item.class_num}}小节课程</text>
+          <text class="class">{{item.class_num}}课时</text>
         </view>
         <view class="clearfix"></view>
       </view>
       <view class="dropdown {{item.id==list_id?'show':''}}">
-        <view class="list_sun" wx:for="{{list_sun}}" data-id="{{item.id}}" catchtap="toArticle">
+        <view class="list_sun" wx:for="{{list_sun}}" data-id="{{item.id}}" catchtap="toArticle"
+        data-name="{{item.name}}">
         <image src="{{item.isread==1?'http://m.test.54xuebaxue.com/wx_img/img/yuxile/yi.png':'http://m.test.54xuebaxue.com/wx_img/img/yuxile/wei.png'}}"></image>
           <text class="{{item.isread==1?'yi':''}}">{{item.name}}</text>
         </view>

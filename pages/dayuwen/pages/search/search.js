@@ -27,6 +27,9 @@ Page({
   },
   onshow: function () {
     this.onLoad();
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
   del:function(){
    var that=this
@@ -109,7 +112,10 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

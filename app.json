@@ -1,7 +1,8 @@
 {
+  
   "pages": [
     "pages/main/pages/home/home",
-
+"pages/public/public",
   
   "pages/main/pages/shopping/shopping",
     "pages/main/pages/car/car",
@@ -312,7 +313,8 @@
     "van-transition": "/component/transition/index",
     "van-button": "/component/button/index",
     "van-loading": "/component/loading/index",
-    "van-progress": "/component/progress/index"
+    "van-progress": "/component/progress/index",
+    "my-component": "/pages/public/public"
   },
   "tabBar": {
     "color": "#333",
@@ -361,4 +363,5 @@
     "wxd2c2aa1e2850534b"
   ],
   "sitemapLocation": "sitemap.json"
+  
 }

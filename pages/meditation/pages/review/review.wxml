@@ -1,5 +1,8 @@
-<view class="header"><text>冥想思</text><view class='reton_sun' bindtap='topshoop'>
+<view class="header"><text>{{zjmc}}</text><view class='reton_sun' bindtap='topshoop'>
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<my-component id='component'>
+   
+  </my-component>
 <view class="text_box">
   <text>放松心情回顾一下</text>
   <text>这节课老师讲的什么内容?</text>

@@ -1,4 +1,7 @@
 <compontNavbar title="{{idname}}" isShowBack="{{true}}" ></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view wx:if="{{imgUrls.length > 0}}"><image src="{{imgUrls[0].image}}" class="banner"  mode='aspectFill' /></view>
 <view wx:else> <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' /> </view>
 

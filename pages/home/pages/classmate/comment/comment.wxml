@@ -1,4 +1,7 @@
 <!--pages/classmate/comment/comment.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="评论" isShowBack="{{true}}"></compontNavbar>
 <view class='border_top'>
     <view class="homework-cont">

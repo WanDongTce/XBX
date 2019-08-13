@@ -1,4 +1,7 @@
 <compontNavbar title="学校信息" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class="addr-box">
         <view class="school-name">{{info.register_community_name}}</view>

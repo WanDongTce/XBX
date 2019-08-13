@@ -175,6 +175,8 @@ Page({
     },
     onShow: function () {
         var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         that.setData({
           realuserid:app.userInfo.id,
           flag: true
@@ -182,6 +184,12 @@ Page({
         // console.log(that.data.realuserid)
         that.getAll(); 
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getTwList: function (contaFlag) {
       var that = this;
       network.POST({

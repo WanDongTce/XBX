@@ -21,6 +21,17 @@ Page({
         this.empty = this.selectComponent("#empty");
         this.compontNavbar = this.selectComponent("#compontNavbar");
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onShow() {
         var that = this;
         wx.removeStorageSync('createEncyClass');

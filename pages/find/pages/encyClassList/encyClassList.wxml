@@ -6,3 +6,6 @@
         <image class="icon" src="{{base}}images/next.png"></image>
     </navigator>
 </view>
+<my-component id='component'>
+   
+  </my-component>

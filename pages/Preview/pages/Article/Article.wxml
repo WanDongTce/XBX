@@ -1,5 +1,8 @@
-<view class="header"><text>预习乐</text><view class='reton_sun' bindtap='topshoop'>
+<view class="header"><text>{{zjmc}}</text><view class='reton_sun' bindtap='topshoop'>
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
+<my-component id='component'>
+   
+  </my-component>
 <view class="original">
   <view class="content_box">
     <view class="text_box">

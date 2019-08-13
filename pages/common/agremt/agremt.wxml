@@ -1,4 +1,7 @@
 <compontNavbar title="用户协议" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class="bigtitle">APP用户注册服务协议</view>
     <view class="title mt">一、特别提示</view>

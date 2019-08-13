@@ -1,6 +1,8 @@
 <!--pages/course/course.wxml-->
 <!-- <compontNavbar title="新华课典" isShowBack="{{true}}" component-class="component-class"></compontNavbar> -->
-
+<my-component id='component'>
+   
+  </my-component>
 
 <navigat-bar class="navigation-box component-class" id="compontNavbar">
     <view class="back-box display-flex align-items-center"  >

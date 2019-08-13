@@ -7,8 +7,7 @@
 .title_box{margin-top: 42rpx}
 .title_box .content_box{width: 690rpx;margin: 0 auto}
 .title_box .content_box text{display: block;float: left}
-.title_box .content_box .name{font-size: 34rpx;height: 34rpx;line-height: 34rpx; border-left: 6rpx solid #4BACE2;
-padding-left: 16rpx}
+.title_box .content_box .name{font-size: 34rpx;height: 34rpx;line-height: 34rpx; border-left: 6rpx solid #4BACE2;padding-left: 16rpx}
 .title_box .content_box .grade{font-size: 24rpx;line-height: 34rpx;background-color: #FFD27C;padding-left: 10rpx;padding-right: 10rpx;color: #fff;border-radius: 6rpx;margin-left: 12rpx}
 .title_box .content_box .switch{font-size: 28rpx;float: right;line-height: 34rpx;color: #999999}
 .banner{margin-top: 60rpx}
@@ -44,9 +43,7 @@ transition:all .2s ease-in 0s;
  padding-top: 55rpx
 }
 .active{
-
  border-radius: 15rpx;
-
 }
 .active_sun{transform: scale(1.2);
 transition:all .2s ease-in 0s; }

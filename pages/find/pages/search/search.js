@@ -14,11 +14,20 @@ Page({
     },
     onShow: function () {
         searchHis = wx.getStorageSync('searchHis') || [];
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         // console.log(searchHis);
         this.setData({
             hisList: searchHis
         });
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     inputFn: function(e){
         // console.log(e);
         search = e.detail.value.replace(/^\s*|\s*$/, '');

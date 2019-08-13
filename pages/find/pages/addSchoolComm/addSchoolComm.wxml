@@ -6,3 +6,6 @@
     <view class="tip">{{contLength}}/500</view>
     <view class="add-btn" bindtap="submitFn">发布</view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

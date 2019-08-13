@@ -286,9 +286,16 @@ Page({
         });
         bofangState = null;
         // cnosole.log(bgImg)
-
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
-
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     sendAnswer: function (allStroker, img, flag, mp3, temptime, bgImg) {
         console.log((allStroker));
 

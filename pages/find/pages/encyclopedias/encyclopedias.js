@@ -21,7 +21,15 @@ Page({
         that.getUserInfo();
         that.getHotNews();
         that.getTypeList(); 
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getUserInfo: function () {
         var that = this;
         network.getUserInfo(function(res){

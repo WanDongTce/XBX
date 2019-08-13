@@ -11,7 +11,8 @@ Page({
     text:"",
     translation_list:[],
     note_list:[],
-    id: 0 //课文id
+    id: 0, //课文id
+    zjmc:""
   },
 
   /**
@@ -28,6 +29,7 @@ Page({
      userid = user.id
     this.getlist(userid, opid)
     this.startSetInter()
+    var zjmc=wx.getStorageSync("zjcm")
   },
   startSetInter:function(){
     time=setInterval(function(){
@@ -100,7 +102,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
 
   /**
@@ -108,6 +112,10 @@ Page({
    */
   onHide: function () {
     clearInterval(time)
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

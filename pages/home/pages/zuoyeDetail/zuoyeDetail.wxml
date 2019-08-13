@@ -1,4 +1,7 @@
 <!--pages/ls2/ls2.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <view class='newnavbox position_r'>
     <view class="back-box" bindtap="goBack" >
         <image src="../../../../images/arowLt_fff.png" class='navigation-back-icon'></image>

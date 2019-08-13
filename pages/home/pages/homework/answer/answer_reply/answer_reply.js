@@ -411,7 +411,17 @@ Page({
             canvasId: 'myCanvas',
             actions: []
         });
+        
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getCoverImg: function(callback){
         var that = this;
         wx.canvasToTempFilePath({

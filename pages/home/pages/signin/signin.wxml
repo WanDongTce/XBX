@@ -1,4 +1,7 @@
 <!--pages/ls2/ls2.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="签到赢积分" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 <view class='position_r top_bigbox'>
     <image src='../../images/activity/activity_bg.png' class='topimg position_a'></image>

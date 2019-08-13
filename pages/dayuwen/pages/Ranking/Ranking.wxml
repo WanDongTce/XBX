@@ -1,3 +1,6 @@
+<my-component id='component'>
+   
+  </my-component>
 <view class="header"><text>诗歌朗读</text>
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>

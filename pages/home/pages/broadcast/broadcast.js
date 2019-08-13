@@ -16,7 +16,15 @@ Page({
     onShow: function () {
         var that = this;
         that.getList(); 
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getList() {
         var that = this;
         network.POST({

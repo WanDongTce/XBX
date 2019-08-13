@@ -1,4 +1,7 @@
 <compontNavbar title="{{tabTitle}}" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="container">
     <view class="fixed-box">
         <!-- <view class="search-box">

@@ -1,4 +1,7 @@
 <!--pages/Preview//pages/no-question/index.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <navbar title="记一笔" isShowBack="{{true}}"></navbar>
 <!-- card -->
 <form bindsubmit="bindFormSubmit">

@@ -1,6 +1,8 @@
 <import src="./actyTemplate.wxml" />
 <!-- <compontNavbar title="{{idname}}" isShowBack="{{false}}" url=""></compontNavbar> -->
-
+<my-component id='component'>
+   
+  </my-component>
 
 
 <view class="navigation-box component-class" >

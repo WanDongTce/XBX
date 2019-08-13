@@ -29,7 +29,15 @@ Page({
             // console.log(app.classBarter)
             that.getList(false);  
         }
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     swiScrollTab: function (e) {
         subId = e.currentTarget.dataset.index;
         this.setData({

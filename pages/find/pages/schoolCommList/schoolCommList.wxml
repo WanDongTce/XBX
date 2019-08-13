@@ -1,4 +1,7 @@
 <compontNavbar title="学校简介" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <block wx:if="{{showEmpty}}">
         <empty></empty>

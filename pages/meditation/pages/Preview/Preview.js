@@ -79,6 +79,7 @@ Page({
   },
   tobooklist:function(e){
     var postad = e.currentTarget.dataset.id 
+    wx.setStorageSync("jcmc", e.currentTarget.dataset.name)
     console.log(postad)
     wx.navigateTo({
       //url: 'post-detail/post-detail'  //跳转详情页  切记配置app.json文件 
@@ -226,14 +227,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

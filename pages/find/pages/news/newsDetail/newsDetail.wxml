@@ -1,4 +1,7 @@
 <import src="../../../../../wxParse/wxParse.wxml" />
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="新闻详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 <view class="comt-box">
     <view class="rich-text-box">

@@ -11,8 +11,16 @@ Page({
         id = options.id;
         this.compontNavbar = this.selectComponent("#compontNavbar");
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onShow: function() {
-
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     inputFn(e){
         remark = e.detail.value.replace(/^\s*|\s*$/, '');

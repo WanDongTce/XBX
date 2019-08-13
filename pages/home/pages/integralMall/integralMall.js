@@ -39,6 +39,17 @@ Page({
     onShow(){
         
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     swiScrollTab: function (e) {
         var a = e.currentTarget.dataset.index;
         console.log(a)

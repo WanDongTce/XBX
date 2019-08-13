@@ -1,4 +1,7 @@
 <compontNavbar title="班级指数排行榜" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="head-bg">
   <image src="{{IMGURL}}find/ranking/paihangbang_bg.png" class="head-img"></image>
   <view class="head-box">

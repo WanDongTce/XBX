@@ -28,7 +28,15 @@ Page({
         var that = this;
         that.getDetail();
         that.getList(); 
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getDetail: function () {
         var that = this;
         network.POST({

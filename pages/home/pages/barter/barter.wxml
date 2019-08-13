@@ -1,4 +1,7 @@
 <import src="../../../../template/tab/tab.wxml" />
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="书易货" isShowBack="{{true}}"></compontNavbar>
 <view class="box" wx:if="{{!showSearch}}">
     <view class='searchbigbox display-flex'>

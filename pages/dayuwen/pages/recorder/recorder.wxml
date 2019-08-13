@@ -1,4 +1,7 @@
 <!--pages/recorder/recorder.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="{{tabTitle}}" isShowBack="{{true}}"></compontNavbar>
 <view class="info">
 	<image class="info-avatar" src="{{images}}" />

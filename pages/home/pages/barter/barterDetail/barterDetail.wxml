@@ -1,4 +1,7 @@
 <compontNavbar title="物品详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class='position-relative'>
     <image wx:if="{{leftstate==3}}" src='../../../images/barter/state_success.png' class='new_state'></image>
 

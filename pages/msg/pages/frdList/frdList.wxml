@@ -1,5 +1,8 @@
 <compontNavbar title="通讯录" isShowBack="{{true}}" url="pages/main/pages/msg/msg" component-class="component-class"></compontNavbar>
 <view class="box">
+<my-component id='component'>
+   
+  </my-component>
     <!-- <view class="search-box">
         <input class="input" bindinput="inputFn"></input>
     </view> -->

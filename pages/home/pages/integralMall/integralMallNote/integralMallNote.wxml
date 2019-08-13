@@ -1,5 +1,7 @@
 <import src="../../../../../template/tab/tab.wxml" />
-
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="积分说明" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 
 <view class="tabs">

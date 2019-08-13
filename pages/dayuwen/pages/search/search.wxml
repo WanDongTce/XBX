@@ -1,6 +1,9 @@
 <view class="header"><text>搜索</text>
  <view class='reton_sun' bindtap='topshoop'><image src='/pages/dayuwen/images/arrow.png' class='reton'></image></view>
 </view>
+<my-component id='component'>
+   
+  </my-component>
 <view class="search">
 <input type='text' placeholder='请输入作者/诗词进行搜索' bindinput="searchval" name="searchval" bindconfirm='search'></input>
   <view class='btn' catchtap='search'>

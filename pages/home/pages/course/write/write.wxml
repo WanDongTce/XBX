@@ -1,4 +1,7 @@
 <!--pages/courseList/write/write.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="{{navtitle}}" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 
 <form bindsubmit="bindFormSubmit">

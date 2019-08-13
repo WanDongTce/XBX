@@ -55,6 +55,9 @@ Page({
             this.setData({
                 title: app.userInfo.register_community_name
             })
+          var that = this;
+          that.component = that.selectComponent("#component")
+          that.component.customMethod()
         }
         
         
@@ -98,6 +101,12 @@ Page({
             }
         })
     },
+  onHide: function () {
+    var that = this
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     init() {
         var that = this;
         

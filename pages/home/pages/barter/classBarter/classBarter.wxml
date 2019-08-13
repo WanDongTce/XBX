@@ -1,4 +1,7 @@
 <import src="../../../../../template/scrollTab/scrollTab.wxml" />
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="分类" isShowBack="{{true}}"></compontNavbar>
 <block wx:if="{{!isShowFullImg}}">
     <view class="fixed-scroll-view-box">

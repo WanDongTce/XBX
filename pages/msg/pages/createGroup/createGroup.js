@@ -17,6 +17,9 @@ Page({
     },
     onShow: function() {
         this.getList();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     getList() {
         var that = this;
@@ -29,6 +32,12 @@ Page({
             });
         });
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     saveSearch(e) {
         // console.log(e);
         search = e.detail.value.replace(/^\s*|\s*$/, '');

@@ -14,6 +14,17 @@ Page({
         this.empty = this.selectComponent("#empty");
         this.getNewsList();
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getNewsList: function () {
         var that = this;
 

@@ -1,5 +1,7 @@
 <compontNavbar title="商品详情" isShowBack="{{true}}"  ></compontNavbar>
-
+<my-component id='component'>
+   
+  </my-component>
 <import src="/wxParse/wxParse.wxml" />
 <view class="container">
     <view class="imgs-box">

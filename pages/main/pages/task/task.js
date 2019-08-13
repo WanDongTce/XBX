@@ -73,7 +73,16 @@ Page({
       this.getList();
       this.getTaskList();//任务中心
       this.getParentList();//家长任务 
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     //日历切换
     show_calendar: function () {
         var that=this;

@@ -9,3 +9,6 @@
     <button formType="submit" class='btn cb_lightgreen' >保存</button>
   </view>
 </form>
+<my-component id='component'>
+   
+  </my-component>

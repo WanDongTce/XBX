@@ -1,4 +1,7 @@
 <compontNavbar title="综合素质" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class='topbox'>
     <view class='top_content' wx:for="{{topic}}" wx:key="this" bindtap='tz_topicdetail' data-topicid="{{item.id}}" data-topicname="{{item.name}}" data-topicitem="{{item}}">
         <image src="{{item.image}}" class="head-img"></image>

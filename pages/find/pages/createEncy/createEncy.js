@@ -22,8 +22,16 @@ Page({
             encyClass: options
         })
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onShow() {
         var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         var a = wx.getStorageSync('createEncyClass');
         // console.log(a);
         if(a){

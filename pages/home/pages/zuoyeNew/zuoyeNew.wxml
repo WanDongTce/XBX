@@ -1,4 +1,6 @@
-
+<my-component id='component'>
+   
+  </my-component>
 <!-- <compontNavbar title="日常作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar> -->
 <navigat-bar class="navigation-box component-class" id="compontNavbar">
     <view class="back-box" bindtap="goBack" >

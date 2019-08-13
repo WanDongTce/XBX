@@ -1,4 +1,7 @@
 <compontNavbar title="冥想思" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="container">
      <studyFilter bind:filterCallBack="filterCallBack" bind:showOptions="showOptions"></studyFilter>
     <view class="cont-box">

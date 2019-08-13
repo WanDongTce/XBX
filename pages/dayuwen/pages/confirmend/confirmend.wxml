@@ -1,4 +1,7 @@
 <!--pages/confirmend/confirmend.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="{{tabTitle}}" isShowBack="{{true}}" />
 <view class="progress-wrap">
 <view class="btn_swb"  wx:if="{{flg==true}}" bindtap='suspend'>

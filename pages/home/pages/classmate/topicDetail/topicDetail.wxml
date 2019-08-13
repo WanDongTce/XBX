@@ -1,4 +1,7 @@
 <compontNavbar title="{{title}}" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <block wx:for="{{list}}" wx:key="this">
   <view class='box display-flex' bindtap='tz_topicdetaildetail' data-topicnamedetail="{{item.name}}" data-forumid="{{item.id}}" data-readvolume="{{item.read_volume}}" data-count="{{item.count}}" data-topicimg="{{item.image}}" data-topicdes="{{item.description}}">
     <image src='{{item.image}}' class='img' mode='aspectFill'></image>

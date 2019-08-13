@@ -9,13 +9,16 @@ Page({
     show: {
       middle: false
     },
+    zjmc:"",
     currentQusetion: {}, //当前问题
     progress: 0,
     count: 0,
     addStyle: '', //对错样式
     currentIndex: -1, //显示对错item
     // disabled: false
-    scores: 0
+    scores: 0,
+     
+    urlsun:""
   },
   onTransitionEnd() {
     // console.log(`You can't see me 🌚`);
@@ -43,11 +46,12 @@ Page({
         app.questionOptions.count = questions.length;
         app.questionOptions.progress = 1;
         app.questionOptions.currentId = questions[0].id;
-
+        console.log(questions[0].img_url)
         that.setData({
           progress: 1,
           count: questions.length,
-          currentQusetion: questions[0]
+          currentQusetion: questions[0],
+          
         });
       }
     });
@@ -240,6 +244,10 @@ Page({
         currentQusetion: app.questionOptions.list[app.questionOptions.progress - 1] || app.questionOptions.list[0]
       });
     }
+    var zjmc=wx.getStorageSync("zjmc")
+    this.setData({
+      zjmc: zjmc
+    })
   },
 
   /**
@@ -253,14 +261,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function() {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

@@ -1,6 +1,9 @@
 <!--pages/composition/composition.wxml-->
 <!-- searchnew -->
 <!-- newsearch -->
+<my-component id='component'>
+   
+  </my-component>
 <view class="navigation-box component-class c_bg_gf" wx:if="{{changeCss==2}}" id='showtwo'>
     <view class="back-box2" bindtap="goBack" >
         <image class="navigation-back-icon" src="../../images/arow_top_left_fff.png"></image>

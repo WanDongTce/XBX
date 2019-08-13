@@ -43,9 +43,15 @@ Page({
         // console.log(that.data.subjectid)
     },
   onShow: function () {
-      
-
-      
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
     
     addImg: function () {

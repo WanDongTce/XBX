@@ -24,7 +24,9 @@ Page({
     },
 
     onShow: function () {
-
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     //手机号
     phoneInputEvent: function (e) {
@@ -197,6 +199,10 @@ Page({
     },
     onHide() {
         this.onUnload();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.noShow()
+      that.component.nohide()
     },
     //点击密码图片
     passwordimg: function () {

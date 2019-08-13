@@ -11,7 +11,8 @@ Page({
     text:"",
     translation_list:[],
     note_list:[],
-    id: 0 //课文id
+    id: 0, //课文id
+    zjmc: ""
   },
 
   /**
@@ -20,8 +21,11 @@ Page({
  
   onLoad: function (options) {
     console.log(options);
+    var zjmc = wx.getStorageSync("zjmc")
+   
     this.setData({
-      id: options.id
+      id: options.id,
+      zjmc: zjmc
     });
     var user = wx.getStorageSync("userInfo")
     console.log(user.id)
@@ -101,7 +105,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
 
   /**
@@ -109,6 +115,10 @@ Page({
    */
   onHide: function () {
     clearInterval(time)
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

@@ -16,7 +16,16 @@ Page({
     },
     onShow: function() {
         this.getDetail();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getDetail(){
         var that = this;
         network.getUserInfo(function (res) { 

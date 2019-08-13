@@ -1,4 +1,7 @@
 <compontNavbar title="分享我的易货" isShowBack="{{true}}"></compontNavbar> 
+<my-component id='component'>
+   
+  </my-component>
 <navigator class="Header">
   <image src="../../../images/barter/barter-Choice.png" class="Header-left"></image>
   <view class="Header-center"></view>

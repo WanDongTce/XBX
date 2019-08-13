@@ -1,4 +1,7 @@
 <!--pages/ecology/business/business.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="周边商家" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 
 <block wx:if="{{showEmpty}}">

@@ -1,6 +1,9 @@
 <!-- <view class='textarea_box'>
   <textarea class="textarea" placeholder="发布帖子" maxlength="280"></textarea>
 </view> -->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="发布" isShowBack="{{true}}"></compontNavbar>
 <view>
     <view class="homework-cont">

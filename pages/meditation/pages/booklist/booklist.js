@@ -16,6 +16,7 @@ Page({
     list_id:"",
     nianji:"",
     banben:"",
+    jcmc: ""
     
   },
 
@@ -23,10 +24,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this
      postId = options.id 
     nianji=options.nianji
     banben=options.banben
     this.getlist(postId)
+    var jcmc = wx.getStorageSync("jcmc")
+    that.setData({
+      jcmc: jcmc
+    })
     
   },
   topshoop: function () {
@@ -99,6 +105,8 @@ Page({
   },
   toArticle:function(e){
     var postad = e.currentTarget.dataset.id
+    var zjmc = e.currentTarget.dataset.name
+    wx.setStorageSync("zjmc", zjmc)
     console.log(postad)
     wx.navigateTo({
       //url: 'post-detail/post-detail'  //跳转详情页  切记配置app.json文件 
@@ -116,7 +124,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
 
   /**
@@ -124,6 +134,9 @@ Page({
    */
   onHide: function () {
     var that = this
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
     that.setData({
 
       list_id: "",

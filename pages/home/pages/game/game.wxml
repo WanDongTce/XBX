@@ -1,7 +1,9 @@
 <!-- <compontNavbar title="逗逗玩" isShowBack="{{true}}"></compontNavbar> -->
 <image src="{{IMGURL}}game/play-banner.png" class="banner"></image>
 <image src='{{base}}images/arowLt_fff.png' class='arowLt' bindtap='goBack'></image>
-
+<my-component id='component'>
+   
+  </my-component>
 <view class="icon display-flex align-items-center justify-content-around">
     <!-- <navigator class="icon-box" url="{{'/pages/home/pages/game/gameList/gameList?gametype=' + item.id}}" wx:for="{{typeList}}" wx:key="this">
         <image src="{{IMGURL + 'game/g'+item.id+'.png'}}" class="icon-img" data-idx="{{item.id}}"></image>

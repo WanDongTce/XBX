@@ -1,5 +1,7 @@
 <compontNavbar title="我要回答" isShowBack="{{true}}"></compontNavbar>
-
+<my-component id='component'>
+   
+  </my-component>
 
 <view class="contn">
 <view class="container1">

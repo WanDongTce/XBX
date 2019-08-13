@@ -1,4 +1,7 @@
 <!--pages/classmate/classmateDetailNew/classmateDetailNew.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="综合素质详情" isShowBack="{{true}}"></compontNavbar>
 <view class="list" >
     <view class="item"   >

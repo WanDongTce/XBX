@@ -1,4 +1,7 @@
 <compontNavbar title="聊天信息" isShowBack="{{true}}" url="/pages/msg/pages/liveroom/liveroom" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class="cont" bindtap="toDetail">
         <view class="lt">

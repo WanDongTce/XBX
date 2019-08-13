@@ -1,4 +1,7 @@
 <compontNavbar title="小记者" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view wx:if="{{(state.agreestatus==0)||(state.agreestatus==3)}}">
   <image src="{{IMGURL}}find/reporter/apply.png" mode='widthFix' class='image_bg' bindtap='tz_apply'></image>
 

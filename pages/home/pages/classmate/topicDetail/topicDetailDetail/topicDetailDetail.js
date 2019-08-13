@@ -37,6 +37,14 @@ Page({
   onShow: function () {
     page = 1;
     this.getList(true, page);
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
   getList: function (contaFlag, page) {
     var that = this;

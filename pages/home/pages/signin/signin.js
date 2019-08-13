@@ -19,10 +19,17 @@ Page({
 
   onShow: function () {
       var that=this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
 
       that.getSigninData(); //获取积分签到日期
   },
-    
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getSigninData:function(){
         var that=this;
         network.POST({

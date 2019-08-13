@@ -1,8 +1,13 @@
 <!--pages/Preview//pages/no-question/index.wxml-->
-<navbar title="逍遥游" isShowBack="{{true}}"></navbar>
+<my-component id='component'>
+   
+  </my-component>
+<navbar title="{{zjmc}}" isShowBack="{{true}}"></navbar>
 <!-- card -->
 <view class="card">
-  <view class="title">{{currentQusetion.title}}</view>
+  <view class="title"wx:if="{{currentQusetion.title!=''}}">{{currentQusetion.title}}</view>
+
+  <image wx:else src="{{currentQusetion.img_url}}" mode="widthFix"  ></image>
   <view bindtap="choices" data-index="{{index}}" data-answer="{{item.answer}}" data-id="{{item.id}}" wx:for="{{currentQusetion.options}}" wx:key="{{item.id}}" class="item {{item.addStyle}}">{{item.title}}</view>
 </view>
 

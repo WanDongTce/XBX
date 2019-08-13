@@ -1,4 +1,7 @@
 <compontNavbar title="支付" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class="payinfo">
         <view class="lt">本次需支付</view>

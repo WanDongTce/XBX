@@ -15,3 +15,6 @@
         </view>
     </view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

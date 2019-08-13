@@ -52,7 +52,15 @@ Page({
             tabs: app.studyOptions.kemu
         });
         that.getList(true);
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
 
     swiScrollTab: function (e) {
         subId = e.currentTarget.dataset.index;

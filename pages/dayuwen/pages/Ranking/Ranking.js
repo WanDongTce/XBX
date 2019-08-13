@@ -220,7 +220,15 @@ Page({
     var that = this
     that.Recitation(postId)
     that.goodlist(postId)
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
 
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   }
 })
 

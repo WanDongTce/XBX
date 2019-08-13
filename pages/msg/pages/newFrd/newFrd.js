@@ -17,8 +17,17 @@ Page({
     },
     onShow: function() {
         this.getList();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     //被添加好友列表
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getList() {
         var that = this;
         network.POST({

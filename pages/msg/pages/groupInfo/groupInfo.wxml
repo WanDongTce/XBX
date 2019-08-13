@@ -1,4 +1,7 @@
 <compontNavbar title="聊天信息" isShowBack="{{true}}" url="/pages/msg/pages/liveroom/liveroom" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <scroll-view class="scroll-view" scroll-x="true">
         <view class="scroll-view-item" wx:for="{{info.member}}" wx:key="this" bindtap="toDetail" data-id="{{item.user.uid}}" data-mobile="{{item.mobile}}">

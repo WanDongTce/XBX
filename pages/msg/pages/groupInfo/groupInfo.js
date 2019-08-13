@@ -12,7 +12,16 @@ Page({
     },
     onShow: function() {
         this.getGroupInfo();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getGroupInfo(){
         var that = this;
         network.POST({

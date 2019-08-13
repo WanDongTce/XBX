@@ -1,3 +1,4 @@
+<my-component id='component'></my-component>
 <view class="header"><text>预习乐</text><view class='reton_sun' bindtap='topshoop'>
 <image src='/pages/main/images/shopping/arowLt.png' class='reton'></image></view></view>
 <view class="title_box">
@@ -39,7 +40,7 @@
 indicator-color="{{beforeColor}}" indicator-active-color="{{afterColor}}" circular='{{circular}}' 
 previous-margin="{{previousmargin}}" next-margin="{{nextmargin}}" bindchange="swiperChange" >
     <block wx:for="{{arr}}" wx:key="key"> 
-     <swiper-item class="{{index == swiperCurrent ? ' show02' : ''}}" data-id="{{item.id}}" bindtap="tobooklist">
+     <swiper-item class="{{index == swiperCurrent ? ' show02' : ''}}" data-id="{{item.id}}" bindtap="tobooklist" data-name="{{item.name}}">
       <view class="photo {{index == swiperCurrent ? ' active_sun' : ''}}">
         <image src="{{item.pic_dir}}" class="slide-image {{index == swiperCurrent ? ' active' : ''}}" 
 bindchange="chuangEvent" id="{{index}}"></image>

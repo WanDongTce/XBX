@@ -13,9 +13,17 @@ Page({
         this.addAgre = this.selectComponent("#schoolEcyAddAgree"); 
         this.compontNavbar = this.selectComponent("#compontNavbar");
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onShow: function () {
         var that = this;
         that.getList();
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     getList() {
         var that = this;

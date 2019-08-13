@@ -1,4 +1,7 @@
 <compontNavbar title="{{title}}" isShowBack="{{true}}" url="/pages/main/msg/msg" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <view class='input-container'>
         <image src='{{base}}images/search.png' class="search-icon"></image>

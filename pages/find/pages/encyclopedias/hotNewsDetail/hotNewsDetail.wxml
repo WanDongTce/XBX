@@ -5,3 +5,6 @@
         <template is="wxParse" data="{{wxParseData: content.nodes}}"></template>
     </view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

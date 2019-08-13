@@ -1,4 +1,7 @@
 <!--pages/recite/recite.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <view class="list">
 	<image class="image" src="" />
 	<view class="item">

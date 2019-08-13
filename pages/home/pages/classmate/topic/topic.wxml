@@ -1,4 +1,7 @@
 <compontNavbar title="选择话题" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class='overf'>
   <view class="leftbox fl"   >
     <view wx:for="{{list}}" wx:key="this" bindtap='left_choice' data-leftid='{{item.id}}' class="lefttext {{item.id==currentid?'current':''}}">

@@ -1,3 +1,6 @@
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="评论" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 <view class="container">
     <block wx:if="{{showEmpty}}"><empty></empty></block> 

@@ -12,3 +12,6 @@
     <text>{{text}}</text>
   </view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

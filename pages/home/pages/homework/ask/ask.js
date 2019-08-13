@@ -17,6 +17,17 @@ Page({
         myPoint: '',
         point: 0
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
         var that = this;

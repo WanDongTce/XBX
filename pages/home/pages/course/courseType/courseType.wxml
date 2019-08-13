@@ -1,23 +1,11 @@
 <!--pages/course/course.wxml-->
 <compontNavbar title="{{navtitle}}" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 
-
+<my-component id='component'>
+   
+  </my-component>
 
 <import src="/template/scrollTab/scrollTab.wxml" />
-<van-popup
-    show="{{ show.middle }}"
-    custom-class="center"
-    transition="none"
-    bind:close="togglePopup"
-    bind:transitionEnd="onTransitionEnd"
-  >
-    <view class="popwrap">
-    <image class="popwrap-img" mode="widthFix" src="/images/isvip@2x.png"></image>
-    <text class="pop-text">开通会员，畅享优质好课！</text>
-    <button class="pop-btn" bindtap="goBuy">立即开通</button>
-    <button class="pop-btn pop-btn-outline" bindtap="noBuy">暂不开通</button>
-    </view>
-  </van-popup>
 <view class='top_fix display-flex align-items-center' >
     <picker class='bigpicker c_999 f_28 position_r' bindchange="bindPickerChange" value="{{index}}" range="{{nianji}}" range-key="title">
         <view class="picker">
@@ -41,7 +29,7 @@
         <empty></empty>
       </block>  
       
-      <view class='newcourse_itembox' wx:for="{{list}}" wx:key="this" bindtap='isExpires'  data-id="{{item.Id}}" data-myid="{{item.Id}}" data-videopic="{{item.PicUrl}}">
+      <view class='newcourse_itembox' wx:for="{{list}}" wx:key="this" bindtap='tz_detail'  data-id="{{item.Id}}" data-myid="{{item.Id}}" data-videopic="{{item.PicUrl}}">
         <view class='position_r'>
             <image wx:if='{{item.PicUrl}}' class='newcourse_topimg' src='{{item.PicUrl}}' mode='aspectFill' ></image>
             <image wx:else class='newcourse_topimg' src='../../../../../images/normal_pic1.png' mode='aspectFill' ></image>

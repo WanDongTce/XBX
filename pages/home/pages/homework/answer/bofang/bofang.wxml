@@ -12,3 +12,6 @@
         <view class='item2' bindtap='next' wx:if="{{btnFlag == 1}}">发布</view> 
     </view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

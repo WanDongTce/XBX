@@ -47,6 +47,14 @@ Page({
     page = 1;   
     that.getShowZan();
     that.getComment(false);
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
   previewImg(e) {
     this.setData({

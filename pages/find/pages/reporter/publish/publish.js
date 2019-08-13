@@ -21,7 +21,15 @@ Page({
     // });
   },
   onShow: function () {
-    
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
   saveTitle: function (e) {
     var a = e.detail.value.replace(/^\s*|\s*$/, '');

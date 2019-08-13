@@ -1,5 +1,7 @@
 <compontNavbar title="发布易货" isShowBack="{{true}}"></compontNavbar>
-
+<my-component id='component'>
+   
+  </my-component>
 <view class="container">
     <view class="homework-cont">
         <input placeholder="为您要发布的宝贝填写合适的标题" class="title" placeholder-class="placeh" bindinput="saveTitle"></input>

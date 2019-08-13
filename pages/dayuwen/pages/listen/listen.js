@@ -327,6 +327,9 @@ Page({
    */
   onShow: function () {
     innerAudioContext.pause()
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
     flg = false
     if (!this.data.onPlay) {
       innerAudioContext.play();
@@ -345,6 +348,10 @@ Page({
     innerAudioContext.stop();
     // innerAudioContext.pause();
     // innerAudioContext.destroy();
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
     this.setData({
       onPlay: false
     });

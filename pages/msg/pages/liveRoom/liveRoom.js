@@ -29,8 +29,16 @@ Page({
     onShow: function() {
         var that = this;
         this.independentModeLogin();
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     //独立模式登录
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     independentModeLogin() {
         var that = this;
         //监听事件

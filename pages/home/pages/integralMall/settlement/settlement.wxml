@@ -1,4 +1,7 @@
 <compontNavbar title="结算" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
  <view class='top_bigbox' bindtap='tz_address' wx:if="{{hasAddress}}">
   <view class='top_box display-flex' >
     <view class='top_name'>收货人：{{address.name}}</view>

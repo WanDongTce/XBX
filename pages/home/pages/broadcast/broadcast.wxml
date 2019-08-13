@@ -1,4 +1,7 @@
 <compontNavbar title="互动课堂" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <block wx:if="{{showEmpty}}">
     <empty></empty>
 </block>

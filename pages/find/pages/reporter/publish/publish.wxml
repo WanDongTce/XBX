@@ -5,7 +5,9 @@
 <view class='textarea_box'>
    <textarea placeholder='请输入内容~~~'  placeholder-class='placeholder' maxlength="500" bindinput="saveContent"></textarea> 
 </view>
-
+<my-component id='component'>
+   
+  </my-component>
 
 <!-- <view class="imgs">
  

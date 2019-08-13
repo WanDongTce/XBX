@@ -18,6 +18,8 @@ Page({
     },
     onShow(){
         var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         var a = wx.getStorageSync('createEncyClass');
         if (a) {
             that.setData({ seletedPid: a.pid });
@@ -26,6 +28,12 @@ Page({
         }
         that.getItems(that.data.seletedPid);  
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getContent(e){
         var that = this;
         var a = e.currentTarget.dataset.id;

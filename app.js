@@ -1,15 +1,17 @@
+var ss = ""
+var list = []
 App({
-    // requestUrl: 'https://social.54xuebaxue.com/',
-    // imgUrl: 'https://m.54xuebaxue.com/wx_img/',
-    // ansHref: 'https://m.54xuebaxue.com/question/my-answer-list',
-    // quesHref: 'https://m.54xuebaxue.com/question/detail', 
+    requestUrl: 'https://social.54xuebaxue.com/',
+    imgUrl: 'https://m.54xuebaxue.com/wx_img/',
+    ansHref: 'https://m.54xuebaxue.com/question/my-answer-list',
+    quesHref: 'https://m.54xuebaxue.com/question/detail', 
 
 
 
-    requestUrl: 'http://social.test.54xuebaxue.com/',
-    imgUrl: 'http://m.test.54xuebaxue.com/wx_img/',
-    ansHref: 'http://m.test.54xuebaxue.com/question/my-answer-list',
-    quesHref: 'http://m.test.54xuebaxue.com/question/detail',
+    // requestUrl: 'http://social.test.54xuebaxue.com/',
+    // imgUrl: 'http://m.test.54xuebaxue.com/wx_img/',
+    // ansHref: 'http://m.test.54xuebaxue.com/question/my-answer-list',
+    // quesHref: 'http://m.test.54xuebaxue.com/question/detail',
     //预习乐
     questionUrl: 'http://yuxile.54xuebaxue.com/',
 
@@ -116,6 +118,10 @@ App({
             }
         });
     },
+    storck:function(){
+
+    }
+  ,
     onShow: function () {
         var that = this;
         that.userInfo = wx.getStorageSync('userInfo');

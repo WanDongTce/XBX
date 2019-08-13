@@ -1,4 +1,7 @@
 <!--pages/home/my_study/answer/answer_quiz/answer_quiz.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <loading hidden="{{hidden}}" >
  加载中...
  </loading>

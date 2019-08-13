@@ -16,6 +16,9 @@ Page({
         this.setData({
             list: app.classBarter.slice(1)
         });
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     selectItm: function(e){
         var dt = e.currentTarget.dataset;
@@ -24,6 +27,12 @@ Page({
         });
         selectName = dt.name;
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     confirmFn: function(){
         var that = this;
         var a = that.data.selectedId;

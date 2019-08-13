@@ -22,6 +22,9 @@ Page({
     onShow: function () {
         params = wx.getStorageSync('editAddress');
         // console.log(params);
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         var a = [
             {id: params.priovince_id, name: params.priovince_name}, 
             {id: params.city_id, name: params.city_name}, 
@@ -38,6 +41,12 @@ Page({
         cityId = params.city_id;
         districtId = params.district_id;
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     showPicerFn() {
         this.setData({
             showPicker: true

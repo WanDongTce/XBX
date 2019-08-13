@@ -18,6 +18,17 @@ Page({
         // console.log(this.data.payinfo);
         this.createOrder();
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     createOrder() {
         var that = this;
         network.POST({

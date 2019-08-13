@@ -477,6 +477,10 @@ Page({
             curStrokerPath: []
         };
         lineId = count = state = 0;
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.noShow()
+      that.component.nohide()
         this.curStrokerTemp = {
             state: null,
             color: null,
@@ -505,7 +509,8 @@ Page({
         // console.log('onshow111111')
         var a = wx.getStorageSync('answer_bgImg');
         var that=this;
-        
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         console.log(a)
         // if (a == "undefined") {
         //     that.setData({

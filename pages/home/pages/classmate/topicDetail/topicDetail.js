@@ -18,7 +18,15 @@ Page({
     // wx.setNavigationBarTitle({ title: options.topicname })
   },
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
   tz_topicdetaildetail: function (e) {
     wx.navigateTo({

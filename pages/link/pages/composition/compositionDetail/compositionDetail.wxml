@@ -1,4 +1,7 @@
 <!--pages/composition/compositionDetail/compositionDetail.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="文章详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 
 <view class='containbox'>

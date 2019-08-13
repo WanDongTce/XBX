@@ -474,7 +474,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
 
   /**
@@ -484,6 +486,10 @@ Page({
     clearInterval(timer);
     clearInterval(asnycTextTimer);
     clearTimeout(timerOut);
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
 
   },
 

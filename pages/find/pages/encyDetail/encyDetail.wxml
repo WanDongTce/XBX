@@ -1,4 +1,7 @@
 <compontNavbar title="百科详情" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#4bace2">
         <block wx:for="{{detail.images}}" wx:key="this">

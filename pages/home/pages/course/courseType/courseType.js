@@ -11,10 +11,6 @@ Page({
 
   
   data: {
-    //收费提示
-    show: {
-      middle: false
-    },
       kemu: [],
       nianji: [],
       index:0,
@@ -83,8 +79,15 @@ Page({
     },
   onShow: function () {
       var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
       
-      
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
     swiScrollTab: function (e) {
         subId = e.currentTarget.dataset.index;
@@ -153,46 +156,6 @@ Page({
             }
         });
     },
-  //提示会员是否到期
-  onTransitionEnd() {
-    // console.log(`You can't see me 🌚`);
-  },
-  toggle(type) {
-    this.setData({
-      [`show.${type}`]: !this.data.show[type]
-    });
-  },
-
-  togglePopup() {
-    this.toggle('middle');
-  },
-  noBuy: function () {
-    this.toggle('middle');
-  },
-  goBuy: function () {
-    wx.navigateTo({
-      url: '/pages/my/pages/memberRenewalNewPay/memberRenewalNewPay'
-    });
-  },
-  //判断会员是否过期
-  isExpires: function (e) {
-    var that = this;
-    network.memberExpires(function (res) {
-      // console.log(res);
-      if (res.data.data[0].item.is_end == 1) {  //会员到期
-        that.toggle('middle');
-        // wx.showToast({
-        //   title: '会员已到期,请续费~',
-        //   icon: 'none'
-        // });
-      } else {
-        //如果没过期直接进入详情页
-        wx.navigateTo({
-          url: '/pages/home/pages/course/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
-        });
-      }
-    });
-  },
     onReachBottom: function () {
         var that = this;
         if (that.data.list.length > 0) {
@@ -213,13 +176,6 @@ Page({
             url: '/pages/home/pages/course/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
         })
     },
-  onHide: function () {
-    this.setData({
-      show: {
-        middle: false
-      }
-    });
-  },
     onUnload: function () {
         page = 1;
         hasmore = null;

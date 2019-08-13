@@ -13,6 +13,17 @@ Page({
             msg: a
         });
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     addImg: function () {
         var that = this;
         wx.chooseImage({

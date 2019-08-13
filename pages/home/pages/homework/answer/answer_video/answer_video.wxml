@@ -2,3 +2,6 @@
 <view class='video_box'>
 <video  src="{{videlurl}}" poster="{{mycover}}"  controls class='video'></video>
 </view>
+<my-component id='component'>
+   
+  </my-component>

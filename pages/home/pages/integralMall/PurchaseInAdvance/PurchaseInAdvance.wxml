@@ -1,4 +1,7 @@
 <compontNavbar title="我要预购" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="container">
     <view class="homework-cont">
         <textarea placeholder="请详细描述您需要的商品，以便我们可以更准确的满足您的需求~~~" placeholder-class="placeh" bindblur="saveMsg"></textarea>

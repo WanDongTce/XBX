@@ -1,3 +1,6 @@
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <live-pusher id="pusher" mode="SD" url="{{pushUrl}}" waiting-image="" debug="{{false}}" bindstatechange="statechange" binderror="error" style="height: {{showInput? '87' : '97'}}vh;" catchtap="hideInputFn" whiteness="10" beauty="10">
         <cover-view class="top">

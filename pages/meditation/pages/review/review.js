@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    zjmc:""
   },
   topshoop: function () {
     wx.navigateBack({
@@ -29,8 +29,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (postad) {
+    var that=this
     console.log(postad.id)
     options=postad.id
+    var zjmc = wx.getStorageSync("zjmc")
+    that.setData({
+      zjmc: zjmc
+    })
   },
 
   /**
@@ -44,14 +49,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**

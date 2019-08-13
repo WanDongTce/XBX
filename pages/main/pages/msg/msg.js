@@ -25,8 +25,16 @@ Page({
     onShow: function() {
         app.showLoading();
         this.independentModeLogin();
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
-  
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     //独立模式登录
     independentModeLogin() {
         var that = this;

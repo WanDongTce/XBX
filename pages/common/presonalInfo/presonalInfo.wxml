@@ -1,4 +1,7 @@
 <compontNavbar title="完善个人信息" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <form bindsubmit="bindFormSubmit">
     <view class='itembox display-flex'>
         <view class='item_mustimg'>*</view>

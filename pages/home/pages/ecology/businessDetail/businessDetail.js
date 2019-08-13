@@ -64,7 +64,16 @@ Page({
         // })
         this.getListnew(false);
         // this.getList(4, false);
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
 
     // swiTab(e) {
     //   var a = e.currentTarget.dataset.index;

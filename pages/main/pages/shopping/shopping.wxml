@@ -1,6 +1,9 @@
 <view class="header"><text>商铺</text><view class='reton_sun' bindtap='topshoop'><image src='/pages/main/images/shopping/car.png' class='reton'></image>
   <view class='inf {{number_sun>0?"bl":""}}'></view>
 </view></view>
+<my-component id='component'>
+   
+  </my-component>
 <view class='list_box' style='height:{{hh}}'hidden="{{show}}">
   <view class='list'wx:for="{{list}}"  wx:key="index" bindtap="onTapdetail" data-postad="{{item.id}}">
     <view class='top'>

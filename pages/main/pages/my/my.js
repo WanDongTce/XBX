@@ -11,11 +11,19 @@ Page({
     onLoad(){
         this.compontNavbar = this.selectComponent("#compontNavbar");
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onShow: function () {
         // console.log(app);
         var that = this;
         that.getUserInfo(); 
         that.getMsg();
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     getUserInfo: function () {
         var that = this;

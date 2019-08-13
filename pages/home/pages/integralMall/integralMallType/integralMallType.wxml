@@ -1,4 +1,7 @@
 <import src="../../../../../template/scrollTab/scrollTab.wxml" />
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="商品分类" isShowBack="{{true}}"></compontNavbar>
 <view class="fixed-scroll-view-box">
     <scroll-view class="scroll-view" scroll-x="true">

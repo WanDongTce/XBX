@@ -1,5 +1,8 @@
 <import src="../../../../wxParse/wxParse.wxml" />
 <compontNavbar title="{{title}}" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 
 <template name="videoMsg">
     <view class="video-box">

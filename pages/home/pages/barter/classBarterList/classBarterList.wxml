@@ -12,3 +12,6 @@
         <view class="btn btn2" catchtap="cancleFn">取消</view>
     </view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

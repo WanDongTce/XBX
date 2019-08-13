@@ -17,7 +17,9 @@
         </view>
         <view class="navigation-tit">任务</view>
 </navigat-bar>  -->
-
+<my-component id='component'>
+   
+  </my-component>
 <view class='newnavbox position_r'>
     <!-- <view class="back-box" bindtap="" >
         <image src="../../images/task/icon_task_tip.png"></image>

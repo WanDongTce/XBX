@@ -75,9 +75,17 @@ Page({
         self.setData({
             isClick: true
         });
+      self.component = that.selectComponent("#component")
+      self.component.customMethod()
         // bofangState = null;
     //    this.bofang();
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     bofang:function () {
         var self = this;
         if (self.data.isClick) {

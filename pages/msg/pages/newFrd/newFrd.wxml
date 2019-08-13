@@ -1,4 +1,7 @@
 <compontNavbar title="新朋友" isShowBack="{{true}}" url="/pages/msg/pages/frdList/frdList" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="box">
     <block wx:if="{{!isShowAddList}}">
         <block wx:if="{{showEmpty}}">

@@ -1,3 +1,6 @@
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="添加推荐人信息" isShowBack="{{true}}"></compontNavbar>
 <form bindsubmit="bindFormSubmit">
     <picker bindchange="bindPickerChange" value="{{agtIndex}}" range="{{agtList}}" range-key="name">

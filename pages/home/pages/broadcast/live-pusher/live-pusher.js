@@ -23,6 +23,8 @@ Page({
     },
     onShow: function() {
         var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         var a = wx.getStorageSync('liveInfo');
         // console.log(a);
         that.setData({
@@ -33,6 +35,12 @@ Page({
             keepScreenOn: true
         });
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     bindConfirm: function(e) {
         // console.log(e);
         var that = this;

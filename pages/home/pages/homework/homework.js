@@ -16,10 +16,19 @@ Page({
         that.empty = that.selectComponent("#empty");   
     },
     onShow(){
+      var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         if(this.data.refreshFlag){
             this.getQuestionList(false);
         }
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getQuestionList: function (flag) {
         var that = this;
         network.POST({

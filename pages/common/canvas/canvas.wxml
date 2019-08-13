@@ -1,5 +1,7 @@
 <compontNavbar title="作业详情" isShowBack="{{true}}"></compontNavbar>
-
+<my-component id='component'>
+   
+  </my-component>
 
 <view class='cont'>
 <!-- <view class="container2" style="{{'background-image: url(' + bgImg +')'}}"> -->

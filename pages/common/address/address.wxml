@@ -1,3 +1,6 @@
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="地址列表" isShowBack="{{true}}"></compontNavbar>
 <view class='item_bigbox' wx:for="{{list}}" wx:key="this">
   <view class='item_box'>

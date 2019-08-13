@@ -1,7 +1,9 @@
 
 
 
-
+<my-component id='component'>
+   
+  </my-component>
 
 <view class="container">
     <image src='../../../../../../images/arowLt.png' class='bogack_img' catchtap='goback'></image>

@@ -29,6 +29,8 @@ Page({
     },
     onShow: function () {
         var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         if (that.data.refreshFlag){
             that.setData({
                 currentTabIndex: 0,
@@ -36,6 +38,12 @@ Page({
             that.getBarterList(page, flag, '');
         }
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     swiTab: function (e) {
         var that = this;
         var a = parseInt(e.currentTarget.dataset.index);

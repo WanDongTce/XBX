@@ -1,5 +1,8 @@
 <!--pages/Preview//pages/no-question/index.wxml-->
 <navbar title="记一笔" isShowBack="{{true}}"></navbar>
+<my-component id='component'>
+   
+  </my-component>
 <!-- card -->
 <form bindsubmit="bindFormSubmit">
   <view class="card">

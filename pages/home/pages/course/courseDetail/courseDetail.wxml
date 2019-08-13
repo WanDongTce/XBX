@@ -1,5 +1,7 @@
 <compontNavbar title="课程详情" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
-
+<my-component id='component'>
+   
+  </my-component>
 <import src="/wxParse/wxParse.wxml" />
 <view class='video_box'>
   <video class='video' src='{{detail.VideoUrl}}' poster='{{videopic}}' controls objectFit="fill" custom-cache="{{false}}"></video>

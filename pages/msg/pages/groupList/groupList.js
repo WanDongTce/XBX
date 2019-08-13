@@ -13,6 +13,8 @@ Page({
     },
     onShow: function() {
         this.getList();
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
     getList(){
         var that = this;
@@ -51,6 +53,12 @@ Page({
             }
         });
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     enterLive(e) {
         var a = e.currentTarget.dataset.item;
         // console.log(a);

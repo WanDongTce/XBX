@@ -1,4 +1,7 @@
 <compontNavbar title="兑换记录" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view>
 <block wx:if="{{showEmpty}}"><empty></empty></block> 
 <block wx:for="{{itemList}}" wx:key="this" >   

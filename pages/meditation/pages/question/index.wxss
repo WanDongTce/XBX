@@ -16,7 +16,7 @@
   font-size: 40rpx;
   color: #333;
 }
-
+.card image{width: 100%;display: block;margin: 0 auto;}
 .item {
   margin-bottom: 20rpx;
   font-size: 32rpx;

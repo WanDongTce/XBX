@@ -26,7 +26,15 @@ Page({
             page=1;
             that.getList(false);
         }
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getTopic: function () {
         var that = this;
         network.POST({

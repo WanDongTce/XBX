@@ -23,7 +23,15 @@ Page({
         var that = this;
         that.getType();
         // that.getList(true); 
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getType: function () {
         this.setData({
             typeList: app.studyOptions.game

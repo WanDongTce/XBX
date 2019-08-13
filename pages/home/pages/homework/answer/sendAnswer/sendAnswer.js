@@ -12,6 +12,17 @@ Page({
       temptime: '',
       val: ''
   },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
   onLoad: function (options) {
       console.log(options);
       id = options.id;

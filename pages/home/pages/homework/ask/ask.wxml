@@ -1,4 +1,7 @@
 <compontNavbar title="我要提问" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class="container">
     <view class="box">
         <picker bindchange="bindPickerGrade" value="{{gradeIndex}}" range="{{gradeList}}" range-key="title">

@@ -23,6 +23,7 @@ Page({
   },
 
     onShow() {
+      
         if (this.data.refreshFlag) {
             this.getQuestionList(false);
         }
@@ -33,6 +34,17 @@ Page({
         })
         
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
   getSwipImgs: function () {
     var that = this;
     network.getSwiperImgs(9, function (res) {

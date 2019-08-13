@@ -1,4 +1,7 @@
 <!--pages/ls2/ls2.wxml-->
+<my-component id='component'>
+   
+  </my-component>
 <compontNavbar title="日常作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 
 <view class="container" wx:if='{{imgUrls.length!=0}}'>

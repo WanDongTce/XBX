@@ -4,3 +4,6 @@
     <input auto-focus="true" bindinput="inputFn"></input>
     <view class="btn" catchtap="save">保存</view>
 </view>
+<my-component id='component'>
+   
+  </my-component>

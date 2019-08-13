@@ -41,8 +41,16 @@ Page({
     onLoad: function(options) {
         this.ctx = wx.createLivePlayerContext('player');
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onShow: function() {
         var that = this;
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         var a = wx.getStorageSync('liveInfo');
         // console.log(a);
         that.setData({

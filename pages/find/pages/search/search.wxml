@@ -1,4 +1,7 @@
 <compontNavbar title="搜索百科" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <view class='searchbigbox display-flex'>
     <view class='searchbox display-flex'>
         <image src='{{base}}images/search.png' class='search_img'></image>

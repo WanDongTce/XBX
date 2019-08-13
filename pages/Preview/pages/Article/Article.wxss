@@ -1,4 +1,5 @@
 /* pages/Preview//pages/Article/Article.wxss */
+.header text{font-size: 36rpx}
 .clearfix{clear: both}
 .reton{width: 18rpx;height: 32rpx;z-index: 999999;display: block;padding-top: 40rpx;margin: 0 auto}
 .header text{display: block;text-align: center}
@@ -7,7 +8,7 @@
 .original .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top: 32rpx;padding-bottom: 32rpx;border-radius: 15rpx;}
 .original .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
 background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/original.png);
-background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-size: 28rpx}
+background-size: 32rpx 28rpx;background-repeat: no-repeat;display: block;font-size: 30rpx}
 .original{margin-top: 32rpx;}
 .original .label{padding-left: 80rpx;margin-top: 32rpx}
 .original .label .list{float: left;margin-right: 30rpx}
@@ -27,7 +28,7 @@ color: #999}
 .translation .content_box{width: 710rpx;margin: 0 auto;background-color: #fff;box-shadow: -5.446px 8.387px 50px 0px rgba(102, 102, 104, 0.3);padding-top:20rpx;padding-bottom: 20rpx;border-radius: 15rpx;margin-bottom: 20rpx}
 .translation .content_box .text_box{width: 588rpx;margin: 0 auto;padding-left: 60rpx;
 background-image: url(http://m.54xuebaxue.com/wx_img/img/yuxile/translation.png);
-background-size: 32rpx 32rpx;background-repeat: no-repeat;display: block;font-size: 24rpx;color: #999999}
+background-size: 32rpx 32rpx;background-repeat: no-repeat;display: block;font-size: 28rpx;color: #999999}
 .translation{margin-top: 20rpx;}
  .label{padding-left: 80rpx;margin-top: 20rpx}
  .label .list{float: left;margin-right: 30rpx}

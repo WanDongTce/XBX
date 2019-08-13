@@ -5,6 +5,9 @@
         <input placeholder="搜索您需要的商品" placeholder-class="place" disabled value="{{search}}" catchtap="showSearch"></input>
     </view>
 </view> -->
+<my-component id='component'>
+   
+  </my-component>
 <view class='search_box display-flex'>
   <image class="navigation-back-icon" src="../../../../../images/arowLt.png" bindtap='backReturn'></image>
   <view class='search display-flex align-items-center'>

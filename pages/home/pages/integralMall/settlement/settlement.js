@@ -19,7 +19,8 @@ Page({
         // console.log(b);
         var a = wx.getStorageSync('receivingAddress');
         var c = a ? true : false;
-
+      that.component = that.selectComponent("#component")
+      that.component.customMethod()
         that.setData({
             list: b,
             address: a,
@@ -50,6 +51,12 @@ Page({
             this.getTotalPrice(that.data.list.point);
         }
     },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     getTotalPrice(score) {
         var that = this;
         score = parseInt(score);

@@ -89,6 +89,9 @@ Page({
   },
   
   onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
     this.setData({
         mallSearchHis: app.mallSearchHis
     })
@@ -106,6 +109,12 @@ Page({
         "token": app.userInfo.token,
         "page": page,       
         "search_name": that.data.search,
+      },
+      onHide: function () {
+        var that = this;
+        that.component = that.selectComponent("#component")
+        that.component.noShow()
+        that.component.nohide()
       },
       success: function (res) {
         // console.log(res);

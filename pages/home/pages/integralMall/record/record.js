@@ -9,6 +9,17 @@ Page({
         totalPoint: '',    //总积分
         showEmpty: false
     },
+  onShow: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
     onLoad: function (options) {
         var that = this;
         this.compontNavbar = this.selectComponent("#compontNavbar");

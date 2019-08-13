@@ -1,4 +1,7 @@
 <compontNavbar title="申请易货" isShowBack="{{true}}"></compontNavbar>
+<my-component id='component'>
+   
+  </my-component>
 <block wx:if="{{showEmpty}}"><empty></empty></block>
 <block wx:else>
   <view class="Header" bindtap='choice' data-id='{{index}}' wx:for="{{model}}" wx:key>

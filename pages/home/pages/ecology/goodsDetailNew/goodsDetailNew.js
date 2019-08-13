@@ -25,6 +25,14 @@ Page({
     var that = this;
     that.getDetail();
     that.getCommentList();
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
+  },
+  onHide: function () {
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
   //点击收藏
   clickCollect:function(){

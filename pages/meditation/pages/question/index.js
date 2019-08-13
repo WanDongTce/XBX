@@ -9,13 +9,15 @@ Page({
     show: {
       middle: false
     },
+    zjmc: "",
     currentQusetion: {}, //当前问题
     progress: 0,
     count: 0,
     addStyle: '', //对错样式
     currentIndex: -1, //显示对错item
     // disabled: false
-    scores: 0
+    scores: 0,
+    urlsun: ""
   },
   onTransitionEnd() {
     // console.log(`You can't see me 🌚`);
@@ -37,7 +39,6 @@ Page({
         "read_id": app.questionOptions.id||id
       },
       success: function (res) {
-        console.log(res);
         let questions = res.data.data;
         app.questionOptions.list = questions;
         app.questionOptions.count = questions.length;
@@ -217,6 +218,10 @@ Page({
    */
   onLoad: function (options) {
     //答题过程中返回出当前模块小程序
+    var zjmc = wx.getStorageSync("zjmc")
+    this.setData({
+      zjmc: zjmc
+    })
     app.questionOptions.progress ? app.questionOptions.progress : app.questionOptions.progress = 1;
     //首次
     if (app.questionOptions.id == 0) {
@@ -244,14 +249,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.customMethod()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
-
+    var that = this;
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
   },
 
   /**
