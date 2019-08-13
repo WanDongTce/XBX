@@ -20,16 +20,18 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
-    this.setData({
-      id: options.id
-    });
+   
     var user = wx.getStorageSync("userInfo")
     console.log(user.id)
      opid = options.id
      userid = user.id
     this.getlist(userid, opid)
     this.startSetInter()
-    var zjmc=wx.getStorageSync("zjcm")
+    var zjmc = wx.getStorageSync("zjmc")
+    this.setData({
+      id: options.id,
+      zjmc: zjmc
+    });
   },
   startSetInter:function(){
     time=setInterval(function(){
