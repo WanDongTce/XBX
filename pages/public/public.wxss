@@ -1,0 +1,57 @@
+.piblic{position: fixed;left: 0;bottom: 0;width: 100%;z-index: 999}
+
+.clearfix{clear: both}
+.piblic .content_box{width: 690rpx;margin: 0 auto;background-color: #fff;padding-top: 20rpx;padding-bottom: 10rpx}
+.piblic .content_box .photo{width: 101rpx;height: 101rpx;background-color:#bdbdbd;border-radius: 50%;float: left;
+margin-left: 20rpx; }
+.piblic .content_box .name_box{float: left;margin-left: 20rpx }
+.piblic .content_box .name_box .name text{font-size: 32rpx;color: #333333}
+.piblic .content_box .name_box .time {font-size: 24rpx;color: #999999}
+.piblic .content_box .name_box .time text{ color: #61ACE3}
+.piblic .content_box  .btn{float: right;padding-top: 40rpx;margin-right: 20rpx}
+.piblic .content_box  .btn text{font-size: 24rpx;color: #2483F7;line-height: 54rpx;display: block;
+padding-left: 24rpx;padding-right: 24rpx;background-color: #cfe6f7;border-radius: 27rpx}
+.piblic .content_box{position: relative}
+.piblic .content_box .close{position: absolute;top: 10rpx;right: 20rpx}
+.piblic .content_box .close text{font-size: 24rpx;color: #999999;line-height: 36rpx;float: left;margin-right: 10rpx}
+.piblic .content_box .close image{width: 36rpx;height: 36rpx;display: block;float: left}
+.layer_box{width: 100%; height: 100%;position: fixed;left: 0;top: 0;background-color: rgba(0, 0, 0, 0.6);z-index: 9999}
+
+.encourage_box{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.6);z-index: 99999;display: none}
+.encourage_box .encourage{width: 540rpx;height: 650rpx;position: absolute;left: 50%;top:50%;margin-top: -325rpx;margin-left: -270rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/shouye/guli.png);background-position: top center;
+background-size: 100% 488rpx;background-repeat: no-repeat}
+.encourage_box .encourage text{display: block;text-align: center;background-color: #FFAD53;color: #fff;
+width: 400rpx;line-height: 60rpx;margin: 0 auto;margin-top: 352rpx;border-radius: 30rpx;
+font-size: 34rpx}
+.encourage_box .encourage image{display: block;width: 66rpx;height: 66rpx;
+margin: 0 auto;margin-top: 170rpx;}
+
+
+
+.Received_box{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.6);z-index: 99999;display: none}
+
+.Received_box .Received{width: 540rpx;height: 830rpx;position: absolute;left: 50%;top:50%;margin-top: -415rpx;margin-left: -270rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/shouye/Received.png);background-position: top center;
+background-size: 100% 830rpx;background-repeat: no-repeat}
+.Received_box .Received .type{font-size: 34rpx;color: #333333;display: block;text-align: center;
+margin-top: 208rpx;height: 34rpx;line-height: 34rpx}
+.Received_box .Received .name{font-size: 30rpx;color: #61ACE3;display: block;text-align: center;
+margin-top: 22rpx;height: 30rpx;line-height: 30rpx}
+
+.Received_box .Received .frequency{font-size: 26rpx;color: #333333;display: block;text-align: center;
+margin-top: 16rpx;height: 26rpx;line-height: 26rpx}
+
+
+.Received_box .Received .time{font-size: 26rpx;color: #333333;display: block;text-align: center;
+margin-top: 16rpx;height: 26rpx;line-height: 26rpx}
+.Received_box .Received .Award{font-size: 34rpx;color: #333333;display: block;text-align: center;
+margin-top: 46rpx;height: 34rpx;line-height: 34rpx}
+.Received_box .Received .photo{width: 122rpx;height: 122rpx;margin: 0 auto;margin-top: 20rpx;background-color: #999;border-radius: 50%}
+
+.Received_box .Received .name_sun{font-size: 26rpx;color: #333333;display: block;text-align: center;
+margin-top: 16rpx;height: 26rpx;line-height: 26rpx}
+.Received_box .Received .btn{width: 210rpx;height: 60rpx;margin: 0 auto;line-height: 60rpx;
+font-size: 30rpx;text-align: center;background-image: -moz-linear-gradient( 180deg, rgb(254,151,50) 0%, rgb(254,216,113) 100%);
+  background-image: -webkit-linear-gradient( 180deg, rgb(254,151,50) 0%, rgb(254,216,113) 100%);
+  background-image: -ms-linear-gradient( 180deg, rgb(254,151,50) 0%, rgb(254,216,113) 100%);
+  color: #fff;border-radius: 30rpx;margin-top: 92rpx}
+  .show{display: block}

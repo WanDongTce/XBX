@@ -1,0 +1,41 @@
+
+<view class="piblic">
+<view class="content_box" wx:for="{{list_sun}}" wx:if="{{modelFlag}}" animation='{{animationData}}' >
+  <view class="photo">
+  </view>
+  <view class="name_box">
+    <view class="name">{{item}}</view>
+    <view class="time">
+      <text>任务完成</text> 用时1天3小时20分
+    </view>
+  </view>
+  <view class="btn">
+    <text catchtap="showRule">鼓励一下</text>
+  </view>
+  <view class="close">
+    <text>上午9:04</text>
+    <image src="/images/del.png" bindtap='noShow'></image>
+  </view>
+  <view class="clearfix"></view>
+</view>
+</view>
+
+<view class="encourage_box {{flg==true?'show':''}}">
+  <view class="encourage">
+    <text>真高兴你有这样的进步</text>
+    <image src="http://m.54xuebaxue.com/wx_img/img/renwu/close.png" class="close" catchtap="close"></image>
+  </view>
+</view>
+<view class="Received_box {{flgging==true?'show':''}}">
+  <view class="Received">
+  <text class="type">预习任务</text>
+  <view class="name">东郭先生和狼</view>
+  <view class="frequency">完成次数：8</view>
+  <view class="time">2019.08.07 15:00截止</view>
+  <view class="Award">任务奖励</view>
+    <view class="photo"></view>
+    <view class="name_sun">Hello Kitty小学生书包</view>
+    <view class="btn" catchtap="type02">确认</view>
+  </view>
+</view>
+
