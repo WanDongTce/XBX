@@ -19,8 +19,8 @@
         </view>
         <view class="text">
           <text class="title">{{item.title}}</text>
-          <text class="course">{{item.course_num}}灏忚妭璇剧▼</text>
-          <text class="class">{{item.class_num}}璇炬椂</text>
+          <text class="course">{{item.course_num}}小节课程</text>
+          <text class="class">{{item.class_num}}课时</text>
         </view>
         <view class="clearfix"></view>
       </view>

@@ -2,14 +2,14 @@
 <my-component id='component'>
    
   </my-component>
-<navbar title="è®°ä¸€ç¬”" isShowBack="{{true}}"></navbar>
+<navbar title="¼ÇÒ»±Ê" isShowBack="{{true}}"></navbar>
 <!-- card -->
 <form bindsubmit="bindFormSubmit">
   <view class="card">
-    <textarea bindinput="input" value="{{value}}" placeholder="è¯·è¾“å…¥ä½ è¦è®°å½•çš„å†…å®¹" name="textarea" />
+    <textarea bindinput="input" value="{{value}}" placeholder="ÇëÊäÈëÄãÒª¼ÇÂ¼µÄÄÚÈÝ" name="textarea" />
   </view>
   <view class="btn-group">
-  <button class="btn" bindtap="goBack">å–æ¶ˆ</button>
-  <button class="btn1 btn-active" form-type="submit">æäº¤</button>
+  <button class="btn" bindtap="goBack">È¡Ïû</button>
+  <button class="btn1 btn-active" form-type="submit">Ìá½»</button>
   </view>
 </form>
