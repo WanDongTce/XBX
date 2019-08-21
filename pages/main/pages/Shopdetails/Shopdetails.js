@@ -336,9 +336,16 @@ Page({
   },
 
   topshoop: function () {
-    wx.navigateBack({
-      delta: 1
-    })
+    // 正常为2 扫描为1
+    if (getCurrentPages().length < 2) {
+      wx.reLaunch({
+        url: '/pages/main/pages/home/home'
+      })
+    } else {
+      wx.navigateBack({
+        delta: 1
+      });
+    }
   },
   onShow: function () {
     var that = this;
