@@ -6,11 +6,11 @@
 <view wx:else> <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' /> </view>
 
 <view class="tabs">
-    <navigator class="tab" url="/pages/Preview/pages/Preview/Preview">
+    <navigator class="tab" url="/pages/home/pages/preview/preview">
         <image class="tab-img" src="../../images/edutList/edu_tab1.png"></image>
         <view class='tab-text f_26 c_333'>预习乐</view>
     </navigator>
-    <navigator class="tab" url="/pages/meditation/pages/Preview/Preview">
+    <navigator class="tab" url="/pages/home/pages/think/think">
         <image class="tab-img" src="../../images/edutList/edu_tab2.png"></image>
         <view class='tab-text f_26 c_333'>冥想思</view>
     </navigator>
