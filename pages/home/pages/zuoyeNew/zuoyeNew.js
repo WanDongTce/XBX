@@ -418,8 +418,8 @@ Page({
         "mobile": app.userInfo.mobile,
         "token": app.userInfo.token,
         "month": 1,
-        "order_type": 4,
-        // "order_type_id": 0,
+        "order_type": 2,
+        "order_type_id": 0,
       },
       success: function (res) {
         console.log(res);
