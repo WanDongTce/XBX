@@ -47,7 +47,7 @@ page{
 /* end */
 .tab-content{
     /* margin-top:8vh; */
-    padding-top:18rpx;
+    padding-top:130rpx;
 }
 .tab-content2{
     margin-top:8vh;

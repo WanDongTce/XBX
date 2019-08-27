@@ -472,6 +472,7 @@ Page({
               icon: 'success',
               duration: 3000
             });
+            that.getZyList(false);
             that.setData({
               show: false
             });
