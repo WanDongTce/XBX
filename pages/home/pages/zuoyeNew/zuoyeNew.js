@@ -16,7 +16,7 @@ Page({
     base: '../../../../',
     zylist: [],
     showEmpty: false,
-    tabs: [{ index: 0, title: '作业即答', width: '33%' }, { index: 1, title: '作业批改', width: '33%' }, { index: 2, title: '作业服务', width: '33%' }],
+    tabs: [{ index: 0, title: '作业即答', width: '50%' }, { index: 1, title: '作业批改', width: '50%' }],
     tabindex: 0,
 
     questionList: [],
