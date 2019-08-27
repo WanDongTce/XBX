@@ -254,3 +254,28 @@ button.pop-btn::after{
 .isvip{
   overflow: hidden;
 }
+
+.search{
+  background-color:#f4f4f4;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  height:58rpx;
+  border-radius: 29rpx;
+}
+.search image{
+  width:30rpx;
+  height:30rpx;
+  margin:0 17rpx 0 26rpx;
+}
+.search input{
+  color:a1a1a1;
+  font-size:26rpx;
+  display:block;
+  width:510rpx;
+  height:58rpx;
+  line-height:58rpx;
+}
+.placeholder{
+  color:a1a1a1;
+  font-size:26rpx;
+}

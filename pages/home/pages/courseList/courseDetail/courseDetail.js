@@ -123,7 +123,7 @@ Page({
                 } else {
                     wx.showToast({
                         title: res.data.message,
-                        icon: none,
+                        icon: 'none',
                         duration: 1000
                     });
                 }
