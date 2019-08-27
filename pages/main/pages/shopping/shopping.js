@@ -10,6 +10,9 @@ Page({
   data: {
     number_sun:0
   },
+  goBack: function(){
+    wx.navigateBack();
+  },
   getList: function (page) {
     var that = this;
     var img;
