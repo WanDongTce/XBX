@@ -16,12 +16,14 @@ Page({
     base: '../../../../',
     zylist: [],
     showEmpty:false,
-      tabs: [{ index: 0, title: '作业即答', width: '33%' }, { index: 1, title: '作业批改', width: '33%' }, { index: 2, title: '作业服务', width: '33%' }],
       tabindex: 0,
 
       questionList: [],
       showTalk: false,
-      list: []
+      list: [],
+      jflist:[],
+      myid: 0,
+      show: false
   },
 
   onLoad: function (options) {
@@ -30,9 +32,11 @@ Page({
       this.setData({
           tabindex: 0
       })
-      this.getQuestionList(false);
-    //   this.getZyList(false);   
-      this.getCheck();
+      // this.getQuestionList(false);
+      //this.getZyList(false);   
+      // this.getCheck();
+    this.getRenInfo();
+    //this.memberExpires();
 
       info = {};
     //   console.log(info);
@@ -59,6 +63,9 @@ Page({
           });
       }
   },
+  onShow:function(){
+    this.getZyList(false);
+  },
   getCheck:function(){
         var that=this;
         network.POST({
@@ -66,7 +73,7 @@ Page({
             params: {
                 "mobile": app.userInfo.mobile,
                 "token": app.userInfo.token,
-                "order_type": 4,
+                "order_type": 2,
             },
             success: function (res) {
                 // console.log(res);
@@ -134,18 +141,6 @@ Page({
         }
         // that.getList(a, page, false);
     },
-    
-  onShow: function () {
-    var that = this;
-    that.component = that.selectComponent("#component")
-    that.component.customMethod()
-  },
-  onHide: function () {
-    var that = this;
-    that.component = that.selectComponent("#component")
-    that.component.noShow()
-    that.component.nohide()
-  },
     getQuestionList: function (flag) {
         var that = this;
         network.POST({
@@ -334,9 +329,9 @@ Page({
             params: {
                 "mobile": app.userInfo.mobile,
                 "token": app.userInfo.token,
-                "month": 1,
-                "order_type": 4,
-                // "order_type_id": 0,
+                "month": that.data.month||1,
+                "order_type": 2,
+                "order_type_id": 0,
             },
             success: function (res) {
                 console.log(res);
@@ -389,6 +384,13 @@ Page({
                             icon: 'success',
                             duration: 3000
                         });
+                        //
+
+                      that.getZyList(false);
+                      that.setData({
+                        show: false
+                      });
+                        //
                         that.getCheck();
                         // wx.navigateTo({
                         //     url: '/pages/my/pages/memberRenewalNew/memberRenewalNew',
@@ -654,5 +656,107 @@ Page({
             }]
         });
         page = 1;
+    },
+    //缴费列表
+  getRenInfo() {
+    var that = this;
+    network.POST({
+      url: 'v14/renewal/index',
+      params: {
+        "mobile": app.userInfo.mobile,
+        "token": app.userInfo.token,
+        "order_type": 2,
+        "order_type_id": 0,
+      },
+      success: function (res) {
+        console.log(res);
+        wx.hideLoading();
+        if (res.data.code == 200) {
+          console.log(res.data.data[0].item.price_discounts);
+          var renInfo = res.data.data[0].item;
+          if (renInfo.is_end==1) {
+            //过期
+            that.setData({
+              show: true
+            });
+            var list = res.data.data[0].item.price_discounts;
+            for (var i = 0; i < list.length; i++) {
+              list[i].id = i;
+              if (i == 0) {
+                list[i].checked = true;
+              } else {
+                list[i].checked = false;
+              }
+            }
+            that.setData({
+              renInfo: renInfo,
+              jflist: list,
+              myid: list[0].id,
+              newmoney: list[0].price,
+              savemoney: list[0].dprice,
+              month: list[0].month,
+            });
+          } else {
+            //未过期
+            that.setData({
+              show: false
+            });
+            that.getZyList(false); 
+          }
+          // console.log(that.data.list)
+        } else {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+            duration: 1000
+          })
+        }
+      },
+      fail: function () {
+        wx.hideLoading();
+        wx.showToast({
+          title: '服务器异常',
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    });
+  },
+  memberExpires() {
+    var that = this;
+    network.memberExpires(function (res) {
+      //过期
+      that.setData({
+        show: true
+      })
+    }, function (res) {
+      //没过期
+      that.setData({
+        show: false
+      })
+    });
+  },
+  choice_item: function (e) {
+    var that = this;
+    // console.log(e.currentTarget.dataset.index)
+    // console.log(e.currentTarget.dataset.myid)
+    var a = e.currentTarget.dataset.myid
+    // console.log(a);
+    that.setData({
+      myid: a
+    })
+    var list = that.data.jflist
+    for (var i = 0; i < list.length; i++) {
+      list[i].checked = false;
+      if (a == list[i].month) {
+        that.setData({
+          jflist: list,
+          newmoney: list[i].price,
+          savemoney: list[i].dprice,
+          month: list[i].month
+        })
+      }
     }
+    console.log(that.data.month);
+  }
 })
