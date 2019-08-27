@@ -852,7 +852,7 @@ function swipLink(a){
 }
 
 //会员到期
-function memberExpires(callback){
+function memberExpires(callback, cb){
     POST({
         url: 'v14/renewal/check',
         params: {
@@ -865,6 +865,9 @@ function memberExpires(callback){
             if (res.data.code == 200) {
                 if (res.data.data[0].item.to_end == 1){
                     callback && callback(res);
+                } else {
+                  console.log('会员没到期')
+                  cb && cb(res);
                 }
             } else {
                 wx.showToast({

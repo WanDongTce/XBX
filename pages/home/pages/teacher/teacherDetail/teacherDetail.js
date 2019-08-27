@@ -7,6 +7,9 @@ var hasmore = '';
 
 Page({
     data: {
+      show: {
+        middle: false
+      },
         base: '../../../../../',
         IMGURL: app.imgUrl,
         curTabIndex: 0,
@@ -31,12 +34,6 @@ Page({
       that.component = that.selectComponent("#component")
       that.component.customMethod()
     },
-  onHide: function () {
-    var that = this;
-    that.component = that.selectComponent("#component")
-    that.component.noShow()
-    that.component.nohide()
-  },
     getDetail: function () {
         var that = this;
         network.POST({
@@ -134,9 +131,51 @@ Page({
             }
         }
     },
+  //提示会员是否到期
+  onTransitionEnd() {
+    // console.log(`You can't see me 🌚`);
+  },
+  toggle(type) {
+    this.setData({
+      [`show.${type}`]: !this.data.show[type]
+    });
+  },
+
+  togglePopup() {
+    this.toggle('middle');
+  },
+  noBuy: function () {
+    this.toggle('middle');
+  },
+  goBuy: function () {
+    wx.navigateTo({
+      url: '/pages/my/pages/memberRenewalNewPay/memberRenewalNewPay'
+    });
+  },
+  //判断会员是否过期
+
+  onHide: function () {
+    this.setData({
+      show: {
+        middle: false
+      }
+    });
+    var that = this
+    that.component = that.selectComponent("#component")
+    that.component.noShow()
+    that.component.nohide()
+  },
+  memberExpires(e) {
+    var that = this;
+    network.memberExpires(function (res) {
+      that.toggle('middle');
+    }, function (res) {
+      wx.navigateTo({
+        url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
+      })
+    });
+  },
     toCourseDetail: function (e) {
-        wx.navigateTo({
-            url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.id
-        })
+      this.memberExpires(e);
     }
 })
