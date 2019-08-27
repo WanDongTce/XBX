@@ -472,6 +472,9 @@ Page({
               icon: 'success',
               duration: 3000
             });
+            that.setData({
+              show: false
+            });
             that.getCheck();
             // wx.navigateTo({
             //     url: '/pages/my/pages/memberRenewalNew/memberRenewalNew',

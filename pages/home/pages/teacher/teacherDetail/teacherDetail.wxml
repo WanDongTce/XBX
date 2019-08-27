@@ -86,7 +86,7 @@
             <empty></empty>
         </block>
         <block wx:else>
-            <view class='kecheng_box' bindtap="toCourseDetail" data-id="{{item.Id}}" wx:for="{{list}}" wx:key="this">
+            <view class='kecheng_box' bindtap="toCourseDetail" data-myid="{{item.Id}}" wx:for="{{list}}" wx:key="this">
                 <image wx:if='{{item.PicUrl}}' src='{{item.PicUrl}}' class='kecheng_leftimg' mode='center'></image>
                 <image wx:else src='../../../../../images/normal_pic12.png' class='kecheng_leftimg' mode='aspectFill'></image>
                 <view class='kecheng_contentbox'>

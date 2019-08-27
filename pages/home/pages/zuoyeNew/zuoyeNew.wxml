@@ -109,7 +109,7 @@
     </view>
 </view>
 <!-- 作业服务 -->
-<view class='tab-content2' wx:if='{{tabindex==2}}'>
+<view class='tab-content2' wx:if='{{tabindex==8}}'>
     <view wx:if="{{showTalk==false}}">
         <image src='../../../../images/icon_homework_spbj.png' class='tab3_img1'></image>
         <view class='tab3_centerbox'>
