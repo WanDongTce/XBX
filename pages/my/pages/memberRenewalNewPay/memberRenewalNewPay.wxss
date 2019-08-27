@@ -11,7 +11,8 @@ page{
 .bigbox1{
     padding:46rpx 30rpx 35rpx;
     background-color: #fff;
-    margin-bottom: 20rpx;
+    margin: 30rpx;
+    border-radius: 8rpx;
 }
 .headerimg{
     width:100rpx;
@@ -35,8 +36,9 @@ page{
 }
 
 .bigtitle{
-    margin-bottom:48rpx;
+    margin-top: 30rpx;
     font-weight: bold;
+    margin-left: 30rpx;
 }
 .bigtitle text{
     display: inline-block;
@@ -150,4 +152,95 @@ page{
     border-radius: 20rpx;
     margin:0 auto;
     /* box-shadow: 0rpx 5rpx 15rpx #ccc; */
+}
+
+.section2{
+  height: 300rpx;
+  overflow: hidden;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* 新华课点 */
+.section2-left{
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8rpx;
+  padding: 20rpx;
+}
+.section2-right{
+  overflow: hidden;
+  width: 50%;
+  flex: 1 1 50%;
+  margin-left: 10rpx;
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section2-right-image1{
+  width: 328rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+  background-color: white;
+padding-bottom: 20rpx;
+padding-right: 15rpx;
+}
+.section2-right-image1-img{
+  width: 300rpx;
+  height: 110rpx; 
+}
+.section2-right-image2{
+   width: 328rpx;
+  height: 120rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+padding-right: 15rpx;
+}
+.section2-right-image2-img{
+  width: 300rpx;
+  height: 110rpx; 
+}
+.renewal-wrap{
+  margin: 30rpx 32rpx;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.renewal.active{
+  border: 1rpx solid #4BACE3;
+}
+.renewal {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 4rpx;
+  border: 1rpx solid #eee;
+  margin: 1rpx;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  height: 100rpx;
+  border: 1rpx solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.footer-btn{
+  background-color: #4BACE3;
+  color: white;
+  border-radius: 40rpx;
+  width: 80%;
+}
+.footer-btn::after{
+  outline: none;
 }

@@ -7,9 +7,7 @@ Page({
       info: '',
       renInfo: '',
       list:[],
-      myid:0,
-
-    
+      myid:0
   },
   onLoad: function (options) {
     
@@ -50,6 +48,7 @@ Page({
             });
         } else {
             wx.hideLoading();
+            console.log('以授权过');
             if(app.openId){
                 that.createOrder();
             }
@@ -79,19 +78,23 @@ Page({
         // console.log(e.currentTarget.dataset.index)
         // console.log(e.currentTarget.dataset.myid)
         var a = e.currentTarget.dataset.myid
+        // console.log(a);
         that.setData({
             myid: a
         })
         var list = that.data.list
         for (var i = 0; i < list.length; i++) {
-            if (a == list[i].id) {
+          list[i].checked = false;
+            if (a == list[i].month) {
                 that.setData({
+                  list: list,
                     newmoney: list[i].price,
                     savemoney: list[i].dprice,
                     month:list[i].month
                 })
             }
         }
+        console.log(that.data.month);
     },
     getUserInfo: function () {
         var that = this;
@@ -126,21 +129,25 @@ Page({
                 // console.log(res);
                 wx.hideLoading();
                 if (res.data.code == 200) {
-                    that.setData({
-                        renInfo: res.data.data[0].item,
-                        list: res.data.data[0].item.price_discounts,
-                        
-                    });
+                  console.log(res.data.data[0].item.price_discounts);
+                  var renInfo = res.data.data[0].item;
+                  var list = res.data.data[0].item.price_discounts; 
                     
-                    for (var i = 0; i < that.data.list.length;i++){
-                        that.data.list[i].id = i;
+                    for (var i = 0; i < list.length;i++){
+                        list[i].id = i;
+                        if(i==0){
+                          list[i].checked = true;
+                        } else{
+                          list[i].checked = false;
+                        }
                     }
                     that.setData({
-                        list: that.data.list,
-                        myid: that.data.list[0].id,
-                        newmoney: that.data.list[0].price,
-                        savemoney: that.data.list[0].dprice,
-                        month: that.data.list[0].month,
+                        renInfo: renInfo,
+                        list: list,
+                        myid: list[0].id,
+                        newmoney: list[0].price,
+                        savemoney: list[0].dprice,
+                        month: list[0].month,
                     });
                     // console.log(that.data.list)
                 } else {
