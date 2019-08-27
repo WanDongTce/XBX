@@ -107,7 +107,7 @@ Page({
             that.setData({
               show: false
             });
-            that.getZyList(false);
+            // that.getZyList(false);
           }
           // console.log(that.data.list)
         } else {
