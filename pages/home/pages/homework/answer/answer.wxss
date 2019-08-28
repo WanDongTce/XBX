@@ -74,10 +74,10 @@ page{
   line-height: 25px;
   font-size: 14px;
   color: white;
-  background-color: #0088fe;
-  padding-left: 5rpx;
-  padding-right: 5rpx;
-  border-radius: 5px;
+  background-color: #4fa3f8;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-radius: 12px;
   display: block;
 }
 .container2{
@@ -103,28 +103,45 @@ canvas{
 
 
 .item2{
-    width: 35%;
-    height: 11vh;
+    width: 273rpx;
+    height: 102rpx;
     text-align: center;
-    line-height: 11vh;
-    border-radius: 10rpx;
-    border: 1rpx solid #0088fe;
+    line-height: 102rpx;
+ position: relative;
+    top: 24rpx;
+   right: -15rpx;
+    font-size: 30rpx;
+    color: #0088fe;
+    background-image: url(http://m.54xuebaxue.com/wx_img/img/XBX/zuo.png);
+    background-size:100% 100%
+}
+.item4{
+     width: 273rpx;
+    height: 102rpx;
+    text-align: center;
+   line-height: 102rpx;
+background-image: url(http://m.54xuebaxue.com/wx_img/img/XBX/you.png);
+    background-size:100% 100%;
+    position: relative;
+    top: 24rpx;
+    left: -15rpx;
     font-size: 30rpx;
     color: #0088fe;
 }
 .item3{
-  width: 11vh;
-  height: 11vh;
+  width: 200rpx;
+  height:114rpx;
   font-size: 28rpx;
   text-align: center;
-  border-radius: 50%;
-  background-color: red;
+
+ background-image: url(http://m.54xuebaxue.com/wx_img/img/XBX/Recording.png);
+ background-size: 100% 100%;
   color: #fff;
 }
 .item3 view{
     width: 100%;
-    height: 3.5vh;
-    line-height: 3.5vh;
+    height: 3vh;
+    line-height: 3vh;
     display: inline-block;
     margin-top: 2vh;
 }
@@ -141,4 +158,5 @@ canvas{
 
 .item2font_new{
     background-color:#999 !important;
+   
 }

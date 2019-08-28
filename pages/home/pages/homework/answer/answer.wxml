@@ -16,8 +16,8 @@
   <text class='item1font' bindtap='penSelect'>{{penText}}</text>
   <view wx:if="{{hidewentiBtn}}"></view>
   <view wx:else>
-    <view wx:if="{{wentiBtn}}" class='item2font' bindtap='wenImg'>问题图片</view>
-    <view wx:else class='item2font item2font_new'>问题图片</view>
+    <view wx:if="{{wentiBtn}}" class='item2font' bindtap='wenImg'>问题</view>
+    <view wx:else class='item2font item2font_new'>问题</view>
   </view>
   
 </view>
@@ -34,7 +34,7 @@
 <view class="container3">
    <view class='item2' bindtap='chexiao'>撤销</view> 
   <view class='item3' bindtap='startluzhi'><view class="{{btnHtml != 1?'view1' : ''}}">{{startText}}</view><view wx:if="{{btnHtml == 1}}" class="endluzhi">结束录制</view></view>
-  <view class='item2' bindtap='nextPage'>下一页</view>
+  <view class='item4' bindtap='nextPage'>下一页</view>
 </view>
 
 </view>

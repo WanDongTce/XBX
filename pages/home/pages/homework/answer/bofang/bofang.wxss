@@ -14,14 +14,17 @@
 
 .item2{
     margin-top: 1vh;
-    border-radius: 10rpx;
-    width: 45%;
-    height: 10vh;
+    border-radius: 44rpx;
+    width: 238rpx;
+    height: 88rpx;
     text-align: center;
-    line-height: 10vh;
-    border: 1px solid #0088fe;
+    line-height: 88rpx;
+   
     font-size: 30rpx;
-    color: #0088fe;
+    color: #fff;
+    background-image: -moz-linear-gradient( -71deg, rgb(86,192,250) 0%, rgb(74,143,246) 99%);
+  background-image: -webkit-linear-gradient( -71deg, rgb(86,192,250) 0%, rgb(74,143,246) 99%);
+  background-image: -ms-linear-gradient( -71deg, rgb(86,192,250) 0%, rgb(74,143,246) 99%);
 }
 .item2:only-child{
     width: 80%;
