@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/pages/Preview/pages/Preview/Preview.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/Preview/pages/booklist/booklist.wxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/Preview/pages/comment/index.wxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/Preview/pages/comment/index.wxss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/meditation/pages/Preview/Preview.wxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/public/public.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/public/public.wxml" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -21,19 +21,24 @@
 <navigat-bar class="navigation-box component-class" id="compontNavbar">
     <view class="back-box display-flex align-items-center"  >
         <image class="navigation-back-icon" src="../../../../images/arowLt.png" bindtap="goBack"></image>
+        <image class='navigation_search' src="../../../../images/search.png" bindtap="goSearch"></image>
     </view>
     <view class="navigation-tit">新华课典</view>
 </navigat-bar>
 
 
-<!-- <import src="/template/scrollTab/scrollTab.wxml" />
-<view class='top_fix' >
-    <scroll-view class="scroll-view" scroll-x="true">
+<import src="/template/scrollTab/scrollTab.wxml" />
+<view class='top_fix' bindtap="goSearch">
+    <!-- <scroll-view class="scroll-view" scroll-x="true">
         <block wx:for="{{tabs}}" wx:key="this">
             <template is="{{selectedTab == item.id? 'scrollTabActive': 'scrollTab'}}" data="{{item}}" />
         </block>
-    </scroll-view>
-</view> -->
+    </scroll-view> -->
+    <view class="content_box">
+      <text>搜索关键字</text>
+    </view>
+</view>
+
 
 <!-- search -->
  <view class='search display-flex align-items-center'>

@@ -2,92 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46e1823-b961-42e4-9b17-d71c0e700548" name="Default Changelist" comment="购物车和商铺详情">
-      <change afterPath="$PROJECT_DIR$/pages/main/pages/shopping/shoppimg.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/canvas-share/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/canvas-share/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/pages/game/gameDetail/gameDetail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/pages/game/gameDetail/gameDetail.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home/pages/edutList/edutList.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/pages/edutList/edutList.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
+    <list id="7796625a-31d6-486d-9cc0-e32bfce78941" name="Revert &quot;充值会员提示&quot;" comment="Revert &quot;充值会员提示&quot;&#10;&#10;This reverts commit 1331150a" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4370">
-              <caret line="230" column="46" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/dayuwen/pages/recorder/recorder.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/main/pages/shopping/shopping.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#view#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/main/pages/Shopdetails/Shopdetails.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/main/pages/shopping/shopping.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/common/login/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>广场</find>
       <find>v11/login/index</find>
       <find>登录</find>
+      <find>that.component.nohide()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,170 +30,24 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pages/main/pages/shopping/shopping.wxml" />
-        <option value="$PROJECT_DIR$/pages/main/pages/Shopdetails/Shopdetails.wxml" />
-        <option value="$PROJECT_DIR$/pages/dayuwen/pages/listensun/listen.js" />
-        <option value="$PROJECT_DIR$/pages/main/pages/shopping/shopping.wxss" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dayuwen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dayuwen" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dayuwen" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dayuwen" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="listensun" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dayuwen" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="recorder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="link" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="link" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="link" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="composition" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="link" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="composition" type="462c0819:PsiDirectoryNode" />
-              <item name="compositionDetail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="link" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="car" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Shopdetails" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XBX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XBX" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1PLvF5gzMtYOhXqOoyweAi0xEtP" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xbx\XBX\pages\public" />
+      <recent name="D:\xbx\XBX\pages\meditation\pages\Preview" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -300,6 +86,60 @@
       <workItem from="1563411164833" duration="10354000" />
       <workItem from="1563499623460" duration="6177000" />
       <workItem from="1563584326639" duration="133000" />
+      <workItem from="1563604338676" duration="3657000" />
+      <workItem from="1563761431836" duration="719000" />
+      <workItem from="1564042335800" duration="824000" />
+      <workItem from="1564103581415" duration="61000" />
+      <workItem from="1564475922625" duration="1407000" />
+      <workItem from="1564536093941" duration="1486000" />
+      <workItem from="1565080928227" duration="748000" />
+      <workItem from="1565225501859" duration="7779000" />
+      <workItem from="1565250220450" duration="4177000" />
+      <workItem from="1565313703915" duration="1332000" />
+      <workItem from="1565332485898" duration="1362000" />
+      <workItem from="1565414641764" duration="11000" />
+      <workItem from="1565429259175" duration="757000" />
+      <workItem from="1565660677262" duration="152000" />
+      <workItem from="1565666088951" duration="1099000" />
+      <workItem from="1565667200272" duration="529000" />
+      <workItem from="1565670474612" duration="693000" />
+      <workItem from="1565677211283" duration="2797000" />
+      <workItem from="1565683781461" duration="1538000" />
+      <workItem from="1565746625276" duration="678000" />
+      <workItem from="1565747345771" duration="17000" />
+      <workItem from="1565747374939" duration="2214000" />
+      <workItem from="1565749761436" duration="99000" />
+      <workItem from="1565749872388" duration="87000" />
+      <workItem from="1565750440196" duration="106000" />
+      <workItem from="1565750575790" duration="11000" />
+      <workItem from="1565750765462" duration="164000" />
+      <workItem from="1565750940833" duration="78000" />
+      <workItem from="1565751033277" duration="35000" />
+      <workItem from="1565751079427" duration="171000" />
+      <workItem from="1565751539539" duration="25000" />
+      <workItem from="1565751633596" duration="542000" />
+      <workItem from="1565752187309" duration="18000" />
+      <workItem from="1565752216233" duration="871000" />
+      <workItem from="1565753099231" duration="24000" />
+      <workItem from="1565753134161" duration="256000" />
+      <workItem from="1565753423944" duration="5000" />
+      <workItem from="1565753439507" duration="14000" />
+      <workItem from="1565753465730" duration="24000" />
+      <workItem from="1565753500126" duration="50000" />
+      <workItem from="1565753561362" duration="53000" />
+      <workItem from="1565753626352" duration="58000" />
+      <workItem from="1565753695961" duration="107000" />
+      <workItem from="1565753814950" duration="5000" />
+      <workItem from="1565754124075" duration="108000" />
+      <workItem from="1565754244591" duration="4368000" />
+      <workItem from="1565761803977" duration="71000" />
+      <workItem from="1565761917868" duration="112000" />
+      <workItem from="1565763107360" duration="10629000" />
+      <workItem from="1565831291979" duration="1371000" />
+      <workItem from="1565838259913" duration="1229000" />
+      <workItem from="1566522215489" duration="345000" />
+      <workItem from="1566522561328" duration="1499000" />
+      <workItem from="1566543264563" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="空格">
       <created>1561948484063</created>
@@ -504,36 +344,154 @@
       <option name="project" value="LOCAL" />
       <updated>1563523394159</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="商品修改">
+      <created>1563604494165</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1563604494165</updated>
+    </task>
+    <task id="LOCAL-00031" summary="商铺详情上拉刷新">
+      <created>1563606678678</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1563606678678</updated>
+    </task>
+    <task id="LOCAL-00032" summary="购物车和商铺详情">
+      <created>1563608110771</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1563608110771</updated>
+    </task>
+    <task id="LOCAL-00033" summary="学霸学筛选">
+      <created>1563616315231</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1563616315231</updated>
+    </task>
+    <task id="LOCAL-00034" summary="学霸学年级修改">
+      <created>1563761484361</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1563761484361</updated>
+    </task>
+    <task id="LOCAL-00035" summary="学霸学新加预习乐">
+      <created>1565081065992</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1565081065992</updated>
+    </task>
+    <task id="LOCAL-00036" summary="购物车和商铺详情">
+      <created>1565227573172</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1565227573172</updated>
+    </task>
+    <task id="LOCAL-00037" summary="banner">
+      <created>1565228377764</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1565228377764</updated>
+    </task>
+    <task id="LOCAL-00038" summary="购物车和商铺详情">
+      <created>1565234545715</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1565234545715</updated>
+    </task>
+    <task id="LOCAL-00039" summary="预习乐冥想思修改">
+      <created>1565245560015</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1565245560015</updated>
+    </task>
+    <task id="LOCAL-00040" summary="预习乐冥想思修改">
+      <created>1565252951995</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1565252951995</updated>
+    </task>
+    <task id="LOCAL-00041" summary="预习乐冥想思修改">
+      <created>1565253022813</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1565253022813</updated>
+    </task>
+    <task id="LOCAL-00042" summary="冥想思答题返回">
+      <created>1565253269933</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1565253269933</updated>
+    </task>
+    <task id="LOCAL-00043" summary="预习乐冥想思">
+      <created>1565257996450</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1565257996450</updated>
+    </task>
+    <task id="LOCAL-00044" summary="预习乐">
+      <created>1565334554851</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1565334554851</updated>
+    </task>
+    <task id="LOCAL-00045" summary="预习乐文章页面标题">
+      <created>1565680839520</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1565680839520</updated>
+    </task>
+    <task id="LOCAL-00046" summary="学霸学">
+      <created>1565765164489</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1565765164489</updated>
+    </task>
+    <task id="LOCAL-00047" summary="购物车和商铺详情">
+      <created>1565766413313</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1565766413313</updated>
+    </task>
+    <task id="LOCAL-00048" summary="学霸学字符编码">
+      <created>1565766988117</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1565766988117</updated>
+    </task>
+    <task id="LOCAL-00049" summary="预习乐冥想思连接">
+      <created>1566522895377</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1566522895377</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47321000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49736565" visible="true" weight="0.32719395" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50263435" side_tool="true" visible="true" weight="0.32719395" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.wxml" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -551,20 +509,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -586,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="空格" />
     <MESSAGE value="细节修改" />
     <MESSAGE value="连接商品详情页" />
     <MESSAGE value="阻止冒泡" />
@@ -597,73 +541,21 @@
     <MESSAGE value="学霸学修改" />
     <MESSAGE value="点赞榜返回刷新" />
     <MESSAGE value="商铺详情" />
+    <MESSAGE value="商品修改" />
+    <MESSAGE value="商铺详情上拉刷新" />
+    <MESSAGE value="学霸学筛选" />
+    <MESSAGE value="学霸学年级修改" />
+    <MESSAGE value="学霸学新加预习乐" />
+    <MESSAGE value="banner" />
+    <MESSAGE value="预习乐冥想思修改" />
+    <MESSAGE value="冥想思答题返回" />
+    <MESSAGE value="预习乐冥想思" />
+    <MESSAGE value="预习乐" />
+    <MESSAGE value="预习乐文章页面标题" />
+    <MESSAGE value="学霸学" />
     <MESSAGE value="购物车和商铺详情" />
-    <option name="LAST_COMMIT_MESSAGE" value="购物车和商铺详情" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/images/shopping/add.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/pages/shopping/shoppimg.wxml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/dayuwen/pages/listensun/listen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3153">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4370">
-          <caret line="230" column="46" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/pages/shopping/shopping.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#view#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/pages/Shopdetails/Shopdetails.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/pages/shopping/shopping.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/common/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/dayuwen/pages/recorder/recorder.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <MESSAGE value="学霸学字符编码" />
+    <MESSAGE value="预习乐冥想思连接" />
+    <option name="LAST_COMMIT_MESSAGE" value="预习乐冥想思连接" />
   </component>
 </project>

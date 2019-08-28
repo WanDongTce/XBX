@@ -279,3 +279,8 @@ button.pop-btn::after{
   color:a1a1a1;
   font-size:26rpx;
 }
+.top_fix .content_box{width: 700rpx;margin: 0 auto;height: 65rpx; background-color: #e6e6e6;
+border-radius:32rpx }
+.top_fix .content_box text{display: inline-block;font-size: 28rpx;line-height: 65rpx;margin-left: 21rpx;
+color: #b0b0b0;padding-left: 54rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/XBX/search.png);
+background-repeat: no-repeat;background-position: left center;background-size: 39rpx 39rpx;}
