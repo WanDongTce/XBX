@@ -15,7 +15,8 @@
     <image class="popwrap-close" mode="widthFix" src="/images/close3.png" bindtap="noBuy"></image>
     <text class="pop-text">开通会员，畅享优质好课！</text>
     <button class="pop-btn" bindtap="goBuy">立即开通</button>
-    <view class="text">您的试用期还有<text class="num">3</text>天</view>
+    <view wx:if='{{freeTime>0}}' class="text">您的试用期还有<text class="num">{{freeTime}}</text>天</view>
+    <view wx:else class="text">免费试用已结束</view>
     </view>
   </van-popup>
 <navigat-bar class="navigation-box component-class" id="compontNavbar">

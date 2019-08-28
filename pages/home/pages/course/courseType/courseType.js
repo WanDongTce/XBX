@@ -1,5 +1,6 @@
 // pages/course/course.js
 const network = require("../../../../../utils/main.js");
+const moment = require("../../../../../utils/moment.js");
 const app = getApp();
 var pagesize = 20;
 var page = 1;
@@ -23,9 +24,9 @@ Page({
       list: [],
       selectedTab: subId,
       showEmpty: false,
-      
-
-      
+    freeTime: 0, //新注册号免费试用
+    videoId: 0,
+    videoPic: ''  
   },
 
   onLoad: function (options) {
@@ -182,7 +183,13 @@ Page({
     this.toggle('middle');
   },
   noBuy: function () {
+    let that = this;
     this.toggle('middle');
+    if (this.freeTry()) {
+      wx.navigateTo({
+        url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + that.data.videoId + '&videopic=' + that.data.videoPic,
+      });
+    }
   },
   goBuy: function () {
     wx.navigateTo({
@@ -205,9 +212,31 @@ Page({
   tz_detail: function (e) {
     this.memberExpires(e);
   },
+  freeTry: function () {
+    let that = this;
+    let createTime = app.userInfo.create_time;
+    let start = moment(createTime);
+    let end = moment();
+    let freeTime = end.diff(start, 'days');
+    if (freeTime < 3) {
+      that.setData({
+        freeTime: (3 - freeTime)
+      });
+      return true;
+    } else {
+      //免费试用结束
+      return false;
+    }
+
+  },
   memberExpires(e) {
     var that = this;
     network.memberExpires(function (res) {
+      that.setData({
+        videoId: e.currentTarget.dataset.myid,
+        videoPic: e.currentTarget.dataset.videopic
+      });
+      that.freeTry();
       that.toggle('middle');
     }, function (res) {
       wx.navigateTo({
