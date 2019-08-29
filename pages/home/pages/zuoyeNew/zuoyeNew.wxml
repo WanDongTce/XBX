@@ -52,7 +52,7 @@
             <scroll-view class='newonlineter_scroll display-flex' scroll-x="true" wx:if="{{item.images.length!=0}}">
                 <view class='newonlineter_item' wx:for='{{item.images}}' wx:key='this'>
                     <!-- <image wx:if="{{item}}" src="{{item}}" mode='aspectFill' catchtap="previewImg" data-index="{{idx}}" data-img="{{item}}" data-imgs="{{item}}"></image> -->
-                    <image wx:if="{{item.url}}" src="{{item.url}}" mode='aspectFill' catchtap="previewImg" data-index="{{idx}}" data-img="{{item.url}}" data-imgs="{{item.url}}"></image>
+                    <image mode="aspectFit" wx:if="{{item.url}}" src="{{item.url}}"  catchtap="previewImg" data-index="{{idx}}" data-img="{{item.url}}" data-imgs="{{item.url}}"></image>
                     
                 </view>                   
             </scroll-view>

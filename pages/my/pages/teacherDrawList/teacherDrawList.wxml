@@ -1,37 +1,179 @@
-<compontNavbar title="批改作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
-<block wx:if="{{showEmpty}}">
-    <empty></empty>
-</block>
-
-<view class='bigbox'>
-  <block wx:if="{{showEmpty}}"><empty></empty></block> 
-  <view class='itembox' wx:for="{{list}}" wx:key='this' catchtap='tz_detail'  data-zuoyeid='{{item.id}}'>
-    <view class='item_top display-flex justify-content-between align-items-center'>
-      <view class='item_topleft f_26 c_333'>{{item.createdate}}</view>
-      <view class='item_topright f_24 c_fff'>{{item.subjectname}}</view>
-    </view> 
-    <view class='item_center'>
-      <view class='item_title f_28'>{{item.name}}</view>
-      <scroll-view class='newonlineter_scroll display-flex' scroll-x="true" wx:if="{{item.images!=''||item.images!=null}}">
-        <view class='newonlineter_item' wx:for='{{item.images}}' wx:key='this'>
-            <image wx:if="{{item}}" src="{{item}}" mode='aspectFill' catchtap="previewImg" data-index="{{idx}}" data-img="{{item}}" data-imgs="{{item}}"></image>           
-        </view>                   
-      </scroll-view>
+<my-component id='component'>
+   
+  </my-component>
+<!-- <compontNavbar title="日常作业" isShowBack="{{true}}" component-class="component-class"></compontNavbar> -->
+<navigat-bar class="navigation-box component-class" id="compontNavbar">
+    <view class="back-box" bindtap="goBack" >
+        <image class="navigation-back-icon" src="../../../../images/arowLt_fff.png"></image>
     </view>
-    <view class='item_bottom display-flex align-items-center justify-content-between'>
-      <view class='display-flex align-items-center'>
-        <image wx:if="{{item.userInfo.avatar}}" src='{{item.userInfo.avatar}}' class='item_headerimg'></image>
-        <image wx:else src='../../../../images/default-user-2.png' class='item_headerimg'></image>
-        <view class='item_name f_28 one_line c_333'>{{item.userInfo.nickname}}</view>
-        
-        <view class='item_tag f_24 c_666 one_line' >同学</view>
-
-      </view>
-      
-      <view wx:if="{{item.status==1}}" class='item_btn f_28 item_btn3' catchtap='tz_pigai' data-zuoyeid='{{item.id}}' data-quespic='{{item.images}}'>未批改</view>
-      <view wx:if="{{item.status==2}}" class='item_btn f_28 item_btn4'>已批改</view>
-      
-    </view>
-  </view>
-  
+    <view class="navigation-tit">作业批改</view>
+</navigat-bar>
+<!-- 缴费界面 -->
+<block wx:if="{{show}}">
+<view class="bg-info">
+  <image class="banner" mode="aspectFill" src="../../images/zuoye/zuoye.jpg"></image>
+  <text class="bg-info-text">学生日常作业有困难，不懂不会怎么办</text>
+  <text class="bg-info-text">将问题拍照上传</text>
+  <text class="bg-info-text">平台在线老师通过视频为你答疑</text>
 </view>
+
+<view class="renewal-wrap">
+  <view wx:for='{{jflist}}' wx:key='this' catchtap='choice_item' data-myid='{{item.month}}' class="renewal {{item.checked?'active':''}} {{myid==item.month?'active':''}}">
+    <text>{{item.title}}</text>
+    <text>{{item.price}}¥</text>
+  </view>
+</view>
+<view class="footer">
+  <button class="footer-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">立即支付{{newmoney}}</button>
+</view>
+</block>
+<block wx:else>
+<import src="../../../../template/tab/tab.wxml" />
+<view class="box">
+</view>
+<!-- 作业即答 -->
+<view class='tab-content' wx:if='{{tabindex==0}}'>
+    <view class='bigbox' >
+        <block wx:if="{{showEmpty}}"><empty></empty></block> 
+        <view class='itembox1' wx:for="{{questionList}}" wx:key='this' bindtap="toDetail" data-href="{{item.href}}">
+            <view class='item_top display-flex  align-items-center'>
+                <view class='item_topright f_24 c_fff'>{{item.grade.name}}</view>
+                <view class='item_topright f_24 c_fff'>{{item.subject.Name}}</view>
+                
+            </view> 
+            <view class='item_center'>
+            <view class='item_title f_28'>{{item.name}}</view>
+            <scroll-view class='newonlineter_scroll display-flex' scroll-x="true" wx:if="{{item.images.length!=0}}">
+                <view class='newonlineter_item' wx:for='{{item.images}}' wx:key='this'>
+                    <!-- <image wx:if="{{item}}" src="{{item}}" mode='aspectFill' catchtap="previewImg" data-index="{{idx}}" data-img="{{item}}" data-imgs="{{item}}"></image> -->
+                    <image mode="aspectFit" wx:if="{{item.url}}" src="{{item.url}}" catchtap="previewImg" data-index="{{idx}}" data-img="{{item.url}}" data-imgs="{{item.url}}"></image>
+                    
+                </view>                   
+            </scroll-view>
+            </view>
+            
+            <view class='item_bottom display-flex align-items-center justify-content-between {{item.images.length==0?"":"new_new"}}'>                        
+                <view class='display-flex align-items-center'>
+                        <image class='question_bottomimg1' wx:if="{{item.userInfo.avatar}}" src='{{item.userInfo.avatar}}' mode="aspectFill"></image>
+                        <image class='question_bottomimg1' wx:else src="{{base}}images/default-user-2.png" mode="aspectFill"></image>
+                        <text class='question_bottomtext1 f_28 c_333'>{{item.userInfo.nickname}}</text>
+                        <text class='question_bottomtext2 f_24 c_666'>{{item.difftime}}</text>
+                </view> 
+                <view class='display-flex align-items-center'>
+                        <image class='question_bottomimg2' src='{{base}}images/question_reply.png'></image>
+                        <text class='question_bottomtext3 f_24 c_gf'>回答</text>
+                        <text class='question_bottomtext4 f_24 c_gf'>{{item.answernum}}</text>
+                </view>
+            </view> 
+            
+        </view>
+    </view>
+</view>
+<!-- 作业批改 -->
+<view class='tab-content' wx:if='{{tabindex==1}}'>
+    <navigator url="/pages/home/pages/zuoyeSubmit/zuoyeSubmit" class='btn'><text>提交作业</text></navigator>
+    <view class='bigbox' >
+        <block wx:if="{{showEmpty}}"><empty></empty></block> 
+        <view class='itembox position_r' wx:for="{{zylist}}" wx:key='this' bindtap='tz_detail' data-zuoyeid='{{item.id}}'>
+            <view class='item_top display-flex justify-content-between align-items-center'>
+                <view class='item_topright f_24 c_fff'>{{item.subjectname}}</view>
+                <view class='item_topleft f_26 c_333'>{{item.createdate}}</view>
+            </view> 
+            <view class='item_center'>
+            <view class='item_title f_28'>{{item.name}}</view>
+            <scroll-view class='newonlineter_scroll display-flex' scroll-x="true" wx:if="{{item.images}}">
+                <view class='newonlineter_item' wx:for='{{item.images}}' wx:key='this'>
+                    <image wx:if="{{item}}" src="{{item}}" mode='aspectFit' catchtap="previewImg" data-index="{{idx}}" data-img="{{item}}" data-imgs="{{item}}"></image>
+                    
+                </view>                   
+            </scroll-view>
+            </view>
+            <!-- <view class='item_bottom display-flex align-items-center '>
+            
+            
+                <view wx:if="{{item.status==1}}" class='item_btn f_28 '>未批改</view>
+                <view wx:if="{{item.status==2}}" class='item_btn f_28 '>已批改</view>
+            
+            </view> -->
+            <view class='position_a zuoye_state'>
+                <image wx:if="{{item.status==1}}" src='../../../../images/zuoye_11.png' class='zuoye_stateimg'></image>
+                <image wx:if="{{item.status==2}}" src='../../../../images/zuoye_22.png' class='zuoye_stateimg'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 作业服务 -->
+<view class='tab-content2' wx:if='{{tabindex==8}}'>
+    <view wx:if="{{showTalk==false}}">
+        <image src='../../../../images/icon_homework_spbj.png' class='tab3_img1'></image>
+        <view class='tab3_centerbox'>
+            <view class='tab3_centertext'>学生日常作业有困难，不懂不会怎么办</view>
+            <view class='tab3_centertext'>将问题拍照上传</view>
+            <view class='tab3_centertext'>平台在线教师通过视频为您答疑</view>
+            <view class='tab3_centertext2 c_gf'>
+                本模块费用：<text>{{payMoney}}元/月</text>
+            </view>
+            <button class='tab3_btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">立即缴费</button>
+            <!-- <button class='fix_btn c_gf_bg f_32 c_fff' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="judgeLogin">立即缴费</button> -->
+            <!-- <navigator url='/pages/home/pages/zuoyePay/zuoyePay' class='tab3_btn'>立即缴费</navigator> -->
+        </view>        
+    </view>
+    <view wx:else>
+        <template name="timeMsg">
+            <view class="sys-msg-box">
+                <text class="sys-msg">{{item.timeStr}}</text>
+            </view>
+        </template>
+        <template name="recevMsg">
+            <image class="head-img" src="{{base}}images/header.png" mode="aspectFill"></image>
+            <view class="rt-box">
+            <view class="user user-2">小A</view>
+            <view class="cont-box cont-box-2">
+                <view class="triangle triangle2"></view>
+                <view class="msg msg2">
+                    <block wx:for="{{item.results}}" wx:for-item="im" wx:key="this">
+                        <view class="li {{im.values.isLink? 'c_gf': ''}}" catchtap="getDetail" data-hid="{{im.values.id}}">
+                        <block wx:if="{{item.results.length > 1 && im.values.index != 0}}">{{im.values.index}}.</block>
+                        {{im.values.text}}
+                        </view>
+                    </block>
+                </view>
+            </view>
+            </view>
+        </template>
+        <template name="sendMsg">
+            <view class="rt-box">
+                <view class="user user-1">{{item.name}}</view>
+                <view class="cont-box cont-box-1">
+                    <view class="msg">
+                        {{item.text}}
+                    </view>
+                    <view class="triangle triangle1"></view>
+                </view>
+            </view>
+            <image class="head-img" src="{{item.img || base + 'images/default-user-2.png'}}" mode="aspectFill"></image>
+        </template>
+
+        <view class="boxnew" id='box'>
+            <block wx:for="{{list}}" wx:key="this">
+                <block wx:if="{{item.time - list[index - 1].time > 50}}">
+                    <template is="timeMsg" data="{{item}}" />
+                </block>
+                <view class="itemnew {{item.isSelf? 'self-box' : ''}}">    
+                    <template is="{{item.isSelf? 'sendMsg' : 'recevMsg'}}" data="{{item, base}}"/>
+                </view>
+
+            </block>
+        </view>
+
+        <view class="bottom-box">
+            <view class="input-cont">
+                <view class="input-box">
+                    <input bindinput="inputFn" value="{{msg}}" placeholder="输入问题关键词提问" placeholder-class="place"></input>
+                </view>
+                <view class="btnnew" bindtap="sendMsg">发送</view>
+            </view>
+        </view>
+    </view>
+</view>
+</block>

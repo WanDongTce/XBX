@@ -88,18 +88,26 @@
             <image src='{{base}}images/template_img4.png' class='template_img'></image>
             <view class='template_text2'>我的笔记</view>
         </navigator>
-        <navigator class='text-align-center w25 mt_two' url="/pages/my/pages/purchasedCourse/purchasedCourse">
+        <navigator class='text-align-center w25' url="/pages/my/pages/purchasedCourse/purchasedCourse">
             <image src='{{base}}images/template_img17.png' class='template_img'></image>
             <view class='template_text2'>我的课程</view>
+        </navigator>
+        <view wx:if="{{info.isteacher!=1}}" style="margin-top: 9rpx;" class='text-align-center w25'>
+            <image  style="height:44rpx;width:44rpx;" src='{{base}}images/zypg.jpg' class='template_img'></image>
+            <view class='template_text2'>作业批改</view>
+        </view>
+        <navigator wx:if="{{info.isteacher==1}}" style="margin-top: 9rpx;" class='text-align-center w25' url="/pages/my/pages/teacherDrawList/teacherDrawList">
+            <image  style="height:44rpx;width:44rpx;" src='{{base}}images/zypg.jpg' class='template_img'></image>
+            <view class='template_text2'>作业批改</view>
         </navigator>
         <!-- <navigator  class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
             <image src='{{base}}images/template_img19.png' class='template_img'></image>
             <view class='template_text2'>作业批改</view>
         </navigator> -->
-        <navigator wx:if="{{info.isteacher==1}}" class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
-            <image src='{{base}}images/template_img19.png' class='template_img'></image>
+        <!-- <navigator wx:if="{{info.isteacher==1}}" class='text-align-center w25 mt_two' url="/pages/my/pages/teacherDrawList/teacherDrawList">
+            <image style="height:44rpx;width:44rpx;" src='{{base}}images/template_img19.png' class='template_img'></image>
             <view class='template_text2'>作业批改</view>
-        </navigator>
+        </navigator> -->
     </view>
 </view>
 <view class='template_box bgfff'>

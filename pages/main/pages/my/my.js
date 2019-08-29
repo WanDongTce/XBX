@@ -28,7 +28,7 @@ Page({
     getUserInfo: function () {
         var that = this;
         network.getUserInfo(function(res){
-            // console.log(res);
+            console.log(res);
             wx.hideLoading();
             if (res.data.code == 200) {
                 var a = res.data.data[0].item;
