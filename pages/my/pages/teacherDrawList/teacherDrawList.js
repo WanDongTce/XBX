@@ -28,6 +28,7 @@ Page({
   },
 
   onLoad: function (options) {
+    var that = this;
     this.compontNavbar = this.selectComponent("#compontNavbar");
     this.empty = this.selectComponent("#empty");
     this.setData({
@@ -36,7 +37,12 @@ Page({
     this.getQuestionList(false);
     //   this.getZyList(false);   
     // this.getCheck();
-    this.getRenInfo();
+    this.getUserInfo(function(){
+      console.log('teacher');
+    },function(){
+      console.log('student');
+      that.getRenInfo();
+    })
 
     info = {};
     //   console.log(info);
@@ -62,6 +68,30 @@ Page({
         }]
       });
     }
+  },
+  //判断学生老师
+  getUserInfo: function (cb,callback) {
+    var that = this;
+    network.getUserInfo(function (res) {
+      console.log(res);
+      wx.hideLoading();
+      if (res.data.code == 200) {
+        var a = res.data.data[0].item;
+        if (a.isteacher == 1){
+          cb&&cb()
+        } else {
+          //学生
+          callback&callback()
+        }
+       
+      } else {
+        wx.showToast({
+          title: res.data.message,
+          icon: 'none',
+          duration: 1000
+        });
+      }
+    });
   },
   //缴费列表
   getRenInfo() {
