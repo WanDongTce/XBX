@@ -22,7 +22,7 @@
     <text class="head-text-b">积分兑换</text>
   </view>
 </navigator> -->
-<navigator class="head two" url="/pages/find/pages/encyclopedias/encyclopedias">
+<navigator wx:if="{{showTab}}" class="head two" url="/pages/find/pages/encyclopedias/encyclopedias">
   <image src="../../images/find/find_img2.png" class="head-img"></image>
   <view class="head-box">
     <view class="head-box-a">
@@ -63,7 +63,7 @@
   <image src="../../images/find/find_img6.png" class="head-img"></image>
   <view class="head-box">
     <view class="head-box-a">
-      <text class="head-text-a">动态</text>
+      <text class="head-text-a">新闻</text>
     </view>
     <text class="head-text-b">随时掌握最新资讯</text>
   </view>

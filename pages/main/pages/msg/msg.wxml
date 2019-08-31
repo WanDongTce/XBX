@@ -36,8 +36,8 @@
         </view>
     </view>
 
-    <view class="aside">
+    <!-- <view class="aside">
         <image src="{{base}}images/create.png" catchtap="toCreate"></image>
         <image src="{{base}}images/list.png" catchtap="toFrdList"></image>
-    </view>
+    </view> -->
 </block>

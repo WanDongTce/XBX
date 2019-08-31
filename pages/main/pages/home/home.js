@@ -30,8 +30,8 @@ Page({
         renew_content:'',
       freeTime: 0, //新注册号免费试用
       videoId: 0,
-      videoPic: ''
-        
+      videoPic: '',
+      showTab: true  
     },
     onLoad: function(options) {
         // console.log(app);     
@@ -42,7 +42,13 @@ Page({
         that.getSwipImgs();
         this.setData({
             idname:app.idname
-        });       
+        });
+      // console.log('app.userInfo',app.userInfo);   
+      if(app.userInfo.mobile=='18647993992'){
+        this.setData({
+          showTab: false
+        })
+      }    
     },
     tz_little: function () {
         // console.log('111')
