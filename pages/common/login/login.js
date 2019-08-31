@@ -32,7 +32,13 @@ Page({
       id: 0,
       good: 0,
       scid: 0,
-      share: false
+      share: false,
+      //扫描进入
+      province_id: 0,
+      city_id: 0,
+      district_id: 0,
+      schoolid: 0,
+      isscan: 0 //1为扫描
 
     },
     onLoad: function (options) {
@@ -42,6 +48,16 @@ Page({
           id: options.id,
           good: options.good,
           scid: options.scid
+        });
+      }
+      if (options.province_id && options.city_id && options.district_id && options.schoolid) {
+        console.log('扫描绑定商家')
+        this.tab_topbox_right();
+        this.setData({
+          province_id: options.province_id,
+          city_id: options.city_id,
+          district_id: options.district_id,
+          schoolid: options.schoolid
         });
       }
         this.setData({
@@ -239,7 +255,7 @@ Page({
                 },
                 success: function (res) {
                     wx.hideLoading();
-                    //   console.log(res);
+                      console.log(res);
                     if (res.data.code == 200) {
                         // var a = res.data.data[0];
                         // wx.setStorage({
@@ -256,53 +272,112 @@ Page({
                         //         url: '/pages/common/presonalInfo/presonalInfo'
                         //     });
                         // }
-                      network.POST({
-                        url: 'v11/login/index',
-                        params: {
-                          'mobile': phone,
-                          'password': md5.hexMD5(password),
-                          "version_number": "0",
-                          "lng": '',
-                          "lat": '',
-                          "login_source": 1
-                        },
-                        success: function (resnew) {
-                          wx.hideLoading();
-                          //   console.log(res);
-                          if (resnew.data.code == 200) {
-                            var a = resnew.data.data[0];
-                            wx.setStorage({
-                              key: 'userInfo',
-                              data: a
-                            });
-                            app.userInfo = a;
+                      if (that.data.province_id && that.data.city_id && that.data.district_id && that.data.schoolid) {
+                        console.log('扫描绑定商家注册');
+                        network.POST({
+                          url: 'v11/login/index',
+                          params: {
+                            'mobile': phone,
+                            'password': md5.hexMD5(password),
+                            "version_number": "0",
+                            "lng": '',
+                            "lat": '',
+                            "login_source": 1,
+                            "province_id": that.data.province_id,
+                            "city_id": that.data.city_id,
+                            "district_id": that.data.district_id,
+                            "schoolid": that.data.schoolid,
+                            "isscan": 1,
+                            "grade_id": 1,
+                            "class_id": 1
+                          },
+                          success: function (resnew) {
+                            wx.hideLoading();
+                              console.log(res);
+                            if (resnew.data.code == 200) {
+                              var a = resnew.data.data[0];
+                              wx.setStorage({
+                                key: 'userInfo',
+                                data: a
+                              });
+                              app.userInfo = a;
 
-                            if (a.step == 8) {
-                              wx.switchTab({
-                                url: '/pages/main/pages/home/home'
-                              });
+                              if (a.step == 8||a.step==1) { //1为扫描自动完善
+                                wx.switchTab({
+                                  url: '/pages/main/pages/home/home'
+                                });
+                              } else {
+                                wx.navigateTo({
+                                  url: '/pages/common/presonalInfo/presonalInfo'
+                                });
+                              }
                             } else {
-                              wx.navigateTo({
-                                url: '/pages/common/presonalInfo/presonalInfo'
-                              });
+                              wx.showToast({
+                                title: res.data.message,
+                                icon: 'none',
+                                duration: 1000
+                              })
                             }
-                          } else {
+                          },
+                          fail: function () {
+                            wx.hideLoading();
                             wx.showToast({
-                              title: res.data.message,
+                              title: '服务器异常',
                               icon: 'none',
                               duration: 1000
                             })
                           }
-                        },
-                        fail: function () {
-                          wx.hideLoading();
-                          wx.showToast({
-                            title: '服务器异常',
-                            icon: 'none',
-                            duration: 1000
-                          })
-                        }
-                      })
+                        })
+                      } else{
+                        network.POST({
+                          url: 'v11/login/index',
+                          params: {
+                            'mobile': phone,
+                            'password': md5.hexMD5(password),
+                            "version_number": "0",
+                            "lng": '',
+                            "lat": '',
+                            "login_source": 1
+                          },
+                          success: function (resnew) {
+                            wx.hideLoading();
+                            //   console.log(res);
+                            if (resnew.data.code == 200) {
+                              var a = resnew.data.data[0];
+                              wx.setStorage({
+                                key: 'userInfo',
+                                data: a
+                              });
+                              app.userInfo = a;
+
+                              if (a.step == 8) {
+                                wx.switchTab({
+                                  url: '/pages/main/pages/home/home'
+                                });
+                              } else {
+                                wx.navigateTo({
+                                  url: '/pages/common/presonalInfo/presonalInfo'
+                                });
+                              }
+                            } else {
+                              wx.showToast({
+                                title: res.data.message,
+                                icon: 'none',
+                                duration: 1000
+                              })
+                            }
+                          },
+                          fail: function () {
+                            wx.hideLoading();
+                            wx.showToast({
+                              title: '服务器异常',
+                              icon: 'none',
+                              duration: 1000
+                            })
+                          }
+                        })
+                      }
+                      
                     } else {
                         wx.showToast({
                             title: res.data.message,
