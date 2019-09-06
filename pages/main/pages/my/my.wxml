@@ -67,7 +67,7 @@
         <view class='top_bottom_text2'>我的评论</view>
     </navigator>
 </view>
-<view wx:if="{{showTab}}" class='template_box bgfff'>
+<view wx:if="{{showTab}}" class='template_box bgfff {{my_study==0?"hide":""}}'>
     <view class='template_text1'>学习</view>
     <view class='display-flex new_study_box flex-wrap-wrap'>
         <navigator class='text-align-center w25' url='/pages/my/pages/service/homeworklist/homeworklist'>
@@ -149,7 +149,7 @@
         </navigator>
     </view>
 </view>
-<view wx:if="{{showTab}}" class='template_box bgfff'>
+<view wx:if="{{showTab}}" class='template_box bgfff {{my_daily==0?"hide":""}}'>
     <view class='template_text1'>日常</view>
     <view class='display-flex '>
         <navigator class='text-align-center w25' url="/pages/my/pages/service/service">

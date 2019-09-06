@@ -6,7 +6,9 @@ var hasmore = '';
 Page({
     data: {
       show: {
-        middle: false
+        middle: false,
+        home_header:"",
+        home_middle:""
       },
         base: '../../../../',
         title: '',
@@ -40,6 +42,7 @@ Page({
         var that = this;
         
         that.getSwipImgs();
+      that.getshow()
         this.setData({
             idname:app.idname
         });
@@ -61,6 +64,24 @@ Page({
             }
         })
 
+    },
+    getshow:function(){
+      var that=this
+      wx.request({
+        url: app.requestUrl + 'v14/public/display',
+        data:{},
+        method: "POST",
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success:function(res){
+          console.log(res.data.data[0].list[0].home_middle)
+          that.setData({
+            home_header: res.data.data[0].list[0].home_header,
+          home_middle: res.data.data[0].list[0].home_middle
+          })
+        }
+      })
     },
     onShow: function() {
         if (app.userInfo.register_community_name) {

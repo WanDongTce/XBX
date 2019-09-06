@@ -158,6 +158,7 @@ page{
 .bottom_box:last-child{
     border-bottom: none;
 }
+.hide{display: none}
 .bottom_box_img{
   width:30rpx;
   height:30rpx;

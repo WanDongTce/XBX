@@ -42,7 +42,7 @@
             </block>
         </swiper>
     <!-- </view> -->
-    <view wx:if="{{showTab}}" class="tabs" id='querytwo'>
+    <view wx:if="{{showTab}}" class="tabs {{home_header==0?'hide':''}}" id='querytwo'>
         <navigator class="new_tab" url="/pages/home/pages/edutList/edutList">
             <image class="new_tab_img" src="../../images/home/tab1.png"></image>
             <view class='new_tab_text'>{{idname}}</view>
@@ -80,7 +80,7 @@
             <view class='new_tab_text'>爱朗读</view>
         </navigator> -->
     </view>
-    <view class='p_lr_26'>
+    <view class='p_lr_26 {{home_middle==0?"hide":""}}'>
         <view class='display-flex align-items-center new_home_imgbox'>
             <navigator url='/pages/home/pages/barter/barter'><image src='../../../../images/new_home_img1.png' class='new_home_img'></image></navigator>
             <navigator url='/pages/dayuwen/pages/song/song'><image src='../../../../images/new_home_img4.png' class='new_home_img'></image></navigator>

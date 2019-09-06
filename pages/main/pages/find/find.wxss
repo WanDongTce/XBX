@@ -13,6 +13,7 @@
   border-bottom: solid 1rpx #f2f1f1;
   background-color: #fff;
 }
+.hide{display: none}
 .one{
   margin-top: 10rpx;
   border-radius: 10rpx 10rpx 0rpx 0rpx;

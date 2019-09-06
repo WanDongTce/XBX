@@ -7,9 +7,13 @@ Page({
         IMGURL: app.imgUrl,
         info: '',
         msgCount: 0,
-        showTab: true
+        showTab: true,
+        my_study:"",
+      my_daily: ""
     },
     onLoad(){
+      var that = this
+      that.getshow()
         this.compontNavbar = this.selectComponent("#compontNavbar");
       if (app.userInfo.mobile == '18647993992') {
         this.setData({
@@ -17,6 +21,25 @@ Page({
         })
       }  
     },
+  getshow: function () {
+    var that = this
+    wx.request({
+      url: app.requestUrl + 'v14/public/display',
+      data: {},
+      method: "POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        console.log(res.data.data[0].list[0].my_daily)
+        that.setData({
+          my_study: res.data.data[0].list[0].my_study,
+          my_daily: res.data.data[0].list[0].my_daily,
+
+        })
+      }
+    })
+  },
   onHide: function () {
     var that = this;
     that.component = that.selectComponent("#component")
