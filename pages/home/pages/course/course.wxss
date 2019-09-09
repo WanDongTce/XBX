@@ -4,6 +4,7 @@
 page{
     padding-top:10vh;
     background-color:#fff;
+    width:100%;overflow: hidden
 }
 /*导航栏  */
 .navigation-box {
@@ -17,6 +18,7 @@ page{
     padding: 0 30rpx;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    display: block
 }
 .back-box{
     position: absolute;
@@ -75,7 +77,7 @@ page{
 /* scroll */
 .top_fix {
     position: fixed;
-    
+
     background-color: #fff;
     z-index: 2;
     height: 76rpx;
@@ -254,7 +256,7 @@ button.pop-btn::after{
 .isvip{
   overflow: hidden;
 }
-
+.p_lr_26{width: 95%;margin: 0 auto;padding: 0}
 .search{
   background-color:#f4f4f4;
   margin-left:40rpx;

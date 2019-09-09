@@ -6,7 +6,7 @@ var districtId = '';
 var schoolId = '';
 var gradeId = '';
 var classId = '';
-
+var schoollist=[]
 Page({
     data: {
         base: '../../../',
@@ -23,8 +23,10 @@ Page({
     onLoad: function () {
         this.compontNavbar = this.selectComponent("#compontNavbar");
         this.addressPicker = this.selectComponent("#addressPicker");
+        this.school()
     },
     //性别
+
     genderBindTap: function (e) {
         var that = this;
         var id = that.data.genderId;
@@ -36,14 +38,41 @@ Page({
         }
     },
     showPicerFn() {
+      var school = wx.getStorageSync("userInfo")
+      if (school.register_province_id!=0){
+        wx.showToast({
+          title: '学校地址不可更改',
+          icon: 'none',
+          duration: 1000
+        })
+      }else{
         this.setData({
-            showPicker: true
+          showPicker: true
         });
+      }
+       
     },
+  school: function () {
+    var school = wx.getStorageSync("userInfo")
+    var that = this;
+    console.log(school.register_area_name)
+    var list = []
+    list.push({ id: school.register_province_id, name: school.register_province_name })
+    list.push({ id: school.register_city_id,name: school.register_city_name })
+    list.push({ id: school.register_area_id,name: school.register_area_name })
+    
+    districtId = school.register_area_id
+    that.getSchoolAddrsByAreaId(school.register_area_id)
+    
+    that.setData({
+      address: list,
+      schoolList: schoollist
+    })
+  },
     getAddressInfo(e) {
         var that = this;
         var res = network.getSelectedAdressInfo(e.detail);
-        // console.log(res);
+        console.log(res);
         that.setData({
             address: res,
             schoolIndex: '',
@@ -84,6 +113,21 @@ Page({
                 success: function (res) {
                     wx.hideLoading();
                     if (res.data.code == 200) {
+                      console.log(res)
+                      schoollist = res.data.data
+                      var school = wx.getStorageSync("userInfo")
+                     
+                      for (var i = 0; i < schoollist.length; i++) {
+                        console.log(schoollist[i].school_id)
+                        if (school.register_community_id == schoollist[i].school_id) {
+                          console.log(schoollist)
+                          schoolId = school.register_community_id
+                          that.getGradeList(schoolId)
+                          that.setData({
+                            schoolIndex: i
+                          })
+                        }
+                      }
                         that.setData({
                             schoolList: res.data.data
                         });
@@ -126,16 +170,26 @@ Page({
         }
         else {
             // console.log(e);
+          var school = wx.getStorageSync("userInfo")
+          if (school.register_province_id != 0) {
+            wx.showToast({
+              title: '学校名称不可更改',
+              icon: 'none',
+              duration: 1000
+            })
+          } else {
             var a = e.detail.value;
             that.setData({
-                schoolIndex: a,
-                gardeIndex: '',
-                gradeList: [],
-                classIndex: '',
-                classList: []
+              schoolIndex: a,
+              gardeIndex: '',
+              gradeList: [],
+              classIndex: '',
+              classList: []
             });
             schoolId = that.data.schoolList[a].school_id;
             that.getGradeList(schoolId);
+          }
+           
         }
     },
     //获取年级

@@ -38,10 +38,10 @@
         <image class="tab-img" src="../../images/edutList/edu_tab8.png"></image>
         <view class='tab-text f_26 c_333'>过关斩将</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=5&title=即时游戏">
+    <!-- <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=5&title=即时游戏">
         <image class="tab-img" src="../../images/edutList/edu_tab9.png"></image>
         <view class='tab-text f_26 c_333'>即时游戏</view>
-    </navigator>
+    </navigator> -->
     <!-- <view class="tab">
         <image class="tab-img" src="../../images/edutList/edu_tab10.png"></image>
          <view class='tab-text f_26 c_333'>其它</view> 

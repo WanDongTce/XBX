@@ -891,7 +891,7 @@ function wxLogin(cb) {
     app.showLoading();
     wx.login({
         success: function (res) {
-            // console.log(res);
+            console.log(res);
             wx.hideLoading();
             if (res.code) {
                 app.code = res.code;
@@ -899,7 +899,7 @@ function wxLogin(cb) {
                 wx.getUserInfo({
                     withCredentials: true,
                     success(res) {
-                        // console.log(res);
+                        console.log(res);
                         app.uinfo.encryptedData = res.encryptedData;
                         app.uinfo.iv = res.iv;
                         // console.log(app.uinfo);
@@ -930,15 +930,16 @@ function getOpenid(cb) {
     var params = {};
     
     params.code = app.code;
+  // console.log(app.code)
     params.encryptedData = app.uinfo.encryptedData;
     params.iv = app.uinfo.iv;
-    
-    // console.log(params);
+  // params.mini_types = 'sijiantao'
+    console.log(params);
     POST({
         url: 'v14/public/get-opend',
         params: params,
         success: function (res) {
-            // console.log(res);
+            console.log(res);
             wx.hideLoading();
 
             if (res.data.code == 200) {
