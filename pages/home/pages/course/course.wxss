@@ -4,7 +4,7 @@
 page{
     padding-top:10vh;
     background-color:#fff;
-    width:100%;overflow: hidden
+    width:100%;
 }
 /*导航栏  */
 .navigation-box {
