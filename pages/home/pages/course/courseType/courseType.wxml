@@ -21,7 +21,7 @@
     </view>
   </van-popup>
 <import src="/template/scrollTab/scrollTab.wxml" />
-<view class='top_fix display-flex align-items-center' >
+<!-- <view class='top_fix display-flex align-items-center' >
     <picker class='bigpicker c_999 f_28 position_r' bindchange="bindPickerChange" value="{{index}}" range="{{nianji}}" range-key="title">
         <view class="picker">
           {{nianji[index].title}}
@@ -33,7 +33,7 @@
             <template is="{{selectedTab == item.id? 'scrollTabActive': 'scrollTab'}}" data="{{item}}" />
         </block>
     </scroll-view>
-</view>
+</view> -->
 
 
 

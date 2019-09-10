@@ -114,9 +114,9 @@ Page({
                 "token": app.userInfo.token,
                 "page": page,
                 "pagesize": pagesize,
-                "teacherid": '',
-                "subjectid": subId,
-                'gradeid': nianjiid,
+                // "teacherid": '',
+                // "subjectid": subId,
+                // 'gradeid': nianjiid,
                 "type": mytopid,
 
             },

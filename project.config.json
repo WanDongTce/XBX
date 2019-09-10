@@ -10,7 +10,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "wx2bec8bfcd0d04b28",
+	"appid": "wx81f27518f0220bed",
 	"projectname": "%E4%B8%AD%E7%9D%BF%E5%AD%A6%E7%94%9F%E7%AB%AF%EF%BC%88%E6%AD%A3%E5%BC%8F%EF%BC%89",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
@@ -33,13 +33,20 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "pages/common/login/login",
 					"pathName": "pages/common/login/login",
 					"query": "province_id=6&city_id=37&district_id=439&schoolid=109",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/common/presonalInfo/presonalInfo",
+					"pathName": "pages/common/presonalInfo/presonalInfo",
+					"query": "register_community_id=555",
 					"scene": null
 				}
 			]
