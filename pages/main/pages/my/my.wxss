@@ -9,6 +9,7 @@ page{
   height:384rpx;
   display: block;
 }
+.number_box{width: 85%;margin: 0 auto}
 .topbox{
   position:absolute;
   top:10vh;

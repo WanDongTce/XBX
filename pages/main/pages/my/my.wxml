@@ -37,7 +37,7 @@
             </view>
         </view>
     </view>
-    <view class='display-flex justify-content-around'>
+    <view class='display-flex justify-content-around number_box'>
         <view class='text-align-center'>
             <view class='top_bottom_text1'>0</view>
             <view class='top_bottom_text2'>关注</view>
@@ -49,6 +49,10 @@
         <view class='text-align-center' bindtap="toIntegarl">
             <view class='top_bottom_text1'>{{info.score || 0}}</view>
             <view class='top_bottom_text2'>积分</view>
+        </view>
+         <view class='text-align-center' bindtap="toMemberRenewal">
+            <view class='top_bottom_text1'>{{RenInfo.account || 0}}</view>
+            <view class='top_bottom_text2'>收益</view>
         </view>
     </view>
 </view>
