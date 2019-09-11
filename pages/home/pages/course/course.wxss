@@ -76,17 +76,17 @@ page{
 
 /* scroll */
 .top_fix {
-    position: fixed;
+
 
     background-color: #fff;
     z-index: 2;
-    height: 76rpx;
+
     width: 100%;
     /* border-bottom:16rpx solid #f7f7f7; */
 }
-
+.top_fix image{display: block;width: 95%;margin: 0 auto;margin-top: 50rpx;margin-bottom: 80rpx}
 .containbox{
-    padding:100rpx 26rpx 0;
+    padding:40rpx 26rpx 0;
 }
 
 /* banner */
@@ -281,8 +281,4 @@ button.pop-btn::after{
   color:a1a1a1;
   font-size:26rpx;
 }
-.top_fix .content_box{width: 700rpx;margin: 0 auto;height: 65rpx; background-color: #e6e6e6;
-border-radius:32rpx }
-.top_fix .content_box text{display: inline-block;font-size: 28rpx;line-height: 65rpx;margin-left: 21rpx;
-color: #b0b0b0;padding-left: 54rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/XBX/search.png);
-background-repeat: no-repeat;background-position: left center;background-size: 39rpx 39rpx;}
+.top_fix .content_box{width: 700rpx;margin: 0 auto; }

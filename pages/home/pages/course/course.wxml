@@ -29,12 +29,7 @@
 
 
 <import src="/template/scrollTab/scrollTab.wxml" />
-<view class='top_fix' bindtap="goSearch">
-    
-    <view class="content_box">
-      <text>搜索关键字</text>
-    </view>
-</view>
+
 
 <view wx:if="{{imgUrls.length}}" class='containbox'>
     <swiper autoplay="false" duration="500" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#fff" >
@@ -51,23 +46,11 @@
     <image src='/images/search.png'></image>
     <input placeholder='搜索关键字' placeholder-class='placeholder' catchtap="goSearch"></input>
   </view> -->
-<view class="tabs {{imgUrls.length==0?'mttab':''}}">
-        <view class="new_tab" bindtap='mytop' data-mytopid="0">
-            <image class="new_tab_img" src="/pages/home/images/courseList/course_img1.png"></image>
-            <view class='new_tab_text'>全部</view>
-        </view>
-        <view class="new_tab" bindtap='mytop' data-mytopid="1">
-            <image class="new_tab_img" src="/pages/home/images/courseList/course_img2.png"></image>
-            <view class='new_tab_text'>双优课</view>
-        </view>
-        <view class="new_tab" bindtap='mytop' data-mytopid="2">
-            <image class="new_tab_img" src="/pages/home/images/courseList/course_img3.png"></image>
-            <view class='new_tab_text'>公开课</view>
-        </view>
-        <view class="new_tab" bindtap='mytop' data-mytopid="3">
-            <image class="new_tab_img" src="/pages/home/images/courseList/course_img4.png"></image>
-            <view class='new_tab_text'>微课</view>
-        </view>
+<view class='top_fix' bindtap="goSearch">
+    
+    <view class="content_box">
+     <image src="https://m.54xuebaxue.com/wx_img/img/sjt/search.png" mode="widthFix"></image>
+    </view>
 </view>
 
 <view class='p_lr_26'>
