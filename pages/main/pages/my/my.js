@@ -8,14 +8,32 @@ Page({
         info: '',
         msgCount: 0,
         showTab: true,
-        my_study:"",
-      my_daily: "",
-      RenInfo:"",
+      homework:"",
+      question: "",
+      answer:"",
+      note:"",
+      course: "",
+      correction:"",
+      card:"",
+      renew:"",
+      extention:"",
+      recommender:"",
+      record:"",
+      supervise:"",
+      qualitysun:"",
+      transaction:"",
+      school:"",
+      order:"",
+      shop:"",
+      gift:"",
+      mine_study:"",
+      mine_member:"",
+      mine_order:"",
+      mine_dayli:""
     },
     onLoad(){
       var that = this
-      that.getshow()
-      that.getRenInfo();
+      that.setshow()
         this.compontNavbar = this.selectComponent("#compontNavbar");
       if (app.userInfo.mobile == '18647993992') {
         this.setData({
@@ -23,7 +41,37 @@ Page({
         })
       }  
     },
-
+  setshow: function () {
+    var that = this
+    
+    var mine = wx.getStorageSync("mine")
+    console.log(mine.mine_member.card)
+    that.setData({
+      homework: mine.mine_study.homework,
+      question: mine.mine_study.question,
+      answer: mine.mine_study.answer,
+      note: mine.mine_study.note,
+      course: mine.mine_study.course,
+      correction: mine.mine_study.correction,
+      card: mine.mine_member.card,
+      renew: mine.mine_member.renew,
+      extention: mine.mine_member.extention,
+      recommender: mine.mine_member.recommender,
+      record: mine.mine_money.record,
+      supervise: mine.mine_dayli.supervise,
+      qualitysun: mine.mine_dayli.quality,
+      transaction: mine.mine_dayli.transaction,
+      school: mine.mine_dayli.school,
+      order: mine.mine_order.order,
+      shop: mine.mine_order.shop,
+      gift: mine.mine_order.gift,
+      mine_study: mine.mine_study.mine_study,
+      mine_member: mine.mine_member.mine_member,
+      mine_money: mine.mine_money.mine_money,
+      mine_dayli: mine.mine_dayli.mine_dayli,
+      mine_order: mine.mine_order.mine_order
+    })
+  },
   onHide: function () {
     var that = this;
     that.component = that.selectComponent("#component")

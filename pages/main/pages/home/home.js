@@ -8,8 +8,18 @@ Page({
       show: {
         middle: false,
         home_header:"",
-        home_middle:""
+        home_middle:"",
+       
       },
+      XBX: "",
+      dictionary:"",
+      homework:"",
+      quality:"",
+      space:"",
+      book: "",
+      bok: "",
+      shop:"",
+      accumulation:"",
         base: '../../../../',
         title: '',
         imgUrls: [],
@@ -36,13 +46,15 @@ Page({
       showTab: true  
     },
     onLoad: function(options) {
-        // console.log(app);     
+        // console.log(app);   
+          
         this.empty = this.selectComponent("#empty");
         this.compontNavbar = this.selectComponent("#compontNavbar");
         var that = this;
         
         that.getSwipImgs();
       that.getshow()
+      that.setshow()
         this.setData({
             idname:app.idname
         });
@@ -68,19 +80,42 @@ Page({
     getshow:function(){
       var that=this
       wx.request({
-        url: app.requestUrl + 'v14/public/display',
+        url: app.requestUrl + 'v14/public/switch',
         data:{},
         method: "POST",
         header: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
         success:function(res){
-          console.log(res.data.data[0].list[0].home_middle)
-          that.setData({
-            home_header: res.data.data[0].list[0].home_header,
-          home_middle: res.data.data[0].list[0].home_middle
-          })
+          console.log(res.data.data[0].list[0])
+          var header = JSON.parse(res.data.data[0].list[0].header);
+          var middle = JSON.parse(res.data.data[0].list[0].middle);
+          var mine = JSON.parse(res.data.data[0].list[0].mine);
+          wx.setStorageSync("header", header)
+          wx.setStorageSync("middle", middle)
+          wx.setStorageSync("mine", mine)
+          // that.setData({
+          //   home_header: res.data.data[0].list[0].home_header,
+          // home_middle: res.data.data[0].list[0].home_middle
+          // })
         }
+      })
+    },
+    setshow:function(){
+      var that=this
+      var header=wx.getStorageSync("header")
+      var middle = wx.getStorageSync("middle")
+      console.log(middle)
+      that.setData({
+        XBX: header.xbx,
+        dictionary: header.dictionary,
+        homework: header.homework,
+        space: header.space,
+        quality: header.quality,
+        book: middle.book,
+        bok: middle.bok,
+        shop: middle.shop,
+        accumulation: middle.accumulation
       })
     },
     onShow: function() {
@@ -301,6 +336,7 @@ Page({
         network.getSwiperImgs(1, function(res) {
             // console.log(res);
             if (res.data.code == 200) {
+              console.log(res.data)
                 that.setData({
                     imgUrls: res.data.data[0].list
                 });
