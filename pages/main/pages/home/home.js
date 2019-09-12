@@ -113,7 +113,7 @@ Page({
         space: header.space,
         quality: header.quality,
         book: middle.book,
-        bok: middle.bok,
+        box: middle.box,
         shop: middle.shop,
         accumulation: middle.accumulation
       })

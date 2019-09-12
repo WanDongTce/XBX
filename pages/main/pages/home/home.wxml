@@ -83,7 +83,7 @@
     <view class='p_lr_26 '>
         <view class='display-flex align-items-center new_home_imgbox'>
             <navigator class="{{book==0?'hide':''}}" url='/pages/home/pages/barter/barter'><image src='../../../../images/new_home_img1.png' class='new_home_img'></image></navigator>
-            <navigator class="{{bok==0?'hide':''}}" url='/pages/dayuwen/pages/song/song'><image src='../../../../images/new_home_img4.png' class='new_home_img'></image></navigator>
+            <navigator class="{{box==0?'hide':''}}" url='/pages/dayuwen/pages/song/song'><image src='../../../../images/new_home_img4.png' class='new_home_img'></image></navigator>
             <navigator class="{{shop==0?'hide':''}}" url='/pages/main/pages/shopping/shopping'><image src='../../../../images/renwu.png' class='new_home_img'></image></navigator>
             <navigator class="{{accumulation==0?'hide':''}}" url="/pages/home/pages/integralMall/integralMall"><image src='../../../../images/new_home_img3.png' class='new_home_img'></image></navigator>
         </view>
