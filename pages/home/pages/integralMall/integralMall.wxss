@@ -105,7 +105,7 @@ swiper navigator {
   border-radius: 29rpx;
 }
 .search image{
-  width:30rpx;
+  width:45rpx;
   height:30rpx;
   margin:0 17rpx 0 26rpx;
 }
