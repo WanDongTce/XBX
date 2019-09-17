@@ -110,6 +110,7 @@ App({
     },
     onLaunch: function () {
         // console.log('launch');
+      wx.clearStorageSync()
         var that = this;
         wx.getSystemInfo({
             success: function(res) {

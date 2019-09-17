@@ -88,7 +88,7 @@ Page({
 
     onLoad: function(options) {
         // console.log(app);   
-          
+     
         this.empty = this.selectComponent("#empty");
         this.compontNavbar = this.selectComponent("#compontNavbar");
         var that = this;
