@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46e1823-b961-42e4-9b17-d71c0e700548" name="Default Changelist" comment="购物车和商铺详情">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/pages/edutList/edutList.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/pages/edutList/edutList.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/Article/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/Article/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/Article/Article.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/Article/Article.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/Article/Article.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/Article/Article.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/Preview/Preview.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/Preview/Preview.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/Preview/Preview.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/Preview/Preview.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/booklist/booklist.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/booklist/booklist.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Preview/pages/booklist/booklist.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Preview/pages/booklist/booklist.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home/pages/courseList/courseDetail/courseDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/pages/courseList/courseDetail/courseDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main/pages/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/pages/task/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/pages/bankCard/bankCard.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/pages/bankCard/bankCard.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/pages/bankCard/bankCard.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/pages/bankCard/bankCard.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/pages/memberRenewalNew/memberRenewalNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/pages/memberRenewalNew/memberRenewalNew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/pages/memberRenewalNew/memberRenewalNew.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/pages/memberRenewalNew/memberRenewalNew.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/pages/memberRenewalNew/memberRenewalNew.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/pages/memberRenewalNew/memberRenewalNew.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/pages/memberRenewalNewPay/memberRenewalNewPay.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/pages/memberRenewalNewPay/memberRenewalNewPay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <list id="7796625a-31d6-486d-9cc0-e32bfce78941" name="Revert &quot;充值会员提示&quot;" comment="Revert &quot;充值会员提示&quot;&#10;&#10;This reverts commit 1331150a" />
@@ -13,14 +26,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>广场</find>
-      <find>v11/login/index</find>
-      <find>登录</find>
-      <find>that.component.nohide()</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +46,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -62,7 +67,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -140,104 +145,18 @@
       <workItem from="1566522215489" duration="345000" />
       <workItem from="1566522561328" duration="1499000" />
       <workItem from="1566543264563" duration="749000" />
-    </task>
-    <task id="LOCAL-00001" summary="空格">
-      <created>1561948484063</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1561948484063</updated>
-    </task>
-    <task id="LOCAL-00002" summary="空格">
-      <created>1562116302765</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1562116302765</updated>
-    </task>
-    <task id="LOCAL-00003" summary="购物车和商铺详情">
-      <created>1562116507692</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1562116507692</updated>
-    </task>
-    <task id="LOCAL-00004" summary="细节修改">
-      <created>1562119804588</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1562119804588</updated>
-    </task>
-    <task id="LOCAL-00005" summary="连接商品详情页">
-      <created>1562123164876</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1562123164876</updated>
-    </task>
-    <task id="LOCAL-00006" summary="阻止冒泡">
-      <created>1562123909292</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1562123909292</updated>
-    </task>
-    <task id="LOCAL-00007" summary="学霸学BUG修改">
-      <created>1562204239839</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1562204239839</updated>
-    </task>
-    <task id="LOCAL-00008" summary="购物车返回图片">
-      <created>1562211225522</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1562211225522</updated>
-    </task>
-    <task id="LOCAL-00009" summary="购物车和商铺详情">
-      <created>1563181018251</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1563181018251</updated>
-    </task>
-    <task id="LOCAL-00010" summary="购物车和商铺详情">
-      <created>1563181233724</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1563181233724</updated>
-    </task>
-    <task id="LOCAL-00011" summary="购物车和商铺详情">
-      <created>1563182588878</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1563182588878</updated>
-    </task>
-    <task id="LOCAL-00012" summary="学霸学修改">
-      <created>1563331355070</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1563331355070</updated>
-    </task>
-    <task id="LOCAL-00013" summary="遗漏文件">
-      <created>1563332001391</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1563332001391</updated>
-    </task>
-    <task id="LOCAL-00014" summary="学霸学修改">
-      <created>1563333126287</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1563333126287</updated>
+      <workItem from="1567577500843" duration="44000" />
+      <workItem from="1567751120756" duration="4288000" />
+      <workItem from="1567818072537" duration="938000" />
+      <workItem from="1567825476889" duration="4037000" />
+      <workItem from="1567992834236" duration="2539000" />
+      <workItem from="1568019057452" duration="2149000" />
+      <workItem from="1568081689385" duration="2101000" />
+      <workItem from="1568101329639" duration="1859000" />
+      <workItem from="1568164713066" duration="8487000" />
+      <workItem from="1568249386074" duration="5351000" />
+      <workItem from="1568620501740" duration="2011000" />
+      <workItem from="1568682403620" duration="4281000" />
     </task>
     <task id="LOCAL-00015" summary="购物车和商铺详情">
       <created>1563334853827</created>
@@ -484,7 +403,105 @@
       <option name="project" value="LOCAL" />
       <updated>1566522895377</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="隐藏显示修改">
+      <created>1567758375886</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1567758375887</updated>
+    </task>
+    <task id="LOCAL-00051" summary="取消开关">
+      <created>1567994375504</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1567994375505</updated>
+    </task>
+    <task id="LOCAL-00052" summary="取得⏲游戏 调整左右移动">
+      <created>1568019328530</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1568019328531</updated>
+    </task>
+    <task id="LOCAL-00053" summary="左右移动">
+      <created>1568020191598</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1568020191598</updated>
+    </task>
+    <task id="LOCAL-00054" summary="新华课典去掉分类">
+      <created>1568081815078</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1568081815079</updated>
+    </task>
+    <task id="LOCAL-00055" summary="APPID修改">
+      <created>1568082274565</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1568082274565</updated>
+    </task>
+    <task id="LOCAL-00056" summary="我的页面添加收益">
+      <created>1568101773696</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1568101773696</updated>
+    </task>
+    <task id="LOCAL-00057" summary="学霸学新华课典修改搜索">
+      <created>1568172241042</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1568172241042</updated>
+    </task>
+    <task id="LOCAL-00058" summary="隐藏显示">
+      <created>1568186460324</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1568186460324</updated>
+    </task>
+    <task id="LOCAL-00059" summary="首页部分CSS">
+      <created>1568192401594</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1568192401594</updated>
+    </task>
+    <task id="LOCAL-00060" summary="首页隐藏显示">
+      <created>1568252013230</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1568252013230</updated>
+    </task>
+    <task id="LOCAL-00061" summary="搜索">
+      <created>1568252408244</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1568252408244</updated>
+    </task>
+    <task id="LOCAL-00062" summary="登录修改">
+      <created>1568704667831</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1568704667832</updated>
+    </task>
+    <task id="LOCAL-00063" summary="登陆修改">
+      <created>1568710298462</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1568710298462</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,20 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="细节修改" />
-    <MESSAGE value="连接商品详情页" />
-    <MESSAGE value="阻止冒泡" />
-    <MESSAGE value="学霸学BUG修改" />
-    <MESSAGE value="购物车返回图片" />
-    <MESSAGE value="遗漏文件" />
-    <MESSAGE value="圆角" />
-    <MESSAGE value="学霸学修改" />
-    <MESSAGE value="点赞榜返回刷新" />
-    <MESSAGE value="商铺详情" />
-    <MESSAGE value="商品修改" />
-    <MESSAGE value="商铺详情上拉刷新" />
-    <MESSAGE value="学霸学筛选" />
-    <MESSAGE value="学霸学年级修改" />
     <MESSAGE value="学霸学新加预习乐" />
     <MESSAGE value="banner" />
     <MESSAGE value="预习乐冥想思修改" />
@@ -556,6 +559,20 @@
     <MESSAGE value="购物车和商铺详情" />
     <MESSAGE value="学霸学字符编码" />
     <MESSAGE value="预习乐冥想思连接" />
-    <option name="LAST_COMMIT_MESSAGE" value="预习乐冥想思连接" />
+    <MESSAGE value="隐藏显示修改" />
+    <MESSAGE value="取消开关" />
+    <MESSAGE value="取得⏲游戏 调整左右移动" />
+    <MESSAGE value="左右移动" />
+    <MESSAGE value="新华课典去掉分类" />
+    <MESSAGE value="APPID修改" />
+    <MESSAGE value="我的页面添加收益" />
+    <MESSAGE value="学霸学新华课典修改搜索" />
+    <MESSAGE value="隐藏显示" />
+    <MESSAGE value="首页部分CSS" />
+    <MESSAGE value="首页隐藏显示" />
+    <MESSAGE value="搜索" />
+    <MESSAGE value="登录修改" />
+    <MESSAGE value="登陆修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="登陆修改" />
   </component>
 </project>
