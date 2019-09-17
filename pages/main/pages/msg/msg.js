@@ -26,7 +26,7 @@ Page({
     onShow: function() {
        
       var that = this;
-      this.login()
+      that.login_sun()
       that.component = that.selectComponent("#component")
       that.component.customMethod()
     },
@@ -323,10 +323,10 @@ Page({
     //         }
     //     });
     // }
-  login: function () {
+  login_sun: function () {
     var that = this;
     var token = wx.getStorageSync("userInfo")
-
+    console.log(token)
     if (token == "") {
       this.setData({
         flg: true
