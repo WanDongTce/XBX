@@ -11,6 +11,7 @@ Page({
         home_middle:"",
        
       },
+      flg:false,
       XBX: "",
       dictionary:"",
       homework:"",
@@ -45,6 +46,47 @@ Page({
       videoPic: '',
       showTab: true  
     },
+    // login_sun01:function(){
+    //   var that=this
+    //   var userinfo = wx.getStorageSync("userInfo")
+    //   console.log(userinfo)
+    //   if (userinfo.length==0){
+    //     that.setData({
+    //       flg: true
+    //     })
+    //   }else{
+    //     wx.navigateTo({
+    //       url: '/pages/home/pages/edutList/edutList',
+    //     })
+        
+    //   }
+      
+     
+    // },
+
+
+  tolgon:function(){
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+   
+    that.setData({
+      flg: false
+    })
+  },
+
+
+
+
+
     onLoad: function(options) {
         // console.log(app);   
           
@@ -189,9 +231,18 @@ Page({
     },
     judge:function(){
         var that = this;
-        wx.navigateTo({
-            url: '/pages/home/pages/zuoyeNew/zuoyeNew',
+      var token = wx.getStorageSync("userInfo")
+     
+      if (token == "") {
+        this.setData({
+          flg: true
         })
+      } else {
+        wx.navigateTo({
+          url: '/pages/home/pages/zuoyeNew/zuoyeNew',
+        })
+      }
+      
 
         // wx.navigateTo({
         //     url: '/pages/home/pages/zuoyeEnter/zuoyeEnter',
@@ -388,7 +439,7 @@ Page({
             url: 'v13/ncourse/course-list',
             params: {
                 "mobile": app.userInfo.mobile,
-                "token": app.userInfo.token,
+                // "token": app.userInfo.token,
                 "page": 1,
                 "pagesize": 20,
                 "subjectid": '',
@@ -399,6 +450,7 @@ Page({
                 wx.hideLoading();
                 // console.log(res);
                 var a = res.data.data[0].list;
+              console.log(res.data)
                 if (res.data.code == 200) {
                     that.setData({
                         courselist: a,
@@ -597,13 +649,48 @@ Page({
             url: '/pages/home/pages/signin/signin'
         })
     },
+  integralMall:function(){
+    var token = wx.getStorageSync("userInfo")
+   
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/integralMall/integralMall' 
+      })
+    }
+  },
     onPageScroll: function (ev) {
         
     },
 
   tz_detail: function (e) {
     console.log('注册时间：',app.userInfo.create_time)
-    this.memberExpires(e);
+    var token=wx.getStorageSync("userInfo")
+    console.log(token)
+    if (token==""){
+this.setData({
+  flg:true
+})
+    }else{
+      this.memberExpires(e);
+    }
+   
+  },
+  toteacherDetail:function(e){
+    var token = wx.getStorageSync("userInfo")
+    var ido=e.currentTarget.dataset.id
+    if (token == ""){
+      this.setData({
+        flg: true
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + ido
+      })
+    }
   },
   freeTry: function(){
     let that = this;

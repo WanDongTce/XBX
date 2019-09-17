@@ -6,7 +6,8 @@ Page({
     data: {
         list: [],
         showEmpty: false,
-        base: '../../../../'
+        base: '../../../../',
+      flg: false,
     },
     onLoad: function (options) {
         // console.log(app);
@@ -63,30 +64,57 @@ Page({
     },
     enterLive(e) {
         //   console.log(e);
+      var that = this;
+      var token = wx.getStorageSync("userInfo")
+
+      if (token == "") {
+        this.setData({
+          flg: true
+        })
+      } else {
         var a = e.currentTarget.dataset.params;
         // console.log(a);
         wx.setStorageSync('liveInfo', a);
 
         if (a.is_anchor == 2) {
-            if (a.isopen == 2) {
-                wx.showToast({
-                    title: '暂未开启',
-                    icon: 'none'
-                })
-            } else {
-                wx.navigateTo({
-                    url: '/pages/home/pages/broadcast/live-player/live-player'
-                })
-            }
-        } else {
-            wx.navigateTo({
-                url: '/pages/home/pages/broadcast/live-pusher/live-pusher'
+          if (a.isopen == 2) {
+            wx.showToast({
+              title: '暂未开启',
+              icon: 'none'
             })
+          } else {
+            wx.navigateTo({
+              url: '/pages/home/pages/broadcast/live-player/live-player'
+            })
+          }
+        } else {
+          wx.navigateTo({
+            url: '/pages/home/pages/broadcast/live-pusher/live-pusher'
+          })
         }
+      }
+       
       
     },
     onPullDownRefresh() {
         var that = this;
         that.getList();
     },
+  tolgon: function () {
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+  },
 })

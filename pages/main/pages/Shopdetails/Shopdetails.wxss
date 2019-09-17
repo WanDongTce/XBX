@@ -48,3 +48,16 @@ background-size: 26rpx 24rpx;float: left;margin-right: 5rpx}
 .list_box  .list .money_box .number text{display: block;float: left;font-size: 22rpx;height: 36rpx;line-height: 36rpx;
 padding-left: 15rpx;padding-right: 15rpx}
 scroll-view{height: 100%}
+.hide_sun{display:none !important;}
+.layer_box{position: fixed;width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.7);left: 0;top: 0;
+display: flex;align-items: center;justify-content: center;}
+.layer_box .layer{width: 624rpx;height: 728rpx;background-image:url(http://m.54xuebaxue.com/wx_img/img/login/bd01.png);background-size: 100% 100%}
+.layer_box .layer .name{font-size: 38rpx; color: #333333;padding-top: 382rpx;display: block;text-align: center;
+height: 38rpx;line-height: 38rpx}
+.layer_box .layer .text{font-size: 30rpx;color: #999999;display: block;text-align: center}
+.layer_box .layer .btn{width: 532rpx;height: 82rpx;   background-image: -moz-linear-gradient( 0deg, rgb(255,184,99) 0%, rgb(255,189,62) 50%, rgb(243,165,14) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(255,184,99) 0%, rgb(255,189,62) 50%, rgb(243,165,14) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(255,184,99) 0%, rgb(255,189,62) 50%, rgb(243,165,14) 100%);
+  border-radius: 41rpx;text-align: center;line-height: 82rpx;margin: 0 auto;color: #fff;font-size: 30rpx;margin-top: 70rpx}
+  .layer_box .layer .none{font-size: 30rpx;color: #F3A50F;display: block;text-align: center;height: 30rpx;line-height: 30rpx;
+  margin-top: 32rpx}

@@ -29,11 +29,13 @@ Page({
       mine_study:"",
       mine_member:"",
       mine_order:"",
-      mine_dayli:""
+      mine_dayli:"",
+      flg: false,
     },
     onLoad(){
       var that = this
       that.setshow()
+      that.login()
         this.compontNavbar = this.selectComponent("#compontNavbar");
       if (app.userInfo.mobile == '18647993992') {
         this.setData({
@@ -83,9 +85,16 @@ Page({
         var that = this;
         that.getUserInfo(); 
         that.getMsg();
+      that.loginshow()
       that.component = that.selectComponent("#component")
       that.component.customMethod()
     },
+  logon:function(){
+    wx.navigateTo({
+      //url: '/pages/login/presonalInfo/presonalInfo'
+      url: '/pages/common/login/login'
+    });
+  },
     getUserInfo: function () {
         var that = this;
         network.getUserInfo(function(res){
@@ -97,11 +106,11 @@ Page({
                     info: a
                 });
             } else {
-                wx.showToast({
-                    title: res.data.message,
-                    icon: 'none',
-                    duration: 1000
-                });
+                // wx.showToast({
+                //     title: res.data.message,
+                //     icon: 'none',
+                //     duration: 1000
+                // });
             }
         });
     },
@@ -146,6 +155,16 @@ Page({
         }
 
     },
+  loginshow: function () {
+    var that = this;
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    }
+  },
     toNote:function(){
       wx.navigateTo({
           url: '/pages/my/pages/myMsgNew/myMsgNew'
@@ -217,6 +236,37 @@ Page({
           duration: 1000
         })
       }
+    });
+  },
+  login:function(){
+    var that = this;
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } 
+  },
+  tolgon: function () {
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+    console.log(111)
+    wx.switchTab({
+      url: '/pages/main/pages/home/home'
     });
   },
 })

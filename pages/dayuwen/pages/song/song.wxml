@@ -10,3 +10,13 @@
  <image class="image" src="/pages/dayuwen/images/bd02.png" bindtap='goTo02' />
  <image class="image" src="/pages/dayuwen/images/bd03.png" bindtap='goTo03' />
 </view>
+<view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
+</view>

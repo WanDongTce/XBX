@@ -14,6 +14,7 @@ Page({
         cz_flag: false, // 控制点赞评论按钮
         cz_right: 0, // 点赞评论定位right
         cz_top: 80, // 点赞评论定位top
+      flg: false,
     },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
@@ -154,9 +155,18 @@ Page({
         })
     },
     toWrite: function () {
-        wx.navigateTo({
-            url: '/pages/home/pages/classmate/classmateWrite/classmateWrite'
+      var token = wx.getStorageSync("userInfo")
+
+      if (token == "") {
+        this.setData({
+          flg: true
         })
+      }else{
+        wx.navigateTo({
+          url: '/pages/home/pages/classmate/classmateWrite/classmateWrite'
+        })
+      } 
+        
     },
     onUnload: function () {
         page = 1;
@@ -278,4 +288,23 @@ Page({
         // url: '/pages/classmate/comment/comment?type=' + 1
       })
     },
+  tolgon: function () {
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+    console.log(111)
+  
+  },
 })

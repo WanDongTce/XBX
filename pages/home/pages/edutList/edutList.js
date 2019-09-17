@@ -10,7 +10,8 @@ Page({
         course_gg: '',
         course_wk: '',
         course: '',
-        imgUrls: []
+        imgUrls: [],
+      flg: false,
     },
   onShow: function () {
     var that = this;
@@ -60,13 +61,29 @@ Page({
         });
       });
     },
+    tolgon:function(){
+        var that = this
+        wx.navigateTo({
+            url: '/pages/common/login/login',
+        })
+        that.setData({
+            flg: false
+        })
+    },
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+  },
     getCourseList: function () {
         var that = this;
         network.POST({
             url: 'v13/ncourse/course-home',
             params: {
                 "mobile": app.userInfo.mobile,
-                "token": app.userInfo.token
+                // "token": app.userInfo.token
             },
             success: function (res) {
                 // console.log(res);
@@ -122,10 +139,19 @@ Page({
       })
     },
     tz_detail: function (e) {   
-      // console.log(e.currentTarget.dataset)  
-      wx.navigateTo({
-        url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
-      })
+      // console.log(e.currentTarget.dataset) 
+      var token = wx.getStorageSync("userInfo")
+     
+      if (token == "") {
+        this.setData({
+          flg: true
+        })
+      } else {
+        wx.navigateTo({
+          url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
+        })
+      } 
+     
     },
     getSwipImgs: function () {
       var that = this;
@@ -138,4 +164,84 @@ Page({
         }
       });
     },
+
+
+  tonav01:function(){
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/preview/preview',
+      })
+    } 
+  },
+  tonav02: function () {
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/think/think',
+      })
+    }
+  },
+  tonav03: function () {
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/game/gameList/gameList?gametype=1&title=明日之星',
+      })
+    }
+  },
+  tonav04: function () {
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/game/gameList/gameList?gametype=2&title=王者之战',
+      })
+    }
+  },
+  tonav05: function () {
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/game/gameList/gameList?gametype=3&title=挑战赛',
+      })
+    }
+  },
+  tonav06: function () {
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/game/gameList/gameList?gametype=4&title=过关斩将',
+      })
+    }
+  }
 })

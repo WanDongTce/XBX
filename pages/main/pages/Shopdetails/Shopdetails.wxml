@@ -96,3 +96,13 @@
   </view>
   <view class='clearfix'></view>
 </view>
+<view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
+</view>

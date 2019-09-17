@@ -9,7 +9,7 @@ Page({
         base: '../../../../',
         list: [],
         info: '',
-
+      flg: false,
        
         arr: [],
         sysW: null,
@@ -34,6 +34,16 @@ Page({
 
         newTextSignStatus:0,
     },
+    loginshow:function(){
+      var that = this;
+      var token = wx.getStorageSync("userInfo")
+      
+      if (token == "") {
+        this.setData({
+          flg: true
+        })
+      } 
+    },
   topshoop: function () {
     wx.navigateBack({
       delta: 1
@@ -46,7 +56,7 @@ Page({
         this.dataTime();
         // this.initDate();
         // this.initDateScroPos();
-        
+      
         this.setData({
             everyday_h2_w: app.systemInfo.windowWidth - app.systemInfo.windowWidth / 750 * (24+24+35+35+40*7),
             prowidth: app.systemInfo.windowWidth / 750 * 250
@@ -73,7 +83,9 @@ Page({
       this.getList();
       this.getTaskList();//任务中心
       this.getParentList();//家长任务 
+      
       var that = this;
+      that.loginshow()
       that.component = that.selectComponent("#component")
       that.component.customMethod()
     },
@@ -185,6 +197,7 @@ Page({
             success: function (res) {
                 // console.log(res);
                 wx.hideLoading();
+                var that=this
                 if (res.data.code == 200) {
                     var a = res.data.data[0];
                     that.setData({
@@ -226,11 +239,12 @@ Page({
                     })
                     // console.log(that.data.list2)
                 } else {
-                    wx.showToast({
-                        title: res.data.message,
-                        icon: 'none',
-                        duration: 1000
-                    });
+                 
+                    // wx.showToast({
+                    //     title: res.data.message,
+                    //     icon: 'none',
+                    //     duration: 1000
+                    // });
                 }
             },
             fail: function () {
@@ -379,6 +393,7 @@ Page({
             success: function (res) {
                 // console.log(res);
                 wx.hideLoading();
+              var that = this
                 if (res.data.code == 200) {
                     var a = res.data.data[0].list;
                     that.setData({
@@ -386,11 +401,12 @@ Page({
                         showEmptyNew: a.length == 0 ? true : false                      
                     });
                 } else {
-                    wx.showToast({
-                        title: res.data.message,
-                        icon: 'none',
-                        duration: 1000
-                    });
+                 
+                    // wx.showToast({
+                    //     title: res.data.message,
+                    //     icon: 'none',
+                    //     duration: 1000
+                    // });
                 }
             },
             fail: function () {
@@ -415,6 +431,7 @@ Page({
             success: function (res) {
                 // console.log(res);
                 wx.hideLoading();
+              var that = this
                 if (res.data.code == 200) {
                     var a = res.data.data[0].list;
                     that.setData({
@@ -423,11 +440,12 @@ Page({
                     });
                    
                 } else {
-                    wx.showToast({
-                        title: res.data.message,
-                        icon: 'none',
-                        duration: 1000
-                    });
+                  
+                    // wx.showToast({
+                    //     title: res.data.message,
+                    //     icon: 'none',
+                    //     duration: 1000
+                    // });
                 }
             },
             fail: function () {
@@ -490,6 +508,22 @@ Page({
         })
       }
     });
+  },
+    tolgon:function(){
+        var that = this
+        wx.navigateTo({
+            url: '/pages/common/login/login',
+        })
+        that.setData({
+            flg: false
+        })
+    },
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
   },
   receiveReward(e) {
     var that = this;

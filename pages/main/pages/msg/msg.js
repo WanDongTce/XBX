@@ -19,13 +19,14 @@ Page({
     },
     onLoad: function(options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
+     
         // moment.locale('zh-cn');
         // this.setLocalDate();
     },
     onShow: function() {
-        app.showLoading();
-        this.independentModeLogin();
+       
       var that = this;
+      this.login()
       that.component = that.selectComponent("#component")
       that.component.customMethod()
     },
@@ -322,4 +323,38 @@ Page({
     //         }
     //     });
     // }
+  login: function () {
+    var that = this;
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    }else{
+      app.showLoading();
+      this.independentModeLogin();
+    }
+  },
+  tolgon: function () {
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+    console.log(111)
+    wx.switchTab({
+      url: '/pages/main/pages/home/home'
+    });
+  },
 })

@@ -6,11 +6,11 @@
 <view wx:else> <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' /> </view>
 
 <view class="tabs">
-    <navigator class="tab" url="/pages/home/pages/preview/preview">
+    <navigator class="tab"  catchtap="tonav01">
         <image class="tab-img" src="../../images/edutList/edu_tab1.png"></image>
         <view class='tab-text f_26 c_333'>预习乐</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/think/think">
+    <navigator class="tab"  catchtap="tonav02">
         <image class="tab-img" src="../../images/edutList/edu_tab2.png"></image>
         <view class='tab-text f_26 c_333'>冥想思</view>
     </navigator>
@@ -22,19 +22,19 @@
         <image class="tab-img" src="../../images/edutList/edu_tab4.png"></image>
         <view class='tab-text f_26 c_333'>精品课程</view>
     </navigator> -->
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=1&title=明日之星">
+    <navigator class="tab" catchtap="tonav03" >
         <image class="tab-img" src="../../images/edutList/edu_tab5.png"></image>
         <view class='tab-text f_26 c_333'>明日之星</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=2&title=王者之战">
+    <navigator class="tab"  catchtap="tonav04">
         <image class="tab-img" src="../../images/edutList/edu_tab6.png"></image>
         <view class='tab-text f_26 c_333'>王者之战</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=3&title=挑战赛">
+    <navigator class="tab"  catchtap="tonav05" >
         <image class="tab-img" src="../../images/edutList/edu_tab7.png"></image>
         <view class='tab-text f_26 c_333'>挑战赛</view>
     </navigator>
-    <navigator class="tab" url="/pages/home/pages/game/gameList/gameList?gametype=4&title=过关斩将">
+    <navigator class="tab" catchtap="tonav06" >
         <image class="tab-img" src="../../images/edutList/edu_tab8.png"></image>
         <view class='tab-text f_26 c_333'>过关斩将</view>
     </navigator>
@@ -162,3 +162,13 @@
   </swiper>
 </view> 
 
+<view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
+</view>

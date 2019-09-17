@@ -131,7 +131,7 @@
             </view> -->
 
 
-      <navigator class='bottom_leftitem' url='/pages/main/pages/car/car'>
+      <navigator class='bottom_leftitem'  catchtap="tocar">
         <image src='../../../../../images/tabBtom/gift2.png' class='bottom_img'></image>
         <view class='f_24 c_666'>购物车</view>
       </navigator>
@@ -174,4 +174,13 @@
         <view class="declare-btn" catchtap="hideDeclare">确定</view>
     </view> 
 
-    
+    <view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
+</view>

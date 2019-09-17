@@ -17,8 +17,8 @@
     </view>
     <view class='topbox_center overf'>
         <image src="{{info.avatar? info.avatar: base + 'images/default-user-2.png'}}" mode="aspectFill" class='top_header fl'></image>
-        <view class='fl'>
-            <view class='display-flex align-items-center'>
+        <view wx:if="{{flg==false}}" class='fl' >
+            <view  class='display-flex align-items-center'>
                 <view class='top_name c_333 one_line'>{{info.nickname}}</view>
                 <image class='top_sex_img' src="{{info.sex==2? base + 'images/female.png': base + 'images/male.png'}}"></image>
                 <view wx:if="{{info.sex==2}}" class=' f_24 c_666'>女</view>
@@ -35,6 +35,11 @@
                 <view class='c_666 f_24'>{{info.school_name}}</view>
                 <view class='c_666 f_24 ml15'>{{info.grade_name}}{{info.class_name}}</view>
             </view>
+        </view>
+        <view class="fl" wx:else>
+         <view class="btn" catchtap="logon">
+           <text>登陆/注册</text>
+         </view>
         </view>
     </view>
     <view class='display-flex justify-content-around number_box'>
@@ -222,3 +227,13 @@
     </view>
     <image src='{{base}}images/next.png' class='next_img'></image>
 </navigator>
+<view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
+</view>

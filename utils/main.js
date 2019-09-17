@@ -11,7 +11,7 @@ var requestHandler = {
     }
 };
 function requesttools(method, requestHandler, flag) {
-    // console.log(flag);
+    console.log(flag);
     !flag && app.showLoading();
     var params = requestHandler.params;
     var url = requestHandler.url;
@@ -21,7 +21,7 @@ function requesttools(method, requestHandler, flag) {
     // console.log(url);
     // console.log(params);
     // console.log('==========');
-
+  console.log(requestHandler.url)
     wx.request({
         url: request_url + url,
         data: params,
@@ -31,17 +31,18 @@ function requesttools(method, requestHandler, flag) {
         method: method,
         success: function (res) {
             // console.log(res);
-            if (res.data.code == "508" || res.data.code == "403") {
-                wx.showToast({
-                    title: res.data.message,
-                    success: function () {
-                        app.toLogin();
-                    },
-                    icon: 'none'
-                });
-            } else {
-                requestHandler.success(res);
-            }
+            // if (res.data.code == "508" || res.data.code == "403") {
+            //     wx.showToast({
+            //         title: res.data.message,
+            //         success: function () {
+            //             app.toLogin();
+            //         },
+            //         icon: 'none'
+            //     });
+            // } else {
+               
+            // }
+          requestHandler.success(res);
         },
         fail: function () {
             requestHandler.fail();
@@ -53,10 +54,12 @@ function requesttools(method, requestHandler, flag) {
 }
 function GET(requestHandler) {
     var a = arguments[1];
+    console.log(a)
     requesttools('GET', requestHandler, a);
 }
 function POST(requestHandler) {
     var a = arguments[1];
+  console.log(a)
     requesttools('POST', requestHandler, a)
 }
 //获取新闻
@@ -65,7 +68,7 @@ function getNews(page, callback, errCallback) {
         url: 'v14/news/list',
         params: {
             "mobile": app.userInfo.mobile,
-            "token": app.userInfo.token,
+            // "token": app.userInfo.token,
             "page": page
         },
         success: function (res) {
@@ -82,7 +85,7 @@ function getTeacher(page, position,callback, errCallback) {
         url: 'v13/nteacher/teacher-hot',
         params: {
             "mobile": app.userInfo.mobile,
-            "token": app.userInfo.token,
+            // "token": app.userInfo.token,
             "page": page,
             "position": position
         },
@@ -482,12 +485,12 @@ function getSwiperImgs(pos, callback) {
         url: 'v14/adv/fudao',
         params: {
             "mobile": app.userInfo.mobile,
-            "token": app.userInfo.token,
+            // "token": app.userInfo.token,
             "type": app.swiperImgType,
             "position": pos
         },
         success: function (res) {
-            // console.log(res);
+            console.log(res);
             callback && callback(res);
         },
         fail: function () {
@@ -860,7 +863,7 @@ function memberExpires(callback, cb){
             "token": app.userInfo.token
         },
         success: function (res) {
-            // console.log(res);
+            console.log(res);
             wx.hideLoading();
             if (res.data.code == 200) {
                 if (res.data.data[0].item.to_end == 1){

@@ -45,7 +45,7 @@
         <block wx:if="{{showEmpty}}">
             <empty></empty>
         </block>
-        <navigator url="{{'/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + item.Id}}" class="cont-item" wx:key="this" wx:for="{{list}}">
+        <navigator class="cont-item" wx:key="this" wx:for="{{list}}" catchtap="toteacherDetail">
             <view class="itm-lt">
                 <image class="lt-img" src="{{item.FacePath}}" mode="aspectFill"></image>
             </view>
@@ -70,4 +70,14 @@
             </view>
         </navigator>
     </view>
+</view>
+<view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
 </view>

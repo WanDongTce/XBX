@@ -15,7 +15,8 @@ Page({
         sctdOptIdx: 0,
         animationData: null,
         showEmpty: false,
-        list: []
+        list: [],
+      flg: false,
     },
     onLoad: function (options) {
         // console.log(app);
@@ -36,6 +37,35 @@ Page({
     that.component = that.selectComponent("#component")
     that.component.noShow()
     that.component.nohide()
+  },
+  toteacherDetail:function(e){
+    var token = wx.getStorageSync("userInfo")
+    var ido = e.currentTarget.dataset.id
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + ido
+      })
+    }
+  },
+    tolgon:function(){
+        var that = this
+        wx.navigateTo({
+            url: '/pages/common/login/login',
+        })
+        that.setData({
+            flg: false
+        })
+    },
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
   },
     getList: function (flag) {
         var that = this;
