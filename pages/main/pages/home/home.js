@@ -7,8 +7,7 @@ Page({
     data: {
       show: {
         middle: false,
-        home_header:"",
-        home_middle:"",
+        
        
       },
       flg:false,
@@ -96,7 +95,7 @@ Page({
         
         that.getSwipImgs();
       that.getshow()
-      that.setshow()
+     
         this.setData({
             idname:app.idname
         });
@@ -136,6 +135,7 @@ Page({
           wx.setStorageSync("header", header)
           wx.setStorageSync("middle", middle)
           wx.setStorageSync("mine", mine)
+          that.setshow()
           // that.setData({
           //   home_header: res.data.data[0].list[0].home_header,
           // home_middle: res.data.data[0].list[0].home_middle
@@ -147,7 +147,7 @@ Page({
       var that=this
       var header=wx.getStorageSync("header")
       var middle = wx.getStorageSync("middle")
-      console.log(middle)
+      console.log(header)
       that.setData({
         XBX: header.xbx,
         dictionary: header.dictionary,
@@ -166,6 +166,7 @@ Page({
                 title: app.userInfo.register_community_name
             })
           var that = this;
+          
           that.component = that.selectComponent("#component")
           that.component.customMethod()
         }
@@ -232,8 +233,9 @@ Page({
     judge:function(){
         var that = this;
       var token = wx.getStorageSync("userInfo")
-     
+      console.log(token)
       if (token == "") {
+        
         this.setData({
           flg: true
         })
@@ -689,6 +691,19 @@ this.setData({
     }else{
       wx.navigateTo({
         url: '/pages/home/pages/teacher/teacherDetail/teacherDetail?id=' + ido
+      })
+    }
+  },
+  classmate: function (e) {
+    var token = wx.getStorageSync("userInfo")
+    var ido = e.currentTarget.dataset.id
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/classmate/classmate'
       })
     }
   },

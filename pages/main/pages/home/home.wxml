@@ -42,6 +42,7 @@
             </block>
         </swiper>
     <!-- </view> -->
+    
     <view wx:if="{{showTab}}" class="tabs " id='querytwo'>
         <navigator class="new_tab {{XBX==0?'hide':''}}" url="/pages/home/pages/edutList/edutList">
             <image class="new_tab_img" src="../../images/home/tab1.png"></image>
@@ -71,7 +72,7 @@
             <image class="new_tab_img" src="../../images/home/tab4.png"></image>
             <view class='new_tab_text'>互动空间</view>
         </navigator>
-        <navigator class="new_tab {{quality==0?'hide':''}}" url="/pages/home/pages/classmate/classmate">
+        <navigator class="new_tab {{quality==0?'hide':''}}"  catchtap="classmate">
             <image class="new_tab_img" src="../../images/home/tab3.png"></image>
             <view class='new_tab_text'>综合素质</view>
         </navigator>

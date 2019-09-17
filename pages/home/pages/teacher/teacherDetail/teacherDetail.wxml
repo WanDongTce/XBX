@@ -68,10 +68,10 @@
         <view class="tit">介绍</view>
         <view wx:if="{{curTabIndex == 0}}" class="tabline"></view>
     </view>
-    <view class="tab-view {{curTabIndex == 1? 'active' : ''}}" data-id="1" bindtap="tabFun">
+    <!-- <view class="tab-view {{curTabIndex == 1? 'active' : ''}}" data-id="1" bindtap="tabFun">
         <view class="tit">课程</view>
         <view wx:if="{{curTabIndex == 1}}" class="tabline"></view>
-    </view>
+    </view> -->
     <view class="tab-view {{curTabIndex == 2? 'active' : ''}}" data-id="2" bindtap="tabFun">
         <view class="tit">VCR</view>
         <view wx:if="{{curTabIndex == 2}}" class="tabline"></view>

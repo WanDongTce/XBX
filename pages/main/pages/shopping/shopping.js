@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    number_sun:0
+    number_sun:0,
+    flg: false,
   },
   goBack: function(){
     wx.navigateBack();
@@ -103,10 +104,20 @@ Page({
     })
   },
   topshoop:function(){
-    wx.navigateTo({
-      // url: '/pages/main/pages/Shopdetails/Shopdetails'  //跳转详情页  切记配置app.json文件 
-      url: '/pages/main/pages/car/car'
-    })
+    var that = this;
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    }else{
+      wx.navigateTo({
+        // url: '/pages/main/pages/Shopdetails/Shopdetails'  //跳转详情页  切记配置app.json文件 
+        url: '/pages/main/pages/car/car'
+      })
+    }
+    
   },
   onLoad: function (options) {
     var that = this
@@ -217,5 +228,25 @@ Page({
       url: '/pages/main/pages/my/my',
     })
   },
-  
+  tolgon: function () {
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+    console.log(111)
+    wx.switchTab({
+      url: '/pages/main/pages/home/home'
+    });
+  },
 })

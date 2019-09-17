@@ -524,6 +524,9 @@ Page({
     that.setData({
       flg: false
     })
+    wx.switchTab({
+      url: '/pages/main/pages/home/home'
+    });
   },
   receiveReward(e) {
     var that = this;
