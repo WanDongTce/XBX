@@ -32,7 +32,7 @@ Page({
             params: {
                 "mobile": app.userInfo.mobile,
                 "token": app.userInfo.token,
-                "user_mobile": mobile,
+              "user_mobile": app.userInfo.mobile,
                 "page": page
             },
             success: function (res) {
