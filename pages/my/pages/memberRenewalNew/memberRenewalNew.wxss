@@ -118,6 +118,11 @@ background-size: 33rpx 27rpx;background-position: 82rpx center}
     height: 40rpx;
     margin-right:30rpx;
 }
+.set{
+   width:36rpx;
+    height: 46rpx;
+    margin-right: 40rpx
+}
 .new_bottom_arrow{
     width:17rpx;
     height: 24rpx;

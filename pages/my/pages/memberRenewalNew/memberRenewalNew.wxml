@@ -81,5 +81,19 @@
             </view>
             <image src='{{base}}images/arowRtGray.png' class='new_bottom_arrow'></image>
         </view>
+        <view class='new_bottom_item display-flex align-items-center justify-content-between' data-mytype='3' catchtap='mycard'>
+            <view class='display-flex align-items-center'>
+                <image src='https://m.54xuebaxue.com/wx_img/img/XBX/card.png' class='new_bottom_img'></image>
+                <view class='f_30 c_333'>我的银行卡</view>
+            </view>
+            <image src='{{base}}images/arowRtGray.png' class='new_bottom_arrow'></image>
+        </view>
+        <view class='new_bottom_item display-flex align-items-center justify-content-between' data-mytype='3' catchtap='mypwd'>
+            <view class='display-flex align-items-center'>
+                <image src='https://m.54xuebaxue.com/wx_img/img/XBX/set.png' class='new_bottom_img set'></image>
+                <view class='f_30 c_333'>支付设置</view>
+            </view>
+            <image src='{{base}}images/arowRtGray.png' class='new_bottom_arrow'></image>
+        </view>
     </view>
 </view>
