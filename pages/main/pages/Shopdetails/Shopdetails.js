@@ -32,12 +32,13 @@ flg: false,
     // console.log(that.length)
     var postId = options.id
     console.log(postId)
+
     that.setData({
       id: postId
     })
     that.getlist();
     that.getheight();
-    that.shangpin()
+    that.shangpin(postId)
   },
   tolgon: function () {
     var that = this
@@ -149,7 +150,7 @@ flg: false,
     });
   },
 
-  shangpin: function () {
+  shangpin: function (postId) {
     var _this = this
     network.POST({
 
@@ -157,7 +158,7 @@ flg: false,
       params: {
         "mobile": app.userInfo.mobile,
         // "token": app.userInfo.token,
-        "bid": this.data.id,
+        "bid": postId,
         "page":page
 
       },
@@ -375,6 +376,7 @@ flg: false,
   },
   onShow: function () {
     var that = this;
+    yucunlisr=[]
     that.component = that.selectComponent("#component")
     that.component.customMethod()
   },
