@@ -22,7 +22,8 @@
     <text class="head-text-b">积分兑换</text>
   </view>
 </navigator> -->
-<navigator wx:if="{{showTab}}" class="head two {{find==0?'hide':''}}" url="/pages/find/pages/encyclopedias/encyclopedias">
+<navigator wx:if="{{showTab}}" class="head two {{find==0?'hide':''}}"
+catchtap="encyclopedias">
   <image src="../../images/find/find_img2.png" class="head-img"></image>
   <view class="head-box">
     <view class="head-box-a">
@@ -68,4 +69,14 @@
     <text class="head-text-b">随时掌握最新资讯</text>
   </view>
 </navigator>
+</view>
+<view class="layer_box {{flg==false?'hide_sun':''}}">
+  <view class="layer">
+    <text class="name">您还没登录</text>
+    <text class="text">请先登录或注册再进行此操作</text>
+    <view class="btn" catchtap="tolgon">
+      <text>立即登录</text>
+    </view>
+    <text class="none" catchtap="nonelgon">暂不登录</text>
+  </view>
 </view>

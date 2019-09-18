@@ -6,7 +6,8 @@ Page({
         base: '../../../../',
         IMGURL: app.imgUrl,
         showTab: true,
-      find:""
+      find:"",
+      flg: false,
     },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
@@ -18,6 +19,36 @@ Page({
         })
       }   
     },
+  encyclopedias:function(){
+    var that = this;
+    var token = wx.getStorageSync("userInfo")
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/find/pages/encyclopedias/encyclopedias',
+      })
+    }
+  },
+  tolgon: function () {
+    var that = this
+    wx.navigateTo({
+      url: '/pages/common/login/login',
+    })
+    that.setData({
+      flg: false
+    })
+  },
+
+  nonelgon: function () {
+    var that = this
+
+    that.setData({
+      flg: false
+    })
+  },
   getshow: function () {
     var that = this
     wx.request({
