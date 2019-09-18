@@ -31,6 +31,7 @@ Page({
       mine_order:"",
       mine_dayli:"",
       flg: false,
+      RenInfo_sun:""
     },
     onLoad(){
       var that = this
@@ -83,7 +84,8 @@ Page({
     onShow: function () {
         // console.log(app);
         var that = this;
-        that.getUserInfo(); 
+        that.getUserInfo();
+      that.getRenInfo() 
         that.getMsg();
       that.loginshow()
       that.component = that.selectComponent("#component")
@@ -203,7 +205,7 @@ Page({
             url: '/pages/common/webView/webView?src=' + app.ansHref + '&uid=' + app.userInfo.id + '&miniPro=1'
         });
     },
-  getRenInfo() {
+  getRenInfo:function() {
     var that = this;
     network.POST({
       url: 'v14/renewal/index',
@@ -217,15 +219,16 @@ Page({
         console.log(res);
         wx.hideLoading();
         if (res.data.code == 200) {
+          console.log(res.data.data[0].item.account)
           that.setData({
-            renInfo: res.data.data[0].item
+            RenInfo_sun: res.data.data[0].item.account
           });
         } else {
-          wx.showToast({
-            title: res.data.message,
-            icon: 'none',
-            duration: 1000
-          })
+          // wx.showToast({
+          //   title: res.data.message,
+          //   icon: 'none',
+          //   duration: 1000
+          // })
         }
       },
       fail: function () {

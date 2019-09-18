@@ -56,7 +56,7 @@
             <view class='top_bottom_text2'>积分</view>
         </view>
          <view class='text-align-center' bindtap="toMemberRenewal">
-            <view class='top_bottom_text1'>{{RenInfo.account || 0}}</view>
+            <view class='top_bottom_text1'>{{RenInfo_sun || 0}}</view>
             <view class='top_bottom_text2'>收益</view>
         </view>
     </view>
