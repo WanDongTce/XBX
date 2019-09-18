@@ -431,7 +431,7 @@ Page({
             success: function (res) {
                 // console.log(res);
                 wx.hideLoading();
-              var that = this
+              
                 if (res.data.code == 200) {
                     var a = res.data.data[0].list;
                     that.setData({
