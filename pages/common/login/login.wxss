@@ -134,6 +134,7 @@ page{
 .changep_box image{
 	width:38rpx;
 	height:24rpx;
+  padding: 30rpx
 }
 .login_btn_bottom{
 	margin-top: 28rpx;

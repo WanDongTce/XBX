@@ -13,7 +13,7 @@ Page({
         // console.log(app);
         this.setData({
             info: app.userInfo,
-            mobile: app.userInfo.mobile.slice(0, 3) + '*****' + app.userInfo.mobile.slice(7)
+            mobile: app.userInfo.mobile.slice(0, 3) + '****' + app.userInfo.mobile.slice(7)
         });
     },
     userNameInput: function (e) {
