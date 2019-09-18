@@ -4,7 +4,22 @@
   </my-component>
 <view wx:if="{{imgUrls.length > 0}}"><image src="{{imgUrls[0].image}}" class="banner"  mode='aspectFill' /></view>
 <view wx:else> <image src="{{IMGURL}}edutList/banner.png" class="banner"  mode='aspectFill' /> </view>
-
+<van-popup
+    show="{{ show.middle }}"
+    custom-class="center"
+    transition="none"
+    bind:close="togglePopup"
+    bind:transitionEnd="onTransitionEnd"
+  >
+    <view class="popwrap">
+    <image class="popwrap-img" mode="widthFix" src="/images/isvip@2x.png"></image>
+    <image class="popwrap-close" mode="widthFix" src="/images/close3.png" bindtap="noBuy"></image>
+    <text class="pop-text">开通会员，畅享优质好课！</text>
+    <button class="pop-btn" bindtap="goBuy">立即开通</button>
+    <view wx:if='{{freeTime>0}}' class="text">您的试用期还有<text class="num">{{freeTime}}</text>天</view>
+    <view wx:else class="text">免费试用已结束</view>
+    </view>
+  </van-popup>
 <view class="tabs">
     <navigator class="tab"  catchtap="tonav01">
         <image class="tab-img" src="../../images/edutList/edu_tab1.png"></image>

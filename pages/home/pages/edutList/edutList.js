@@ -1,8 +1,14 @@
 const network = require("../../../../utils/main.js");
+const moment = require("../../../../utils/moment.js");
 var app = getApp();
 
 Page({
     data: {
+      show: {
+        middle: false,
+
+
+      },
         base: '../../../../',
         IMGURL: app.imgUrl,
         teacList: '',
@@ -23,6 +29,58 @@ Page({
     that.component = that.selectComponent("#component")
     that.component.noShow()
     that.component.nohide()
+  },
+  toggle(type) {
+    this.setData({
+      [`show.${type}`]: !this.data.show[type]
+    });
+  },
+  noBuy: function () {
+    let that = this;
+    this.toggle('middle');
+    if (this.freeTry()) {
+      wx.navigateTo({
+        url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + that.data.videoId + '&videopic=' + that.data.videoPic,
+      });
+    }
+  },
+  goBuy: function () {
+    wx.navigateTo({
+      url: '/pages/my/pages/memberRenewalNewPay/memberRenewalNewPay'
+    });
+  },
+  freeTry: function () {
+    let that = this;
+    let createTime = app.userInfo.create_time;
+    let start = moment(createTime);
+    let end = moment();
+    let freeTime = end.diff(start, 'days');
+    if (freeTime < 3) {
+      that.setData({
+        freeTime: (3 - freeTime)
+      });
+      return true;
+    } else {
+      //免费试用结束
+      return false;
+    }
+
+  },
+  memberExpires(e) {
+    console.log(e)
+    var that = this;
+    network.memberExpires(function (res) {
+      that.setData({
+        videoId: e.currentTarget.dataset.myid,
+        videoPic: e.currentTarget.dataset.videopic
+      });
+      that.freeTry();
+      that.toggle('middle');
+    }, function (res) {
+      wx.navigateTo({
+        url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
+      })
+    });
   },
     onLoad: function (options) {
         this.compontNavbar = this.selectComponent("#compontNavbar");
@@ -147,9 +205,10 @@ Page({
           flg: true
         })
       } else {
-        wx.navigateTo({
-          url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
-        })
+        // wx.navigateTo({
+        //   url: '/pages/home/pages/courseList/courseDetail/courseDetail?courseid=' + e.currentTarget.dataset.myid + '&videopic=' + e.currentTarget.dataset.videopic,
+        // })
+        this.memberExpires(e);
       } 
      
     },
