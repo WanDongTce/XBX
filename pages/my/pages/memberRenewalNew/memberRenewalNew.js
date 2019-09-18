@@ -13,12 +13,27 @@ Page({
     this.compontNavbar = this.selectComponent("#compontNavbar");
    
   },
+  mycard:function(){
+    wx.navigateTo({
+      url: '/pages/my/pages/bankCard/bankCard',
+    })
+  },
+  mypwd: function () {
+    wx.navigateTo({
+      url: '/pages/my/pages/payPwd/modifyPayPwd/modifyPayPwd',
+    })
+  },
     onShow: function () {
         var that = this;
         that.getUserInfo();
         that.getRenInfo();
         // that.getList();
     },
+  totixian:function(){
+    wx.navigateTo({
+      url: '/pages/my/pages/withCash/withCash',
+    })
+  },
     getUserInfo: function () {
         var that = this;
         network.getUserInfo(function (res) {

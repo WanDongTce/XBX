@@ -23,6 +23,9 @@
             <view class='center_text1 display-flex'>
                 <view class='center_text1_1'>{{renInfo.account}}</view>
                 <view class='f_24 center_text1_2'>元</view>
+                <view class="btn" catchtap="totixian">
+                  <text>提现</text>
+                </view>
             </view>
             <view class='f_24 center_text2'>收益余额</view>
         </view>
