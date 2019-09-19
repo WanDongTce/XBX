@@ -57,6 +57,9 @@ Page({
     var that = this;
     console.log(school.register_area_name)
     var list = []
+    provinceId = school.register_province_id;
+    cityId = school.register_city_id;
+    districtId = school.register_area_id;
     list.push({ id: school.register_province_id, name: school.register_province_name })
     list.push({ id: school.register_city_id,name: school.register_city_name })
     list.push({ id: school.register_area_id,name: school.register_area_name })
@@ -82,7 +85,7 @@ Page({
             classIndex: '',
             classList: []
         });
-
+      console.log(res)
         provinceId = res[0].id;
         cityId = res[1].id;
         districtId = res[2].id;
@@ -373,6 +376,7 @@ Page({
                     "classid": classId
                 },
                 success: function (res) {
+                  console.log()
                     wx.hideLoading();
                     // console.log(res)
                     if (res.data.code == 200) {
