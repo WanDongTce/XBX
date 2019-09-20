@@ -129,6 +129,8 @@ Page({
     },
     buyFromGift() {
         var that = this;
+      ids = wx.getStorageSync('ids')
+      console.log(ids)
         network.POST({
             url: 'v13/shop-order/go-buy-confirm',
             params: {

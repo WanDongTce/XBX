@@ -482,7 +482,8 @@ Page({
           wx.hideLoading();
           if (res.data.code == 200) {
             wx.setStorageSync("goods", res.data.data[0]);
-
+            console.log(ids)
+            wx.setStorageSync("ids", ids)
             wx.navigateTo({
               url: '/pages/home/pages/periphery/confirmOrder/confirmOrder?flag=2&ids=' + ids
             });
