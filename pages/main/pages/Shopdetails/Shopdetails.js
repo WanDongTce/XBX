@@ -169,7 +169,7 @@ flg: false,
         if (res.data.code == 200) {
 
           var a = res.data.data[0].list;
-
+          console.log(a)
           for (var i = 0; i < a.length; i++) {
             yucunlisr.push(a[i])
           }

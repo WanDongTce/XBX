@@ -380,12 +380,21 @@ Page({
   },
   comfimNumFn() {
     var that = this;
-    var a = that.data.btnflag;
-    if (a == 1) {
-      that.addGift();
+    var token = wx.getStorageSync("userInfo")
+
+    if (token == "") {
+      this.setData({
+        flg: true
+      })
     } else {
-      that.toComfirmOrder();
+      var a = that.data.btnflag;
+      if (a == 1) {
+        that.addGift();
+      } else {
+        that.toComfirmOrder();
+      }
     }
+    
   },
 
   showDeclare() {

@@ -4,7 +4,7 @@
     <image src='/pages/main/images/shopping/arowLt.png' class='reton' style="width:26rpx;"></image>
   </view>
   <view class='reton_sun' bindtap='topshoop' style="left:70rpx;">
-    <image src='/pages/main/images/shopping/car.png' class='reton'></image>
+    <image src='/pages/main/images/shopping/car.png' class='reton_sun02'></image>
     <view class='inf {{number_sun>0?"bl":""}}'></view>
   </view>
 </view>

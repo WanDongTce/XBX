@@ -107,7 +107,7 @@ Page({
                 "courseid": courseid
             },
             success: function (res) {
-                // console.log(res.data.data[0].item);
+                console.log(res.data.data[0].item);
                 wx.hideLoading();
                 if (res.data.code == 200) {
                     that.setData({

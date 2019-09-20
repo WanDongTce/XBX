@@ -51,7 +51,7 @@
                     </view>
                     <view class="display-flex justify-content-between changep_box">
                         <!-- <input placeholder="请输入密码" placeholder-class='placeholder' type="{{passwordtype}}" class='f_26' bindinput="user_right_password" name="modify_passw"></input> -->
-                        <input placeholder="请输入密码" wx:if='{{passwordtype==password}}' placeholder-class='placeholder' type="password" class='f_26' bindinput="user_right_password" name="modify_passw" value='{{user_right_password}}' cursor-spacing='140'></input>
+                        <input placeholder="请输入密码" wx:if='{{passwordtype=="password"}}' placeholder-class='placeholder' type="password" class='f_26' bindinput="user_right_password" name="modify_passw" value='{{user_right_password}}' cursor-spacing='140'></input>
                         <input wx:else placeholder="请输入密码" placeholder-class='placeholder' type="text" class='f_26' bindinput="user_right_password" name="modify_passw" value='{{user_right_password}}' cursor-spacing='140'></input>
                         <image src="{{passwordimg}}" bindtap="passwordimg"></image>
                     </view>

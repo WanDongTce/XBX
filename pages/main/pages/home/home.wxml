@@ -52,7 +52,7 @@
             <image class="new_tab_img" src="../../images/home/tab2.png"></image>
             <view class='new_tab_text'>学霸玩</view>
         </navigator> -->
-        <navigator class="new_tab {{dictionary==0?'hide':''}}" url="/pages/home/pages/course/course?mytopid=' + 0">
+        <navigator class="new_tab {{dictionary==0?'hide':''}}" url="" catchtap="course">
             <image class="new_tab_img" src="../../images/home/tab6.png"></image>
             <view class='new_tab_text'>新华课典</view>
         </navigator>

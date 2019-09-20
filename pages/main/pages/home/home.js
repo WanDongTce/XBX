@@ -295,6 +295,24 @@ Page({
         // });
         
     },
+
+
+  course: function () {
+    var that = this;
+    var token = wx.getStorageSync("userInfo")
+    console.log(token)
+    if (token == "") {
+
+      this.setData({
+        flg: true
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/pages/course/course?mytopid= 0',
+      })
+    }
+
+  },
     
     
     
