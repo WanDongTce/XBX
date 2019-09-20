@@ -1,7 +1,7 @@
 <compontNavbar title="{{title}}" isShowBack="{{true}}" component-class="component-class"></compontNavbar>
 <view class='box'>
     <view class="nodt-cont" wx:if="{{showEmpty}}">
-        <image src="../../../../images/nothave.png"></image>
+        <!-- <image src="../../../../images/nothave.png"></image> -->
         <view>我还没有动态</view>
         <navigator url="/pages/home/pages/classmate/classmateWrite/classmateWrite">发布新动态</navigator>
     </view>
