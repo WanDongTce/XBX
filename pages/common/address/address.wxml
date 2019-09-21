@@ -4,14 +4,14 @@
 <compontNavbar title="地址列表" isShowBack="{{true}}"></compontNavbar>
 <view class='item_bigbox' wx:for="{{list}}" wx:key="this">
   <view class='item_box'>
-    <view class='item_topbox overf' bindtap="useAddr" data-item="{{item}}">
+    <view class='item_topbox overf' bindtap="catchTapEdit" data-item="{{item}}">
       <view class='fl'>
         <view class='name'>{{item.name}}</view>
         <view class='moren' wx:if="{{item.is_default == 2}}">默认</view>
       </view>
       <view class='fr phone'>{{item.tel}}</view>
     </view>
-    <view class='address' bindtap="useAddr" data-item="{{item}}">{{item.priovince_name + item.city_name + item.district_name}}</view>
+    <view class='address' bindtap="catchTapEdit" data-item="{{item}}">{{item.priovince_name + item.city_name + item.district_name}}</view>
     <view class='item_bottom overf'>
       <view class='fl' bindtap="selectClick" data-id="{{item.id}}">
         <view wx:if="{{item.is_default == 2}}">

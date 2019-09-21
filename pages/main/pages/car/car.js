@@ -37,6 +37,23 @@ Page({
     that.getCartCount();
     that.component = that.selectComponent("#component")
     that.component.customMethod()
+    wx.request({
+      url: app.requestUrl + 'v13/user-address/list',
+      data: {
+        "mobile": app.userInfo.mobile,
+        "token": app.userInfo.token,
+        "app_source_type": app.app_source_type
+      },
+      success: function (res) {
+        console.log(res)
+        for (var i = 0; i < res.data.data[0].list.length; i++) {
+          if (res.data.data[0].list[i].is_default == 2) {
+            console.log(res.data.data[0].list[i])
+            wx.setStorageSync('receivingAddress', res.data.data[0].list[i])
+          }
+        }
+      }
+    })
   },
   onHide: function () {
     var that = this;

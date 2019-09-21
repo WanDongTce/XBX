@@ -272,6 +272,7 @@ Page({
         wx.hideLoading();
         if (res.data.code == 200) {
           var a = res.data.data[0].list;
+          console.log(a)
           if (flag) {
             a = that.data.questionList.concat(a);
           }
