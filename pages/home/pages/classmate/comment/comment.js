@@ -49,7 +49,7 @@ Page({
     var userid = userInfo.id
     console.log(userid)
     wx.request({
-      url: app.requestUrl + 'v14/public/get-new-token ',
+      url: app.requestUrl + 'v14/public/get-new-token',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
