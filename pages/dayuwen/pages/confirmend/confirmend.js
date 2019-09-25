@@ -3,6 +3,7 @@ let innerAudioContext = null;
 const app = getApp();
 let timerOut = null;
 var flg = true
+var access_token
 Page({
 
   /**
@@ -90,32 +91,53 @@ Page({
   },
   onUpload: function () {
     let filePath = wx.getStorageSync('filePath');
+    var that=this
     //上传文件
-    this.uploadFile(filePath, this.data.id);
-    wx.showToast({
-      title: '录制成功',
-      icon: 'success',
-      duration: 2000
-    });
-    //根据路径不同，返回层级不同
-    let r = getCurrentPages().length;
-    console.log(r)
-    if (r == 6) {
-      setTimeout(function () {
-        wx.navigateBack({
-          delta: 2
-        });
-      }, 2000);
-    } else {
-      setTimeout(function () {
-        wx.navigateBack({
-          delta: 3
-        });
-      }, 2000);
-    }
+    wx.request({
+      url: 'https://api.weixin.qq.com/wxa/media_check_async?access_token=' + access_token,
+      data: {
+        "media_url": filePath,
+        "media_type": 1
+      },
+      method: 'POST',
+      header: {
+        'Content-Type': 'application/octet-stream'
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data.errcode == 0) {
+          console.log(res.data.errcode)
+          that.uploadFile(filePath, that.data.id);
+          wx.showToast({
+            title: '录制成功',
+            icon: 'success',
+            duration: 2000
+          });
+          //根据路径不同，返回层级不同
+          let r = getCurrentPages().length;
+          console.log(r)
+          if (r == 6) {
+            setTimeout(function () {
+              wx.navigateBack({
+                delta: 2
+              });
+            }, 2000);
+          } else {
+            setTimeout(function () {
+              wx.navigateBack({
+                delta: 3
+              });
+            }, 2000);
+          }
+        }
+      }
+
+    })
+    
     
   },
   uploadFile: function (filePath, id) {
+   
     wx.uploadFile({
       url: app.requestUrl + 'v14/public/upload', //仅为示例，非真实的接口地址
       filePath: filePath, // 小程序临时文件路径,
@@ -197,12 +219,33 @@ Page({
 
   /**
    * 生命周期函数--监听页面显示
-   */
+   */ gettoken: function () {
+    var userInfo = wx.getStorageSync('userInfo')
+    var userid = userInfo.id
+    console.log(userid)
+    wx.request({
+      url: 'http://social.54xuebaxue.com/v14/public/get-new-token',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        'userid': userid,
+        "mini_type": 'xuabaxue'
+
+      },
+      success: function (res) {
+        console.log(res)
+        access_token = res.data.data[0].access_token
+      }
+    })
+  },
   onShow: function () {
     //播放录音
     // let filePath = wx.getStorageSync('filePath');
     // this.startMusic(filePath);
     var that = this;
+    that.gettoken()
     that.component = that.selectComponent("#component")
     that.component.customMethod()
   },

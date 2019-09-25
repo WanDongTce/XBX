@@ -1,5 +1,6 @@
 const network = require("../../../../../utils/main.js");
 const app = getApp();
+var access_token
 // console.log(app);
 var i = 0;
 var flag = true;
@@ -57,8 +58,30 @@ Page({
     },
   onShow: function () {
     var that = this;
+    that.gettoken()
     that.component = that.selectComponent("#component")
     that.component.customMethod()
+  },
+  gettoken: function () {
+    var userInfo = wx.getStorageSync('userInfo')
+    var userid = userInfo.id
+    console.log(userid)
+    wx.request({
+      url: app.requestUrl + 'v14/public/get-new-token ',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        'userid': userid,
+        "mini_type": 'xuabaxue'
+
+      },
+      success: function (res) {
+        console.log(res.data.data[0].access_token)
+        access_token = res.data.data[0].access_token
+      }
+    })
   },
   onHide: function () {
     var that = this;
@@ -168,8 +191,43 @@ Page({
             if(that.data.imgList.length>0){
               var uploadlist = that.data.imgList;
               var uploadStyle = 1;
+
+              wx.request({
+                url: 'https://api.weixin.qq.com/wxa/img_sec_check?access_token=' + access_token,
+                data: {
+                  media: uploadlist
+                },
+                method: 'POST',
+                header: {
+                  'Content-Type': 'application/octet-stream'
+                },
+                success: function (res) {
+                  console.log(res)
+                  if (res.data.errcode == 0) {
+                    wx.request({
+                      url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+                      data: {
+
+                        "content": content
+                      },
+                      method: 'POST',
+                      success: function (ress) {
+                        console.log(ress)
+                        // that.setData({
+                        //   videourl: ''
+                        // })
+                        if (res.data.errcode == 0){
+                          that.uploadImgs(that.data.imgList, content); 
+                        }
+                        
+                      }
+                    })
+                            
+                  }
+                }
+              })
               //有图片直接
-              that.uploadImgs(that.data.imgList, content);            
+                
             }
             else if (that.data.videoList.length > 0){
               var uploadlist = that.data.videoList;
@@ -179,10 +237,23 @@ Page({
             }
             else{
               //无视频 图片，直接上传
-              that.setData({
-                videourl: ''
+              wx.request({
+                url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+                data: {
+
+                  "content": content
+                },
+                method: 'POST',
+                success:function(res){
+                  console.log(res)
+                  that.setData({
+                    videourl: ''
+                  })
+
+                  that.newPublish();
+                }
               })
-              that.newPublish();
+             
             }
         }
     },

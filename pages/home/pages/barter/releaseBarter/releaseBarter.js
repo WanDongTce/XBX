@@ -4,8 +4,7 @@ const app = getApp();
 
 var selectClssId = '';
 var districtId = '';
-
-
+var access_token
 
 Page({
     data: {
@@ -22,6 +21,8 @@ Page({
     },
     onShow: function(){
         var a = wx.getStorageSync('selectedBarClss');
+        var that=this
+      that.gettoken()
         if (a) {
             selectClssId = a.id;
             this.setData({
@@ -86,6 +87,27 @@ Page({
             });
         }
     },
+  gettoken: function () {
+    var userInfo = wx.getStorageSync('userInfo')
+    var userid = userInfo.id
+    console.log(userid)
+    wx.request({
+      url: app.requestUrl + 'v14/public/get-new-token ',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        'userid': userid,
+        "mini_type": 'xuabaxue'
+
+      },
+      success: function (res) {
+        console.log(res.data.data[0].access_token)
+        access_token = res.data.data[0].access_token
+      }
+    })
+  },
     submit: function () {
         var that = this;
         var list = that.data.imgList;
@@ -123,8 +145,36 @@ Page({
             })
         } 
         else {
-            app.showLoading();
-            that.uploadImgs(list, content, tit, status);
+          wx.request({
+            url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+            data:{
+              "content": content + tit
+            },
+            method: 'POST',
+            success:function(res){
+              console.log(res)
+              if (res.data.errcode == 0){
+                wx.request({
+                  url: 'https://api.weixin.qq.com/wxa/img_sec_check?access_token=' + access_token,
+                  data: {
+                    media: list
+                  },
+                  method: 'POST',
+                  header: {
+                    'Content-Type': 'application/octet-stream'
+                  },
+                  success:function(ress){
+                    if (ress.data.errcode == 0){
+                      app.showLoading();
+                      that.uploadImgs(list, content, tit, status);
+                    }
+                  }
+                })
+            
+              }
+            }
+          })
+           
         }
     },
     uploadImgs: function (list, content, tit, status) {

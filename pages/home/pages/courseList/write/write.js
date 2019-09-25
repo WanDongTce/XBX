@@ -3,6 +3,7 @@ const app = getApp();
 var mytag=1;
 var courseid = '';
 var parent='';
+var access_token
 Page({
   data: {
       base: '../../../../../',
@@ -17,6 +18,7 @@ Page({
     courseid = options.courseid;
     parent = options.parent;
     var that=this;
+    that.gettoken()
     // mytag = options.mytag;
     if (mytag == 1) {
       //问个问题
@@ -87,104 +89,174 @@ Page({
       }
     }
   },
+  gettoken:function(){
+    var userInfo = wx.getStorageSync('userInfo')
+    var userid=userInfo.id
+    console.log(userid)
+    wx.request({
+      url: app.requestUrl+'v14/public/get-new-token ',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data:{
+        'userid': userid,
+        "mini_type":'xuabaxue'
+
+      },
+      success:function(res){
+        console.log(res.data.data[0].access_token)
+        access_token = res.data.data[0].access_token
+      }
+    })
+  },
   submitTw: function (neirong){
     var that = this;
-    network.POST({
-      url: 'v14/question/add-resource',
-      params: {
-        "mobile": app.userInfo.mobile,
-        "token": app.userInfo.token,
-        "resourcetypeid": 4,
-        "resourceid": courseid,
-        "name": neirong
+    console.log(neirong)
+    wx.request({
+      url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+      data: {
+        
+        "content": neirong
       },
+      method: 'POST',
+      
       success: function (res) {
-        // console.log(res);
-        wx.hideLoading();
-        wx.showToast({
-          title: res.data.message
-        });
-        if (res.data.code == 200) {
-          wx.navigateBack({
-            
-          })
+        console.log(res.data.errcode)
+        if (res.data.errcode==0){
+          network.POST({
+            url: 'v14/question/add-resource',
+            params: {
+              "mobile": app.userInfo.mobile,
+              "token": app.userInfo.token,
+              "resourcetypeid": 4,
+              "resourceid": courseid,
+              "name": neirong
+            },
+            success: function (res) {
+              // console.log(res);
+              wx.hideLoading();
+              wx.showToast({
+                title: res.data.message
+              });
+              if (res.data.code == 200) {
+                wx.navigateBack({
+
+                })
+              }
+            },
+            fail: function () {
+              wx.hideLoading();
+              wx.showToast({
+                title: '服务器异常',
+                icon: 'none',
+                duration: 1000
+              })
+            }
+          });
         }
-      },
-      fail: function () {
-        wx.hideLoading();
-        wx.showToast({
-          title: '服务器异常',
-            icon: 'none',
-          duration: 1000
-        })
+    
       }
-    });
+    })
+
   },
   submitNote: function (neirong){
     var that=this;
-    network.POST({
-      url: 'v14/news/comments-add',
-      params: {
-        "mobile": app.userInfo.mobile,
-        "token": app.userInfo.token,
-        "resourcetypeid": 13,
-        "resourceid": courseid,
+    wx.request({
+      url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+      data: {
+
         "content": neirong
       },
-      success: function (res) {
-        // console.log(res);
-        wx.hideLoading();
-        wx.showToast({
-          title: res.data.message
-        });
-        if (res.data.code == 200) {
-          wx.navigateBack({
+      method: 'POST',
 
-          })
+      success: function (res) {
+        console.log(res.data.errcode)
+        if (res.data.errcode == 0) {
+          network.POST({
+            url: 'v14/news/comments-add',
+            params: {
+              "mobile": app.userInfo.mobile,
+              "token": app.userInfo.token,
+              "resourcetypeid": 13,
+              "resourceid": courseid,
+              "content": neirong
+            },
+            success: function (res) {
+              // console.log(res);
+              wx.hideLoading();
+              wx.showToast({
+                title: res.data.message
+              });
+              if (res.data.code == 200) {
+                wx.navigateBack({
+
+                })
+              }
+            },
+            fail: function () {
+              wx.hideLoading();
+              wx.showToast({
+                title: '服务器异常',
+                icon: 'none',
+                duration: 1000
+              })
+            }
+          });
         }
-      },
-      fail: function () {
-        wx.hideLoading();
-        wx.showToast({
-          title: '服务器异常',
-            icon: 'none',
-          duration: 1000
-        })
+
       }
-    });
+    })
+  
   },
   submitPl: function (neirong) {
     var that = this;
-    network.POST({
-      url: 'v14/news/comments-add',
-      params: {
-        "mobile": app.userInfo.mobile,
-        "token": app.userInfo.token,
-        "resourcetypeid": 4,
-        "resourceid": courseid,
-        "content": neirong,
-        "parent": parent,
-      },
-      success: function (res) {
-        // console.log(res);
-        wx.hideLoading();
-        wx.showToast({
-          title: res.data.message
-        });
-        if (res.data.code == 200) {
-          wx.navigateBack({
+    wx.request({
+      url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+      data: {
 
-          })
-        }
+        "content": neirong
       },
-      fail: function () {
-        wx.hideLoading();
-        wx.showToast({
-          title: '服务器异常',
-            icon: 'none',
-          duration: 1000
-        })
+      method: 'POST',
+
+      success: function (res) {
+        console.log(res.data.errcode)
+        if (res.data.errcode == 0) {
+          network.POST({
+            url: 'v14/news/comments-add',
+            params: {
+              "mobile": app.userInfo.mobile,
+              "token": app.userInfo.token,
+              "resourcetypeid": 4,
+              "resourceid": courseid,
+              "content": neirong,
+              "parent": parent,
+            },
+            success: function (res) {
+              // console.log(res);
+              wx.hideLoading();
+              wx.showToast({
+                title: res.data.message
+              });
+              if (res.data.code == 200) {
+                wx.navigateBack({
+
+                })
+              }
+            },
+            fail: function () {
+              wx.hideLoading();
+              wx.showToast({
+                title: '服务器异常',
+                icon: 'none',
+                duration: 1000
+              })
+            }
+          });
+        }
+
       }
-    });
+    })
+  
   },
 })

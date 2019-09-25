@@ -1,6 +1,7 @@
 // pages/ls2/ls2.js
 const network = require("../../../../utils/main.js");
 const app = getApp();
+var access_token
 var id='';
 Page({
 
@@ -46,6 +47,7 @@ Page({
     var that = this;
     that.component = that.selectComponent("#component")
     that.component.customMethod()
+    that.gettoken()
   },
   onHide: function () {
     var that = this;
@@ -88,10 +90,11 @@ Page({
             savetextarea: a
         });
     },
+
     bindFormSubmit: function (e) {
         var that = this;
         var list = that.data.imgList;//图片
-        
+        console.log(11)
         var subjectid = that.data.subjectid;
         
         
@@ -120,55 +123,92 @@ Page({
             })
         }
         else {
-            console.log(that.data.imgList)
-            
-                app.showLoading();
-                network.publicUpload(that.data.imgList, function (res) {
-                    console.log(res);
-                    var img = res.data[0].list[0].file_url;
-                    // console.log(img);
-                    // console.log(typeof(img));
-                    var arrimg=[];
-                    arrimg.push(img);
-                    console.log(arrimg)
-                    // console.log(typeof (arrimg))
-                    
-                        
-                        network.POST({
+          console.log(list)
+            var text
+            var img
+            wx.request({
+              url: 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=' + access_token,
+              data: {
+
+                "content": savetextarea
+              },
+              method: 'POST',
+              success:function(res){
+                if (res.data.errcode == 0){
+                  wx.request({
+                    url: 'https://api.weixin.qq.com/wxa/img_sec_check?access_token=' + access_token,
+                    data: {
+
+                      media: list
+                    },
+                    method: 'POST',
+                    header: {
+                      'Content-Type': 'application/octet-stream'
+                    },
+                    success: function (ress) {
+                      console.log(ress)
+                      if (ress.data.errcode == 0){
+                        app.showLoading();
+                        network.publicUpload(that.data.imgList, function (res) {
+                          console.log(res);
+                          var img = res.data[0].list[0].file_url;
+                          // console.log(img);
+                          // console.log(typeof(img));
+                          var arrimg = [];
+                          arrimg.push(img);
+                          console.log(arrimg)
+                          // console.log(typeof (arrimg))
+
+
+                          network.POST({
                             url: 'v14/home-work-custom/add',
                             params: {
-                                "mobile": app.userInfo.mobile,
-                                "token": app.userInfo.token,
-                                "name": savetextarea,
-                                "subjectid": subjectid,
-                                
-                                "images_json": JSON.stringify(arrimg)
+                              "mobile": app.userInfo.mobile,
+                              "token": app.userInfo.token,
+                              "name": savetextarea,
+                              "subjectid": subjectid,
+
+                              "images_json": JSON.stringify(arrimg)
                             },
                             success: function (resnew) {
-                                wx.hideLoading();
-                                if (resnew.data.code == 200) {
-                                    wx.navigateBack({
+                              wx.hideLoading();
+                              if (resnew.data.code == 200) {
+                                console.log(resnew)
+                                wx.navigateBack({
 
-                                    })
-                                } else {
-                                    wx.showToast({
-                                        title: resnew.data.message,
-                                        icon: 'none',
-                                        duration: 1000
-                                    });
-                                }
+                                })
+                              } else {
+                                wx.showToast({
+                                  title: resnew.data.message,
+                                  icon: 'none',
+                                  duration: 1000
+                                });
+                              }
                             },
                             fail: function () {
-                                wx.hideLoading();
-                                wx.showToast({
-                                    title: '服务器异常',
-                                    icon: 'none',
-                                    duration: 1000
-                                })
+                              wx.hideLoading();
+                              wx.showToast({
+                                title: '服务器异常',
+                                icon: 'none',
+                                duration: 1000
+                              })
                             }
+                          });
+
                         });
-                    
-                });
+                      }
+                      
+                    }
+                  })
+                }
+               
+              }
+            })
+         
+          if(text==0&&img==0){
+           
+          }
+                
 
 
             // network.uploadimg({
@@ -182,10 +222,30 @@ Page({
             // });
             }
             
-        }
+        },
     
     
   
-    
+      gettoken: function () {
+    var userInfo = wx.getStorageSync('userInfo')
+    var userid = userInfo.id
+    console.log(userid)
+    wx.request({
+      url: app.requestUrl + 'v14/public/get-new-token ',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        'userid': userid,
+        "mini_type": 'xuabaxue'
+
+      },
+      success: function (res) {
+        console.log(res.data.data[0].access_token)
+        access_token = res.data.data[0].access_token
+      }
+    })
+  },
   
 })

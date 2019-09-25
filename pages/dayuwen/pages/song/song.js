@@ -40,6 +40,7 @@ Page({
    
   },
   goTo03: function (e) {
+    var token = wx.getStorageSync("userInfo")
     if (token == "") {
       this.setData({
         flg: true

@@ -1,7 +1,7 @@
 const network = require("../../../../utils/main.js");
 const app = getApp();
 
-
+var access_token
 Page({
     data: {
         sexArr: [{ id: 0, name: '未知' }, { id: 1, name: '男' }, { id: 2, name: '女' }],
@@ -16,8 +16,30 @@ Page({
     onLoad(){
         this.compontNavbar = this.selectComponent("#compontNavbar");
     },
+  gettoken: function () {
+    var userInfo = wx.getStorageSync('userInfo')
+    var userid = userInfo.id
+    console.log(userid)
+    wx.request({
+      url: app.requestUrl + 'v14/public/get-new-token ',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        'userid': userid,
+        "mini_type": 'xuabaxue'
+
+      },
+      success: function (res) {
+        console.log(res.data.data[0].access_token)
+        access_token = res.data.data[0].access_token
+      }
+    })
+  },
     onShow: function () {
         var that = this;
+      that.gettoken()
         that.getUserInfo();
         that.getLabel(); 
     },
@@ -75,16 +97,34 @@ Page({
     },
     modHead: function () {
         var that = this;
+       
         wx.chooseImage({
             count: 1,
             sizeType: ['original', 'compressed'],
             sourceType: ['album', 'camera'],
             success: function (res) {
                 // console.log(res.tempFilePaths);
-                that.setData({
-                    headImg: res.tempFilePaths[0]
-                });
-                that.uploadImg();
+              
+              wx.request({
+                url: 'https://api.weixin.qq.com/wxa/img_sec_check?access_token=' + access_token,
+                data: {
+                  media: res.tempFilePaths[0]
+                },
+                method: 'POST',
+                header: {
+                  'Content-Type': 'application/octet-stream'
+                },
+                success:function(ress){
+                  console.log(ress)
+                  if (ress.data.errcode == 0){
+                    that.setData({
+                      headImg: res.tempFilePaths[0]
+                    });
+                    that.uploadImg();
+                  }
+                }
+              })
+                
             }
         });
     },
